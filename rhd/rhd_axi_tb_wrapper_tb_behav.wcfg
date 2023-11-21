@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhd_axi_tb_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhd_axi_tb_wrapper_tb" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="399,531.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="400,064.001 ns"></ZoomEndTime>
+      <Cursor1Time time="399,638.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="159"></NameColumnWidth>
+      <ValueColumnWidth column_width="164"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aclk_out" type="logic">
+      <obj_property name="ElementShortName">aclk_out</obj_property>
+      <obj_property name="ObjectShortName">aclk_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aresetn_out" type="logic">
+      <obj_property name="ElementShortName">aresetn_out</obj_property>
+      <obj_property name="ObjectShortName">aresetn_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/CS" type="logic">
+      <obj_property name="ElementShortName">CS</obj_property>
+      <obj_property name="ObjectShortName">CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI1" type="logic">
+      <obj_property name="ElementShortName">MOSI1</obj_property>
+      <obj_property name="ObjectShortName">MOSI1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI2" type="logic">
+      <obj_property name="ElementShortName">MOSI2</obj_property>
+      <obj_property name="ObjectShortName">MOSI2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_ACLK" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_ACLK</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_ACLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_ARESETN" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_ARESETN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/flag_lastBatch" type="logic">
+      <obj_property name="ElementShortName">flag_lastBatch</obj_property>
+      <obj_property name="ObjectShortName">flag_lastBatch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/flag_lastchannel" type="logic">
+      <obj_property name="ElementShortName">flag_lastchannel</obj_property>
+      <obj_property name="ObjectShortName">flag_lastchannel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_A1" type="array">
+      <obj_property name="ElementShortName">result_A1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_A1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_A2" type="array">
+      <obj_property name="ElementShortName">result_A2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_A2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_B1" type="array">
+      <obj_property name="ElementShortName">result_B1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_B1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_B2" type="array">
+      <obj_property name="ElementShortName">result_B2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_B2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_C1" type="array">
+      <obj_property name="ElementShortName">result_C1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_C1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_C2" type="array">
+      <obj_property name="ElementShortName">result_C2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_C2[15:0]</obj_property>
+   </wvobject>
+</wave_config>
