@@ -439,6 +439,58 @@ module rhd
     MISO_falling_edge MISO_falling_edge_16 (
         .phase_select(delay_H), .MISO4x(in4x_H2), .MISO(in_H2));	
 
+    MISO_falling_edge MISO_falling_edge_17 (
+        .phase_select(delay_I), .MISO4x(in4x_I1), .MISO(in_I1));	
+
+    MISO_falling_edge MISO_falling_edge_18 (
+        .phase_select(delay_I), .MISO4x(in4x_I2), .MISO(in_I2));	
+
+    MISO_falling_edge MISO_falling_edge_19 (
+        .phase_select(delay_J), .MISO4x(in4x_J1), .MISO(in_J1));	
+
+    MISO_falling_edge MISO_falling_edge_20 (
+        .phase_select(delay_J), .MISO4x(in4x_J2), .MISO(in_J2));	
+    
+    MISO_falling_edge MISO_falling_edge_21 (
+        .phase_select(delay_K), .MISO4x(in4x_K1), .MISO(in_K1));	
+
+    MISO_falling_edge MISO_falling_edge_22 (
+        .phase_select(delay_K), .MISO4x(in4x_K2), .MISO(in_K2));	
+    
+    MISO_falling_edge MISO_falling_edge_23 (
+        .phase_select(delay_L), .MISO4x(in4x_L1), .MISO(in_L1));
+
+    MISO_falling_edge MISO_falling_edge_24 (
+        .phase_select(delay_L), .MISO4x(in4x_L2), .MISO(in_L2));	
+
+    MISO_falling_edge MISO_falling_edge_25 (
+        .phase_select(delay_M), .MISO4x(in4x_M1), .MISO(in_M1));	
+
+    MISO_falling_edge MISO_falling_edge_26 (
+        .phase_select(delay_M), .MISO4x(in4x_M2), .MISO(in_M2));	
+
+    MISO_falling_edge MISO_falling_edge_27 (
+        .phase_select(delay_N), .MISO4x(in4x_N1), .MISO(in_N1));	
+
+    MISO_falling_edge MISO_falling_edge_28 (
+        .phase_select(delay_N), .MISO4x(in4x_N2), .MISO(in_N2));	
+    
+    MISO_falling_edge MISO_falling_edge_29 (
+        .phase_select(delay_O), .MISO4x(in4x_O1), .MISO(in_O1));	
+
+    MISO_falling_edge MISO_falling_edge_30 (
+        .phase_select(delay_O), .MISO4x(in4x_O2), .MISO(in_O2));	
+    
+    MISO_falling_edge MISO_falling_edge_31 (
+        .phase_select(delay_P), .MISO4x(in4x_P1), .MISO(in_P1));
+
+    MISO_falling_edge MISO_falling_edge_32 (
+        .phase_select(delay_P), .MISO4x(in4x_P2), .MISO(in_P2));
+
+
+
+
+
 
     MISO_rising_edge MISO_rising_edge_1 (
         .phase_select(delay_A), .MISO4x(in4x_A1), .MISO(in_DDR_A1));	
@@ -487,6 +539,54 @@ module rhd
 
     MISO_rising_edge MISO_rising_edge_16 (
         .phase_select(delay_H), .MISO4x(in4x_H2), .MISO(in_DDR_H2));
+
+    MISO_rising_edge MISO_rising_edge_17 (
+        .phase_select(delay_I), .MISO4x(in4x_I1), .MISO(in_DDR_I1));	
+
+    MISO_rising_edge MISO_rising_edge_18 (
+        .phase_select(delay_I), .MISO4x(in4x_I2), .MISO(in_DDR_I2));	
+
+    MISO_rising_edge MISO_rising_edge_19 (
+        .phase_select(delay_J), .MISO4x(in4x_J1), .MISO(in_DDR_J1));	
+
+    MISO_rising_edge MISO_rising_edge_20 (
+        .phase_select(delay_J), .MISO4x(in4x_J2), .MISO(in_DDR_J2));	
+    
+    MISO_rising_edge MISO_rising_edge_21 (
+        .phase_select(delay_K), .MISO4x(in4x_K1), .MISO(in_DDR_K1));	
+
+    MISO_rising_edge MISO_rising_edge_22 (
+        .phase_select(delay_K), .MISO4x(in4x_K2), .MISO(in_DDR_K2));	
+    
+    MISO_rising_edge MISO_rising_edge_23 (
+        .phase_select(delay_L), .MISO4x(in4x_L1), .MISO(in_DDR_L1));
+
+    MISO_rising_edge MISO_rising_edge_24 (
+        .phase_select(delay_L), .MISO4x(in4x_L2), .MISO(in_DDR_L2));	
+
+    MISO_rising_edge MISO_rising_edge_25 (
+        .phase_select(delay_M), .MISO4x(in4x_M1), .MISO(in_DDR_M1));	
+
+    MISO_rising_edge MISO_rising_edge_26 (
+        .phase_select(delay_M), .MISO4x(in4x_M2), .MISO(in_DDR_M2));	
+
+    MISO_rising_edge MISO_rising_edge_27 (
+        .phase_select(delay_N), .MISO4x(in4x_N1), .MISO(in_DDR_N1));	
+
+    MISO_rising_edge MISO_rising_edge_28 (
+        .phase_select(delay_N), .MISO4x(in4x_N2), .MISO(in_DDR_N2));	
+    
+    MISO_rising_edge MISO_rising_edge_29 (
+        .phase_select(delay_O), .MISO4x(in4x_O1), .MISO(in_DDR_O1));	
+
+    MISO_rising_edge MISO_rising_edge_30 (
+        .phase_select(delay_O), .MISO4x(in4x_O2), .MISO(in_DDR_O2));	
+    
+    MISO_rising_edge MISO_rising_edge_31 (
+        .phase_select(delay_P), .MISO4x(in4x_P1), .MISO(in_DDR_P1));
+
+    MISO_rising_edge MISO_rising_edge_32 (
+        .phase_select(delay_P), .MISO4x(in4x_P2), .MISO(in_DDR_P2));
 
 
 
@@ -784,7 +884,15 @@ module rhd
 					in4x_E1[0] <= MISO_E1; in4x_E2[0] <= MISO_E2;
 					in4x_F1[0] <= MISO_F1; in4x_F2[0] <= MISO_F2;
 					in4x_G1[0] <= MISO_G1; in4x_G2[0] <= MISO_G2;
-					in4x_H1[0] <= MISO_H1; in4x_H2[0] <= MISO_H2;	
+					in4x_H1[0] <= MISO_H1; in4x_H2[0] <= MISO_H2;
+                    in4x_I1[0] <= MISO_I1; in4x_I2[0] <= MISO_I2;
+					in4x_J1[0] <= MISO_J1; in4x_J2[0] <= MISO_J2;
+					in4x_K1[0] <= MISO_K1; in4x_K2[0] <= MISO_K2;
+					in4x_L1[0] <= MISO_L1; in4x_L2[0] <= MISO_L2;
+					in4x_M1[0] <= MISO_M1; in4x_M2[0] <= MISO_M2;
+					in4x_N1[0] <= MISO_N1; in4x_N2[0] <= MISO_N2;
+					in4x_O1[0] <= MISO_O1; in4x_O2[0] <= MISO_O2;
+					in4x_P1[0] <= MISO_P1; in4x_P2[0] <= MISO_P2;	
 
                     main_state <= ms_clk1_d;
                 end
@@ -797,13 +905,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[1] <= MISO_A1; in4x_A2[1] <= MISO_A2;
-                    in4x_B1[1] <= MISO_B1; in4x_B2[1] <= MISO_B2;
-                    in4x_C1[1] <= MISO_C1; in4x_C2[1] <= MISO_C2;
-                    in4x_D1[1] <= MISO_D1; in4x_D2[1] <= MISO_D2;		
+					in4x_B1[1] <= MISO_B1; in4x_B2[1] <= MISO_B2;
+					in4x_C1[1] <= MISO_C1; in4x_C2[1] <= MISO_C2;
+					in4x_D1[1] <= MISO_D1; in4x_D2[1] <= MISO_D2;
 					in4x_E1[1] <= MISO_E1; in4x_E2[1] <= MISO_E2;
 					in4x_F1[1] <= MISO_F1; in4x_F2[1] <= MISO_F2;
 					in4x_G1[1] <= MISO_G1; in4x_G2[1] <= MISO_G2;
-					in4x_H1[1] <= MISO_H1; in4x_H2[1] <= MISO_H2;	
+					in4x_H1[1] <= MISO_H1; in4x_H2[1] <= MISO_H2;
+                    in4x_I1[1] <= MISO_I1; in4x_I2[1] <= MISO_I2;
+					in4x_J1[1] <= MISO_J1; in4x_J2[1] <= MISO_J2;
+					in4x_K1[1] <= MISO_K1; in4x_K2[1] <= MISO_K2;
+					in4x_L1[1] <= MISO_L1; in4x_L2[1] <= MISO_L2;
+					in4x_M1[1] <= MISO_M1; in4x_M2[1] <= MISO_M2;
+					in4x_N1[1] <= MISO_N1; in4x_N2[1] <= MISO_N2;
+					in4x_O1[1] <= MISO_O1; in4x_O2[1] <= MISO_O2;
+					in4x_P1[1] <= MISO_P1; in4x_P2[1] <= MISO_P2;	
                     main_state <= ms_clk2_a;
                 end
     
@@ -817,13 +933,21 @@ module rhd
 
 
                     in4x_A1[2] <= MISO_A1; in4x_A2[2] <= MISO_A2;
-                    in4x_B1[2] <= MISO_B1; in4x_B2[2] <= MISO_B2;
-                    in4x_C1[2] <= MISO_C1; in4x_C2[2] <= MISO_C2;
-                    in4x_D1[2] <= MISO_D1; in4x_D2[2] <= MISO_D2;		
+					in4x_B1[2] <= MISO_B1; in4x_B2[2] <= MISO_B2;
+					in4x_C1[2] <= MISO_C1; in4x_C2[2] <= MISO_C2;
+					in4x_D1[2] <= MISO_D1; in4x_D2[2] <= MISO_D2;
 					in4x_E1[2] <= MISO_E1; in4x_E2[2] <= MISO_E2;
 					in4x_F1[2] <= MISO_F1; in4x_F2[2] <= MISO_F2;
 					in4x_G1[2] <= MISO_G1; in4x_G2[2] <= MISO_G2;
-					in4x_H1[2] <= MISO_H1; in4x_H2[2] <= MISO_H2;	
+					in4x_H1[2] <= MISO_H1; in4x_H2[2] <= MISO_H2;
+                    in4x_I1[2] <= MISO_I1; in4x_I2[2] <= MISO_I2;
+					in4x_J1[2] <= MISO_J1; in4x_J2[2] <= MISO_J2;
+					in4x_K1[2] <= MISO_K1; in4x_K2[2] <= MISO_K2;
+					in4x_L1[2] <= MISO_L1; in4x_L2[2] <= MISO_L2;
+					in4x_M1[2] <= MISO_M1; in4x_M2[2] <= MISO_M2;
+					in4x_N1[2] <= MISO_N1; in4x_N2[2] <= MISO_N2;
+					in4x_O1[2] <= MISO_O1; in4x_O2[2] <= MISO_O2;
+					in4x_P1[2] <= MISO_P1; in4x_P2[2] <= MISO_P2;	
                     main_state <= ms_clk2_b;
                 end
     
@@ -832,13 +956,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[3] <= MISO_A1; in4x_A2[3] <= MISO_A2;
-                    in4x_B1[3] <= MISO_B1; in4x_B2[3] <= MISO_B2;
-                    in4x_C1[3] <= MISO_C1; in4x_C2[3] <= MISO_C2;
-                    in4x_D1[3] <= MISO_D1; in4x_D2[3] <= MISO_D2;	
+					in4x_B1[3] <= MISO_B1; in4x_B2[3] <= MISO_B2;
+					in4x_C1[3] <= MISO_C1; in4x_C2[3] <= MISO_C2;
+					in4x_D1[3] <= MISO_D1; in4x_D2[3] <= MISO_D2;
 					in4x_E1[3] <= MISO_E1; in4x_E2[3] <= MISO_E2;
 					in4x_F1[3] <= MISO_F1; in4x_F2[3] <= MISO_F2;
 					in4x_G1[3] <= MISO_G1; in4x_G2[3] <= MISO_G2;
-					in4x_H1[3] <= MISO_H1; in4x_H2[3] <= MISO_H2;	
+					in4x_H1[3] <= MISO_H1; in4x_H2[3] <= MISO_H2;
+                    in4x_I1[3] <= MISO_I1; in4x_I2[3] <= MISO_I2;
+					in4x_J1[3] <= MISO_J1; in4x_J2[3] <= MISO_J2;
+					in4x_K1[3] <= MISO_K1; in4x_K2[3] <= MISO_K2;
+					in4x_L1[3] <= MISO_L1; in4x_L2[3] <= MISO_L2;
+					in4x_M1[3] <= MISO_M1; in4x_M2[3] <= MISO_M2;
+					in4x_N1[3] <= MISO_N1; in4x_N2[3] <= MISO_N2;
+					in4x_O1[3] <= MISO_O1; in4x_O2[3] <= MISO_O2;
+					in4x_P1[3] <= MISO_P1; in4x_P2[3] <= MISO_P2;	
                     main_state <= ms_clk2_c;
                 end
     
@@ -848,13 +980,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[4] <= MISO_A1; in4x_A2[4] <= MISO_A2;
-                    in4x_B1[4] <= MISO_B1; in4x_B2[4] <= MISO_B2;
-                    in4x_C1[4] <= MISO_C1; in4x_C2[4] <= MISO_C2;
-                    in4x_D1[4] <= MISO_D1; in4x_D2[4] <= MISO_D2;	
-                    in4x_E1[4] <= MISO_E1; in4x_E2[4] <= MISO_E2;
+					in4x_B1[4] <= MISO_B1; in4x_B2[4] <= MISO_B2;
+					in4x_C1[4] <= MISO_C1; in4x_C2[4] <= MISO_C2;
+					in4x_D1[4] <= MISO_D1; in4x_D2[4] <= MISO_D2;
+					in4x_E1[4] <= MISO_E1; in4x_E2[4] <= MISO_E2;
 					in4x_F1[4] <= MISO_F1; in4x_F2[4] <= MISO_F2;
 					in4x_G1[4] <= MISO_G1; in4x_G2[4] <= MISO_G2;
-					in4x_H1[4] <= MISO_H1; in4x_H2[4] <= MISO_H2;					
+					in4x_H1[4] <= MISO_H1; in4x_H2[4] <= MISO_H2;
+                    in4x_I1[4] <= MISO_I1; in4x_I2[4] <= MISO_I2;
+					in4x_J1[4] <= MISO_J1; in4x_J2[4] <= MISO_J2;
+					in4x_K1[4] <= MISO_K1; in4x_K2[4] <= MISO_K2;
+					in4x_L1[4] <= MISO_L1; in4x_L2[4] <= MISO_L2;
+					in4x_M1[4] <= MISO_M1; in4x_M2[4] <= MISO_M2;
+					in4x_N1[4] <= MISO_N1; in4x_N2[4] <= MISO_N2;
+					in4x_O1[4] <= MISO_O1; in4x_O2[4] <= MISO_O2;
+					in4x_P1[4] <= MISO_P1; in4x_P2[4] <= MISO_P2;					
                     main_state <= ms_clk2_d;
                 end
                     
@@ -865,13 +1005,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[5] <= MISO_A1; in4x_A2[5] <= MISO_A2;
-                    in4x_B1[5] <= MISO_B1; in4x_B2[5] <= MISO_B2;
-                    in4x_C1[5] <= MISO_C1; in4x_C2[5] <= MISO_C2;
-                    in4x_D1[5] <= MISO_D1; in4x_D2[5] <= MISO_D2;	
-                    in4x_E1[5] <= MISO_E1; in4x_E2[5] <= MISO_E2;
+					in4x_B1[5] <= MISO_B1; in4x_B2[5] <= MISO_B2;
+					in4x_C1[5] <= MISO_C1; in4x_C2[5] <= MISO_C2;
+					in4x_D1[5] <= MISO_D1; in4x_D2[5] <= MISO_D2;
+					in4x_E1[5] <= MISO_E1; in4x_E2[5] <= MISO_E2;
 					in4x_F1[5] <= MISO_F1; in4x_F2[5] <= MISO_F2;
 					in4x_G1[5] <= MISO_G1; in4x_G2[5] <= MISO_G2;
-					in4x_H1[5] <= MISO_H1; in4x_H2[5] <= MISO_H2;	
+					in4x_H1[5] <= MISO_H1; in4x_H2[5] <= MISO_H2;
+                    in4x_I1[5] <= MISO_I1; in4x_I2[5] <= MISO_I2;
+					in4x_J1[5] <= MISO_J1; in4x_J2[5] <= MISO_J2;
+					in4x_K1[5] <= MISO_K1; in4x_K2[5] <= MISO_K2;
+					in4x_L1[5] <= MISO_L1; in4x_L2[5] <= MISO_L2;
+					in4x_M1[5] <= MISO_M1; in4x_M2[5] <= MISO_M2;
+					in4x_N1[5] <= MISO_N1; in4x_N2[5] <= MISO_N2;
+					in4x_O1[5] <= MISO_O1; in4x_O2[5] <= MISO_O2;
+					in4x_P1[5] <= MISO_P1; in4x_P2[5] <= MISO_P2;	
 
                     main_state <= ms_clk3_a;
                 end
@@ -884,13 +1032,21 @@ module rhd
 
                     
                     in4x_A1[6] <= MISO_A1; in4x_A2[6] <= MISO_A2;
-                    in4x_B1[6] <= MISO_B1; in4x_B2[6] <= MISO_B2;
-                    in4x_C1[6] <= MISO_C1; in4x_C2[6] <= MISO_C2;
-                    in4x_D1[6] <= MISO_D1; in4x_D2[6] <= MISO_D2;	
+					in4x_B1[6] <= MISO_B1; in4x_B2[6] <= MISO_B2;
+					in4x_C1[6] <= MISO_C1; in4x_C2[6] <= MISO_C2;
+					in4x_D1[6] <= MISO_D1; in4x_D2[6] <= MISO_D2;
 					in4x_E1[6] <= MISO_E1; in4x_E2[6] <= MISO_E2;
 					in4x_F1[6] <= MISO_F1; in4x_F2[6] <= MISO_F2;
 					in4x_G1[6] <= MISO_G1; in4x_G2[6] <= MISO_G2;
-					in4x_H1[6] <= MISO_H1; in4x_H2[6] <= MISO_H2;	
+					in4x_H1[6] <= MISO_H1; in4x_H2[6] <= MISO_H2;
+                    in4x_I1[6] <= MISO_I1; in4x_I2[6] <= MISO_I2;
+					in4x_J1[6] <= MISO_J1; in4x_J2[6] <= MISO_J2;
+					in4x_K1[6] <= MISO_K1; in4x_K2[6] <= MISO_K2;
+					in4x_L1[6] <= MISO_L1; in4x_L2[6] <= MISO_L2;
+					in4x_M1[6] <= MISO_M1; in4x_M2[6] <= MISO_M2;
+					in4x_N1[6] <= MISO_N1; in4x_N2[6] <= MISO_N2;
+					in4x_O1[6] <= MISO_O1; in4x_O2[6] <= MISO_O2;
+					in4x_P1[6] <= MISO_P1; in4x_P2[6] <= MISO_P2;	
 
                     main_state <= ms_clk3_b;
                     end
@@ -900,13 +1056,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[7] <= MISO_A1; in4x_A2[7] <= MISO_A2;
-                    in4x_B1[7] <= MISO_B1; in4x_B2[7] <= MISO_B2;
-                    in4x_C1[7] <= MISO_C1; in4x_C2[7] <= MISO_C2;
-                    in4x_D1[7] <= MISO_D1; in4x_D2[7] <= MISO_D2;	
-                    in4x_E1[7] <= MISO_E1; in4x_E2[7] <= MISO_E2;
+					in4x_B1[7] <= MISO_B1; in4x_B2[7] <= MISO_B2;
+					in4x_C1[7] <= MISO_C1; in4x_C2[7] <= MISO_C2;
+					in4x_D1[7] <= MISO_D1; in4x_D2[7] <= MISO_D2;
+					in4x_E1[7] <= MISO_E1; in4x_E2[7] <= MISO_E2;
 					in4x_F1[7] <= MISO_F1; in4x_F2[7] <= MISO_F2;
 					in4x_G1[7] <= MISO_G1; in4x_G2[7] <= MISO_G2;
-					in4x_H1[7] <= MISO_H1; in4x_H2[7] <= MISO_H2;		
+					in4x_H1[7] <= MISO_H1; in4x_H2[7] <= MISO_H2;
+                    in4x_I1[7] <= MISO_I1; in4x_I2[7] <= MISO_I2;
+					in4x_J1[7] <= MISO_J1; in4x_J2[7] <= MISO_J2;
+					in4x_K1[7] <= MISO_K1; in4x_K2[7] <= MISO_K2;
+					in4x_L1[7] <= MISO_L1; in4x_L2[7] <= MISO_L2;
+					in4x_M1[7] <= MISO_M1; in4x_M2[7] <= MISO_M2;
+					in4x_N1[7] <= MISO_N1; in4x_N2[7] <= MISO_N2;
+					in4x_O1[7] <= MISO_O1; in4x_O2[7] <= MISO_O2;
+					in4x_P1[7] <= MISO_P1; in4x_P2[7] <= MISO_P2;		
 
                     main_state <= ms_clk3_c;
                     end
@@ -917,13 +1081,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[8] <= MISO_A1; in4x_A2[8] <= MISO_A2;
-                    in4x_B1[8] <= MISO_B1; in4x_B2[8] <= MISO_B2;
-                    in4x_C1[8] <= MISO_C1; in4x_C2[8] <= MISO_C2;
-                    in4x_D1[8] <= MISO_D1; in4x_D2[8] <= MISO_D2;
-                    in4x_E1[8] <= MISO_E1; in4x_E2[8] <= MISO_E2;
+					in4x_B1[8] <= MISO_B1; in4x_B2[8] <= MISO_B2;
+					in4x_C1[8] <= MISO_C1; in4x_C2[8] <= MISO_C2;
+					in4x_D1[8] <= MISO_D1; in4x_D2[8] <= MISO_D2;
+					in4x_E1[8] <= MISO_E1; in4x_E2[8] <= MISO_E2;
 					in4x_F1[8] <= MISO_F1; in4x_F2[8] <= MISO_F2;
 					in4x_G1[8] <= MISO_G1; in4x_G2[8] <= MISO_G2;
-					in4x_H1[8] <= MISO_H1; in4x_H2[8] <= MISO_H2;	
+					in4x_H1[8] <= MISO_H1; in4x_H2[8] <= MISO_H2;
+                    in4x_I1[8] <= MISO_I1; in4x_I2[8] <= MISO_I2;
+					in4x_J1[8] <= MISO_J1; in4x_J2[8] <= MISO_J2;
+					in4x_K1[8] <= MISO_K1; in4x_K2[8] <= MISO_K2;
+					in4x_L1[8] <= MISO_L1; in4x_L2[8] <= MISO_L2;
+					in4x_M1[8] <= MISO_M1; in4x_M2[8] <= MISO_M2;
+					in4x_N1[8] <= MISO_N1; in4x_N2[8] <= MISO_N2;
+					in4x_O1[8] <= MISO_O1; in4x_O2[8] <= MISO_O2;
+					in4x_P1[8] <= MISO_P1; in4x_P2[8] <= MISO_P2;
 
                     main_state <= ms_clk3_d;
                     end
@@ -934,13 +1106,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[9] <= MISO_A1; in4x_A2[9] <= MISO_A2;
-                    in4x_B1[9] <= MISO_B1; in4x_B2[9] <= MISO_B2;
-                    in4x_C1[9] <= MISO_C1; in4x_C2[9] <= MISO_C2;
-                    in4x_D1[9] <= MISO_D1; in4x_D2[9] <= MISO_D2;	
-                    in4x_E1[9] <= MISO_E1; in4x_E2[9] <= MISO_E2;
+					in4x_B1[9] <= MISO_B1; in4x_B2[9] <= MISO_B2;
+					in4x_C1[9] <= MISO_C1; in4x_C2[9] <= MISO_C2;
+					in4x_D1[9] <= MISO_D1; in4x_D2[9] <= MISO_D2;
+					in4x_E1[9] <= MISO_E1; in4x_E2[9] <= MISO_E2;
 					in4x_F1[9] <= MISO_F1; in4x_F2[9] <= MISO_F2;
 					in4x_G1[9] <= MISO_G1; in4x_G2[9] <= MISO_G2;
-					in4x_H1[9] <= MISO_H1; in4x_H2[9] <= MISO_H2;			
+					in4x_H1[9] <= MISO_H1; in4x_H2[9] <= MISO_H2;
+                    in4x_I1[9] <= MISO_I1; in4x_I2[9] <= MISO_I2;
+					in4x_J1[9] <= MISO_J1; in4x_J2[9] <= MISO_J2;
+					in4x_K1[9] <= MISO_K1; in4x_K2[9] <= MISO_K2;
+					in4x_L1[9] <= MISO_L1; in4x_L2[9] <= MISO_L2;
+					in4x_M1[9] <= MISO_M1; in4x_M2[9] <= MISO_M2;
+					in4x_N1[9] <= MISO_N1; in4x_N2[9] <= MISO_N2;
+					in4x_O1[9] <= MISO_O1; in4x_O2[9] <= MISO_O2;
+					in4x_P1[9] <= MISO_P1; in4x_P2[9] <= MISO_P2;		
 
                     main_state <= ms_clk4_a;
                     end
@@ -953,13 +1133,21 @@ module rhd
 
 
                     in4x_A1[10] <= MISO_A1; in4x_A2[10] <= MISO_A2;
-                    in4x_B1[10] <= MISO_B1; in4x_B2[10] <= MISO_B2;
-                    in4x_C1[10] <= MISO_C1; in4x_C2[10] <= MISO_C2;
-                    in4x_D1[10] <= MISO_D1; in4x_D2[10] <= MISO_D2;	
-                    in4x_E1[10] <= MISO_E1; in4x_E2[10] <= MISO_E2;
+					in4x_B1[10] <= MISO_B1; in4x_B2[10] <= MISO_B2;
+					in4x_C1[10] <= MISO_C1; in4x_C2[10] <= MISO_C2;
+					in4x_D1[10] <= MISO_D1; in4x_D2[10] <= MISO_D2;
+					in4x_E1[10] <= MISO_E1; in4x_E2[10] <= MISO_E2;
 					in4x_F1[10] <= MISO_F1; in4x_F2[10] <= MISO_F2;
 					in4x_G1[10] <= MISO_G1; in4x_G2[10] <= MISO_G2;
-					in4x_H1[10] <= MISO_H1; in4x_H2[10] <= MISO_H2;	
+					in4x_H1[10] <= MISO_H1; in4x_H2[10] <= MISO_H2;
+                    in4x_I1[10] <= MISO_I1; in4x_I2[10] <= MISO_I2;
+					in4x_J1[10] <= MISO_J1; in4x_J2[10] <= MISO_J2;
+					in4x_K1[10] <= MISO_K1; in4x_K2[10] <= MISO_K2;
+					in4x_L1[10] <= MISO_L1; in4x_L2[10] <= MISO_L2;
+					in4x_M1[10] <= MISO_M1; in4x_M2[10] <= MISO_M2;
+					in4x_N1[10] <= MISO_N1; in4x_N2[10] <= MISO_N2;
+					in4x_O1[10] <= MISO_O1; in4x_O2[10] <= MISO_O2;
+					in4x_P1[10] <= MISO_P1; in4x_P2[10] <= MISO_P2;	
 
                     main_state <= ms_clk4_b;
                     end
@@ -969,13 +1157,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[11] <= MISO_A1; in4x_A2[11] <= MISO_A2;
-                    in4x_B1[11] <= MISO_B1; in4x_B2[11] <= MISO_B2;
-                    in4x_C1[11] <= MISO_C1; in4x_C2[11] <= MISO_C2;
-                    in4x_D1[11] <= MISO_D1; in4x_D2[11] <= MISO_D2;				
-                    in4x_E1[11] <= MISO_E1; in4x_E2[11] <= MISO_E2;
+					in4x_B1[11] <= MISO_B1; in4x_B2[11] <= MISO_B2;
+					in4x_C1[11] <= MISO_C1; in4x_C2[11] <= MISO_C2;
+					in4x_D1[11] <= MISO_D1; in4x_D2[11] <= MISO_D2;
+					in4x_E1[11] <= MISO_E1; in4x_E2[11] <= MISO_E2;
 					in4x_F1[11] <= MISO_F1; in4x_F2[11] <= MISO_F2;
 					in4x_G1[11] <= MISO_G1; in4x_G2[11] <= MISO_G2;
-					in4x_H1[11] <= MISO_H1; in4x_H2[11] <= MISO_H2;	
+					in4x_H1[11] <= MISO_H1; in4x_H2[11] <= MISO_H2;
+                    in4x_I1[11] <= MISO_I1; in4x_I2[11] <= MISO_I2;
+					in4x_J1[11] <= MISO_J1; in4x_J2[11] <= MISO_J2;
+					in4x_K1[11] <= MISO_K1; in4x_K2[11] <= MISO_K2;
+					in4x_L1[11] <= MISO_L1; in4x_L2[11] <= MISO_L2;
+					in4x_M1[11] <= MISO_M1; in4x_M2[11] <= MISO_M2;
+					in4x_N1[11] <= MISO_N1; in4x_N2[11] <= MISO_N2;
+					in4x_O1[11] <= MISO_O1; in4x_O2[11] <= MISO_O2;
+					in4x_P1[11] <= MISO_P1; in4x_P2[11] <= MISO_P2;
 
                     main_state <= ms_clk4_c;
                 end
@@ -986,13 +1182,21 @@ module rhd
     
                     SCLK <= 1'b1;
                     in4x_A1[12] <= MISO_A1; in4x_A2[12] <= MISO_A2;
-                    in4x_B1[12] <= MISO_B1; in4x_B2[12] <= MISO_B2;
-                    in4x_C1[12] <= MISO_C1; in4x_C2[12] <= MISO_C2;
-                    in4x_D1[12] <= MISO_D1; in4x_D2[12] <= MISO_D2;	
-                    in4x_E1[12] <= MISO_E1; in4x_E2[12] <= MISO_E2;
+					in4x_B1[12] <= MISO_B1; in4x_B2[12] <= MISO_B2;
+					in4x_C1[12] <= MISO_C1; in4x_C2[12] <= MISO_C2;
+					in4x_D1[12] <= MISO_D1; in4x_D2[12] <= MISO_D2;
+					in4x_E1[12] <= MISO_E1; in4x_E2[12] <= MISO_E2;
 					in4x_F1[12] <= MISO_F1; in4x_F2[12] <= MISO_F2;
 					in4x_G1[12] <= MISO_G1; in4x_G2[12] <= MISO_G2;
-					in4x_H1[12] <= MISO_H1; in4x_H2[12] <= MISO_H2;		
+					in4x_H1[12] <= MISO_H1; in4x_H2[12] <= MISO_H2;
+                    in4x_I1[12] <= MISO_I1; in4x_I2[12] <= MISO_I2;
+					in4x_J1[12] <= MISO_J1; in4x_J2[12] <= MISO_J2;
+					in4x_K1[12] <= MISO_K1; in4x_K2[12] <= MISO_K2;
+					in4x_L1[12] <= MISO_L1; in4x_L2[12] <= MISO_L2;
+					in4x_M1[12] <= MISO_M1; in4x_M2[12] <= MISO_M2;
+					in4x_N1[12] <= MISO_N1; in4x_N2[12] <= MISO_N2;
+					in4x_O1[12] <= MISO_O1; in4x_O2[12] <= MISO_O2;
+					in4x_P1[12] <= MISO_P1; in4x_P2[12] <= MISO_P2;		
 
                     main_state <= ms_clk4_d;
                 end
@@ -1004,13 +1208,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[13] <= MISO_A1; in4x_A2[13] <= MISO_A2;
-                    in4x_B1[13] <= MISO_B1; in4x_B2[13] <= MISO_B2;
-                    in4x_C1[13] <= MISO_C1; in4x_C2[13] <= MISO_C2;
-                    in4x_D1[13] <= MISO_D1; in4x_D2[13] <= MISO_D2;		
-                    in4x_E1[13] <= MISO_E1; in4x_E2[13] <= MISO_E2;
+					in4x_B1[13] <= MISO_B1; in4x_B2[13] <= MISO_B2;
+					in4x_C1[13] <= MISO_C1; in4x_C2[13] <= MISO_C2;
+					in4x_D1[13] <= MISO_D1; in4x_D2[13] <= MISO_D2;
+					in4x_E1[13] <= MISO_E1; in4x_E2[13] <= MISO_E2;
 					in4x_F1[13] <= MISO_F1; in4x_F2[13] <= MISO_F2;
 					in4x_G1[13] <= MISO_G1; in4x_G2[13] <= MISO_G2;
-					in4x_H1[13] <= MISO_H1; in4x_H2[13] <= MISO_H2;	
+					in4x_H1[13] <= MISO_H1; in4x_H2[13] <= MISO_H2;
+                    in4x_I1[13] <= MISO_I1; in4x_I2[13] <= MISO_I2;
+					in4x_J1[13] <= MISO_J1; in4x_J2[13] <= MISO_J2;
+					in4x_K1[13] <= MISO_K1; in4x_K2[13] <= MISO_K2;
+					in4x_L1[13] <= MISO_L1; in4x_L2[13] <= MISO_L2;
+					in4x_M1[13] <= MISO_M1; in4x_M2[13] <= MISO_M2;
+					in4x_N1[13] <= MISO_N1; in4x_N2[13] <= MISO_N2;
+					in4x_O1[13] <= MISO_O1; in4x_O2[13] <= MISO_O2;
+					in4x_P1[13] <= MISO_P1; in4x_P2[13] <= MISO_P2;	
 
                     main_state <= ms_clk5_a;
                 end
@@ -1022,13 +1234,21 @@ module rhd
                     MOSI <= MOSI_cmd[11];
 
                     in4x_A1[14] <= MISO_A1; in4x_A2[14] <= MISO_A2;
-                    in4x_B1[14] <= MISO_B1; in4x_B2[14] <= MISO_B2;
-                    in4x_C1[14] <= MISO_C1; in4x_C2[14] <= MISO_C2;
-                    in4x_D1[14] <= MISO_D1; in4x_D2[14] <= MISO_D2;
-                    in4x_E1[14] <= MISO_E1; in4x_E2[14] <= MISO_E2;
+					in4x_B1[14] <= MISO_B1; in4x_B2[14] <= MISO_B2;
+					in4x_C1[14] <= MISO_C1; in4x_C2[14] <= MISO_C2;
+					in4x_D1[14] <= MISO_D1; in4x_D2[14] <= MISO_D2;
+					in4x_E1[14] <= MISO_E1; in4x_E2[14] <= MISO_E2;
 					in4x_F1[14] <= MISO_F1; in4x_F2[14] <= MISO_F2;
 					in4x_G1[14] <= MISO_G1; in4x_G2[14] <= MISO_G2;
-					in4x_H1[14] <= MISO_H1; in4x_H2[14] <= MISO_H2;	
+					in4x_H1[14] <= MISO_H1; in4x_H2[14] <= MISO_H2;
+                    in4x_I1[14] <= MISO_I1; in4x_I2[14] <= MISO_I2;
+					in4x_J1[14] <= MISO_J1; in4x_J2[14] <= MISO_J2;
+					in4x_K1[14] <= MISO_K1; in4x_K2[14] <= MISO_K2;
+					in4x_L1[14] <= MISO_L1; in4x_L2[14] <= MISO_L2;
+					in4x_M1[14] <= MISO_M1; in4x_M2[14] <= MISO_M2;
+					in4x_N1[14] <= MISO_N1; in4x_N2[14] <= MISO_N2;
+					in4x_O1[14] <= MISO_O1; in4x_O2[14] <= MISO_O2;
+					in4x_P1[14] <= MISO_P1; in4x_P2[14] <= MISO_P2;	
 
                     main_state <= ms_clk5_b;
                 end
@@ -1038,13 +1258,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[15] <= MISO_A1; in4x_A2[15] <= MISO_A2;
-                    in4x_B1[15] <= MISO_B1; in4x_B2[15] <= MISO_B2;
-                    in4x_C1[15] <= MISO_C1; in4x_C2[15] <= MISO_C2;
-                    in4x_D1[15] <= MISO_D1; in4x_D2[15] <= MISO_D2;	
-                    in4x_E1[15] <= MISO_E1; in4x_E2[15] <= MISO_E2;
+					in4x_B1[15] <= MISO_B1; in4x_B2[15] <= MISO_B2;
+					in4x_C1[15] <= MISO_C1; in4x_C2[15] <= MISO_C2;
+					in4x_D1[15] <= MISO_D1; in4x_D2[15] <= MISO_D2;
+					in4x_E1[15] <= MISO_E1; in4x_E2[15] <= MISO_E2;
 					in4x_F1[15] <= MISO_F1; in4x_F2[15] <= MISO_F2;
 					in4x_G1[15] <= MISO_G1; in4x_G2[15] <= MISO_G2;
-					in4x_H1[15] <= MISO_H1; in4x_H2[15] <= MISO_H2;		
+					in4x_H1[15] <= MISO_H1; in4x_H2[15] <= MISO_H2;
+                    in4x_I1[15] <= MISO_I1; in4x_I2[15] <= MISO_I2;
+					in4x_J1[15] <= MISO_J1; in4x_J2[15] <= MISO_J2;
+					in4x_K1[15] <= MISO_K1; in4x_K2[15] <= MISO_K2;
+					in4x_L1[15] <= MISO_L1; in4x_L2[15] <= MISO_L2;
+					in4x_M1[15] <= MISO_M1; in4x_M2[15] <= MISO_M2;
+					in4x_N1[15] <= MISO_N1; in4x_N2[15] <= MISO_N2;
+					in4x_O1[15] <= MISO_O1; in4x_O2[15] <= MISO_O2;
+					in4x_P1[15] <= MISO_P1; in4x_P2[15] <= MISO_P2;		
 
                     main_state <= ms_clk5_c;
                 end
@@ -1055,13 +1283,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[16] <= MISO_A1; in4x_A2[16] <= MISO_A2;
-                    in4x_B1[16] <= MISO_B1; in4x_B2[16] <= MISO_B2;
-                    in4x_C1[16] <= MISO_C1; in4x_C2[16] <= MISO_C2;
-                    in4x_D1[16] <= MISO_D1; in4x_D2[16] <= MISO_D2;		
-                    in4x_E1[16] <= MISO_E1; in4x_E2[16] <= MISO_E2;
+					in4x_B1[16] <= MISO_B1; in4x_B2[16] <= MISO_B2;
+					in4x_C1[16] <= MISO_C1; in4x_C2[16] <= MISO_C2;
+					in4x_D1[16] <= MISO_D1; in4x_D2[16] <= MISO_D2;
+					in4x_E1[16] <= MISO_E1; in4x_E2[16] <= MISO_E2;
 					in4x_F1[16] <= MISO_F1; in4x_F2[16] <= MISO_F2;
 					in4x_G1[16] <= MISO_G1; in4x_G2[16] <= MISO_G2;
-					in4x_H1[16] <= MISO_H1; in4x_H2[16] <= MISO_H2;				
+					in4x_H1[16] <= MISO_H1; in4x_H2[16] <= MISO_H2;
+                    in4x_I1[16] <= MISO_I1; in4x_I2[16] <= MISO_I2;
+					in4x_J1[16] <= MISO_J1; in4x_J2[16] <= MISO_J2;
+					in4x_K1[16] <= MISO_K1; in4x_K2[16] <= MISO_K2;
+					in4x_L1[16] <= MISO_L1; in4x_L2[16] <= MISO_L2;
+					in4x_M1[16] <= MISO_M1; in4x_M2[16] <= MISO_M2;
+					in4x_N1[16] <= MISO_N1; in4x_N2[16] <= MISO_N2;
+					in4x_O1[16] <= MISO_O1; in4x_O2[16] <= MISO_O2;
+					in4x_P1[16] <= MISO_P1; in4x_P2[16] <= MISO_P2;				
 
                     main_state <= ms_clk5_d;
                 end
@@ -1072,13 +1308,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[17] <= MISO_A1; in4x_A2[17] <= MISO_A2;
-                    in4x_B1[17] <= MISO_B1; in4x_B2[17] <= MISO_B2;
-                    in4x_C1[17] <= MISO_C1; in4x_C2[17] <= MISO_C2;
-                    in4x_D1[17] <= MISO_D1; in4x_D2[17] <= MISO_D2;	
-                    in4x_E1[17] <= MISO_E1; in4x_E2[17] <= MISO_E2;
+					in4x_B1[17] <= MISO_B1; in4x_B2[17] <= MISO_B2;
+					in4x_C1[17] <= MISO_C1; in4x_C2[17] <= MISO_C2;
+					in4x_D1[17] <= MISO_D1; in4x_D2[17] <= MISO_D2;
+					in4x_E1[17] <= MISO_E1; in4x_E2[17] <= MISO_E2;
 					in4x_F1[17] <= MISO_F1; in4x_F2[17] <= MISO_F2;
 					in4x_G1[17] <= MISO_G1; in4x_G2[17] <= MISO_G2;
-					in4x_H1[17] <= MISO_H1; in4x_H2[17] <= MISO_H2;			
+					in4x_H1[17] <= MISO_H1; in4x_H2[17] <= MISO_H2;
+                    in4x_I1[17] <= MISO_I1; in4x_I2[17] <= MISO_I2;
+					in4x_J1[17] <= MISO_J1; in4x_J2[17] <= MISO_J2;
+					in4x_K1[17] <= MISO_K1; in4x_K2[17] <= MISO_K2;
+					in4x_L1[17] <= MISO_L1; in4x_L2[17] <= MISO_L2;
+					in4x_M1[17] <= MISO_M1; in4x_M2[17] <= MISO_M2;
+					in4x_N1[17] <= MISO_N1; in4x_N2[17] <= MISO_N2;
+					in4x_O1[17] <= MISO_O1; in4x_O2[17] <= MISO_O2;
+					in4x_P1[17] <= MISO_P1; in4x_P2[17] <= MISO_P2;			
 
                     main_state <= ms_clk6_a;
                 end
@@ -1091,13 +1335,21 @@ module rhd
 
 
                     in4x_A1[18] <= MISO_A1; in4x_A2[18] <= MISO_A2;
-                    in4x_B1[18] <= MISO_B1; in4x_B2[18] <= MISO_B2;
-                    in4x_C1[18] <= MISO_C1; in4x_C2[18] <= MISO_C2;
-                    in4x_D1[18] <= MISO_D1; in4x_D2[18] <= MISO_D2;		
-                    in4x_E1[18] <= MISO_E1; in4x_E2[18] <= MISO_E2;
+					in4x_B1[18] <= MISO_B1; in4x_B2[18] <= MISO_B2;
+					in4x_C1[18] <= MISO_C1; in4x_C2[18] <= MISO_C2;
+					in4x_D1[18] <= MISO_D1; in4x_D2[18] <= MISO_D2;
+					in4x_E1[18] <= MISO_E1; in4x_E2[18] <= MISO_E2;
 					in4x_F1[18] <= MISO_F1; in4x_F2[18] <= MISO_F2;
 					in4x_G1[18] <= MISO_G1; in4x_G2[18] <= MISO_G2;
-					in4x_H1[18] <= MISO_H1; in4x_H2[18] <= MISO_H2;	
+					in4x_H1[18] <= MISO_H1; in4x_H2[18] <= MISO_H2;
+                    in4x_I1[18] <= MISO_I1; in4x_I2[18] <= MISO_I2;
+					in4x_J1[18] <= MISO_J1; in4x_J2[18] <= MISO_J2;
+					in4x_K1[18] <= MISO_K1; in4x_K2[18] <= MISO_K2;
+					in4x_L1[18] <= MISO_L1; in4x_L2[18] <= MISO_L2;
+					in4x_M1[18] <= MISO_M1; in4x_M2[18] <= MISO_M2;
+					in4x_N1[18] <= MISO_N1; in4x_N2[18] <= MISO_N2;
+					in4x_O1[18] <= MISO_O1; in4x_O2[18] <= MISO_O2;
+					in4x_P1[18] <= MISO_P1; in4x_P2[18] <= MISO_P2;	
 
 
                     main_state <= ms_clk6_b;
@@ -1108,13 +1360,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[19] <= MISO_A1; in4x_A2[19] <= MISO_A2;
-                    in4x_B1[19] <= MISO_B1; in4x_B2[19] <= MISO_B2;
-                    in4x_C1[19] <= MISO_C1; in4x_C2[19] <= MISO_C2;
-                    in4x_D1[19] <= MISO_D1; in4x_D2[19] <= MISO_D2;	
-                    in4x_E1[19] <= MISO_E1; in4x_E2[19] <= MISO_E2;
+					in4x_B1[19] <= MISO_B1; in4x_B2[19] <= MISO_B2;
+					in4x_C1[19] <= MISO_C1; in4x_C2[19] <= MISO_C2;
+					in4x_D1[19] <= MISO_D1; in4x_D2[19] <= MISO_D2;
+					in4x_E1[19] <= MISO_E1; in4x_E2[19] <= MISO_E2;
 					in4x_F1[19] <= MISO_F1; in4x_F2[19] <= MISO_F2;
 					in4x_G1[19] <= MISO_G1; in4x_G2[19] <= MISO_G2;
-					in4x_H1[19] <= MISO_H1; in4x_H2[19] <= MISO_H2;	
+					in4x_H1[19] <= MISO_H1; in4x_H2[19] <= MISO_H2;
+                    in4x_I1[19] <= MISO_I1; in4x_I2[19] <= MISO_I2;
+					in4x_J1[19] <= MISO_J1; in4x_J2[19] <= MISO_J2;
+					in4x_K1[19] <= MISO_K1; in4x_K2[19] <= MISO_K2;
+					in4x_L1[19] <= MISO_L1; in4x_L2[19] <= MISO_L2;
+					in4x_M1[19] <= MISO_M1; in4x_M2[19] <= MISO_M2;
+					in4x_N1[19] <= MISO_N1; in4x_N2[19] <= MISO_N2;
+					in4x_O1[19] <= MISO_O1; in4x_O2[19] <= MISO_O2;
+					in4x_P1[19] <= MISO_P1; in4x_P2[19] <= MISO_P2;	
 
                     main_state <= ms_clk6_c;
                 end
@@ -1125,13 +1385,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[20] <= MISO_A1; in4x_A2[20] <= MISO_A2;
-                    in4x_B1[20] <= MISO_B1; in4x_B2[20] <= MISO_B2;
-                    in4x_C1[20] <= MISO_C1; in4x_C2[20] <= MISO_C2;
-                    in4x_D1[20] <= MISO_D1; in4x_D2[20] <= MISO_D2;	
-                    in4x_E1[20] <= MISO_E1; in4x_E2[20] <= MISO_E2;
+					in4x_B1[20] <= MISO_B1; in4x_B2[20] <= MISO_B2;
+					in4x_C1[20] <= MISO_C1; in4x_C2[20] <= MISO_C2;
+					in4x_D1[20] <= MISO_D1; in4x_D2[20] <= MISO_D2;
+					in4x_E1[20] <= MISO_E1; in4x_E2[20] <= MISO_E2;
 					in4x_F1[20] <= MISO_F1; in4x_F2[20] <= MISO_F2;
 					in4x_G1[20] <= MISO_G1; in4x_G2[20] <= MISO_G2;
-					in4x_H1[20] <= MISO_H1; in4x_H2[20] <= MISO_H2;	
+					in4x_H1[20] <= MISO_H1; in4x_H2[20] <= MISO_H2;
+                    in4x_I1[20] <= MISO_I1; in4x_I2[20] <= MISO_I2;
+					in4x_J1[20] <= MISO_J1; in4x_J2[20] <= MISO_J2;
+					in4x_K1[20] <= MISO_K1; in4x_K2[20] <= MISO_K2;
+					in4x_L1[20] <= MISO_L1; in4x_L2[20] <= MISO_L2;
+					in4x_M1[20] <= MISO_M1; in4x_M2[20] <= MISO_M2;
+					in4x_N1[20] <= MISO_N1; in4x_N2[20] <= MISO_N2;
+					in4x_O1[20] <= MISO_O1; in4x_O2[20] <= MISO_O2;
+					in4x_P1[20] <= MISO_P1; in4x_P2[20] <= MISO_P2;	
 
                     main_state <= ms_clk6_d;
                 end
@@ -1142,13 +1410,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[21] <= MISO_A1; in4x_A2[21] <= MISO_A2;
-                    in4x_B1[21] <= MISO_B1; in4x_B2[21] <= MISO_B2;
-                    in4x_C1[21] <= MISO_C1; in4x_C2[21] <= MISO_C2;
-                    in4x_D1[21] <= MISO_D1; in4x_D2[21] <= MISO_D2;		
-                    in4x_E1[21] <= MISO_E1; in4x_E2[21] <= MISO_E2;
+					in4x_B1[21] <= MISO_B1; in4x_B2[21] <= MISO_B2;
+					in4x_C1[21] <= MISO_C1; in4x_C2[21] <= MISO_C2;
+					in4x_D1[21] <= MISO_D1; in4x_D2[21] <= MISO_D2;
+					in4x_E1[21] <= MISO_E1; in4x_E2[21] <= MISO_E2;
 					in4x_F1[21] <= MISO_F1; in4x_F2[21] <= MISO_F2;
 					in4x_G1[21] <= MISO_G1; in4x_G2[21] <= MISO_G2;
-					in4x_H1[21] <= MISO_H1; in4x_H2[21] <= MISO_H2;	
+					in4x_H1[21] <= MISO_H1; in4x_H2[21] <= MISO_H2;
+                    in4x_I1[21] <= MISO_I1; in4x_I2[21] <= MISO_I2;
+					in4x_J1[21] <= MISO_J1; in4x_J2[21] <= MISO_J2;
+					in4x_K1[21] <= MISO_K1; in4x_K2[21] <= MISO_K2;
+					in4x_L1[21] <= MISO_L1; in4x_L2[21] <= MISO_L2;
+					in4x_M1[21] <= MISO_M1; in4x_M2[21] <= MISO_M2;
+					in4x_N1[21] <= MISO_N1; in4x_N2[21] <= MISO_N2;
+					in4x_O1[21] <= MISO_O1; in4x_O2[21] <= MISO_O2;
+					in4x_P1[21] <= MISO_P1; in4x_P2[21] <= MISO_P2;	
                     
                     main_state <= ms_clk7_a;
                 end
@@ -1161,13 +1437,21 @@ module rhd
 
 
                     in4x_A1[22] <= MISO_A1; in4x_A2[22] <= MISO_A2;
-                    in4x_B1[22] <= MISO_B1; in4x_B2[22] <= MISO_B2;
-                    in4x_C1[22] <= MISO_C1; in4x_C2[22] <= MISO_C2;
-                    in4x_D1[22] <= MISO_D1; in4x_D2[22] <= MISO_D2;
-                    in4x_E1[22] <= MISO_E1; in4x_E2[22] <= MISO_E2;
+					in4x_B1[22] <= MISO_B1; in4x_B2[22] <= MISO_B2;
+					in4x_C1[22] <= MISO_C1; in4x_C2[22] <= MISO_C2;
+					in4x_D1[22] <= MISO_D1; in4x_D2[22] <= MISO_D2;
+					in4x_E1[22] <= MISO_E1; in4x_E2[22] <= MISO_E2;
 					in4x_F1[22] <= MISO_F1; in4x_F2[22] <= MISO_F2;
 					in4x_G1[22] <= MISO_G1; in4x_G2[22] <= MISO_G2;
-					in4x_H1[22] <= MISO_H1; in4x_H2[22] <= MISO_H2;	
+					in4x_H1[22] <= MISO_H1; in4x_H2[22] <= MISO_H2;
+                    in4x_I1[22] <= MISO_I1; in4x_I2[22] <= MISO_I2;
+					in4x_J1[22] <= MISO_J1; in4x_J2[22] <= MISO_J2;
+					in4x_K1[22] <= MISO_K1; in4x_K2[22] <= MISO_K2;
+					in4x_L1[22] <= MISO_L1; in4x_L2[22] <= MISO_L2;
+					in4x_M1[22] <= MISO_M1; in4x_M2[22] <= MISO_M2;
+					in4x_N1[22] <= MISO_N1; in4x_N2[22] <= MISO_N2;
+					in4x_O1[22] <= MISO_O1; in4x_O2[22] <= MISO_O2;
+					in4x_P1[22] <= MISO_P1; in4x_P2[22] <= MISO_P2;	
 
                     main_state <= ms_clk7_b;
                 end
@@ -1177,13 +1461,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[23] <= MISO_A1; in4x_A2[23] <= MISO_A2;
-                    in4x_B1[23] <= MISO_B1; in4x_B2[23] <= MISO_B2;
-                    in4x_C1[23] <= MISO_C1; in4x_C2[23] <= MISO_C2;
-                    in4x_D1[23] <= MISO_D1; in4x_D2[23] <= MISO_D2;		
-                    in4x_E1[23] <= MISO_E1; in4x_E2[23] <= MISO_E2;
+					in4x_B1[23] <= MISO_B1; in4x_B2[23] <= MISO_B2;
+					in4x_C1[23] <= MISO_C1; in4x_C2[23] <= MISO_C2;
+					in4x_D1[23] <= MISO_D1; in4x_D2[23] <= MISO_D2;
+					in4x_E1[23] <= MISO_E1; in4x_E2[23] <= MISO_E2;
 					in4x_F1[23] <= MISO_F1; in4x_F2[23] <= MISO_F2;
 					in4x_G1[23] <= MISO_G1; in4x_G2[23] <= MISO_G2;
-					in4x_H1[23] <= MISO_H1; in4x_H2[23] <= MISO_H2;	
+					in4x_H1[23] <= MISO_H1; in4x_H2[23] <= MISO_H2;
+                    in4x_I1[23] <= MISO_I1; in4x_I2[23] <= MISO_I2;
+					in4x_J1[23] <= MISO_J1; in4x_J2[23] <= MISO_J2;
+					in4x_K1[23] <= MISO_K1; in4x_K2[23] <= MISO_K2;
+					in4x_L1[23] <= MISO_L1; in4x_L2[23] <= MISO_L2;
+					in4x_M1[23] <= MISO_M1; in4x_M2[23] <= MISO_M2;
+					in4x_N1[23] <= MISO_N1; in4x_N2[23] <= MISO_N2;
+					in4x_O1[23] <= MISO_O1; in4x_O2[23] <= MISO_O2;
+					in4x_P1[23] <= MISO_P1; in4x_P2[23] <= MISO_P2;	
 
                     main_state <= ms_clk7_c;
                 end
@@ -1194,13 +1486,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[24] <= MISO_A1; in4x_A2[24] <= MISO_A2;
-                    in4x_B1[24] <= MISO_B1; in4x_B2[24] <= MISO_B2;
-                    in4x_C1[24] <= MISO_C1; in4x_C2[24] <= MISO_C2;
-                    in4x_D1[24] <= MISO_D1; in4x_D2[24] <= MISO_D2;		
-                    in4x_E1[24] <= MISO_E1; in4x_E2[24] <= MISO_E2;
+					in4x_B1[24] <= MISO_B1; in4x_B2[24] <= MISO_B2;
+					in4x_C1[24] <= MISO_C1; in4x_C2[24] <= MISO_C2;
+					in4x_D1[24] <= MISO_D1; in4x_D2[24] <= MISO_D2;
+					in4x_E1[24] <= MISO_E1; in4x_E2[24] <= MISO_E2;
 					in4x_F1[24] <= MISO_F1; in4x_F2[24] <= MISO_F2;
 					in4x_G1[24] <= MISO_G1; in4x_G2[24] <= MISO_G2;
-					in4x_H1[24] <= MISO_H1; in4x_H2[24] <= MISO_H2;	
+					in4x_H1[24] <= MISO_H1; in4x_H2[24] <= MISO_H2;
+                    in4x_I1[24] <= MISO_I1; in4x_I2[24] <= MISO_I2;
+					in4x_J1[24] <= MISO_J1; in4x_J2[24] <= MISO_J2;
+					in4x_K1[24] <= MISO_K1; in4x_K2[24] <= MISO_K2;
+					in4x_L1[24] <= MISO_L1; in4x_L2[24] <= MISO_L2;
+					in4x_M1[24] <= MISO_M1; in4x_M2[24] <= MISO_M2;
+					in4x_N1[24] <= MISO_N1; in4x_N2[24] <= MISO_N2;
+					in4x_O1[24] <= MISO_O1; in4x_O2[24] <= MISO_O2;
+					in4x_P1[24] <= MISO_P1; in4x_P2[24] <= MISO_P2;	
 
                     main_state <= ms_clk7_d;
                 end
@@ -1211,13 +1511,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[25] <= MISO_A1; in4x_A2[25] <= MISO_A2;
-                    in4x_B1[25] <= MISO_B1; in4x_B2[25] <= MISO_B2;
-                    in4x_C1[25] <= MISO_C1; in4x_C2[25] <= MISO_C2;
-                    in4x_D1[25] <= MISO_D1; in4x_D2[25] <= MISO_D2;		
-                    in4x_E1[25] <= MISO_E1; in4x_E2[25] <= MISO_E2;
+					in4x_B1[25] <= MISO_B1; in4x_B2[25] <= MISO_B2;
+					in4x_C1[25] <= MISO_C1; in4x_C2[25] <= MISO_C2;
+					in4x_D1[25] <= MISO_D1; in4x_D2[25] <= MISO_D2;
+					in4x_E1[25] <= MISO_E1; in4x_E2[25] <= MISO_E2;
 					in4x_F1[25] <= MISO_F1; in4x_F2[25] <= MISO_F2;
 					in4x_G1[25] <= MISO_G1; in4x_G2[25] <= MISO_G2;
-					in4x_H1[25] <= MISO_H1; in4x_H2[25] <= MISO_H2;	
+					in4x_H1[25] <= MISO_H1; in4x_H2[25] <= MISO_H2;
+                    in4x_I1[25] <= MISO_I1; in4x_I2[25] <= MISO_I2;
+					in4x_J1[25] <= MISO_J1; in4x_J2[25] <= MISO_J2;
+					in4x_K1[25] <= MISO_K1; in4x_K2[25] <= MISO_K2;
+					in4x_L1[25] <= MISO_L1; in4x_L2[25] <= MISO_L2;
+					in4x_M1[25] <= MISO_M1; in4x_M2[25] <= MISO_M2;
+					in4x_N1[25] <= MISO_N1; in4x_N2[25] <= MISO_N2;
+					in4x_O1[25] <= MISO_O1; in4x_O2[25] <= MISO_O2;
+					in4x_P1[25] <= MISO_P1; in4x_P2[25] <= MISO_P2;	
                     
                     main_state <= ms_clk8_a;
                 end
@@ -1229,13 +1537,21 @@ module rhd
                     MOSI <= MOSI_cmd[8];
 
                     in4x_A1[26] <= MISO_A1; in4x_A2[26] <= MISO_A2;
-                    in4x_B1[26] <= MISO_B1; in4x_B2[26] <= MISO_B2;
-                    in4x_C1[26] <= MISO_C1; in4x_C2[26] <= MISO_C2;
-                    in4x_D1[26] <= MISO_D1; in4x_D2[26] <= MISO_D2;	
-                    in4x_E1[26] <= MISO_E1; in4x_E2[26] <= MISO_E2;
+					in4x_B1[26] <= MISO_B1; in4x_B2[26] <= MISO_B2;
+					in4x_C1[26] <= MISO_C1; in4x_C2[26] <= MISO_C2;
+					in4x_D1[26] <= MISO_D1; in4x_D2[26] <= MISO_D2;
+					in4x_E1[26] <= MISO_E1; in4x_E2[26] <= MISO_E2;
 					in4x_F1[26] <= MISO_F1; in4x_F2[26] <= MISO_F2;
 					in4x_G1[26] <= MISO_G1; in4x_G2[26] <= MISO_G2;
-					in4x_H1[26] <= MISO_H1; in4x_H2[26] <= MISO_H2;	
+					in4x_H1[26] <= MISO_H1; in4x_H2[26] <= MISO_H2;
+                    in4x_I1[26] <= MISO_I1; in4x_I2[26] <= MISO_I2;
+					in4x_J1[26] <= MISO_J1; in4x_J2[26] <= MISO_J2;
+					in4x_K1[26] <= MISO_K1; in4x_K2[26] <= MISO_K2;
+					in4x_L1[26] <= MISO_L1; in4x_L2[26] <= MISO_L2;
+					in4x_M1[26] <= MISO_M1; in4x_M2[26] <= MISO_M2;
+					in4x_N1[26] <= MISO_N1; in4x_N2[26] <= MISO_N2;
+					in4x_O1[26] <= MISO_O1; in4x_O2[26] <= MISO_O2;
+					in4x_P1[26] <= MISO_P1; in4x_P2[26] <= MISO_P2;	
 
                     main_state <= ms_clk8_b;
                 end
@@ -1245,13 +1561,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[27] <= MISO_A1; in4x_A2[27] <= MISO_A2;
-                    in4x_B1[27] <= MISO_B1; in4x_B2[27] <= MISO_B2;
-                    in4x_C1[27] <= MISO_C1; in4x_C2[27] <= MISO_C2;
-                    in4x_D1[27] <= MISO_D1; in4x_D2[27] <= MISO_D2;	
-                    in4x_E1[27] <= MISO_E1; in4x_E2[27] <= MISO_E2;
+					in4x_B1[27] <= MISO_B1; in4x_B2[27] <= MISO_B2;
+					in4x_C1[27] <= MISO_C1; in4x_C2[27] <= MISO_C2;
+					in4x_D1[27] <= MISO_D1; in4x_D2[27] <= MISO_D2;
+					in4x_E1[27] <= MISO_E1; in4x_E2[27] <= MISO_E2;
 					in4x_F1[27] <= MISO_F1; in4x_F2[27] <= MISO_F2;
 					in4x_G1[27] <= MISO_G1; in4x_G2[27] <= MISO_G2;
-					in4x_H1[27] <= MISO_H1; in4x_H2[27] <= MISO_H2;	
+					in4x_H1[27] <= MISO_H1; in4x_H2[27] <= MISO_H2;
+                    in4x_I1[27] <= MISO_I1; in4x_I2[27] <= MISO_I2;
+					in4x_J1[27] <= MISO_J1; in4x_J2[27] <= MISO_J2;
+					in4x_K1[27] <= MISO_K1; in4x_K2[27] <= MISO_K2;
+					in4x_L1[27] <= MISO_L1; in4x_L2[27] <= MISO_L2;
+					in4x_M1[27] <= MISO_M1; in4x_M2[27] <= MISO_M2;
+					in4x_N1[27] <= MISO_N1; in4x_N2[27] <= MISO_N2;
+					in4x_O1[27] <= MISO_O1; in4x_O2[27] <= MISO_O2;
+					in4x_P1[27] <= MISO_P1; in4x_P2[27] <= MISO_P2;	
                 			
                     main_state <= ms_clk8_c;
                 end
@@ -1262,13 +1586,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[28] <= MISO_A1; in4x_A2[28] <= MISO_A2;
-                    in4x_B1[28] <= MISO_B1; in4x_B2[28] <= MISO_B2;
-                    in4x_C1[28] <= MISO_C1; in4x_C2[28] <= MISO_C2;
-                    in4x_D1[28] <= MISO_D1; in4x_D2[28] <= MISO_D2;	
-                    in4x_E1[28] <= MISO_E1; in4x_E2[28] <= MISO_E2;
+					in4x_B1[28] <= MISO_B1; in4x_B2[28] <= MISO_B2;
+					in4x_C1[28] <= MISO_C1; in4x_C2[28] <= MISO_C2;
+					in4x_D1[28] <= MISO_D1; in4x_D2[28] <= MISO_D2;
+					in4x_E1[28] <= MISO_E1; in4x_E2[28] <= MISO_E2;
 					in4x_F1[28] <= MISO_F1; in4x_F2[28] <= MISO_F2;
 					in4x_G1[28] <= MISO_G1; in4x_G2[28] <= MISO_G2;
-					in4x_H1[28] <= MISO_H1; in4x_H2[28] <= MISO_H2;	
+					in4x_H1[28] <= MISO_H1; in4x_H2[28] <= MISO_H2;
+                    in4x_I1[28] <= MISO_I1; in4x_I2[28] <= MISO_I2;
+					in4x_J1[28] <= MISO_J1; in4x_J2[28] <= MISO_J2;
+					in4x_K1[28] <= MISO_K1; in4x_K2[28] <= MISO_K2;
+					in4x_L1[28] <= MISO_L1; in4x_L2[28] <= MISO_L2;
+					in4x_M1[28] <= MISO_M1; in4x_M2[28] <= MISO_M2;
+					in4x_N1[28] <= MISO_N1; in4x_N2[28] <= MISO_N2;
+					in4x_O1[28] <= MISO_O1; in4x_O2[28] <= MISO_O2;
+					in4x_P1[28] <= MISO_P1; in4x_P2[28] <= MISO_P2;	
 
                     main_state <= ms_clk8_d;
                 end
@@ -1279,13 +1611,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[29] <= MISO_A1; in4x_A2[29] <= MISO_A2;
-                    in4x_B1[29] <= MISO_B1; in4x_B2[29] <= MISO_B2;
-                    in4x_C1[29] <= MISO_C1; in4x_C2[29] <= MISO_C2;
-                    in4x_D1[29] <= MISO_D1; in4x_D2[29] <= MISO_D2;	
-                    in4x_E1[29] <= MISO_E1; in4x_E2[29] <= MISO_E2;
+					in4x_B1[29] <= MISO_B1; in4x_B2[29] <= MISO_B2;
+					in4x_C1[29] <= MISO_C1; in4x_C2[29] <= MISO_C2;
+					in4x_D1[29] <= MISO_D1; in4x_D2[29] <= MISO_D2;
+					in4x_E1[29] <= MISO_E1; in4x_E2[29] <= MISO_E2;
 					in4x_F1[29] <= MISO_F1; in4x_F2[29] <= MISO_F2;
 					in4x_G1[29] <= MISO_G1; in4x_G2[29] <= MISO_G2;
-					in4x_H1[29] <= MISO_H1; in4x_H2[29] <= MISO_H2;	
+					in4x_H1[29] <= MISO_H1; in4x_H2[29] <= MISO_H2;
+                    in4x_I1[29] <= MISO_I1; in4x_I2[29] <= MISO_I2;
+					in4x_J1[29] <= MISO_J1; in4x_J2[29] <= MISO_J2;
+					in4x_K1[29] <= MISO_K1; in4x_K2[29] <= MISO_K2;
+					in4x_L1[29] <= MISO_L1; in4x_L2[29] <= MISO_L2;
+					in4x_M1[29] <= MISO_M1; in4x_M2[29] <= MISO_M2;
+					in4x_N1[29] <= MISO_N1; in4x_N2[29] <= MISO_N2;
+					in4x_O1[29] <= MISO_O1; in4x_O2[29] <= MISO_O2;
+					in4x_P1[29] <= MISO_P1; in4x_P2[29] <= MISO_P2;	
                     
 
                     main_state <= ms_clk9_a;
@@ -1298,13 +1638,21 @@ module rhd
                     MOSI <= MOSI_cmd[7];
 
                     in4x_A1[30] <= MISO_A1; in4x_A2[30] <= MISO_A2;
-                    in4x_B1[30] <= MISO_B1; in4x_B2[30] <= MISO_B2;
-                    in4x_C1[30] <= MISO_C1; in4x_C2[30] <= MISO_C2;
-                    in4x_D1[30] <= MISO_D1; in4x_D2[30] <= MISO_D2;		
-                    in4x_E1[30] <= MISO_E1; in4x_E2[30] <= MISO_E2;
+					in4x_B1[30] <= MISO_B1; in4x_B2[30] <= MISO_B2;
+					in4x_C1[30] <= MISO_C1; in4x_C2[30] <= MISO_C2;
+					in4x_D1[30] <= MISO_D1; in4x_D2[30] <= MISO_D2;
+					in4x_E1[30] <= MISO_E1; in4x_E2[30] <= MISO_E2;
 					in4x_F1[30] <= MISO_F1; in4x_F2[30] <= MISO_F2;
 					in4x_G1[30] <= MISO_G1; in4x_G2[30] <= MISO_G2;
-					in4x_H1[30] <= MISO_H1; in4x_H2[30] <= MISO_H2;	
+					in4x_H1[30] <= MISO_H1; in4x_H2[30] <= MISO_H2;
+                    in4x_I1[30] <= MISO_I1; in4x_I2[30] <= MISO_I2;
+					in4x_J1[30] <= MISO_J1; in4x_J2[30] <= MISO_J2;
+					in4x_K1[30] <= MISO_K1; in4x_K2[30] <= MISO_K2;
+					in4x_L1[30] <= MISO_L1; in4x_L2[30] <= MISO_L2;
+					in4x_M1[30] <= MISO_M1; in4x_M2[30] <= MISO_M2;
+					in4x_N1[30] <= MISO_N1; in4x_N2[30] <= MISO_N2;
+					in4x_O1[30] <= MISO_O1; in4x_O2[30] <= MISO_O2;
+					in4x_P1[30] <= MISO_P1; in4x_P2[30] <= MISO_P2;	
                     
 
                     main_state <= ms_clk9_b;
@@ -1315,13 +1663,21 @@ module rhd
                     rhd_valid_out <= 1'b1;
 
                     in4x_A1[31] <= MISO_A1; in4x_A2[31] <= MISO_A2;
-                    in4x_B1[31] <= MISO_B1; in4x_B2[31] <= MISO_B2;
-                    in4x_C1[31] <= MISO_C1; in4x_C2[31] <= MISO_C2;
-                    in4x_D1[31] <= MISO_D1; in4x_D2[31] <= MISO_D2;		
-                    in4x_E1[31] <= MISO_E1; in4x_E2[31] <= MISO_E2;
+					in4x_B1[31] <= MISO_B1; in4x_B2[31] <= MISO_B2;
+					in4x_C1[31] <= MISO_C1; in4x_C2[31] <= MISO_C2;
+					in4x_D1[31] <= MISO_D1; in4x_D2[31] <= MISO_D2;
+					in4x_E1[31] <= MISO_E1; in4x_E2[31] <= MISO_E2;
 					in4x_F1[31] <= MISO_F1; in4x_F2[31] <= MISO_F2;
 					in4x_G1[31] <= MISO_G1; in4x_G2[31] <= MISO_G2;
-					in4x_H1[31] <= MISO_H1; in4x_H2[31] <= MISO_H2;	
+					in4x_H1[31] <= MISO_H1; in4x_H2[31] <= MISO_H2;
+                    in4x_I1[31] <= MISO_I1; in4x_I2[31] <= MISO_I2;
+					in4x_J1[31] <= MISO_J1; in4x_J2[31] <= MISO_J2;
+					in4x_K1[31] <= MISO_K1; in4x_K2[31] <= MISO_K2;
+					in4x_L1[31] <= MISO_L1; in4x_L2[31] <= MISO_L2;
+					in4x_M1[31] <= MISO_M1; in4x_M2[31] <= MISO_M2;
+					in4x_N1[31] <= MISO_N1; in4x_N2[31] <= MISO_N2;
+					in4x_O1[31] <= MISO_O1; in4x_O2[31] <= MISO_O2;
+					in4x_P1[31] <= MISO_P1; in4x_P2[31] <= MISO_P2;	
                     
                     main_state <= ms_clk9_c;
                 end
@@ -1332,13 +1688,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[32] <= MISO_A1; in4x_A2[32] <= MISO_A2;
-                    in4x_B1[32] <= MISO_B1; in4x_B2[32] <= MISO_B2;
-                    in4x_C1[32] <= MISO_C1; in4x_C2[32] <= MISO_C2;
-                    in4x_D1[32] <= MISO_D1; in4x_D2[32] <= MISO_D2;		
-                    in4x_E1[32] <= MISO_E1; in4x_E2[32] <= MISO_E2;
+					in4x_B1[32] <= MISO_B1; in4x_B2[32] <= MISO_B2;
+					in4x_C1[32] <= MISO_C1; in4x_C2[32] <= MISO_C2;
+					in4x_D1[32] <= MISO_D1; in4x_D2[32] <= MISO_D2;
+					in4x_E1[32] <= MISO_E1; in4x_E2[32] <= MISO_E2;
 					in4x_F1[32] <= MISO_F1; in4x_F2[32] <= MISO_F2;
 					in4x_G1[32] <= MISO_G1; in4x_G2[32] <= MISO_G2;
-					in4x_H1[32] <= MISO_H1; in4x_H2[32] <= MISO_H2;	
+					in4x_H1[32] <= MISO_H1; in4x_H2[32] <= MISO_H2;
+                    in4x_I1[32] <= MISO_I1; in4x_I2[32] <= MISO_I2;
+					in4x_J1[32] <= MISO_J1; in4x_J2[32] <= MISO_J2;
+					in4x_K1[32] <= MISO_K1; in4x_K2[32] <= MISO_K2;
+					in4x_L1[32] <= MISO_L1; in4x_L2[32] <= MISO_L2;
+					in4x_M1[32] <= MISO_M1; in4x_M2[32] <= MISO_M2;
+					in4x_N1[32] <= MISO_N1; in4x_N2[32] <= MISO_N2;
+					in4x_O1[32] <= MISO_O1; in4x_O2[32] <= MISO_O2;
+					in4x_P1[32] <= MISO_P1; in4x_P2[32] <= MISO_P2;	
                     
                     main_state <= ms_clk9_d;
                 end
@@ -1349,13 +1713,21 @@ module rhd
 
                     SCLK <= 1'b1;
                     in4x_A1[33] <= MISO_A1; in4x_A2[33] <= MISO_A2;
-                    in4x_B1[33] <= MISO_B1; in4x_B2[33] <= MISO_B2;
-                    in4x_C1[33] <= MISO_C1; in4x_C2[33] <= MISO_C2;
-                    in4x_D1[33] <= MISO_D1; in4x_D2[33] <= MISO_D2;	
-                    in4x_E1[33] <= MISO_E1; in4x_E2[33] <= MISO_E2;
+					in4x_B1[33] <= MISO_B1; in4x_B2[33] <= MISO_B2;
+					in4x_C1[33] <= MISO_C1; in4x_C2[33] <= MISO_C2;
+					in4x_D1[33] <= MISO_D1; in4x_D2[33] <= MISO_D2;
+					in4x_E1[33] <= MISO_E1; in4x_E2[33] <= MISO_E2;
 					in4x_F1[33] <= MISO_F1; in4x_F2[33] <= MISO_F2;
 					in4x_G1[33] <= MISO_G1; in4x_G2[33] <= MISO_G2;
-					in4x_H1[33] <= MISO_H1; in4x_H2[33] <= MISO_H2;	
+					in4x_H1[33] <= MISO_H1; in4x_H2[33] <= MISO_H2;
+                    in4x_I1[33] <= MISO_I1; in4x_I2[33] <= MISO_I2;
+					in4x_J1[33] <= MISO_J1; in4x_J2[33] <= MISO_J2;
+					in4x_K1[33] <= MISO_K1; in4x_K2[33] <= MISO_K2;
+					in4x_L1[33] <= MISO_L1; in4x_L2[33] <= MISO_L2;
+					in4x_M1[33] <= MISO_M1; in4x_M2[33] <= MISO_M2;
+					in4x_N1[33] <= MISO_N1; in4x_N2[33] <= MISO_N2;
+					in4x_O1[33] <= MISO_O1; in4x_O2[33] <= MISO_O2;
+					in4x_P1[33] <= MISO_P1; in4x_P2[33] <= MISO_P2;	
                     
                     main_state <= ms_clk10_a;
                 end
@@ -1367,26 +1739,42 @@ module rhd
                     MOSI <= MOSI_cmd[6];
 
                     in4x_A1[34] <= MISO_A1; in4x_A2[34] <= MISO_A2;
-                    in4x_B1[34] <= MISO_B1; in4x_B2[34] <= MISO_B2;
-                    in4x_C1[34] <= MISO_C1; in4x_C2[34] <= MISO_C2;
-                    in4x_D1[34] <= MISO_D1; in4x_D2[34] <= MISO_D2;	
-                    in4x_E1[34] <= MISO_E1; in4x_E2[34] <= MISO_E2;
+					in4x_B1[34] <= MISO_B1; in4x_B2[34] <= MISO_B2;
+					in4x_C1[34] <= MISO_C1; in4x_C2[34] <= MISO_C2;
+					in4x_D1[34] <= MISO_D1; in4x_D2[34] <= MISO_D2;
+					in4x_E1[34] <= MISO_E1; in4x_E2[34] <= MISO_E2;
 					in4x_F1[34] <= MISO_F1; in4x_F2[34] <= MISO_F2;
 					in4x_G1[34] <= MISO_G1; in4x_G2[34] <= MISO_G2;
-					in4x_H1[34] <= MISO_H1; in4x_H2[34] <= MISO_H2;	
+					in4x_H1[34] <= MISO_H1; in4x_H2[34] <= MISO_H2;
+                    in4x_I1[34] <= MISO_I1; in4x_I2[34] <= MISO_I2;
+					in4x_J1[34] <= MISO_J1; in4x_J2[34] <= MISO_J2;
+					in4x_K1[34] <= MISO_K1; in4x_K2[34] <= MISO_K2;
+					in4x_L1[34] <= MISO_L1; in4x_L2[34] <= MISO_L2;
+					in4x_M1[34] <= MISO_M1; in4x_M2[34] <= MISO_M2;
+					in4x_N1[34] <= MISO_N1; in4x_N2[34] <= MISO_N2;
+					in4x_O1[34] <= MISO_O1; in4x_O2[34] <= MISO_O2;
+					in4x_P1[34] <= MISO_P1; in4x_P2[34] <= MISO_P2;	
                     
                     main_state <= ms_clk10_b;
                 end
 
                 ms_clk10_b: begin
                     in4x_A1[35] <= MISO_A1; in4x_A2[35] <= MISO_A2;
-                    in4x_B1[35] <= MISO_B1; in4x_B2[35] <= MISO_B2;
-                    in4x_C1[35] <= MISO_C1; in4x_C2[35] <= MISO_C2;
-                    in4x_D1[35] <= MISO_D1; in4x_D2[35] <= MISO_D2;	
-                    in4x_E1[35] <= MISO_E1; in4x_E2[35] <= MISO_E2;
+					in4x_B1[35] <= MISO_B1; in4x_B2[35] <= MISO_B2;
+					in4x_C1[35] <= MISO_C1; in4x_C2[35] <= MISO_C2;
+					in4x_D1[35] <= MISO_D1; in4x_D2[35] <= MISO_D2;
+					in4x_E1[35] <= MISO_E1; in4x_E2[35] <= MISO_E2;
 					in4x_F1[35] <= MISO_F1; in4x_F2[35] <= MISO_F2;
 					in4x_G1[35] <= MISO_G1; in4x_G2[35] <= MISO_G2;
-					in4x_H1[35] <= MISO_H1; in4x_H2[35] <= MISO_H2;	
+					in4x_H1[35] <= MISO_H1; in4x_H2[35] <= MISO_H2;
+                    in4x_I1[35] <= MISO_I1; in4x_I2[35] <= MISO_I2;
+					in4x_J1[35] <= MISO_J1; in4x_J2[35] <= MISO_J2;
+					in4x_K1[35] <= MISO_K1; in4x_K2[35] <= MISO_K2;
+					in4x_L1[35] <= MISO_L1; in4x_L2[35] <= MISO_L2;
+					in4x_M1[35] <= MISO_M1; in4x_M2[35] <= MISO_M2;
+					in4x_N1[35] <= MISO_N1; in4x_N2[35] <= MISO_N2;
+					in4x_O1[35] <= MISO_O1; in4x_O2[35] <= MISO_O2;
+					in4x_P1[35] <= MISO_P1; in4x_P2[35] <= MISO_P2;	
 
                     main_state <= ms_clk10_c;
                 end
@@ -1394,13 +1782,21 @@ module rhd
                 ms_clk10_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[36] <= MISO_A1; in4x_A2[36] <= MISO_A2;
-                    in4x_B1[36] <= MISO_B1; in4x_B2[36] <= MISO_B2;
-                    in4x_C1[36] <= MISO_C1; in4x_C2[36] <= MISO_C2;
-                    in4x_D1[36] <= MISO_D1; in4x_D2[36] <= MISO_D2;	
-                    in4x_E1[36] <= MISO_E1; in4x_E2[36] <= MISO_E2;
+					in4x_B1[36] <= MISO_B1; in4x_B2[36] <= MISO_B2;
+					in4x_C1[36] <= MISO_C1; in4x_C2[36] <= MISO_C2;
+					in4x_D1[36] <= MISO_D1; in4x_D2[36] <= MISO_D2;
+					in4x_E1[36] <= MISO_E1; in4x_E2[36] <= MISO_E2;
 					in4x_F1[36] <= MISO_F1; in4x_F2[36] <= MISO_F2;
 					in4x_G1[36] <= MISO_G1; in4x_G2[36] <= MISO_G2;
-					in4x_H1[36] <= MISO_H1; in4x_H2[36] <= MISO_H2;	
+					in4x_H1[36] <= MISO_H1; in4x_H2[36] <= MISO_H2;
+                    in4x_I1[36] <= MISO_I1; in4x_I2[36] <= MISO_I2;
+					in4x_J1[36] <= MISO_J1; in4x_J2[36] <= MISO_J2;
+					in4x_K1[36] <= MISO_K1; in4x_K2[36] <= MISO_K2;
+					in4x_L1[36] <= MISO_L1; in4x_L2[36] <= MISO_L2;
+					in4x_M1[36] <= MISO_M1; in4x_M2[36] <= MISO_M2;
+					in4x_N1[36] <= MISO_N1; in4x_N2[36] <= MISO_N2;
+					in4x_O1[36] <= MISO_O1; in4x_O2[36] <= MISO_O2;
+					in4x_P1[36] <= MISO_P1; in4x_P2[36] <= MISO_P2;	
                     
 
                     main_state <= ms_clk10_d;
@@ -1409,13 +1805,21 @@ module rhd
                 ms_clk10_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[37] <= MISO_A1; in4x_A2[37] <= MISO_A2;
-                    in4x_B1[37] <= MISO_B1; in4x_B2[37] <= MISO_B2;
-                    in4x_C1[37] <= MISO_C1; in4x_C2[37] <= MISO_C2;
-                    in4x_D1[37] <= MISO_D1; in4x_D2[37] <= MISO_D2;		
-                    in4x_E1[37] <= MISO_E1; in4x_E2[37] <= MISO_E2;
+					in4x_B1[37] <= MISO_B1; in4x_B2[37] <= MISO_B2;
+					in4x_C1[37] <= MISO_C1; in4x_C2[37] <= MISO_C2;
+					in4x_D1[37] <= MISO_D1; in4x_D2[37] <= MISO_D2;
+					in4x_E1[37] <= MISO_E1; in4x_E2[37] <= MISO_E2;
 					in4x_F1[37] <= MISO_F1; in4x_F2[37] <= MISO_F2;
 					in4x_G1[37] <= MISO_G1; in4x_G2[37] <= MISO_G2;
-					in4x_H1[37] <= MISO_H1; in4x_H2[37] <= MISO_H2;	
+					in4x_H1[37] <= MISO_H1; in4x_H2[37] <= MISO_H2;
+                    in4x_I1[37] <= MISO_I1; in4x_I2[37] <= MISO_I2;
+					in4x_J1[37] <= MISO_J1; in4x_J2[37] <= MISO_J2;
+					in4x_K1[37] <= MISO_K1; in4x_K2[37] <= MISO_K2;
+					in4x_L1[37] <= MISO_L1; in4x_L2[37] <= MISO_L2;
+					in4x_M1[37] <= MISO_M1; in4x_M2[37] <= MISO_M2;
+					in4x_N1[37] <= MISO_N1; in4x_N2[37] <= MISO_N2;
+					in4x_O1[37] <= MISO_O1; in4x_O2[37] <= MISO_O2;
+					in4x_P1[37] <= MISO_P1; in4x_P2[37] <= MISO_P2;	
                     
                     main_state <= ms_clk11_a;
                 end
@@ -1424,52 +1828,84 @@ module rhd
                     MOSI <= MOSI_cmd[5];
 
                     in4x_A1[38] <= MISO_A1; in4x_A2[38] <= MISO_A2;
-                    in4x_B1[38] <= MISO_B1; in4x_B2[38] <= MISO_B2;
-                    in4x_C1[38] <= MISO_C1; in4x_C2[38] <= MISO_C2;
-                    in4x_D1[38] <= MISO_D1; in4x_D2[38] <= MISO_D2;		
-                    in4x_E1[38] <= MISO_E1; in4x_E2[38] <= MISO_E2;
+					in4x_B1[38] <= MISO_B1; in4x_B2[38] <= MISO_B2;
+					in4x_C1[38] <= MISO_C1; in4x_C2[38] <= MISO_C2;
+					in4x_D1[38] <= MISO_D1; in4x_D2[38] <= MISO_D2;
+					in4x_E1[38] <= MISO_E1; in4x_E2[38] <= MISO_E2;
 					in4x_F1[38] <= MISO_F1; in4x_F2[38] <= MISO_F2;
 					in4x_G1[38] <= MISO_G1; in4x_G2[38] <= MISO_G2;
-					in4x_H1[38] <= MISO_H1; in4x_H2[38] <= MISO_H2;	
+					in4x_H1[38] <= MISO_H1; in4x_H2[38] <= MISO_H2;
+                    in4x_I1[38] <= MISO_I1; in4x_I2[38] <= MISO_I2;
+					in4x_J1[38] <= MISO_J1; in4x_J2[38] <= MISO_J2;
+					in4x_K1[38] <= MISO_K1; in4x_K2[38] <= MISO_K2;
+					in4x_L1[38] <= MISO_L1; in4x_L2[38] <= MISO_L2;
+					in4x_M1[38] <= MISO_M1; in4x_M2[38] <= MISO_M2;
+					in4x_N1[38] <= MISO_N1; in4x_N2[38] <= MISO_N2;
+					in4x_O1[38] <= MISO_O1; in4x_O2[38] <= MISO_O2;
+					in4x_P1[38] <= MISO_P1; in4x_P2[38] <= MISO_P2;	
                     
                     main_state <= ms_clk11_b;
                 end
 
                 ms_clk11_b: begin
                     in4x_A1[39] <= MISO_A1; in4x_A2[39] <= MISO_A2;
-                    in4x_B1[39] <= MISO_B1; in4x_B2[39] <= MISO_B2;
-                    in4x_C1[39] <= MISO_C1; in4x_C2[39] <= MISO_C2;
-                    in4x_D1[39] <= MISO_D1; in4x_D2[39] <= MISO_D2;		
-                    in4x_E1[39] <= MISO_E1; in4x_E2[39] <= MISO_E2;
+					in4x_B1[39] <= MISO_B1; in4x_B2[39] <= MISO_B2;
+					in4x_C1[39] <= MISO_C1; in4x_C2[39] <= MISO_C2;
+					in4x_D1[39] <= MISO_D1; in4x_D2[39] <= MISO_D2;
+					in4x_E1[39] <= MISO_E1; in4x_E2[39] <= MISO_E2;
 					in4x_F1[39] <= MISO_F1; in4x_F2[39] <= MISO_F2;
 					in4x_G1[39] <= MISO_G1; in4x_G2[39] <= MISO_G2;
-					in4x_H1[39] <= MISO_H1; in4x_H2[39] <= MISO_H2;			
+					in4x_H1[39] <= MISO_H1; in4x_H2[39] <= MISO_H2;
+                    in4x_I1[39] <= MISO_I1; in4x_I2[39] <= MISO_I2;
+					in4x_J1[39] <= MISO_J1; in4x_J2[39] <= MISO_J2;
+					in4x_K1[39] <= MISO_K1; in4x_K2[39] <= MISO_K2;
+					in4x_L1[39] <= MISO_L1; in4x_L2[39] <= MISO_L2;
+					in4x_M1[39] <= MISO_M1; in4x_M2[39] <= MISO_M2;
+					in4x_N1[39] <= MISO_N1; in4x_N2[39] <= MISO_N2;
+					in4x_O1[39] <= MISO_O1; in4x_O2[39] <= MISO_O2;
+					in4x_P1[39] <= MISO_P1; in4x_P2[39] <= MISO_P2;			
                     main_state <= ms_clk11_c;
                 end
 
                 ms_clk11_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[40] <= MISO_A1; in4x_A2[40] <= MISO_A2;
-                    in4x_B1[40] <= MISO_B1; in4x_B2[40] <= MISO_B2;
-                    in4x_C1[40] <= MISO_C1; in4x_C2[40] <= MISO_C2;
-                    in4x_D1[40] <= MISO_D1; in4x_D2[40] <= MISO_D2;				
-                    in4x_E1[40] <= MISO_E1; in4x_E2[40] <= MISO_E2;
+					in4x_B1[40] <= MISO_B1; in4x_B2[40] <= MISO_B2;
+					in4x_C1[40] <= MISO_C1; in4x_C2[40] <= MISO_C2;
+					in4x_D1[40] <= MISO_D1; in4x_D2[40] <= MISO_D2;
+					in4x_E1[40] <= MISO_E1; in4x_E2[40] <= MISO_E2;
 					in4x_F1[40] <= MISO_F1; in4x_F2[40] <= MISO_F2;
 					in4x_G1[40] <= MISO_G1; in4x_G2[40] <= MISO_G2;
-					in4x_H1[40] <= MISO_H1; in4x_H2[40] <= MISO_H2;		
+					in4x_H1[40] <= MISO_H1; in4x_H2[40] <= MISO_H2;
+                    in4x_I1[40] <= MISO_I1; in4x_I2[40] <= MISO_I2;
+					in4x_J1[40] <= MISO_J1; in4x_J2[40] <= MISO_J2;
+					in4x_K1[40] <= MISO_K1; in4x_K2[40] <= MISO_K2;
+					in4x_L1[40] <= MISO_L1; in4x_L2[40] <= MISO_L2;
+					in4x_M1[40] <= MISO_M1; in4x_M2[40] <= MISO_M2;
+					in4x_N1[40] <= MISO_N1; in4x_N2[40] <= MISO_N2;
+					in4x_O1[40] <= MISO_O1; in4x_O2[40] <= MISO_O2;
+					in4x_P1[40] <= MISO_P1; in4x_P2[40] <= MISO_P2;		
                     main_state <= ms_clk11_d;
                 end
                 
                 ms_clk11_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[41] <= MISO_A1; in4x_A2[41] <= MISO_A2;
-                    in4x_B1[41] <= MISO_B1; in4x_B2[41] <= MISO_B2;
-                    in4x_C1[41] <= MISO_C1; in4x_C2[41] <= MISO_C2;
-                    in4x_D1[41] <= MISO_D1; in4x_D2[41] <= MISO_D2;		
-                    in4x_E1[41] <= MISO_E1; in4x_E2[41] <= MISO_E2;
+					in4x_B1[41] <= MISO_B1; in4x_B2[41] <= MISO_B2;
+					in4x_C1[41] <= MISO_C1; in4x_C2[41] <= MISO_C2;
+					in4x_D1[41] <= MISO_D1; in4x_D2[41] <= MISO_D2;
+					in4x_E1[41] <= MISO_E1; in4x_E2[41] <= MISO_E2;
 					in4x_F1[41] <= MISO_F1; in4x_F2[41] <= MISO_F2;
 					in4x_G1[41] <= MISO_G1; in4x_G2[41] <= MISO_G2;
-					in4x_H1[41] <= MISO_H1; in4x_H2[41] <= MISO_H2;				
+					in4x_H1[41] <= MISO_H1; in4x_H2[41] <= MISO_H2;
+                    in4x_I1[41] <= MISO_I1; in4x_I2[41] <= MISO_I2;
+					in4x_J1[41] <= MISO_J1; in4x_J2[41] <= MISO_J2;
+					in4x_K1[41] <= MISO_K1; in4x_K2[41] <= MISO_K2;
+					in4x_L1[41] <= MISO_L1; in4x_L2[41] <= MISO_L2;
+					in4x_M1[41] <= MISO_M1; in4x_M2[41] <= MISO_M2;
+					in4x_N1[41] <= MISO_N1; in4x_N2[41] <= MISO_N2;
+					in4x_O1[41] <= MISO_O1; in4x_O2[41] <= MISO_O2;
+					in4x_P1[41] <= MISO_P1; in4x_P2[41] <= MISO_P2;				
                     main_state <= ms_clk12_a;
                 end
 
@@ -1477,51 +1913,83 @@ module rhd
                     MOSI <= MOSI_cmd[4];
 
                     in4x_A1[42] <= MISO_A1; in4x_A2[42] <= MISO_A2;
-                    in4x_B1[42] <= MISO_B1; in4x_B2[42] <= MISO_B2;
-                    in4x_C1[42] <= MISO_C1; in4x_C2[42] <= MISO_C2;
-                    in4x_D1[42] <= MISO_D1; in4x_D2[42] <= MISO_D2;	
-                    in4x_E1[42] <= MISO_E1; in4x_E2[42] <= MISO_E2;
+					in4x_B1[42] <= MISO_B1; in4x_B2[42] <= MISO_B2;
+					in4x_C1[42] <= MISO_C1; in4x_C2[42] <= MISO_C2;
+					in4x_D1[42] <= MISO_D1; in4x_D2[42] <= MISO_D2;
+					in4x_E1[42] <= MISO_E1; in4x_E2[42] <= MISO_E2;
 					in4x_F1[42] <= MISO_F1; in4x_F2[42] <= MISO_F2;
 					in4x_G1[42] <= MISO_G1; in4x_G2[42] <= MISO_G2;
-					in4x_H1[42] <= MISO_H1; in4x_H2[42] <= MISO_H2;					
+					in4x_H1[42] <= MISO_H1; in4x_H2[42] <= MISO_H2;
+                    in4x_I1[42] <= MISO_I1; in4x_I2[42] <= MISO_I2;
+					in4x_J1[42] <= MISO_J1; in4x_J2[42] <= MISO_J2;
+					in4x_K1[42] <= MISO_K1; in4x_K2[42] <= MISO_K2;
+					in4x_L1[42] <= MISO_L1; in4x_L2[42] <= MISO_L2;
+					in4x_M1[42] <= MISO_M1; in4x_M2[42] <= MISO_M2;
+					in4x_N1[42] <= MISO_N1; in4x_N2[42] <= MISO_N2;
+					in4x_O1[42] <= MISO_O1; in4x_O2[42] <= MISO_O2;
+					in4x_P1[42] <= MISO_P1; in4x_P2[42] <= MISO_P2;					
                     main_state <= ms_clk12_b;
                 end
 
                 ms_clk12_b: begin
                     in4x_A1[43] <= MISO_A1; in4x_A2[43] <= MISO_A2;
-                    in4x_B1[43] <= MISO_B1; in4x_B2[43] <= MISO_B2;
-                    in4x_C1[43] <= MISO_C1; in4x_C2[43] <= MISO_C2;
-                    in4x_D1[43] <= MISO_D1; in4x_D2[43] <= MISO_D2;		
-                    in4x_E1[43] <= MISO_E1; in4x_E2[43] <= MISO_E2;
+					in4x_B1[43] <= MISO_B1; in4x_B2[43] <= MISO_B2;
+					in4x_C1[43] <= MISO_C1; in4x_C2[43] <= MISO_C2;
+					in4x_D1[43] <= MISO_D1; in4x_D2[43] <= MISO_D2;
+					in4x_E1[43] <= MISO_E1; in4x_E2[43] <= MISO_E2;
 					in4x_F1[43] <= MISO_F1; in4x_F2[43] <= MISO_F2;
 					in4x_G1[43] <= MISO_G1; in4x_G2[43] <= MISO_G2;
-					in4x_H1[43] <= MISO_H1; in4x_H2[43] <= MISO_H2;				
+					in4x_H1[43] <= MISO_H1; in4x_H2[43] <= MISO_H2;
+                    in4x_I1[43] <= MISO_I1; in4x_I2[43] <= MISO_I2;
+					in4x_J1[43] <= MISO_J1; in4x_J2[43] <= MISO_J2;
+					in4x_K1[43] <= MISO_K1; in4x_K2[43] <= MISO_K2;
+					in4x_L1[43] <= MISO_L1; in4x_L2[43] <= MISO_L2;
+					in4x_M1[43] <= MISO_M1; in4x_M2[43] <= MISO_M2;
+					in4x_N1[43] <= MISO_N1; in4x_N2[43] <= MISO_N2;
+					in4x_O1[43] <= MISO_O1; in4x_O2[43] <= MISO_O2;
+					in4x_P1[43] <= MISO_P1; in4x_P2[43] <= MISO_P2;				
                     main_state <= ms_clk12_c;
                 end
 
                 ms_clk12_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[44] <= MISO_A1; in4x_A2[44] <= MISO_A2;
-                    in4x_B1[44] <= MISO_B1; in4x_B2[44] <= MISO_B2;
-                    in4x_C1[44] <= MISO_C1; in4x_C2[44] <= MISO_C2;
-                    in4x_D1[44] <= MISO_D1; in4x_D2[44] <= MISO_D2;		
-                    in4x_E1[44] <= MISO_E1; in4x_E2[44] <= MISO_E2;
+					in4x_B1[44] <= MISO_B1; in4x_B2[44] <= MISO_B2;
+					in4x_C1[44] <= MISO_C1; in4x_C2[44] <= MISO_C2;
+					in4x_D1[44] <= MISO_D1; in4x_D2[44] <= MISO_D2;
+					in4x_E1[44] <= MISO_E1; in4x_E2[44] <= MISO_E2;
 					in4x_F1[44] <= MISO_F1; in4x_F2[44] <= MISO_F2;
 					in4x_G1[44] <= MISO_G1; in4x_G2[44] <= MISO_G2;
-					in4x_H1[44] <= MISO_H1; in4x_H2[44] <= MISO_H2;					
+					in4x_H1[44] <= MISO_H1; in4x_H2[44] <= MISO_H2;
+                    in4x_I1[44] <= MISO_I1; in4x_I2[44] <= MISO_I2;
+					in4x_J1[44] <= MISO_J1; in4x_J2[44] <= MISO_J2;
+					in4x_K1[44] <= MISO_K1; in4x_K2[44] <= MISO_K2;
+					in4x_L1[44] <= MISO_L1; in4x_L2[44] <= MISO_L2;
+					in4x_M1[44] <= MISO_M1; in4x_M2[44] <= MISO_M2;
+					in4x_N1[44] <= MISO_N1; in4x_N2[44] <= MISO_N2;
+					in4x_O1[44] <= MISO_O1; in4x_O2[44] <= MISO_O2;
+					in4x_P1[44] <= MISO_P1; in4x_P2[44] <= MISO_P2;					
                     main_state <= ms_clk12_d;
                 end
                 
                 ms_clk12_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[45] <= MISO_A1; in4x_A2[45] <= MISO_A2;
-                    in4x_B1[45] <= MISO_B1; in4x_B2[45] <= MISO_B2;
-                    in4x_C1[45] <= MISO_C1; in4x_C2[45] <= MISO_C2;
-                    in4x_D1[45] <= MISO_D1; in4x_D2[45] <= MISO_D2;	
-                    in4x_E1[45] <= MISO_E1; in4x_E2[45] <= MISO_E2;
+					in4x_B1[45] <= MISO_B1; in4x_B2[45] <= MISO_B2;
+					in4x_C1[45] <= MISO_C1; in4x_C2[45] <= MISO_C2;
+					in4x_D1[45] <= MISO_D1; in4x_D2[45] <= MISO_D2;
+					in4x_E1[45] <= MISO_E1; in4x_E2[45] <= MISO_E2;
 					in4x_F1[45] <= MISO_F1; in4x_F2[45] <= MISO_F2;
 					in4x_G1[45] <= MISO_G1; in4x_G2[45] <= MISO_G2;
-					in4x_H1[45] <= MISO_H1; in4x_H2[45] <= MISO_H2;					
+					in4x_H1[45] <= MISO_H1; in4x_H2[45] <= MISO_H2;
+                    in4x_I1[45] <= MISO_I1; in4x_I2[45] <= MISO_I2;
+					in4x_J1[45] <= MISO_J1; in4x_J2[45] <= MISO_J2;
+					in4x_K1[45] <= MISO_K1; in4x_K2[45] <= MISO_K2;
+					in4x_L1[45] <= MISO_L1; in4x_L2[45] <= MISO_L2;
+					in4x_M1[45] <= MISO_M1; in4x_M2[45] <= MISO_M2;
+					in4x_N1[45] <= MISO_N1; in4x_N2[45] <= MISO_N2;
+					in4x_O1[45] <= MISO_O1; in4x_O2[45] <= MISO_O2;
+					in4x_P1[45] <= MISO_P1; in4x_P2[45] <= MISO_P2;					
                     main_state <= ms_clk13_a;
                 end
 
@@ -1529,51 +1997,83 @@ module rhd
                     MOSI <= MOSI_cmd[3];
 
                     in4x_A1[46] <= MISO_A1; in4x_A2[46] <= MISO_A2;
-                    in4x_B1[46] <= MISO_B1; in4x_B2[46] <= MISO_B2;
-                    in4x_C1[46] <= MISO_C1; in4x_C2[46] <= MISO_C2;
-                    in4x_D1[46] <= MISO_D1; in4x_D2[46] <= MISO_D2;	
-                    in4x_E1[46] <= MISO_E1; in4x_E2[46] <= MISO_E2;
+					in4x_B1[46] <= MISO_B1; in4x_B2[46] <= MISO_B2;
+					in4x_C1[46] <= MISO_C1; in4x_C2[46] <= MISO_C2;
+					in4x_D1[46] <= MISO_D1; in4x_D2[46] <= MISO_D2;
+					in4x_E1[46] <= MISO_E1; in4x_E2[46] <= MISO_E2;
 					in4x_F1[46] <= MISO_F1; in4x_F2[46] <= MISO_F2;
 					in4x_G1[46] <= MISO_G1; in4x_G2[46] <= MISO_G2;
-					in4x_H1[46] <= MISO_H1; in4x_H2[46] <= MISO_H2;					
+					in4x_H1[46] <= MISO_H1; in4x_H2[46] <= MISO_H2;
+                    in4x_I1[46] <= MISO_I1; in4x_I2[46] <= MISO_I2;
+					in4x_J1[46] <= MISO_J1; in4x_J2[46] <= MISO_J2;
+					in4x_K1[46] <= MISO_K1; in4x_K2[46] <= MISO_K2;
+					in4x_L1[46] <= MISO_L1; in4x_L2[46] <= MISO_L2;
+					in4x_M1[46] <= MISO_M1; in4x_M2[46] <= MISO_M2;
+					in4x_N1[46] <= MISO_N1; in4x_N2[46] <= MISO_N2;
+					in4x_O1[46] <= MISO_O1; in4x_O2[46] <= MISO_O2;
+					in4x_P1[46] <= MISO_P1; in4x_P2[46] <= MISO_P2;					
                     main_state <= ms_clk13_b;
                 end
 
                 ms_clk13_b: begin
                     in4x_A1[47] <= MISO_A1; in4x_A2[47] <= MISO_A2;
-                    in4x_B1[47] <= MISO_B1; in4x_B2[47] <= MISO_B2;
-                    in4x_C1[47] <= MISO_C1; in4x_C2[47] <= MISO_C2;
-                    in4x_D1[47] <= MISO_D1; in4x_D2[47] <= MISO_D2;	
-                    in4x_E1[47] <= MISO_E1; in4x_E2[47] <= MISO_E2;
+					in4x_B1[47] <= MISO_B1; in4x_B2[47] <= MISO_B2;
+					in4x_C1[47] <= MISO_C1; in4x_C2[47] <= MISO_C2;
+					in4x_D1[47] <= MISO_D1; in4x_D2[47] <= MISO_D2;
+					in4x_E1[47] <= MISO_E1; in4x_E2[47] <= MISO_E2;
 					in4x_F1[47] <= MISO_F1; in4x_F2[47] <= MISO_F2;
 					in4x_G1[47] <= MISO_G1; in4x_G2[47] <= MISO_G2;
-					in4x_H1[47] <= MISO_H1; in4x_H2[47] <= MISO_H2;					
+					in4x_H1[47] <= MISO_H1; in4x_H2[47] <= MISO_H2;
+                    in4x_I1[47] <= MISO_I1; in4x_I2[47] <= MISO_I2;
+					in4x_J1[47] <= MISO_J1; in4x_J2[47] <= MISO_J2;
+					in4x_K1[47] <= MISO_K1; in4x_K2[47] <= MISO_K2;
+					in4x_L1[47] <= MISO_L1; in4x_L2[47] <= MISO_L2;
+					in4x_M1[47] <= MISO_M1; in4x_M2[47] <= MISO_M2;
+					in4x_N1[47] <= MISO_N1; in4x_N2[47] <= MISO_N2;
+					in4x_O1[47] <= MISO_O1; in4x_O2[47] <= MISO_O2;
+					in4x_P1[47] <= MISO_P1; in4x_P2[47] <= MISO_P2;					
                     main_state <= ms_clk13_c;
                 end
 
                 ms_clk13_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[48] <= MISO_A1; in4x_A2[48] <= MISO_A2;
-                    in4x_B1[48] <= MISO_B1; in4x_B2[48] <= MISO_B2;
-                    in4x_C1[48] <= MISO_C1; in4x_C2[48] <= MISO_C2;
-                    in4x_D1[48] <= MISO_D1; in4x_D2[48] <= MISO_D2;	
-                    in4x_E1[48] <= MISO_E1; in4x_E2[48] <= MISO_E2;
+					in4x_B1[48] <= MISO_B1; in4x_B2[48] <= MISO_B2;
+					in4x_C1[48] <= MISO_C1; in4x_C2[48] <= MISO_C2;
+					in4x_D1[48] <= MISO_D1; in4x_D2[48] <= MISO_D2;
+					in4x_E1[48] <= MISO_E1; in4x_E2[48] <= MISO_E2;
 					in4x_F1[48] <= MISO_F1; in4x_F2[48] <= MISO_F2;
 					in4x_G1[48] <= MISO_G1; in4x_G2[48] <= MISO_G2;
-					in4x_H1[48] <= MISO_H1; in4x_H2[48] <= MISO_H2;						
+					in4x_H1[48] <= MISO_H1; in4x_H2[48] <= MISO_H2;
+                    in4x_I1[48] <= MISO_I1; in4x_I2[48] <= MISO_I2;
+					in4x_J1[48] <= MISO_J1; in4x_J2[48] <= MISO_J2;
+					in4x_K1[48] <= MISO_K1; in4x_K2[48] <= MISO_K2;
+					in4x_L1[48] <= MISO_L1; in4x_L2[48] <= MISO_L2;
+					in4x_M1[48] <= MISO_M1; in4x_M2[48] <= MISO_M2;
+					in4x_N1[48] <= MISO_N1; in4x_N2[48] <= MISO_N2;
+					in4x_O1[48] <= MISO_O1; in4x_O2[48] <= MISO_O2;
+					in4x_P1[48] <= MISO_P1; in4x_P2[48] <= MISO_P2;						
                     main_state <= ms_clk13_d;
                 end
                 
                 ms_clk13_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[49] <= MISO_A1; in4x_A2[49] <= MISO_A2;
-                    in4x_B1[49] <= MISO_B1; in4x_B2[49] <= MISO_B2;
-                    in4x_C1[49] <= MISO_C1; in4x_C2[49] <= MISO_C2;
-                    in4x_D1[49] <= MISO_D1; in4x_D2[49] <= MISO_D2;	
-                    in4x_E1[49] <= MISO_E1; in4x_E2[49] <= MISO_E2;
+					in4x_B1[49] <= MISO_B1; in4x_B2[49] <= MISO_B2;
+					in4x_C1[49] <= MISO_C1; in4x_C2[49] <= MISO_C2;
+					in4x_D1[49] <= MISO_D1; in4x_D2[49] <= MISO_D2;
+					in4x_E1[49] <= MISO_E1; in4x_E2[49] <= MISO_E2;
 					in4x_F1[49] <= MISO_F1; in4x_F2[49] <= MISO_F2;
 					in4x_G1[49] <= MISO_G1; in4x_G2[49] <= MISO_G2;
-					in4x_H1[49] <= MISO_H1; in4x_H2[49] <= MISO_H2;					
+					in4x_H1[49] <= MISO_H1; in4x_H2[49] <= MISO_H2;
+                    in4x_I1[49] <= MISO_I1; in4x_I2[49] <= MISO_I2;
+					in4x_J1[49] <= MISO_J1; in4x_J2[49] <= MISO_J2;
+					in4x_K1[49] <= MISO_K1; in4x_K2[49] <= MISO_K2;
+					in4x_L1[49] <= MISO_L1; in4x_L2[49] <= MISO_L2;
+					in4x_M1[49] <= MISO_M1; in4x_M2[49] <= MISO_M2;
+					in4x_N1[49] <= MISO_N1; in4x_N2[49] <= MISO_N2;
+					in4x_O1[49] <= MISO_O1; in4x_O2[49] <= MISO_O2;
+					in4x_P1[49] <= MISO_P1; in4x_P2[49] <= MISO_P2;					
                     main_state <= ms_clk14_a;
                 end
 
@@ -1581,51 +2081,83 @@ module rhd
                     MOSI <= MOSI_cmd[2];
 
                     in4x_A1[50] <= MISO_A1; in4x_A2[50] <= MISO_A2;
-                    in4x_B1[50] <= MISO_B1; in4x_B2[50] <= MISO_B2;
-                    in4x_C1[50] <= MISO_C1; in4x_C2[50] <= MISO_C2;
-                    in4x_D1[50] <= MISO_D1; in4x_D2[50] <= MISO_D2;			
-                    in4x_E1[50] <= MISO_E1; in4x_E2[50] <= MISO_E2;
+					in4x_B1[50] <= MISO_B1; in4x_B2[50] <= MISO_B2;
+					in4x_C1[50] <= MISO_C1; in4x_C2[50] <= MISO_C2;
+					in4x_D1[50] <= MISO_D1; in4x_D2[50] <= MISO_D2;
+					in4x_E1[50] <= MISO_E1; in4x_E2[50] <= MISO_E2;
 					in4x_F1[50] <= MISO_F1; in4x_F2[50] <= MISO_F2;
 					in4x_G1[50] <= MISO_G1; in4x_G2[50] <= MISO_G2;
-					in4x_H1[50] <= MISO_H1; in4x_H2[50] <= MISO_H2;			
+					in4x_H1[50] <= MISO_H1; in4x_H2[50] <= MISO_H2;
+                    in4x_I1[50] <= MISO_I1; in4x_I2[50] <= MISO_I2;
+					in4x_J1[50] <= MISO_J1; in4x_J2[50] <= MISO_J2;
+					in4x_K1[50] <= MISO_K1; in4x_K2[50] <= MISO_K2;
+					in4x_L1[50] <= MISO_L1; in4x_L2[50] <= MISO_L2;
+					in4x_M1[50] <= MISO_M1; in4x_M2[50] <= MISO_M2;
+					in4x_N1[50] <= MISO_N1; in4x_N2[50] <= MISO_N2;
+					in4x_O1[50] <= MISO_O1; in4x_O2[50] <= MISO_O2;
+					in4x_P1[50] <= MISO_P1; in4x_P2[50] <= MISO_P2;			
                     main_state <= ms_clk14_b;
                 end
 
                 ms_clk14_b: begin
                     in4x_A1[51] <= MISO_A1; in4x_A2[51] <= MISO_A2;
-                    in4x_B1[51] <= MISO_B1; in4x_B2[51] <= MISO_B2;
-                    in4x_C1[51] <= MISO_C1; in4x_C2[51] <= MISO_C2;
-                    in4x_D1[51] <= MISO_D1; in4x_D2[51] <= MISO_D2;	
-                    in4x_E1[51] <= MISO_E1; in4x_E2[51] <= MISO_E2;
+					in4x_B1[51] <= MISO_B1; in4x_B2[51] <= MISO_B2;
+					in4x_C1[51] <= MISO_C1; in4x_C2[51] <= MISO_C2;
+					in4x_D1[51] <= MISO_D1; in4x_D2[51] <= MISO_D2;
+					in4x_E1[51] <= MISO_E1; in4x_E2[51] <= MISO_E2;
 					in4x_F1[51] <= MISO_F1; in4x_F2[51] <= MISO_F2;
 					in4x_G1[51] <= MISO_G1; in4x_G2[51] <= MISO_G2;
-					in4x_H1[51] <= MISO_H1; in4x_H2[51] <= MISO_H2;					
+					in4x_H1[51] <= MISO_H1; in4x_H2[51] <= MISO_H2;
+                    in4x_I1[51] <= MISO_I1; in4x_I2[51] <= MISO_I2;
+					in4x_J1[51] <= MISO_J1; in4x_J2[51] <= MISO_J2;
+					in4x_K1[51] <= MISO_K1; in4x_K2[51] <= MISO_K2;
+					in4x_L1[51] <= MISO_L1; in4x_L2[51] <= MISO_L2;
+					in4x_M1[51] <= MISO_M1; in4x_M2[51] <= MISO_M2;
+					in4x_N1[51] <= MISO_N1; in4x_N2[51] <= MISO_N2;
+					in4x_O1[51] <= MISO_O1; in4x_O2[51] <= MISO_O2;
+					in4x_P1[51] <= MISO_P1; in4x_P2[51] <= MISO_P2;					
                     main_state <= ms_clk14_c;
                 end
 
                 ms_clk14_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[52] <= MISO_A1; in4x_A2[52] <= MISO_A2;
-                    in4x_B1[52] <= MISO_B1; in4x_B2[52] <= MISO_B2;
-                    in4x_C1[52] <= MISO_C1; in4x_C2[52] <= MISO_C2;
-                    in4x_D1[52] <= MISO_D1; in4x_D2[52] <= MISO_D2;	
-                    in4x_E1[52] <= MISO_E1; in4x_E2[52] <= MISO_E2;
+					in4x_B1[52] <= MISO_B1; in4x_B2[52] <= MISO_B2;
+					in4x_C1[52] <= MISO_C1; in4x_C2[52] <= MISO_C2;
+					in4x_D1[52] <= MISO_D1; in4x_D2[52] <= MISO_D2;
+					in4x_E1[52] <= MISO_E1; in4x_E2[52] <= MISO_E2;
 					in4x_F1[52] <= MISO_F1; in4x_F2[52] <= MISO_F2;
 					in4x_G1[52] <= MISO_G1; in4x_G2[52] <= MISO_G2;
-					in4x_H1[52] <= MISO_H1; in4x_H2[52] <= MISO_H2;						
+					in4x_H1[52] <= MISO_H1; in4x_H2[52] <= MISO_H2;
+                    in4x_I1[52] <= MISO_I1; in4x_I2[52] <= MISO_I2;
+					in4x_J1[52] <= MISO_J1; in4x_J2[52] <= MISO_J2;
+					in4x_K1[52] <= MISO_K1; in4x_K2[52] <= MISO_K2;
+					in4x_L1[52] <= MISO_L1; in4x_L2[52] <= MISO_L2;
+					in4x_M1[52] <= MISO_M1; in4x_M2[52] <= MISO_M2;
+					in4x_N1[52] <= MISO_N1; in4x_N2[52] <= MISO_N2;
+					in4x_O1[52] <= MISO_O1; in4x_O2[52] <= MISO_O2;
+					in4x_P1[52] <= MISO_P1; in4x_P2[52] <= MISO_P2;						
                     main_state <= ms_clk14_d;
                 end
                 
                 ms_clk14_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[53] <= MISO_A1; in4x_A2[53] <= MISO_A2;
-                    in4x_B1[53] <= MISO_B1; in4x_B2[53] <= MISO_B2;
-                    in4x_C1[53] <= MISO_C1; in4x_C2[53] <= MISO_C2;
-                    in4x_D1[53] <= MISO_D1; in4x_D2[53] <= MISO_D2;	
-                    in4x_E1[53] <= MISO_E1; in4x_E2[53] <= MISO_E2;
+					in4x_B1[53] <= MISO_B1; in4x_B2[53] <= MISO_B2;
+					in4x_C1[53] <= MISO_C1; in4x_C2[53] <= MISO_C2;
+					in4x_D1[53] <= MISO_D1; in4x_D2[53] <= MISO_D2;
+					in4x_E1[53] <= MISO_E1; in4x_E2[53] <= MISO_E2;
 					in4x_F1[53] <= MISO_F1; in4x_F2[53] <= MISO_F2;
 					in4x_G1[53] <= MISO_G1; in4x_G2[53] <= MISO_G2;
-					in4x_H1[53] <= MISO_H1; in4x_H2[53] <= MISO_H2;					
+					in4x_H1[53] <= MISO_H1; in4x_H2[53] <= MISO_H2;
+                    in4x_I1[53] <= MISO_I1; in4x_I2[53] <= MISO_I2;
+					in4x_J1[53] <= MISO_J1; in4x_J2[53] <= MISO_J2;
+					in4x_K1[53] <= MISO_K1; in4x_K2[53] <= MISO_K2;
+					in4x_L1[53] <= MISO_L1; in4x_L2[53] <= MISO_L2;
+					in4x_M1[53] <= MISO_M1; in4x_M2[53] <= MISO_M2;
+					in4x_N1[53] <= MISO_N1; in4x_N2[53] <= MISO_N2;
+					in4x_O1[53] <= MISO_O1; in4x_O2[53] <= MISO_O2;
+					in4x_P1[53] <= MISO_P1; in4x_P2[53] <= MISO_P2;					
                     main_state <= ms_clk15_a;
                 end
 
@@ -1633,51 +2165,83 @@ module rhd
                     MOSI <= MOSI_cmd[1];
 
                     in4x_A1[54] <= MISO_A1; in4x_A2[54] <= MISO_A2;
-                    in4x_B1[54] <= MISO_B1; in4x_B2[54] <= MISO_B2;
-                    in4x_C1[54] <= MISO_C1; in4x_C2[54] <= MISO_C2;
-                    in4x_D1[54] <= MISO_D1; in4x_D2[54] <= MISO_D2;		
-                    in4x_E1[54] <= MISO_E1; in4x_E2[54] <= MISO_E2;
+					in4x_B1[54] <= MISO_B1; in4x_B2[54] <= MISO_B2;
+					in4x_C1[54] <= MISO_C1; in4x_C2[54] <= MISO_C2;
+					in4x_D1[54] <= MISO_D1; in4x_D2[54] <= MISO_D2;
+					in4x_E1[54] <= MISO_E1; in4x_E2[54] <= MISO_E2;
 					in4x_F1[54] <= MISO_F1; in4x_F2[54] <= MISO_F2;
 					in4x_G1[54] <= MISO_G1; in4x_G2[54] <= MISO_G2;
-					in4x_H1[54] <= MISO_H1; in4x_H2[54] <= MISO_H2;				
+					in4x_H1[54] <= MISO_H1; in4x_H2[54] <= MISO_H2;
+                    in4x_I1[54] <= MISO_I1; in4x_I2[54] <= MISO_I2;
+					in4x_J1[54] <= MISO_J1; in4x_J2[54] <= MISO_J2;
+					in4x_K1[54] <= MISO_K1; in4x_K2[54] <= MISO_K2;
+					in4x_L1[54] <= MISO_L1; in4x_L2[54] <= MISO_L2;
+					in4x_M1[54] <= MISO_M1; in4x_M2[54] <= MISO_M2;
+					in4x_N1[54] <= MISO_N1; in4x_N2[54] <= MISO_N2;
+					in4x_O1[54] <= MISO_O1; in4x_O2[54] <= MISO_O2;
+					in4x_P1[54] <= MISO_P1; in4x_P2[54] <= MISO_P2;				
                     main_state <= ms_clk15_b;
                 end
 
                 ms_clk15_b: begin
                     in4x_A1[55] <= MISO_A1; in4x_A2[55] <= MISO_A2;
-                    in4x_B1[55] <= MISO_B1; in4x_B2[55] <= MISO_B2;
-                    in4x_C1[55] <= MISO_C1; in4x_C2[55] <= MISO_C2;
-                    in4x_D1[55] <= MISO_D1; in4x_D2[55] <= MISO_D2;		
-                    in4x_E1[55] <= MISO_E1; in4x_E2[55] <= MISO_E2;
+					in4x_B1[55] <= MISO_B1; in4x_B2[55] <= MISO_B2;
+					in4x_C1[55] <= MISO_C1; in4x_C2[55] <= MISO_C2;
+					in4x_D1[55] <= MISO_D1; in4x_D2[55] <= MISO_D2;
+					in4x_E1[55] <= MISO_E1; in4x_E2[55] <= MISO_E2;
 					in4x_F1[55] <= MISO_F1; in4x_F2[55] <= MISO_F2;
 					in4x_G1[55] <= MISO_G1; in4x_G2[55] <= MISO_G2;
-					in4x_H1[55] <= MISO_H1; in4x_H2[55] <= MISO_H2;				
+					in4x_H1[55] <= MISO_H1; in4x_H2[55] <= MISO_H2;
+                    in4x_I1[55] <= MISO_I1; in4x_I2[55] <= MISO_I2;
+					in4x_J1[55] <= MISO_J1; in4x_J2[55] <= MISO_J2;
+					in4x_K1[55] <= MISO_K1; in4x_K2[55] <= MISO_K2;
+					in4x_L1[55] <= MISO_L1; in4x_L2[55] <= MISO_L2;
+					in4x_M1[55] <= MISO_M1; in4x_M2[55] <= MISO_M2;
+					in4x_N1[55] <= MISO_N1; in4x_N2[55] <= MISO_N2;
+					in4x_O1[55] <= MISO_O1; in4x_O2[55] <= MISO_O2;
+					in4x_P1[55] <= MISO_P1; in4x_P2[55] <= MISO_P2;				
                     main_state <= ms_clk15_c;
                 end
 
                 ms_clk15_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[56] <= MISO_A1; in4x_A2[56] <= MISO_A2;
-                    in4x_B1[56] <= MISO_B1; in4x_B2[56] <= MISO_B2;
-                    in4x_C1[56] <= MISO_C1; in4x_C2[56] <= MISO_C2;
-                    in4x_D1[56] <= MISO_D1; in4x_D2[56] <= MISO_D2;	
-                    in4x_E1[56] <= MISO_E1; in4x_E2[56] <= MISO_E2;
+					in4x_B1[56] <= MISO_B1; in4x_B2[56] <= MISO_B2;
+					in4x_C1[56] <= MISO_C1; in4x_C2[56] <= MISO_C2;
+					in4x_D1[56] <= MISO_D1; in4x_D2[56] <= MISO_D2;
+					in4x_E1[56] <= MISO_E1; in4x_E2[56] <= MISO_E2;
 					in4x_F1[56] <= MISO_F1; in4x_F2[56] <= MISO_F2;
 					in4x_G1[56] <= MISO_G1; in4x_G2[56] <= MISO_G2;
-					in4x_H1[56] <= MISO_H1; in4x_H2[56] <= MISO_H2;						
+					in4x_H1[56] <= MISO_H1; in4x_H2[56] <= MISO_H2;
+                    in4x_I1[56] <= MISO_I1; in4x_I2[56] <= MISO_I2;
+					in4x_J1[56] <= MISO_J1; in4x_J2[56] <= MISO_J2;
+					in4x_K1[56] <= MISO_K1; in4x_K2[56] <= MISO_K2;
+					in4x_L1[56] <= MISO_L1; in4x_L2[56] <= MISO_L2;
+					in4x_M1[56] <= MISO_M1; in4x_M2[56] <= MISO_M2;
+					in4x_N1[56] <= MISO_N1; in4x_N2[56] <= MISO_N2;
+					in4x_O1[56] <= MISO_O1; in4x_O2[56] <= MISO_O2;
+					in4x_P1[56] <= MISO_P1; in4x_P2[56] <= MISO_P2;						
                     main_state <= ms_clk15_d;
                 end
                     
                 ms_clk15_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[57] <= MISO_A1; in4x_A2[57] <= MISO_A2;
-                    in4x_B1[57] <= MISO_B1; in4x_B2[57] <= MISO_B2;
-                    in4x_C1[57] <= MISO_C1; in4x_C2[57] <= MISO_C2;
-                    in4x_D1[57] <= MISO_D1; in4x_D2[57] <= MISO_D2;	
-                    in4x_E1[57] <= MISO_E1; in4x_E2[57] <= MISO_E2;
+					in4x_B1[57] <= MISO_B1; in4x_B2[57] <= MISO_B2;
+					in4x_C1[57] <= MISO_C1; in4x_C2[57] <= MISO_C2;
+					in4x_D1[57] <= MISO_D1; in4x_D2[57] <= MISO_D2;
+					in4x_E1[57] <= MISO_E1; in4x_E2[57] <= MISO_E2;
 					in4x_F1[57] <= MISO_F1; in4x_F2[57] <= MISO_F2;
 					in4x_G1[57] <= MISO_G1; in4x_G2[57] <= MISO_G2;
-					in4x_H1[57] <= MISO_H1; in4x_H2[57] <= MISO_H2;					
+					in4x_H1[57] <= MISO_H1; in4x_H2[57] <= MISO_H2;
+                    in4x_I1[57] <= MISO_I1; in4x_I2[57] <= MISO_I2;
+					in4x_J1[57] <= MISO_J1; in4x_J2[57] <= MISO_J2;
+					in4x_K1[57] <= MISO_K1; in4x_K2[57] <= MISO_K2;
+					in4x_L1[57] <= MISO_L1; in4x_L2[57] <= MISO_L2;
+					in4x_M1[57] <= MISO_M1; in4x_M2[57] <= MISO_M2;
+					in4x_N1[57] <= MISO_N1; in4x_N2[57] <= MISO_N2;
+					in4x_O1[57] <= MISO_O1; in4x_O2[57] <= MISO_O2;
+					in4x_P1[57] <= MISO_P1; in4x_P2[57] <= MISO_P2;					
                     main_state <= ms_clk16_a;
                 end
     
@@ -1685,51 +2249,83 @@ module rhd
                     MOSI <= MOSI_cmd[0];
 
                     in4x_A1[58] <= MISO_A1; in4x_A2[58] <= MISO_A2;
-                    in4x_B1[58] <= MISO_B1; in4x_B2[58] <= MISO_B2;
-                    in4x_C1[58] <= MISO_C1; in4x_C2[58] <= MISO_C2;
-                    in4x_D1[58] <= MISO_D1; in4x_D2[58] <= MISO_D2;		
-                    in4x_E1[58] <= MISO_E1; in4x_E2[58] <= MISO_E2;
+					in4x_B1[58] <= MISO_B1; in4x_B2[58] <= MISO_B2;
+					in4x_C1[58] <= MISO_C1; in4x_C2[58] <= MISO_C2;
+					in4x_D1[58] <= MISO_D1; in4x_D2[58] <= MISO_D2;
+					in4x_E1[58] <= MISO_E1; in4x_E2[58] <= MISO_E2;
 					in4x_F1[58] <= MISO_F1; in4x_F2[58] <= MISO_F2;
 					in4x_G1[58] <= MISO_G1; in4x_G2[58] <= MISO_G2;
-					in4x_H1[58] <= MISO_H1; in4x_H2[58] <= MISO_H2;				
+					in4x_H1[58] <= MISO_H1; in4x_H2[58] <= MISO_H2;
+                    in4x_I1[58] <= MISO_I1; in4x_I2[58] <= MISO_I2;
+					in4x_J1[58] <= MISO_J1; in4x_J2[58] <= MISO_J2;
+					in4x_K1[58] <= MISO_K1; in4x_K2[58] <= MISO_K2;
+					in4x_L1[58] <= MISO_L1; in4x_L2[58] <= MISO_L2;
+					in4x_M1[58] <= MISO_M1; in4x_M2[58] <= MISO_M2;
+					in4x_N1[58] <= MISO_N1; in4x_N2[58] <= MISO_N2;
+					in4x_O1[58] <= MISO_O1; in4x_O2[58] <= MISO_O2;
+					in4x_P1[58] <= MISO_P1; in4x_P2[58] <= MISO_P2;				
                     main_state <= ms_clk16_b;
                 end
 
                 ms_clk16_b: begin
                     in4x_A1[59] <= MISO_A1; in4x_A2[59] <= MISO_A2;
-                    in4x_B1[59] <= MISO_B1; in4x_B2[59] <= MISO_B2;
-                    in4x_C1[59] <= MISO_C1; in4x_C2[59] <= MISO_C2;
-                    in4x_D1[59] <= MISO_D1; in4x_D2[59] <= MISO_D2;		
-                    in4x_E1[59] <= MISO_E1; in4x_E2[59] <= MISO_E2;
+					in4x_B1[59] <= MISO_B1; in4x_B2[59] <= MISO_B2;
+					in4x_C1[59] <= MISO_C1; in4x_C2[59] <= MISO_C2;
+					in4x_D1[59] <= MISO_D1; in4x_D2[59] <= MISO_D2;
+					in4x_E1[59] <= MISO_E1; in4x_E2[59] <= MISO_E2;
 					in4x_F1[59] <= MISO_F1; in4x_F2[59] <= MISO_F2;
 					in4x_G1[59] <= MISO_G1; in4x_G2[59] <= MISO_G2;
-					in4x_H1[59] <= MISO_H1; in4x_H2[59] <= MISO_H2;				
+					in4x_H1[59] <= MISO_H1; in4x_H2[59] <= MISO_H2;
+                    in4x_I1[59] <= MISO_I1; in4x_I2[59] <= MISO_I2;
+					in4x_J1[59] <= MISO_J1; in4x_J2[59] <= MISO_J2;
+					in4x_K1[59] <= MISO_K1; in4x_K2[59] <= MISO_K2;
+					in4x_L1[59] <= MISO_L1; in4x_L2[59] <= MISO_L2;
+					in4x_M1[59] <= MISO_M1; in4x_M2[59] <= MISO_M2;
+					in4x_N1[59] <= MISO_N1; in4x_N2[59] <= MISO_N2;
+					in4x_O1[59] <= MISO_O1; in4x_O2[59] <= MISO_O2;
+					in4x_P1[59] <= MISO_P1; in4x_P2[59] <= MISO_P2;				
                     main_state <= ms_clk16_c;
                 end
 
                 ms_clk16_c: begin
                     SCLK <= 1'b1;
                     in4x_A1[60] <= MISO_A1; in4x_A2[60] <= MISO_A2;
-                    in4x_B1[60] <= MISO_B1; in4x_B2[60] <= MISO_B2;
-                    in4x_C1[60] <= MISO_C1; in4x_C2[60] <= MISO_C2;
-                    in4x_D1[60] <= MISO_D1; in4x_D2[60] <= MISO_D2;		
-                    in4x_E1[60] <= MISO_E1; in4x_E2[60] <= MISO_E2;
+					in4x_B1[60] <= MISO_B1; in4x_B2[60] <= MISO_B2;
+					in4x_C1[60] <= MISO_C1; in4x_C2[60] <= MISO_C2;
+					in4x_D1[60] <= MISO_D1; in4x_D2[60] <= MISO_D2;
+					in4x_E1[60] <= MISO_E1; in4x_E2[60] <= MISO_E2;
 					in4x_F1[60] <= MISO_F1; in4x_F2[60] <= MISO_F2;
 					in4x_G1[60] <= MISO_G1; in4x_G2[60] <= MISO_G2;
-					in4x_H1[60] <= MISO_H1; in4x_H2[60] <= MISO_H2;				
+					in4x_H1[60] <= MISO_H1; in4x_H2[60] <= MISO_H2;
+                    in4x_I1[60] <= MISO_I1; in4x_I2[60] <= MISO_I2;
+					in4x_J1[60] <= MISO_J1; in4x_J2[60] <= MISO_J2;
+					in4x_K1[60] <= MISO_K1; in4x_K2[60] <= MISO_K2;
+					in4x_L1[60] <= MISO_L1; in4x_L2[60] <= MISO_L2;
+					in4x_M1[60] <= MISO_M1; in4x_M2[60] <= MISO_M2;
+					in4x_N1[60] <= MISO_N1; in4x_N2[60] <= MISO_N2;
+					in4x_O1[60] <= MISO_O1; in4x_O2[60] <= MISO_O2;
+					in4x_P1[60] <= MISO_P1; in4x_P2[60] <= MISO_P2;				
                     main_state <= ms_clk16_d;
                 end
                 
                 ms_clk16_d: begin
                     SCLK <= 1'b1;
                     in4x_A1[61] <= MISO_A1; in4x_A2[61] <= MISO_A2;
-                    in4x_B1[61] <= MISO_B1; in4x_B2[61] <= MISO_B2;
-                    in4x_C1[61] <= MISO_C1; in4x_C2[61] <= MISO_C2;
-                    in4x_D1[61] <= MISO_D1; in4x_D2[61] <= MISO_D2;	
-                    in4x_E1[61] <= MISO_E1; in4x_E2[61] <= MISO_E2;
+					in4x_B1[61] <= MISO_B1; in4x_B2[61] <= MISO_B2;
+					in4x_C1[61] <= MISO_C1; in4x_C2[61] <= MISO_C2;
+					in4x_D1[61] <= MISO_D1; in4x_D2[61] <= MISO_D2;
+					in4x_E1[61] <= MISO_E1; in4x_E2[61] <= MISO_E2;
 					in4x_F1[61] <= MISO_F1; in4x_F2[61] <= MISO_F2;
 					in4x_G1[61] <= MISO_G1; in4x_G2[61] <= MISO_G2;
-					in4x_H1[61] <= MISO_H1; in4x_H2[61] <= MISO_H2;					
+					in4x_H1[61] <= MISO_H1; in4x_H2[61] <= MISO_H2;
+                    in4x_I1[61] <= MISO_I1; in4x_I2[61] <= MISO_I2;
+					in4x_J1[61] <= MISO_J1; in4x_J2[61] <= MISO_J2;
+					in4x_K1[61] <= MISO_K1; in4x_K2[61] <= MISO_K2;
+					in4x_L1[61] <= MISO_L1; in4x_L2[61] <= MISO_L2;
+					in4x_M1[61] <= MISO_M1; in4x_M2[61] <= MISO_M2;
+					in4x_N1[61] <= MISO_N1; in4x_N2[61] <= MISO_N2;
+					in4x_O1[61] <= MISO_O1; in4x_O2[61] <= MISO_O2;
+					in4x_P1[61] <= MISO_P1; in4x_P2[61] <= MISO_P2;					
                     main_state <= ms_clk17_a;
                 end
 
@@ -1737,155 +2333,251 @@ module rhd
                     MOSI <= 1'b0;
 
                     in4x_A1[62] <= MISO_A1; in4x_A2[62] <= MISO_A2;
-                    in4x_B1[62] <= MISO_B1; in4x_B2[62] <= MISO_B2;
-                    in4x_C1[62] <= MISO_C1; in4x_C2[62] <= MISO_C2;
-                    in4x_D1[62] <= MISO_D1; in4x_D2[62] <= MISO_D2;	
-                    in4x_E1[62] <= MISO_E1; in4x_E2[62] <= MISO_E2;
+					in4x_B1[62] <= MISO_B1; in4x_B2[62] <= MISO_B2;
+					in4x_C1[62] <= MISO_C1; in4x_C2[62] <= MISO_C2;
+					in4x_D1[62] <= MISO_D1; in4x_D2[62] <= MISO_D2;
+					in4x_E1[62] <= MISO_E1; in4x_E2[62] <= MISO_E2;
 					in4x_F1[62] <= MISO_F1; in4x_F2[62] <= MISO_F2;
 					in4x_G1[62] <= MISO_G1; in4x_G2[62] <= MISO_G2;
-					in4x_H1[62] <= MISO_H1; in4x_H2[62] <= MISO_H2;					
+					in4x_H1[62] <= MISO_H1; in4x_H2[62] <= MISO_H2;
+                    in4x_I1[62] <= MISO_I1; in4x_I2[62] <= MISO_I2;
+					in4x_J1[62] <= MISO_J1; in4x_J2[62] <= MISO_J2;
+					in4x_K1[62] <= MISO_K1; in4x_K2[62] <= MISO_K2;
+					in4x_L1[62] <= MISO_L1; in4x_L2[62] <= MISO_L2;
+					in4x_M1[62] <= MISO_M1; in4x_M2[62] <= MISO_M2;
+					in4x_N1[62] <= MISO_N1; in4x_N2[62] <= MISO_N2;
+					in4x_O1[62] <= MISO_O1; in4x_O2[62] <= MISO_O2;
+					in4x_P1[62] <= MISO_P1; in4x_P2[62] <= MISO_P2;					
                     main_state <= ms_clk17_b;
                 end
 
                 ms_clk17_b: begin
                     in4x_A1[63] <= MISO_A1; in4x_A2[63] <= MISO_A2;
-                    in4x_B1[63] <= MISO_B1; in4x_B2[63] <= MISO_B2;
-                    in4x_C1[63] <= MISO_C1; in4x_C2[63] <= MISO_C2;
-                    in4x_D1[63] <= MISO_D1; in4x_D2[63] <= MISO_D2;	
-                    in4x_E1[63] <= MISO_E1; in4x_E2[63] <= MISO_E2;
+					in4x_B1[63] <= MISO_B1; in4x_B2[63] <= MISO_B2;
+					in4x_C1[63] <= MISO_C1; in4x_C2[63] <= MISO_C2;
+					in4x_D1[63] <= MISO_D1; in4x_D2[63] <= MISO_D2;
+					in4x_E1[63] <= MISO_E1; in4x_E2[63] <= MISO_E2;
 					in4x_F1[63] <= MISO_F1; in4x_F2[63] <= MISO_F2;
 					in4x_G1[63] <= MISO_G1; in4x_G2[63] <= MISO_G2;
-					in4x_H1[63] <= MISO_H1; in4x_H2[63] <= MISO_H2;		
+					in4x_H1[63] <= MISO_H1; in4x_H2[63] <= MISO_H2;
+                    in4x_I1[63] <= MISO_I1; in4x_I2[63] <= MISO_I2;
+					in4x_J1[63] <= MISO_J1; in4x_J2[63] <= MISO_J2;
+					in4x_K1[63] <= MISO_K1; in4x_K2[63] <= MISO_K2;
+					in4x_L1[63] <= MISO_L1; in4x_L2[63] <= MISO_L2;
+					in4x_M1[63] <= MISO_M1; in4x_M2[63] <= MISO_M2;
+					in4x_N1[63] <= MISO_N1; in4x_N2[63] <= MISO_N2;
+					in4x_O1[63] <= MISO_O1; in4x_O2[63] <= MISO_O2;
+					in4x_P1[63] <= MISO_P1; in4x_P2[63] <= MISO_P2;		
                     main_state <= ms_cs_a;
                 end
 
                 ms_cs_a: begin
                     CS_b <= 1'b1;
                     in4x_A1[64] <= MISO_A1; in4x_A2[64] <= MISO_A2;
-                    in4x_B1[64] <= MISO_B1; in4x_B2[64] <= MISO_B2;
-                    in4x_C1[64] <= MISO_C1; in4x_C2[64] <= MISO_C2;
-                    in4x_D1[64] <= MISO_D1; in4x_D2[64] <= MISO_D2;	
-                    in4x_E1[64] <= MISO_E1; in4x_E2[64] <= MISO_E2;
+					in4x_B1[64] <= MISO_B1; in4x_B2[64] <= MISO_B2;
+					in4x_C1[64] <= MISO_C1; in4x_C2[64] <= MISO_C2;
+					in4x_D1[64] <= MISO_D1; in4x_D2[64] <= MISO_D2;
+					in4x_E1[64] <= MISO_E1; in4x_E2[64] <= MISO_E2;
 					in4x_F1[64] <= MISO_F1; in4x_F2[64] <= MISO_F2;
 					in4x_G1[64] <= MISO_G1; in4x_G2[64] <= MISO_G2;
-					in4x_H1[64] <= MISO_H1; in4x_H2[64] <= MISO_H2;					
+					in4x_H1[64] <= MISO_H1; in4x_H2[64] <= MISO_H2;
+                    in4x_I1[64] <= MISO_I1; in4x_I2[64] <= MISO_I2;
+					in4x_J1[64] <= MISO_J1; in4x_J2[64] <= MISO_J2;
+					in4x_K1[64] <= MISO_K1; in4x_K2[64] <= MISO_K2;
+					in4x_L1[64] <= MISO_L1; in4x_L2[64] <= MISO_L2;
+					in4x_M1[64] <= MISO_M1; in4x_M2[64] <= MISO_M2;
+					in4x_N1[64] <= MISO_N1; in4x_N2[64] <= MISO_N2;
+					in4x_O1[64] <= MISO_O1; in4x_O2[64] <= MISO_O2;
+					in4x_P1[64] <= MISO_P1; in4x_P2[64] <= MISO_P2;					
                     main_state <= ms_cs_b;
                 end
 
                 ms_cs_b: begin
                     CS_b <= 1'b1;
                     in4x_A1[65] <= MISO_A1; in4x_A2[65] <= MISO_A2;
-                    in4x_B1[65] <= MISO_B1; in4x_B2[65] <= MISO_B2;
-                    in4x_C1[65] <= MISO_C1; in4x_C2[65] <= MISO_C2;
-                    in4x_D1[65] <= MISO_D1; in4x_D2[65] <= MISO_D2;	
-                    in4x_E1[65] <= MISO_E1; in4x_E2[65] <= MISO_E2;
+					in4x_B1[65] <= MISO_B1; in4x_B2[65] <= MISO_B2;
+					in4x_C1[65] <= MISO_C1; in4x_C2[65] <= MISO_C2;
+					in4x_D1[65] <= MISO_D1; in4x_D2[65] <= MISO_D2;
+					in4x_E1[65] <= MISO_E1; in4x_E2[65] <= MISO_E2;
 					in4x_F1[65] <= MISO_F1; in4x_F2[65] <= MISO_F2;
 					in4x_G1[65] <= MISO_G1; in4x_G2[65] <= MISO_G2;
-					in4x_H1[65] <= MISO_H1; in4x_H2[65] <= MISO_H2;					
+					in4x_H1[65] <= MISO_H1; in4x_H2[65] <= MISO_H2;
+                    in4x_I1[65] <= MISO_I1; in4x_I2[65] <= MISO_I2;
+					in4x_J1[65] <= MISO_J1; in4x_J2[65] <= MISO_J2;
+					in4x_K1[65] <= MISO_K1; in4x_K2[65] <= MISO_K2;
+					in4x_L1[65] <= MISO_L1; in4x_L2[65] <= MISO_L2;
+					in4x_M1[65] <= MISO_M1; in4x_M2[65] <= MISO_M2;
+					in4x_N1[65] <= MISO_N1; in4x_N2[65] <= MISO_N2;
+					in4x_O1[65] <= MISO_O1; in4x_O2[65] <= MISO_O2;
+					in4x_P1[65] <= MISO_P1; in4x_P2[65] <= MISO_P2;					
                     main_state <= ms_cs_c;
                 end
 
                 ms_cs_c: begin
                     CS_b <= 1'b1;
                     in4x_A1[66] <= MISO_A1; in4x_A2[66] <= MISO_A2;
-                    in4x_B1[66] <= MISO_B1; in4x_B2[66] <= MISO_B2;
-                    in4x_C1[66] <= MISO_C1; in4x_C2[66] <= MISO_C2;
-                    in4x_D1[66] <= MISO_D1; in4x_D2[66] <= MISO_D2;	
-                    in4x_E1[66] <= MISO_E1; in4x_E2[66] <= MISO_E2;
+					in4x_B1[66] <= MISO_B1; in4x_B2[66] <= MISO_B2;
+					in4x_C1[66] <= MISO_C1; in4x_C2[66] <= MISO_C2;
+					in4x_D1[66] <= MISO_D1; in4x_D2[66] <= MISO_D2;
+					in4x_E1[66] <= MISO_E1; in4x_E2[66] <= MISO_E2;
 					in4x_F1[66] <= MISO_F1; in4x_F2[66] <= MISO_F2;
 					in4x_G1[66] <= MISO_G1; in4x_G2[66] <= MISO_G2;
-					in4x_H1[66] <= MISO_H1; in4x_H2[66] <= MISO_H2;					
+					in4x_H1[66] <= MISO_H1; in4x_H2[66] <= MISO_H2;
+                    in4x_I1[66] <= MISO_I1; in4x_I2[66] <= MISO_I2;
+					in4x_J1[66] <= MISO_J1; in4x_J2[66] <= MISO_J2;
+					in4x_K1[66] <= MISO_K1; in4x_K2[66] <= MISO_K2;
+					in4x_L1[66] <= MISO_L1; in4x_L2[66] <= MISO_L2;
+					in4x_M1[66] <= MISO_M1; in4x_M2[66] <= MISO_M2;
+					in4x_N1[66] <= MISO_N1; in4x_N2[66] <= MISO_N2;
+					in4x_O1[66] <= MISO_O1; in4x_O2[66] <= MISO_O2;
+					in4x_P1[66] <= MISO_P1; in4x_P2[66] <= MISO_P2;					
                     main_state <= ms_cs_d;
                 end
                 
                 ms_cs_d: begin
                     CS_b <= 1'b1;
                     in4x_A1[67] <= MISO_A1; in4x_A2[67] <= MISO_A2;
-                    in4x_B1[67] <= MISO_B1; in4x_B2[67] <= MISO_B2;
-                    in4x_C1[67] <= MISO_C1; in4x_C2[67] <= MISO_C2;
-                    in4x_D1[67] <= MISO_D1; in4x_D2[67] <= MISO_D2;		
-                    in4x_E1[67] <= MISO_E1; in4x_E2[67] <= MISO_E2;
+					in4x_B1[67] <= MISO_B1; in4x_B2[67] <= MISO_B2;
+					in4x_C1[67] <= MISO_C1; in4x_C2[67] <= MISO_C2;
+					in4x_D1[67] <= MISO_D1; in4x_D2[67] <= MISO_D2;
+					in4x_E1[67] <= MISO_E1; in4x_E2[67] <= MISO_E2;
 					in4x_F1[67] <= MISO_F1; in4x_F2[67] <= MISO_F2;
 					in4x_G1[67] <= MISO_G1; in4x_G2[67] <= MISO_G2;
-					in4x_H1[67] <= MISO_H1; in4x_H2[67] <= MISO_H2;				
+					in4x_H1[67] <= MISO_H1; in4x_H2[67] <= MISO_H2;
+                    in4x_I1[67] <= MISO_I1; in4x_I2[67] <= MISO_I2;
+					in4x_J1[67] <= MISO_J1; in4x_J2[67] <= MISO_J2;
+					in4x_K1[67] <= MISO_K1; in4x_K2[67] <= MISO_K2;
+					in4x_L1[67] <= MISO_L1; in4x_L2[67] <= MISO_L2;
+					in4x_M1[67] <= MISO_M1; in4x_M2[67] <= MISO_M2;
+					in4x_N1[67] <= MISO_N1; in4x_N2[67] <= MISO_N2;
+					in4x_O1[67] <= MISO_O1; in4x_O2[67] <= MISO_O2;
+					in4x_P1[67] <= MISO_P1; in4x_P2[67] <= MISO_P2;				
                     main_state <= ms_cs_e;
                 end
                 
                 ms_cs_e: begin
                     CS_b <= 1'b1;
                     in4x_A1[68] <= MISO_A1; in4x_A2[68] <= MISO_A2;
-                    in4x_B1[68] <= MISO_B1; in4x_B2[68] <= MISO_B2;
-                    in4x_C1[68] <= MISO_C1; in4x_C2[68] <= MISO_C2;
-                    in4x_D1[68] <= MISO_D1; in4x_D2[68] <= MISO_D2;	
-                    in4x_E1[68] <= MISO_E1; in4x_E2[68] <= MISO_E2;
+					in4x_B1[68] <= MISO_B1; in4x_B2[68] <= MISO_B2;
+					in4x_C1[68] <= MISO_C1; in4x_C2[68] <= MISO_C2;
+					in4x_D1[68] <= MISO_D1; in4x_D2[68] <= MISO_D2;
+					in4x_E1[68] <= MISO_E1; in4x_E2[68] <= MISO_E2;
 					in4x_F1[68] <= MISO_F1; in4x_F2[68] <= MISO_F2;
 					in4x_G1[68] <= MISO_G1; in4x_G2[68] <= MISO_G2;
-					in4x_H1[68] <= MISO_H1; in4x_H2[68] <= MISO_H2;					
+					in4x_H1[68] <= MISO_H1; in4x_H2[68] <= MISO_H2;
+                    in4x_I1[68] <= MISO_I1; in4x_I2[68] <= MISO_I2;
+					in4x_J1[68] <= MISO_J1; in4x_J2[68] <= MISO_J2;
+					in4x_K1[68] <= MISO_K1; in4x_K2[68] <= MISO_K2;
+					in4x_L1[68] <= MISO_L1; in4x_L2[68] <= MISO_L2;
+					in4x_M1[68] <= MISO_M1; in4x_M2[68] <= MISO_M2;
+					in4x_N1[68] <= MISO_N1; in4x_N2[68] <= MISO_N2;
+					in4x_O1[68] <= MISO_O1; in4x_O2[68] <= MISO_O2;
+					in4x_P1[68] <= MISO_P1; in4x_P2[68] <= MISO_P2;					
                     main_state <= ms_cs_f;
                 end
                 
                 ms_cs_f: begin
                     CS_b <= 1'b1;
                     in4x_A1[69] <= MISO_A1; in4x_A2[69] <= MISO_A2;
-                    in4x_B1[69] <= MISO_B1; in4x_B2[69] <= MISO_B2;
-                    in4x_C1[69] <= MISO_C1; in4x_C2[69] <= MISO_C2;
-                    in4x_D1[69] <= MISO_D1; in4x_D2[69] <= MISO_D2;		
-                    in4x_E1[69] <= MISO_E1; in4x_E2[69] <= MISO_E2;
+					in4x_B1[69] <= MISO_B1; in4x_B2[69] <= MISO_B2;
+					in4x_C1[69] <= MISO_C1; in4x_C2[69] <= MISO_C2;
+					in4x_D1[69] <= MISO_D1; in4x_D2[69] <= MISO_D2;
+					in4x_E1[69] <= MISO_E1; in4x_E2[69] <= MISO_E2;
 					in4x_F1[69] <= MISO_F1; in4x_F2[69] <= MISO_F2;
 					in4x_G1[69] <= MISO_G1; in4x_G2[69] <= MISO_G2;
-					in4x_H1[69] <= MISO_H1; in4x_H2[69] <= MISO_H2;				
+					in4x_H1[69] <= MISO_H1; in4x_H2[69] <= MISO_H2;
+                    in4x_I1[69] <= MISO_I1; in4x_I2[69] <= MISO_I2;
+					in4x_J1[69] <= MISO_J1; in4x_J2[69] <= MISO_J2;
+					in4x_K1[69] <= MISO_K1; in4x_K2[69] <= MISO_K2;
+					in4x_L1[69] <= MISO_L1; in4x_L2[69] <= MISO_L2;
+					in4x_M1[69] <= MISO_M1; in4x_M2[69] <= MISO_M2;
+					in4x_N1[69] <= MISO_N1; in4x_N2[69] <= MISO_N2;
+					in4x_O1[69] <= MISO_O1; in4x_O2[69] <= MISO_O2;
+					in4x_P1[69] <= MISO_P1; in4x_P2[69] <= MISO_P2;				
                     main_state <= ms_cs_g;
                 end
                 
                 ms_cs_g: begin
                     CS_b <= 1'b1;
                     in4x_A1[70] <= MISO_A1; in4x_A2[70] <= MISO_A2;
-                    in4x_B1[70] <= MISO_B1; in4x_B2[70] <= MISO_B2;
-                    in4x_C1[70] <= MISO_C1; in4x_C2[70] <= MISO_C2;
-                    in4x_D1[70] <= MISO_D1; in4x_D2[70] <= MISO_D2;	
-                    in4x_E1[70] <= MISO_E1; in4x_E2[70] <= MISO_E2;
+					in4x_B1[70] <= MISO_B1; in4x_B2[70] <= MISO_B2;
+					in4x_C1[70] <= MISO_C1; in4x_C2[70] <= MISO_C2;
+					in4x_D1[70] <= MISO_D1; in4x_D2[70] <= MISO_D2;
+					in4x_E1[70] <= MISO_E1; in4x_E2[70] <= MISO_E2;
 					in4x_F1[70] <= MISO_F1; in4x_F2[70] <= MISO_F2;
 					in4x_G1[70] <= MISO_G1; in4x_G2[70] <= MISO_G2;
-					in4x_H1[70] <= MISO_H1; in4x_H2[70] <= MISO_H2;					
+					in4x_H1[70] <= MISO_H1; in4x_H2[70] <= MISO_H2;
+                    in4x_I1[70] <= MISO_I1; in4x_I2[70] <= MISO_I2;
+					in4x_J1[70] <= MISO_J1; in4x_J2[70] <= MISO_J2;
+					in4x_K1[70] <= MISO_K1; in4x_K2[70] <= MISO_K2;
+					in4x_L1[70] <= MISO_L1; in4x_L2[70] <= MISO_L2;
+					in4x_M1[70] <= MISO_M1; in4x_M2[70] <= MISO_M2;
+					in4x_N1[70] <= MISO_N1; in4x_N2[70] <= MISO_N2;
+					in4x_O1[70] <= MISO_O1; in4x_O2[70] <= MISO_O2;
+					in4x_P1[70] <= MISO_P1; in4x_P2[70] <= MISO_P2;					
                     main_state <= ms_cs_h;
                 end
                 
                 ms_cs_h: begin
                     CS_b <= 1'b1;
                     in4x_A1[71] <= MISO_A1; in4x_A2[71] <= MISO_A2;
-                    in4x_B1[71] <= MISO_B1; in4x_B2[71] <= MISO_B2;
-                    in4x_C1[71] <= MISO_C1; in4x_C2[71] <= MISO_C2;
-                    in4x_D1[71] <= MISO_D1; in4x_D2[71] <= MISO_D2;		
-                    in4x_E1[71] <= MISO_E1; in4x_E2[71] <= MISO_E2;
+					in4x_B1[71] <= MISO_B1; in4x_B2[71] <= MISO_B2;
+					in4x_C1[71] <= MISO_C1; in4x_C2[71] <= MISO_C2;
+					in4x_D1[71] <= MISO_D1; in4x_D2[71] <= MISO_D2;
+					in4x_E1[71] <= MISO_E1; in4x_E2[71] <= MISO_E2;
 					in4x_F1[71] <= MISO_F1; in4x_F2[71] <= MISO_F2;
 					in4x_G1[71] <= MISO_G1; in4x_G2[71] <= MISO_G2;
-					in4x_H1[71] <= MISO_H1; in4x_H2[71] <= MISO_H2;				
+					in4x_H1[71] <= MISO_H1; in4x_H2[71] <= MISO_H2;
+                    in4x_I1[71] <= MISO_I1; in4x_I2[71] <= MISO_I2;
+					in4x_J1[71] <= MISO_J1; in4x_J2[71] <= MISO_J2;
+					in4x_K1[71] <= MISO_K1; in4x_K2[71] <= MISO_K2;
+					in4x_L1[71] <= MISO_L1; in4x_L2[71] <= MISO_L2;
+					in4x_M1[71] <= MISO_M1; in4x_M2[71] <= MISO_M2;
+					in4x_N1[71] <= MISO_N1; in4x_N2[71] <= MISO_N2;
+					in4x_O1[71] <= MISO_O1; in4x_O2[71] <= MISO_O2;
+					in4x_P1[71] <= MISO_P1; in4x_P2[71] <= MISO_P2;				
                     main_state <= ms_cs_i;
                 end
                 
                 ms_cs_i: begin
                     CS_b <= 1'b1;
                     in4x_A1[72] <= MISO_A1; in4x_A2[72] <= MISO_A2;
-                    in4x_B1[72] <= MISO_B1; in4x_B2[72] <= MISO_B2;
-                    in4x_C1[72] <= MISO_C1; in4x_C2[72] <= MISO_C2;
-                    in4x_D1[72] <= MISO_D1; in4x_D2[72] <= MISO_D2;	
-                    in4x_E1[72] <= MISO_E1; in4x_E2[72] <= MISO_E2;
+					in4x_B1[72] <= MISO_B1; in4x_B2[72] <= MISO_B2;
+					in4x_C1[72] <= MISO_C1; in4x_C2[72] <= MISO_C2;
+					in4x_D1[72] <= MISO_D1; in4x_D2[72] <= MISO_D2;
+					in4x_E1[72] <= MISO_E1; in4x_E2[72] <= MISO_E2;
 					in4x_F1[72] <= MISO_F1; in4x_F2[72] <= MISO_F2;
 					in4x_G1[72] <= MISO_G1; in4x_G2[72] <= MISO_G2;
-					in4x_H1[72] <= MISO_H1; in4x_H2[72] <= MISO_H2;					
+					in4x_H1[72] <= MISO_H1; in4x_H2[72] <= MISO_H2;
+                    in4x_I1[72] <= MISO_I1; in4x_I2[72] <= MISO_I2;
+					in4x_J1[72] <= MISO_J1; in4x_J2[72] <= MISO_J2;
+					in4x_K1[72] <= MISO_K1; in4x_K2[72] <= MISO_K2;
+					in4x_L1[72] <= MISO_L1; in4x_L2[72] <= MISO_L2;
+					in4x_M1[72] <= MISO_M1; in4x_M2[72] <= MISO_M2;
+					in4x_N1[72] <= MISO_N1; in4x_N2[72] <= MISO_N2;
+					in4x_O1[72] <= MISO_O1; in4x_O2[72] <= MISO_O2;
+					in4x_P1[72] <= MISO_P1; in4x_P2[72] <= MISO_P2;					
                     main_state <= ms_cs_j;
                 end
                 
                 ms_cs_j: begin
                     CS_b <= 1'b1;
                     in4x_A1[73] <= MISO_A1; in4x_A2[73] <= MISO_A2;
-                    in4x_B1[73] <= MISO_B1; in4x_B2[73] <= MISO_B2;
-                    in4x_C1[73] <= MISO_C1; in4x_C2[73] <= MISO_C2;
-                    in4x_D1[73] <= MISO_D1; in4x_D2[73] <= MISO_D2;		
-                    in4x_E1[73] <= MISO_E1; in4x_E2[73] <= MISO_E2;
+					in4x_B1[73] <= MISO_B1; in4x_B2[73] <= MISO_B2;
+					in4x_C1[73] <= MISO_C1; in4x_C2[73] <= MISO_C2;
+					in4x_D1[73] <= MISO_D1; in4x_D2[73] <= MISO_D2;
+					in4x_E1[73] <= MISO_E1; in4x_E2[73] <= MISO_E2;
 					in4x_F1[73] <= MISO_F1; in4x_F2[73] <= MISO_F2;
 					in4x_G1[73] <= MISO_G1; in4x_G2[73] <= MISO_G2;
-					in4x_H1[73] <= MISO_H1; in4x_H2[73] <= MISO_H2;				
+					in4x_H1[73] <= MISO_H1; in4x_H2[73] <= MISO_H2;
+                    in4x_I1[73] <= MISO_I1; in4x_I2[73] <= MISO_I2;
+					in4x_J1[73] <= MISO_J1; in4x_J2[73] <= MISO_J2;
+					in4x_K1[73] <= MISO_K1; in4x_K2[73] <= MISO_K2;
+					in4x_L1[73] <= MISO_L1; in4x_L2[73] <= MISO_L2;
+					in4x_M1[73] <= MISO_M1; in4x_M2[73] <= MISO_M2;
+					in4x_N1[73] <= MISO_N1; in4x_N2[73] <= MISO_N2;
+					in4x_O1[73] <= MISO_O1; in4x_O2[73] <= MISO_O2;
+					in4x_P1[73] <= MISO_P1; in4x_P2[73] <= MISO_P2;				
                     main_state <= ms_cs_k;
                 end
                 
@@ -1899,7 +2591,16 @@ module rhd
 					result_F1 <= in_F1; result_F2 <= in_F2;
 					result_G1 <= in_G1; result_G2 <= in_G2;
 					result_H1 <= in_H1; result_H2 <= in_H2;
-					result_DDR_A1 <= in_DDR_A1; result_DDR_A2 <= in_DDR_A2;
+                    result_I1 <= in_I1; result_I2 <= in_I2;
+					result_J1 <= in_J1; result_J2 <= in_J2;
+					result_K1 <= in_K1; result_K2 <= in_K2;
+					result_L1 <= in_L1; result_L2 <= in_L2;
+					result_M1 <= in_M1; result_M2 <= in_M2;
+					result_N1 <= in_N1; result_N2 <= in_N2;
+					result_O1 <= in_O1; result_O2 <= in_O2;
+					result_P1 <= in_P1; result_P2 <= in_P2;
+
+                    result_DDR_A1 <= in_DDR_A1; result_DDR_A2 <= in_DDR_A2;
 					result_DDR_B1 <= in_DDR_B1; result_DDR_B2 <= in_DDR_B2;
 					result_DDR_C1 <= in_DDR_C1; result_DDR_C2 <= in_DDR_C2;
 					result_DDR_D1 <= in_DDR_D1; result_DDR_D2 <= in_DDR_D2;
@@ -1907,6 +2608,15 @@ module rhd
 					result_DDR_F1 <= in_DDR_F1; result_DDR_F2 <= in_DDR_F2;
 					result_DDR_G1 <= in_DDR_G1; result_DDR_G2 <= in_DDR_G2;
 					result_DDR_H1 <= in_DDR_H1; result_DDR_H2 <= in_DDR_H2;
+                    result_DDR_I1 <= in_DDR_I1; result_DDR_I2 <= in_DDR_I2;
+					result_DDR_J1 <= in_DDR_J1; result_DDR_J2 <= in_DDR_J2;
+					result_DDR_K1 <= in_DDR_K1; result_DDR_K2 <= in_DDR_K2;
+					result_DDR_L1 <= in_DDR_L1; result_DDR_L2 <= in_DDR_L2;
+					result_DDR_M1 <= in_DDR_M1; result_DDR_M2 <= in_DDR_M2;
+					result_DDR_N1 <= in_DDR_N1; result_DDR_N2 <= in_DDR_N2;
+					result_DDR_O1 <= in_DDR_O1; result_DDR_O2 <= in_DDR_O2;
+					result_DDR_P1 <= in_DDR_P1; result_DDR_P2 <= in_DDR_P2;
+
                     main_state <= ms_cs_l;
                 end
                     
