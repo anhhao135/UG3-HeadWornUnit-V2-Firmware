@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhs/rhs.runs/synth_1'
+HD_PWD='C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log rhs_axi.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rhs_axi.tcl
+EAStep vivado -log rhs_axi_tb_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rhs_axi_tb_wrapper.tcl

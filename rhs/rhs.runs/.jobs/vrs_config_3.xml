@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="rhs_axi_tb_rhs_axi_0_0_synth_1" LaunchDir="C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.runs/rhs_axi_tb_rhs_axi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rhs_axi_tb_rhd_headstage_slave_0_0_synth_1" LaunchDir="C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.runs/rhs_axi_tb_rhd_headstage_slave_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rhs_axi_tb_rhd_headstage_slave_1_0_synth_1" LaunchDir="C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.runs/rhs_axi_tb_rhd_headstage_slave_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rhs_axi_tb_axi_vip_0_0_synth_1" LaunchDir="C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.runs/rhs_axi_tb_axi_vip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="rhs_axi_tb_rhs_axi_0_0_synth_1"/>
+		<Parent Id="rhs_axi_tb_rhd_headstage_slave_0_0_synth_1"/>
+		<Parent Id="rhs_axi_tb_rhd_headstage_slave_1_0_synth_1"/>
+		<Parent Id="rhs_axi_tb_axi_vip_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

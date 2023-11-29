@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1'
+HD_PWD='C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Nov 17 15:39:24 2023
-# Process ID: 23016
-# Current directory: C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1
+# Start of session at: Wed Nov 29 11:31:10 2023
+# Process ID: 28476
+# Current directory: C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1
 # Command line: vivado.exe -log rhd_axi_tb_rhd_headstage_slave_0_6.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rhd_axi_tb_rhd_headstage_slave_0_6.tcl
-# Log file: C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.vds
-# Journal file: C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1\vivado.jou
+# Log file: C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.vds
+# Journal file: C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1\vivado.jou
 # Running On: GramForGram, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 16847 MB
 #-----------------------------------------------------------
 source rhd_axi_tb_rhd_headstage_slave_0_6.tcl -notrace

@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.532208",
-   "Default View_TopLeft":"-842,-85",
+   "Default View_ScaleFactor":"0.710167",
+   "Default View_TopLeft":"-553,0",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -25,20 +25,20 @@ preplace netloc rhd_axi_0_MOSI1 1 0 3 40 610 NJ 610 630
 preplace netloc rhd_axi_0_MOSI2 1 2 1 NJ 320
 preplace netloc rhd_axi_0_SCLK 1 0 3 50 20 NJ 20 620
 preplace netloc rhd_headstage_slave_0_MISO1_A 1 1 1 N 100
-preplace netloc rhd_headstage_slave_0_MISO2_A 1 1 1 N 120
 preplace netloc rhd_headstage_slave_0_MISO1_B 1 1 1 N 140
-preplace netloc rhd_headstage_slave_0_MISO2_B 1 1 1 N 160
 preplace netloc rhd_headstage_slave_0_MISO1_C 1 1 1 N 180
-preplace netloc rhd_headstage_slave_0_MISO2_C 1 1 1 N 200
 preplace netloc rhd_headstage_slave_0_MISO1_D 1 1 1 N 220
-preplace netloc rhd_headstage_slave_0_MISO2_D 1 1 1 N 240
 preplace netloc rhd_headstage_slave_0_MISO1_E 1 1 1 N 260
-preplace netloc rhd_headstage_slave_0_MISO2_E 1 1 1 N 280
 preplace netloc rhd_headstage_slave_0_MISO1_F 1 1 1 N 300
-preplace netloc rhd_headstage_slave_0_MISO2_F 1 1 1 N 320
 preplace netloc rhd_headstage_slave_0_MISO1_G 1 1 1 N 340
-preplace netloc rhd_headstage_slave_0_MISO2_G 1 1 1 N 360
 preplace netloc rhd_headstage_slave_0_MISO1_H 1 1 1 N 380
+preplace netloc rhd_headstage_slave_0_MISO2_A 1 1 1 N 120
+preplace netloc rhd_headstage_slave_0_MISO2_B 1 1 1 N 160
+preplace netloc rhd_headstage_slave_0_MISO2_C 1 1 1 N 200
+preplace netloc rhd_headstage_slave_0_MISO2_D 1 1 1 N 240
+preplace netloc rhd_headstage_slave_0_MISO2_E 1 1 1 N 280
+preplace netloc rhd_headstage_slave_0_MISO2_F 1 1 1 N 320
+preplace netloc rhd_headstage_slave_0_MISO2_G 1 1 1 N 360
 preplace netloc rhd_headstage_slave_0_MISO2_H 1 1 1 N 400
 preplace netloc axi_vip_0_M_AXI 1 1 1 270 80n
 levelinfo -pg 1 0 160 470 650

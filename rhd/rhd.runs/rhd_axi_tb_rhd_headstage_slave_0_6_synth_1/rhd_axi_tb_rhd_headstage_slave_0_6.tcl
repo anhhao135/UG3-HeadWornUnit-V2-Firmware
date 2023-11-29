@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.tcl"
+  variable script "C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,32 +70,33 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "rhd_axi_tb_rhd_headstage_slave_0_6_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
-set_param ips.modRefOverrideMrefDirPath c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/mref
+set_param ips.modRefOverrideMrefDirPath c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/mref
 create_project -in_memory -part xck26-sfvc784-2LVI-i
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.cache/wt [current_project]
-set_property parent.project_path C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/wt [current_project]
+set_property parent.project_path C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:k26i:part0:1.4 [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.cache/ip [current_project]
+set_property ip_output_repo c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/src/rhd_headstage_slave.v
-  C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/src/rhd_headstage_slave_full.v
+  C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v
+  C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full.v
 }
-read_ip -quiet c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.xci
+read_ip -quiet C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,7 +110,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1 -new_name rhd_axi_tb_rhd_headstage_slave_0_6 -ip [get_ips rhd_axi_tb_rhd_headstage_slave_0_6]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1 -new_name rhd_axi_tb_rhd_headstage_slave_0_6 -ip [get_ips rhd_axi_tb_rhd_headstage_slave_0_6]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -164,32 +165,32 @@ create_report "rhd_axi_tb_rhd_headstage_slave_0_6_synth_1_synth_report_utilizati
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.dcp c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.dcp
+  file copy -force C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.dcp c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v
+  write_verilog -force -mode synth_stub c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -199,32 +200,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.dcp c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.dcp
+  file copy -force C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6.dcp c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v
+  file rename -force C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl
+  file rename -force C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.v c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.v
+  file rename -force C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.v c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl
+  file rename -force C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -232,15 +233,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6]} {
+if {[file isdir C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6]} {
   catch { 
-    file copy -force c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6
+    file copy -force c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.v C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6
   }
 }
 
-if {[file isdir C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6]} {
+if {[file isdir C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6]} {
   catch { 
-    file copy -force c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6
+    file copy -force c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_stub.vhdl C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/ip/rhd_axi_tb_rhd_headstage_slave_0_6
   }
 }
 file delete __synthesis_is_running__

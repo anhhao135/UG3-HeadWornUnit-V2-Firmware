@@ -16,16 +16,22 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
     
     always @(negedge CS) begin
         counter <= counter + 1;
-        clk_counter <= 1;
-        sclk_counter <= 16;
+        //clk_counter <= 1;
+        //sclk_counter <= 16;
     end
 
     always @(posedge clk) begin
-        clk_counter = clk_counter + 1;
-        if (clk_counter % 4 == 0) begin
-            sclk_counter = sclk_counter - 1;
-            miso_out = counter[sclk_counter];
+        if (CS == 1) begin
+            clk_counter <= 1;
+            sclk_counter <= 16;
+            end
+        else begin
+            clk_counter = clk_counter + 1;
             
+            if (clk_counter % 4 == 0) begin
+                sclk_counter = sclk_counter - 1;
+                miso_out = counter[sclk_counter];
+            end
         end
     end
 

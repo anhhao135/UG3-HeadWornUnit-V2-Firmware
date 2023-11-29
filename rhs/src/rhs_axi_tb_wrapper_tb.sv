@@ -59,10 +59,10 @@ bit [63:0]                              mtestRDataL;
 rhs_axi_tb_axi_vip_0_0_mst_t          mst_agent_0;
 
   `BD_WRAPPER DUT(
-      .s00_axi_aresetn(aresetn), 
-      .M_AXIS_ARESETN(aresetn_out),
-      .s00_axi_aclk(aclk),
-      .M_AXIS_ACLK(aclk_out),
+      .aresetn(aresetn), 
+      .aresetn_out(aresetn_out),
+      .aclk(aclk),
+      .aclk_out(aclk_out),
       .CS_b(CS_b),
       .SCLK(SCLK),
       .MOSI1(MOSI1),

@@ -124,7 +124,6 @@ begin
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   #1us;
 
-  /*
 
   // (3) Start acqusition (w/o amp fast settle)
   mtestWDataL = 32'h00000005; //binary 101
@@ -140,8 +139,9 @@ begin
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   #1ms;
 
-  */
 
+
+  /*
 
   // (5) Impedance measurement
   mtestWDataL = 32'h00000308;

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.runs/synth_1/rhd_axi_tb_wrapper.tcl"
+  variable script "C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/synth_1/rhd_axi_tb_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LVI-i
@@ -78,26 +79,26 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.cache/wt [current_project]
-set_property parent.project_path C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/wt [current_project]
+set_property parent.project_path C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:k26i:part0:1.4 [current_project]
-set_property ip_output_repo c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.cache/ip [current_project]
+set_property ip_output_repo c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/hdl/rhd_axi_tb_wrapper.v
-add_files C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd
-set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/rhd_axi_tb_rhd_axi_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/rhd_axi_tb_axi_vip_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/rhd_axi_tb_ooc.xdc]
+read_verilog -library xil_defaultlib C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/hdl/rhd_axi_tb_wrapper.v
+add_files C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd
+set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/rhd_axi_tb_rhd_axi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/rhd_axi_tb_axi_vip_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/rhd_axi_tb_ooc.xdc]
 
-read_ip -quiet C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
+read_ip -quiet C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -112,7 +113,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.srcs/utils_1/imports/synth_1/rhd_axi.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/utils_1/imports/synth_1/rhd_axi.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

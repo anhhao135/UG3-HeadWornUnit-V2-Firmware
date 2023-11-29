@@ -28,8 +28,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rhd_axi_tb_
 # IP: bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rhd_axi_tb_rhd_headstage_slave_0_6 || ORIG_REF_NAME==rhd_axi_tb_rhd_headstage_slave_0_6} -quiet] -quiet
 
-# XDC: c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
+# XDC: c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
 
-# XDC: c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
+# XDC: c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
 
-# XDC: c:/Users/anhha/Desktop/UG3_HeadWornUnitV2_FPGA/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/rhd_axi_tb_ooc.xdc
+# XDC: c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/rhd_axi_tb_ooc.xdc
