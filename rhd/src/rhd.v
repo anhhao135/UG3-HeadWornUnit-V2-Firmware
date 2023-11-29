@@ -41,6 +41,30 @@ module rhd
 
     input  wire                              MISO1_H,
     input  wire                              MISO2_H,
+
+    input  wire                              MISO1_I,
+    input  wire                              MISO2_I,
+
+    input  wire                              MISO1_J,
+    input  wire                              MISO2_J,
+
+    input  wire                              MISO1_K,
+    input  wire                              MISO2_K,
+
+    input  wire                              MISO1_L,
+    input  wire                              MISO2_L,
+
+    input  wire                              MISO1_M,
+    input  wire                              MISO2_M,
+
+    input  wire                              MISO1_N,
+    input  wire                              MISO2_N,
+
+    input  wire                              MISO1_O,
+    input  wire                              MISO2_O,
+
+    input  wire                              MISO1_P,
+    input  wire                              MISO2_P,
     
     output wire                              FIFO_rstn,
     // AXI-Stream
@@ -64,7 +88,15 @@ module rhd
     input wire [3:0]                         delay_E,
     input wire [3:0]                         delay_F,
     input wire [3:0]                         delay_G,
-    input wire [3:0]                         delay_H
+    input wire [3:0]                         delay_H,
+    input wire [3:0]                         delay_I,
+    input wire [3:0]                         delay_J,
+    input wire [3:0]                         delay_K,
+    input wire [3:0]                         delay_L,
+    input wire [3:0]                         delay_M,
+    input wire [3:0]                         delay_N,
+    input wire [3:0]                         delay_O,
+    input wire [3:0]                         delay_P
     );
 
 
@@ -77,6 +109,16 @@ module rhd
 	wire        MISO_F1, MISO_F2;
 	wire        MISO_G1, MISO_G2;
 	wire        MISO_H1, MISO_H2;
+    wire        MISO_I1, MISO_I2;
+	wire        MISO_J1, MISO_J2;
+	wire        MISO_K1, MISO_K2;
+	wire        MISO_L1, MISO_L2;
+	wire        MISO_M1, MISO_M2;
+	wire        MISO_N1, MISO_N2;
+	wire        MISO_O1, MISO_O2;
+	wire        MISO_P1, MISO_P2;
+
+
     reg         MOSI;
 
     assign MISO_A1 = MISO1_A;
@@ -102,6 +144,30 @@ module rhd
 
 	assign MISO_H1 = MISO1_H;
 	assign MISO_H2 = MISO2_H;
+
+    assign MISO_I1 = MISO1_I;
+    assign MISO_I2 = MISO2_I;
+    
+    assign MISO_J1 = MISO1_J;
+    assign MISO_J2 = MISO2_J;
+
+    assign MISO_K1 = MISO1_K;
+    assign MISO_K2 = MISO2_K;
+
+    assign MISO_L1 = MISO1_L;
+    assign MISO_L2 = MISO2_L;
+
+	assign MISO_M1 = MISO1_M;
+	assign MISO_M2 = MISO2_M;
+	
+	assign MISO_N1 = MISO1_N;
+	assign MISO_N2 = MISO2_N;
+
+	assign MISO_O1 = MISO1_O;
+	assign MISO_O2 = MISO2_O;
+
+	assign MISO_P1 = MISO1_P;
+	assign MISO_P2 = MISO2_P;
 
     assign MOSI1 = MOSI;
     assign MOSI2 = MOSI;
@@ -163,6 +229,14 @@ module rhd
 	reg [73:0] 		in4x_F1, in4x_F2;
 	reg [73:0] 		in4x_G1, in4x_G2;
 	reg [73:0] 		in4x_H1, in4x_H2;
+    reg [73:0] 		in4x_I1, in4x_I2;
+    reg [73:0] 		in4x_J1, in4x_J2;
+    reg [73:0] 		in4x_K1, in4x_K2;
+    reg [73:0] 		in4x_L1, in4x_L2;
+    reg [73:0] 		in4x_M1, in4x_M2;
+	reg [73:0] 		in4x_N1, in4x_N2;
+	reg [73:0] 		in4x_O1, in4x_O2;
+	reg [73:0] 		in4x_P1, in4x_P2;
 
     wire [15:0] 	in_A1, in_A2;
     wire [15:0] 	in_B1, in_B2;
@@ -172,6 +246,14 @@ module rhd
 	wire [15:0] 	in_F1, in_F2;
 	wire [15:0] 	in_G1, in_G2;
 	wire [15:0] 	in_H1, in_H2;
+    wire [15:0] 	in_I1, in_I2;
+    wire [15:0] 	in_J1, in_J2;
+    wire [15:0] 	in_K1, in_K2;
+    wire [15:0] 	in_L1, in_L2;
+	wire [15:0] 	in_M1, in_M2;
+	wire [15:0] 	in_N1, in_N2;
+	wire [15:0] 	in_O1, in_O2;
+	wire [15:0] 	in_P1, in_P2;
 
     wire [15:0] 	in_DDR_A1, in_DDR_A2;
     wire [15:0] 	in_DDR_B1, in_DDR_B2;
@@ -181,6 +263,14 @@ module rhd
 	wire [15:0] 	in_DDR_F1, in_DDR_F2;
 	wire [15:0] 	in_DDR_G1, in_DDR_G2;
 	wire [15:0] 	in_DDR_H1, in_DDR_H2;
+    wire [15:0] 	in_DDR_I1, in_DDR_I2;
+    wire [15:0] 	in_DDR_J1, in_DDR_J2;
+    wire [15:0] 	in_DDR_K1, in_DDR_K2;
+    wire [15:0] 	in_DDR_L1, in_DDR_L2;
+	wire [15:0] 	in_DDR_M1, in_DDR_M2;
+	wire [15:0] 	in_DDR_N1, in_DDR_N2;
+	wire [15:0] 	in_DDR_O1, in_DDR_O2;
+	wire [15:0] 	in_DDR_P1, in_DDR_P2;
 
     reg [15:0] 		result_A1, result_A2;
     reg [15:0] 		result_B1, result_B2;
@@ -190,6 +280,14 @@ module rhd
 	reg [15:0] 		result_F1, result_F2;
 	reg [15:0] 		result_G1, result_G2;
 	reg [15:0] 		result_H1, result_H2;
+    reg [15:0] 		result_I1, result_I2;
+    reg [15:0] 		result_J1, result_J2;
+    reg [15:0] 		result_K1, result_K2;
+    reg [15:0] 		result_L1, result_L2;
+	reg [15:0] 		result_M1, result_M2;
+	reg [15:0] 		result_N1, result_N2;
+	reg [15:0] 		result_O1, result_O2;
+	reg [15:0] 		result_P1, result_P2;
 
     reg [15:0] 		result_DDR_A1, result_DDR_A2;
     reg [15:0] 		result_DDR_B1, result_DDR_B2;
@@ -199,6 +297,14 @@ module rhd
 	reg [15:0] 		result_DDR_F1, result_DDR_F2;
 	reg [15:0] 		result_DDR_G1, result_DDR_G2;
 	reg [15:0] 		result_DDR_H1, result_DDR_H2;
+    reg [15:0] 		result_DDR_I1, result_DDR_I2;
+    reg [15:0] 		result_DDR_J1, result_DDR_J2;
+    reg [15:0] 		result_DDR_K1, result_DDR_K2;
+    reg [15:0] 		result_DDR_L1, result_DDR_L2;
+	reg [15:0] 		result_DDR_M1, result_DDR_M2;
+	reg [15:0] 		result_DDR_N1, result_DDR_N2;
+	reg [15:0] 		result_DDR_O1, result_DDR_O2;
+	reg [15:0] 		result_DDR_P1, result_DDR_P2;
 
     wire [15:0]		data_stream_1, data_stream_2, data_stream_3, data_stream_4;
     wire [15:0]		data_stream_5, data_stream_6, data_stream_7, data_stream_8;
@@ -208,6 +314,14 @@ module rhd
 	wire [15:0]		data_stream_21, data_stream_22, data_stream_23, data_stream_24;
 	wire [15:0]		data_stream_25, data_stream_26, data_stream_27, data_stream_28;
 	wire [15:0]		data_stream_29, data_stream_30, data_stream_31, data_stream_32;
+    wire [15:0]		data_stream_33, data_stream_34, data_stream_35, data_stream_36;
+    wire [15:0]		data_stream_37, data_stream_38, data_stream_39, data_stream_40;
+    wire [15:0]		data_stream_41, data_stream_42, data_stream_43, data_stream_44;
+    wire [15:0]		data_stream_45, data_stream_46, data_stream_47, data_stream_48;
+	wire [15:0]		data_stream_49, data_stream_50, data_stream_51, data_stream_52;
+	wire [15:0]		data_stream_53, data_stream_54, data_stream_55, data_stream_56;
+	wire [15:0]		data_stream_57, data_stream_58, data_stream_59, data_stream_60;
+	wire [15:0]		data_stream_61, data_stream_62, data_stream_63, data_stream_64;
 
     assign data_stream_1 = result_A1;
     assign data_stream_2 = result_DDR_A1;
@@ -241,6 +355,38 @@ module rhd
 	assign data_stream_30 = result_DDR_H1;
 	assign data_stream_31 = result_H2;
 	assign data_stream_32 = result_DDR_H2;
+    assign data_stream_33 = result_I1;
+    assign data_stream_34 = result_DDR_I1;
+    assign data_stream_35 = result_I2;
+    assign data_stream_36 = result_DDR_I2;
+    assign data_stream_37 = result_J1;
+    assign data_stream_38 = result_DDR_J1;
+    assign data_stream_39 = result_J2;
+    assign data_stream_40 = result_DDR_J2;
+    assign data_stream_41 = result_K1;
+    assign data_stream_42 = result_DDR_K1;
+    assign data_stream_43 = result_K2;
+    assign data_stream_44 = result_DDR_K2;
+    assign data_stream_45 = result_L1;
+    assign data_stream_46 = result_DDR_L1;
+    assign data_stream_47 = result_L2;
+    assign data_stream_48 = result_DDR_L2;
+	assign data_stream_49 = result_M1;
+	assign data_stream_50 = result_DDR_M1;
+	assign data_stream_51 = result_M2;
+	assign data_stream_52 = result_DDR_M2;
+	assign data_stream_53 = result_N1;
+	assign data_stream_54 = result_DDR_N1;
+	assign data_stream_55 = result_N2;
+	assign data_stream_56 = result_DDR_N2;
+	assign data_stream_57 = result_O1;
+	assign data_stream_58 = result_DDR_O1;
+	assign data_stream_59 = result_O2;
+	assign data_stream_60 = result_DDR_O2;
+	assign data_stream_61 = result_P1;
+	assign data_stream_62 = result_DDR_P1;
+	assign data_stream_63 = result_P2;
+	assign data_stream_64 = result_DDR_P2;
 
 
     // MISO phase selectors (to compensate for headstage cable delays)
