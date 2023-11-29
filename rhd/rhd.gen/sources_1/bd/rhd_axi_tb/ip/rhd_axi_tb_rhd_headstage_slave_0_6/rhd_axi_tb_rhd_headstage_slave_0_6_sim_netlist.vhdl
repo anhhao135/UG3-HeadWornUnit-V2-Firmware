@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Wed Nov 29 11:31:57 2023
+-- Date        : Wed Nov 29 11:31:56 2023
 -- Host        : GramForGram running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_6/rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top rhd_axi_tb_rhd_headstage_slave_0_6 -prefix
+--               rhd_axi_tb_rhd_headstage_slave_0_6_ rhd_axi_tb_rhd_headstage_slave_0_6_sim_netlist.vhdl
 -- Design      : rhd_axi_tb_rhd_headstage_slave_0_6
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave is
     CS : in STD_LOGIC;
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave : entity is "rhd_headstage_slave";
 end rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave;
 
 architecture STRUCTURE of rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave is
@@ -4589,8 +4587,6 @@ entity rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave_full is
     CS : in STD_LOGIC;
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave_full : entity is "rhd_headstage_slave_full";
 end rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave_full;
 
 architecture STRUCTURE of rhd_axi_tb_rhd_headstage_slave_0_6_rhd_headstage_slave_full is

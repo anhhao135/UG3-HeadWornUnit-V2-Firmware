@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/rhd_axi_tb_rhd_headstage_slave_0_6_synth_1'
+HD_PWD='C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log rhd_axi_tb_rhd_headstage_slave_0_6.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rhd_axi_tb_rhd_headstage_slave_0_6.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log rhd_axi_tb_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source rhd_axi_tb_wrapper.tcl -notrace
+
+
