@@ -13,8 +13,7 @@
     "design_tree": {
       "axi_vip_0": "",
       "rhd_axi_0": "",
-      "rhd_headstage_slave_0": "",
-      "rhd_headstage_slave_1": ""
+      "rhd_headstage_slave_0": ""
     },
     "ports": {
       "aclk": {
@@ -812,13 +811,13 @@
         }
       },
       "rhd_headstage_slave_0": {
-        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave_full:1.0",
-        "xci_name": "rhd_axi_tb_rhd_headstage_slave_0_8",
-        "xci_path": "ip\\rhd_axi_tb_rhd_headstage_slave_0_8\\rhd_axi_tb_rhd_headstage_slave_0_8.xci",
+        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave_full_16_probes:1.0",
+        "xci_name": "rhd_axi_tb_rhd_headstage_slave_0_9",
+        "xci_path": "ip\\rhd_axi_tb_rhd_headstage_slave_0_9\\rhd_axi_tb_rhd_headstage_slave_0_9.xci",
         "inst_hier_path": "rhd_headstage_slave_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "rhd_headstage_slave_full",
+          "ref_name": "rhd_headstage_slave_full_16_probes",
           "boundary_crc": "0x0"
         },
         "ports": {
@@ -1052,89 +1051,53 @@
                 "value_src": "ip_prop"
               }
             }
-          }
-        }
-      },
-      "rhd_headstage_slave_1": {
-        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave_full:1.0",
-        "xci_name": "rhd_axi_tb_rhd_headstage_slave_1_0",
-        "xci_path": "ip\\rhd_axi_tb_rhd_headstage_slave_1_0\\rhd_axi_tb_rhd_headstage_slave_1_0.xci",
-        "inst_hier_path": "rhd_headstage_slave_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhd_headstage_slave_full",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
           },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhd_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO1_A": {
+          "MISO1_I": {
             "direction": "O"
           },
-          "MISO2_A": {
+          "MISO2_I": {
             "direction": "O"
           },
-          "MISO1_B": {
+          "MISO1_J": {
             "direction": "O"
           },
-          "MISO2_B": {
+          "MISO2_J": {
             "direction": "O"
           },
-          "MISO1_C": {
+          "MISO1_K": {
             "direction": "O"
           },
-          "MISO2_C": {
+          "MISO2_K": {
             "direction": "O"
           },
-          "MISO1_D": {
+          "MISO1_L": {
             "direction": "O"
           },
-          "MISO2_D": {
+          "MISO2_L": {
             "direction": "O"
           },
-          "MISO1_E": {
+          "MISO1_M": {
             "direction": "O"
           },
-          "MISO2_E": {
+          "MISO2_M": {
             "direction": "O"
           },
-          "MISO1_F": {
+          "MISO1_N": {
             "direction": "O"
           },
-          "MISO2_F": {
+          "MISO2_N": {
             "direction": "O"
           },
-          "MISO1_G": {
+          "MISO1_O": {
             "direction": "O"
           },
-          "MISO2_G": {
+          "MISO2_O": {
             "direction": "O"
           },
-          "MISO1_H": {
+          "MISO1_P": {
             "direction": "O"
           },
-          "MISO2_H": {
+          "MISO2_P": {
             "direction": "O"
           }
         }
@@ -1154,7 +1117,6 @@
           "aclk",
           "axi_vip_0/aclk",
           "rhd_axi_0/s00_axi_aclk",
-          "rhd_headstage_slave_1/clk",
           "rhd_headstage_slave_0/clk"
         ]
       },
@@ -1181,7 +1143,6 @@
         "ports": [
           "rhd_axi_0/CS_b",
           "CS",
-          "rhd_headstage_slave_1/CS",
           "rhd_headstage_slave_0/CS"
         ]
       },
@@ -1189,7 +1150,6 @@
         "ports": [
           "rhd_axi_0/MOSI1",
           "MOSI1",
-          "rhd_headstage_slave_1/MOSI",
           "rhd_headstage_slave_0/MOSI"
         ]
       },
@@ -1203,7 +1163,6 @@
         "ports": [
           "rhd_axi_0/SCLK",
           "SCLK",
-          "rhd_headstage_slave_1/SCLK",
           "rhd_headstage_slave_0/SCLK"
         ]
       },
@@ -1255,6 +1214,54 @@
           "rhd_axi_0/MISO1_H"
         ]
       },
+      "rhd_headstage_slave_0_MISO1_I": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_I",
+          "rhd_axi_0/MISO1_I"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_J": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_J",
+          "rhd_axi_0/MISO1_J"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_K": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_K",
+          "rhd_axi_0/MISO1_K"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_L": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_L",
+          "rhd_axi_0/MISO1_L"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_M": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_M",
+          "rhd_axi_0/MISO1_M"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_N": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_N",
+          "rhd_axi_0/MISO1_N"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_O": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_O",
+          "rhd_axi_0/MISO1_O"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_P": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_P",
+          "rhd_axi_0/MISO1_P"
+        ]
+      },
       "rhd_headstage_slave_0_MISO2_A": {
         "ports": [
           "rhd_headstage_slave_0/MISO2_A",
@@ -1303,99 +1310,51 @@
           "rhd_axi_0/MISO2_H"
         ]
       },
-      "rhd_headstage_slave_1_MISO1_A": {
+      "rhd_headstage_slave_0_MISO2_I": {
         "ports": [
-          "rhd_headstage_slave_1/MISO1_A",
-          "rhd_axi_0/MISO1_I"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_B": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_B",
-          "rhd_axi_0/MISO1_J"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_C": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_C",
-          "rhd_axi_0/MISO1_K"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_D": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_D",
-          "rhd_axi_0/MISO1_L"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_E": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_E",
-          "rhd_axi_0/MISO1_M"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_F": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_F",
-          "rhd_axi_0/MISO1_N"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_G": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_G",
-          "rhd_axi_0/MISO1_O"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO1_H": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO1_H",
-          "rhd_axi_0/MISO1_P"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO2_A": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO2_A",
+          "rhd_headstage_slave_0/MISO2_I",
           "rhd_axi_0/MISO2_I"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_B": {
+      "rhd_headstage_slave_0_MISO2_J": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_B",
+          "rhd_headstage_slave_0/MISO2_J",
           "rhd_axi_0/MISO2_J"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_C": {
+      "rhd_headstage_slave_0_MISO2_K": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_C",
+          "rhd_headstage_slave_0/MISO2_K",
           "rhd_axi_0/MISO2_K"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_D": {
+      "rhd_headstage_slave_0_MISO2_L": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_D",
+          "rhd_headstage_slave_0/MISO2_L",
           "rhd_axi_0/MISO2_L"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_E": {
+      "rhd_headstage_slave_0_MISO2_M": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_E",
+          "rhd_headstage_slave_0/MISO2_M",
           "rhd_axi_0/MISO2_M"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_F": {
+      "rhd_headstage_slave_0_MISO2_N": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_F",
+          "rhd_headstage_slave_0/MISO2_N",
           "rhd_axi_0/MISO2_N"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_G": {
+      "rhd_headstage_slave_0_MISO2_O": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_G",
+          "rhd_headstage_slave_0/MISO2_O",
           "rhd_axi_0/MISO2_O"
         ]
       },
-      "rhd_headstage_slave_1_MISO2_H": {
+      "rhd_headstage_slave_0_MISO2_P": {
         "ports": [
-          "rhd_headstage_slave_1/MISO2_H",
+          "rhd_headstage_slave_0/MISO2_P",
           "rhd_axi_0/MISO2_P"
         ]
       }

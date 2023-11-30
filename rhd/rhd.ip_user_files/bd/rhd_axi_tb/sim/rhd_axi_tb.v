@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Nov 29 17:00:15 2023
+//Date        : Wed Nov 29 17:24:49 2023
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhd_axi_tb.bd
 //Design      : rhd_axi_tb
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "rhd_axi_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhd_axi_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhd_axi_tb.hwdef" *) 
+(* CORE_GENERATION_INFO = "rhd_axi_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhd_axi_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhd_axi_tb.hwdef" *) 
 module rhd_axi_tb
    (CS,
     MOSI1,
@@ -64,6 +64,14 @@ module rhd_axi_tb
   wire rhd_headstage_slave_0_MISO1_F;
   wire rhd_headstage_slave_0_MISO1_G;
   wire rhd_headstage_slave_0_MISO1_H;
+  wire rhd_headstage_slave_0_MISO1_I;
+  wire rhd_headstage_slave_0_MISO1_J;
+  wire rhd_headstage_slave_0_MISO1_K;
+  wire rhd_headstage_slave_0_MISO1_L;
+  wire rhd_headstage_slave_0_MISO1_M;
+  wire rhd_headstage_slave_0_MISO1_N;
+  wire rhd_headstage_slave_0_MISO1_O;
+  wire rhd_headstage_slave_0_MISO1_P;
   wire rhd_headstage_slave_0_MISO2_A;
   wire rhd_headstage_slave_0_MISO2_B;
   wire rhd_headstage_slave_0_MISO2_C;
@@ -72,22 +80,14 @@ module rhd_axi_tb
   wire rhd_headstage_slave_0_MISO2_F;
   wire rhd_headstage_slave_0_MISO2_G;
   wire rhd_headstage_slave_0_MISO2_H;
-  wire rhd_headstage_slave_1_MISO1_A;
-  wire rhd_headstage_slave_1_MISO1_B;
-  wire rhd_headstage_slave_1_MISO1_C;
-  wire rhd_headstage_slave_1_MISO1_D;
-  wire rhd_headstage_slave_1_MISO1_E;
-  wire rhd_headstage_slave_1_MISO1_F;
-  wire rhd_headstage_slave_1_MISO1_G;
-  wire rhd_headstage_slave_1_MISO1_H;
-  wire rhd_headstage_slave_1_MISO2_A;
-  wire rhd_headstage_slave_1_MISO2_B;
-  wire rhd_headstage_slave_1_MISO2_C;
-  wire rhd_headstage_slave_1_MISO2_D;
-  wire rhd_headstage_slave_1_MISO2_E;
-  wire rhd_headstage_slave_1_MISO2_F;
-  wire rhd_headstage_slave_1_MISO2_G;
-  wire rhd_headstage_slave_1_MISO2_H;
+  wire rhd_headstage_slave_0_MISO2_I;
+  wire rhd_headstage_slave_0_MISO2_J;
+  wire rhd_headstage_slave_0_MISO2_K;
+  wire rhd_headstage_slave_0_MISO2_L;
+  wire rhd_headstage_slave_0_MISO2_M;
+  wire rhd_headstage_slave_0_MISO2_N;
+  wire rhd_headstage_slave_0_MISO2_O;
+  wire rhd_headstage_slave_0_MISO2_P;
 
   assign CS = rhd_axi_0_CS_b;
   assign MOSI1 = rhd_axi_0_MOSI1;
@@ -129,14 +129,14 @@ module rhd_axi_tb
         .MISO1_F(rhd_headstage_slave_0_MISO1_F),
         .MISO1_G(rhd_headstage_slave_0_MISO1_G),
         .MISO1_H(rhd_headstage_slave_0_MISO1_H),
-        .MISO1_I(rhd_headstage_slave_1_MISO1_A),
-        .MISO1_J(rhd_headstage_slave_1_MISO1_B),
-        .MISO1_K(rhd_headstage_slave_1_MISO1_C),
-        .MISO1_L(rhd_headstage_slave_1_MISO1_D),
-        .MISO1_M(rhd_headstage_slave_1_MISO1_E),
-        .MISO1_N(rhd_headstage_slave_1_MISO1_F),
-        .MISO1_O(rhd_headstage_slave_1_MISO1_G),
-        .MISO1_P(rhd_headstage_slave_1_MISO1_H),
+        .MISO1_I(rhd_headstage_slave_0_MISO1_I),
+        .MISO1_J(rhd_headstage_slave_0_MISO1_J),
+        .MISO1_K(rhd_headstage_slave_0_MISO1_K),
+        .MISO1_L(rhd_headstage_slave_0_MISO1_L),
+        .MISO1_M(rhd_headstage_slave_0_MISO1_M),
+        .MISO1_N(rhd_headstage_slave_0_MISO1_N),
+        .MISO1_O(rhd_headstage_slave_0_MISO1_O),
+        .MISO1_P(rhd_headstage_slave_0_MISO1_P),
         .MISO2_A(rhd_headstage_slave_0_MISO2_A),
         .MISO2_B(rhd_headstage_slave_0_MISO2_B),
         .MISO2_C(rhd_headstage_slave_0_MISO2_C),
@@ -145,14 +145,14 @@ module rhd_axi_tb
         .MISO2_F(rhd_headstage_slave_0_MISO2_F),
         .MISO2_G(rhd_headstage_slave_0_MISO2_G),
         .MISO2_H(rhd_headstage_slave_0_MISO2_H),
-        .MISO2_I(rhd_headstage_slave_1_MISO2_A),
-        .MISO2_J(rhd_headstage_slave_1_MISO2_B),
-        .MISO2_K(rhd_headstage_slave_1_MISO2_C),
-        .MISO2_L(rhd_headstage_slave_1_MISO2_D),
-        .MISO2_M(rhd_headstage_slave_1_MISO2_E),
-        .MISO2_N(rhd_headstage_slave_1_MISO2_F),
-        .MISO2_O(rhd_headstage_slave_1_MISO2_G),
-        .MISO2_P(rhd_headstage_slave_1_MISO2_H),
+        .MISO2_I(rhd_headstage_slave_0_MISO2_I),
+        .MISO2_J(rhd_headstage_slave_0_MISO2_J),
+        .MISO2_K(rhd_headstage_slave_0_MISO2_K),
+        .MISO2_L(rhd_headstage_slave_0_MISO2_L),
+        .MISO2_M(rhd_headstage_slave_0_MISO2_M),
+        .MISO2_N(rhd_headstage_slave_0_MISO2_N),
+        .MISO2_O(rhd_headstage_slave_0_MISO2_O),
+        .MISO2_P(rhd_headstage_slave_0_MISO2_P),
         .MOSI1(rhd_axi_0_MOSI1),
         .MOSI2(rhd_axi_0_MOSI2),
         .M_AXIS_ACLK(aclk_out_1),
@@ -181,7 +181,7 @@ module rhd_axi_tb
         .s00_axi_wready(axi_vip_0_M_AXI_WREADY),
         .s00_axi_wstrb(axi_vip_0_M_AXI_WSTRB),
         .s00_axi_wvalid(axi_vip_0_M_AXI_WVALID));
-  rhd_axi_tb_rhd_headstage_slave_0_8 rhd_headstage_slave_0
+  rhd_axi_tb_rhd_headstage_slave_0_9 rhd_headstage_slave_0
        (.CS(rhd_axi_0_CS_b),
         .MISO1_A(rhd_headstage_slave_0_MISO1_A),
         .MISO1_B(rhd_headstage_slave_0_MISO1_B),
@@ -191,6 +191,14 @@ module rhd_axi_tb
         .MISO1_F(rhd_headstage_slave_0_MISO1_F),
         .MISO1_G(rhd_headstage_slave_0_MISO1_G),
         .MISO1_H(rhd_headstage_slave_0_MISO1_H),
+        .MISO1_I(rhd_headstage_slave_0_MISO1_I),
+        .MISO1_J(rhd_headstage_slave_0_MISO1_J),
+        .MISO1_K(rhd_headstage_slave_0_MISO1_K),
+        .MISO1_L(rhd_headstage_slave_0_MISO1_L),
+        .MISO1_M(rhd_headstage_slave_0_MISO1_M),
+        .MISO1_N(rhd_headstage_slave_0_MISO1_N),
+        .MISO1_O(rhd_headstage_slave_0_MISO1_O),
+        .MISO1_P(rhd_headstage_slave_0_MISO1_P),
         .MISO2_A(rhd_headstage_slave_0_MISO2_A),
         .MISO2_B(rhd_headstage_slave_0_MISO2_B),
         .MISO2_C(rhd_headstage_slave_0_MISO2_C),
@@ -199,27 +207,14 @@ module rhd_axi_tb
         .MISO2_F(rhd_headstage_slave_0_MISO2_F),
         .MISO2_G(rhd_headstage_slave_0_MISO2_G),
         .MISO2_H(rhd_headstage_slave_0_MISO2_H),
-        .MOSI(rhd_axi_0_MOSI1),
-        .SCLK(rhd_axi_0_SCLK),
-        .clk(aclk_1));
-  rhd_axi_tb_rhd_headstage_slave_1_0 rhd_headstage_slave_1
-       (.CS(rhd_axi_0_CS_b),
-        .MISO1_A(rhd_headstage_slave_1_MISO1_A),
-        .MISO1_B(rhd_headstage_slave_1_MISO1_B),
-        .MISO1_C(rhd_headstage_slave_1_MISO1_C),
-        .MISO1_D(rhd_headstage_slave_1_MISO1_D),
-        .MISO1_E(rhd_headstage_slave_1_MISO1_E),
-        .MISO1_F(rhd_headstage_slave_1_MISO1_F),
-        .MISO1_G(rhd_headstage_slave_1_MISO1_G),
-        .MISO1_H(rhd_headstage_slave_1_MISO1_H),
-        .MISO2_A(rhd_headstage_slave_1_MISO2_A),
-        .MISO2_B(rhd_headstage_slave_1_MISO2_B),
-        .MISO2_C(rhd_headstage_slave_1_MISO2_C),
-        .MISO2_D(rhd_headstage_slave_1_MISO2_D),
-        .MISO2_E(rhd_headstage_slave_1_MISO2_E),
-        .MISO2_F(rhd_headstage_slave_1_MISO2_F),
-        .MISO2_G(rhd_headstage_slave_1_MISO2_G),
-        .MISO2_H(rhd_headstage_slave_1_MISO2_H),
+        .MISO2_I(rhd_headstage_slave_0_MISO2_I),
+        .MISO2_J(rhd_headstage_slave_0_MISO2_J),
+        .MISO2_K(rhd_headstage_slave_0_MISO2_K),
+        .MISO2_L(rhd_headstage_slave_0_MISO2_L),
+        .MISO2_M(rhd_headstage_slave_0_MISO2_M),
+        .MISO2_N(rhd_headstage_slave_0_MISO2_N),
+        .MISO2_O(rhd_headstage_slave_0_MISO2_O),
+        .MISO2_P(rhd_headstage_slave_0_MISO2_P),
         .MOSI(rhd_axi_0_MOSI1),
         .SCLK(rhd_axi_0_SCLK),
         .clk(aclk_1));

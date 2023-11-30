@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 29 17:00:15 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 29 17:24:49 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26i:part0:1.4" DEVICE="xck26" NAME="rhd_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LVI"/>
 
@@ -8,7 +8,6 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_vip_0" PORT="aclk"/>
         <CONNECTION INSTANCE="rhd_axi_0" PORT="s00_axi_aclk"/>
-        <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="clk"/>
         <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
@@ -389,21 +388,18 @@
         <PORT DIR="O" NAME="CS_b" SIGIS="undef" SIGNAME="rhd_axi_0_CS_b">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="CS"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="CS"/>
             <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="CS"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="rhd_axi_0_SCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="SCLK"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="SCLK"/>
             <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="SCLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="rhd_axi_0_MOSI1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="MOSI1"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MOSI"/>
             <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MOSI"/>
           </CONNECTIONS>
         </PORT>
@@ -492,84 +488,84 @@
             <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_H"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_I" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_A">
+        <PORT DIR="I" NAME="MISO1_I" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_I">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_A"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_I" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_A">
+        <PORT DIR="I" NAME="MISO2_I" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_I">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_A"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_J" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_B">
+        <PORT DIR="I" NAME="MISO1_J" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_J">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_B"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_J"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_J" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_B">
+        <PORT DIR="I" NAME="MISO2_J" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_J">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_B"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_J"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_K" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_C">
+        <PORT DIR="I" NAME="MISO1_K" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_K">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_C"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_K"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_K" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_C">
+        <PORT DIR="I" NAME="MISO2_K" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_K">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_C"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_K"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_L" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_D">
+        <PORT DIR="I" NAME="MISO1_L" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_L">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_D"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_L"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_L" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_D">
+        <PORT DIR="I" NAME="MISO2_L" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_L">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_D"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_L"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_M" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_E">
+        <PORT DIR="I" NAME="MISO1_M" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_M">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_E"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_M"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_M" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_E">
+        <PORT DIR="I" NAME="MISO2_M" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_M">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_E"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_M"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_N" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_F">
+        <PORT DIR="I" NAME="MISO1_N" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_N">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_F"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_N"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_N" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_F">
+        <PORT DIR="I" NAME="MISO2_N" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_N">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_F"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_N"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_O" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_G">
+        <PORT DIR="I" NAME="MISO1_O" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_G"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_O" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_G">
+        <PORT DIR="I" NAME="MISO2_O" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_G"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1_P" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_H">
+        <PORT DIR="I" NAME="MISO1_P" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_P">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO1_H"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO1_P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2_P" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_H">
+        <PORT DIR="I" NAME="MISO2_P" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_P">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO2_H"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO2_P"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="irq1" SIGIS="undef"/>
@@ -677,10 +673,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/rhd_headstage_slave_0" HWVERSION="1.0" INSTANCE="rhd_headstage_slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhd_headstage_slave_full" VLNV="xilinx.com:module_ref:rhd_headstage_slave_full:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/rhd_headstage_slave_0" HWVERSION="1.0" INSTANCE="rhd_headstage_slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhd_headstage_slave_full_16_probes" VLNV="xilinx.com:module_ref:rhd_headstage_slave_full_16_probes:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="rhd_axi_tb_rhd_headstage_slave_0_8"/>
+        <PARAMETER NAME="Component_Name" VALUE="rhd_axi_tb_rhd_headstage_slave_0_9"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -784,112 +780,82 @@
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_H"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/rhd_headstage_slave_1" HWVERSION="1.0" INSTANCE="rhd_headstage_slave_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhd_headstage_slave_full" VLNV="xilinx.com:module_ref:rhd_headstage_slave_full:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="rhd_axi_tb_rhd_headstage_slave_1_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="MOSI" SIGIS="undef" SIGNAME="rhd_axi_0_MOSI1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_axi_0" PORT="MOSI1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="CS" SIGIS="undef" SIGNAME="rhd_axi_0_CS_b">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_axi_0" PORT="CS_b"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_aclk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="SCLK" SIGIS="undef" SIGNAME="rhd_axi_0_SCLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_axi_0" PORT="SCLK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="MISO1_A" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_A">
+        <PORT DIR="O" NAME="MISO1_I" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_I">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_A" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_A">
+        <PORT DIR="O" NAME="MISO2_I" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_I">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_I"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_B" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_B">
+        <PORT DIR="O" NAME="MISO1_J" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_J">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_J"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_B" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_B">
+        <PORT DIR="O" NAME="MISO2_J" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_J">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_J"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_C" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_C">
+        <PORT DIR="O" NAME="MISO1_K" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_K">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_K"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_C" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_C">
+        <PORT DIR="O" NAME="MISO2_K" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_K">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_K"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_D" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_D">
+        <PORT DIR="O" NAME="MISO1_L" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_L">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_L"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_D" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_D">
+        <PORT DIR="O" NAME="MISO2_L" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_L">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_L"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_E" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_E">
+        <PORT DIR="O" NAME="MISO1_M" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_M">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_M"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_E" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_E">
+        <PORT DIR="O" NAME="MISO2_M" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_M">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_M"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_F" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_F">
+        <PORT DIR="O" NAME="MISO1_N" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_N"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_F" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_F">
+        <PORT DIR="O" NAME="MISO2_N" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_N"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_G" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_G">
+        <PORT DIR="O" NAME="MISO1_O" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_G" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_G">
+        <PORT DIR="O" NAME="MISO2_O" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO1_H" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO1_H">
+        <PORT DIR="O" NAME="MISO1_P" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO1_P">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO1_P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="MISO2_H" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO2_H">
+        <PORT DIR="O" NAME="MISO2_P" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO2_P">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhd_axi_0" PORT="MISO2_P"/>
           </CONNECTIONS>
