@@ -15,13 +15,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4,316.667 ns"></ZoomStartTime>
-      <ZoomEndTime time="7,371.668 ns"></ZoomEndTime>
-      <Cursor1Time time="6,271.667 ns"></Cursor1Time>
+      <ZoomStartTime time="3,650.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,015.501 ns"></ZoomEndTime>
+      <Cursor1Time time="5,900.500 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="177"></ValueColumnWidth>
+      <ValueColumnWidth column_width="173"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="30" />
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mst_agent_verbosity" type="array">
