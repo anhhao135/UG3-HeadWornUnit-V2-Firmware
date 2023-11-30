@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhd_axi_tb_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhd_axi_tb_wrapper_tb" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="4,316.667 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,371.668 ns"></ZoomEndTime>
+      <Cursor1Time time="6,271.667 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
+      <ValueColumnWidth column_width="177"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mst_agent_verbosity" type="array">
+      <obj_property name="ElementShortName">mst_agent_verbosity[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mst_agent_verbosity[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aclk_out" type="logic">
+      <obj_property name="ElementShortName">aclk_out</obj_property>
+      <obj_property name="ObjectShortName">aclk_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aresetn_out" type="logic">
+      <obj_property name="ElementShortName">aresetn_out</obj_property>
+      <obj_property name="ObjectShortName">aresetn_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/CS" type="logic">
+      <obj_property name="ElementShortName">CS</obj_property>
+      <obj_property name="ObjectShortName">CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI1" type="logic">
+      <obj_property name="ElementShortName">MOSI1</obj_property>
+      <obj_property name="ObjectShortName">MOSI1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI2" type="logic">
+      <obj_property name="ElementShortName">MOSI2</obj_property>
+      <obj_property name="ObjectShortName">MOSI2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/result_slave" type="array">
+      <obj_property name="ElementShortName">result_slave[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_slave[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/S00_AXI_test_data" type="array">
+      <obj_property name="ElementShortName">S00_AXI_test_data[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_test_data[3:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mtestProtectionType" type="array">
+      <obj_property name="ElementShortName">mtestProtectionType[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mtestProtectionType[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mtestBresp" type="array">
+      <obj_property name="ElementShortName">mtestBresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mtestBresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mtestWDataL" type="array">
+      <obj_property name="ElementShortName">mtestWDataL[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mtestWDataL[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mtestRDataL" type="array">
+      <obj_property name="ElementShortName">mtestRDataL[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mtestRDataL[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/LC_AXI_BURST_LENGTH" type="array">
+      <obj_property name="ElementShortName">LC_AXI_BURST_LENGTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LC_AXI_BURST_LENGTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/LC_AXI_DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">LC_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LC_AXI_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_J1" type="array">
+      <obj_property name="ElementShortName">result_J1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_J1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_J2" type="array">
+      <obj_property name="ElementShortName">result_J2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_J2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_K1" type="array">
+      <obj_property name="ElementShortName">result_K1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_K1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_K2" type="array">
+      <obj_property name="ElementShortName">result_K2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_K2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_J1" type="array">
+      <obj_property name="ElementShortName">result_DDR_J1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_J1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_J2" type="array">
+      <obj_property name="ElementShortName">result_DDR_J2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_J2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_K1" type="array">
+      <obj_property name="ElementShortName">result_DDR_K1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_K1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_K2" type="array">
+      <obj_property name="ElementShortName">result_DDR_K2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_K2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
