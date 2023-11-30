@@ -118,7 +118,7 @@ begin
   #1us;
 
   // (2) Set packet length
-  mtestWDataL = 32'h00000008; //binary is 1000, decimal is 8, batch size is 8
+  mtestWDataL = 32'h000000008; //binary is 1000, decimal is 8, batch size is 8
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h8, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
