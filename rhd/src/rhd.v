@@ -1759,6 +1759,8 @@ module rhd
                 end
 
                 ms_clk10_b: begin
+                    rhd_data_out <= data_stream_33;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[35] <= MISO_A1; in4x_A2[35] <= MISO_A2;
 					in4x_B1[35] <= MISO_B1; in4x_B2[35] <= MISO_B2;
 					in4x_C1[35] <= MISO_C1; in4x_C2[35] <= MISO_C2;
@@ -1780,6 +1782,8 @@ module rhd
                 end
 
                 ms_clk10_c: begin
+                    rhd_data_out <= data_stream_34;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[36] <= MISO_A1; in4x_A2[36] <= MISO_A2;
 					in4x_B1[36] <= MISO_B1; in4x_B2[36] <= MISO_B2;
@@ -1803,6 +1807,8 @@ module rhd
                 end
                 
                 ms_clk10_d: begin
+                    rhd_data_out <= data_stream_35;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[37] <= MISO_A1; in4x_A2[37] <= MISO_A2;
 					in4x_B1[37] <= MISO_B1; in4x_B2[37] <= MISO_B2;
@@ -1825,6 +1831,8 @@ module rhd
                 end
 
                 ms_clk11_a: begin
+                    rhd_data_out <= data_stream_36;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= MOSI_cmd[5];
 
                     in4x_A1[38] <= MISO_A1; in4x_A2[38] <= MISO_A2;
@@ -1848,6 +1856,8 @@ module rhd
                 end
 
                 ms_clk11_b: begin
+                    rhd_data_out <= data_stream_37;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[39] <= MISO_A1; in4x_A2[39] <= MISO_A2;
 					in4x_B1[39] <= MISO_B1; in4x_B2[39] <= MISO_B2;
 					in4x_C1[39] <= MISO_C1; in4x_C2[39] <= MISO_C2;
@@ -1868,6 +1878,8 @@ module rhd
                 end
 
                 ms_clk11_c: begin
+                    rhd_data_out <= data_stream_38;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[40] <= MISO_A1; in4x_A2[40] <= MISO_A2;
 					in4x_B1[40] <= MISO_B1; in4x_B2[40] <= MISO_B2;
@@ -1889,6 +1901,8 @@ module rhd
                 end
                 
                 ms_clk11_d: begin
+                    rhd_data_out <= data_stream_39;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[41] <= MISO_A1; in4x_A2[41] <= MISO_A2;
 					in4x_B1[41] <= MISO_B1; in4x_B2[41] <= MISO_B2;
@@ -1910,6 +1924,8 @@ module rhd
                 end
 
                 ms_clk12_a: begin
+                    rhd_data_out <= data_stream_40;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= MOSI_cmd[4];
 
                     in4x_A1[42] <= MISO_A1; in4x_A2[42] <= MISO_A2;
@@ -1932,6 +1948,8 @@ module rhd
                 end
 
                 ms_clk12_b: begin
+                    rhd_data_out <= data_stream_41;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[43] <= MISO_A1; in4x_A2[43] <= MISO_A2;
 					in4x_B1[43] <= MISO_B1; in4x_B2[43] <= MISO_B2;
 					in4x_C1[43] <= MISO_C1; in4x_C2[43] <= MISO_C2;
@@ -1952,6 +1970,8 @@ module rhd
                 end
 
                 ms_clk12_c: begin
+                    rhd_data_out <= data_stream_42;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[44] <= MISO_A1; in4x_A2[44] <= MISO_A2;
 					in4x_B1[44] <= MISO_B1; in4x_B2[44] <= MISO_B2;
@@ -1973,6 +1993,8 @@ module rhd
                 end
                 
                 ms_clk12_d: begin
+                    rhd_data_out <= data_stream_43;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[45] <= MISO_A1; in4x_A2[45] <= MISO_A2;
 					in4x_B1[45] <= MISO_B1; in4x_B2[45] <= MISO_B2;
@@ -1994,6 +2016,8 @@ module rhd
                 end
 
                 ms_clk13_a: begin
+                    rhd_data_out <= data_stream_44;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= MOSI_cmd[3];
 
                     in4x_A1[46] <= MISO_A1; in4x_A2[46] <= MISO_A2;
@@ -2016,6 +2040,8 @@ module rhd
                 end
 
                 ms_clk13_b: begin
+                    rhd_data_out <= data_stream_45;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[47] <= MISO_A1; in4x_A2[47] <= MISO_A2;
 					in4x_B1[47] <= MISO_B1; in4x_B2[47] <= MISO_B2;
 					in4x_C1[47] <= MISO_C1; in4x_C2[47] <= MISO_C2;
@@ -2036,6 +2062,8 @@ module rhd
                 end
 
                 ms_clk13_c: begin
+                    rhd_data_out <= data_stream_46;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[48] <= MISO_A1; in4x_A2[48] <= MISO_A2;
 					in4x_B1[48] <= MISO_B1; in4x_B2[48] <= MISO_B2;
@@ -2057,6 +2085,8 @@ module rhd
                 end
                 
                 ms_clk13_d: begin
+                    rhd_data_out <= data_stream_47;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[49] <= MISO_A1; in4x_A2[49] <= MISO_A2;
 					in4x_B1[49] <= MISO_B1; in4x_B2[49] <= MISO_B2;
@@ -2078,6 +2108,8 @@ module rhd
                 end
 
                 ms_clk14_a: begin
+                    rhd_data_out <= data_stream_48;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= MOSI_cmd[2];
 
                     in4x_A1[50] <= MISO_A1; in4x_A2[50] <= MISO_A2;
@@ -2100,6 +2132,8 @@ module rhd
                 end
 
                 ms_clk14_b: begin
+                    rhd_data_out <= data_stream_49;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[51] <= MISO_A1; in4x_A2[51] <= MISO_A2;
 					in4x_B1[51] <= MISO_B1; in4x_B2[51] <= MISO_B2;
 					in4x_C1[51] <= MISO_C1; in4x_C2[51] <= MISO_C2;
@@ -2120,6 +2154,8 @@ module rhd
                 end
 
                 ms_clk14_c: begin
+                    rhd_data_out <= data_stream_50;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[52] <= MISO_A1; in4x_A2[52] <= MISO_A2;
 					in4x_B1[52] <= MISO_B1; in4x_B2[52] <= MISO_B2;
@@ -2141,6 +2177,8 @@ module rhd
                 end
                 
                 ms_clk14_d: begin
+                    rhd_data_out <= data_stream_51;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[53] <= MISO_A1; in4x_A2[53] <= MISO_A2;
 					in4x_B1[53] <= MISO_B1; in4x_B2[53] <= MISO_B2;
@@ -2162,6 +2200,8 @@ module rhd
                 end
 
                 ms_clk15_a: begin
+                    rhd_data_out <= data_stream_52;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= MOSI_cmd[1];
 
                     in4x_A1[54] <= MISO_A1; in4x_A2[54] <= MISO_A2;
@@ -2184,6 +2224,8 @@ module rhd
                 end
 
                 ms_clk15_b: begin
+                    rhd_data_out <= data_stream_53;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[55] <= MISO_A1; in4x_A2[55] <= MISO_A2;
 					in4x_B1[55] <= MISO_B1; in4x_B2[55] <= MISO_B2;
 					in4x_C1[55] <= MISO_C1; in4x_C2[55] <= MISO_C2;
@@ -2204,6 +2246,8 @@ module rhd
                 end
 
                 ms_clk15_c: begin
+                    rhd_data_out <= data_stream_54;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[56] <= MISO_A1; in4x_A2[56] <= MISO_A2;
 					in4x_B1[56] <= MISO_B1; in4x_B2[56] <= MISO_B2;
@@ -2225,6 +2269,8 @@ module rhd
                 end
                     
                 ms_clk15_d: begin
+                    rhd_data_out <= data_stream_55;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[57] <= MISO_A1; in4x_A2[57] <= MISO_A2;
 					in4x_B1[57] <= MISO_B1; in4x_B2[57] <= MISO_B2;
@@ -2246,6 +2292,8 @@ module rhd
                 end
     
                 ms_clk16_a: begin
+                    rhd_data_out <= data_stream_56;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= MOSI_cmd[0];
 
                     in4x_A1[58] <= MISO_A1; in4x_A2[58] <= MISO_A2;
@@ -2268,6 +2316,8 @@ module rhd
                 end
 
                 ms_clk16_b: begin
+                    rhd_data_out <= data_stream_57;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[59] <= MISO_A1; in4x_A2[59] <= MISO_A2;
 					in4x_B1[59] <= MISO_B1; in4x_B2[59] <= MISO_B2;
 					in4x_C1[59] <= MISO_C1; in4x_C2[59] <= MISO_C2;
@@ -2288,6 +2338,8 @@ module rhd
                 end
 
                 ms_clk16_c: begin
+                    rhd_data_out <= data_stream_58;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[60] <= MISO_A1; in4x_A2[60] <= MISO_A2;
 					in4x_B1[60] <= MISO_B1; in4x_B2[60] <= MISO_B2;
@@ -2309,6 +2361,8 @@ module rhd
                 end
                 
                 ms_clk16_d: begin
+                    rhd_data_out <= data_stream_59;
+                    rhd_valid_out <= 1'b1;
                     SCLK <= 1'b1;
                     in4x_A1[61] <= MISO_A1; in4x_A2[61] <= MISO_A2;
 					in4x_B1[61] <= MISO_B1; in4x_B2[61] <= MISO_B2;
@@ -2330,6 +2384,8 @@ module rhd
                 end
 
                 ms_clk17_a: begin
+                    rhd_data_out <= data_stream_60;
+                    rhd_valid_out <= 1'b1;
                     MOSI <= 1'b0;
 
                     in4x_A1[62] <= MISO_A1; in4x_A2[62] <= MISO_A2;
@@ -2352,6 +2408,8 @@ module rhd
                 end
 
                 ms_clk17_b: begin
+                    rhd_data_out <= data_stream_61;
+                    rhd_valid_out <= 1'b1;
                     in4x_A1[63] <= MISO_A1; in4x_A2[63] <= MISO_A2;
 					in4x_B1[63] <= MISO_B1; in4x_B2[63] <= MISO_B2;
 					in4x_C1[63] <= MISO_C1; in4x_C2[63] <= MISO_C2;
@@ -2372,6 +2430,8 @@ module rhd
                 end
 
                 ms_cs_a: begin
+                    rhd_data_out <= data_stream_62;
+                    rhd_valid_out <= 1'b1;
                     CS_b <= 1'b1;
                     in4x_A1[64] <= MISO_A1; in4x_A2[64] <= MISO_A2;
 					in4x_B1[64] <= MISO_B1; in4x_B2[64] <= MISO_B2;
@@ -2393,6 +2453,8 @@ module rhd
                 end
 
                 ms_cs_b: begin
+                    rhd_data_out <= data_stream_63;
+                    rhd_valid_out <= 1'b1;
                     CS_b <= 1'b1;
                     in4x_A1[65] <= MISO_A1; in4x_A2[65] <= MISO_A2;
 					in4x_B1[65] <= MISO_B1; in4x_B2[65] <= MISO_B2;
@@ -2414,6 +2476,8 @@ module rhd
                 end
 
                 ms_cs_c: begin
+                    rhd_data_out <= data_stream_64;
+                    rhd_valid_out <= 1'b1;
                     CS_b <= 1'b1;
                     in4x_A1[66] <= MISO_A1; in4x_A2[66] <= MISO_A2;
 					in4x_B1[66] <= MISO_B1; in4x_B2[66] <= MISO_B2;

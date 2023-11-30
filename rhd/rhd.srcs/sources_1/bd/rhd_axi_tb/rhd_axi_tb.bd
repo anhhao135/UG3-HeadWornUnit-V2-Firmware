@@ -11,9 +11,10 @@
       "validated": "true"
     },
     "design_tree": {
-      "rhd_axi_0": "",
       "axi_vip_0": "",
-      "rhd_headstage_slave_full_0": ""
+      "rhd_headstage_slave_full_0": "",
+      "rhd_axi_0": "",
+      "rhd_headstage_slave_0": ""
     },
     "ports": {
       "aclk": {
@@ -116,6 +117,305 @@
       }
     },
     "components": {
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "rhd_axi_tb_axi_vip_0_0",
+        "xci_path": "ip\\rhd_axi_tb_axi_vip_0_0\\rhd_axi_tb_axi_vip_0_0.xci",
+        "inst_hier_path": "axi_vip_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Master_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Master_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      },
+      "rhd_headstage_slave_full_0": {
+        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave_full:1.0",
+        "xci_name": "rhd_axi_tb_rhd_headstage_slave_0_6",
+        "xci_path": "ip\\rhd_axi_tb_rhd_headstage_slave_0_6\\rhd_axi_tb_rhd_headstage_slave_0_6.xci",
+        "inst_hier_path": "rhd_headstage_slave_full_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rhd_headstage_slave_full",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MOSI": {
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhd_axi_tb_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "SCLK": {
+            "direction": "I"
+          },
+          "MISO1_A": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_A": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_B": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_B": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_C": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_C": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_D": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_D": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_E": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_E": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_F": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_F": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_G": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_G": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO1_H": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO2_H": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
       "rhd_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhd_axi:1.0",
         "xci_name": "rhd_axi_tb_rhd_axi_0_0",
@@ -628,6 +928,54 @@
               }
             }
           },
+          "MISO1_I": {
+            "direction": "I"
+          },
+          "MISO2_I": {
+            "direction": "I"
+          },
+          "MISO1_J": {
+            "direction": "I"
+          },
+          "MISO2_J": {
+            "direction": "I"
+          },
+          "MISO1_K": {
+            "direction": "I"
+          },
+          "MISO2_K": {
+            "direction": "I"
+          },
+          "MISO1_L": {
+            "direction": "I"
+          },
+          "MISO2_L": {
+            "direction": "I"
+          },
+          "MISO1_M": {
+            "direction": "I"
+          },
+          "MISO2_M": {
+            "direction": "I"
+          },
+          "MISO1_N": {
+            "direction": "I"
+          },
+          "MISO2_N": {
+            "direction": "I"
+          },
+          "MISO1_O": {
+            "direction": "I"
+          },
+          "MISO2_O": {
+            "direction": "I"
+          },
+          "MISO1_P": {
+            "direction": "I"
+          },
+          "MISO2_P": {
+            "direction": "I"
+          },
           "irq1": {
             "direction": "I"
           },
@@ -707,66 +1055,11 @@
           }
         }
       },
-      "axi_vip_0": {
-        "vlnv": "xilinx.com:ip:axi_vip:1.1",
-        "xci_name": "rhd_axi_tb_axi_vip_0_0",
-        "xci_path": "ip\\rhd_axi_tb_axi_vip_0_0\\rhd_axi_tb_axi_vip_0_0.xci",
-        "inst_hier_path": "axi_vip_0",
-        "parameters": {
-          "ADDR_WIDTH": {
-            "value": "32"
-          },
-          "DATA_WIDTH": {
-            "value": "32"
-          },
-          "HAS_BRESP": {
-            "value": "1"
-          },
-          "HAS_PROT": {
-            "value": "1"
-          },
-          "HAS_RRESP": {
-            "value": "1"
-          },
-          "HAS_WSTRB": {
-            "value": "1"
-          },
-          "INTERFACE_MODE": {
-            "value": "MASTER"
-          },
-          "PROTOCOL": {
-            "value": "AXI4LITE"
-          },
-          "READ_WRITE_MODE": {
-            "value": "READ_WRITE"
-          }
-        },
-        "interface_ports": {
-          "M_AXI": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Master_AXI",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "Master_AXI": {
-              "range": "4G",
-              "width": "32"
-            }
-          }
-        }
-      },
-      "rhd_headstage_slave_full_0": {
+      "rhd_headstage_slave_0": {
         "vlnv": "xilinx.com:module_ref:rhd_headstage_slave_full:1.0",
-        "xci_name": "rhd_axi_tb_rhd_headstage_slave_0_6",
-        "xci_path": "ip\\rhd_axi_tb_rhd_headstage_slave_0_6\\rhd_axi_tb_rhd_headstage_slave_0_6.xci",
-        "inst_hier_path": "rhd_headstage_slave_full_0",
+        "xci_name": "rhd_axi_tb_rhd_headstage_slave_0_7",
+        "xci_path": "ip\\rhd_axi_tb_rhd_headstage_slave_0_7\\rhd_axi_tb_rhd_headstage_slave_0_7.xci",
+        "inst_hier_path": "rhd_headstage_slave_0",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "rhd_headstage_slave_full",
@@ -797,212 +1090,52 @@
             "direction": "I"
           },
           "MISO1_A": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_A": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_B": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_B": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_C": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_C": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_D": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_D": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_E": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_E": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_F": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_F": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_G": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_G": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO1_H": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           },
           "MISO2_H": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "O"
           }
         }
       }
@@ -1020,8 +1153,9 @@
         "ports": [
           "aclk",
           "axi_vip_0/aclk",
+          "rhd_headstage_slave_full_0/clk",
           "rhd_axi_0/s00_axi_aclk",
-          "rhd_headstage_slave_full_0/clk"
+          "rhd_headstage_slave_0/clk"
         ]
       },
       "aclk_out_1": {
@@ -1047,14 +1181,16 @@
         "ports": [
           "rhd_axi_0/CS_b",
           "CS",
-          "rhd_headstage_slave_full_0/CS"
+          "rhd_headstage_slave_full_0/CS",
+          "rhd_headstage_slave_0/CS"
         ]
       },
       "rhd_axi_0_MOSI1": {
         "ports": [
           "rhd_axi_0/MOSI1",
           "MOSI1",
-          "rhd_headstage_slave_full_0/MOSI"
+          "rhd_headstage_slave_full_0/MOSI",
+          "rhd_headstage_slave_0/MOSI"
         ]
       },
       "rhd_axi_0_MOSI2": {
@@ -1067,7 +1203,8 @@
         "ports": [
           "rhd_axi_0/SCLK",
           "SCLK",
-          "rhd_headstage_slave_full_0/SCLK"
+          "rhd_headstage_slave_full_0/SCLK",
+          "rhd_headstage_slave_0/SCLK"
         ]
       },
       "rhd_headstage_slave_0_MISO1_A": {
@@ -1076,10 +1213,22 @@
           "rhd_axi_0/MISO1_A"
         ]
       },
+      "rhd_headstage_slave_0_MISO1_A1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_A",
+          "rhd_axi_0/MISO1_I"
+        ]
+      },
       "rhd_headstage_slave_0_MISO1_B": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO1_B",
           "rhd_axi_0/MISO1_B"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_B1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_B",
+          "rhd_axi_0/MISO1_J"
         ]
       },
       "rhd_headstage_slave_0_MISO1_C": {
@@ -1088,10 +1237,22 @@
           "rhd_axi_0/MISO1_C"
         ]
       },
+      "rhd_headstage_slave_0_MISO1_C1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_C",
+          "rhd_axi_0/MISO1_K"
+        ]
+      },
       "rhd_headstage_slave_0_MISO1_D": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO1_D",
           "rhd_axi_0/MISO1_D"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_D1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_D",
+          "rhd_axi_0/MISO1_L"
         ]
       },
       "rhd_headstage_slave_0_MISO1_E": {
@@ -1100,10 +1261,22 @@
           "rhd_axi_0/MISO1_E"
         ]
       },
+      "rhd_headstage_slave_0_MISO1_E1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_E",
+          "rhd_axi_0/MISO1_M"
+        ]
+      },
       "rhd_headstage_slave_0_MISO1_F": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO1_F",
           "rhd_axi_0/MISO1_F"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_F1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_F",
+          "rhd_axi_0/MISO1_N"
         ]
       },
       "rhd_headstage_slave_0_MISO1_G": {
@@ -1112,10 +1285,22 @@
           "rhd_axi_0/MISO1_G"
         ]
       },
+      "rhd_headstage_slave_0_MISO1_G1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_G",
+          "rhd_axi_0/MISO1_O"
+        ]
+      },
       "rhd_headstage_slave_0_MISO1_H": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO1_H",
           "rhd_axi_0/MISO1_H"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO1_H1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO1_H",
+          "rhd_axi_0/MISO1_P"
         ]
       },
       "rhd_headstage_slave_0_MISO2_A": {
@@ -1124,10 +1309,22 @@
           "rhd_axi_0/MISO2_A"
         ]
       },
+      "rhd_headstage_slave_0_MISO2_A1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_A",
+          "rhd_axi_0/MISO2_I"
+        ]
+      },
       "rhd_headstage_slave_0_MISO2_B": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO2_B",
           "rhd_axi_0/MISO2_B"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO2_B1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_B",
+          "rhd_axi_0/MISO2_J"
         ]
       },
       "rhd_headstage_slave_0_MISO2_C": {
@@ -1136,10 +1333,22 @@
           "rhd_axi_0/MISO2_C"
         ]
       },
+      "rhd_headstage_slave_0_MISO2_C1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_C",
+          "rhd_axi_0/MISO2_K"
+        ]
+      },
       "rhd_headstage_slave_0_MISO2_D": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO2_D",
           "rhd_axi_0/MISO2_D"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO2_D1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_D",
+          "rhd_axi_0/MISO2_L"
         ]
       },
       "rhd_headstage_slave_0_MISO2_E": {
@@ -1148,10 +1357,22 @@
           "rhd_axi_0/MISO2_E"
         ]
       },
+      "rhd_headstage_slave_0_MISO2_E1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_E",
+          "rhd_axi_0/MISO2_M"
+        ]
+      },
       "rhd_headstage_slave_0_MISO2_F": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO2_F",
           "rhd_axi_0/MISO2_F"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO2_F1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_F",
+          "rhd_axi_0/MISO2_N"
         ]
       },
       "rhd_headstage_slave_0_MISO2_G": {
@@ -1160,10 +1381,22 @@
           "rhd_axi_0/MISO2_G"
         ]
       },
+      "rhd_headstage_slave_0_MISO2_G1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_G",
+          "rhd_axi_0/MISO2_O"
+        ]
+      },
       "rhd_headstage_slave_0_MISO2_H": {
         "ports": [
           "rhd_headstage_slave_full_0/MISO2_H",
           "rhd_axi_0/MISO2_H"
+        ]
+      },
+      "rhd_headstage_slave_0_MISO2_H1": {
+        "ports": [
+          "rhd_headstage_slave_0/MISO2_H",
+          "rhd_axi_0/MISO2_P"
         ]
       }
     }

@@ -94,6 +94,22 @@ module rhd_axi_tb_rhd_axi_0_0 (
   MISO2_G,
   MISO1_H,
   MISO2_H,
+  MISO1_I,
+  MISO2_I,
+  MISO1_J,
+  MISO2_J,
+  MISO1_K,
+  MISO2_K,
+  MISO1_L,
+  MISO2_L,
+  MISO1_M,
+  MISO2_M,
+  MISO1_N,
+  MISO2_N,
+  MISO1_O,
+  MISO2_O,
+  MISO1_P,
+  MISO2_P,
   irq1,
   FIFO_rstn,
   M_AXIS_tdata,
@@ -166,6 +182,22 @@ input wire MISO1_G;
 input wire MISO2_G;
 input wire MISO1_H;
 input wire MISO2_H;
+input wire MISO1_I;
+input wire MISO2_I;
+input wire MISO1_J;
+input wire MISO2_J;
+input wire MISO1_K;
+input wire MISO2_K;
+input wire MISO1_L;
+input wire MISO2_L;
+input wire MISO1_M;
+input wire MISO2_M;
+input wire MISO1_N;
+input wire MISO2_N;
+input wire MISO1_O;
+input wire MISO2_O;
+input wire MISO1_P;
+input wire MISO2_P;
 input wire irq1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIFO_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FIFO_rstn RST" *)
@@ -237,6 +269,22 @@ input wire M_AXIS_ARESETN;
     .MISO2_G(MISO2_G),
     .MISO1_H(MISO1_H),
     .MISO2_H(MISO2_H),
+    .MISO1_I(MISO1_I),
+    .MISO2_I(MISO2_I),
+    .MISO1_J(MISO1_J),
+    .MISO2_J(MISO2_J),
+    .MISO1_K(MISO1_K),
+    .MISO2_K(MISO2_K),
+    .MISO1_L(MISO1_L),
+    .MISO2_L(MISO2_L),
+    .MISO1_M(MISO1_M),
+    .MISO2_M(MISO2_M),
+    .MISO1_N(MISO1_N),
+    .MISO2_N(MISO2_N),
+    .MISO1_O(MISO1_O),
+    .MISO2_O(MISO2_O),
+    .MISO1_P(MISO1_P),
+    .MISO2_P(MISO2_P),
     .irq1(irq1),
     .FIFO_rstn(FIFO_rstn),
     .M_AXIS_tdata(M_AXIS_tdata),
