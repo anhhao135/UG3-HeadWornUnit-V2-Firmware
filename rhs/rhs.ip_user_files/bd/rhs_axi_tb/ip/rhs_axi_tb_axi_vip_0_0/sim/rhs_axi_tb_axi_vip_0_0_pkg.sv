@@ -10,8 +10,8 @@ import axi_vip_pkg::*;
 ///////////////////////////////////////////////////////////////////////////
       parameter rhs_axi_tb_axi_vip_0_0_VIP_PROTOCOL           = 2;
       parameter rhs_axi_tb_axi_vip_0_0_VIP_READ_WRITE_MODE    = "READ_WRITE";
-      parameter rhs_axi_tb_axi_vip_0_0_VIP_INTERFACE_MODE     = 1;
-      parameter rhs_axi_tb_axi_vip_0_0_VIP_ADDR_WIDTH         = 5;
+      parameter rhs_axi_tb_axi_vip_0_0_VIP_INTERFACE_MODE     = 0;
+      parameter rhs_axi_tb_axi_vip_0_0_VIP_ADDR_WIDTH         = 32;
       parameter rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH         = 32;
       parameter rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH           = 0;
       parameter rhs_axi_tb_axi_vip_0_0_VIP_AWUSER_WIDTH       = 0;
@@ -32,62 +32,38 @@ import axi_vip_pkg::*;
       parameter rhs_axi_tb_axi_vip_0_0_VIP_HAS_ACLKEN         = 0;
       parameter rhs_axi_tb_axi_vip_0_0_VIP_HAS_ARESETN        = 1;
 ///////////////////////////////////////////////////////////////////////////
-
-typedef axi_passthrough_agent #(rhs_axi_tb_axi_vip_0_0_VIP_PROTOCOL, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_ADDR_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_AWUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_WUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_BUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_ARUSER_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_RUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_SUPPORTS_NARROW, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_BURST,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_LOCK,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_CACHE,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_REGION,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_PROT,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_QOS,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_WSTRB,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_BRESP,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_RRESP,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_ARESETN) rhs_axi_tb_axi_vip_0_0_passthrough_t;
-
-typedef axi_passthrough_mem_agent #(rhs_axi_tb_axi_vip_0_0_VIP_PROTOCOL, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_ADDR_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_AWUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_WUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_BUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_ARUSER_WIDTH,
-                                rhs_axi_tb_axi_vip_0_0_VIP_RUSER_WIDTH, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_SUPPORTS_NARROW, 
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_BURST,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_LOCK,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_CACHE,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_REGION,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_PROT,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_QOS,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_WSTRB,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_BRESP,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_RRESP,
-                                rhs_axi_tb_axi_vip_0_0_VIP_HAS_ARESETN) rhs_axi_tb_axi_vip_0_0_passthrough_mem_t;
-
+typedef axi_mst_agent #(rhs_axi_tb_axi_vip_0_0_VIP_PROTOCOL, 
+                        rhs_axi_tb_axi_vip_0_0_VIP_ADDR_WIDTH,
+                        rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH,
+                        rhs_axi_tb_axi_vip_0_0_VIP_DATA_WIDTH,
+                        rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH,
+                        rhs_axi_tb_axi_vip_0_0_VIP_ID_WIDTH,
+                        rhs_axi_tb_axi_vip_0_0_VIP_AWUSER_WIDTH, 
+                        rhs_axi_tb_axi_vip_0_0_VIP_WUSER_WIDTH, 
+                        rhs_axi_tb_axi_vip_0_0_VIP_BUSER_WIDTH, 
+                        rhs_axi_tb_axi_vip_0_0_VIP_ARUSER_WIDTH,
+                        rhs_axi_tb_axi_vip_0_0_VIP_RUSER_WIDTH, 
+                        rhs_axi_tb_axi_vip_0_0_VIP_SUPPORTS_NARROW, 
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_BURST,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_LOCK,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_CACHE,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_REGION,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_PROT,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_QOS,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_WSTRB,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_BRESP,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_RRESP,
+                        rhs_axi_tb_axi_vip_0_0_VIP_HAS_ARESETN) rhs_axi_tb_axi_vip_0_0_mst_t;
+      
 ///////////////////////////////////////////////////////////////////////////
 // How to start the verification component
 ///////////////////////////////////////////////////////////////////////////
-//      rhs_axi_tb_axi_vip_0_0_passthrough_t  rhs_axi_tb_axi_vip_0_0_passthrough;
-//      initial begin : START_rhs_axi_tb_axi_vip_0_0_SLAVE
-//        rhs_axi_tb_axi_vip_0_0_passthrough = new("rhs_axi_tb_axi_vip_0_0_passthrough", `rhs_axi_tb_axi_vip_0_0_PATH_TO_INTERFACE);
-//        rhs_axi_tb_axi_vip_0_0_passthrough.start_master(); //passthrough in run time master mode
-//        rhs_axi_tb_axi_vip_0_0_passthrough.start_slave(); //passthrough in run time slave mode
+//      rhs_axi_tb_axi_vip_0_0_mst_t  rhs_axi_tb_axi_vip_0_0_mst;
+//      initial begin : START_rhs_axi_tb_axi_vip_0_0_MASTER
+//        rhs_axi_tb_axi_vip_0_0_mst = new("rhs_axi_tb_axi_vip_0_0_mst", `rhs_axi_tb_axi_vip_0_0_PATH_TO_INTERFACE);
+//        rhs_axi_tb_axi_vip_0_0_mst.start_master();
 //      end
+
 
 
 endpackage : rhs_axi_tb_axi_vip_0_0_pkg

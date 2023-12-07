@@ -8,19 +8,36 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
 
 
     reg miso_out;
+    //reg [16:0] counter = STARTING_SEED;
+    //reg [16:0] counter2 = STARTING_SEED + 4;   
+
     reg [16:0] counter = STARTING_SEED;
-    reg [16:0] counter2 = STARTING_SEED + 4;
+    reg [16:0] counter2 = STARTING_SEED + 32;
+
     reg [6:0] clk_counter = 0;
     reg [4:0] sclk_counter = 16;
     
     assign MISO = miso_out;
+
+    /*
     
     always @(negedge CS) begin
-        counter <= counter + 1;
-        counter2 <= counter2 + 1;
+
+        if (counter > 8'b11111111)
+            counter <= 0;
+        else
+            counter <= counter + 1;
+
+        if (counter2 > 8'b11111111)
+            counter2 <= 0;
+        else
+            counter2 <= counter2 + 2;
+        
         //clk_counter <= 1;
         //sclk_counter <= 16;
     end
+
+    */
 
     always @(posedge clk) begin
         if (CS == 1) begin

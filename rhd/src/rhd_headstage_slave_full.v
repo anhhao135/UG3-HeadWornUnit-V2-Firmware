@@ -38,14 +38,24 @@ module rhd_headstage_slave_full(
 
     
 
-    rhd_headstage_slave #(.STARTING_SEED(0)) A (MOSI, CS, clk, SCLK, MISO1_A);
-    rhd_headstage_slave #(.STARTING_SEED(8)) B (MOSI, CS, clk, SCLK, MISO1_B);
-    rhd_headstage_slave #(.STARTING_SEED(16)) C (MOSI, CS, clk, SCLK, MISO1_C);
-    rhd_headstage_slave #(.STARTING_SEED(24)) D (MOSI, CS, clk, SCLK, MISO1_D);
-    rhd_headstage_slave #(.STARTING_SEED(32)) E (MOSI, CS, clk, SCLK, MISO1_E);
-    rhd_headstage_slave #(.STARTING_SEED(40)) F (MOSI, CS, clk, SCLK, MISO1_F);
-    rhd_headstage_slave #(.STARTING_SEED(48)) G (MOSI, CS, clk, SCLK, MISO1_G);
-    rhd_headstage_slave #(.STARTING_SEED(56)) H (MOSI, CS, clk, SCLK, MISO1_H);
+    rhd_headstage_slave #(.STARTING_SEED(0)) A1 (MOSI, CS, clk, SCLK, MISO1_A);
+    rhd_headstage_slave #(.STARTING_SEED(128)) B1 (MOSI, CS, clk, SCLK, MISO1_B);
+    rhd_headstage_slave #(.STARTING_SEED(256)) C1 (MOSI, CS, clk, SCLK, MISO1_C);
+    rhd_headstage_slave #(.STARTING_SEED(384)) D1 (MOSI, CS, clk, SCLK, MISO1_D);
+    rhd_headstage_slave #(.STARTING_SEED(512)) E1 (MOSI, CS, clk, SCLK, MISO1_E);
+    rhd_headstage_slave #(.STARTING_SEED(640)) F1 (MOSI, CS, clk, SCLK, MISO1_F);
+    rhd_headstage_slave #(.STARTING_SEED(768)) G1 (MOSI, CS, clk, SCLK, MISO1_G);
+    rhd_headstage_slave #(.STARTING_SEED(896)) H1 (MOSI, CS, clk, SCLK, MISO1_H);
+
+    rhd_headstage_slave #(.STARTING_SEED(64)) A2 (MOSI, CS, clk, SCLK, MISO2_A);
+    rhd_headstage_slave #(.STARTING_SEED(192)) B2 (MOSI, CS, clk, SCLK, MISO2_B);
+    rhd_headstage_slave #(.STARTING_SEED(320)) C2 (MOSI, CS, clk, SCLK, MISO2_C);
+    rhd_headstage_slave #(.STARTING_SEED(448)) D2 (MOSI, CS, clk, SCLK, MISO2_D);
+    rhd_headstage_slave #(.STARTING_SEED(576)) E2 (MOSI, CS, clk, SCLK, MISO2_E);
+    rhd_headstage_slave #(.STARTING_SEED(704)) F2 (MOSI, CS, clk, SCLK, MISO2_F);
+    rhd_headstage_slave #(.STARTING_SEED(832)) G2 (MOSI, CS, clk, SCLK, MISO2_G);
+    rhd_headstage_slave #(.STARTING_SEED(960)) H2 (MOSI, CS, clk, SCLK, MISO2_H);
+    
 
     /*
 
@@ -60,6 +70,8 @@ module rhd_headstage_slave_full(
 
     */
 
+    /*
+
     assign MISO2_A = ~MISO1_A;
     assign MISO2_B = ~MISO1_B;
     assign MISO2_C = ~MISO1_C;
@@ -68,6 +80,8 @@ module rhd_headstage_slave_full(
     assign MISO2_F = ~MISO1_F;
     assign MISO2_G = ~MISO1_G;
     assign MISO2_H = ~MISO1_H;
+
+    */
     
 
 

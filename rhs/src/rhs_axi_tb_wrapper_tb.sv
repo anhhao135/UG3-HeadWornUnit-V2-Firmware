@@ -168,7 +168,7 @@ begin
   COMPARE_DATA(mtestWDataL[15:0], mtestRDataL[15:0]);
   #10us;
 
-  /*
+  
 
   // (1b) Magnitude set
   mtestWDataL = 32'h00000005;
@@ -200,7 +200,7 @@ begin
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL[15:0], mtestRDataL[15:0]);
 
-  */
+  /*
 
 
   // (1e) ZCheck
@@ -215,6 +215,8 @@ begin
   COMPARE_DATA(mtestWDataL[15:0], mtestRDataL[15:0]);
 
   #500us;
+
+  */
 
 
 

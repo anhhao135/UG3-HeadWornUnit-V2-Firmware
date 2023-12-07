@@ -105,7 +105,7 @@ begin
   ////////////////////////////////////////////////
   // User Part
   ////////////////////////////////////////////////
-  mtestWDataL = 32'h11111111;
+  mtestWDataL = 32'h00000000;
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 30 13:18:56 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec  7 11:04:42 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26i:part0:1.4" DEVICE="xck26" NAME="rhd_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LVI"/>
 
@@ -7,8 +7,8 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_vip_0" PORT="aclk"/>
-        <CONNECTION INSTANCE="rhd_axi_0" PORT="s00_axi_aclk"/>
         <CONNECTION INSTANCE="rhd_headstage_slave_full_0" PORT="clk"/>
+        <CONNECTION INSTANCE="rhd_axi_0" PORT="s00_axi_aclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_aresetn">

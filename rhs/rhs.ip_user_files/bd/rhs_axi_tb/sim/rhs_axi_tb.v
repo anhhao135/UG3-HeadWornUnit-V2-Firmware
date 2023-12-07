@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Tue Nov 21 14:01:47 2023
+//Date        : Thu Dec  7 12:37:35 2023
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb.bd
 //Design      : rhs_axi_tb
@@ -33,11 +33,11 @@ module rhs_axi_tb
   wire aclk_out_1;
   wire aresetn_1;
   wire aresetn_out_1;
-  wire [4:0]axi_vip_0_M_AXI_ARADDR;
+  wire [31:0]axi_vip_0_M_AXI_ARADDR;
   wire [2:0]axi_vip_0_M_AXI_ARPROT;
   wire axi_vip_0_M_AXI_ARREADY;
   wire axi_vip_0_M_AXI_ARVALID;
-  wire [4:0]axi_vip_0_M_AXI_AWADDR;
+  wire [31:0]axi_vip_0_M_AXI_AWADDR;
   wire [2:0]axi_vip_0_M_AXI_AWPROT;
   wire axi_vip_0_M_AXI_AWREADY;
   wire axi_vip_0_M_AXI_AWVALID;
@@ -88,18 +88,7 @@ module rhs_axi_tb
         .m_axi_wdata(axi_vip_0_M_AXI_WDATA),
         .m_axi_wready(axi_vip_0_M_AXI_WREADY),
         .m_axi_wstrb(axi_vip_0_M_AXI_WSTRB),
-        .m_axi_wvalid(axi_vip_0_M_AXI_WVALID),
-        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arprot({1'b0,1'b0,1'b0}),
-        .s_axi_arvalid(1'b0),
-        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awprot({1'b0,1'b0,1'b0}),
-        .s_axi_awvalid(1'b0),
-        .s_axi_bready(1'b0),
-        .s_axi_rready(1'b0),
-        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_wstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s_axi_wvalid(1'b0));
+        .m_axi_wvalid(axi_vip_0_M_AXI_WVALID));
   rhs_axi_tb_rhd_headstage_slave_0_0 rhd_headstage_slave_0
        (.CS(rhs_axi_0_CS_b),
         .MISO(rhd_headstage_slave_0_MISO),
@@ -123,12 +112,12 @@ module rhs_axi_tb
         .M_AXIS_tready(1'b1),
         .SCLK(rhs_axi_0_SCLK),
         .s00_axi_aclk(aclk_1),
-        .s00_axi_araddr(axi_vip_0_M_AXI_ARADDR),
+        .s00_axi_araddr(axi_vip_0_M_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(aresetn_1),
         .s00_axi_arprot(axi_vip_0_M_AXI_ARPROT),
         .s00_axi_arready(axi_vip_0_M_AXI_ARREADY),
         .s00_axi_arvalid(axi_vip_0_M_AXI_ARVALID),
-        .s00_axi_awaddr(axi_vip_0_M_AXI_AWADDR),
+        .s00_axi_awaddr(axi_vip_0_M_AXI_AWADDR[4:0]),
         .s00_axi_awprot(axi_vip_0_M_AXI_AWPROT),
         .s00_axi_awready(axi_vip_0_M_AXI_AWREADY),
         .s00_axi_awvalid(axi_vip_0_M_AXI_AWVALID),

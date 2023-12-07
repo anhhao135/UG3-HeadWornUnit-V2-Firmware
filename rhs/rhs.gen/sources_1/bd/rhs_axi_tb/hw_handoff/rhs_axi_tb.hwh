@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 21 15:17:56 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec  7 12:37:36 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhs_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -469,8 +469,8 @@
         <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="SCLK"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="SCLK"/>
             <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="SCLK"/>
+            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="SCLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI1">

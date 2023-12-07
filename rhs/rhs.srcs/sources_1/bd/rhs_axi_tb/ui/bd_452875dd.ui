@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.872146",
-   "Default View_TopLeft":"-321,3",
+   "Default View_TopLeft":"-142,95",
    "ExpandedHierarchyInLayout":"",
    "commentid":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
@@ -15,22 +15,22 @@ preplace port port-id_SCLK -pg 1 -lvl 3 -x 620 -y 370 -defaultsOSRD
 preplace port port-id_MOSI1 -pg 1 -lvl 3 -x 620 -y 390 -defaultsOSRD
 preplace port port-id_MOSI2 -pg 1 -lvl 3 -x 620 -y 560 -defaultsOSRD
 preplace inst rhs_axi_0 -pg 1 -lvl 2 -x 430 -y 530 -defaultsOSRD
-preplace inst rhd_headstage_slave_0 -pg 1 -lvl 1 -x 150 -y 90 -defaultsOSRD
 preplace inst axi_vip_0 -pg 1 -lvl 1 -x 150 -y 470 -defaultsOSRD
+preplace inst rhd_headstage_slave_0 -pg 1 -lvl 1 -x 150 -y 90 -defaultsOSRD
 preplace inst rhd_headstage_slave_1 -pg 1 -lvl 1 -x 150 -y 280 -defaultsOSRD
-preplace netloc rhd_headstage_slave_0_MISO 1 1 1 270 90n
-preplace netloc rhd_headstage_slave_1_MISO 1 1 1 260 280n
-preplace netloc aresetn_1 1 0 2 10 550 NJ
 preplace netloc aclk_1 1 0 2 10 400 250J
 preplace netloc aclk_out_1 1 0 2 NJ 570 NJ
+preplace netloc aresetn_1 1 0 2 10 550 NJ
 preplace netloc aresetn_out_1 1 0 2 NJ 590 NJ
+preplace netloc rhd_headstage_slave_0_MISO 1 1 1 270 90n
+preplace netloc rhd_headstage_slave_1_MISO 1 1 1 260 280n
 preplace netloc rhs_axi_0_CS_b 1 0 3 50 190 NJ 190 600
-preplace netloc rhs_axi_0_SCLK 1 0 3 40 180 NJ 180 590
 preplace netloc rhs_axi_0_MOSI1 1 0 3 20 370 NJ 370 580
 preplace netloc rhs_axi_0_MOSI2 1 0 3 30 650 NJ 650 600
+preplace netloc rhs_axi_0_SCLK 1 0 3 40 180 NJ 180 590
 preplace netloc axi_vip_0_M_AXI 1 1 1 N 470
 levelinfo -pg 1 -10 150 430 620
 pagesize -pg 1 -db -bbox -sgen -140 0 720 660
 "
 }
-
+0
