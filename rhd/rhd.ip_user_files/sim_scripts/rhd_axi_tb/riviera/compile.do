@@ -4,7 +4,7 @@ onerror {quit -force}
 transcript on
 
 vlib work
-vmap -link {C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/compile_simlib/riviera}
+vmap -link {C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/compile_simlib/riviera}
 vlib riviera/xilinx_vip
 vlib riviera/xpm
 vlib riviera/axi_infrastructure_v1_1_0

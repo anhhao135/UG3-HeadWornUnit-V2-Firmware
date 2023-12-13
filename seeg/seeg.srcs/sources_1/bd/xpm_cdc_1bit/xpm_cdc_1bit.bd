@@ -1,0 +1,85 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xck26-sfvc784-2LV-c",
+      "gen_directory": "../../../../seeg.gen/sources_1/bd/xpm_cdc_1bit",
+      "name": "xpm_cdc_1bit",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1"
+    },
+    "design_tree": {
+      "xpm_cdc_0": ""
+    },
+    "ports": {
+      "dest_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "400000000"
+          }
+        }
+      },
+      "dest_out": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "src_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "200000000"
+          }
+        }
+      },
+      "src_in": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "xpm_cdc_0": {
+        "vlnv": "xilinx.com:ip:xpm_cdc_gen:1.0",
+        "xci_name": "xpm_cdc_1bit_xpm_cdc_0_0",
+        "xci_path": "ip\\xpm_cdc_1bit_xpm_cdc_0_0\\xpm_cdc_1bit_xpm_cdc_0_0.xci",
+        "inst_hier_path": "xpm_cdc_0",
+        "parameters": {
+          "CDC_TYPE": {
+            "value": "xpm_cdc_single"
+          }
+        }
+      }
+    },
+    "nets": {
+      "dest_clk_0_1": {
+        "ports": [
+          "dest_clk",
+          "xpm_cdc_0/dest_clk"
+        ]
+      },
+      "src_clk_0_1": {
+        "ports": [
+          "src_clk",
+          "xpm_cdc_0/src_clk"
+        ]
+      },
+      "src_in_0_1": {
+        "ports": [
+          "src_in",
+          "xpm_cdc_0/src_in"
+        ]
+      },
+      "xpm_cdc_0_dest_out": {
+        "ports": [
+          "xpm_cdc_0/dest_out",
+          "dest_out"
+        ]
+      }
+    }
+  }
+}

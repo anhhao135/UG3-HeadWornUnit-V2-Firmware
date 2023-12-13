@@ -1,0 +1,475 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 13 14:36:35 2023
+# Process ID: 10560
+# Current directory: C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24284 C:\Repos\UG3-HeadWornUnit-V2-Firmware\rhd\rhd.xpr
+# Log file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/vivado.log
+# Journal file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd\vivado.jou
+# Running On: GramForGram, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 16847 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd' since last save.
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store'; using path 'C:/Users/anhha/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1523.613 ; gain = 424.777
+open_bd_design {C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd}
+Reading block design file <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd>...
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_0
+Adding component instance block -- xilinx.com:module_ref:rhd_axi:1.0 - rhd_axi_0
+Adding component instance block -- xilinx.com:module_ref:rhd_headstage_slave_full_16_probes:1.0 - rhd_headstage_slave_0
+Successfully read diagram <rhd_axi_tb> from block design file <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd>
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1603.605 ; gain = 79.992
+update_module_reference rhd_axi_tb_rhd_axi_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'FIFO_rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'FIFO_rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M_AXIS_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 'M_AXIS_ACLK' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'FIFO_rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'FIFO_rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M_AXIS_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 'M_AXIS_ACLK' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+Upgrading 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd'
+INFO: [IP_Flow 19-3420] Updated rhd_axi_tb_rhd_axi_0_0 to use current project options
+Wrote  : <C:\Repos\UG3-HeadWornUnit-V2-Firmware\rhd\rhd.srcs\sources_1\bd\rhd_axi_tb\rhd_axi_tb.bd> 
+Wrote  : <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/ui/bd_e113142c.ui> 
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-5457] ref source:C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+generate_target Simulation [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'fifo_generator_0'. Target already exists and is up to date.
+INFO: [Vivado 12-5457] ref source:C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit.bd
+generate_target Simulation [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'xpm_cdc_1bit' - hence not re-generating.
+generate_target Simulation [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd]
+CRITICAL WARNING: [BD 41-1356] Slave segment </rhd_axi_0/s00_axi/reg0> is not assigned into address space </axi_vip_0/Master_AXI>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/rhd_axi_0/irq1
+
+Wrote  : <C:\Repos\UG3-HeadWornUnit-V2-Firmware\rhd\rhd.srcs\sources_1\bd\rhd_axi_tb\rhd_axi_tb.bd> 
+Wrote  : <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/ui/bd_e113142c.ui> 
+Verilog Output written to : c:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/synth/rhd_axi_tb.v
+Verilog Output written to : c:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/sim/rhd_axi_tb.v
+Verilog Output written to : c:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/hdl/rhd_axi_tb_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rhd_axi_0 .
+Exporting to file c:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/hw_handoff/rhd_axi_tb.hwh
+Generated Hardware Definition File c:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/synth/rhd_axi_tb.hwdef
+generate_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 1872.121 ; gain = 217.074
+export_ip_user_files -of_objects [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.srcs/sources_1/bd/rhd_axi_tb/rhd_axi_tb.bd] -directory C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/sim_scripts -ip_user_files_dir C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files -ipstatic_source_dir C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/compile_simlib/modelsim} {questa=C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/compile_simlib/questa} {riviera=C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/compile_simlib/riviera} {activehdl=C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'rhd_axi_tb_wrapper_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rhd_axi_tb_wrapper_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -L axi_vip_v1_1_14 -L xilinx_vip -prj rhd_axi_tb_wrapper_tb_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_1bit_xpm_cdc_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd
+INFO: [VRFC 10-311] analyzing module command_selector
+INFO: [VRFC 10-311] analyzing module MISO_falling_edge
+INFO: [VRFC 10-311] analyzing module MISO_rising_edge
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_headstage_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full_16_probes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_headstage_slave_full_16_probes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi_tb_axi_vip_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi_tb_rhd_axi_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_9/sim/rhd_axi_tb_rhd_headstage_slave_0_9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi_tb_rhd_headstage_slave_0_9
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/sim/rhd_axi_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/hdl/rhd_axi_tb_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi_tb_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi_tb_wrapper_tb
+WARNING: [VRFC 10-8658] /* is inside a comment [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv:161]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj rhd_axi_tb_wrapper_tb_vhdl.prj"
+ECHO is off.
+ECHO is off.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1902.586 ; gain = 0.453
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xpm_cdc_gen_v1_0_2 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_14 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rhd_axi_tb_wrapper_tb_behav xil_defaultlib.rhd_axi_tb_wrapper_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xpm_cdc_gen_v1_0_2 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_14 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rhd_axi_tb_wrapper_tb_behav xil_defaultlib.rhd_axi_tb_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package fifo_generator_v13_2_8.fifo_generator_v13_2_8_pkg
+Compiling package xpm.vcomponents
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
+Compiling module axi_vip_v1_1_14.axi_vip_v1_1_14_top(C_AXI_PROTOC...
+Compiling module xil_defaultlib.rhd_axi_tb_axi_vip_0_0
+Compiling module xil_defaultlib.MISO_falling_edge
+Compiling module xil_defaultlib.MISO_rising_edge
+Compiling module xil_defaultlib.command_selector
+Compiling module xpm.xpm_cdc_single(SIM_ASSERT_CHK=1)
+Compiling module xpm_cdc_gen_v1_0_2.xpm_cdc_gen_v1_0_2(C_CDC_TYPE=6,...
+Compiling module xil_defaultlib.xpm_cdc_1bit_xpm_cdc_0_0
+Compiling module xil_defaultlib.xpm_cdc_1bit
+Compiling architecture fifo36e2_v of entity unisim.FIFO36E2 [\FIFO36E2(init="0000000000000000...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_prim [\builtin_prim(c_din_width=16,c_d...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_extdepth [\builtin_extdepth(c_family="8SER...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_top [\builtin_top(c_family="8SERIES",...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.input_blk [\input_blk(c_common_clock=0,c_di...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.output_blk [\output_blk(c_dout_width=64,c_pk...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_v13_2_8_builtin [\fifo_generator_v13_2_8_builtin(...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_top [\fifo_generator_top(c_family="vi...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_v13_2_8_synth [\fifo_generator_v13_2_8_synth(c_...]
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.rhd
+Compiling module xil_defaultlib.rhd_S00_AXI_default
+Compiling module xil_defaultlib.rhd_axi
+Compiling module xil_defaultlib.rhd_axi_tb_rhd_axi_0_0
+Compiling module xil_defaultlib.rhd_headstage_slave
+Compiling module xil_defaultlib.rhd_headstage_slave_full_16_prob...
+Compiling module xil_defaultlib.rhd_axi_tb_rhd_headstage_slave_0...
+Compiling module xil_defaultlib.rhd_axi_tb
+Compiling module xil_defaultlib.rhd_axi_tb_wrapper
+Compiling module xil_defaultlib.rhd_axi_tb_wrapper_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot rhd_axi_tb_wrapper_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:37 . Memory (MB): peak = 1903.129 ; gain = 0.543
+INFO: [USF-XSim-69] 'elaborate' step finished in '37' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rhd_axi_tb_wrapper_tb_behav -key {Behavioral:sim_1:Functional:rhd_axi_tb_wrapper_tb} -tclbatch {rhd_axi_tb_wrapper_tb.tcl} -protoinst "protoinst_files/xpm_cdc_1bit.protoinst" -protoinst "protoinst_files/rhd_axi_tb.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/xpm_cdc_1bit.protoinst
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/rhd_axi_tb.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i//axi_vip_0/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i//rhd_axi_0/s00_axi
+Time resolution is 1 ps
+source rhd_axi_tb_wrapper_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /rhd_axi_tb_wrapper_tb/mst_agent_0 was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+XilinxAXIVIP: Found at Path: rhd_axi_tb_wrapper_tb.DUT.rhd_axi_tb_i.axi_vip_0.inst
+Note: Actual FIFO Depth = 4097
+Time: 0 ps  Iteration: 0
+Note: Actual FIFO Depth = 4097
+Time: 0 ps  Iteration: 0
+Note:  DEPTH = 4096 WIDTH = 9 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1152 DEEP = 1 WIDE = 2
+Time: 0 ps  Iteration: 0
+ERROR: 205344.0 ps rhd_axi_tb_wrapper_tb.DUT.rhd_axi_tb_i.axi_vip_0.inst.IF  : XILINX_RESET_PULSE_WIDTH: Holding AXI ARESETN asserted for 16 cycles of the slowest AXI clock is generally a sufficient reset pulse width for Xilinx IP. --UG1037. To downgrade, use <hierarchy_path to VIP>.IF.set_xilinx_reset_check_to_warn(), or filter using clr_xilinx_reset_check().
+TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000000000000000000000000000000000000000000000000000011111111 actual   = 0x0000000000000000000000000000000000000000000000000000000011111111
+TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000000000000000000000000000000000000000000000000000000000000 actual   = 0x0000000000000000000000000000000000000000000000000000000000000000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rhd_axi_tb_wrapper_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:47 . Memory (MB): peak = 1920.934 ; gain = 18.801
+open_wave_config {C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhd/rhd_axi_tb_wrapper_tb_behav.wcfg}
+run all
+TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000000000000000000000000000000000000000000000000000000000008 actual   = 0x0000000000000000000000000000000000000000000000000000000000000008
+TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000000000000000000000000000000000000000000000000000000000005 actual   = 0x0000000000000000000000000000000000000000000000000000000000000005
+TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000000000000000000000000000000000000000000000000000000000000 actual   = 0x0000000000000000000000000000000000000000000000000000000000000000
+Executing Axi4 End Of Simulation checks
+$finish called at time : 2003337568 ps : File "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv" Line 94
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 1955.957 ; gain = 5.543
+open_project C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs' since last save.
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store'; using path 'C:/Users/anhha/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2032.375 ; gain = 76.312
+close_project
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/anhha/Desktop/UG3-HeadWornUnit-V2-Firmware/rhs' since last save.
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store'; using path 'C:/Users/anhha/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_bd_design {C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/rhs_axi_tb.bd}
+Reading block design file <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/rhs_axi_tb.bd>...
+Adding component instance block -- xilinx.com:module_ref:rhs_axi:1.0 - rhs_axi_0
+Adding component instance block -- xilinx.com:module_ref:rhd_headstage_slave:1.0 - rhd_headstage_slave_0
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_0
+Adding component instance block -- xilinx.com:module_ref:rhd_headstage_slave:1.0 - rhd_headstage_slave_1
+Successfully read diagram <rhs_axi_tb> from block design file <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/rhs_axi_tb.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 3006.777 ; gain = 0.000
+INFO: [filemgmt 56-326] User Interrupt. Could not getCurrentGraph()
+update_compile_order -fileset sources_1
+update_module_reference {rhs_axi_tb_rhd_headstage_slave_0_0 rhs_axi_tb_rhd_headstage_slave_1_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/rhs_axi_tb.bd'
+INFO: [IP_Flow 19-3420] Updated rhs_axi_tb_rhd_headstage_slave_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated rhs_axi_tb_rhd_headstage_slave_1_0 to use current project options
+Wrote  : <C:\Repos\UG3-HeadWornUnit-V2-Firmware\rhs\rhs.srcs\sources_1\bd\rhs_axi_tb\rhs_axi_tb.bd> 
+Wrote  : <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/ui/bd_452875dd.ui> 
+update_module_reference rhs_axi_tb_rhs_axi_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'FIFO_rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'FIFO_rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M_AXIS_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 'M_AXIS_ACLK' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'FIFO_rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS_ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'FIFO_rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXIS_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'M_AXIS_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 'M_AXIS_ACLK' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+Upgrading 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/rhs_axi_tb.bd'
+INFO: [IP_Flow 19-3420] Updated rhs_axi_tb_rhs_axi_0_0 to use current project options
+Wrote  : <C:\Repos\UG3-HeadWornUnit-V2-Firmware\rhs\rhs.srcs\sources_1\bd\rhs_axi_tb\rhs_axi_tb.bd> 
+Wrote  : <C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/rhs_axi_tb/ui/bd_452875dd.ui> 
+INFO: [Vivado 12-5457] ref source:C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+generate_target Simulation [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'fifo_generator_0'. Target already exists and is up to date.
+INFO: [Vivado 12-5457] ref source:C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit.bd
+generate_target Simulation [get_files C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.srcs/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'xpm_cdc_1bit' - hence not re-generating.

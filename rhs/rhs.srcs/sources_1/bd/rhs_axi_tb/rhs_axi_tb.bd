@@ -11,10 +11,10 @@
       "validated": "true"
     },
     "design_tree": {
-      "rhs_axi_0": "",
-      "rhd_headstage_slave_0": "",
       "axi_vip_0": "",
-      "rhd_headstage_slave_1": ""
+      "rhd_headstage_slave_0": "",
+      "rhd_headstage_slave_1": "",
+      "rhs_axi_0": ""
     },
     "ports": {
       "aresetn": {
@@ -117,6 +117,144 @@
       }
     },
     "components": {
+      "axi_vip_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "rhs_axi_tb_axi_vip_0_0",
+        "xci_path": "ip\\rhs_axi_tb_axi_vip_0_0\\rhs_axi_tb_axi_vip_0_0.xci",
+        "inst_hier_path": "axi_vip_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Master_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Master_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      },
+      "rhd_headstage_slave_0": {
+        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
+        "xci_name": "rhs_axi_tb_rhd_headstage_slave_0_0",
+        "xci_path": "ip\\rhs_axi_tb_rhd_headstage_slave_0_0\\rhs_axi_tb_rhd_headstage_slave_0_0.xci",
+        "inst_hier_path": "rhd_headstage_slave_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rhd_headstage_slave",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MOSI": {
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "SCLK": {
+            "direction": "I"
+          },
+          "MISO": {
+            "direction": "O"
+          }
+        }
+      },
+      "rhd_headstage_slave_1": {
+        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
+        "xci_name": "rhs_axi_tb_rhd_headstage_slave_1_0",
+        "xci_path": "ip\\rhs_axi_tb_rhd_headstage_slave_1_0\\rhs_axi_tb_rhd_headstage_slave_1_0.xci",
+        "inst_hier_path": "rhd_headstage_slave_1",
+        "parameters": {
+          "STARTING_SEED": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rhd_headstage_slave",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MOSI": {
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "SCLK": {
+            "direction": "I"
+          },
+          "MISO": {
+            "direction": "O"
+          }
+        }
+      },
       "rhs_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhs_axi:1.0",
         "xci_name": "rhs_axi_tb_rhs_axi_0_0",
@@ -510,144 +648,6 @@
             }
           }
         }
-      },
-      "rhd_headstage_slave_0": {
-        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
-        "xci_name": "rhs_axi_tb_rhd_headstage_slave_0_0",
-        "xci_path": "ip\\rhs_axi_tb_rhd_headstage_slave_0_0\\rhs_axi_tb_rhd_headstage_slave_0_0.xci",
-        "inst_hier_path": "rhd_headstage_slave_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhd_headstage_slave",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
-          },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhs_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO": {
-            "direction": "O"
-          }
-        }
-      },
-      "axi_vip_0": {
-        "vlnv": "xilinx.com:ip:axi_vip:1.1",
-        "xci_name": "rhs_axi_tb_axi_vip_0_0",
-        "xci_path": "ip\\rhs_axi_tb_axi_vip_0_0\\rhs_axi_tb_axi_vip_0_0.xci",
-        "inst_hier_path": "axi_vip_0",
-        "parameters": {
-          "ADDR_WIDTH": {
-            "value": "32"
-          },
-          "DATA_WIDTH": {
-            "value": "32"
-          },
-          "HAS_BRESP": {
-            "value": "1"
-          },
-          "HAS_PROT": {
-            "value": "1"
-          },
-          "HAS_RRESP": {
-            "value": "1"
-          },
-          "HAS_WSTRB": {
-            "value": "1"
-          },
-          "INTERFACE_MODE": {
-            "value": "MASTER"
-          },
-          "PROTOCOL": {
-            "value": "AXI4LITE"
-          },
-          "READ_WRITE_MODE": {
-            "value": "READ_WRITE"
-          }
-        },
-        "interface_ports": {
-          "M_AXI": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Master_AXI",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "Master_AXI": {
-              "range": "4G",
-              "width": "32"
-            }
-          }
-        }
-      },
-      "rhd_headstage_slave_1": {
-        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
-        "xci_name": "rhs_axi_tb_rhd_headstage_slave_1_0",
-        "xci_path": "ip\\rhs_axi_tb_rhd_headstage_slave_1_0\\rhs_axi_tb_rhd_headstage_slave_1_0.xci",
-        "inst_hier_path": "rhd_headstage_slave_1",
-        "parameters": {
-          "STARTING_SEED": {
-            "value": "8"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhd_headstage_slave",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
-          },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhs_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO": {
-            "direction": "O"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -663,9 +663,9 @@
         "ports": [
           "aclk",
           "axi_vip_0/aclk",
-          "rhs_axi_0/s00_axi_aclk",
           "rhd_headstage_slave_0/clk",
-          "rhd_headstage_slave_1/clk"
+          "rhd_headstage_slave_1/clk",
+          "rhs_axi_0/s00_axi_aclk"
         ]
       },
       "aclk_out_1": {
@@ -725,8 +725,8 @@
         "ports": [
           "rhs_axi_0/SCLK",
           "SCLK",
-          "rhd_headstage_slave_1/SCLK",
-          "rhd_headstage_slave_0/SCLK"
+          "rhd_headstage_slave_0/SCLK",
+          "rhd_headstage_slave_1/SCLK"
         ]
       }
     }
