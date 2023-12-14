@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x25018F9106810598",
       "design_src": "SBD",
       "device": "xck26-sfvc784-2LV-c",
       "name": "bd_b752",
