@@ -51,6 +51,54 @@
       },
       "RHS_MISO2": {
         "direction": "I"
+      },
+      "RHD_MISO1_A": {
+        "direction": "I"
+      },
+      "RHD_MISO1_B": {
+        "direction": "I"
+      },
+      "RHD_MISO1_C": {
+        "direction": "I"
+      },
+      "RHD_MISO1_D": {
+        "direction": "I"
+      },
+      "RHD_MISO1_E": {
+        "direction": "I"
+      },
+      "RHD_MISO1_F": {
+        "direction": "I"
+      },
+      "RHD_MISO1_G": {
+        "direction": "I"
+      },
+      "RHD_MISO1_H": {
+        "direction": "I"
+      },
+      "RHD_MISO2_A": {
+        "direction": "I"
+      },
+      "RHD_MISO2_B": {
+        "direction": "I"
+      },
+      "RHD_MISO2_C": {
+        "direction": "I"
+      },
+      "RHD_MISO2_D": {
+        "direction": "I"
+      },
+      "RHD_MISO2_E": {
+        "direction": "I"
+      },
+      "RHD_MISO2_F": {
+        "direction": "I"
+      },
+      "RHD_MISO2_G": {
+        "direction": "I"
+      },
+      "RHD_MISO2_H": {
+        "direction": "I"
       }
     },
     "components": {
@@ -2455,30 +2503,6 @@
           "MISO1_H": {
             "direction": "I"
           },
-          "MISO1_I": {
-            "direction": "I"
-          },
-          "MISO1_J": {
-            "direction": "I"
-          },
-          "MISO1_K": {
-            "direction": "I"
-          },
-          "MISO1_L": {
-            "direction": "I"
-          },
-          "MISO1_M": {
-            "direction": "I"
-          },
-          "MISO1_N": {
-            "direction": "I"
-          },
-          "MISO1_O": {
-            "direction": "I"
-          },
-          "MISO1_P": {
-            "direction": "I"
-          },
           "MISO2_A": {
             "direction": "I"
           },
@@ -2501,30 +2525,6 @@
             "direction": "I"
           },
           "MISO2_H": {
-            "direction": "I"
-          },
-          "MISO2_I": {
-            "direction": "I"
-          },
-          "MISO2_J": {
-            "direction": "I"
-          },
-          "MISO2_K": {
-            "direction": "I"
-          },
-          "MISO2_L": {
-            "direction": "I"
-          },
-          "MISO2_M": {
-            "direction": "I"
-          },
-          "MISO2_N": {
-            "direction": "I"
-          },
-          "MISO2_O": {
-            "direction": "I"
-          },
-          "MISO2_P": {
             "direction": "I"
           },
           "MOSI": {
@@ -2553,6 +2553,102 @@
           "rstn_rhd": {
             "type": "rst",
             "direction": "I"
+          },
+          "MISO1_I_P": {
+            "direction": "I"
+          },
+          "MISO1_I_N": {
+            "direction": "I"
+          },
+          "MISO2_I_P": {
+            "direction": "I"
+          },
+          "MISO2_I_N": {
+            "direction": "I"
+          },
+          "MISO1_J_P": {
+            "direction": "I"
+          },
+          "MISO1_J_N": {
+            "direction": "I"
+          },
+          "MISO2_J_P": {
+            "direction": "I"
+          },
+          "MISO2_J_N": {
+            "direction": "I"
+          },
+          "MISO1_K_P": {
+            "direction": "I"
+          },
+          "MISO1_K_N": {
+            "direction": "I"
+          },
+          "MISO2_K_P": {
+            "direction": "I"
+          },
+          "MISO2_K_N": {
+            "direction": "I"
+          },
+          "MISO1_L_P": {
+            "direction": "I"
+          },
+          "MISO1_L_N": {
+            "direction": "I"
+          },
+          "MISO2_L_P": {
+            "direction": "I"
+          },
+          "MISO2_L_N": {
+            "direction": "I"
+          },
+          "MISO1_M_P": {
+            "direction": "I"
+          },
+          "MISO1_M_N": {
+            "direction": "I"
+          },
+          "MISO2_M_P": {
+            "direction": "I"
+          },
+          "MISO2_M_N": {
+            "direction": "I"
+          },
+          "MISO1_N_P": {
+            "direction": "I"
+          },
+          "MISO1_N_N": {
+            "direction": "I"
+          },
+          "MISO2_N_P": {
+            "direction": "I"
+          },
+          "MISO2_N_N": {
+            "direction": "I"
+          },
+          "MISO1_O_P": {
+            "direction": "I"
+          },
+          "MISO1_O_N": {
+            "direction": "I"
+          },
+          "MISO2_O_P": {
+            "direction": "I"
+          },
+          "MISO2_O_N": {
+            "direction": "I"
+          },
+          "MISO1_P_P": {
+            "direction": "I"
+          },
+          "MISO1_P_N": {
+            "direction": "I"
+          },
+          "MISO2_P_P": {
+            "direction": "I"
+          },
+          "MISO2_P_N": {
+            "direction": "I"
           }
         },
         "post_compiled_compname": "recording_inst_0",
@@ -2560,7 +2656,7 @@
         "variant_info": {
           "recording.bd": {
             "scoped_diagram": "recording_inst_0.bd",
-            "design_checksum": "0x964F304B",
+            "design_checksum": "0x9D52B7CD",
             "ref_name": "recording",
             "ref_subinst_path": "main_recording_0",
             "ref_type": "Block Design",
@@ -3018,10 +3114,106 @@
           "stimulation_0/MISO1"
         ]
       },
+      "MISO1_A_1": {
+        "ports": [
+          "RHD_MISO1_A",
+          "recording_0/MISO1_A"
+        ]
+      },
+      "MISO1_B_1": {
+        "ports": [
+          "RHD_MISO1_B",
+          "recording_0/MISO1_B"
+        ]
+      },
+      "MISO1_C_1": {
+        "ports": [
+          "RHD_MISO1_C",
+          "recording_0/MISO1_C"
+        ]
+      },
+      "MISO1_D_1": {
+        "ports": [
+          "RHD_MISO1_D",
+          "recording_0/MISO1_D"
+        ]
+      },
+      "MISO1_E_1": {
+        "ports": [
+          "RHD_MISO1_E",
+          "recording_0/MISO1_E"
+        ]
+      },
+      "MISO1_F_1": {
+        "ports": [
+          "RHD_MISO1_F",
+          "recording_0/MISO1_F"
+        ]
+      },
+      "MISO1_G_1": {
+        "ports": [
+          "RHD_MISO1_G",
+          "recording_0/MISO1_G"
+        ]
+      },
+      "MISO1_H_1": {
+        "ports": [
+          "RHD_MISO1_H",
+          "recording_0/MISO1_H"
+        ]
+      },
       "MISO2_1": {
         "ports": [
           "RHS_MISO2",
           "stimulation_0/MISO2"
+        ]
+      },
+      "MISO2_A_1": {
+        "ports": [
+          "RHD_MISO2_A",
+          "recording_0/MISO2_A"
+        ]
+      },
+      "MISO2_B_1": {
+        "ports": [
+          "RHD_MISO2_B",
+          "recording_0/MISO2_B"
+        ]
+      },
+      "MISO2_C_1": {
+        "ports": [
+          "RHD_MISO2_C",
+          "recording_0/MISO2_C"
+        ]
+      },
+      "MISO2_D_1": {
+        "ports": [
+          "RHD_MISO2_D",
+          "recording_0/MISO2_D"
+        ]
+      },
+      "MISO2_E_1": {
+        "ports": [
+          "RHD_MISO2_E",
+          "recording_0/MISO2_E"
+        ]
+      },
+      "MISO2_F_1": {
+        "ports": [
+          "RHD_MISO2_F",
+          "recording_0/MISO2_F"
+        ]
+      },
+      "MISO2_G_1": {
+        "ports": [
+          "RHD_MISO2_G",
+          "recording_0/MISO2_G"
+        ]
+      },
+      "MISO2_H_1": {
+        "ports": [
+          "RHD_MISO2_H",
+          "recording_0/MISO2_H"
         ]
       },
       "Net": {

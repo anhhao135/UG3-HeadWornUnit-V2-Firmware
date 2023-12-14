@@ -54,18 +54,18 @@
       </File>
     </FileCollection>
     <BlockContainerCollection>
-      <BlockContainer InstPath="/recording_0" IsPR="false" State="Stale">
-        <ActiveVariantSynth FileName="bd\recording_inst_0\recording_inst_0.bd"/>
-        <ActiveVariantSim FileName="bd\recording_inst_0\recording_inst_0.bd"/>
-        <VariantsCollection>
-          <BDFile BDFilePath="bd\recording_inst_0\recording_inst_0.bd" BDFileset="recording_inst_0" BDSourceFile="..\..\..\..\seeg.srcs\sources_1\bd\recording\recording.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
-        </VariantsCollection>
-      </BlockContainer>
       <BlockContainer InstPath="/stimulation_0" IsPR="false" State="Stale">
         <ActiveVariantSynth FileName="bd\stimulation_inst_0\stimulation_inst_0.bd"/>
         <ActiveVariantSim FileName="bd\stimulation_inst_0\stimulation_inst_0.bd"/>
         <VariantsCollection>
           <BDFile BDFilePath="bd\stimulation_inst_0\stimulation_inst_0.bd" BDFileset="stimulation_inst_0" BDSourceFile="..\..\..\..\seeg.srcs\sources_1\bd\stimulation\stimulation.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+      <BlockContainer InstPath="/recording_0" IsPR="false" State="Stale">
+        <ActiveVariantSynth FileName="bd\recording_inst_0\recording_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd\recording_inst_0\recording_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\recording_inst_0\recording_inst_0.bd" BDFileset="recording_inst_0" BDSourceFile="..\..\..\..\seeg.srcs\sources_1\bd\recording\recording.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
         </VariantsCollection>
       </BlockContainer>
     </BlockContainerCollection>
@@ -90,6 +90,7 @@
           <File Name="..\..\..\..\..\rhd\src\rhd.v"/>
           <File Name="..\..\..\..\..\rhd\src\rhd_S00_AXI.v"/>
           <File Name="..\..\..\..\..\rhd\src\rhd_axi.v"/>
+          <File Name="..\..\..\..\..\rhd\src\rhd_diff_to_single.v"/>
           <File Name="..\..\..\..\seeg.srcs\sources_1\bd\recording\recording.bd"/>
         </FileCollection>
       </ModuleReference>

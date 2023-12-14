@@ -1,0 +1,90 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "recording_rhd_diff_to_single_0_0",
+    "cell_name": "rhd_diff_to_single_0",
+    "component_reference": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../seeg.gen/sources_1/bd/recording/ip/recording_rhd_diff_to_single_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "recording_rhd_diff_to_single_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynquplus" } ],
+        "BASE_BOARD_PART": [ { "value": "xilinx.com:k26c:part0:1.4" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xck26" } ],
+        "PACKAGE": [ { "value": "sfvc784" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2LV" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "C" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../seeg.gen/sources_1/bd/recording/ip/recording_rhd_diff_to_single_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "MISO1_I_P": [ { "direction": "in" } ],
+        "MISO1_I_N": [ { "direction": "in" } ],
+        "MISO1_I": [ { "direction": "out" } ],
+        "MISO2_I_P": [ { "direction": "in" } ],
+        "MISO2_I_N": [ { "direction": "in" } ],
+        "MISO2_I": [ { "direction": "out" } ],
+        "MISO1_J_P": [ { "direction": "in" } ],
+        "MISO1_J_N": [ { "direction": "in" } ],
+        "MISO1_J": [ { "direction": "out" } ],
+        "MISO2_J_P": [ { "direction": "in" } ],
+        "MISO2_J_N": [ { "direction": "in" } ],
+        "MISO2_J": [ { "direction": "out" } ],
+        "MISO1_K_P": [ { "direction": "in" } ],
+        "MISO1_K_N": [ { "direction": "in" } ],
+        "MISO1_K": [ { "direction": "out" } ],
+        "MISO2_K_P": [ { "direction": "in" } ],
+        "MISO2_K_N": [ { "direction": "in" } ],
+        "MISO2_K": [ { "direction": "out" } ],
+        "MISO1_L_P": [ { "direction": "in" } ],
+        "MISO1_L_N": [ { "direction": "in" } ],
+        "MISO1_L": [ { "direction": "out" } ],
+        "MISO2_L_P": [ { "direction": "in" } ],
+        "MISO2_L_N": [ { "direction": "in" } ],
+        "MISO2_L": [ { "direction": "out" } ],
+        "MISO1_M_P": [ { "direction": "in" } ],
+        "MISO1_M_N": [ { "direction": "in" } ],
+        "MISO1_M": [ { "direction": "out" } ],
+        "MISO2_M_P": [ { "direction": "in" } ],
+        "MISO2_M_N": [ { "direction": "in" } ],
+        "MISO2_M": [ { "direction": "out" } ],
+        "MISO1_N_P": [ { "direction": "in" } ],
+        "MISO1_N_N": [ { "direction": "in" } ],
+        "MISO1_N": [ { "direction": "out" } ],
+        "MISO2_N_P": [ { "direction": "in" } ],
+        "MISO2_N_N": [ { "direction": "in" } ],
+        "MISO2_N": [ { "direction": "out" } ],
+        "MISO1_O_P": [ { "direction": "in" } ],
+        "MISO1_O_N": [ { "direction": "in" } ],
+        "MISO1_O": [ { "direction": "out" } ],
+        "MISO2_O_P": [ { "direction": "in" } ],
+        "MISO2_O_N": [ { "direction": "in" } ],
+        "MISO2_O": [ { "direction": "out" } ],
+        "MISO1_P_P": [ { "direction": "in" } ],
+        "MISO1_P_N": [ { "direction": "in" } ],
+        "MISO1_P": [ { "direction": "out" } ],
+        "MISO2_P_P": [ { "direction": "in" } ],
+        "MISO2_P_N": [ { "direction": "in" } ],
+        "MISO2_P": [ { "direction": "out" } ]
+      }
+    }
+  }
+}
