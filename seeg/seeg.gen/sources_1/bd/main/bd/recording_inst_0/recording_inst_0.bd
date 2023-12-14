@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x49AB6DD12BFD8E2F",
+      "boundary_crc": "0x7F75C545CEDFB6AE",
       "design_src": "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.srcs/sources_1/bd/recording/recording.bd",
       "device": "xck26-sfvc784-2LV-c",
       "name": "recording_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1",
+      "validated": "true",
       "variant": "true"
     },
     "design_tree": {
@@ -1853,7 +1854,7 @@
               "SEG_rhd_axi_0_reg0": {
                 "address_block": "/rhd_axi_0/s00_axi/reg0",
                 "offset": "0x0000",
-                "range": "32"
+                "range": "4K"
               }
             }
           }

@@ -2735,7 +2735,7 @@
                 "value": "8"
               },
               "NUM_SEG": {
-                "value": "2"
+                "value": "4"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "8"
@@ -2786,6 +2786,48 @@
                 "value": "1"
               },
               "SEG001_SUPPORTS_WRITE": {
+                "value": "1"
+              },
+              "SEG002_BASE_ADDR": {
+                "value": "0x0000000080020000"
+              },
+              "SEG002_SECURE_READ": {
+                "value": "0"
+              },
+              "SEG002_SECURE_WRITE": {
+                "value": "0"
+              },
+              "SEG002_SEP_ROUTE": {
+                "value": "0b0000000000000000000000000000000000000000000000000000000000000010"
+              },
+              "SEG002_SIZE": {
+                "value": "12"
+              },
+              "SEG002_SUPPORTS_READ": {
+                "value": "1"
+              },
+              "SEG002_SUPPORTS_WRITE": {
+                "value": "1"
+              },
+              "SEG003_BASE_ADDR": {
+                "value": "0x0000000080021000"
+              },
+              "SEG003_SECURE_READ": {
+                "value": "0"
+              },
+              "SEG003_SECURE_WRITE": {
+                "value": "0"
+              },
+              "SEG003_SEP_ROUTE": {
+                "value": "0b0000000000000000000000000000000000000000000000000000000000000110"
+              },
+              "SEG003_SIZE": {
+                "value": "12"
+              },
+              "SEG003_SUPPORTS_READ": {
+                "value": "1"
+              },
+              "SEG003_SUPPORTS_WRITE": {
                 "value": "1"
               },
               "SINGLE_ISSUING": {
@@ -2866,7 +2908,7 @@
                 "value": "READ_WRITE"
               },
               "SEP_ROUTE_WIDTH": {
-                "value": "2"
+                "value": "3"
               },
               "SINGLE_ISSUING": {
                 "value": "1"
@@ -2958,7 +3000,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "2"
+                "value": "4"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "8"
@@ -2991,6 +3033,24 @@
                 "value": "32"
               },
               "SEP001_WDATA_WIDTH": {
+                "value": "32"
+              },
+              "SEP002_PROTOCOL": {
+                "value": "AXI4LITE"
+              },
+              "SEP002_RDATA_WIDTH": {
+                "value": "32"
+              },
+              "SEP002_WDATA_WIDTH": {
+                "value": "32"
+              },
+              "SEP003_PROTOCOL": {
+                "value": "AXI4LITE"
+              },
+              "SEP003_RDATA_WIDTH": {
+                "value": "32"
+              },
+              "SEP003_WDATA_WIDTH": {
                 "value": "32"
               },
               "SINGLE_ISSUING": {

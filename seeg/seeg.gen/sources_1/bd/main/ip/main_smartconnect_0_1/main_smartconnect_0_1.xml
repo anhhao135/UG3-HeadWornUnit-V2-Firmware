@@ -95,7 +95,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_CLKEN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ACLK.ASSOCIATED_CLKEN">m_sc_aclken</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ACLK.ASSOCIATED_CLKEN">s_sc_aclken</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -194,7 +194,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_CLKEN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ACLK1.ASSOCIATED_CLKEN">s_sc_aclken</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ACLK1.ASSOCIATED_CLKEN">m_sc_aclken</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1922,11 +1922,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 20:10:49 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:05:25 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0eda5019</spirit:value>
+            <spirit:value>9:92414c88</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1958,11 +1958,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 19:31:44 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:16:17 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:18d6e55c</spirit:value>
+            <spirit:value>9:d1d5aa1d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1974,7 +1974,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:18d6e55c</spirit:value>
+            <spirit:value>9:d1d5aa1d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1990,11 +1990,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 19:26:11 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:07:57 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3aa74fd8</spirit:value>
+            <spirit:value>9:7c8cb513</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -2018,11 +2018,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 19:26:11 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:07:57 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3aa74fd8</spirit:value>
+            <spirit:value>9:7c8cb513</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -2088,7 +2088,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:affe55d0</spirit:value>
+            <spirit:value>9:45ca66e4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2104,11 +2104,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 19:26:11 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:07:57 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:affe55d0</spirit:value>
+            <spirit:value>9:45ca66e4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2124,11 +2124,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 19:26:11 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:07:57 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:18d6e55c</spirit:value>
+            <spirit:value>9:d1d5aa1d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2144,11 +2144,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 14 19:26:11 UTC 2023</spirit:value>
+            <spirit:value>Thu Dec 14 21:07:57 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:18d6e55c</spirit:value>
+            <spirit:value>9:d1d5aa1d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3873,10 +3873,6 @@
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_elaboratebd_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>sc_post_elab.rld</spirit:name>
-        <spirit:userFileType>elaboratedData</spirit:userFileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>sc_xtlm_main_smartconnect_0_1.mem</spirit:name>
         <spirit:userFileType>elaboratedData</spirit:userFileType>
