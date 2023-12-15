@@ -2,18 +2,18 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Dec 14 13:13:47 2023
+// Date        : Fri Dec 15 14:30:12 2023
 // Host        : GramForGram running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top recording_inst_0_util_vector_logic_0_0 -prefix
-//               recording_inst_0_util_vector_logic_0_0_ stimulation_inst_0_util_vector_logic_0_0_sim_netlist.v
-// Design      : stimulation_inst_0_util_vector_logic_0_0
+// Command     : write_verilog -force -mode funcsim
+//               c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/bd/recording_inst_0/ip/recording_inst_0_util_vector_logic_0_0/recording_inst_0_util_vector_logic_0_0_sim_netlist.v
+// Design      : recording_inst_0_util_vector_logic_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xck26-sfvc784-2LV-c
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "stimulation_inst_0_util_vector_logic_0_0,util_vector_logic_v2_0_2_util_vector_logic,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "util_vector_logic_v2_0_2_util_vector_logic,Vivado 2023.1" *) 
+(* CHECK_LICENSE_TYPE = "recording_inst_0_util_vector_logic_0_0,util_vector_logic_v2_0_2_util_vector_logic,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "util_vector_logic_v2_0_2_util_vector_logic,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module recording_inst_0_util_vector_logic_0_0
    (Op1,

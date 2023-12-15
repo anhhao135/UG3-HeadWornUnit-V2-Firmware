@@ -8,6 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1",
+      "validated": "true",
       "variant": "true"
     },
     "design_tree": {
@@ -104,7 +105,7 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "parameters": {
           "ADDR_WIDTH": {
-            "value": "32",
+            "value": "16",
             "value_src": "ip_prop"
           },
           "ARUSER_WIDTH": {
@@ -231,8 +232,8 @@
         "address_space_ref": "S_AXI_LITE",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0xFFFFFFFF",
-          "width": "32"
+          "maximum": "0x0000FFFF",
+          "width": "16"
         },
         "port_maps": {
           "AWADDR": {
@@ -1847,12 +1848,12 @@
       "/": {
         "address_spaces": {
           "S_AXI_LITE": {
-            "range": "4G",
-            "width": "32",
+            "range": "64K",
+            "width": "16",
             "segments": {
               "SEG_rhd_axi_0_reg0": {
                 "address_block": "/rhd_axi_0/s00_axi/reg0",
-                "offset": "0x80010000",
+                "offset": "0x0000",
                 "range": "64K"
               }
             }

@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Thu Dec 14 13:14:54 2023
+-- Date        : Fri Dec 15 14:30:27 2023
 -- Host        : GramForGram running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top stimulation_inst_0_axis_data_fifo_0_0 -prefix
---               stimulation_inst_0_axis_data_fifo_0_0_ stimulation_inst_0_axis_data_fifo_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/bd/stimulation_inst_0/ip/stimulation_inst_0_axis_data_fifo_0_0/stimulation_inst_0_axis_data_fifo_0_0_sim_netlist.vhdl
 -- Design      : stimulation_inst_0_axis_data_fifo_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -29,6 +29,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_xpm_cdc_sync_rst is
   attribute INIT of stimulation_inst_0_axis_data_fifo_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of stimulation_inst_0_axis_data_fifo_0_0_xpm_cdc_sync_rst : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of stimulation_inst_0_axis_data_fifo_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -1881,6 +1883,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_reg_bit is
     wr_en : in STD_LOGIC;
     \count_value_i_reg[7]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_reg_bit is
@@ -1936,6 +1940,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_rst is
     rst_d1 : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_rst is
@@ -2105,6 +2111,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of stimulation_inst_0_axis_data_fifo_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of stimulation_inst_0_axis_data_fifo_0_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of stimulation_inst_0_axis_data_fifo_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -19922,6 +19930,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_base : entity is "1'b1";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -20605,6 +20615,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_axis is
   attribute FIFO_MEMORY_TYPE of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_axis : entity is "auto";
   attribute LOG_DEPTH_AXIS : integer;
   attribute LOG_DEPTH_AXIS of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_axis : entity is 15;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of stimulation_inst_0_axis_data_fifo_0_0_xpm_fifo_axis : entity is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -21078,6 +21090,8 @@ entity stimulation_inst_0_axis_data_fifo_0_0_axis_data_fifo_v2_0_10_top is
   attribute LP_USE_ADV_FEATURES of stimulation_inst_0_axis_data_fifo_0_0_axis_data_fifo_v2_0_10_top : entity is 825241648;
   attribute LP_WR_DATA_COUNT_WIDTH : integer;
   attribute LP_WR_DATA_COUNT_WIDTH of stimulation_inst_0_axis_data_fifo_0_0_axis_data_fifo_v2_0_10_top : entity is 16;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of stimulation_inst_0_axis_data_fifo_0_0_axis_data_fifo_v2_0_10_top : entity is "axis_data_fifo_v2_0_10_top";
 end stimulation_inst_0_axis_data_fifo_0_0_axis_data_fifo_v2_0_10_top;
 
 architecture STRUCTURE of stimulation_inst_0_axis_data_fifo_0_0_axis_data_fifo_v2_0_10_top is

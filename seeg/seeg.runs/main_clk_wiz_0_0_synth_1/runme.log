@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source main_clk_wiz_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 455.125 ; gain = 158.391
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 454.035 ; gain = 158.918
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_clk_wiz_0_0
 Command: synth_design -top main_clk_wiz_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -23,9 +23,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9968
+INFO: [Synth 8-7075] Helper process launched with PID 15712
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 1842.051 ; gain = 338.348
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:58 . Memory (MB): peak = 1842.305 ; gain = 339.910
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.v:69]
 INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_axi_clk_config' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:178]
@@ -359,18 +359,18 @@ WARNING: [Synth 8-7129] Port A[9] in module main_clk_wiz_0_0_pselect_f is either
 WARNING: [Synth 8-7129] Port A[10] in module main_clk_wiz_0_0_pselect_f is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Bus_RNW in module main_clk_wiz_0_0_address_decoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:44 . Memory (MB): peak = 1968.609 ; gain = 464.906
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:01:08 . Memory (MB): peak = 1968.203 ; gain = 465.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:44 . Memory (MB): peak = 1986.531 ; gain = 482.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:01:08 . Memory (MB): peak = 1968.203 ; gain = 465.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:44 . Memory (MB): peak = 1986.531 ; gain = 482.828
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:01:08 . Memory (MB): peak = 1968.203 ; gain = 465.809
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.203 . Memory (MB): peak = 1998.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.210 . Memory (MB): peak = 1968.203 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -378,7 +378,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_ooc.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 2107.844 ; gain = 0.023
+create_clock: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2053.625 ; gain = 7.773
 Finished Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_ooc.xdc] for cell 'inst'
 Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_board.xdc] for cell 'inst'
 Finished Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_board.xdc] for cell 'inst'
@@ -388,17 +388,17 @@ Parsing XDC File [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_
 Finished Parsing XDC File [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2107.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2053.625 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 20 instances were transformed.
   BUFG => BUFGCE: 3 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.414 . Memory (MB): peak = 2107.844 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.501 . Memory (MB): peak = 2053.738 ; gain = 0.113
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:01:28 . Memory (MB): peak = 2107.844 ; gain = 604.141
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:02:03 . Memory (MB): peak = 2053.738 ; gain = 551.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -406,14 +406,14 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:01:28 . Memory (MB): peak = 2107.844 ; gain = 604.141
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:02:03 . Memory (MB): peak = 2053.738 ; gain = 551.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:01:29 . Memory (MB): peak = 2107.844 ; gain = 604.141
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:02:04 . Memory (MB): peak = 2053.738 ; gain = 551.344
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'main_clk_wiz_0_0_slave_attachment'
 WARNING: [Synth 8-3936] Found unconnected internal register 'clkout0_reg_reg' and it is trimmed from '32' to '18' bits. [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:421]
@@ -427,198 +427,5 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'clkfbout_reg_reg' a
                  iSTATE1 |                             1000 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'main_clk_wiz_0_0_slave_attachment'
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:02:03 . Memory (MB): peak = 2107.844 ; gain = 604.141
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   32 Bit       Adders := 1     
-	   4 Input    8 Bit       Adders := 2     
-	   2 Input    7 Bit       Adders := 1     
-	   3 Input    6 Bit       Adders := 13    
-	   2 Input    6 Bit       Adders := 10    
-	   2 Input    5 Bit       Adders := 1     
-+---Registers : 
-	               39 Bit    Registers := 26    
-	               32 Bit    Registers := 34    
-	               26 Bit    Registers := 1     
-	               18 Bit    Registers := 1     
-	               16 Bit    Registers := 6     
-	               11 Bit    Registers := 1     
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 42    
-+---Multipliers : 
-	               4x32  Multipliers := 1     
-	               6x32  Multipliers := 1     
-+---Muxes : 
-	   3 Input   39 Bit        Muxes := 4     
-	   2 Input   39 Bit        Muxes := 6     
-	   2 Input   32 Bit        Muxes := 4     
-	   7 Input   32 Bit        Muxes := 1     
-	   3 Input   27 Bit        Muxes := 2     
-	  10 Input   16 Bit        Muxes := 1     
-	   2 Input   11 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 9     
-	  10 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 27    
-	  10 Input    6 Bit        Muxes := 1     
-	  10 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 7     
-	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 3     
-	   7 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 3     
-	   3 Input    2 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 1     
-	  10 Input    1 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 122   
-	   5 Input    1 Bit        Muxes := 37    
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 1248 (col length:96)
-BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:03:54 . Memory (MB): peak = 2107.844 ; gain = 604.141
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:04:26 . Memory (MB): peak = 2515.316 ; gain = 1011.613
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:04:55 . Memory (MB): peak = 2630.793 ; gain = 1127.090
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:04:57 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
 
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+-----------+------+
-|      |Cell       |Count |
-+------+-----------+------+
-|1     |BUFG       |     3|
-|2     |CARRY8     |    10|
-|3     |LUT1       |     3|
-|4     |LUT2       |   126|
-|5     |LUT3       |   117|
-|6     |LUT4       |   136|
-|7     |LUT5       |   133|
-|8     |LUT6       |   829|
-|9     |MMCME4_ADV |     1|
-|10    |MUXF7      |   152|
-|11    |MUXF8      |     4|
-|12    |FDRE       |  1428|
-|13    |FDSE       |    68|
-+------+-----------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:05:03 . Memory (MB): peak = 2647.336 ; gain = 1143.633
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:04:37 . Memory (MB): peak = 2647.336 ; gain = 1022.320
-Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:05:04 . Memory (MB): peak = 2647.336 ; gain = 1143.633
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2647.336 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 170 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/CLK_CORE_DRP_I/clk_inst/mmcme4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2664.074 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 3 instances were transformed.
-  BUFG => BUFGCE: 3 instances
-
-Synth Design complete | Checksum: f70ccfac
-INFO: [Common 17-83] Releasing license: Synthesis
-86 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:06:32 . Memory (MB): peak = 2664.074 ; gain = 2135.871
-INFO: [Common 17-1381] The checkpoint 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_clk_wiz_0_0, cache-ID = 8374e329ec716f38
-INFO: [Common 17-1381] The checkpoint 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file main_clk_wiz_0_0_utilization_synth.rpt -pb main_clk_wiz_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 14 11:33:37 2023...
+out of memory allocating 8388640 bytes

@@ -7,7 +7,8 @@
       "name": "main",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -2429,7 +2430,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "32",
+                "value": "16",
                 "value_src": "ip_prop"
               },
               "ARUSER_WIDTH": {
@@ -2711,11 +2712,71 @@
           },
           "clk_dma": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "M_AXIS",
+                "value_src": "strong"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "rstn_dma",
+                "value_src": "strong"
+              },
+              "CLK_DOMAIN": {
+                "value": "main_clk_wiz_1_0_clk_dma_250M",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "249997500",
+                "value_src": "ip_prop"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk_rhd": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "S_AXI_LITE",
+                "value_src": "strong"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "rstn_rhd",
+                "value_src": "strong"
+              },
+              "CLK_DOMAIN": {
+                "value": "main_clk_wiz_0_0_clk_rhd",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "6999930",
+                "value_src": "ip_prop"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "fifo_full_cnt": {
             "direction": "O",
@@ -2724,11 +2785,31 @@
           },
           "rstn_dma": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "rstn_rhd": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "MISO1_I_P": {
             "direction": "I"
@@ -2832,7 +2913,7 @@
         "variant_info": {
           "recording.bd": {
             "scoped_diagram": "recording_inst_0.bd",
-            "design_checksum": "0xE26030FE",
+            "design_checksum": "0xF813C131",
             "ref_name": "recording",
             "ref_subinst_path": "main_recording_0",
             "ref_type": "Block Design",
@@ -3173,7 +3254,37 @@
         "ports": {
           "clk_dma": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "M_AXIS",
+                "value_src": "strong"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "rstn_dma",
+                "value_src": "strong"
+              },
+              "CLK_DOMAIN": {
+                "value": "main_clk_wiz_1_0_clk_dma_250M",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "249997500",
+                "value_src": "ip_prop"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "MISO1": {
             "direction": "I"
@@ -3183,15 +3294,65 @@
           },
           "clk_rhs": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "S_AXI_LITE",
+                "value_src": "strong"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "rstn_rhs",
+                "value_src": "strong"
+              },
+              "CLK_DOMAIN": {
+                "value": "main_clk_wiz_0_0_clk_rhd",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "55999440",
+                "value_src": "ip_prop"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rstn_rhs": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "rstn_dma": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "CS": {
             "direction": "O"
@@ -3211,7 +3372,7 @@
         "variant_info": {
           "stimulation.bd": {
             "scoped_diagram": "stimulation_inst_0.bd",
-            "design_checksum": "0x567C102",
+            "design_checksum": "0xE6A1D72B",
             "ref_name": "stimulation",
             "ref_subinst_path": "main_stimulation_0",
             "ref_type": "Block Design",
