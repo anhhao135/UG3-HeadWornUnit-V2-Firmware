@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA09B86B898F48384",
+      "boundary_crc": "0xA09B86B8D83C5436",
       "design_src": "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.srcs/sources_1/bd/stimulation/stimulation.bd",
       "device": "xck26-sfvc784-2LV-c",
       "name": "stimulation_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1",
+      "validated": "true",
       "variant": "true"
     },
     "design_tree": {

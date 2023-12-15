@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Thu Dec 14 13:08:09 2023
+//Date        : Fri Dec 15 12:37:05 2023
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target stimulation_inst_0.bd
 //Design      : stimulation_inst_0
@@ -74,7 +74,7 @@ module stimulation_inst_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WREADY" *) output S_AXI_LITE_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WSTRB" *) input [3:0]S_AXI_LITE_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WVALID" *) input S_AXI_LITE_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_DMA CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_DMA, ASSOCIATED_BUSIF M_AXIS, ASSOCIATED_CLKEN s_axis_aclken, ASSOCIATED_RESET rstn_dma, CLK_DOMAIN main_clk_wiz_1_0_clk_dma_250M, FREQ_HZ 249997500, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_dma;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_DMA CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_DMA, ASSOCIATED_BUSIF M_AXIS, ASSOCIATED_RESET rstn_dma, CLK_DOMAIN main_clk_wiz_1_0_clk_dma_250M, FREQ_HZ 249997500, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_dma;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_RHS CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_RHS, ASSOCIATED_BUSIF S_AXI_LITE, ASSOCIATED_RESET rstn_rhs, CLK_DOMAIN main_clk_wiz_0_0_clk_rhd, FREQ_HZ 55999440, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_rhs;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RSTN_DMA RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RSTN_DMA, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rstn_dma;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RSTN_RHS RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RSTN_RHS, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rstn_rhs;

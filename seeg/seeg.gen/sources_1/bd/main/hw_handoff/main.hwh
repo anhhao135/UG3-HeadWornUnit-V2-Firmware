@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 14 13:08:11 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 15 12:37:06 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="main" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -2309,8 +2309,8 @@
         <PARAMETER NAME="AXI_DRP" VALUE="false"/>
         <PARAMETER NAME="PHASE_DUTY_CONFIG" VALUE="false"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0x80010000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x8001FFFF"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x80020000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x8002FFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="99999001" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
@@ -2413,12 +2413,6 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_rhs" PORT="dcm_locked"/>
-            <CONNECTION INSTANCE="proc_sys_reset_rhd" PORT="dcm_locked"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="6999930" DIR="O" NAME="clk_rhd" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhd">
           <CONNECTIONS>
             <CONNECTION INSTANCE="master_smartconnect_1" PORT="aclk1"/>
@@ -2431,6 +2425,12 @@
             <CONNECTION INSTANCE="proc_sys_reset_rhs" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="master_smartconnect_1" PORT="aclk2"/>
             <CONNECTION INSTANCE="stimulation_0" PORT="clk_rhs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_rhs" PORT="dcm_locked"/>
+            <CONNECTION INSTANCE="proc_sys_reset_rhd" PORT="dcm_locked"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3074,11 +3074,6 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_dma_locked">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_250M" PORT="dcm_locked"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="249997500" DIR="O" NAME="clk_dma_250M" SIGIS="clk" SIGNAME="clk_wiz_dma_clk_dma_250M">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihpc0_fpd_aclk"/>
@@ -3092,6 +3087,11 @@
             <CONNECTION INSTANCE="recording_0" PORT="clk_dma"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_dma_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_250M" PORT="dcm_locked"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -3103,7 +3103,7 @@
         <PARAMETER NAME="TLM_COMPONENT_NAME" VALUE="main_smartconnect_0_0"/>
         <PARAMETER NAME="HAS_RESET" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="main_smartconnect_0_0"/>
-        <PARAMETER NAME="NUM_MI" VALUE="4"/>
+        <PARAMETER NAME="NUM_MI" VALUE="3"/>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
         <PARAMETER NAME="NUM_CLKS" VALUE="2"/>
         <PARAMETER NAME="HAS_ARESETN" VALUE="1"/>
@@ -3114,6 +3114,11 @@
         <PORT CLKFREQUENCY="99999001" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="249997500" DIR="I" NAME="aclk1" SIGIS="clk" SIGNAME="clk_wiz_dma_clk_dma_250M">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_dma" PORT="clk_dma_250M"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
@@ -3393,11 +3398,6 @@
         <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="249997500" DIR="I" NAME="aclk1" SIGIS="clk" SIGNAME="clk_wiz_dma_clk_dma_250M">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_dma" PORT="clk_dma_250M"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="10" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="clk_wiz_0_s_axi_awaddr">
@@ -3692,51 +3692,6 @@
             <CONNECTION INSTANCE="master_smartconnect_1" PORT="S00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M03_AXI_awid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awaddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M03_AXI_awsize" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="M03_AXI_awburst" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_awcache" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M03_AXI_awprot" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_awregion" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_awqos" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_awvalid" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_awready" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_wid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_wlast" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_wuser" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_wvalid" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_wready" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M03_AXI_bid" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M03_AXI_buser" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_bvalid" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_bready" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_araddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M03_AXI_arsize" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="M03_AXI_arburst" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_arcache" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M03_AXI_arprot" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_arregion" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_arqos" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_arvalid" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_arready" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M03_AXI_rid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M03_AXI_rdata" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_rlast" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M03_AXI_ruser" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_rvalid" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_rready" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM0_LPD" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -3997,86 +3952,6 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M02_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="32" NAME="M03_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
-          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
-          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
-          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
-          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
-          <PARAMETER NAME="HAS_QOS" VALUE="1"/>
-          <PARAMETER NAME="HAS_REGION" VALUE="1"/>
-          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
-          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
-          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="main_zynq_ultra_ps_e_0_0_pl_clk0"/>
-          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
-          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
-          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="M03_AXI_awid"/>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M03_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M03_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M03_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M03_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M03_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M03_AXI_awcache"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M03_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M03_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M03_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M03_AXI_awuser"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M03_AXI_awvalid"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M03_AXI_awready"/>
-            <PORTMAP LOGICAL="WID" PHYSICAL="M03_AXI_wid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="M03_AXI_wdata"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M03_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M03_AXI_wlast"/>
-            <PORTMAP LOGICAL="WUSER" PHYSICAL="M03_AXI_wuser"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="M03_AXI_wvalid"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="M03_AXI_wready"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="M03_AXI_bid"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="M03_AXI_bresp"/>
-            <PORTMAP LOGICAL="BUSER" PHYSICAL="M03_AXI_buser"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="M03_AXI_bvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="M03_AXI_bready"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="M03_AXI_arid"/>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M03_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M03_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M03_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M03_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M03_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M03_AXI_arcache"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M03_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M03_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M03_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M03_AXI_aruser"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M03_AXI_arvalid"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M03_AXI_arready"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="M03_AXI_rid"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="M03_AXI_rdata"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="M03_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M03_AXI_rlast"/>
-            <PORTMAP LOGICAL="RUSER" PHYSICAL="M03_AXI_ruser"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="M03_AXI_rvalid"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="M03_AXI_rready"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
     <MODULE BD="main_smartconnect_0_1" BDTYPE="SBD" COREREVISION="20" DRIVERMODE="CORE" FULLNAME="/master_smartconnect_1" HWVERSION="1.0" INSTANCE="master_smartconnect_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="main_smartconnect_0_1" VLNV="xilinx.com:ip:smartconnect:1.0">
@@ -4098,6 +3973,16 @@
         <PORT CLKFREQUENCY="99999001" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="6999930" DIR="I" NAME="aclk1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_rhd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="55999440" DIR="I" NAME="aclk2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_rhs"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_100M_peripheral_aresetn">
@@ -4403,16 +4288,6 @@
         <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="recording_0" PORT="S_AXI_LITE_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="6999930" DIR="I" NAME="aclk1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhd">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_rhd"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="55999440" DIR="I" NAME="aclk2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhs">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_rhs"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="4" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M01_AXI_awaddr">
@@ -4905,6 +4780,121 @@
         <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_tlast" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_tready" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_tvalid" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="S_AXI_LITE_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S_AXI_LITE_awprot" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_LITE_awvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_LITE_awready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S_AXI_LITE_wdata" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S_AXI_LITE_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_LITE_wvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_LITE_wready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S_AXI_LITE_bresp" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_LITE_bvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_LITE_bready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="S_AXI_LITE_araddr" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S_AXI_LITE_arprot" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_LITE_arvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_LITE_arready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="S_AXI_LITE_rdata" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S_AXI_LITE_rresp" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXI_LITE_rvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXI_LITE_rready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="CS" SIGIS="undef" SIGNAME="recording_0_CS">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="RHD_CS"/>
@@ -5023,121 +5013,6 @@
         <PORT DIR="I" NAME="rstn_rhd" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_rhd_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_rhd" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="4" NAME="S_AXI_LITE_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S_AXI_LITE_awprot" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S_AXI_LITE_awvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S_AXI_LITE_awready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S_AXI_LITE_wdata" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S_AXI_LITE_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S_AXI_LITE_wvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S_AXI_LITE_wready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S_AXI_LITE_bresp" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S_AXI_LITE_bvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S_AXI_LITE_bready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="4" NAME="S_AXI_LITE_araddr" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S_AXI_LITE_arprot" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S_AXI_LITE_arvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S_AXI_LITE_arready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="S_AXI_LITE_rdata" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S_AXI_LITE_rresp" RIGHT="0" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S_AXI_LITE_rvalid" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S_AXI_LITE_rready" SIGIS="undef" SIGNAME="master_smartconnect_1_M00_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="master_smartconnect_1" PORT="M00_AXI_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXIS_tlast" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXIS_tready" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXIS_tvalid" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="MISO1_I_P" SIGIS="undef" SIGNAME="External_Ports_RHD_MISO1_I_P">
@@ -5328,7 +5203,7 @@
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="6999930"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="16"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
@@ -6005,56 +5880,6 @@
         <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="249997500" DIR="I" NAME="clk_dma" SIGIS="clk" SIGNAME="clk_wiz_dma_clk_dma_250M">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_dma" PORT="clk_dma_250M"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="MISO1" SIGIS="undef" SIGNAME="External_Ports_RHS_MISO1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MISO1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="MISO2" SIGIS="undef" SIGNAME="External_Ports_RHS_MISO2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MISO2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="55999440" DIR="I" NAME="clk_rhs" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhs">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_rhs"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rstn_rhs" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_rhs_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_rhs" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rstn_dma" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_250M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_250M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="CS" SIGIS="undef" SIGNAME="stimulation_0_CS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="RHS_CS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="stimulation_0_SCLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="RHS_SCLK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="stimulation_0_MOSI1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MOSI1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="MOSI2" SIGIS="undef" SIGNAME="stimulation_0_MOSI2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MOSI2"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="M_AXIS_tlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M_AXIS_tready" SIGIS="undef"/>
@@ -6152,6 +5977,56 @@
         <PORT DIR="I" NAME="S_AXI_LITE_rready" SIGIS="undef" SIGNAME="master_smartconnect_1_M01_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="master_smartconnect_1" PORT="M01_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="249997500" DIR="I" NAME="clk_dma" SIGIS="clk" SIGNAME="clk_wiz_dma_clk_dma_250M">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_dma" PORT="clk_dma_250M"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MISO1" SIGIS="undef" SIGNAME="External_Ports_RHS_MISO1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MISO1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MISO2" SIGIS="undef" SIGNAME="External_Ports_RHS_MISO2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MISO2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="55999440" DIR="I" NAME="clk_rhs" SIGIS="clk" SIGNAME="clk_wiz_0_clk_rhs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_rhs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rstn_rhs" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_rhs_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_rhs" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rstn_dma" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_250M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_250M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CS" SIGIS="undef" SIGNAME="stimulation_0_CS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RHS_CS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="stimulation_0_SCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RHS_SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="stimulation_0_MOSI1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MOSI1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MOSI2" SIGIS="undef" SIGNAME="stimulation_0_MOSI2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RHS_MOSI2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8548,14 +8423,14 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8000FFFF" INSTANCE="axi_dma_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80010000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8001FFFF" INSTANCE="clk_wiz_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_lite"/>
-        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x80020000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x80020FFF" INSTANCE="recording_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s00_axi"/>
-        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x80021000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x80021FFF" INSTANCE="stimulation_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s00_axi"/>
+        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x80010000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8001FFFF" INSTANCE="recording_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s00_axi"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80020000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8002FFFF" INSTANCE="clk_wiz_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_lite"/>
+        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x80030000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8003FFFF" INSTANCE="stimulation_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s00_axi"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="axi_dma_0"/>
-        <PERIPHERAL INSTANCE="clk_wiz_0"/>
         <PERIPHERAL INSTANCE="recording_0"/>
+        <PERIPHERAL INSTANCE="clk_wiz_0"/>
         <PERIPHERAL INSTANCE="stimulation_0"/>
       </PERIPHERALS>
     </MODULE>

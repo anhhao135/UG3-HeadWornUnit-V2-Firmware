@@ -1,61 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 14 13:08:10 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 15 12:37:05 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="stimulation_inst_0" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="249997500" DIR="I" NAME="clk_dma" SIGIS="clk" SIGNAME="External_Ports_clk_dma">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="M_AXIS_ACLK"/>
-        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="MISO1" SIGIS="undef" SIGNAME="External_Ports_MISO1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="MISO2" SIGIS="undef" SIGNAME="External_Ports_MISO2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="55999440" DIR="I" NAME="clk_rhs" SIGIS="clk" SIGNAME="External_Ports_clk_rhs">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aclk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="rstn_rhs" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rstn_rhs">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aresetn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="rstn_dma" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rstn_dma">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="M_AXIS_ARESETN"/>
-        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="CS" SIGIS="undef" SIGNAME="rhs_axi_0_CS_b">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="CS_b"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="SCLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="MOSI2" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI2"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tdata">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="m_axis_tdata"/>
@@ -171,6 +119,58 @@
         <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_rready"/>
       </CONNECTIONS>
     </PORT>
+    <PORT CLKFREQUENCY="249997500" DIR="I" NAME="clk_dma" SIGIS="clk" SIGNAME="External_Ports_clk_dma">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="M_AXIS_ACLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="MISO1" SIGIS="undef" SIGNAME="External_Ports_MISO1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="MISO2" SIGIS="undef" SIGNAME="External_Ports_MISO2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="55999440" DIR="I" NAME="clk_rhs" SIGIS="clk" SIGNAME="External_Ports_clk_rhs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rstn_rhs" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rstn_rhs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rstn_dma" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rstn_dma">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="M_AXIS_ARESETN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CS" SIGIS="undef" SIGNAME="rhs_axi_0_CS_b">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="CS_b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="SCLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="MOSI2" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI2"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -249,7 +249,7 @@
         <PORTMAP LOGICAL="RREADY" PHYSICAL="S_AXI_LITE_rready"/>
       </PORTMAPS>
       <MEMORYMAP>
-        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x00001000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x00001FFF" INSTANCE="rhs_axi_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="S_AXI_LITE" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s00_axi"/>
+        <MEMRANGE ADDRESSBLOCK="reg0" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0000FFFF" INSTANCE="rhs_axi_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="S_AXI_LITE" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s00_axi"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="rhs_axi_0"/>
@@ -412,8 +412,8 @@
         <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="5"/>
         <PARAMETER NAME="Component_Name" VALUE="stimulation_inst_0_rhs_axi_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0x00001000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x00001FFF"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x0000FFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT DIR="I" LEFT="4" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="rhs_axi_0_s00_axi_awaddr">

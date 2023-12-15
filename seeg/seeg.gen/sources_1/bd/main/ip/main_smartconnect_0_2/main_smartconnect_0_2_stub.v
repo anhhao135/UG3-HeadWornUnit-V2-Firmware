@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Dec 14 13:17:51 2023
+// Date        : Thu Dec 14 13:17:43 2023
 // Host        : GramForGram running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top main_smartconnect_0_2 -prefix
+//               main_smartconnect_0_2_ main_smartconnect_0_2_stub.v
 // Design      : main_smartconnect_0_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xck26-sfvc784-2LV-c

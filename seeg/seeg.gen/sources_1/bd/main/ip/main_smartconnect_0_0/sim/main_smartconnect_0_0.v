@@ -174,55 +174,10 @@ module main_smartconnect_0_0 (
   M02_AXI_rlast,
   M02_AXI_ruser,
   M02_AXI_rvalid,
-  M02_AXI_rready,
-  M03_AXI_awid,
-  M03_AXI_awaddr,
-  M03_AXI_awlen,
-  M03_AXI_awsize,
-  M03_AXI_awburst,
-  M03_AXI_awlock,
-  M03_AXI_awcache,
-  M03_AXI_awprot,
-  M03_AXI_awregion,
-  M03_AXI_awqos,
-  M03_AXI_awuser,
-  M03_AXI_awvalid,
-  M03_AXI_awready,
-  M03_AXI_wid,
-  M03_AXI_wdata,
-  M03_AXI_wstrb,
-  M03_AXI_wlast,
-  M03_AXI_wuser,
-  M03_AXI_wvalid,
-  M03_AXI_wready,
-  M03_AXI_bid,
-  M03_AXI_bresp,
-  M03_AXI_buser,
-  M03_AXI_bvalid,
-  M03_AXI_bready,
-  M03_AXI_arid,
-  M03_AXI_araddr,
-  M03_AXI_arlen,
-  M03_AXI_arsize,
-  M03_AXI_arburst,
-  M03_AXI_arlock,
-  M03_AXI_arcache,
-  M03_AXI_arprot,
-  M03_AXI_arregion,
-  M03_AXI_arqos,
-  M03_AXI_aruser,
-  M03_AXI_arvalid,
-  M03_AXI_arready,
-  M03_AXI_rid,
-  M03_AXI_rdata,
-  M03_AXI_rresp,
-  M03_AXI_rlast,
-  M03_AXI_ruser,
-  M03_AXI_rvalid,
-  M03_AXI_rready
+  M02_AXI_rready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_zynq_ultra_ps_e_0_0_pl_clk0, ASSOCIATED_BUSIF M01_AXI:M02_AXI:M03_AXI:S00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_zynq_ultra_ps_e_0_0_pl_clk0, ASSOCIATED_BUSIF M01_AXI:M02_AXI:S00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.aclk CLK" *)
 input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk1, FREQ_HZ 249997500, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN main_clk_wiz_1_0_clk_dma_250M, ASSOCIATED_BUSIF M00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken" *)
@@ -475,98 +430,6 @@ input wire M02_AXI_rvalid;
 UM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M02_AXI RREADY" *)
 output wire M02_AXI_rready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWID" *)
-output wire M03_AXI_awid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWADDR" *)
-output wire M03_AXI_awaddr;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWLEN" *)
-output wire M03_AXI_awlen;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWSIZE" *)
-output wire [2 : 0] M03_AXI_awsize;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWBURST" *)
-output wire [1 : 0] M03_AXI_awburst;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWLOCK" *)
-output wire M03_AXI_awlock;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWCACHE" *)
-output wire [3 : 0] M03_AXI_awcache;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWPROT" *)
-output wire [2 : 0] M03_AXI_awprot;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWREGION" *)
-output wire [3 : 0] M03_AXI_awregion;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWQOS" *)
-output wire [3 : 0] M03_AXI_awqos;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWUSER" *)
-output wire M03_AXI_awuser;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWVALID" *)
-output wire [0 : 0] M03_AXI_awvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI AWREADY" *)
-input wire [0 : 0] M03_AXI_awready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WID" *)
-output wire M03_AXI_wid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WDATA" *)
-output wire M03_AXI_wdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WSTRB" *)
-output wire M03_AXI_wstrb;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WLAST" *)
-output wire [0 : 0] M03_AXI_wlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WUSER" *)
-output wire M03_AXI_wuser;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WVALID" *)
-output wire [0 : 0] M03_AXI_wvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI WREADY" *)
-input wire [0 : 0] M03_AXI_wready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI BID" *)
-input wire M03_AXI_bid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI BRESP" *)
-input wire [1 : 0] M03_AXI_bresp;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI BUSER" *)
-input wire M03_AXI_buser;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI BVALID" *)
-input wire [0 : 0] M03_AXI_bvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI BREADY" *)
-output wire [0 : 0] M03_AXI_bready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARID" *)
-output wire M03_AXI_arid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARADDR" *)
-output wire M03_AXI_araddr;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARLEN" *)
-output wire M03_AXI_arlen;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARSIZE" *)
-output wire [2 : 0] M03_AXI_arsize;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARBURST" *)
-output wire [1 : 0] M03_AXI_arburst;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARLOCK" *)
-output wire M03_AXI_arlock;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARCACHE" *)
-output wire [3 : 0] M03_AXI_arcache;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARPROT" *)
-output wire [2 : 0] M03_AXI_arprot;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARREGION" *)
-output wire [3 : 0] M03_AXI_arregion;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARQOS" *)
-output wire [3 : 0] M03_AXI_arqos;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARUSER" *)
-output wire M03_AXI_aruser;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARVALID" *)
-output wire [0 : 0] M03_AXI_arvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI ARREADY" *)
-input wire [0 : 0] M03_AXI_arready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RID" *)
-input wire M03_AXI_rid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RDATA" *)
-input wire M03_AXI_rdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RRESP" *)
-input wire [1 : 0] M03_AXI_rresp;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RLAST" *)
-input wire [0 : 0] M03_AXI_rlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RUSER" *)
-input wire M03_AXI_ruser;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RVALID" *)
-input wire [0 : 0] M03_AXI_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M03_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 99999001, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN main_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRI\
-TE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M03_AXI RREADY" *)
-output wire [0 : 0] M03_AXI_rready;
 
   bd_7793 inst (
     .aclk(aclk),
@@ -689,51 +552,6 @@ output wire [0 : 0] M03_AXI_rready;
     .M02_AXI_rlast(M02_AXI_rlast),
     .M02_AXI_ruser(M02_AXI_ruser),
     .M02_AXI_rvalid(M02_AXI_rvalid),
-    .M02_AXI_rready(M02_AXI_rready),
-    .M03_AXI_awid(M03_AXI_awid),
-    .M03_AXI_awaddr(M03_AXI_awaddr),
-    .M03_AXI_awlen(M03_AXI_awlen),
-    .M03_AXI_awsize(M03_AXI_awsize),
-    .M03_AXI_awburst(M03_AXI_awburst),
-    .M03_AXI_awlock(M03_AXI_awlock),
-    .M03_AXI_awcache(M03_AXI_awcache),
-    .M03_AXI_awprot(M03_AXI_awprot),
-    .M03_AXI_awregion(M03_AXI_awregion),
-    .M03_AXI_awqos(M03_AXI_awqos),
-    .M03_AXI_awuser(M03_AXI_awuser),
-    .M03_AXI_awvalid(M03_AXI_awvalid),
-    .M03_AXI_awready(M03_AXI_awready),
-    .M03_AXI_wid(M03_AXI_wid),
-    .M03_AXI_wdata(M03_AXI_wdata),
-    .M03_AXI_wstrb(M03_AXI_wstrb),
-    .M03_AXI_wlast(M03_AXI_wlast),
-    .M03_AXI_wuser(M03_AXI_wuser),
-    .M03_AXI_wvalid(M03_AXI_wvalid),
-    .M03_AXI_wready(M03_AXI_wready),
-    .M03_AXI_bid(M03_AXI_bid),
-    .M03_AXI_bresp(M03_AXI_bresp),
-    .M03_AXI_buser(M03_AXI_buser),
-    .M03_AXI_bvalid(M03_AXI_bvalid),
-    .M03_AXI_bready(M03_AXI_bready),
-    .M03_AXI_arid(M03_AXI_arid),
-    .M03_AXI_araddr(M03_AXI_araddr),
-    .M03_AXI_arlen(M03_AXI_arlen),
-    .M03_AXI_arsize(M03_AXI_arsize),
-    .M03_AXI_arburst(M03_AXI_arburst),
-    .M03_AXI_arlock(M03_AXI_arlock),
-    .M03_AXI_arcache(M03_AXI_arcache),
-    .M03_AXI_arprot(M03_AXI_arprot),
-    .M03_AXI_arregion(M03_AXI_arregion),
-    .M03_AXI_arqos(M03_AXI_arqos),
-    .M03_AXI_aruser(M03_AXI_aruser),
-    .M03_AXI_arvalid(M03_AXI_arvalid),
-    .M03_AXI_arready(M03_AXI_arready),
-    .M03_AXI_rid(M03_AXI_rid),
-    .M03_AXI_rdata(M03_AXI_rdata),
-    .M03_AXI_rresp(M03_AXI_rresp),
-    .M03_AXI_rlast(M03_AXI_rlast),
-    .M03_AXI_ruser(M03_AXI_ruser),
-    .M03_AXI_rvalid(M03_AXI_rvalid),
-    .M03_AXI_rready(M03_AXI_rready)
+    .M02_AXI_rready(M02_AXI_rready)
   );
 endmodule

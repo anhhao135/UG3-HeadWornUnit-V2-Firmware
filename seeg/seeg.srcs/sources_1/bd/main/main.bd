@@ -2430,7 +2430,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "16",
+                "value": "32",
                 "value_src": "ip_prop"
               },
               "ARUSER_WIDTH": {

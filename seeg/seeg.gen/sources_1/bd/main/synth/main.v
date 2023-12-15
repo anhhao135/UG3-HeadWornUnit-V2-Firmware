@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Thu Dec 14 13:07:48 2023
+//Date        : Fri Dec 15 12:36:31 2023
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target main.bd
 //Design      : main
@@ -661,19 +661,6 @@ module main
         .M02_AXI_wstrb(master_smartconnect_0_M02_AXI_WSTRB),
         .M02_AXI_wuser(master_smartconnect_0_M02_AXI_WUSER),
         .M02_AXI_wvalid(master_smartconnect_0_M02_AXI_WVALID),
-        .M03_AXI_arready(1'b0),
-        .M03_AXI_awready(1'b0),
-        .M03_AXI_bid(1'b0),
-        .M03_AXI_bresp({1'b0,1'b0}),
-        .M03_AXI_buser(1'b0),
-        .M03_AXI_bvalid(1'b0),
-        .M03_AXI_rdata(1'b0),
-        .M03_AXI_rid(1'b0),
-        .M03_AXI_rlast(1'b0),
-        .M03_AXI_rresp({1'b0,1'b0}),
-        .M03_AXI_ruser(1'b0),
-        .M03_AXI_rvalid(1'b0),
-        .M03_AXI_wready(1'b0),
         .S00_AXI_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR),
         .S00_AXI_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST),
         .S00_AXI_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARCACHE),
