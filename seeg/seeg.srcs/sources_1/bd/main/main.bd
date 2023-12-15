@@ -1804,7 +1804,7 @@
             "value": "2"
           },
           "NUM_MI": {
-            "value": "4"
+            "value": "3"
           },
           "NUM_SI": {
             "value": "1"
@@ -1826,8 +1826,7 @@
             "bridges": [
               "M00_AXI",
               "M01_AXI",
-              "M02_AXI",
-              "M03_AXI"
+              "M02_AXI"
             ]
           },
           "M00_AXI": {
@@ -1922,11 +1921,6 @@
                 "value": "0"
               }
             }
-          },
-          "M03_AXI": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         }
       },
@@ -2919,7 +2913,7 @@
         "variant_info": {
           "recording.bd": {
             "scoped_diagram": "recording_inst_0.bd",
-            "design_checksum": "0x9D52B7CD",
+            "design_checksum": "0xE26030FE",
             "ref_name": "recording",
             "ref_subinst_path": "main_recording_0",
             "ref_type": "Block Design",
@@ -3266,10 +3260,6 @@
                 "value": "M_AXIS",
                 "value_src": "strong"
               },
-              "ASSOCIATED_CLKEN": {
-                "value": "s_axis_aclken",
-                "value_src": "strong"
-              },
               "ASSOCIATED_RESET": {
                 "value": "rstn_dma",
                 "value_src": "strong"
@@ -3382,7 +3372,7 @@
         "variant_info": {
           "stimulation.bd": {
             "scoped_diagram": "stimulation_inst_0.bd",
-            "design_checksum": "0x80DAF2C9",
+            "design_checksum": "0x567C102",
             "ref_name": "stimulation",
             "ref_subinst_path": "main_stimulation_0",
             "ref_type": "Block Design",
@@ -3908,18 +3898,18 @@
               },
               "SEG_clk_wiz_0_Reg": {
                 "address_block": "/clk_wiz_0/s_axi_lite/Reg",
-                "offset": "0x0080010000",
+                "offset": "0x0080020000",
                 "range": "64K"
               },
               "SEG_rhd_axi_0_reg0": {
                 "address_block": "/recording_0/rhd_axi_0/s00_axi/reg0",
-                "offset": "0x0080020000",
-                "range": "4K"
+                "offset": "0x0080010000",
+                "range": "64K"
               },
               "SEG_rhs_axi_0_reg0": {
                 "address_block": "/stimulation_0/rhs_axi_0/s00_axi/reg0",
-                "offset": "0x0080021000",
-                "range": "4K"
+                "offset": "0x0080030000",
+                "range": "64K"
               }
             }
           }

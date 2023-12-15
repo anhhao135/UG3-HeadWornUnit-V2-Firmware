@@ -8,7 +8,6 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1",
-      "validated": "true",
       "variant": "true"
     },
     "design_tree": {
@@ -16,8 +15,8 @@
       "axis_data_fifo_0": "",
       "util_vector_logic_0": "",
       "util_vector_logic_1": "",
-      "rhd_axi_0": "",
-      "rhd_diff_to_single_0": ""
+      "rhd_diff_to_single_0": "",
+      "rhd_axi_0": ""
     },
     "interface_ports": {
       "M_AXIS": {
@@ -695,6 +694,163 @@
           }
         }
       },
+      "rhd_diff_to_single_0": {
+        "vlnv": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
+        "xci_name": "recording_inst_0_rhd_diff_to_single_0_0",
+        "xci_path": "ip\\recording_inst_0_rhd_diff_to_single_0_0\\recording_inst_0_rhd_diff_to_single_0_0.xci",
+        "inst_hier_path": "rhd_diff_to_single_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rhd_diff_to_single",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MISO1_I_P": {
+            "direction": "I"
+          },
+          "MISO1_I_N": {
+            "direction": "I"
+          },
+          "MISO1_I": {
+            "direction": "O"
+          },
+          "MISO2_I_P": {
+            "direction": "I"
+          },
+          "MISO2_I_N": {
+            "direction": "I"
+          },
+          "MISO2_I": {
+            "direction": "O"
+          },
+          "MISO1_J_P": {
+            "direction": "I"
+          },
+          "MISO1_J_N": {
+            "direction": "I"
+          },
+          "MISO1_J": {
+            "direction": "O"
+          },
+          "MISO2_J_P": {
+            "direction": "I"
+          },
+          "MISO2_J_N": {
+            "direction": "I"
+          },
+          "MISO2_J": {
+            "direction": "O"
+          },
+          "MISO1_K_P": {
+            "direction": "I"
+          },
+          "MISO1_K_N": {
+            "direction": "I"
+          },
+          "MISO1_K": {
+            "direction": "O"
+          },
+          "MISO2_K_P": {
+            "direction": "I"
+          },
+          "MISO2_K_N": {
+            "direction": "I"
+          },
+          "MISO2_K": {
+            "direction": "O"
+          },
+          "MISO1_L_P": {
+            "direction": "I"
+          },
+          "MISO1_L_N": {
+            "direction": "I"
+          },
+          "MISO1_L": {
+            "direction": "O"
+          },
+          "MISO2_L_P": {
+            "direction": "I"
+          },
+          "MISO2_L_N": {
+            "direction": "I"
+          },
+          "MISO2_L": {
+            "direction": "O"
+          },
+          "MISO1_M_P": {
+            "direction": "I"
+          },
+          "MISO1_M_N": {
+            "direction": "I"
+          },
+          "MISO1_M": {
+            "direction": "O"
+          },
+          "MISO2_M_P": {
+            "direction": "I"
+          },
+          "MISO2_M_N": {
+            "direction": "I"
+          },
+          "MISO2_M": {
+            "direction": "O"
+          },
+          "MISO1_N_P": {
+            "direction": "I"
+          },
+          "MISO1_N_N": {
+            "direction": "I"
+          },
+          "MISO1_N": {
+            "direction": "O"
+          },
+          "MISO2_N_P": {
+            "direction": "I"
+          },
+          "MISO2_N_N": {
+            "direction": "I"
+          },
+          "MISO2_N": {
+            "direction": "O"
+          },
+          "MISO1_O_P": {
+            "direction": "I"
+          },
+          "MISO1_O_N": {
+            "direction": "I"
+          },
+          "MISO1_O": {
+            "direction": "O"
+          },
+          "MISO2_O_P": {
+            "direction": "I"
+          },
+          "MISO2_O_N": {
+            "direction": "I"
+          },
+          "MISO2_O": {
+            "direction": "O"
+          },
+          "MISO1_P_P": {
+            "direction": "I"
+          },
+          "MISO1_P_N": {
+            "direction": "I"
+          },
+          "MISO1_P": {
+            "direction": "O"
+          },
+          "MISO2_P_P": {
+            "direction": "I"
+          },
+          "MISO2_P_N": {
+            "direction": "I"
+          },
+          "MISO2_P": {
+            "direction": "O"
+          }
+        }
+      },
       "rhd_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhd_axi:1.0",
         "xci_name": "recording_inst_0_rhd_axi_0_0",
@@ -1197,163 +1353,6 @@
             }
           }
         }
-      },
-      "rhd_diff_to_single_0": {
-        "vlnv": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
-        "xci_name": "recording_inst_0_rhd_diff_to_single_0_0",
-        "xci_path": "ip\\recording_inst_0_rhd_diff_to_single_0_0\\recording_inst_0_rhd_diff_to_single_0_0.xci",
-        "inst_hier_path": "rhd_diff_to_single_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhd_diff_to_single",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MISO1_I_P": {
-            "direction": "I"
-          },
-          "MISO1_I_N": {
-            "direction": "I"
-          },
-          "MISO1_I": {
-            "direction": "O"
-          },
-          "MISO2_I_P": {
-            "direction": "I"
-          },
-          "MISO2_I_N": {
-            "direction": "I"
-          },
-          "MISO2_I": {
-            "direction": "O"
-          },
-          "MISO1_J_P": {
-            "direction": "I"
-          },
-          "MISO1_J_N": {
-            "direction": "I"
-          },
-          "MISO1_J": {
-            "direction": "O"
-          },
-          "MISO2_J_P": {
-            "direction": "I"
-          },
-          "MISO2_J_N": {
-            "direction": "I"
-          },
-          "MISO2_J": {
-            "direction": "O"
-          },
-          "MISO1_K_P": {
-            "direction": "I"
-          },
-          "MISO1_K_N": {
-            "direction": "I"
-          },
-          "MISO1_K": {
-            "direction": "O"
-          },
-          "MISO2_K_P": {
-            "direction": "I"
-          },
-          "MISO2_K_N": {
-            "direction": "I"
-          },
-          "MISO2_K": {
-            "direction": "O"
-          },
-          "MISO1_L_P": {
-            "direction": "I"
-          },
-          "MISO1_L_N": {
-            "direction": "I"
-          },
-          "MISO1_L": {
-            "direction": "O"
-          },
-          "MISO2_L_P": {
-            "direction": "I"
-          },
-          "MISO2_L_N": {
-            "direction": "I"
-          },
-          "MISO2_L": {
-            "direction": "O"
-          },
-          "MISO1_M_P": {
-            "direction": "I"
-          },
-          "MISO1_M_N": {
-            "direction": "I"
-          },
-          "MISO1_M": {
-            "direction": "O"
-          },
-          "MISO2_M_P": {
-            "direction": "I"
-          },
-          "MISO2_M_N": {
-            "direction": "I"
-          },
-          "MISO2_M": {
-            "direction": "O"
-          },
-          "MISO1_N_P": {
-            "direction": "I"
-          },
-          "MISO1_N_N": {
-            "direction": "I"
-          },
-          "MISO1_N": {
-            "direction": "O"
-          },
-          "MISO2_N_P": {
-            "direction": "I"
-          },
-          "MISO2_N_N": {
-            "direction": "I"
-          },
-          "MISO2_N": {
-            "direction": "O"
-          },
-          "MISO1_O_P": {
-            "direction": "I"
-          },
-          "MISO1_O_N": {
-            "direction": "I"
-          },
-          "MISO1_O": {
-            "direction": "O"
-          },
-          "MISO2_O_P": {
-            "direction": "I"
-          },
-          "MISO2_O_N": {
-            "direction": "I"
-          },
-          "MISO2_O": {
-            "direction": "O"
-          },
-          "MISO1_P_P": {
-            "direction": "I"
-          },
-          "MISO1_P_N": {
-            "direction": "I"
-          },
-          "MISO1_P": {
-            "direction": "O"
-          },
-          "MISO2_P_P": {
-            "direction": "I"
-          },
-          "MISO2_P_N": {
-            "direction": "I"
-          },
-          "MISO2_P": {
-            "direction": "O"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -1854,7 +1853,7 @@
               "SEG_rhd_axi_0_reg0": {
                 "address_block": "/rhd_axi_0/s00_axi/reg0",
                 "offset": "0x0000",
-                "range": "4K"
+                "range": "64K"
               }
             }
           }

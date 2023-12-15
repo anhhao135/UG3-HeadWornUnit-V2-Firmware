@@ -8,13 +8,12 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1",
-      "validated": "true",
       "variant": "true"
     },
     "design_tree": {
-      "rhs_axi_0": "",
       "util_vector_logic_0": "",
-      "axis_data_fifo_0": ""
+      "axis_data_fifo_0": "",
+      "rhs_axi_0": ""
     },
     "interface_ports": {
       "M_AXIS": {
@@ -339,10 +338,6 @@
             "value": "M_AXIS",
             "value_src": "strong"
           },
-          "ASSOCIATED_CLKEN": {
-            "value": "s_axis_aclken",
-            "value_src": "strong"
-          },
           "ASSOCIATED_RESET": {
             "value": "rstn_dma",
             "value_src": "strong"
@@ -451,6 +446,34 @@
       }
     },
     "components": {
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "stimulation_inst_0_util_vector_logic_0_0",
+        "xci_path": "ip\\stimulation_inst_0_util_vector_logic_0_0\\stimulation_inst_0_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "axis_data_fifo_0": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "xci_name": "stimulation_inst_0_axis_data_fifo_0_0",
+        "xci_path": "ip\\stimulation_inst_0_axis_data_fifo_0_0\\stimulation_inst_0_axis_data_fifo_0_0.xci",
+        "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "32768"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "8"
+          }
+        }
+      },
       "rhs_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhs_axi:1.0",
         "xci_name": "stimulation_inst_0_rhs_axi_0_0",
@@ -860,34 +883,6 @@
             }
           }
         }
-      },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "stimulation_inst_0_util_vector_logic_0_0",
-        "xci_path": "ip\\stimulation_inst_0_util_vector_logic_0_0\\stimulation_inst_0_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
-      "axis_data_fifo_0": {
-        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "stimulation_inst_0_axis_data_fifo_0_0",
-        "xci_path": "ip\\stimulation_inst_0_axis_data_fifo_0_0\\stimulation_inst_0_axis_data_fifo_0_0.xci",
-        "inst_hier_path": "axis_data_fifo_0",
-        "parameters": {
-          "FIFO_DEPTH": {
-            "value": "32768"
-          },
-          "HAS_TLAST": {
-            "value": "1"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "8"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -926,8 +921,8 @@
       "clk_dma_1": {
         "ports": [
           "clk_dma",
-          "rhs_axi_0/M_AXIS_ACLK",
-          "axis_data_fifo_0/s_axis_aclk"
+          "axis_data_fifo_0/s_axis_aclk",
+          "rhs_axi_0/M_AXIS_ACLK"
         ]
       },
       "clk_rhs_1": {
@@ -969,8 +964,8 @@
       "rstn_dma_1": {
         "ports": [
           "rstn_dma",
-          "rhs_axi_0/M_AXIS_ARESETN",
-          "util_vector_logic_0/Op1"
+          "util_vector_logic_0/Op1",
+          "rhs_axi_0/M_AXIS_ARESETN"
         ]
       },
       "rstn_rhs_1": {
@@ -995,8 +990,8 @@
             "segments": {
               "SEG_rhs_axi_0_reg0": {
                 "address_block": "/rhs_axi_0/s00_axi/reg0",
-                "offset": "0x1000",
-                "range": "4K"
+                "offset": "0x0000",
+                "range": "64K"
               }
             }
           }
