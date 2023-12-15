@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,650.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="7,015.501 ns"></ZoomEndTime>
-      <Cursor1Time time="5,900.500 ns"></Cursor1Time>
+      <ZoomStartTime time="49,645.600 ns"></ZoomStartTime>
+      <ZoomEndTime time="49,678.751 ns"></ZoomEndTime>
+      <Cursor1Time time="49,658.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="173"></ValueColumnWidth>
+      <ValueColumnWidth column_width="169"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
+   <WVObjectSize size="33" />
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mst_agent_verbosity" type="array">
       <obj_property name="ElementShortName">mst_agent_verbosity[31:0]</obj_property>
       <obj_property name="ObjectShortName">mst_agent_verbosity[31:0]</obj_property>
@@ -144,5 +144,17 @@
       <obj_property name="ElementShortName">channel[5:0]</obj_property>
       <obj_property name="ObjectShortName">channel[5:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/flag_lastBatch_250M" type="logic">
+      <obj_property name="ElementShortName">flag_lastBatch_250M</obj_property>
+      <obj_property name="ObjectShortName">flag_lastBatch_250M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/tlast_flag_bit" type="logic">
+      <obj_property name="ElementShortName">tlast_flag_bit</obj_property>
+      <obj_property name="ObjectShortName">tlast_flag_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/tlast_cnt" type="array">
+      <obj_property name="ElementShortName">tlast_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tlast_cnt[3:0]</obj_property>
    </wvobject>
 </wave_config>

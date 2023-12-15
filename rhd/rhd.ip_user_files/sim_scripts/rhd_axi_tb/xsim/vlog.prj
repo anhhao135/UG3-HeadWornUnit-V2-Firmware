@@ -3,8 +3,8 @@ sv xil_defaultlib --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --
 "../../../bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0.sv" \
 
 verilog xil_defaultlib --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../rhd.gen/sources_1/bd/rhd_axi_tb/ipshared/ec67/hdl" \
-"../../../bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" \
 "../../../bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_9/sim/rhd_axi_tb_rhd_headstage_slave_0_9.v" \
+"../../../bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" \
 "../../../bd/rhd_axi_tb/sim/rhd_axi_tb.v" \
 
 verilog xil_defaultlib "glbl.v"

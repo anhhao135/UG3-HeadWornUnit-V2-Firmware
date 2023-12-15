@@ -643,9 +643,9 @@ module rhd
     wire         flag_lastBatch_250M;
     wire         flag_lastchannel_250M;
 
-    reg [3:0]   tlast_cnt; 
+    reg [4:0]   tlast_cnt; 
     wire        tlast_flag_bit;
-    assign      tlast_flag_bit = tlast_cnt[3];
+    assign      tlast_flag_bit = tlast_cnt[4];
 
 
     xpm_cdc_1bit xpm_cdc_1bit_inst_2(

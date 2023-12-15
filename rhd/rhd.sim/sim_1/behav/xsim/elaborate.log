@@ -7,6 +7,40 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full_16_probes.v" Line 1. Module rhd_headstage_slave_full_16_probes doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full_16_probes.v" Line 1. Module rhd_headstage_slave_full_16_probes doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" Line 1. Module rhd_headstage_slave doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard

@@ -44,8 +44,8 @@ vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L xilinx_vip "+i
 "../../../bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../rhd.gen/sources_1/bd/rhd_axi_tb/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" \
 "../../../bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_9/sim/rhd_axi_tb_rhd_headstage_slave_0_9.v" \
+"../../../bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" \
 "../../../bd/rhd_axi_tb/sim/rhd_axi_tb.v" \
 
 vlog -work xil_defaultlib \

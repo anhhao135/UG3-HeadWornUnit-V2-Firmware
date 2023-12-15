@@ -7,8 +7,7 @@
       "name": "main",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1",
-      "validated": "true"
+      "tool_version": "2023.1"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -2712,71 +2711,11 @@
           },
           "clk_dma": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "M_AXIS",
-                "value_src": "strong"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "rstn_dma",
-                "value_src": "strong"
-              },
-              "CLK_DOMAIN": {
-                "value": "main_clk_wiz_1_0_clk_dma_250M",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "249997500",
-                "value_src": "ip_prop"
-              },
-              "FREQ_TOLERANCE_HZ": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "clk_rhd": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "S_AXI_LITE",
-                "value_src": "strong"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "rstn_rhd",
-                "value_src": "strong"
-              },
-              "CLK_DOMAIN": {
-                "value": "main_clk_wiz_0_0_clk_rhd",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "6999930",
-                "value_src": "ip_prop"
-              },
-              "FREQ_TOLERANCE_HZ": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "fifo_full_cnt": {
             "direction": "O",
@@ -2785,31 +2724,11 @@
           },
           "rstn_dma": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
+            "direction": "I"
           },
           "rstn_rhd": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
+            "direction": "I"
           },
           "MISO1_I_P": {
             "direction": "I"
@@ -3254,37 +3173,7 @@
         "ports": {
           "clk_dma": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "M_AXIS",
-                "value_src": "strong"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "rstn_dma",
-                "value_src": "strong"
-              },
-              "CLK_DOMAIN": {
-                "value": "main_clk_wiz_1_0_clk_dma_250M",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "249997500",
-                "value_src": "ip_prop"
-              },
-              "FREQ_TOLERANCE_HZ": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "MISO1": {
             "direction": "I"
@@ -3294,65 +3183,15 @@
           },
           "clk_rhs": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "S_AXI_LITE",
-                "value_src": "strong"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "rstn_rhs",
-                "value_src": "strong"
-              },
-              "CLK_DOMAIN": {
-                "value": "main_clk_wiz_0_0_clk_rhd",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "55999440",
-                "value_src": "ip_prop"
-              },
-              "FREQ_TOLERANCE_HZ": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "rstn_rhs": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
+            "direction": "I"
           },
           "rstn_dma": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "INSERT_VIP": {
-                "value": "0",
-                "value_src": "strong"
-              },
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
+            "direction": "I"
           },
           "CS": {
             "direction": "O"

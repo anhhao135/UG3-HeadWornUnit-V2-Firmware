@@ -1,3 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_headstage_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full_16_probes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_headstage_slave_full_16_probes
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo_generator_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" into library xil_defaultlib
@@ -13,23 +17,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmwa
 INFO: [VRFC 10-311] analyzing module rhd_S00_AXI
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rhd_axi
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_headstage_slave
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full_16_probes.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_headstage_slave_full_16_probes
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0_pkg.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb_axi_vip_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb_rhd_axi_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_headstage_slave_0_9/sim/rhd_axi_tb_rhd_headstage_slave_0_9.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb_rhd_headstage_slave_0_9
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.ip_user_files/bd/rhd_axi_tb/sim/rhd_axi_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.gen/sources_1/bd/rhd_axi_tb/hdl/rhd_axi_tb_wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb_wrapper
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb_wrapper_tb
-WARNING: [VRFC 10-8658] /* is inside a comment [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv:161]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/rhd.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
