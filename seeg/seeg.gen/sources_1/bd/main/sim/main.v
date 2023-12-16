@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Dec 15 14:20:49 2023
-//Host        : GramForGram running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+//Date        : Fri Dec 15 16:22:20 2023
+//Host        : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target main.bd
 //Design      : main
 //Purpose     : IP block netlist
@@ -243,6 +243,7 @@ module main
   wire axi_dma_0_M_AXI_SG_WREADY;
   wire [3:0]axi_dma_0_M_AXI_SG_WSTRB;
   wire axi_dma_0_M_AXI_SG_WVALID;
+  wire axi_dma_0_s2mm_introut;
   wire clk_wiz_0_clk_rhd;
   wire clk_wiz_0_clk_rhs;
   wire clk_wiz_dma_locked;
@@ -536,6 +537,7 @@ module main
         .m_axi_sg_wready(axi_dma_0_M_AXI_SG_WREADY),
         .m_axi_sg_wstrb(axi_dma_0_M_AXI_SG_WSTRB),
         .m_axi_sg_wvalid(axi_dma_0_M_AXI_SG_WVALID),
+        .s2mm_introut(axi_dma_0_s2mm_introut),
         .s_axi_lite_aclk(Net),
         .s_axi_lite_araddr(master_smartconnect_0_M00_AXI_ARADDR),
         .s_axi_lite_arready(master_smartconnect_0_M00_AXI_ARREADY),
@@ -1056,7 +1058,7 @@ module main
         .maxigp2_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID),
         .maxihpm0_lpd_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .pl_clk0(zynq_ultra_ps_e_0_pl_clk0),
-        .pl_ps_irq0(1'b0),
+        .pl_ps_irq0(axi_dma_0_s2mm_introut),
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0),
         .saxigp0_araddr(smartconnect_0_M00_AXI_ARADDR),
         .saxigp0_arburst(smartconnect_0_M00_AXI_ARBURST),

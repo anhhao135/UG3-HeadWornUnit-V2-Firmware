@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="63" Path="C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.xpr">
+<Project Product="Vivado" Version="7" Minor="63" Path="/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5ffa5fdf66d44fba9ef7df2b0b3aafe1"/>
@@ -44,7 +44,6 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val="xilinx.com:k26c:part0:1.4"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../Users/anhha/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -170,23 +169,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_3/main_proc_sys_reset_0_3.xci">
-          <Proxy FileSetName="main_proc_sys_reset_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_clk_wiz_1_0/main_clk_wiz_1_0.xci">
-          <Proxy FileSetName="main_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_axi_dma_0_0/main_axi_dma_0_0.xci">
-          <Proxy FileSetName="main_axi_dma_0_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_zynq_ultra_ps_e_0_0/main_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="main_zynq_ultra_ps_e_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_0/main_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="main_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_1/main_smartconnect_0_1.xci">
-          <Proxy FileSetName="main_smartconnect_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_zynq_ultra_ps_e_0_0/main_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="main_zynq_ultra_ps_e_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xci">
           <Proxy FileSetName="main_clk_wiz_0_0"/>
@@ -194,14 +181,17 @@
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_1/main_proc_sys_reset_0_1.xci">
           <Proxy FileSetName="main_proc_sys_reset_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_0/main_smartconnect_0_0.xci">
-          <Proxy FileSetName="main_smartconnect_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_2/main_proc_sys_reset_0_2.xci">
           <Proxy FileSetName="main_proc_sys_reset_0_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_2/main_smartconnect_0_2.xci">
-          <Proxy FileSetName="main_smartconnect_0_2"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_axi_dma_0_0/main_axi_dma_0_0.xci">
+          <Proxy FileSetName="main_axi_dma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_3/main_proc_sys_reset_0_3.xci">
+          <Proxy FileSetName="main_proc_sys_reset_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_clk_wiz_1_0/main_clk_wiz_1_0.xci">
+          <Proxy FileSetName="main_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/main/hdl/main_wrapper.v">
@@ -338,23 +328,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_rhd_diff_to_single_0_0/recording_inst_0_rhd_diff_to_single_0_0.xci">
+          <Proxy FileSetName="recording_inst_0_rhd_diff_to_single_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_util_vector_logic_1_0/recording_inst_0_util_vector_logic_1_0.xci">
+          <Proxy FileSetName="recording_inst_0_util_vector_logic_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_RisingEdgeCounter_0_0/recording_inst_0_RisingEdgeCounter_0_0.xci">
+          <Proxy FileSetName="recording_inst_0_RisingEdgeCounter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_util_vector_logic_0_0/recording_inst_0_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="recording_inst_0_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_rhd_axi_0_0/recording_inst_0_rhd_axi_0_0.xci">
           <Proxy FileSetName="recording_inst_0_rhd_axi_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_axis_data_fifo_0_0/recording_inst_0_axis_data_fifo_0_0.xci">
           <Proxy FileSetName="recording_inst_0_axis_data_fifo_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_util_vector_logic_1_0/recording_inst_0_util_vector_logic_1_0.xci">
-          <Proxy FileSetName="recording_inst_0_util_vector_logic_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_util_vector_logic_0_0/recording_inst_0_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="recording_inst_0_util_vector_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_rhd_diff_to_single_0_0/recording_inst_0_rhd_diff_to_single_0_0.xci">
-          <Proxy FileSetName="recording_inst_0_rhd_diff_to_single_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="recording_inst_0.bd" FileRelPathName="ip/recording_inst_0_RisingEdgeCounter_0_0/recording_inst_0_RisingEdgeCounter_0_0.xci">
-          <Proxy FileSetName="recording_inst_0_RisingEdgeCounter_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <Config>
@@ -369,18 +359,54 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="stimulation_inst_0.bd" FileRelPathName="ip/stimulation_inst_0_rhs_axi_0_0/stimulation_inst_0_rhs_axi_0_0.xci">
-          <Proxy FileSetName="stimulation_inst_0_rhs_axi_0_0"/>
+        <CompFileExtendedInfo CompFileName="stimulation_inst_0.bd" FileRelPathName="ip/stimulation_inst_0_axis_data_fifo_0_0/stimulation_inst_0_axis_data_fifo_0_0.xci">
+          <Proxy FileSetName="stimulation_inst_0_axis_data_fifo_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="stimulation_inst_0.bd" FileRelPathName="ip/stimulation_inst_0_util_vector_logic_0_0/stimulation_inst_0_util_vector_logic_0_0.xci">
           <Proxy FileSetName="stimulation_inst_0_util_vector_logic_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="stimulation_inst_0.bd" FileRelPathName="ip/stimulation_inst_0_axis_data_fifo_0_0/stimulation_inst_0_axis_data_fifo_0_0.xci">
-          <Proxy FileSetName="stimulation_inst_0_axis_data_fifo_0_0"/>
+        <CompFileExtendedInfo CompFileName="stimulation_inst_0.bd" FileRelPathName="ip/stimulation_inst_0_rhs_axi_0_0/stimulation_inst_0_rhs_axi_0_0.xci">
+          <Proxy FileSetName="stimulation_inst_0_rhs_axi_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <Config>
         <Option Name="TopModule" Val="stimulation_inst_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="stimulation_inst_0_axis_data_fifo_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/stimulation_inst_0_axis_data_fifo_0_0" RelGenDir="$PGENDIR/stimulation_inst_0_axis_data_fifo_0_0">
+      <Config>
+        <Option Name="TopModule" Val="stimulation_inst_0_axis_data_fifo_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="stimulation_inst_0_util_vector_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/stimulation_inst_0_util_vector_logic_0_0" RelGenDir="$PGENDIR/stimulation_inst_0_util_vector_logic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="stimulation_inst_0_util_vector_logic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="recording_inst_0_rhd_diff_to_single_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_rhd_diff_to_single_0_0" RelGenDir="$PGENDIR/recording_inst_0_rhd_diff_to_single_0_0">
+      <Config>
+        <Option Name="TopModule" Val="recording_inst_0_rhd_diff_to_single_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="recording_inst_0_util_vector_logic_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_util_vector_logic_1_0" RelGenDir="$PGENDIR/recording_inst_0_util_vector_logic_1_0">
+      <Config>
+        <Option Name="TopModule" Val="recording_inst_0_util_vector_logic_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="recording_inst_0_RisingEdgeCounter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_RisingEdgeCounter_0_0" RelGenDir="$PGENDIR/recording_inst_0_RisingEdgeCounter_0_0">
+      <Config>
+        <Option Name="TopModule" Val="recording_inst_0_RisingEdgeCounter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="recording_inst_0_util_vector_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_util_vector_logic_0_0" RelGenDir="$PGENDIR/recording_inst_0_util_vector_logic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="recording_inst_0_util_vector_logic_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -402,60 +428,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="recording_inst_0_util_vector_logic_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_util_vector_logic_1_0" RelGenDir="$PGENDIR/recording_inst_0_util_vector_logic_1_0">
-      <Config>
-        <Option Name="TopModule" Val="recording_inst_0_util_vector_logic_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="recording_inst_0_util_vector_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_util_vector_logic_0_0" RelGenDir="$PGENDIR/recording_inst_0_util_vector_logic_0_0">
-      <Config>
-        <Option Name="TopModule" Val="recording_inst_0_util_vector_logic_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="stimulation_inst_0_util_vector_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/stimulation_inst_0_util_vector_logic_0_0" RelGenDir="$PGENDIR/stimulation_inst_0_util_vector_logic_0_0">
-      <Config>
-        <Option Name="TopModule" Val="stimulation_inst_0_util_vector_logic_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="recording_inst_0_rhd_diff_to_single_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_rhd_diff_to_single_0_0" RelGenDir="$PGENDIR/recording_inst_0_rhd_diff_to_single_0_0">
-      <Config>
-        <Option Name="TopModule" Val="recording_inst_0_rhd_diff_to_single_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="recording_inst_0_RisingEdgeCounter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/recording_inst_0_RisingEdgeCounter_0_0" RelGenDir="$PGENDIR/recording_inst_0_RisingEdgeCounter_0_0">
-      <Config>
-        <Option Name="TopModule" Val="recording_inst_0_RisingEdgeCounter_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="main_smartconnect_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_smartconnect_0_1" RelGenDir="$PGENDIR/main_smartconnect_0_1">
-      <Config>
-        <Option Name="TopModule" Val="main_smartconnect_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="main_smartconnect_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_smartconnect_0_0" RelGenDir="$PGENDIR/main_smartconnect_0_0">
-      <Config>
-        <Option Name="TopModule" Val="main_smartconnect_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="main_smartconnect_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_smartconnect_0_2" RelGenDir="$PGENDIR/main_smartconnect_0_2">
-      <Config>
-        <Option Name="TopModule" Val="main_smartconnect_0_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="stimulation_inst_0_axis_data_fifo_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/stimulation_inst_0_axis_data_fifo_0_0" RelGenDir="$PGENDIR/stimulation_inst_0_axis_data_fifo_0_0">
-      <Config>
-        <Option Name="TopModule" Val="stimulation_inst_0_axis_data_fifo_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -468,11 +440,14 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
+    <Simulator Name="Xcelium">
+      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="20">
@@ -576,6 +551,78 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="stimulation_inst_0_axis_data_fifo_0_0_synth_1" Type="Ft3:Synth" SrcSet="stimulation_inst_0_axis_data_fifo_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_axis_data_fifo_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/stimulation_inst_0_axis_data_fifo_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="stimulation_inst_0_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="stimulation_inst_0_util_vector_logic_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/stimulation_inst_0_util_vector_logic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_util_vector_logic_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="recording_inst_0_rhd_diff_to_single_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_rhd_diff_to_single_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_rhd_diff_to_single_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_rhd_diff_to_single_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_diff_to_single_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_diff_to_single_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="recording_inst_0_util_vector_logic_1_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_util_vector_logic_1_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_util_vector_logic_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="recording_inst_0_RisingEdgeCounter_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_RisingEdgeCounter_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_RisingEdgeCounter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_RisingEdgeCounter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_RisingEdgeCounter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_RisingEdgeCounter_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="recording_inst_0_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_util_vector_logic_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_util_vector_logic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="recording_inst_0_rhd_axi_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_rhd_axi_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_rhd_axi_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_rhd_axi_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_axi_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_axi_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
@@ -612,115 +659,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="recording_inst_0_util_vector_logic_1_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_util_vector_logic_1_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_util_vector_logic_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="recording_inst_0_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_util_vector_logic_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_util_vector_logic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="stimulation_inst_0_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="stimulation_inst_0_util_vector_logic_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/stimulation_inst_0_util_vector_logic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_util_vector_logic_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="recording_inst_0_rhd_diff_to_single_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_rhd_diff_to_single_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_rhd_diff_to_single_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_rhd_diff_to_single_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_diff_to_single_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_diff_to_single_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="recording_inst_0_RisingEdgeCounter_0_0_synth_1" Type="Ft3:Synth" SrcSet="recording_inst_0_RisingEdgeCounter_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_RisingEdgeCounter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/recording_inst_0_RisingEdgeCounter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_RisingEdgeCounter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_RisingEdgeCounter_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="main_smartconnect_0_1_synth_1" Type="Ft3:Synth" SrcSet="main_smartconnect_0_1" Part="xck26-sfvc784-2LV-c" ConstrsSet="main_smartconnect_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_smartconnect_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_1_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="main_smartconnect_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_smartconnect_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="main_smartconnect_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_smartconnect_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="main_smartconnect_0_2_synth_1" Type="Ft3:Synth" SrcSet="main_smartconnect_0_2" Part="xck26-sfvc784-2LV-c" ConstrsSet="main_smartconnect_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_smartconnect_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_2_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="stimulation_inst_0_axis_data_fifo_0_0_synth_1" Type="Ft3:Synth" SrcSet="stimulation_inst_0_axis_data_fifo_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_axis_data_fifo_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/stimulation_inst_0_axis_data_fifo_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 16 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 12 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -733,6 +672,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -890,83 +830,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="recording_inst_0_rhd_axi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_rhd_axi_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_rhd_axi_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_axi_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_axi_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="stimulation_inst_0_rhs_axi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_rhs_axi_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="stimulation_inst_0_rhs_axi_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_rhs_axi_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_rhs_axi_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="recording_inst_0_axis_data_fifo_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_axis_data_fifo_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_axis_data_fifo_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_axis_data_fifo_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_axis_data_fifo_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="recording_inst_0_util_vector_logic_1_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_util_vector_logic_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="recording_inst_0_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_util_vector_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_impl_1">
+    <Run Id="stimulation_inst_0_axis_data_fifo_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_axis_data_fifo_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="stimulation_inst_0_axis_data_fifo_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -1023,6 +887,25 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="recording_inst_0_util_vector_logic_1_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_util_vector_logic_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="recording_inst_0_RisingEdgeCounter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_RisingEdgeCounter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_RisingEdgeCounter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_RisingEdgeCounter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_RisingEdgeCounter_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
@@ -1042,7 +925,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="main_smartconnect_0_1_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="main_smartconnect_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_smartconnect_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_1_impl_1">
+    <Run Id="recording_inst_0_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_util_vector_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_util_vector_logic_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -1061,7 +944,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="main_smartconnect_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="main_smartconnect_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_smartconnect_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_0_impl_1">
+    <Run Id="recording_inst_0_rhd_axi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_rhd_axi_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_rhd_axi_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_axi_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_rhd_axi_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -1080,7 +963,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="main_smartconnect_0_2_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="main_smartconnect_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="main_smartconnect_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/main_smartconnect_0_2_impl_1">
+    <Run Id="stimulation_inst_0_rhs_axi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_rhs_axi_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="stimulation_inst_0_rhs_axi_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_rhs_axi_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_rhs_axi_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -1099,7 +982,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="stimulation_inst_0_axis_data_fifo_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="stimulation_inst_0_axis_data_fifo_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="stimulation_inst_0_axis_data_fifo_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/stimulation_inst_0_axis_data_fifo_0_0_impl_1">
+    <Run Id="recording_inst_0_axis_data_fifo_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="recording_inst_0_axis_data_fifo_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="recording_inst_0_axis_data_fifo_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/recording_inst_0_axis_data_fifo_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/recording_inst_0_axis_data_fifo_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

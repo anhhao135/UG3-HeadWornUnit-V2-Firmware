@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1702678909" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/rhd_axi.dcp">
-  <File Type="PA-TCL" Name="main_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="main_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="main_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="main_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="main_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="main_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="main_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="main_wrapper_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1702686153" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/rhd_axi.dcp">
   <File Type="VDS-TIMING-PB" Name="main_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="main_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="main_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="main_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="main_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="main_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="main_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="main_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="main_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit.bd">
@@ -147,27 +147,24 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="xpm_cdc_1bit_xpm_cdc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_axi_dma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_axis_data_fifo_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_rhd_axi_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0_rhs_axi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_util_vector_logic_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0_axis_data_fifo_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_util_vector_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_rhd_diff_to_single_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_RisingEdgeCounter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_smartconnect_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_smartconnect_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="main_smartconnect_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_util_vector_logic_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_rhd_diff_to_single_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0_util_vector_logic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_rhd_axi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="stimulation_inst_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="recording_inst_0_util_vector_logic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_proc_sys_reset_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="main_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="xpm_cdc_1bit_xpm_cdc_0_0"/>
 </GenRun>

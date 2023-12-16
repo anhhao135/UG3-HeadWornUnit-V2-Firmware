@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 15 14:21:41 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 15 16:22:27 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="main" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -1525,7 +1525,11 @@
             <CONNECTION INSTANCE="recording_0" PORT="M_AXIS_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s2mm_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="s2mm_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_dma_0_s2mm_introut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_ps_irq0"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="master_smartconnect_0_M00_AXI" DATAWIDTH="32" NAME="S_AXI_LITE" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -4772,12 +4776,12 @@
     <MODULE BD="recording_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/recording_0" INSTANCE="recording_0" IS_ENABLE="1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="recording.bd"/>
         <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
-        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="recording.bd"/>
-        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="recording.bd"/>
-        <PARAMETER NAME="LIST_SIM_BD" VALUE="recording.bd"/>
         <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="recording.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="recording.bd"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="recording.bd"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="recording.bd"/>
       </PARAMETERS>
       <PORTS>
         <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tdata">
@@ -5872,12 +5876,12 @@
     <MODULE BD="stimulation_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/stimulation_0" INSTANCE="stimulation_0" IS_ENABLE="1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="stimulation.bd"/>
         <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
-        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="stimulation.bd"/>
-        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="stimulation.bd"/>
-        <PARAMETER NAME="LIST_SIM_BD" VALUE="stimulation.bd"/>
         <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="stimulation.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="stimulation.bd"/>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="stimulation.bd"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="stimulation.bd"/>
       </PARAMETERS>
       <PORTS>
         <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
@@ -8243,7 +8247,11 @@
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="emio_gpio_o" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="3" NAME="emio_gpio_t" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="pl_ps_irq0" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="I" LEFT="0" NAME="pl_ps_irq0" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_dma_0_s2mm_introut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s2mm_introut"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="pl_resetn0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="zynq_ultra_ps_e_0_pl_resetn0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_250M" PORT="ext_reset_in"/>

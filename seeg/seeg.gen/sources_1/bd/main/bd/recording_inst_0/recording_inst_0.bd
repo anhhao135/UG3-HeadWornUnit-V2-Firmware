@@ -12,10 +12,10 @@
       "variant": "true"
     },
     "design_tree": {
-      "RisingEdgeCounter_0": "",
       "axis_data_fifo_0": "",
       "util_vector_logic_0": "",
       "util_vector_logic_1": "",
+      "RisingEdgeCounter_0": "",
       "rhd_diff_to_single_0": "",
       "rhd_axi_0": ""
     },
@@ -590,10 +590,52 @@
       }
     },
     "components": {
+      "axis_data_fifo_0": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "xci_name": "recording_inst_0_axis_data_fifo_0_0",
+        "xci_path": "ip/recording_inst_0_axis_data_fifo_0_0/recording_inst_0_axis_data_fifo_0_0.xci",
+        "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "32768"
+          },
+          "HAS_PROG_FULL": {
+            "value": "1"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "8"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "recording_inst_0_util_vector_logic_0_0",
+        "xci_path": "ip/recording_inst_0_util_vector_logic_0_0/recording_inst_0_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "recording_inst_0_util_vector_logic_1_0",
+        "xci_path": "ip/recording_inst_0_util_vector_logic_1_0/recording_inst_0_util_vector_logic_1_0.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
       "RisingEdgeCounter_0": {
         "vlnv": "xilinx.com:module_ref:RisingEdgeCounter:1.0",
         "xci_name": "recording_inst_0_RisingEdgeCounter_0_0",
-        "xci_path": "ip\\recording_inst_0_RisingEdgeCounter_0_0\\recording_inst_0_RisingEdgeCounter_0_0.xci",
+        "xci_path": "ip/recording_inst_0_RisingEdgeCounter_0_0/recording_inst_0_RisingEdgeCounter_0_0.xci",
         "inst_hier_path": "RisingEdgeCounter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -653,52 +695,10 @@
           }
         }
       },
-      "axis_data_fifo_0": {
-        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "recording_inst_0_axis_data_fifo_0_0",
-        "xci_path": "ip\\recording_inst_0_axis_data_fifo_0_0\\recording_inst_0_axis_data_fifo_0_0.xci",
-        "inst_hier_path": "axis_data_fifo_0",
-        "parameters": {
-          "FIFO_DEPTH": {
-            "value": "32768"
-          },
-          "HAS_PROG_FULL": {
-            "value": "1"
-          },
-          "HAS_TLAST": {
-            "value": "1"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "8"
-          }
-        }
-      },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "recording_inst_0_util_vector_logic_0_0",
-        "xci_path": "ip\\recording_inst_0_util_vector_logic_0_0\\recording_inst_0_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
-      "util_vector_logic_1": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "recording_inst_0_util_vector_logic_1_0",
-        "xci_path": "ip\\recording_inst_0_util_vector_logic_1_0\\recording_inst_0_util_vector_logic_1_0.xci",
-        "inst_hier_path": "util_vector_logic_1",
-        "parameters": {
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "rhd_diff_to_single_0": {
         "vlnv": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
         "xci_name": "recording_inst_0_rhd_diff_to_single_0_0",
-        "xci_path": "ip\\recording_inst_0_rhd_diff_to_single_0_0\\recording_inst_0_rhd_diff_to_single_0_0.xci",
+        "xci_path": "ip/recording_inst_0_rhd_diff_to_single_0_0/recording_inst_0_rhd_diff_to_single_0_0.xci",
         "inst_hier_path": "rhd_diff_to_single_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -855,7 +855,7 @@
       "rhd_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhd_axi:1.0",
         "xci_name": "recording_inst_0_rhd_axi_0_0",
-        "xci_path": "ip\\recording_inst_0_rhd_axi_0_0\\recording_inst_0_rhd_axi_0_0.xci",
+        "xci_path": "ip/recording_inst_0_rhd_axi_0_0/recording_inst_0_rhd_axi_0_0.xci",
         "inst_hier_path": "rhd_axi_0",
         "reference_info": {
           "ref_type": "hdl",
