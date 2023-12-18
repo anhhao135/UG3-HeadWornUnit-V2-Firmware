@@ -1,0 +1,3 @@
+xpm_cdc_1bit_xpm_cdc_0_0.v,verilog,xil_defaultlib,../../../bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v,
+xpm_cdc_1bit.v,verilog,xil_defaultlib,../../../bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

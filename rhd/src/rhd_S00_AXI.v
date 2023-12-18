@@ -130,6 +130,152 @@ module rhd_S00_AXI #
 	input wire  S_AXI_RREADY
 );
 
+wire MISO1_A_LOOP;
+wire MISO2_A_LOOP;
+wire MISO1_B_LOOP;
+wire MISO2_B_LOOP;
+wire MISO1_C_LOOP;
+wire MISO2_C_LOOP;
+wire MISO1_D_LOOP;
+wire MISO2_D_LOOP;
+wire MISO1_E_LOOP;
+wire MISO2_E_LOOP;
+wire MISO1_F_LOOP;
+wire MISO2_F_LOOP;
+wire MISO1_G_LOOP;
+wire MISO2_G_LOOP;
+wire MISO1_H_LOOP;
+wire MISO2_H_LOOP;
+wire MISO1_I_LOOP;
+wire MISO2_I_LOOP;
+wire MISO1_J_LOOP;
+wire MISO2_J_LOOP;
+wire MISO1_K_LOOP;
+wire MISO2_K_LOOP;
+wire MISO1_L_LOOP;
+wire MISO2_L_LOOP;
+wire MISO1_M_LOOP;
+wire MISO2_M_LOOP;
+wire MISO1_N_LOOP;
+wire MISO2_N_LOOP;
+wire MISO1_O_LOOP;
+wire MISO2_O_LOOP;
+wire MISO1_P_LOOP;
+wire MISO2_P_LOOP;
+
+wire MISO1_A_SW;
+wire MISO2_A_SW;
+wire MISO1_B_SW;
+wire MISO2_B_SW;
+wire MISO1_C_SW;
+wire MISO2_C_SW;
+wire MISO1_D_SW;
+wire MISO2_D_SW;
+wire MISO1_E_SW;
+wire MISO2_E_SW;
+wire MISO1_F_SW;
+wire MISO2_F_SW;
+wire MISO1_G_SW;
+wire MISO2_G_SW;
+wire MISO1_H_SW;
+wire MISO2_H_SW;
+wire MISO1_I_SW;
+wire MISO2_I_SW;
+wire MISO1_J_SW;
+wire MISO2_J_SW;
+wire MISO1_K_SW;
+wire MISO2_K_SW;
+wire MISO1_L_SW;
+wire MISO2_L_SW;
+wire MISO1_M_SW;
+wire MISO2_M_SW;
+wire MISO1_N_SW;
+wire MISO2_N_SW;
+wire MISO1_O_SW;
+wire MISO2_O_SW;
+wire MISO1_P_SW;
+wire MISO2_P_SW;
+
+
+rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
+	.MOSI(MOSI1),
+	.CS(CS_b),
+	.SCLK(SCLK),
+	.clk(S_AXI_ACLK),
+	.MISO1_A(MISO1_A_LOOP),
+	.MISO2_A(MISO2_A_LOOP),
+	.MISO1_B(MISO1_B_LOOP),
+	.MISO2_B(MISO2_B_LOOP),
+	.MISO1_C(MISO1_C_LOOP),
+	.MISO2_C(MISO2_C_LOOP),
+	.MISO1_D(MISO1_D_LOOP),
+	.MISO2_D(MISO2_D_LOOP),
+	.MISO1_E(MISO1_E_LOOP),
+	.MISO2_E(MISO2_E_LOOP),
+	.MISO1_F(MISO1_F_LOOP),
+	.MISO2_F(MISO2_F_LOOP),
+	.MISO1_G(MISO1_G_LOOP),
+	.MISO2_G(MISO2_G_LOOP),
+	.MISO1_H(MISO1_H_LOOP),
+	.MISO2_H(MISO2_H_LOOP),
+	.MISO1_I(MISO1_I_LOOP),
+	.MISO2_I(MISO2_I_LOOP),
+	.MISO1_J(MISO1_J_LOOP),
+	.MISO2_J(MISO2_J_LOOP),
+	.MISO1_K(MISO1_K_LOOP),
+	.MISO2_K(MISO2_K_LOOP),
+	.MISO1_L(MISO1_L_LOOP),
+	.MISO2_L(MISO2_L_LOOP),
+	.MISO1_M(MISO1_M_LOOP),
+	.MISO2_M(MISO2_M_LOOP),
+	.MISO1_N(MISO1_N_LOOP),
+	.MISO2_N(MISO2_N_LOOP),
+	.MISO1_O(MISO1_O_LOOP),
+	.MISO2_O(MISO2_O_LOOP),
+	.MISO1_P(MISO1_P_LOOP),
+	.MISO2_P(MISO2_P_LOOP)
+);
+
+
+
+assign MISO1_A_SW = slv_reg0[4] ? MISO1_A_LOOP : MISO1_A; //mux between real and loopback based on register 1's 5th bit, if high this means loopback is enabled
+assign MISO2_A_SW = slv_reg0[4] ? MISO2_A_LOOP : MISO2_A;
+assign MISO1_B_SW = slv_reg0[4] ? MISO1_B_LOOP : MISO1_B;
+assign MISO2_B_SW = slv_reg0[4] ? MISO2_B_LOOP : MISO2_B;
+assign MISO1_C_SW = slv_reg0[4] ? MISO1_C_LOOP : MISO1_C;
+assign MISO2_C_SW = slv_reg0[4] ? MISO2_C_LOOP : MISO2_C;
+assign MISO1_D_SW = slv_reg0[4] ? MISO1_D_LOOP : MISO1_D;
+assign MISO2_D_SW = slv_reg0[4] ? MISO2_D_LOOP : MISO2_D;
+
+assign MISO1_E_SW = slv_reg0[4] ? MISO1_E_LOOP : MISO1_E;
+assign MISO2_E_SW = slv_reg0[4] ? MISO2_E_LOOP : MISO2_E;
+assign MISO1_F_SW = slv_reg0[4] ? MISO1_F_LOOP : MISO1_F;
+assign MISO2_F_SW = slv_reg0[4] ? MISO2_F_LOOP : MISO2_F;
+assign MISO1_G_SW = slv_reg0[4] ? MISO1_G_LOOP : MISO1_G;
+assign MISO2_G_SW = slv_reg0[4] ? MISO2_G_LOOP : MISO2_G;
+assign MISO1_H_SW = slv_reg0[4] ? MISO1_H_LOOP : MISO1_H;
+assign MISO2_H_SW = slv_reg0[4] ? MISO2_H_LOOP : MISO2_H;
+
+assign MISO1_I_SW = slv_reg0[4] ? MISO1_I_LOOP : MISO1_I;
+assign MISO2_I_SW = slv_reg0[4] ? MISO2_I_LOOP : MISO2_I;
+assign MISO1_J_SW = slv_reg0[4] ? MISO1_J_LOOP : MISO1_J;
+assign MISO2_J_SW = slv_reg0[4] ? MISO2_J_LOOP : MISO2_J;
+assign MISO1_K_SW = slv_reg0[4] ? MISO1_K_LOOP : MISO1_K;
+assign MISO2_K_SW = slv_reg0[4] ? MISO2_K_LOOP : MISO2_K;
+assign MISO1_L_SW = slv_reg0[4] ? MISO1_L_LOOP : MISO1_L;
+assign MISO2_L_SW = slv_reg0[4] ? MISO2_L_LOOP : MISO2_L;
+
+assign MISO1_M_SW = slv_reg0[4] ? MISO1_M_LOOP : MISO1_M;
+assign MISO2_M_SW = slv_reg0[4] ? MISO2_M_LOOP : MISO2_M;
+assign MISO1_N_SW = slv_reg0[4] ? MISO1_N_LOOP : MISO1_N;
+assign MISO2_N_SW = slv_reg0[4] ? MISO2_N_LOOP : MISO2_N;
+assign MISO1_O_SW = slv_reg0[4] ? MISO1_O_LOOP : MISO1_O;
+assign MISO2_O_SW = slv_reg0[4] ? MISO2_O_LOOP : MISO2_O;
+assign MISO1_P_SW = slv_reg0[4] ? MISO1_P_LOOP : MISO1_P;
+assign MISO2_P_SW = slv_reg0[4] ? MISO2_P_LOOP : MISO2_P;
+
+
+
 // AXI4LITE signals
 reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 reg  	axi_awready;
@@ -177,6 +323,7 @@ assign S_AXI_RVALID	= axi_rvalid;
 // axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 // S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
 // de-asserted when reset is low.
+
 
 always @( posedge S_AXI_ACLK )
 begin
@@ -499,38 +646,38 @@ rhd rhd
 	.SCLK(SCLK),
 	.MOSI1(MOSI1),
 	.MOSI2(MOSI2),
-	.MISO1_A(MISO1_A),
-	.MISO2_A(MISO2_A),
-	.MISO1_B(MISO1_B),
-	.MISO2_B(MISO2_B),
-	.MISO1_C(MISO1_C),
-	.MISO2_C(MISO2_C),
-	.MISO1_D(MISO1_D),
-	.MISO2_D(MISO2_D),
-	.MISO1_E(MISO1_E),
-	.MISO2_E(MISO2_E),
-	.MISO1_F(MISO1_F),
-	.MISO2_F(MISO2_F),
-	.MISO1_G(MISO1_G),
-	.MISO2_G(MISO2_G),
-	.MISO1_H(MISO1_H),
-	.MISO2_H(MISO2_H),
-	.MISO1_I(MISO1_I),
-	.MISO2_I(MISO2_I),
-	.MISO1_J(MISO1_J),
-	.MISO2_J(MISO2_J),
-	.MISO1_K(MISO1_K),
-	.MISO2_K(MISO2_K),
-	.MISO1_L(MISO1_L),
-	.MISO2_L(MISO2_L),
-	.MISO1_M(MISO1_M),
-	.MISO2_M(MISO2_M),
-	.MISO1_N(MISO1_N),
-	.MISO2_N(MISO2_N),
-	.MISO1_O(MISO1_O),
-	.MISO2_O(MISO2_O),
-	.MISO1_P(MISO1_P),
-	.MISO2_P(MISO2_P),
+	.MISO1_A(MISO1_A_SW),
+	.MISO2_A(MISO2_A_SW),
+	.MISO1_B(MISO1_B_SW),
+	.MISO2_B(MISO2_B_SW),
+	.MISO1_C(MISO1_C_SW),
+	.MISO2_C(MISO2_C_SW),
+	.MISO1_D(MISO1_D_SW),
+	.MISO2_D(MISO2_D_SW),
+	.MISO1_E(MISO1_E_SW),
+	.MISO2_E(MISO2_E_SW),
+	.MISO1_F(MISO1_F_SW),
+	.MISO2_F(MISO2_F_SW),
+	.MISO1_G(MISO1_G_SW),
+	.MISO2_G(MISO2_G_SW),
+	.MISO1_H(MISO1_H_SW),
+	.MISO2_H(MISO2_H_SW),
+	.MISO1_I(MISO1_I_SW),
+	.MISO2_I(MISO2_I_SW),
+	.MISO1_J(MISO1_J_SW),
+	.MISO2_J(MISO2_J_SW),
+	.MISO1_K(MISO1_K_SW),
+	.MISO2_K(MISO2_K_SW),
+	.MISO1_L(MISO1_L_SW),
+	.MISO2_L(MISO2_L_SW),
+	.MISO1_M(MISO1_M_SW),
+	.MISO2_M(MISO2_M_SW),
+	.MISO1_N(MISO1_N_SW),
+	.MISO2_N(MISO2_N_SW),
+	.MISO1_O(MISO1_O_SW),
+	.MISO2_O(MISO2_O_SW),
+	.MISO1_P(MISO1_P_SW),
+	.MISO2_P(MISO2_P_SW),
 	.FIFO_rstn(FIFO_rstn),
 	.M_AXIS_tdata(M_AXIS_tdata),
 	.M_AXIS_tvalid(M_AXIS_tvalid),

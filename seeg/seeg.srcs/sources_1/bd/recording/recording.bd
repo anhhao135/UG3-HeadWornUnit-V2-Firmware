@@ -559,7 +559,7 @@
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "recording_axis_data_fifo_0_0",
-        "xci_path": "ip/recording_axis_data_fifo_0_0/recording_axis_data_fifo_0_0.xci",
+        "xci_path": "ip\\recording_axis_data_fifo_0_0\\recording_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
@@ -579,7 +579,7 @@
       "util_vector_logic_0": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "recording_util_vector_logic_0_0",
-        "xci_path": "ip/recording_util_vector_logic_0_0/recording_util_vector_logic_0_0.xci",
+        "xci_path": "ip\\recording_util_vector_logic_0_0\\recording_util_vector_logic_0_0.xci",
         "inst_hier_path": "util_vector_logic_0",
         "parameters": {
           "C_SIZE": {
@@ -590,7 +590,7 @@
       "util_vector_logic_1": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "recording_util_vector_logic_1_0",
-        "xci_path": "ip/recording_util_vector_logic_1_0/recording_util_vector_logic_1_0.xci",
+        "xci_path": "ip\\recording_util_vector_logic_1_0\\recording_util_vector_logic_1_0.xci",
         "inst_hier_path": "util_vector_logic_1",
         "parameters": {
           "C_SIZE": {
@@ -601,7 +601,7 @@
       "RisingEdgeCounter_0": {
         "vlnv": "xilinx.com:module_ref:RisingEdgeCounter:1.0",
         "xci_name": "recording_RisingEdgeCounter_0_0",
-        "xci_path": "ip/recording_RisingEdgeCounter_0_0/recording_RisingEdgeCounter_0_0.xci",
+        "xci_path": "ip\\recording_RisingEdgeCounter_0_0\\recording_RisingEdgeCounter_0_0.xci",
         "inst_hier_path": "RisingEdgeCounter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -660,7 +660,7 @@
       "rhd_diff_to_single_0": {
         "vlnv": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
         "xci_name": "recording_rhd_diff_to_single_0_0",
-        "xci_path": "ip/recording_rhd_diff_to_single_0_0/recording_rhd_diff_to_single_0_0.xci",
+        "xci_path": "ip\\recording_rhd_diff_to_single_0_0\\recording_rhd_diff_to_single_0_0.xci",
         "inst_hier_path": "rhd_diff_to_single_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -817,7 +817,7 @@
       "rhd_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhd_axi:1.0",
         "xci_name": "recording_rhd_axi_0_0",
-        "xci_path": "ip/recording_rhd_axi_0_0/recording_rhd_axi_0_0.xci",
+        "xci_path": "ip\\recording_rhd_axi_0_0\\recording_rhd_axi_0_0.xci",
         "inst_hier_path": "rhd_axi_0",
         "reference_info": {
           "ref_type": "hdl",

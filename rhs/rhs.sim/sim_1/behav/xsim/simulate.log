@@ -24,4 +24,3 @@ Stim is done!
 TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000000000000000000000000000000000000000000000000000000000000 actual   = 0x0000000000000000000000000000000000000000000000000000000000000000
 Executing Axi4 End Of Simulation checks
 $finish called at time : 3820078999 ps : File "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_axi_tb_wrapper_tb.sv" Line 224
-INFO: xsimkernel Simulation Memory Usage: 25476 KB (Peak: 25476 KB), Simulation CPU Usage: 12593 ms

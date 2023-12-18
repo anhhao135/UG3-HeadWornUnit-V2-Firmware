@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhs_axi_tb_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhs_axi_tb_wrapper_tb" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="375.624063 us"></ZoomStartTime>
+      <ZoomEndTime time="460.224064 us"></ZoomEndTime>
+      <Cursor1Time time="389.724063 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
+      <ValueColumnWidth column_width="165"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="38" />
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aclk_out" type="logic">
+      <obj_property name="ElementShortName">aclk_out</obj_property>
+      <obj_property name="ObjectShortName">aclk_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aresetn_out" type="logic">
+      <obj_property name="ElementShortName">aresetn_out</obj_property>
+      <obj_property name="ObjectShortName">aresetn_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/CS_b" type="logic">
+      <obj_property name="ElementShortName">CS_b</obj_property>
+      <obj_property name="ObjectShortName">CS_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/MOSI1" type="logic">
+      <obj_property name="ElementShortName">MOSI1</obj_property>
+      <obj_property name="ObjectShortName">MOSI1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/MOSI2" type="logic">
+      <obj_property name="ElementShortName">MOSI2</obj_property>
+      <obj_property name="ObjectShortName">MOSI2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/CS_b" type="logic">
+      <obj_property name="ElementShortName">CS_b</obj_property>
+      <obj_property name="ObjectShortName">CS_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MOSI1" type="logic">
+      <obj_property name="ElementShortName">MOSI1</obj_property>
+      <obj_property name="ObjectShortName">MOSI1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MOSI2" type="logic">
+      <obj_property name="ElementShortName">MOSI2</obj_property>
+      <obj_property name="ObjectShortName">MOSI2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MISO1" type="logic">
+      <obj_property name="ElementShortName">MISO1</obj_property>
+      <obj_property name="ObjectShortName">MISO1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MISO2" type="logic">
+      <obj_property name="ElementShortName">MISO2</obj_property>
+      <obj_property name="ObjectShortName">MISO2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/rhs_status" type="array">
+      <obj_property name="ElementShortName">rhs_status[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rhs_status[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/SPI_ONOFF" type="logic">
+      <obj_property name="ElementShortName">SPI_ONOFF</obj_property>
+      <obj_property name="ObjectShortName">SPI_ONOFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/init_en" type="logic">
+      <obj_property name="ElementShortName">init_en</obj_property>
+      <obj_property name="ObjectShortName">init_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/mag_set_en" type="logic">
+      <obj_property name="ElementShortName">mag_set_en</obj_property>
+      <obj_property name="ObjectShortName">mag_set_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_en" type="logic">
+      <obj_property name="ElementShortName">stim_en</obj_property>
+      <obj_property name="ObjectShortName">stim_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/impedance_check" type="logic">
+      <obj_property name="ElementShortName">impedance_check</obj_property>
+      <obj_property name="ObjectShortName">impedance_check</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/biphasic_polarity" type="logic">
+      <obj_property name="ElementShortName">biphasic_polarity</obj_property>
+      <obj_property name="ObjectShortName">biphasic_polarity</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/mag_pos" type="array">
+      <obj_property name="ElementShortName">mag_pos[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mag_pos[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/mag_neg" type="array">
+      <obj_property name="ElementShortName">mag_neg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mag_neg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/batch_size" type="array">
+      <obj_property name="ElementShortName">batch_size[15:0]</obj_property>
+      <obj_property name="ObjectShortName">batch_size[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/impedance_check_cycle" type="array">
+      <obj_property name="ElementShortName">impedance_check_cycle[7:0]</obj_property>
+      <obj_property name="ObjectShortName">impedance_check_cycle[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/impedance_check_scale" type="array">
+      <obj_property name="ElementShortName">impedance_check_scale[1:0]</obj_property>
+      <obj_property name="ObjectShortName">impedance_check_scale[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_mono_vs_bi" type="logic">
+      <obj_property name="ElementShortName">stim_mono_vs_bi</obj_property>
+      <obj_property name="ObjectShortName">stim_mono_vs_bi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_ch_p" type="array">
+      <obj_property name="ElementShortName">stim_ch_p[4:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_ch_p[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_ch_n" type="array">
+      <obj_property name="ElementShortName">stim_ch_n[4:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_ch_n[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_pulse_width" type="array">
+      <obj_property name="ElementShortName">stim_pulse_width[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_pulse_width[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_intrapulse_delay" type="array">
+      <obj_property name="ElementShortName">stim_intrapulse_delay[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_intrapulse_delay[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_num_pulse" type="array">
+      <obj_property name="ElementShortName">stim_num_pulse[9:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_num_pulse[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/timestamp" type="array">
+      <obj_property name="ElementShortName">timestamp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">timestamp[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/channel_config" type="array">
+      <obj_property name="ElementShortName">channel_config[6:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_config[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/state_pulse" type="array">
+      <obj_property name="ElementShortName">state_pulse[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_pulse[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/stim_counter" type="array">
+      <obj_property name="ElementShortName">stim_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_counter[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/time_counter" type="array">
+      <obj_property name="ElementShortName">time_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">time_counter[10:0]</obj_property>
+   </wvobject>
+</wave_config>

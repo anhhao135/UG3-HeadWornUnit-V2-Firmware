@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_1bit_xpm_cdc_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd
+INFO: [VRFC 10-311] analyzing module command_selector
+INFO: [VRFC 10-311] analyzing module MISO_falling_edge
+INFO: [VRFC 10-311] analyzing module MISO_rising_edge
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

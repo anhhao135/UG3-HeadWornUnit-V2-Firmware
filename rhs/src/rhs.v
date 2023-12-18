@@ -13,11 +13,41 @@ module rhs
     // SPI
     output reg                               CS_b,
     output reg                               SCLK,
+
+
     output wire                              MOSI1,
     output wire                              MOSI2,
+    output wire                              MOSI3,
+    output wire                              MOSI4,
+    output wire                              MOSI5,
+    output wire                              MOSI6,
+    output wire                              MOSI7,
+    output wire                              MOSI8,
+    output wire                              MOSI9,
+    output wire                              MOSI10,
+    output wire                              MOSI11,
+    output wire                              MOSI12,
+    output wire                              MOSI13,
+    output wire                              MOSI14,
+    output wire                              MOSI15,
+    output wire                              MOSI16,
 
     input  wire                              MISO1,
     input  wire                              MISO2,
+    input  wire                              MISO3,
+    input  wire                              MISO4,
+    input  wire                              MISO5,
+    input  wire                              MISO6,
+    input  wire                              MISO7,
+    input  wire                              MISO8,
+    input  wire                              MISO9,
+    input  wire                              MISO10,
+    input  wire                              MISO11,
+    input  wire                              MISO12,
+    input  wire                              MISO13,
+    input  wire                              MISO14,
+    input  wire                              MISO15,
+    input  wire                              MISO16,
 
     output wire [15:0]                       rhs_status, //reg0
     output wire                              FIFO_rstn,
@@ -67,14 +97,42 @@ module rhs
 
 
     // [SPI I/O]
-	wire        MISO_1, MISO_2;
-    reg         MOSI_1, MOSI_2;
+	wire        MISO_1, MISO_2, MISO_3, MISO_4, MISO_5, MISO_6, MISO_7, MISO_8, MISO_9, MISO_10, MISO_11, MISO_12, MISO_13, MISO_14, MISO_15, MISO_16;
+    reg         MOSI_1, MOSI_2, MOSI_3, MOSI_4, MOSI_5, MOSI_6, MOSI_7, MOSI_8, MOSI_9, MOSI_10, MOSI_11, MOSI_12, MOSI_13, MOSI_14, MOSI_15, MOSI_16;
 
     assign MISO_1 = MISO1;
     assign MISO_2 = MISO2;
+    assign MISO_3 = MISO3;
+    assign MISO_4 = MISO4;
+    assign MISO_5 = MISO5;
+    assign MISO_6 = MISO6;
+    assign MISO_7 = MISO7;
+    assign MISO_8 = MISO8;
+    assign MISO_9 = MISO9;
+    assign MISO_10 = MISO10;
+    assign MISO_11 = MISO11;
+    assign MISO_12 = MISO12;
+    assign MISO_13 = MISO13;
+    assign MISO_14 = MISO14;
+    assign MISO_15 = MISO15;
+    assign MISO_16 = MISO16;
     
     assign MOSI1 = MOSI_1;
     assign MOSI2 = MOSI_2;
+    assign MOSI3 = MOSI_3;
+    assign MOSI4 = MOSI_4;
+    assign MOSI5 = MOSI_5;
+    assign MOSI6 = MOSI_6;
+    assign MOSI7 = MOSI_7;
+    assign MOSI8 = MOSI_8;
+    assign MOSI9 = MOSI_9;
+    assign MOSI10 = MOSI_10;
+    assign MOSI11 = MOSI_11;
+    assign MOSI12 = MOSI_12;
+    assign MOSI13 = MOSI_13;
+    assign MOSI14 = MOSI_14;
+    assign MOSI15 = MOSI_15;
+    assign MOSI16 = MOSI_16;
 
 
 

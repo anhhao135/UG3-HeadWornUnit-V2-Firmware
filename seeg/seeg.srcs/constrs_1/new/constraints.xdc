@@ -99,3 +99,4 @@ set_property IOSTANDARD LVCMOS33 [get_ports RHS_MOSI1]
 set_property IOSTANDARD LVCMOS33 [get_ports RHS_MOSI2]
 set_property IOSTANDARD LVCMOS33 [get_ports RHS_SCLK]
 set_property DRIVE 12 [get_ports RHD_MOSI]
+

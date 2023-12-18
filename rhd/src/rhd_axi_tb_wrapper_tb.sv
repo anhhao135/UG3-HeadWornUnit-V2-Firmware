@@ -111,7 +111,7 @@ begin
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   
   // (1) Set Delay
-  mtestWDataL = 32'h0; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
+  mtestWDataL = 32'h22222222; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h4, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);

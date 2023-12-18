@@ -202,7 +202,7 @@
       "zynq_ultra_ps_e_0": {
         "vlnv": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
         "xci_name": "main_zynq_ultra_ps_e_0_0",
-        "xci_path": "ip/main_zynq_ultra_ps_e_0_0/main_zynq_ultra_ps_e_0_0.xci",
+        "xci_path": "ip\\main_zynq_ultra_ps_e_0_0\\main_zynq_ultra_ps_e_0_0.xci",
         "inst_hier_path": "zynq_ultra_ps_e_0",
         "parameters": {
           "PSU_BANK_0_IO_STANDARD": {
@@ -1797,7 +1797,7 @@
       "master_smartconnect_0": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "xci_name": "main_smartconnect_0_0",
-        "xci_path": "ip/main_smartconnect_0_0/main_smartconnect_0_0.xci",
+        "xci_path": "ip\\main_smartconnect_0_0\\main_smartconnect_0_0.xci",
         "inst_hier_path": "master_smartconnect_0",
         "parameters": {
           "NUM_CLKS": {
@@ -1927,13 +1927,13 @@
       "proc_sys_reset_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "main_proc_sys_reset_0_0",
-        "xci_path": "ip/main_proc_sys_reset_0_0/main_proc_sys_reset_0_0.xci",
+        "xci_path": "ip\\main_proc_sys_reset_0_0\\main_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_100M"
       },
       "master_smartconnect_1": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "xci_name": "main_smartconnect_0_1",
-        "xci_path": "ip/main_smartconnect_0_1/main_smartconnect_0_1.xci",
+        "xci_path": "ip\\main_smartconnect_0_1\\main_smartconnect_0_1.xci",
         "inst_hier_path": "master_smartconnect_1",
         "parameters": {
           "NUM_CLKS": {
@@ -2031,7 +2031,7 @@
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "main_clk_wiz_0_0",
-        "xci_path": "ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xci",
+        "xci_path": "ip\\main_clk_wiz_0_0\\main_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
@@ -2108,19 +2108,19 @@
       "proc_sys_reset_rhd": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "main_proc_sys_reset_0_1",
-        "xci_path": "ip/main_proc_sys_reset_0_1/main_proc_sys_reset_0_1.xci",
+        "xci_path": "ip\\main_proc_sys_reset_0_1\\main_proc_sys_reset_0_1.xci",
         "inst_hier_path": "proc_sys_reset_rhd"
       },
       "proc_sys_reset_rhs": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "main_proc_sys_reset_0_2",
-        "xci_path": "ip/main_proc_sys_reset_0_2/main_proc_sys_reset_0_2.xci",
+        "xci_path": "ip\\main_proc_sys_reset_0_2\\main_proc_sys_reset_0_2.xci",
         "inst_hier_path": "proc_sys_reset_rhs"
       },
       "slave_smartconnect_0": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "xci_name": "main_smartconnect_0_2",
-        "xci_path": "ip/main_smartconnect_0_2/main_smartconnect_0_2.xci",
+        "xci_path": "ip\\main_smartconnect_0_2\\main_smartconnect_0_2.xci",
         "inst_hier_path": "slave_smartconnect_0",
         "interface_ports": {
           "S00_AXI": {
@@ -2191,7 +2191,7 @@
       "axi_dma_0": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
         "xci_name": "main_axi_dma_0_0",
-        "xci_path": "ip/main_axi_dma_0_0/main_axi_dma_0_0.xci",
+        "xci_path": "ip\\main_axi_dma_0_0\\main_axi_dma_0_0.xci",
         "inst_hier_path": "axi_dma_0",
         "parameters": {
           "c_addr_width": {
@@ -2264,13 +2264,13 @@
       "proc_sys_reset_250M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "main_proc_sys_reset_0_3",
-        "xci_path": "ip/main_proc_sys_reset_0_3/main_proc_sys_reset_0_3.xci",
+        "xci_path": "ip\\main_proc_sys_reset_0_3\\main_proc_sys_reset_0_3.xci",
         "inst_hier_path": "proc_sys_reset_250M"
       },
       "clk_wiz_dma": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "main_clk_wiz_1_0",
-        "xci_path": "ip/main_clk_wiz_1_0/main_clk_wiz_1_0.xci",
+        "xci_path": "ip\\main_clk_wiz_1_0\\main_clk_wiz_1_0.xci",
         "inst_hier_path": "clk_wiz_dma",
         "parameters": {
           "CLKIN2_JITTER_PS": {
@@ -2913,7 +2913,7 @@
         "variant_info": {
           "recording.bd": {
             "scoped_diagram": "recording_inst_0.bd",
-            "design_checksum": "0xBEF20036",
+            "design_checksum": "0x591D8F65",
             "ref_name": "recording",
             "ref_subinst_path": "main_recording_0",
             "ref_type": "Block Design",
@@ -3029,7 +3029,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "16",
+                "value": "32",
                 "value_src": "ip_prop"
               },
               "ARUSER_WIDTH": {
@@ -3372,7 +3372,7 @@
         "variant_info": {
           "stimulation.bd": {
             "scoped_diagram": "stimulation_inst_0.bd",
-            "design_checksum": "0xADAB5830",
+            "design_checksum": "0x567C102",
             "ref_name": "stimulation",
             "ref_subinst_path": "main_stimulation_0",
             "ref_type": "Block Design",
