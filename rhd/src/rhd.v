@@ -96,7 +96,12 @@ module rhd
     input wire [3:0]                         delay_M,
     input wire [3:0]                         delay_N,
     input wire [3:0]                         delay_O,
-    input wire [3:0]                         delay_P
+    input wire [3:0]                         delay_P,
+
+
+    output wire [5:0]                        channelOut
+
+
     );
 
 
@@ -179,6 +184,8 @@ module rhd
     reg             init_mode;
     reg [15:0] 		timestamp;			 
     reg [5:0] 		channel;  // varies from 0-34 (amplfier channels 0-31, plus 3 auxiliary commands)
+
+    assign channelOut = channel;
 
     wire            flag_lastBatch;
     wire            flag_lastchannel;

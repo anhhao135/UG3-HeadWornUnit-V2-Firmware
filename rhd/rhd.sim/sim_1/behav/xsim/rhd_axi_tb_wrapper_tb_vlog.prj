@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../rhd.gen/sources_1/bd/rhd_axi_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../rhd.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../rhd.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" \
+"../../../../rhd.ip_user_files/bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v" \
+"../../../../src/rhd.v" \
+"../../../../src/rhd_S00_AXI.v" \
+"../../../../src/rhd_headstage_slave.v" \
+"../../../../src/rhd_headstage_slave_full_16_probes.v" \
+"../../../../src/rhd_axi.v" \
+
+sv xil_defaultlib  --include "../../../../rhd.gen/sources_1/bd/rhd_axi_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0_pkg.sv" \
+"../../../../rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_axi_vip_0_0/sim/rhd_axi_tb_axi_vip_0_0.sv" \
+
+verilog xil_defaultlib  --include "../../../../rhd.gen/sources_1/bd/rhd_axi_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../rhd.ip_user_files/bd/rhd_axi_tb/ip/rhd_axi_tb_rhd_axi_0_0/sim/rhd_axi_tb_rhd_axi_0_0.v" \
+"../../../../rhd.ip_user_files/bd/rhd_axi_tb/sim/rhd_axi_tb.v" \
+"../../../../rhd.gen/sources_1/bd/rhd_axi_tb/hdl/rhd_axi_tb_wrapper.v" \
+
+sv xil_defaultlib  --include "../../../../rhd.gen/sources_1/bd/rhd_axi_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../src/rhd_axi_tb_wrapper_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

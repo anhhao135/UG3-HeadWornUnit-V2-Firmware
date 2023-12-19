@@ -34,45 +34,44 @@ module rhd_headstage_slave_full_16_probes(
     output wire MISO1_O,
     output wire MISO2_O,
     output wire MISO1_P,
-    output wire MISO2_P
+    output wire MISO2_P,
+    input wire [5:0] channel
 
 );
 
-    rhd_headstage_slave #(.STARTING_SEED(0)) A (MOSI, CS, clk, SCLK, MISO1_A);
-    rhd_headstage_slave #(.STARTING_SEED(1)) B (MOSI, CS, clk, SCLK, MISO1_B);
-    rhd_headstage_slave #(.STARTING_SEED(2)) C (MOSI, CS, clk, SCLK, MISO1_C);
-    rhd_headstage_slave #(.STARTING_SEED(3)) D (MOSI, CS, clk, SCLK, MISO1_D);
-    rhd_headstage_slave #(.STARTING_SEED(4)) E (MOSI, CS, clk, SCLK, MISO1_E);
-    rhd_headstage_slave #(.STARTING_SEED(5)) F (MOSI, CS, clk, SCLK, MISO1_F);
-    rhd_headstage_slave #(.STARTING_SEED(6)) G (MOSI, CS, clk, SCLK, MISO1_G);
-    rhd_headstage_slave #(.STARTING_SEED(7)) H (MOSI, CS, clk, SCLK, MISO1_H);
-    rhd_headstage_slave #(.STARTING_SEED(8)) I (MOSI, CS, clk, SCLK, MISO1_I);
-    rhd_headstage_slave #(.STARTING_SEED(9)) J (MOSI, CS, clk, SCLK, MISO1_J);
-    rhd_headstage_slave #(.STARTING_SEED(10)) K (MOSI, CS, clk, SCLK, MISO1_K);
-    rhd_headstage_slave #(.STARTING_SEED(11)) L (MOSI, CS, clk, SCLK, MISO1_L);
-    rhd_headstage_slave #(.STARTING_SEED(12)) M (MOSI, CS, clk, SCLK, MISO1_M);
-    rhd_headstage_slave #(.STARTING_SEED(13)) N (MOSI, CS, clk, SCLK, MISO1_N);
-    rhd_headstage_slave #(.STARTING_SEED(14)) O (MOSI, CS, clk, SCLK, MISO1_O);
-    rhd_headstage_slave #(.STARTING_SEED(15)) P (MOSI, CS, clk, SCLK, MISO1_P);
+    rhd_headstage_slave #(.STARTING_SEED(0)) A1 (MOSI, CS, clk, SCLK, MISO1_A, channel);
+    rhd_headstage_slave #(.STARTING_SEED(128)) B1 (MOSI, CS, clk, SCLK, MISO1_B, channel);
+    rhd_headstage_slave #(.STARTING_SEED(256)) C1 (MOSI, CS, clk, SCLK, MISO1_C, channel);
+    rhd_headstage_slave #(.STARTING_SEED(384)) D1 (MOSI, CS, clk, SCLK, MISO1_D, channel);
+    rhd_headstage_slave #(.STARTING_SEED(512)) E1 (MOSI, CS, clk, SCLK, MISO1_E, channel);
+    rhd_headstage_slave #(.STARTING_SEED(640)) F1 (MOSI, CS, clk, SCLK, MISO1_F, channel);
+    rhd_headstage_slave #(.STARTING_SEED(768)) G1 (MOSI, CS, clk, SCLK, MISO1_G, channel);
+    rhd_headstage_slave #(.STARTING_SEED(896)) H1 (MOSI, CS, clk, SCLK, MISO1_H, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1024)) I1 (MOSI, CS, clk, SCLK, MISO1_I, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1152)) J1 (MOSI, CS, clk, SCLK, MISO1_J, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1280)) K1 (MOSI, CS, clk, SCLK, MISO1_K, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1408)) L1 (MOSI, CS, clk, SCLK, MISO1_L, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1536)) M1 (MOSI, CS, clk, SCLK, MISO1_M, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1664)) N1 (MOSI, CS, clk, SCLK, MISO1_N, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1792)) O1 (MOSI, CS, clk, SCLK, MISO1_O, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1920)) P1 (MOSI, CS, clk, SCLK, MISO1_P, channel);
 
-    assign MISO2_A = ~MISO1_A;
-    assign MISO2_B = ~MISO1_B;
-    assign MISO2_C = ~MISO1_C;
-    assign MISO2_D = ~MISO1_D;
-    assign MISO2_E = ~MISO1_E;
-    assign MISO2_F = ~MISO1_F;
-    assign MISO2_G = ~MISO1_G;
-    assign MISO2_H = ~MISO1_H;
-    assign MISO2_I = ~MISO1_I;
-    assign MISO2_J = ~MISO1_J;
-    assign MISO2_K = ~MISO1_K;
-    assign MISO2_L = ~MISO1_L;
-    assign MISO2_M = ~MISO1_M;
-    assign MISO2_N = ~MISO1_N;
-    assign MISO2_O = ~MISO1_O;
-    assign MISO2_P = ~MISO1_P;
-    
-
+    rhd_headstage_slave #(.STARTING_SEED(64)) A2 (MOSI, CS, clk, SCLK, MISO2_A, channel);
+    rhd_headstage_slave #(.STARTING_SEED(192)) B2 (MOSI, CS, clk, SCLK, MISO2_B, channel);
+    rhd_headstage_slave #(.STARTING_SEED(320)) C2 (MOSI, CS, clk, SCLK, MISO2_C, channel);
+    rhd_headstage_slave #(.STARTING_SEED(448)) D2 (MOSI, CS, clk, SCLK, MISO2_D, channel);
+    rhd_headstage_slave #(.STARTING_SEED(576)) E2 (MOSI, CS, clk, SCLK, MISO2_E, channel);
+    rhd_headstage_slave #(.STARTING_SEED(704)) F2 (MOSI, CS, clk, SCLK, MISO2_F, channel);
+    rhd_headstage_slave #(.STARTING_SEED(832)) G2 (MOSI, CS, clk, SCLK, MISO2_G, channel);
+    rhd_headstage_slave #(.STARTING_SEED(960)) H2 (MOSI, CS, clk, SCLK, MISO2_H, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1088)) I2 (MOSI, CS, clk, SCLK, MISO2_I, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1216)) J2 (MOSI, CS, clk, SCLK, MISO2_J, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1344)) K2 (MOSI, CS, clk, SCLK, MISO2_K, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1472)) L2 (MOSI, CS, clk, SCLK, MISO2_L, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1600)) M2 (MOSI, CS, clk, SCLK, MISO2_M, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1728)) N2 (MOSI, CS, clk, SCLK, MISO2_N, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1856)) O2 (MOSI, CS, clk, SCLK, MISO2_O, channel);
+    rhd_headstage_slave #(.STARTING_SEED(1984)) P2 (MOSI, CS, clk, SCLK, MISO2_P, channel);
 
 
 endmodule

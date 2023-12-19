@@ -105,10 +105,13 @@ begin
   ////////////////////////////////////////////////
   // User Part
   ////////////////////////////////////////////////
+
+  /*
   mtestWDataL = 32'h11111111;
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
+  */
   
   // (1) Set Delay
   mtestWDataL = 32'h22222222; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
@@ -126,7 +129,7 @@ begin
 
 
   // (3) Start acqusition (w/o amp fast settle)
-  mtestWDataL = 32'h00000005; //binary 101
+  mtestWDataL = 32'h000000015; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);

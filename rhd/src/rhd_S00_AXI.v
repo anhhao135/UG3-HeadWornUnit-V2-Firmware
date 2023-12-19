@@ -196,6 +196,8 @@ wire MISO2_O_SW;
 wire MISO1_P_SW;
 wire MISO2_P_SW;
 
+wire [5:0] channel;
+
 
 rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
 	.MOSI(MOSI1),
@@ -233,7 +235,8 @@ rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
 	.MISO1_O(MISO1_O_LOOP),
 	.MISO2_O(MISO2_O_LOOP),
 	.MISO1_P(MISO1_P_LOOP),
-	.MISO2_P(MISO2_P_LOOP)
+	.MISO2_P(MISO2_P_LOOP),
+	.channel(channel)
 );
 
 
@@ -705,7 +708,8 @@ rhd rhd
 	.delay_M(slv_reg1[19:16]),
 	.delay_N(slv_reg1[23:20]),
 	.delay_O(slv_reg1[27:24]),
-	.delay_P(slv_reg1[31:28])
+	.delay_P(slv_reg1[31:28]),
+	.channelOut(channel)
 	);
 
 

@@ -1,0 +1,61 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xpm_cdc_gen_v1_0_2 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_14 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rhd_axi_tb_wrapper_tb_behav xil_defaultlib.rhd_axi_tb_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package fifo_generator_v13_2_8.fifo_generator_v13_2_8_pkg
+Compiling package xpm.vcomponents
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
+Compiling module axi_vip_v1_1_14.axi_vip_v1_1_14_top(C_AXI_PROTOC...
+Compiling module xil_defaultlib.rhd_axi_tb_axi_vip_0_0
+Compiling module xil_defaultlib.rhd_headstage_slave
+Compiling module xil_defaultlib.rhd_headstage_slave_full_16_prob...
+Compiling module xil_defaultlib.MISO_falling_edge
+Compiling module xil_defaultlib.MISO_rising_edge
+Compiling module xil_defaultlib.command_selector
+Compiling module xpm.xpm_cdc_single(SIM_ASSERT_CHK=1)
+Compiling module xpm_cdc_gen_v1_0_2.xpm_cdc_gen_v1_0_2(C_CDC_TYPE=6,...
+Compiling module xil_defaultlib.xpm_cdc_1bit_xpm_cdc_0_0
+Compiling module xil_defaultlib.xpm_cdc_1bit
+Compiling architecture fifo36e2_v of entity unisim.FIFO36E2 [\FIFO36E2(init="0000000000000000...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_prim [\builtin_prim(c_din_width=16,c_d...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_extdepth [\builtin_extdepth(c_family="8SER...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_top [\builtin_top(c_family="8SERIES",...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.input_blk [\input_blk(c_common_clock=0,c_di...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.output_blk [\output_blk(c_dout_width=64,c_pk...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_v13_2_8_builtin [\fifo_generator_v13_2_8_builtin(...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_top [\fifo_generator_top(c_family="vi...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_v13_2_8_synth [\fifo_generator_v13_2_8_synth(c_...]
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.rhd
+Compiling module xil_defaultlib.rhd_S00_AXI_default
+Compiling module xil_defaultlib.rhd_axi
+Compiling module xil_defaultlib.rhd_axi_tb_rhd_axi_0_0
+Compiling module xil_defaultlib.rhd_axi_tb
+Compiling module xil_defaultlib.rhd_axi_tb_wrapper
+Compiling module xil_defaultlib.rhd_axi_tb_wrapper_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot rhd_axi_tb_wrapper_tb_behav
