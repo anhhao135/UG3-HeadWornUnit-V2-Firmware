@@ -15,12 +15,16 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
     reg [4:0] sclk_counter = 16;
     
     assign MISO = miso_out;
+
+    /*
     
     always @(negedge CS) begin
         //counter <= counter + 1;
         clk_counter <= 1;
         sclk_counter <= 16;
     end
+
+    */
 
     always @(posedge clk) begin
 

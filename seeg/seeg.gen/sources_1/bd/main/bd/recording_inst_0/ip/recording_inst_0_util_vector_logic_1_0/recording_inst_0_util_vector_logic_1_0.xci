@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "recording_inst_0_util_vector_logic_1_0",
-    "cell_name": "recording_0/util_vector_logic_1",
+    "cell_name": "util_vector_logic_1",
     "component_reference": "xilinx.com:ip:util_vector_logic:2.0",
     "ip_revision": "2",
     "gen_directory": ".",

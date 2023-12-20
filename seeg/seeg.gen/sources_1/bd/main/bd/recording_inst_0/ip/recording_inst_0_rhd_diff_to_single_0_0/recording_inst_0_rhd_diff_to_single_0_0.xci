@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "recording_inst_0_rhd_diff_to_single_0_0",
-    "cell_name": "recording_0/rhd_diff_to_single_0",
+    "cell_name": "rhd_diff_to_single_0",
     "component_reference": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
     "ip_revision": "1",
     "gen_directory": ".",
