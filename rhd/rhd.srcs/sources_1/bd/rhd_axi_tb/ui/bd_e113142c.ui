@@ -1,28 +1,28 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.613426",
-   "Default View_TopLeft":"-727,3",
+   "Default View_ScaleFactor":"0.996513",
+   "Default View_TopLeft":"-287,-6",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
 preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port port-id_aclk_out -pg 1 -lvl 0 -x 0 -y 790 -defaultsOSRD
+preplace port port-id_aclk_out -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
 preplace port port-id_aresetn_out -pg 1 -lvl 0 -x 0 -y 810 -defaultsOSRD
-preplace port port-id_CS -pg 1 -lvl 3 -x 550 -y 410 -defaultsOSRD
-preplace port port-id_SCLK -pg 1 -lvl 3 -x 550 -y 430 -defaultsOSRD
-preplace port port-id_MOSI1 -pg 1 -lvl 3 -x 550 -y 450 -defaultsOSRD
+preplace port port-id_CS -pg 1 -lvl 3 -x 550 -y 380 -defaultsOSRD
+preplace port port-id_SCLK -pg 1 -lvl 3 -x 550 -y 410 -defaultsOSRD
+preplace port port-id_MOSI1 -pg 1 -lvl 3 -x 550 -y 440 -defaultsOSRD
 preplace port port-id_MOSI2 -pg 1 -lvl 3 -x 550 -y 470 -defaultsOSRD
 preplace inst axi_vip_0 -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
 preplace inst rhd_axi_0 -pg 1 -lvl 2 -x 380 -y 440 -defaultsOSRD
-preplace netloc aclk_1 1 0 2 30 750 NJ
-preplace netloc aclk_out_1 1 0 2 NJ 790 NJ
-preplace netloc aresetn_1 1 0 2 20 770 NJ
+preplace netloc aclk_1 1 0 2 20 750 NJ
+preplace netloc aclk_out_1 1 0 2 20J 790 NJ
+preplace netloc aresetn_1 1 0 2 30 770 NJ
 preplace netloc aresetn_out_1 1 0 2 NJ 810 NJ
-preplace netloc rhd_axi_0_CS_b 1 2 1 NJ 410
-preplace netloc rhd_axi_0_MOSI1 1 2 1 NJ 450
+preplace netloc rhd_axi_0_CS_b 1 2 1 520J 380n
+preplace netloc rhd_axi_0_MOSI1 1 2 1 520J 440n
 preplace netloc rhd_axi_0_MOSI2 1 2 1 NJ 470
-preplace netloc rhd_axi_0_SCLK 1 2 1 NJ 430
+preplace netloc rhd_axi_0_SCLK 1 2 1 530J 410n
 preplace netloc axi_vip_0_M_AXI 1 1 1 N 70
 levelinfo -pg 1 0 130 380 550
 pagesize -pg 1 -db -bbox -sgen -130 0 650 870

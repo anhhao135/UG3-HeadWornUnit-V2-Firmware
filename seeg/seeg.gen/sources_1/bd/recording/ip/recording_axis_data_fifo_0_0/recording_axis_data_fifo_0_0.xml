@@ -1473,7 +1473,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROG_FULL_THRESH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PROG_FULL_THRESH">11</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PROG_FULL_THRESH">32763</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1763,7 +1763,7 @@
     <spirit:parameter>
       <spirit:name>PROG_FULL_THRESH</spirit:name>
       <spirit:displayName>Progammable full threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PROG_FULL_THRESH" spirit:order="22" spirit:minimum="5" spirit:maximum="32763" spirit:rangeType="long">11</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PROG_FULL_THRESH" spirit:order="22" spirit:minimum="5" spirit:maximum="32763" spirit:rangeType="long">32763</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1860,6 +1860,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TKEEP" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TLAST" xilinx:valueSource="user" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TSTRB" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PROG_FULL_THRESH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TDATA_NUM_BYTES" xilinx:valueSource="user" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TDEST_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>

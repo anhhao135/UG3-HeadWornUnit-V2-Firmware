@@ -571,6 +571,9 @@
           "HAS_TLAST": {
             "value": "1"
           },
+          "PROG_FULL_THRESH": {
+            "value": "32763"
+          },
           "TDATA_NUM_BYTES": {
             "value": "8"
           }
