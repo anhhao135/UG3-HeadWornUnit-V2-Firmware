@@ -85,7 +85,8 @@ initial begin
   aresetn_out <= 1'b1;
 end
 
-always #8.9281 aclk <= ~aclk; //56Mhz input to ip, but SCLK runs at 1/4 this, so 14MHZ
+//always #8.9281 aclk <= ~aclk; //56Mhz input to ip, but SCLK runs at 1/4 this, so 14MHZ
+always #71.4248 aclk <= ~aclk; //56Mhz input to ip, but SCLK runs at 1/4 this, so 14MHZ
 always #2 aclk_out <= ~aclk_out;
 
 initial begin
@@ -121,7 +122,7 @@ begin
   #1us;
 
   // (2) Set packet length
-  mtestWDataL = 32'h00000008; //binary is 1000, decimal is 8, batch size is 8
+  mtestWDataL = 32'h00000040; //binary is 1000, decimal is 8, batch size is 8
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h8, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
@@ -129,18 +130,32 @@ begin
 
 
   // (3) Start acqusition (w/o amp fast settle)
-  mtestWDataL = 5'b10001; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
+  mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
-  #1ms;
+  #5ms;
 
   // (4) Stop acqusition 
   mtestWDataL = 32'h00000000;
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
-  #1ms;
+  #0.5ms;
+
+    // (3) Start acqusition (w/o amp fast settle)
+  mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
+  mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+  COMPARE_DATA(mtestWDataL, mtestRDataL);
+  #5ms;
+
+  // (4) Stop acqusition 
+  mtestWDataL = 32'h00000000;
+  mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+  COMPARE_DATA(mtestWDataL, mtestRDataL);
+  #0.5ms;
 
 
 

@@ -668,7 +668,7 @@ module rhd
         .src_in(flag_lastchannel));    
 
 
-    always @(negedge M_AXIS_ACLK) begin //changed to negedge
+    always @(posedge M_AXIS_ACLK) begin //changed to negedge
         if (!M_AXIS_ARESETN) begin
             tlast_cnt <= 0;
         end 
@@ -689,7 +689,7 @@ module rhd
     reg [63:0] maxis_data_reg;
     reg        maxis_valid_reg;
 
-    always @(negedge M_AXIS_ACLK) begin //changed to negedge
+    always @(posedge M_AXIS_ACLK) begin //changed to negedge
         if (!M_AXIS_ARESETN) begin
             maxis_data_reg  <= 0;
             maxis_valid_reg <= 0;
