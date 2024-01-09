@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 20 23:30:20 2023
+# Process ID: 302092
+# Current directory: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_proc_sys_reset_0_3_synth_1
+# Command line: vivado -log main_proc_sys_reset_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_proc_sys_reset_0_3.tcl
+# Log file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_proc_sys_reset_0_3_synth_1/main_proc_sys_reset_0_3.vds
+# Journal file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_proc_sys_reset_0_3_synth_1/vivado.jou
+# Running On: ug3linux, OS: Linux, CPU Frequency: 4389.891 MHz, CPU Physical cores: 6, Host memory: 33339 MB
+#-----------------------------------------------------------
+source main_proc_sys_reset_0_3.tcl -notrace

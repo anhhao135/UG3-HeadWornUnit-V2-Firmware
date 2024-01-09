@@ -2,19 +2,19 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="stimulation_inst_0" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1702945782"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1702945782"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1702945782"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1702945782"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1703143807"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1703143807"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1703143807"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1703143807"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\stimulation_inst_0.v" Type="Verilog">
+      <File Name="synth/stimulation_inst_0.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\stimulation_inst_0.v" Type="Verilog">
+      <File Name="sim/stimulation_inst_0.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -28,7 +28,7 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\stimulation_inst_0.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/stimulation_inst_0.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -40,13 +40,13 @@
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth\stimulation_inst_0.hwdef">
+      <File Name="synth/stimulation_inst_0.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\stimulation_inst_0.protoinst">
+      <File Name="sim/stimulation_inst_0.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

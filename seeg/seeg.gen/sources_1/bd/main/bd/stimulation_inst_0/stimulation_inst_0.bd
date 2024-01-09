@@ -8,6 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1",
+      "validated": "true",
       "variant": "true"
     },
     "design_tree": {
@@ -27,7 +28,7 @@
           },
           "FREQ_HZ": {
             "value": "249997500",
-            "value_src": "default"
+            "value_src": "ip_prop"
           },
           "HAS_TKEEP": {
             "value": "0",
@@ -35,7 +36,7 @@
           },
           "HAS_TLAST": {
             "value": "1",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "HAS_TREADY": {
             "value": "1",
@@ -55,11 +56,11 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default"
+            "value_src": "ip_prop"
           },
           "TDATA_NUM_BYTES": {
             "value": "8",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "TDEST_WIDTH": {
             "value": "0",
@@ -101,20 +102,20 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "parameters": {
           "ADDR_WIDTH": {
-            "value": "32",
-            "value_src": "strong"
+            "value": "16",
+            "value_src": "ip_prop"
           },
           "ARUSER_WIDTH": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default_prop"
           },
           "AWUSER_WIDTH": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default_prop"
           },
           "BUSER_WIDTH": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default_prop"
           },
           "CLK_DOMAIN": {
             "value": "main_clk_wiz_0_0_clk_rhd",
@@ -126,7 +127,7 @@
           },
           "FREQ_HZ": {
             "value": "55999440",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "HAS_BRESP": {
             "value": "1",
@@ -134,15 +135,15 @@
           },
           "HAS_BURST": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "HAS_CACHE": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "HAS_LOCK": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "HAS_PROT": {
             "value": "1",
@@ -150,11 +151,11 @@
           },
           "HAS_QOS": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "HAS_REGION": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "const_prop"
           },
           "HAS_RRESP": {
             "value": "1",
@@ -166,7 +167,7 @@
           },
           "ID_WIDTH": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default_prop"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -174,31 +175,31 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "8",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "NUM_READ_THREADS": {
             "value": "1",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "NUM_WRITE_OUTSTANDING": {
             "value": "8",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "NUM_WRITE_THREADS": {
             "value": "1",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "PROTOCOL": {
             "value": "AXI4LITE",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "READ_WRITE_MODE": {
             "value": "READ_WRITE",
@@ -206,30 +207,30 @@
           },
           "RUSER_BITS_PER_BYTE": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "RUSER_WIDTH": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default_prop"
           },
           "SUPPORTS_NARROW_BURST": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "user_prop"
           },
           "WUSER_WIDTH": {
             "value": "0",
-            "value_src": "strong"
+            "value_src": "default_prop"
           }
         },
         "address_space_ref": "S_AXI_LITE",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0xFFFFFFFF",
-          "width": "32"
+          "maximum": "0x0000FFFF",
+          "width": "16"
         },
         "port_maps": {
           "AWADDR": {
@@ -344,11 +345,11 @@
           },
           "CLK_DOMAIN": {
             "value": "main_clk_wiz_1_0_clk_dma_250M",
-            "value_src": "strong"
+            "value_src": "default_prop"
           },
           "FREQ_HZ": {
             "value": "249997500",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -360,7 +361,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           }
         }
       },
@@ -384,11 +385,11 @@
           },
           "CLK_DOMAIN": {
             "value": "main_clk_wiz_0_0_clk_rhd",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "FREQ_HZ": {
             "value": "55999440",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -400,7 +401,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "strong"
+            "value_src": "ip_prop"
           }
         }
       },
@@ -414,7 +415,7 @@
           },
           "POLARITY": {
             "value": "ACTIVE_LOW",
-            "value_src": "strong"
+            "value_src": "const_prop"
           }
         }
       },
@@ -428,7 +429,7 @@
           },
           "POLARITY": {
             "value": "ACTIVE_LOW",
-            "value_src": "strong"
+            "value_src": "const_prop"
           }
         }
       },
@@ -449,7 +450,7 @@
       "util_vector_logic_0": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "stimulation_inst_0_util_vector_logic_0_0",
-        "xci_path": "ip\\stimulation_inst_0_util_vector_logic_0_0\\stimulation_inst_0_util_vector_logic_0_0.xci",
+        "xci_path": "ip/stimulation_inst_0_util_vector_logic_0_0/stimulation_inst_0_util_vector_logic_0_0.xci",
         "inst_hier_path": "util_vector_logic_0",
         "parameters": {
           "C_SIZE": {
@@ -460,7 +461,7 @@
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "stimulation_inst_0_axis_data_fifo_0_0",
-        "xci_path": "ip\\stimulation_inst_0_axis_data_fifo_0_0\\stimulation_inst_0_axis_data_fifo_0_0.xci",
+        "xci_path": "ip/stimulation_inst_0_axis_data_fifo_0_0/stimulation_inst_0_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
@@ -477,7 +478,7 @@
       "rhs_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhs_axi:1.0",
         "xci_name": "stimulation_inst_0_rhs_axi_0_0",
-        "xci_path": "ip\\stimulation_inst_0_rhs_axi_0_0\\stimulation_inst_0_rhs_axi_0_0.xci",
+        "xci_path": "ip/stimulation_inst_0_rhs_axi_0_0/stimulation_inst_0_rhs_axi_0_0.xci",
         "inst_hier_path": "rhs_axi_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -985,12 +986,12 @@
       "/": {
         "address_spaces": {
           "S_AXI_LITE": {
-            "range": "4G",
-            "width": "32",
+            "range": "64K",
+            "width": "16",
             "segments": {
               "SEG_rhs_axi_0_reg0": {
                 "address_block": "/rhs_axi_0/s00_axi/reg0",
-                "offset": "0x80030000",
+                "offset": "0x0000",
                 "range": "64K"
               }
             }

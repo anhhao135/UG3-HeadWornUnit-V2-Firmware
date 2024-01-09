@@ -420,7 +420,7 @@
       "util_vector_logic_0": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "stimulation_util_vector_logic_0_0",
-        "xci_path": "ip\\stimulation_util_vector_logic_0_0\\stimulation_util_vector_logic_0_0.xci",
+        "xci_path": "ip/stimulation_util_vector_logic_0_0/stimulation_util_vector_logic_0_0.xci",
         "inst_hier_path": "util_vector_logic_0",
         "parameters": {
           "C_SIZE": {
@@ -431,7 +431,7 @@
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "stimulation_axis_data_fifo_0_0",
-        "xci_path": "ip\\stimulation_axis_data_fifo_0_0\\stimulation_axis_data_fifo_0_0.xci",
+        "xci_path": "ip/stimulation_axis_data_fifo_0_0/stimulation_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
@@ -448,7 +448,7 @@
       "rhs_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhs_axi:1.0",
         "xci_name": "stimulation_rhs_axi_0_0",
-        "xci_path": "ip\\stimulation_rhs_axi_0_0\\stimulation_rhs_axi_0_0.xci",
+        "xci_path": "ip/stimulation_rhs_axi_0_0/stimulation_rhs_axi_0_0.xci",
         "inst_hier_path": "rhs_axi_0",
         "reference_info": {
           "ref_type": "hdl",

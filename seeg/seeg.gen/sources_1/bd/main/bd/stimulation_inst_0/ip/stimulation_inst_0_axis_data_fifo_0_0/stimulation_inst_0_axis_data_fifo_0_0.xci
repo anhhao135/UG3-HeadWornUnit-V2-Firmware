@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "stimulation_inst_0_axis_data_fifo_0_0",
-    "cell_name": "axis_data_fifo_0",
+    "cell_name": "stimulation_0/axis_data_fifo_0",
     "component_reference": "xilinx.com:ip:axis_data_fifo:2.0",
     "ip_revision": "10",
     "gen_directory": ".",

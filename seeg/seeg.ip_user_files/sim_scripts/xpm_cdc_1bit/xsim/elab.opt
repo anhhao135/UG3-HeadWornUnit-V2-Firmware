@@ -1,1 +1,0 @@
---incr --debug typical --relax --mt 2  -L xpm_cdc_gen_v1_0_2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot xpm_cdc_1bit xil_defaultlib.xpm_cdc_1bit xil_defaultlib.glbl -log elaborate.log

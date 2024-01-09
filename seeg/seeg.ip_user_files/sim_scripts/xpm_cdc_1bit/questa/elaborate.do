@@ -1,1 +1,0 @@
-vopt +acc=npr -l elaborate.log +acc=npr -suppress 10016  -L xil_defaultlib -L xilinx_vip -L xpm -L xpm_cdc_gen_v1_0_2 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.xpm_cdc_1bit xil_defaultlib.glbl -o xpm_cdc_1bit_opt

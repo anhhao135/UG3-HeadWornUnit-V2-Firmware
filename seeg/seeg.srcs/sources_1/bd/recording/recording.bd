@@ -7,7 +7,8 @@
       "name": "recording",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "axis_data_fifo_0": "",
@@ -372,8 +373,24 @@
           "ASSOCIATED_RESET": {
             "value": "rstn_dma"
           },
+          "CLK_DOMAIN": {
+            "value": "recording_clk_dma",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
@@ -387,8 +404,24 @@
           "ASSOCIATED_RESET": {
             "value": "rstn_rhd"
           },
+          "CLK_DOMAIN": {
+            "value": "recording_clk_rhd",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
@@ -399,11 +432,31 @@
       },
       "rstn_dma": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "rstn_rhd": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "MISO1_I_P": {
         "direction": "I"
@@ -506,7 +559,7 @@
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "recording_axis_data_fifo_0_0",
-        "xci_path": "ip\\recording_axis_data_fifo_0_0\\recording_axis_data_fifo_0_0.xci",
+        "xci_path": "ip/recording_axis_data_fifo_0_0/recording_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
@@ -529,7 +582,7 @@
       "util_vector_logic_0": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "recording_util_vector_logic_0_0",
-        "xci_path": "ip\\recording_util_vector_logic_0_0\\recording_util_vector_logic_0_0.xci",
+        "xci_path": "ip/recording_util_vector_logic_0_0/recording_util_vector_logic_0_0.xci",
         "inst_hier_path": "util_vector_logic_0",
         "parameters": {
           "C_SIZE": {
@@ -540,7 +593,7 @@
       "util_vector_logic_1": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "recording_util_vector_logic_1_0",
-        "xci_path": "ip\\recording_util_vector_logic_1_0\\recording_util_vector_logic_1_0.xci",
+        "xci_path": "ip/recording_util_vector_logic_1_0/recording_util_vector_logic_1_0.xci",
         "inst_hier_path": "util_vector_logic_1",
         "parameters": {
           "C_SIZE": {
@@ -551,7 +604,7 @@
       "RisingEdgeCounter_0": {
         "vlnv": "xilinx.com:module_ref:RisingEdgeCounter:1.0",
         "xci_name": "recording_RisingEdgeCounter_0_0",
-        "xci_path": "ip\\recording_RisingEdgeCounter_0_0\\recording_RisingEdgeCounter_0_0.xci",
+        "xci_path": "ip/recording_RisingEdgeCounter_0_0/recording_RisingEdgeCounter_0_0.xci",
         "inst_hier_path": "RisingEdgeCounter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -610,7 +663,7 @@
       "rhd_diff_to_single_0": {
         "vlnv": "xilinx.com:module_ref:rhd_diff_to_single:1.0",
         "xci_name": "recording_rhd_diff_to_single_0_0",
-        "xci_path": "ip\\recording_rhd_diff_to_single_0_0\\recording_rhd_diff_to_single_0_0.xci",
+        "xci_path": "ip/recording_rhd_diff_to_single_0_0/recording_rhd_diff_to_single_0_0.xci",
         "inst_hier_path": "rhd_diff_to_single_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -767,7 +820,7 @@
       "rhd_axi_0": {
         "vlnv": "xilinx.com:module_ref:rhd_axi:1.0",
         "xci_name": "recording_rhd_axi_0_0",
-        "xci_path": "ip\\recording_rhd_axi_0_0\\recording_rhd_axi_0_0.xci",
+        "xci_path": "ip/recording_rhd_axi_0_0/recording_rhd_axi_0_0.xci",
         "inst_hier_path": "rhd_axi_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -811,6 +864,14 @@
               "HAS_TLAST": {
                 "value": "1",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "recording_clk_dma",
+                "value_src": "default_prop"
               }
             },
             "port_maps": {
@@ -846,6 +907,10 @@
               "PROTOCOL": {
                 "value": "AXI4LITE",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "ID_WIDTH": {
                 "value": "0",
@@ -930,6 +995,26 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "recording_clk_rhd",
+                "value_src": "default_prop"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
               }
             },
             "memory_map_ref": "s00_axi",
@@ -1164,6 +1249,14 @@
               "ASSOCIATED_RESET": {
                 "value": "s00_axi_aresetn",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "recording_clk_rhd",
+                "value_src": "default_prop"
               }
             }
           },
@@ -1188,6 +1281,14 @@
               "ASSOCIATED_RESET": {
                 "value": "M_AXIS_ARESETN",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "recording_clk_dma",
+                "value_src": "default_prop"
               }
             }
           },

@@ -6,8 +6,8 @@
    "Color Coded_ScaleFactor":"0.215247",
    "Color Coded_TopLeft":"-1264,5",
    "Default View_Layers":"/proc_sys_reset_250M_peripheral_aresetn:true|/zynq_ultra_ps_e_0_pl_clk0:true|/zynq_ultra_ps_e_0_pl_resetn0:true|/proc_sys_reset_100M_peripheral_aresetn:true|/stimulation_0/rhs_axi_0_FIFO_rstn:true|/clk_wiz_0_clk_rhd:true|/Net:true|/proc_sys_reset_rhd_peripheral_aresetn:true|/clk_wiz_0_clk_rhs:true|/proc_sys_reset_rhs_peripheral_aresetn:true|/recording_0/rhd_axi_0_FIFO_rstn:true|",
-   "Default View_ScaleFactor":"0.145786",
-   "Default View_TopLeft":"-1221,-1015",
+   "Default View_ScaleFactor":"0.182034",
+   "Default View_TopLeft":"-714,5",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -21,7 +21,7 @@
    "Reduced Jogs_ScaleFactor":"0.178854",
    "Reduced Jogs_TopLeft":"-1493,0",
    "commentid":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_RHD_CS -pg 1 -lvl 9 -x 3850 -y 560 -defaultsOSRD
 preplace port port-id_RHD_MOSI -pg 1 -lvl 9 -x 3850 -y 580 -defaultsOSRD
@@ -93,7 +93,7 @@ preplace inst proc_sys_reset_250M -pg 1 -lvl 2 -x 450 -y 1350 -defaultsOSRD
 preplace inst clk_wiz_dma -pg 1 -lvl 1 -x 130 -y 1400 -defaultsOSRD
 preplace inst recording_0 -pg 1 -lvl 8 -x 3630 -y 580 -defaultsOSRD
 preplace inst stimulation_0 -pg 1 -lvl 8 -x 3630 -y 1710 -defaultsOSRD
-preplace netloc MISO1_1 1 0 8 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 2380J 1900 2900J
+preplace netloc MISO1_1 1 0 8 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 2390J 1900 2910J
 preplace netloc MISO1_A_1 1 0 8 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ
 preplace netloc MISO1_B_1 1 0 8 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
 preplace netloc MISO1_C_1 1 0 8 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ
@@ -118,7 +118,7 @@ preplace netloc MISO1_O_N_1 1 0 8 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 9
 preplace netloc MISO1_O_P_1 1 0 8 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ
 preplace netloc MISO1_P_N_1 1 0 8 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ
 preplace netloc MISO1_P_P_1 1 0 8 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ
-preplace netloc MISO2_1 1 0 8 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 3470J
+preplace netloc MISO2_1 1 0 8 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 3460J
 preplace netloc MISO2_A_1 1 0 8 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ
 preplace netloc MISO2_B_1 1 0 8 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ
 preplace netloc MISO2_C_1 1 0 8 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ
@@ -141,36 +141,36 @@ preplace netloc MISO2_N_N_1 1 0 8 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 9
 preplace netloc MISO2_N_P_1 1 0 8 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ
 preplace netloc MISO2_O_N_1 1 0 8 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ
 preplace netloc MISO2_O_P_1 1 0 8 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ
-preplace netloc MISO2_P_N_1 1 0 8 10J 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2890J
-preplace netloc MISO2_P_P_1 1 0 8 NJ 1080 NJ 1080 NJ 1080 1030J 1280 1360J 1080 NJ 1080 NJ 1080 NJ
-preplace netloc Net 1 1 7 260 1450 660 1450 1050 1370 1350 1460 2040 1470 2430J 1480 3450
-preplace netloc Net1 1 6 2 2470 1490 2830
-preplace netloc axi_dma_0_s2mm_introut 1 3 2 1000 1390 NJ
-preplace netloc clk_wiz_0_clk_rhd 1 6 2 2490 1500 2850
-preplace netloc clk_wiz_0_clk_rhs 1 6 2 2480 1700 2860
-preplace netloc clk_wiz_dma_locked 1 1 1 270 1390n
-preplace netloc proc_sys_reset_100M_peripheral_aresetn 1 6 1 2460 1390n
-preplace netloc proc_sys_reset_250M_peripheral_aresetn 1 2 6 640 1210 1070 1270 1380J 1250 NJ 1250 NJ 1250 3460
-preplace netloc proc_sys_reset_rhd_peripheral_aresetn 1 7 1 2880 460n
-preplace netloc proc_sys_reset_rhs_peripheral_aresetn 1 7 1 3480 1750n
+preplace netloc MISO2_P_N_1 1 0 8 10J 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2900J
+preplace netloc MISO2_P_P_1 1 0 8 NJ 1080 NJ 1080 NJ 1080 1040J 1280 1360J 1080 NJ 1080 NJ 1080 NJ
+preplace netloc Net 1 1 7 250 1450 650 1450 1050 1370 1350 1460 2030 1470 2420J 1480 3440
+preplace netloc Net1 1 6 2 2460 1490 2840
+preplace netloc axi_dma_0_s2mm_introut 1 3 2 1010 1390 NJ
+preplace netloc clk_wiz_0_clk_rhd 1 6 2 2480 1500 2860
+preplace netloc clk_wiz_0_clk_rhs 1 6 2 2470 1700 2870
+preplace netloc clk_wiz_dma_locked 1 1 1 260 1390n
+preplace netloc proc_sys_reset_100M_peripheral_aresetn 1 6 1 2450 1390n
+preplace netloc proc_sys_reset_250M_peripheral_aresetn 1 2 6 630 1210 1070 1270 1380J 1250 NJ 1250 NJ 1250 3450
+preplace netloc proc_sys_reset_rhd_peripheral_aresetn 1 7 1 2890 460n
+preplace netloc proc_sys_reset_rhs_peripheral_aresetn 1 7 1 3470 1750n
 preplace netloc recording_0_CS 1 8 1 NJ 560
 preplace netloc recording_0_MOSI 1 8 1 NJ 580
 preplace netloc recording_0_SCLK 1 8 1 NJ 600
-preplace netloc recording_0_fifo_full_cnt 1 5 4 2010J 1450 2450J 1470 NJ 1470 3780
-preplace netloc stimulation_0_CS 1 8 1 3790J 1650n
-preplace netloc stimulation_0_MOSI1 1 8 1 3810J 1690n
-preplace netloc stimulation_0_MOSI2 1 8 1 3820J 1710n
-preplace netloc stimulation_0_SCLK 1 8 1 3800J 1670n
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 20 1470 NJ 1470 NJ 1470 NJ 1470 1380 1470 2030 1480 2420
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 6 280 1480 NJ 1480 NJ 1480 NJ 1480 2000 1490 2410
-preplace netloc S_AXI_LITE_1 1 7 1 2840 60n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1010 1150n
-preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1000 1130n
-preplace netloc master_smartconnect_0_M00_AXI 1 2 5 650 1220 1060J 1250 1350J 1240 NJ 1240 2400
-preplace netloc master_smartconnect_0_M01_AXI 1 6 1 2400 1350n
-preplace netloc master_smartconnect_0_M02_AXI 1 6 1 2440 1380n
-preplace netloc master_smartconnect_1_M01_AXI 1 7 1 2870 1610n
-preplace netloc recording_0_M_AXIS 1 2 7 660 1230 1020J 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 3790
+preplace netloc recording_0_fifo_full_cnt 1 5 4 2010J 1450 2440J 1470 NJ 1470 3790
+preplace netloc stimulation_0_CS 1 8 1 3800J 1650n
+preplace netloc stimulation_0_MOSI1 1 8 1 3820J 1690n
+preplace netloc stimulation_0_MOSI2 1 8 1 3830J 1710n
+preplace netloc stimulation_0_SCLK 1 8 1 3810J 1670n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 10 1470 NJ 1470 NJ 1470 NJ 1470 1380 1470 2020 1480 2410
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 6 270 1480 NJ 1480 NJ 1480 NJ 1480 2000 1490 2400
+preplace netloc S_AXI_LITE_1 1 7 1 2850 60n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1020 1150n
+preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1010 1130n
+preplace netloc master_smartconnect_0_M00_AXI 1 2 5 640 1220 1060J 1250 1350J 1240 NJ 1240 2410
+preplace netloc master_smartconnect_0_M01_AXI 1 6 1 2410 1350n
+preplace netloc master_smartconnect_0_M02_AXI 1 6 1 2430 1380n
+preplace netloc master_smartconnect_1_M01_AXI 1 7 1 2880 1610n
+preplace netloc recording_0_M_AXIS 1 2 7 650 1230 1030J 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 3800
 preplace netloc smartconnect_0_M00_AXI 1 4 1 1370 1160n
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 5 1 2030 1320n
 levelinfo -pg 1 -10 130 450 830 1210 1690 2210 2660 3630 3850

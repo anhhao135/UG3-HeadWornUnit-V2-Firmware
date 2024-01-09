@@ -2,19 +2,19 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="xpm_cdc_1bit" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1702930403"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1702930403"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1702930403"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1702930403"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1703143775"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1703143775"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1703143775"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1703143775"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\xpm_cdc_1bit.v" Type="Verilog">
+      <File Name="synth/xpm_cdc_1bit.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\xpm_cdc_1bit.v" Type="Verilog">
+      <File Name="sim/xpm_cdc_1bit.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -28,7 +28,7 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\xpm_cdc_1bit.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/xpm_cdc_1bit.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -40,13 +40,13 @@
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth\xpm_cdc_1bit.hwdef">
+      <File Name="synth/xpm_cdc_1bit.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\xpm_cdc_1bit.protoinst">
+      <File Name="sim/xpm_cdc_1bit.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
