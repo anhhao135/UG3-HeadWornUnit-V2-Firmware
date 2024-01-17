@@ -1266,11 +1266,14 @@ module command_initialization (
 );
     wire [31:0] read_rom255_cmd, clean_cmd;
     assign read_rom255_cmd = { 2'b11, 2'b00, 4'b0000, 8'hff, 16'b0 }; //read from intan ID register, should return decimal 32
-    assign clean_cmd = {4'b0110, 4'b1010, 24'b0}; //calibration of ADC
+    assign clean_cmd = {4'b0110, 4'b1010, 24'b0}; //calibration of ADC, no need to send follow up dummy commands
 
     always @(*) begin
         if (init_en) begin
             case (channel_config)
+
+                //recording set up
+
                 0:       MOSI_cmd <=  read_rom255_cmd;
                 1:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd32, 16'h0000}; //clears magic number reg A
                 2:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd33, 16'h0000}; //clears magic number reg B
@@ -1278,7 +1281,7 @@ module command_initialization (
                 4:       MOSI_cmd <=  clean_cmd; //recalibrate ADC
                 5:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd0,  16'h00C5}; //11 000101 page 16
                 // HAL FOR 5:, CHANGED WRITE DATA FROM 16'h00C7 to 16'h00C5, so ADC sampling rate is >=440kS/s , ADC buffer bias is 3, MUX bias is 5
-                6:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd1,  16'h051A}; //0 1 0 1 0 0 0 1 1 010 digout 1 and 2 are driven to aux outs, driven to high
+                6:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd1,  16'h051A}; //0 1 0 1 0 0 0 1 1 010 digout 1 and 2 are driven to aux outs, driven to high, enable twos complement
                 7:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd2,  16'h0040}; // 0100 0000 6bit high sets Zcheck DAC power on, waveform generator will be constantly on, zcheck scale is set to 0.1pF series capacitor
                 8:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd3,  16'h0080}; // 1000 0000 by default sets dac voltage to (128 / 255) * 1.225V = 0.61V, middle point
 
@@ -1293,8 +1296,11 @@ module command_initialization (
 
                 13:      MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd8,  16'hFFFF}; //AC amp power, all set to 1 to power on
 
-                14:      MOSI_cmd <=  { 2'b10, 2'b10, 4'b0000, 8'd10, 16'h0000};    // U-FLAG = 1 (this is triggered)
+                14:      MOSI_cmd <=  { 2'b10, 2'b10, 4'b0000, 8'd10, 16'h0000};    // U-FLAG = 1 (this is triggered) close switch for fast settle
                 15:      MOSI_cmd <=  { 2'b10, 2'b10, 4'b0000, 8'd12, 16'hFFFF};    // U-FLAG = 1 (this is triggered)
+
+
+                //stim set up
 
 
                 16:      MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd34, 16'h000F};    // sel1=15, sel2=0, sel3=0
@@ -1422,22 +1428,22 @@ module command_selector_stim (
 	
 	always @(*) begin
 		case (channel)
-			0:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			1:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			2:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			3:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			4:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			5:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			6:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			7:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			8:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			9:       MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			10:      MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			11:      MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			12:      MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			13:      MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			14:      MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
-			15:      MOSI_cmd <= { 2'b00, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			0:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			1:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			2:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			3:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			4:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			5:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			6:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			7:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			8:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			9:       MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			10:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			11:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			12:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			13:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			14:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
+			15:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
 			16:		 MOSI_cmd <= stim_en ? { 2'b10, 2'b00, 4'b0000, stim_on_register, stim_on_cmd  }            : ZCheck_cmd_1; // turn stim on/off
 			17:		 MOSI_cmd <= stim_en ? { 2'b10, 2'b00, 4'b0000, stim_pol_register, stim_pol_cmd }           : ZCheck_cmd_2; // set stim polarity , 1 is pos, 0 is neg
 			18:		 MOSI_cmd <= { 2'b11, 2'b00, 4'b0000, compliance_register, 16'h0000 }; //            : read_rom255_cmd;

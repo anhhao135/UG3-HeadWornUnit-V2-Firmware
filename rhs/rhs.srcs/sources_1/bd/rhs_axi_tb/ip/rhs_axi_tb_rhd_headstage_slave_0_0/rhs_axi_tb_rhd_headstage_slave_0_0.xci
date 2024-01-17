@@ -44,7 +44,8 @@
         "CS": [ { "direction": "in" } ],
         "clk": [ { "direction": "in" } ],
         "SCLK": [ { "direction": "in" } ],
-        "MISO": [ { "direction": "out" } ]
+        "MISO": [ { "direction": "out" } ],
+        "channel": [ { "direction": "in", "size_left": "5", "size_right": "0" } ]
       },
       "interfaces": {
         "clk": {

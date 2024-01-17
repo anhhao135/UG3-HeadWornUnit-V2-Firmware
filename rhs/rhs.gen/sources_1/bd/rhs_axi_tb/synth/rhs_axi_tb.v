@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Dec 13 14:52:58 2023
+//Date        : Tue Jan 16 14:17:07 2024
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb.bd
 //Design      : rhs_axi_tb
@@ -94,12 +94,14 @@ module rhs_axi_tb
         .MISO(rhd_headstage_slave_0_MISO),
         .MOSI(rhs_axi_0_MOSI1),
         .SCLK(rhs_axi_0_SCLK),
+        .channel({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clk(aclk_1));
   rhs_axi_tb_rhd_headstage_slave_1_0 rhd_headstage_slave_1
        (.CS(rhs_axi_0_CS_b),
         .MISO(rhd_headstage_slave_1_MISO),
         .MOSI(rhs_axi_0_MOSI2),
         .SCLK(rhs_axi_0_SCLK),
+        .channel({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clk(aclk_1));
   rhs_axi_tb_rhs_axi_0_0 rhs_axi_0
        (.CS_b(rhs_axi_0_CS_b),

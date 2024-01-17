@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2023 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -59,7 +59,8 @@ module rhs_axi_tb_rhd_headstage_slave_0_0 (
   CS,
   clk,
   SCLK,
-  MISO
+  MISO,
+  channel
 );
 
 input wire MOSI;
@@ -69,6 +70,7 @@ input wire CS;
 input wire clk;
 input wire SCLK;
 output wire MISO;
+input wire [5 : 0] channel;
 
   rhd_headstage_slave #(
     .STARTING_SEED(0)
@@ -77,6 +79,7 @@ output wire MISO;
     .CS(CS),
     .clk(clk),
     .SCLK(SCLK),
-    .MISO(MISO)
+    .MISO(MISO),
+    .channel(channel)
   );
 endmodule

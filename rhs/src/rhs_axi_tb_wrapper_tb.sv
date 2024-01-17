@@ -150,7 +150,7 @@ begin
   #1us;
 
   // (7) Set num pulse
-  mtestWDataL = 32'h00000001; //number of pulse = 1 + 1 = 2
+  mtestWDataL = 32'h00000008; //number of pulse = 1 + 1 = 2
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h1C, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h1C, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);

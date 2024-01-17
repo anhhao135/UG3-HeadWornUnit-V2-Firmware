@@ -208,6 +208,11 @@
           },
           "MISO": {
             "direction": "O"
+          },
+          "channel": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
           }
         }
       },
@@ -252,6 +257,11 @@
           },
           "MISO": {
             "direction": "O"
+          },
+          "channel": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
           }
         }
       },

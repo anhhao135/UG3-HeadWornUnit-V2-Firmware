@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 13 14:52:59 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 16 14:17:07 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhs_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -314,6 +314,7 @@
             <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO1"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="5" NAME="channel" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -350,6 +351,7 @@
             <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO2"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="5" NAME="channel" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
