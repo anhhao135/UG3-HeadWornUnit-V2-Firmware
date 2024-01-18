@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2.089355 us"></ZoomStartTime>
-      <ZoomEndTime time="37.039356 us"></ZoomEndTime>
+      <ZoomStartTime time="7.049355 us"></ZoomStartTime>
+      <ZoomEndTime time="12.559356 us"></ZoomEndTime>
       <Cursor1Time time="8.389355 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="448"></NameColumnWidth>
-      <ValueColumnWidth column_width="156"></ValueColumnWidth>
+      <ValueColumnWidth column_width="152"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="46" />
+   <WVObjectSize size="50" />
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aclk_out" type="logic">
       <obj_property name="ElementShortName">aclk_out</obj_property>
       <obj_property name="ObjectShortName">aclk_out</obj_property>
@@ -208,5 +208,21 @@
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
    </wvobject>
 </wave_config>

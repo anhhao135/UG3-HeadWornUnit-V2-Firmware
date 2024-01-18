@@ -5,76 +5,22 @@ Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:26]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:27]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:28]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:29]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:30]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:31]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:32]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:33]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:34]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:35]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:36]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:37]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:38]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:39]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:40]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:41]
-WARNING: [VRFC 10-5021] port 'biphasic_polarity' is not connected on this instance [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:474]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:26]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:27]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:28]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:29]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:30]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:33]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:34]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:35]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:36]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:37]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:38]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:39]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:40]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:41]
+WARNING: [VRFC 10-5021] port 'biphasic_polarity' is not connected on this instance [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:474]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package synopsys.attributes
-Compiling package ieee.std_logic_misc
-Compiling package fifo_generator_v13_2_8.fifo_generator_v13_2_8_pkg
-Compiling package xpm.vcomponents
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling package xilinx_vip.axi_vip_pkg
-Compiling package xilinx_vip.xil_common_vip_pkg
-Compiling package std.std
-Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
-Compiling module xilinx_vip.cb
-Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
-Compiling module axi_vip_v1_1_14.axi_vip_v1_1_14_top(C_AXI_PROTOC...
-Compiling module xil_defaultlib.rhs_axi_tb_axi_vip_0_0
-Compiling module xil_defaultlib.MISO_phase_selector
-Compiling module xil_defaultlib.command_initialization
-Compiling module xil_defaultlib.command_amplitudeSetup
-Compiling module xil_defaultlib.command_selector_stim
-Compiling module xpm.xpm_cdc_single(SIM_ASSERT_CHK=1)
-Compiling module xpm_cdc_gen_v1_0_2.xpm_cdc_gen_v1_0_2(C_CDC_TYPE=6,...
-Compiling module xil_defaultlib.xpm_cdc_1bit_xpm_cdc_0_0
-Compiling module xil_defaultlib.xpm_cdc_1bit
-Compiling architecture fifo36e2_v of entity unisim.FIFO36E2 [\FIFO36E2(init="0000000000000000...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_prim [\builtin_prim(c_din_width=16,c_d...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_extdepth [\builtin_extdepth(c_family="8SER...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.builtin_top [\builtin_top(c_family="8SERIES",...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.input_blk [\input_blk(c_common_clock=0,c_di...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.output_blk [\output_blk(c_dout_width=64,c_pk...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_v13_2_8_builtin [\fifo_generator_v13_2_8_builtin(...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_top [\fifo_generator_top(c_family="vi...]
-Compiling architecture xilinx of entity fifo_generator_v13_2_8.fifo_generator_v13_2_8_synth [\fifo_generator_v13_2_8_synth(c_...]
-Compiling module xil_defaultlib.fifo_generator_0
-Compiling module xil_defaultlib.rhs
-Compiling module xil_defaultlib.rhs_S00_AXI_default
-Compiling module xil_defaultlib.rhs_axi
-Compiling module xil_defaultlib.rhs_axi_tb_rhs_axi_0_0
-Compiling module xil_defaultlib.rhs_headstage_slave
-Compiling module xil_defaultlib.rhs_headstage_slave_full
-Compiling module xil_defaultlib.rhs_axi_tb_rhs_headstage_slave_0...
-Compiling module xil_defaultlib.rhs_axi_tb
-Compiling module xil_defaultlib.rhs_axi_tb_wrapper
-Compiling module xil_defaultlib.rhs_axi_tb_wrapper_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot rhs_axi_tb_wrapper_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

@@ -171,7 +171,7 @@ module rhs
     reg [15:0] charge_recov;
     reg [15:0] channel_select_p, channel_select_n; 
 
-    wire [15:0] stim_on_1, stim_on_2;
+    wire [15:0] stim_on_1, stim_on_2, stim_on_3, stim_on_4, stim_on_5, stim_on_6, stim_on_7, stim_on_8, stim_on_9, stim_on_10, stim_on_11, stim_on_12, stim_on_13, stim_on_14, stim_on_15, stim_on_16; 
 
     assign stim_on_1 = (stim_ch_p[4]) ? 16'b0     :   stim_on; // checks MSB of channel selection, if 1, then must be 16 - 31 - RHS2 select
     assign stim_on_2 = (stim_ch_p[4]) ? stim_on   :   16'b0; // if MSB = 0, 0-15 RHS1 select
@@ -284,53 +284,130 @@ module rhs
     reg [15:0] 	    rhs_data_out;
     reg				rhd_valid_out;
 
-    reg [133:0] 	in4x_1, in4x_2;
-    wire [31:0] 	in_1, in_2;
-    reg  [31:0] 	result_1, result_2;
-    wire [31:0]		data_stream_1, data_stream_2;
+    reg [133:0] 	in4x_1, in4x_2, in4x_3, in4x_4, in4x_5, in4x_6, in4x_7, in4x_8, in4x_9, in4x_10, in4x_11, in4x_12, in4x_13, in4x_14, in4x_15, in4x_16;
+    wire [31:0] 	in_1, in_2, in_3, in_4, in_5, in_6, in_7, in_8, in_9, in_10, in_11, in_12, in_13, in_14, in_15, in_16;
+    reg  [31:0] 	result_1, result_2, result_3, result_4, result_5, result_6, result_7, result_8, result_9, result_10, result_11, result_12, result_13, result_14, result_15, result_16;
+    wire [31:0]		data_stream_1, data_stream_2, data_stream_3, data_stream_4, data_stream_5, data_stream_6, data_stream_7, data_stream_8, data_stream_9, data_stream_10, data_stream_11, data_stream_12, data_stream_13, data_stream_14, data_stream_15, data_stream_16;
 
     assign data_stream_1 = result_1;
     assign data_stream_2 = result_2;
+    assign data_stream_3 = result_3;
+    assign data_stream_4 = result_4;
+    assign data_stream_5 = result_5;
+    assign data_stream_6 = result_6;
+    assign data_stream_7 = result_7;
+    assign data_stream_8 = result_8;
+    assign data_stream_9 = result_9;
+    assign data_stream_10 = result_10;
+    assign data_stream_11 = result_11;
+    assign data_stream_12 = result_12;
+    assign data_stream_13 = result_13;
+    assign data_stream_14 = result_14;
+    assign data_stream_15 = result_15;
+    assign data_stream_16 = result_16;
 
+    reg [3:0] phase_select = 4'd2;
 
 
     // MISO phase selectors (to compensate for headstage cable delays)
 
     MISO_phase_selector MISO_falling_edge_1 (
-        .phase_select(4'd2), .MISO4x(in4x_1), .MISO(in_1));	
+        .phase_select(phase_select), .MISO4x(in4x_1), .MISO(in_1));	
 
     MISO_phase_selector MISO_falling_edge_2 (
-        .phase_select(4'd2), .MISO4x(in4x_2), .MISO(in_2));	
+        .phase_select(phase_select), .MISO4x(in4x_2), .MISO(in_2));
+
+    MISO_phase_selector MISO_falling_edge_3 (
+        .phase_select(phase_select), .MISO4x(in4x_3), .MISO(in_3));	
+
+    MISO_phase_selector MISO_falling_edge_4 (
+        .phase_select(phase_select), .MISO4x(in4x_4), .MISO(in_4));
+
+    MISO_phase_selector MISO_falling_edge_5 (
+        .phase_select(phase_select), .MISO4x(in4x_5), .MISO(in_5));	
+
+    MISO_phase_selector MISO_falling_edge_6 (
+        .phase_select(phase_select), .MISO4x(in4x_6), .MISO(in_6));
+
+    MISO_phase_selector MISO_falling_edge_7 (
+        .phase_select(phase_select), .MISO4x(in4x_7), .MISO(in_7));	
+
+    MISO_phase_selector MISO_falling_edge_8 (
+        .phase_select(phase_select), .MISO4x(in4x_8), .MISO(in_8));
+
+    MISO_phase_selector MISO_falling_edge_9 (
+        .phase_select(phase_select), .MISO4x(in4x_9), .MISO(in_9));	
+
+    MISO_phase_selector MISO_falling_edge_10 (
+        .phase_select(phase_select), .MISO4x(in4x_10), .MISO(in_10));
+
+    MISO_phase_selector MISO_falling_edge_11 (
+        .phase_select(phase_select), .MISO4x(in4x_11), .MISO(in_11));	
+
+    MISO_phase_selector MISO_falling_edge_12 (
+        .phase_select(phase_select), .MISO4x(in4x_12), .MISO(in_12));
+
+    MISO_phase_selector MISO_falling_edge_13 (
+        .phase_select(phase_select), .MISO4x(in4x_13), .MISO(in_13));	
+
+    MISO_phase_selector MISO_falling_edge_14 (
+        .phase_select(phase_select), .MISO4x(in4x_14), .MISO(in_14));
+
+    MISO_phase_selector MISO_falling_edge_15 (
+        .phase_select(phase_select), .MISO4x(in4x_15), .MISO(in_15));	
+
+    MISO_phase_selector MISO_falling_edge_16 (
+        .phase_select(phase_select), .MISO4x(in4x_16), .MISO(in_16));
+
+
 
     // [INITIALIZATION]
-    reg [31:0] 		MOSI_cmd_1, MOSI_cmd_2 ;
-    wire [31:0] 	MOSI_cmd_selected_init_1, MOSI_cmd_selected_init_2;
-    wire [31:0] 	MOSI_cmd_selected_norm_1, MOSI_cmd_selected_norm_2;
-    wire [31:0]     MOSI_cmd_selected_amp_1, MOSI_cmd_selected_amp_2;
+    reg [31:0] 		MOSI_cmd_1, MOSI_cmd_2, MOSI_cmd_3, MOSI_cmd_4, MOSI_cmd_5, MOSI_cmd_6, MOSI_cmd_7, MOSI_cmd_8, MOSI_cmd_9, MOSI_cmd_10, MOSI_cmd_11, MOSI_cmd_12, MOSI_cmd_13, MOSI_cmd_14, MOSI_cmd_15, MOSI_cmd_16;
+
+
+    /*
+    wire [31:0] 	MOSI_cmd_selected_init_1, MOSI_cmd_selected_init_2, MOSI_cmd_selected_init_3, MOSI_cmd_selected_init_4, MOSI_cmd_selected_init_5, MOSI_cmd_selected_init_6, MOSI_cmd_selected_init_7, MOSI_cmd_selected_init_8, MOSI_cmd_selected_init_9, MOSI_cmd_selected_init_2, MOSI_cmd_selected_init_1, MOSI_cmd_selected_init_2, MOSI_cmd_selected_init_1, MOSI_cmd_selected_init_2, MOSI_cmd_selected_init_1, MOSI_cmd_selected_init_2;
+    */
+
+    wire [31:0] 	MOSI_cmd_selected_init;
+
+    wire [31:0]     MOSI_cmd_selected_amp;
+
+    wire [31:0] 	MOSI_cmd_selected_norm_1, MOSI_cmd_selected_norm_2, MOSI_cmd_selected_norm_3, MOSI_cmd_selected_norm_4, MOSI_cmd_selected_norm_5, MOSI_cmd_selected_norm_6, MOSI_cmd_selected_norm_7, MOSI_cmd_selected_norm_8, MOSI_cmd_selected_norm_9, MOSI_cmd_selected_norm_10, MOSI_cmd_selected_norm_11, MOSI_cmd_selected_norm_12, MOSI_cmd_selected_norm_13, MOSI_cmd_selected_norm_14, MOSI_cmd_selected_norm_15, MOSI_cmd_selected_norm_16; 
+
 
     // `command selector` controls the MOSI commands.
 
     command_initialization command_selector_init_1 (
         .init_en(init_en),
         .channel_config(channel_config),
-        .MOSI_cmd(MOSI_cmd_selected_init_1));
+        .MOSI_cmd(MOSI_cmd_selected_init));
+
+
+    /*
     command_initialization command_selector_init_2 (
         .init_en(init_en),
         .channel_config(channel_config),
         .MOSI_cmd(MOSI_cmd_selected_init_2));
+    */
 
-    command_amplitudeSetup command_selector_amp_1 (
+
+    command_amplitudeSetup command_selector_amp (
         .mag_set_en(mag_set_en),
         .channel_config(channel_config),
         .mag_pos(mag_pos),
         .mag_neg(mag_neg),
-        .MOSI_cmd(MOSI_cmd_selected_amp_1));
+        .MOSI_cmd(MOSI_cmd_selected_amp));
+
+
+    /*
     command_amplitudeSetup command_selector_amp_2 (
         .mag_set_en(mag_set_en),
         .channel_config(channel_config),
         .mag_pos(mag_pos),
         .mag_neg(mag_neg),
         .MOSI_cmd(MOSI_cmd_selected_amp_2));
+    */
 
     command_selector_stim command_selector_stim_1 (
         .enable(!init_en && !mag_set_en),
@@ -343,6 +420,7 @@ module rhs
         .stim_pol(stim_pol),
         .charge_recov(charge_recov),
         .MOSI_cmd(MOSI_cmd_selected_norm_1));
+
     command_selector_stim command_selector_stim_2 (
         .enable(!init_en && !mag_set_en),
         .channel(channel),
@@ -354,6 +432,174 @@ module rhs
         .stim_pol(stim_pol),
         .charge_recov(charge_recov),
         .MOSI_cmd(MOSI_cmd_selected_norm_2));
+
+    command_selector_stim command_selector_stim_3 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_3),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_3));
+
+    command_selector_stim command_selector_stim_4 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_4),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_4));
+
+    command_selector_stim command_selector_stim_5 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_5),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_5));
+
+    command_selector_stim command_selector_stim_6 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_6),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_6));
+
+    command_selector_stim command_selector_stim_7 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_7),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_7));
+
+    command_selector_stim command_selector_stim_8 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_8),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_8));
+
+    command_selector_stim command_selector_stim_9 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_9),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_9));
+
+    command_selector_stim command_selector_stim_10 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_10),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_10));
+
+    command_selector_stim command_selector_stim_11 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_11),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_11));
+
+    command_selector_stim command_selector_stim_12 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_12),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_12));
+
+    command_selector_stim command_selector_stim_13 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_13),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_13));
+
+    command_selector_stim command_selector_stim_14 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_14),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_14));
+
+    command_selector_stim command_selector_stim_15 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_15),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_15));
+
+    command_selector_stim command_selector_stim_16 (
+        .enable(!init_en && !mag_set_en),
+        .channel(channel),
+        .charge_recov_mode(charge_recov_mode),
+        .ZCheck_cmd_1(ZCheck_cmd_1),
+        .ZCheck_cmd_2(ZCheck_cmd_2),
+        .stim_en(stim_en),
+        .stim_on(stim_on_16),
+        .stim_pol(stim_pol),
+        .charge_recov(charge_recov),
+        .MOSI_cmd(MOSI_cmd_selected_norm_16));
 
 
 
@@ -766,164 +1012,741 @@ module rhs
         if (!resetn) begin
             MOSI_1 <= 1'b0;
             MOSI_2 <= 1'b0;
+            MOSI_3 <= 1'b0;
+            MOSI_4 <= 1'b0;
+            MOSI_5 <= 1'b0;
+            MOSI_6 <= 1'b0;
+            MOSI_7 <= 1'b0;
+            MOSI_8 <= 1'b0;
+            MOSI_9 <= 1'b0;
+            MOSI_10 <= 1'b0;
+            MOSI_11 <= 1'b0;
+            MOSI_12 <= 1'b0;
+            MOSI_13 <= 1'b0;
+            MOSI_14 <= 1'b0;
+            MOSI_15 <= 1'b0;
+            MOSI_16 <= 1'b0;
+            
             MOSI_cmd_1 <= 32'b0;
             MOSI_cmd_2 <= 32'b0;
+            MOSI_cmd_3 <= 32'b0;
+            MOSI_cmd_4 <= 32'b0;
+            MOSI_cmd_5 <= 32'b0;
+            MOSI_cmd_6 <= 32'b0;
+            MOSI_cmd_7 <= 32'b0;
+            MOSI_cmd_8 <= 32'b0;
+            MOSI_cmd_9 <= 32'b0;
+            MOSI_cmd_10 <= 32'b0;
+            MOSI_cmd_11 <= 32'b0;
+            MOSI_cmd_12 <= 32'b0;
+            MOSI_cmd_13 <= 32'b0;
+            MOSI_cmd_14 <= 32'b0;
+            MOSI_cmd_15 <= 32'b0;
+            MOSI_cmd_16 <= 32'b0;
         end
         else begin
             case (main_state) 
                 ms_wait: begin
-                    MOSI_1 <= 0;
-                    MOSI_2 <= 0;
+                    MOSI_1 <= 1'b0;
+                    MOSI_2 <= 1'b0;
+                    MOSI_3 <= 1'b0;
+                    MOSI_4 <= 1'b0;
+                    MOSI_5 <= 1'b0;
+                    MOSI_6 <= 1'b0;
+                    MOSI_7 <= 1'b0;
+                    MOSI_8 <= 1'b0;
+                    MOSI_9 <= 1'b0;
+                    MOSI_10 <= 1'b0;
+                    MOSI_11 <= 1'b0;
+                    MOSI_12 <= 1'b0;
+                    MOSI_13 <= 1'b0;
+                    MOSI_14 <= 1'b0;
+                    MOSI_15 <= 1'b0;
+                    MOSI_16 <= 1'b0;
+                    
                     MOSI_cmd_1 <= 32'b0;
                     MOSI_cmd_2 <= 32'b0;
+                    MOSI_cmd_3 <= 32'b0;
+                    MOSI_cmd_4 <= 32'b0;
+                    MOSI_cmd_5 <= 32'b0;
+                    MOSI_cmd_6 <= 32'b0;
+                    MOSI_cmd_7 <= 32'b0;
+                    MOSI_cmd_8 <= 32'b0;
+                    MOSI_cmd_9 <= 32'b0;
+                    MOSI_cmd_10 <= 32'b0;
+                    MOSI_cmd_11 <= 32'b0;
+                    MOSI_cmd_12 <= 32'b0;
+                    MOSI_cmd_13 <= 32'b0;
+                    MOSI_cmd_14 <= 32'b0;
+                    MOSI_cmd_15 <= 32'b0;
+                    MOSI_cmd_16 <= 32'b0;
                 end
                 ms_cs_j: begin
                     if (init_en) begin
-                        MOSI_cmd_1 <= MOSI_cmd_selected_init_1;
-                        MOSI_cmd_2 <= MOSI_cmd_selected_init_2;
+                        MOSI_cmd_1 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_2 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_3 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_4 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_5 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_6 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_7 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_8 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_9 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_10 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_11 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_12 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_13 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_14 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_15 <= MOSI_cmd_selected_init;
+                        MOSI_cmd_16 <= MOSI_cmd_selected_init;
                     end 
                     else if (mag_set_en) begin
-                        MOSI_cmd_1 <= MOSI_cmd_selected_amp_1;
-                        MOSI_cmd_2 <= MOSI_cmd_selected_amp_2;
+                        MOSI_cmd_1 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_2 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_3 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_4 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_5 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_6 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_7 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_8 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_9 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_10 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_11 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_12 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_13 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_14 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_15 <= MOSI_cmd_selected_amp;
+                        MOSI_cmd_16 <= MOSI_cmd_selected_amp;
                     end 
                     else begin
                         MOSI_cmd_1 <= MOSI_cmd_selected_norm_1;
                         MOSI_cmd_2 <= MOSI_cmd_selected_norm_2;
+                        MOSI_cmd_3 <= MOSI_cmd_selected_norm_3;
+                        MOSI_cmd_4 <= MOSI_cmd_selected_norm_4;
+                        MOSI_cmd_5 <= MOSI_cmd_selected_norm_5;
+                        MOSI_cmd_6 <= MOSI_cmd_selected_norm_6;
+                        MOSI_cmd_7 <= MOSI_cmd_selected_norm_7;
+                        MOSI_cmd_8 <= MOSI_cmd_selected_norm_8;
+                        MOSI_cmd_9 <= MOSI_cmd_selected_norm_9;
+                        MOSI_cmd_10 <= MOSI_cmd_selected_norm_10;
+                        MOSI_cmd_11 <= MOSI_cmd_selected_norm_11;
+                        MOSI_cmd_12 <= MOSI_cmd_selected_norm_12;
+                        MOSI_cmd_13 <= MOSI_cmd_selected_norm_13;
+                        MOSI_cmd_14 <= MOSI_cmd_selected_norm_14;
+                        MOSI_cmd_15 <= MOSI_cmd_selected_norm_15;
+                        MOSI_cmd_16 <= MOSI_cmd_selected_norm_16;
                     end
                 end
                 ms_clk1_a: begin
                     MOSI_1 <= MOSI_cmd_1[31];
                     MOSI_2 <= MOSI_cmd_2[31];
+                    MOSI_3 <= MOSI_cmd_3[31];
+                    MOSI_4 <= MOSI_cmd_4[31];
+                    MOSI_5 <= MOSI_cmd_5[31];
+                    MOSI_6 <= MOSI_cmd_6[31];
+                    MOSI_7 <= MOSI_cmd_7[31];
+                    MOSI_8 <= MOSI_cmd_8[31];
+                    MOSI_9 <= MOSI_cmd_9[31];
+                    MOSI_10 <= MOSI_cmd_10[31];
+                    MOSI_11 <= MOSI_cmd_11[31];
+                    MOSI_12 <= MOSI_cmd_12[31];
+                    MOSI_13 <= MOSI_cmd_13[31];
+                    MOSI_14 <= MOSI_cmd_14[31];
+                    MOSI_15 <= MOSI_cmd_15[31];
+                    MOSI_16 <= MOSI_cmd_16[31];
                 end
                 ms_clk2_a: begin
                     MOSI_1 <= MOSI_cmd_1[30];
                     MOSI_2 <= MOSI_cmd_2[30];
+                    MOSI_3 <= MOSI_cmd_3[30];
+                    MOSI_4 <= MOSI_cmd_4[30];
+                    MOSI_5 <= MOSI_cmd_5[30];
+                    MOSI_6 <= MOSI_cmd_6[30];
+                    MOSI_7 <= MOSI_cmd_7[30];
+                    MOSI_8 <= MOSI_cmd_8[30];
+                    MOSI_9 <= MOSI_cmd_9[30];
+                    MOSI_10 <= MOSI_cmd_10[30];
+                    MOSI_11 <= MOSI_cmd_11[30];
+                    MOSI_12 <= MOSI_cmd_12[30];
+                    MOSI_13 <= MOSI_cmd_13[30];
+                    MOSI_14 <= MOSI_cmd_14[30];
+                    MOSI_15 <= MOSI_cmd_15[30];
+                    MOSI_16 <= MOSI_cmd_16[30];
                 end
                 ms_clk3_a: begin
                     MOSI_1 <= MOSI_cmd_1[29];
                     MOSI_2 <= MOSI_cmd_2[29];
+                    MOSI_3 <= MOSI_cmd_3[29];
+                    MOSI_4 <= MOSI_cmd_4[29];
+                    MOSI_5 <= MOSI_cmd_5[29];
+                    MOSI_6 <= MOSI_cmd_6[29];
+                    MOSI_7 <= MOSI_cmd_7[29];
+                    MOSI_8 <= MOSI_cmd_8[29];
+                    MOSI_9 <= MOSI_cmd_9[29];
+                    MOSI_10 <= MOSI_cmd_10[29];
+                    MOSI_11 <= MOSI_cmd_11[29];
+                    MOSI_12 <= MOSI_cmd_12[29];
+                    MOSI_13 <= MOSI_cmd_13[29];
+                    MOSI_14 <= MOSI_cmd_14[29];
+                    MOSI_15 <= MOSI_cmd_15[29];
+                    MOSI_16 <= MOSI_cmd_16[29];
                 end
                 ms_clk4_a: begin
                     MOSI_1 <= MOSI_cmd_1[28];
                     MOSI_2 <= MOSI_cmd_2[28];
+                    MOSI_3 <= MOSI_cmd_3[28];
+                    MOSI_4 <= MOSI_cmd_4[28];
+                    MOSI_5 <= MOSI_cmd_5[28];
+                    MOSI_6 <= MOSI_cmd_6[28];
+                    MOSI_7 <= MOSI_cmd_7[28];
+                    MOSI_8 <= MOSI_cmd_8[28];
+                    MOSI_9 <= MOSI_cmd_9[28];
+                    MOSI_10 <= MOSI_cmd_10[28];
+                    MOSI_11 <= MOSI_cmd_11[28];
+                    MOSI_12 <= MOSI_cmd_12[28];
+                    MOSI_13 <= MOSI_cmd_13[28];
+                    MOSI_14 <= MOSI_cmd_14[28];
+                    MOSI_15 <= MOSI_cmd_15[28];
+                    MOSI_16 <= MOSI_cmd_16[28];
                 end
                 ms_clk5_a: begin
                     MOSI_1 <= MOSI_cmd_1[27];
                     MOSI_2 <= MOSI_cmd_2[27];
+                    MOSI_3 <= MOSI_cmd_3[27];
+                    MOSI_4 <= MOSI_cmd_4[27];
+                    MOSI_5 <= MOSI_cmd_5[27];
+                    MOSI_6 <= MOSI_cmd_6[27];
+                    MOSI_7 <= MOSI_cmd_7[27];
+                    MOSI_8 <= MOSI_cmd_8[27];
+                    MOSI_9 <= MOSI_cmd_9[27];
+                    MOSI_10 <= MOSI_cmd_10[27];
+                    MOSI_11 <= MOSI_cmd_11[27];
+                    MOSI_12 <= MOSI_cmd_12[27];
+                    MOSI_13 <= MOSI_cmd_13[27];
+                    MOSI_14 <= MOSI_cmd_14[27];
+                    MOSI_15 <= MOSI_cmd_15[27];
+                    MOSI_16 <= MOSI_cmd_16[27];
                 end
                 ms_clk6_a: begin
                     MOSI_1 <= MOSI_cmd_1[26];
                     MOSI_2 <= MOSI_cmd_2[26];
+                    MOSI_3 <= MOSI_cmd_3[26];
+                    MOSI_4 <= MOSI_cmd_4[26];
+                    MOSI_5 <= MOSI_cmd_5[26];
+                    MOSI_6 <= MOSI_cmd_6[26];
+                    MOSI_7 <= MOSI_cmd_7[26];
+                    MOSI_8 <= MOSI_cmd_8[26];
+                    MOSI_9 <= MOSI_cmd_9[26];
+                    MOSI_10 <= MOSI_cmd_10[26];
+                    MOSI_11 <= MOSI_cmd_11[26];
+                    MOSI_12 <= MOSI_cmd_12[26];
+                    MOSI_13 <= MOSI_cmd_13[26];
+                    MOSI_14 <= MOSI_cmd_14[26];
+                    MOSI_15 <= MOSI_cmd_15[26];
+                    MOSI_16 <= MOSI_cmd_16[26];
                 end
                 ms_clk7_a: begin
                     MOSI_1 <= MOSI_cmd_1[25];
                     MOSI_2 <= MOSI_cmd_2[25];
+                    MOSI_3 <= MOSI_cmd_3[25];
+                    MOSI_4 <= MOSI_cmd_4[25];
+                    MOSI_5 <= MOSI_cmd_5[25];
+                    MOSI_6 <= MOSI_cmd_6[25];
+                    MOSI_7 <= MOSI_cmd_7[25];
+                    MOSI_8 <= MOSI_cmd_8[25];
+                    MOSI_9 <= MOSI_cmd_9[25];
+                    MOSI_10 <= MOSI_cmd_10[25];
+                    MOSI_11 <= MOSI_cmd_11[25];
+                    MOSI_12 <= MOSI_cmd_12[25];
+                    MOSI_13 <= MOSI_cmd_13[25];
+                    MOSI_14 <= MOSI_cmd_14[25];
+                    MOSI_15 <= MOSI_cmd_15[25];
+                    MOSI_16 <= MOSI_cmd_16[25];
                 end
                 ms_clk8_a: begin
                     MOSI_1 <= MOSI_cmd_1[24];
                     MOSI_2 <= MOSI_cmd_2[24];
+                    MOSI_3 <= MOSI_cmd_3[24];
+                    MOSI_4 <= MOSI_cmd_4[24];
+                    MOSI_5 <= MOSI_cmd_5[24];
+                    MOSI_6 <= MOSI_cmd_6[24];
+                    MOSI_7 <= MOSI_cmd_7[24];
+                    MOSI_8 <= MOSI_cmd_8[24];
+                    MOSI_9 <= MOSI_cmd_9[24];
+                    MOSI_10 <= MOSI_cmd_10[24];
+                    MOSI_11 <= MOSI_cmd_11[24];
+                    MOSI_12 <= MOSI_cmd_12[24];
+                    MOSI_13 <= MOSI_cmd_13[24];
+                    MOSI_14 <= MOSI_cmd_14[24];
+                    MOSI_15 <= MOSI_cmd_15[24];
+                    MOSI_16 <= MOSI_cmd_16[24];
                 end
                 ms_clk9_a: begin
                     MOSI_1 <= MOSI_cmd_1[23];
                     MOSI_2 <= MOSI_cmd_2[23];
+                    MOSI_3 <= MOSI_cmd_3[23];
+                    MOSI_4 <= MOSI_cmd_4[23];
+                    MOSI_5 <= MOSI_cmd_5[23];
+                    MOSI_6 <= MOSI_cmd_6[23];
+                    MOSI_7 <= MOSI_cmd_7[23];
+                    MOSI_8 <= MOSI_cmd_8[23];
+                    MOSI_9 <= MOSI_cmd_9[23];
+                    MOSI_10 <= MOSI_cmd_10[23];
+                    MOSI_11 <= MOSI_cmd_11[23];
+                    MOSI_12 <= MOSI_cmd_12[23];
+                    MOSI_13 <= MOSI_cmd_13[23];
+                    MOSI_14 <= MOSI_cmd_14[23];
+                    MOSI_15 <= MOSI_cmd_15[23];
+                    MOSI_16 <= MOSI_cmd_16[23];
                 end
                 ms_clk10_a: begin
                     MOSI_1 <= MOSI_cmd_1[22];
                     MOSI_2 <= MOSI_cmd_2[22];
+                    MOSI_3 <= MOSI_cmd_3[22];
+                    MOSI_4 <= MOSI_cmd_4[22];
+                    MOSI_5 <= MOSI_cmd_5[22];
+                    MOSI_6 <= MOSI_cmd_6[22];
+                    MOSI_7 <= MOSI_cmd_7[22];
+                    MOSI_8 <= MOSI_cmd_8[22];
+                    MOSI_9 <= MOSI_cmd_9[22];
+                    MOSI_10 <= MOSI_cmd_10[22];
+                    MOSI_11 <= MOSI_cmd_11[22];
+                    MOSI_12 <= MOSI_cmd_12[22];
+                    MOSI_13 <= MOSI_cmd_13[22];
+                    MOSI_14 <= MOSI_cmd_14[22];
+                    MOSI_15 <= MOSI_cmd_15[22];
+                    MOSI_16 <= MOSI_cmd_16[22];
                 end
                 ms_clk11_a: begin
                     MOSI_1 <= MOSI_cmd_1[21];
                     MOSI_2 <= MOSI_cmd_2[21];
+                    MOSI_3 <= MOSI_cmd_3[21];
+                    MOSI_4 <= MOSI_cmd_4[21];
+                    MOSI_5 <= MOSI_cmd_5[21];
+                    MOSI_6 <= MOSI_cmd_6[21];
+                    MOSI_7 <= MOSI_cmd_7[21];
+                    MOSI_8 <= MOSI_cmd_8[21];
+                    MOSI_9 <= MOSI_cmd_9[21];
+                    MOSI_10 <= MOSI_cmd_10[21];
+                    MOSI_11 <= MOSI_cmd_11[21];
+                    MOSI_12 <= MOSI_cmd_12[21];
+                    MOSI_13 <= MOSI_cmd_13[21];
+                    MOSI_14 <= MOSI_cmd_14[21];
+                    MOSI_15 <= MOSI_cmd_15[21];
+                    MOSI_16 <= MOSI_cmd_16[21];
                 end
                 ms_clk12_a: begin
                     MOSI_1 <= MOSI_cmd_1[20];
                     MOSI_2 <= MOSI_cmd_2[20];
+                    MOSI_3 <= MOSI_cmd_3[20];
+                    MOSI_4 <= MOSI_cmd_4[20];
+                    MOSI_5 <= MOSI_cmd_5[20];
+                    MOSI_6 <= MOSI_cmd_6[20];
+                    MOSI_7 <= MOSI_cmd_7[20];
+                    MOSI_8 <= MOSI_cmd_8[20];
+                    MOSI_9 <= MOSI_cmd_9[20];
+                    MOSI_10 <= MOSI_cmd_10[20];
+                    MOSI_11 <= MOSI_cmd_11[20];
+                    MOSI_12 <= MOSI_cmd_12[20];
+                    MOSI_13 <= MOSI_cmd_13[20];
+                    MOSI_14 <= MOSI_cmd_14[20];
+                    MOSI_15 <= MOSI_cmd_15[20];
+                    MOSI_16 <= MOSI_cmd_16[20];
                 end
                 ms_clk13_a: begin
                     MOSI_1 <= MOSI_cmd_1[19];
                     MOSI_2 <= MOSI_cmd_2[19];
+                    MOSI_3 <= MOSI_cmd_3[19];
+                    MOSI_4 <= MOSI_cmd_4[19];
+                    MOSI_5 <= MOSI_cmd_5[19];
+                    MOSI_6 <= MOSI_cmd_6[19];
+                    MOSI_7 <= MOSI_cmd_7[19];
+                    MOSI_8 <= MOSI_cmd_8[19];
+                    MOSI_9 <= MOSI_cmd_9[19];
+                    MOSI_10 <= MOSI_cmd_10[19];
+                    MOSI_11 <= MOSI_cmd_11[19];
+                    MOSI_12 <= MOSI_cmd_12[19];
+                    MOSI_13 <= MOSI_cmd_13[19];
+                    MOSI_14 <= MOSI_cmd_14[19];
+                    MOSI_15 <= MOSI_cmd_15[19];
+                    MOSI_16 <= MOSI_cmd_16[19];
                 end
                 ms_clk14_a: begin
                     MOSI_1 <= MOSI_cmd_1[18];
                     MOSI_2 <= MOSI_cmd_2[18];
+                    MOSI_3 <= MOSI_cmd_3[18];
+                    MOSI_4 <= MOSI_cmd_4[18];
+                    MOSI_5 <= MOSI_cmd_5[18];
+                    MOSI_6 <= MOSI_cmd_6[18];
+                    MOSI_7 <= MOSI_cmd_7[18];
+                    MOSI_8 <= MOSI_cmd_8[18];
+                    MOSI_9 <= MOSI_cmd_9[18];
+                    MOSI_10 <= MOSI_cmd_10[18];
+                    MOSI_11 <= MOSI_cmd_11[18];
+                    MOSI_12 <= MOSI_cmd_12[18];
+                    MOSI_13 <= MOSI_cmd_13[18];
+                    MOSI_14 <= MOSI_cmd_14[18];
+                    MOSI_15 <= MOSI_cmd_15[18];
+                    MOSI_16 <= MOSI_cmd_16[18];
                 end
                 ms_clk15_a: begin
                     MOSI_1 <= MOSI_cmd_1[17];
                     MOSI_2 <= MOSI_cmd_2[17];
+                    MOSI_3 <= MOSI_cmd_3[17];
+                    MOSI_4 <= MOSI_cmd_4[17];
+                    MOSI_5 <= MOSI_cmd_5[17];
+                    MOSI_6 <= MOSI_cmd_6[17];
+                    MOSI_7 <= MOSI_cmd_7[17];
+                    MOSI_8 <= MOSI_cmd_8[17];
+                    MOSI_9 <= MOSI_cmd_9[17];
+                    MOSI_10 <= MOSI_cmd_10[17];
+                    MOSI_11 <= MOSI_cmd_11[17];
+                    MOSI_12 <= MOSI_cmd_12[17];
+                    MOSI_13 <= MOSI_cmd_13[17];
+                    MOSI_14 <= MOSI_cmd_14[17];
+                    MOSI_15 <= MOSI_cmd_15[17];
+                    MOSI_16 <= MOSI_cmd_16[17];
                 end
                 ms_clk16_a: begin
                     MOSI_1 <= MOSI_cmd_1[16];
                     MOSI_2 <= MOSI_cmd_2[16];
+                    MOSI_3 <= MOSI_cmd_3[16];
+                    MOSI_4 <= MOSI_cmd_4[16];
+                    MOSI_5 <= MOSI_cmd_5[16];
+                    MOSI_6 <= MOSI_cmd_6[16];
+                    MOSI_7 <= MOSI_cmd_7[16];
+                    MOSI_8 <= MOSI_cmd_8[16];
+                    MOSI_9 <= MOSI_cmd_9[16];
+                    MOSI_10 <= MOSI_cmd_10[16];
+                    MOSI_11 <= MOSI_cmd_11[16];
+                    MOSI_12 <= MOSI_cmd_12[16];
+                    MOSI_13 <= MOSI_cmd_13[16];
+                    MOSI_14 <= MOSI_cmd_14[16];
+                    MOSI_15 <= MOSI_cmd_15[16];
+                    MOSI_16 <= MOSI_cmd_16[16];
                 end
                 ms_clk17_a: begin
                     MOSI_1 <= MOSI_cmd_1[15];
                     MOSI_2 <= MOSI_cmd_2[15];
+                    MOSI_3 <= MOSI_cmd_3[15];
+                    MOSI_4 <= MOSI_cmd_4[15];
+                    MOSI_5 <= MOSI_cmd_5[15];
+                    MOSI_6 <= MOSI_cmd_6[15];
+                    MOSI_7 <= MOSI_cmd_7[15];
+                    MOSI_8 <= MOSI_cmd_8[15];
+                    MOSI_9 <= MOSI_cmd_9[15];
+                    MOSI_10 <= MOSI_cmd_10[15];
+                    MOSI_11 <= MOSI_cmd_11[15];
+                    MOSI_12 <= MOSI_cmd_12[15];
+                    MOSI_13 <= MOSI_cmd_13[15];
+                    MOSI_14 <= MOSI_cmd_14[15];
+                    MOSI_15 <= MOSI_cmd_15[15];
+                    MOSI_16 <= MOSI_cmd_16[15];
                 end
                 ms_clk18_a: begin
                     MOSI_1 <= MOSI_cmd_1[14];
                     MOSI_2 <= MOSI_cmd_2[14];
+                    MOSI_3 <= MOSI_cmd_3[14];
+                    MOSI_4 <= MOSI_cmd_4[14];
+                    MOSI_5 <= MOSI_cmd_5[14];
+                    MOSI_6 <= MOSI_cmd_6[14];
+                    MOSI_7 <= MOSI_cmd_7[14];
+                    MOSI_8 <= MOSI_cmd_8[14];
+                    MOSI_9 <= MOSI_cmd_9[14];
+                    MOSI_10 <= MOSI_cmd_10[14];
+                    MOSI_11 <= MOSI_cmd_11[14];
+                    MOSI_12 <= MOSI_cmd_12[14];
+                    MOSI_13 <= MOSI_cmd_13[14];
+                    MOSI_14 <= MOSI_cmd_14[14];
+                    MOSI_15 <= MOSI_cmd_15[14];
+                    MOSI_16 <= MOSI_cmd_16[14];
                 end
                 ms_clk19_a: begin
                     MOSI_1 <= MOSI_cmd_1[13];
                     MOSI_2 <= MOSI_cmd_2[13];
+                    MOSI_3 <= MOSI_cmd_3[13];
+                    MOSI_4 <= MOSI_cmd_4[13];
+                    MOSI_5 <= MOSI_cmd_5[13];
+                    MOSI_6 <= MOSI_cmd_6[13];
+                    MOSI_7 <= MOSI_cmd_7[13];
+                    MOSI_8 <= MOSI_cmd_8[13];
+                    MOSI_9 <= MOSI_cmd_9[13];
+                    MOSI_10 <= MOSI_cmd_10[13];
+                    MOSI_11 <= MOSI_cmd_11[13];
+                    MOSI_12 <= MOSI_cmd_12[13];
+                    MOSI_13 <= MOSI_cmd_13[13];
+                    MOSI_14 <= MOSI_cmd_14[13];
+                    MOSI_15 <= MOSI_cmd_15[13];
+                    MOSI_16 <= MOSI_cmd_16[13];
                 end
                 ms_clk20_a: begin
                     MOSI_1 <= MOSI_cmd_1[12];
                     MOSI_2 <= MOSI_cmd_2[12];
+                    MOSI_3 <= MOSI_cmd_3[12];
+                    MOSI_4 <= MOSI_cmd_4[12];
+                    MOSI_5 <= MOSI_cmd_5[12];
+                    MOSI_6 <= MOSI_cmd_6[12];
+                    MOSI_7 <= MOSI_cmd_7[12];
+                    MOSI_8 <= MOSI_cmd_8[12];
+                    MOSI_9 <= MOSI_cmd_9[12];
+                    MOSI_10 <= MOSI_cmd_10[12];
+                    MOSI_11 <= MOSI_cmd_11[12];
+                    MOSI_12 <= MOSI_cmd_12[12];
+                    MOSI_13 <= MOSI_cmd_13[12];
+                    MOSI_14 <= MOSI_cmd_14[12];
+                    MOSI_15 <= MOSI_cmd_15[12];
+                    MOSI_16 <= MOSI_cmd_16[12];
                 end
                 ms_clk21_a: begin
                     MOSI_1 <= MOSI_cmd_1[11];
                     MOSI_2 <= MOSI_cmd_2[11];
+                    MOSI_3 <= MOSI_cmd_3[11];
+                    MOSI_4 <= MOSI_cmd_4[11];
+                    MOSI_5 <= MOSI_cmd_5[11];
+                    MOSI_6 <= MOSI_cmd_6[11];
+                    MOSI_7 <= MOSI_cmd_7[11];
+                    MOSI_8 <= MOSI_cmd_8[11];
+                    MOSI_9 <= MOSI_cmd_9[11];
+                    MOSI_10 <= MOSI_cmd_10[11];
+                    MOSI_11 <= MOSI_cmd_11[11];
+                    MOSI_12 <= MOSI_cmd_12[11];
+                    MOSI_13 <= MOSI_cmd_13[11];
+                    MOSI_14 <= MOSI_cmd_14[11];
+                    MOSI_15 <= MOSI_cmd_15[11];
+                    MOSI_16 <= MOSI_cmd_16[11];
                 end
                 ms_clk22_a: begin
                     MOSI_1 <= MOSI_cmd_1[10];
                     MOSI_2 <= MOSI_cmd_2[10];
+                    MOSI_3 <= MOSI_cmd_3[10];
+                    MOSI_4 <= MOSI_cmd_4[10];
+                    MOSI_5 <= MOSI_cmd_5[10];
+                    MOSI_6 <= MOSI_cmd_6[10];
+                    MOSI_7 <= MOSI_cmd_7[10];
+                    MOSI_8 <= MOSI_cmd_8[10];
+                    MOSI_9 <= MOSI_cmd_9[10];
+                    MOSI_10 <= MOSI_cmd_10[10];
+                    MOSI_11 <= MOSI_cmd_11[10];
+                    MOSI_12 <= MOSI_cmd_12[10];
+                    MOSI_13 <= MOSI_cmd_13[10];
+                    MOSI_14 <= MOSI_cmd_14[10];
+                    MOSI_15 <= MOSI_cmd_15[10];
+                    MOSI_16 <= MOSI_cmd_16[10];
                 end
                 ms_clk23_a: begin
                     MOSI_1 <= MOSI_cmd_1[9];
                     MOSI_2 <= MOSI_cmd_2[9];
+                    MOSI_3 <= MOSI_cmd_3[9];
+                    MOSI_4 <= MOSI_cmd_4[9];
+                    MOSI_5 <= MOSI_cmd_5[9];
+                    MOSI_6 <= MOSI_cmd_6[9];
+                    MOSI_7 <= MOSI_cmd_7[9];
+                    MOSI_8 <= MOSI_cmd_8[9];
+                    MOSI_9 <= MOSI_cmd_9[9];
+                    MOSI_10 <= MOSI_cmd_10[9];
+                    MOSI_11 <= MOSI_cmd_11[9];
+                    MOSI_12 <= MOSI_cmd_12[9];
+                    MOSI_13 <= MOSI_cmd_13[9];
+                    MOSI_14 <= MOSI_cmd_14[9];
+                    MOSI_15 <= MOSI_cmd_15[9];
+                    MOSI_16 <= MOSI_cmd_16[9];
                 end
                 ms_clk24_a: begin
                     MOSI_1 <= MOSI_cmd_1[8];
                     MOSI_2 <= MOSI_cmd_2[8];
+                    MOSI_3 <= MOSI_cmd_3[8];
+                    MOSI_4 <= MOSI_cmd_4[8];
+                    MOSI_5 <= MOSI_cmd_5[8];
+                    MOSI_6 <= MOSI_cmd_6[8];
+                    MOSI_7 <= MOSI_cmd_7[8];
+                    MOSI_8 <= MOSI_cmd_8[8];
+                    MOSI_9 <= MOSI_cmd_9[8];
+                    MOSI_10 <= MOSI_cmd_10[8];
+                    MOSI_11 <= MOSI_cmd_11[8];
+                    MOSI_12 <= MOSI_cmd_12[8];
+                    MOSI_13 <= MOSI_cmd_13[8];
+                    MOSI_14 <= MOSI_cmd_14[8];
+                    MOSI_15 <= MOSI_cmd_15[8];
+                    MOSI_16 <= MOSI_cmd_16[8];
                 end
                 ms_clk25_a: begin
                     MOSI_1 <= MOSI_cmd_1[7];
                     MOSI_2 <= MOSI_cmd_2[7];
+                    MOSI_3 <= MOSI_cmd_3[7];
+                    MOSI_4 <= MOSI_cmd_4[7];
+                    MOSI_5 <= MOSI_cmd_5[7];
+                    MOSI_6 <= MOSI_cmd_6[7];
+                    MOSI_7 <= MOSI_cmd_7[7];
+                    MOSI_8 <= MOSI_cmd_8[7];
+                    MOSI_9 <= MOSI_cmd_9[7];
+                    MOSI_10 <= MOSI_cmd_10[7];
+                    MOSI_11 <= MOSI_cmd_11[7];
+                    MOSI_12 <= MOSI_cmd_12[7];
+                    MOSI_13 <= MOSI_cmd_13[7];
+                    MOSI_14 <= MOSI_cmd_14[7];
+                    MOSI_15 <= MOSI_cmd_15[7];
+                    MOSI_16 <= MOSI_cmd_16[7];
                 end
                 ms_clk26_a: begin
                     MOSI_1 <= MOSI_cmd_1[6];
                     MOSI_2 <= MOSI_cmd_2[6];
+                    MOSI_3 <= MOSI_cmd_3[6];
+                    MOSI_4 <= MOSI_cmd_4[6];
+                    MOSI_5 <= MOSI_cmd_5[6];
+                    MOSI_6 <= MOSI_cmd_6[6];
+                    MOSI_7 <= MOSI_cmd_7[6];
+                    MOSI_8 <= MOSI_cmd_8[6];
+                    MOSI_9 <= MOSI_cmd_9[6];
+                    MOSI_10 <= MOSI_cmd_10[6];
+                    MOSI_11 <= MOSI_cmd_11[6];
+                    MOSI_12 <= MOSI_cmd_12[6];
+                    MOSI_13 <= MOSI_cmd_13[6];
+                    MOSI_14 <= MOSI_cmd_14[6];
+                    MOSI_15 <= MOSI_cmd_15[6];
+                    MOSI_16 <= MOSI_cmd_16[6];
                 end
                 ms_clk27_a: begin
                     MOSI_1 <= MOSI_cmd_1[5];
                     MOSI_2 <= MOSI_cmd_2[5];
+                    MOSI_3 <= MOSI_cmd_3[5];
+                    MOSI_4 <= MOSI_cmd_4[5];
+                    MOSI_5 <= MOSI_cmd_5[5];
+                    MOSI_6 <= MOSI_cmd_6[5];
+                    MOSI_7 <= MOSI_cmd_7[5];
+                    MOSI_8 <= MOSI_cmd_8[5];
+                    MOSI_9 <= MOSI_cmd_9[5];
+                    MOSI_10 <= MOSI_cmd_10[5];
+                    MOSI_11 <= MOSI_cmd_11[5];
+                    MOSI_12 <= MOSI_cmd_12[5];
+                    MOSI_13 <= MOSI_cmd_13[5];
+                    MOSI_14 <= MOSI_cmd_14[5];
+                    MOSI_15 <= MOSI_cmd_15[5];
+                    MOSI_16 <= MOSI_cmd_16[5];
                 end
                 ms_clk28_a: begin
                     MOSI_1 <= MOSI_cmd_1[4];
                     MOSI_2 <= MOSI_cmd_2[4];
+                    MOSI_3 <= MOSI_cmd_3[4];
+                    MOSI_4 <= MOSI_cmd_4[4];
+                    MOSI_5 <= MOSI_cmd_5[4];
+                    MOSI_6 <= MOSI_cmd_6[4];
+                    MOSI_7 <= MOSI_cmd_7[4];
+                    MOSI_8 <= MOSI_cmd_8[4];
+                    MOSI_9 <= MOSI_cmd_9[4];
+                    MOSI_10 <= MOSI_cmd_10[4];
+                    MOSI_11 <= MOSI_cmd_11[4];
+                    MOSI_12 <= MOSI_cmd_12[4];
+                    MOSI_13 <= MOSI_cmd_13[4];
+                    MOSI_14 <= MOSI_cmd_14[4];
+                    MOSI_15 <= MOSI_cmd_15[4];
+                    MOSI_16 <= MOSI_cmd_16[4];
                 end
                 ms_clk29_a: begin
                     MOSI_1 <= MOSI_cmd_1[3];
                     MOSI_2 <= MOSI_cmd_2[3];
+                    MOSI_3 <= MOSI_cmd_3[3];
+                    MOSI_4 <= MOSI_cmd_4[3];
+                    MOSI_5 <= MOSI_cmd_5[3];
+                    MOSI_6 <= MOSI_cmd_6[3];
+                    MOSI_7 <= MOSI_cmd_7[3];
+                    MOSI_8 <= MOSI_cmd_8[3];
+                    MOSI_9 <= MOSI_cmd_9[3];
+                    MOSI_10 <= MOSI_cmd_10[3];
+                    MOSI_11 <= MOSI_cmd_11[3];
+                    MOSI_12 <= MOSI_cmd_12[3];
+                    MOSI_13 <= MOSI_cmd_13[3];
+                    MOSI_14 <= MOSI_cmd_14[3];
+                    MOSI_15 <= MOSI_cmd_15[3];
+                    MOSI_16 <= MOSI_cmd_16[3];
                 end
                 ms_clk30_a: begin
                     MOSI_1 <= MOSI_cmd_1[2];
                     MOSI_2 <= MOSI_cmd_2[2];
+                    MOSI_3 <= MOSI_cmd_3[2];
+                    MOSI_4 <= MOSI_cmd_4[2];
+                    MOSI_5 <= MOSI_cmd_5[2];
+                    MOSI_6 <= MOSI_cmd_6[2];
+                    MOSI_7 <= MOSI_cmd_7[2];
+                    MOSI_8 <= MOSI_cmd_8[2];
+                    MOSI_9 <= MOSI_cmd_9[2];
+                    MOSI_10 <= MOSI_cmd_10[2];
+                    MOSI_11 <= MOSI_cmd_11[2];
+                    MOSI_12 <= MOSI_cmd_12[2];
+                    MOSI_13 <= MOSI_cmd_13[2];
+                    MOSI_14 <= MOSI_cmd_14[2];
+                    MOSI_15 <= MOSI_cmd_15[2];
+                    MOSI_16 <= MOSI_cmd_16[2];
                 end
                 ms_clk31_a: begin
                     MOSI_1 <= MOSI_cmd_1[1];
                     MOSI_2 <= MOSI_cmd_2[1];
+                    MOSI_3 <= MOSI_cmd_3[1];
+                    MOSI_4 <= MOSI_cmd_4[1];
+                    MOSI_5 <= MOSI_cmd_5[1];
+                    MOSI_6 <= MOSI_cmd_6[1];
+                    MOSI_7 <= MOSI_cmd_7[1];
+                    MOSI_8 <= MOSI_cmd_8[1];
+                    MOSI_9 <= MOSI_cmd_9[1];
+                    MOSI_10 <= MOSI_cmd_10[1];
+                    MOSI_11 <= MOSI_cmd_11[1];
+                    MOSI_12 <= MOSI_cmd_12[1];
+                    MOSI_13 <= MOSI_cmd_13[1];
+                    MOSI_14 <= MOSI_cmd_14[1];
+                    MOSI_15 <= MOSI_cmd_15[1];
+                    MOSI_16 <= MOSI_cmd_16[1];
                 end
                 ms_clk32_a: begin
                     MOSI_1 <= MOSI_cmd_1[0];
                     MOSI_2 <= MOSI_cmd_2[0];
+                    MOSI_3 <= MOSI_cmd_3[0];
+                    MOSI_4 <= MOSI_cmd_4[0];
+                    MOSI_5 <= MOSI_cmd_5[0];
+                    MOSI_6 <= MOSI_cmd_6[0];
+                    MOSI_7 <= MOSI_cmd_7[0];
+                    MOSI_8 <= MOSI_cmd_8[0];
+                    MOSI_9 <= MOSI_cmd_9[0];
+                    MOSI_10 <= MOSI_cmd_10[0];
+                    MOSI_11 <= MOSI_cmd_11[0];
+                    MOSI_12 <= MOSI_cmd_12[0];
+                    MOSI_13 <= MOSI_cmd_13[0];
+                    MOSI_14 <= MOSI_cmd_14[0];
+                    MOSI_15 <= MOSI_cmd_15[0];
+                    MOSI_16 <= MOSI_cmd_16[0];
                 end
                 default: begin
                     MOSI_1 <= MOSI_1;
                     MOSI_2 <= MOSI_2;
+                    MOSI_3 <= MOSI_3;
+                    MOSI_4 <= MOSI_4;
+                    MOSI_5 <= MOSI_5;
+                    MOSI_6 <= MOSI_6;
+                    MOSI_7 <= MOSI_7;
+                    MOSI_8 <= MOSI_8;
+                    MOSI_9 <= MOSI_9;
+                    MOSI_10 <= MOSI_10;
+                    MOSI_11 <= MOSI_11;
+                    MOSI_12 <= MOSI_12;
+                    MOSI_13 <= MOSI_13;
+                    MOSI_14 <= MOSI_14;
+                    MOSI_15 <= MOSI_15;
+                    MOSI_16 <= MOSI_16;
+
                     MOSI_cmd_1 <= MOSI_cmd_1;
                     MOSI_cmd_2 <= MOSI_cmd_2;
+                    MOSI_cmd_3 <= MOSI_cmd_3;
+                    MOSI_cmd_4 <= MOSI_cmd_4;
+                    MOSI_cmd_5 <= MOSI_cmd_5;
+                    MOSI_cmd_6 <= MOSI_cmd_6;
+                    MOSI_cmd_7 <= MOSI_cmd_7;
+                    MOSI_cmd_8 <= MOSI_cmd_8;
+                    MOSI_cmd_9 <= MOSI_cmd_9;
+                    MOSI_cmd_10 <= MOSI_cmd_10;
+                    MOSI_cmd_11 <= MOSI_cmd_11;
+                    MOSI_cmd_12 <= MOSI_cmd_12;
+                    MOSI_cmd_13 <= MOSI_cmd_13;
+                    MOSI_cmd_14 <= MOSI_cmd_14;
+                    MOSI_cmd_15 <= MOSI_cmd_15;
+                    MOSI_cmd_16 <= MOSI_cmd_16;
                 end
             endcase
         end
