@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Thu Jan 18 12:26:20 2024
+//Date        : Thu Jan 18 14:55:07 2024
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb.bd
 //Design      : rhs_axi_tb
@@ -59,6 +59,20 @@ module rhs_axi_tb
   wire [5:0]rhs_axi_0_channel_out;
   wire rhs_headstage_slave_0_MISO_A;
   wire rhs_headstage_slave_0_MISO_B;
+  wire rhs_headstage_slave_0_MISO_C;
+  wire rhs_headstage_slave_0_MISO_D;
+  wire rhs_headstage_slave_0_MISO_E;
+  wire rhs_headstage_slave_0_MISO_F;
+  wire rhs_headstage_slave_0_MISO_G;
+  wire rhs_headstage_slave_0_MISO_H;
+  wire rhs_headstage_slave_0_MISO_I;
+  wire rhs_headstage_slave_0_MISO_J;
+  wire rhs_headstage_slave_0_MISO_K;
+  wire rhs_headstage_slave_0_MISO_L;
+  wire rhs_headstage_slave_0_MISO_M;
+  wire rhs_headstage_slave_0_MISO_N;
+  wire rhs_headstage_slave_0_MISO_O;
+  wire rhs_headstage_slave_0_MISO_P;
 
   assign CS_b = rhs_axi_0_CS_b;
   assign MOSI1 = rhs_axi_0_MOSI1;
@@ -93,7 +107,21 @@ module rhs_axi_tb
   rhs_axi_tb_rhs_axi_0_0 rhs_axi_0
        (.CS_b(rhs_axi_0_CS_b),
         .MISO1(rhs_headstage_slave_0_MISO_A),
+        .MISO10(rhs_headstage_slave_0_MISO_J),
+        .MISO11(rhs_headstage_slave_0_MISO_K),
+        .MISO12(rhs_headstage_slave_0_MISO_L),
+        .MISO13(rhs_headstage_slave_0_MISO_M),
+        .MISO14(rhs_headstage_slave_0_MISO_N),
+        .MISO15(rhs_headstage_slave_0_MISO_O),
+        .MISO16(rhs_headstage_slave_0_MISO_P),
         .MISO2(rhs_headstage_slave_0_MISO_B),
+        .MISO3(rhs_headstage_slave_0_MISO_C),
+        .MISO4(rhs_headstage_slave_0_MISO_D),
+        .MISO5(rhs_headstage_slave_0_MISO_E),
+        .MISO6(rhs_headstage_slave_0_MISO_F),
+        .MISO7(rhs_headstage_slave_0_MISO_G),
+        .MISO8(rhs_headstage_slave_0_MISO_H),
+        .MISO9(rhs_headstage_slave_0_MISO_I),
         .MOSI1(rhs_axi_0_MOSI1),
         .MOSI2(rhs_axi_0_MOSI2),
         .M_AXIS_ACLK(aclk_out_1),
@@ -126,6 +154,20 @@ module rhs_axi_tb
        (.CS(rhs_axi_0_CS_b),
         .MISO_A(rhs_headstage_slave_0_MISO_A),
         .MISO_B(rhs_headstage_slave_0_MISO_B),
+        .MISO_C(rhs_headstage_slave_0_MISO_C),
+        .MISO_D(rhs_headstage_slave_0_MISO_D),
+        .MISO_E(rhs_headstage_slave_0_MISO_E),
+        .MISO_F(rhs_headstage_slave_0_MISO_F),
+        .MISO_G(rhs_headstage_slave_0_MISO_G),
+        .MISO_H(rhs_headstage_slave_0_MISO_H),
+        .MISO_I(rhs_headstage_slave_0_MISO_I),
+        .MISO_J(rhs_headstage_slave_0_MISO_J),
+        .MISO_K(rhs_headstage_slave_0_MISO_K),
+        .MISO_L(rhs_headstage_slave_0_MISO_L),
+        .MISO_M(rhs_headstage_slave_0_MISO_M),
+        .MISO_N(rhs_headstage_slave_0_MISO_N),
+        .MISO_O(rhs_headstage_slave_0_MISO_O),
+        .MISO_P(rhs_headstage_slave_0_MISO_P),
         .MOSI(rhs_axi_0_MOSI1),
         .SCLK(rhs_axi_0_SCLK),
         .channel(rhs_axi_0_channel_out),

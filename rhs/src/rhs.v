@@ -1756,11 +1756,43 @@ module rhs
     always @(posedge clk) begin
         if (!resetn) begin
             rhs_data_out <= 16'b0;
-            rhd_valid_out <= 1'b0;	
+            rhd_valid_out <= 1'b0;
+
             in4x_1 <= 0;
             in4x_2 <= 0;
+            in4x_3 <= 0;
+            in4x_4 <= 0;
+            in4x_5 <= 0;
+            in4x_6 <= 0;
+            in4x_7 <= 0;
+            in4x_8 <= 0;
+            in4x_9 <= 0;
+            in4x_10 <= 0;
+            in4x_11 <= 0;
+            in4x_12 <= 0;
+            in4x_13 <= 0;
+            in4x_14 <= 0;
+            in4x_15 <= 0;
+            in4x_16 <= 0;
+
             result_1 <= 0;
-            result_2 <= 0;    
+            result_2 <= 0;
+            result_3 <= 0;
+            result_4 <= 0;
+            result_5 <= 0;
+            result_6 <= 0;
+            result_7 <= 0;
+            result_8 <= 0;
+            result_9 <= 0;
+            result_10 <= 0;
+            result_11 <= 0;
+            result_12 <= 0;
+            result_13 <= 0;
+            result_14 <= 0;
+            result_15 <= 0;
+            result_16 <= 0;
+
+
         end
         else begin
             rhs_data_out <= 16'b0;
@@ -1768,16 +1800,62 @@ module rhs
             if (main_state >= 2 && main_state <= 135 ) begin
                 in4x_1[main_state-2] <= MISO_1; 
                 in4x_2[main_state-2] <= MISO_2;
+                in4x_3[main_state-2] <= MISO_3; 
+                in4x_4[main_state-2] <= MISO_4;
+                in4x_5[main_state-2] <= MISO_5; 
+                in4x_6[main_state-2] <= MISO_6;
+                in4x_7[main_state-2] <= MISO_7; 
+                in4x_8[main_state-2] <= MISO_8;
+                in4x_9[main_state-2] <= MISO_9; 
+                in4x_10[main_state-2] <= MISO_10;
+                in4x_11[main_state-2] <= MISO_11; 
+                in4x_12[main_state-2] <= MISO_12;
+                in4x_13[main_state-2] <= MISO_13; 
+                in4x_14[main_state-2] <= MISO_14;
+                in4x_15[main_state-2] <= MISO_15; 
+                in4x_16[main_state-2] <= MISO_16;
             end
             case (main_state)
                 ms_wait: begin
                     in4x_1 <= 0;
                     in4x_2 <= 0;
+                    in4x_3 <= 0;
+                    in4x_4 <= 0;
+                    in4x_5 <= 0;
+                    in4x_6 <= 0;
+                    in4x_7 <= 0;
+                    in4x_8 <= 0;
+                    in4x_9 <= 0;
+                    in4x_10 <= 0;
+                    in4x_11 <= 0;
+                    in4x_12 <= 0;
+                    in4x_13 <= 0;
+                    in4x_14 <= 0;
+                    in4x_15 <= 0;
+                    in4x_16 <= 0;
+
                     result_1 <= 0;
-                    result_2 <= 0;   
+                    result_2 <= 0;
+                    result_3 <= 0;
+                    result_4 <= 0;
+                    result_5 <= 0;
+                    result_6 <= 0;
+                    result_7 <= 0;
+                    result_8 <= 0;
+                    result_9 <= 0;
+                    result_10 <= 0;
+                    result_11 <= 0;
+                    result_12 <= 0;
+                    result_13 <= 0;
+                    result_14 <= 0;
+                    result_15 <= 0;
+                    result_16 <= 0;
                     rhs_data_out <= 16'b0;
                     rhd_valid_out <= 1'b0;
                 end
+
+
+
                 ms_clk1_b: begin
                     if (channel == 3) begin
                         rhs_data_out <= header_magic_number[15:0];
@@ -1805,31 +1883,197 @@ module rhs
                         rhd_valid_out <= 1'b1;
                     end
                 end
-                
-                ms_clk2_b: begin
+
+
+
+                ms_clk3_a: begin
                     rhs_data_out <= data_stream_1[15:0];
                     rhd_valid_out <= 1'b1;
                 end
-    
-                ms_clk2_c: begin
+
+                ms_clk3_b: begin
                     rhs_data_out <= data_stream_1[31:16];
                     rhd_valid_out <= 1'b1;
                 end
 
-
-                ms_clk2_d: begin
+                ms_clk3_c: begin
                     rhs_data_out <= data_stream_2[15:0];
                     rhd_valid_out <= 1'b1;
                 end
-    
-                ms_clk3_a: begin
+
+                ms_clk3_d: begin
                     rhs_data_out <= data_stream_2[31:16];
                     rhd_valid_out <= 1'b1;
                 end
 
+
+                ms_clk4_a: begin
+                    rhs_data_out <= data_stream_3[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk4_b: begin
+                    rhs_data_out <= data_stream_3[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk4_c: begin
+                    rhs_data_out <= data_stream_4[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk4_d: begin
+                    rhs_data_out <= data_stream_4[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+                ms_clk5_a: begin
+                    rhs_data_out <= data_stream_5[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk5_b: begin
+                    rhs_data_out <= data_stream_5[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk5_c: begin
+                    rhs_data_out <= data_stream_6[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk5_d: begin
+                    rhs_data_out <= data_stream_6[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+                ms_clk6_a: begin
+                    rhs_data_out <= data_stream_7[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk6_b: begin
+                    rhs_data_out <= data_stream_7[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk6_c: begin
+                    rhs_data_out <= data_stream_8[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk6_d: begin
+                    rhs_data_out <= data_stream_8[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+
+                ms_clk7_a: begin
+                    rhs_data_out <= data_stream_9[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk7_b: begin
+                    rhs_data_out <= data_stream_9[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk7_c: begin
+                    rhs_data_out <= data_stream_10[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk7_d: begin
+                    rhs_data_out <= data_stream_10[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+                ms_clk8_a: begin
+                    rhs_data_out <= data_stream_11[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk8_b: begin
+                    rhs_data_out <= data_stream_11[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk8_c: begin
+                    rhs_data_out <= data_stream_12[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk8_d: begin
+                    rhs_data_out <= data_stream_12[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+                ms_clk9_a: begin
+                    rhs_data_out <= data_stream_13[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk9_b: begin
+                    rhs_data_out <= data_stream_13[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk9_c: begin
+                    rhs_data_out <= data_stream_14[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk9_d: begin
+                    rhs_data_out <= data_stream_14[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+                ms_clk10_a: begin
+                    rhs_data_out <= data_stream_15[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk10_b: begin
+                    rhs_data_out <= data_stream_15[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk10_c: begin
+                    rhs_data_out <= data_stream_16[15:0];
+                    rhd_valid_out <= 1'b1;
+                end
+
+                ms_clk10_d: begin
+                    rhs_data_out <= data_stream_16[31:16];
+                    rhd_valid_out <= 1'b1;
+                end
+
+
+
+
 				ms_cs_g: begin
 					result_1 <= in_1; 
                     result_2 <= in_2;
+                    result_3 <= in_3; 
+                    result_4 <= in_4;
+                    result_5 <= in_5; 
+                    result_6 <= in_6;
+                    result_7 <= in_7; 
+                    result_8 <= in_8;
+                    result_9 <= in_9; 
+                    result_10 <= in_10;
+                    result_11 <= in_11; 
+                    result_12 <= in_12;
+                    result_13 <= in_13; 
+                    result_14 <= in_14;
+                    result_15 <= in_15; 
+                    result_16 <= in_16;
 				end
 
             endcase

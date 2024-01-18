@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 17 14:36:07 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 18 14:55:06 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="xpm_cdc_1bit" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 

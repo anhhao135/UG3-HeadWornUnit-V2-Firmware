@@ -7,7 +7,8 @@
       "name": "rhs_axi_tb",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "axi_vip_0": "",
@@ -17,14 +18,44 @@
     "ports": {
       "aresetn": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "aclk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "aresetn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "rhs_axi_tb_aclk",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
@@ -32,14 +63,44 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "aresetn_out",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "rhs_axi_tb_aclk_out",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
       "aresetn_out": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "CS_b": {
         "direction": "O"
@@ -246,6 +307,14 @@
               "HAS_TLAST": {
                 "value": "1",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk_out",
+                "value_src": "default_prop"
               }
             },
             "port_maps": {
@@ -281,6 +350,10 @@
               "PROTOCOL": {
                 "value": "AXI4LITE",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "ID_WIDTH": {
                 "value": "0",
@@ -365,6 +438,26 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk",
+                "value_src": "default_prop"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1",
+                "value_src": "ip_prop"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1",
+                "value_src": "ip_prop"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
               }
             },
             "memory_map_ref": "s00_axi",
@@ -595,6 +688,14 @@
               "ASSOCIATED_RESET": {
                 "value": "s00_axi_aresetn",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk",
+                "value_src": "default_prop"
               }
             }
           },
@@ -619,6 +720,14 @@
               "ASSOCIATED_RESET": {
                 "value": "M_AXIS_ARESETN",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk_out",
+                "value_src": "default_prop"
               }
             }
           },
@@ -714,6 +823,90 @@
         "ports": [
           "rhs_headstage_slave_0/MISO_B",
           "rhs_axi_0/MISO2"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_C": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_C",
+          "rhs_axi_0/MISO3"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_D": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_D",
+          "rhs_axi_0/MISO4"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_E": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_E",
+          "rhs_axi_0/MISO5"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_F": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_F",
+          "rhs_axi_0/MISO6"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_G": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_G",
+          "rhs_axi_0/MISO7"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_H": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_H",
+          "rhs_axi_0/MISO8"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_I": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_I",
+          "rhs_axi_0/MISO9"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_J": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_J",
+          "rhs_axi_0/MISO10"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_K": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_K",
+          "rhs_axi_0/MISO11"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_L": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_L",
+          "rhs_axi_0/MISO12"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_M": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_M",
+          "rhs_axi_0/MISO13"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_N": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_N",
+          "rhs_axi_0/MISO14"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_O": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_O",
+          "rhs_axi_0/MISO15"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_P": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_P",
+          "rhs_axi_0/MISO16"
         ]
       }
     }
