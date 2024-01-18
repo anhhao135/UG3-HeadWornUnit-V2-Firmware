@@ -12,9 +12,8 @@
     },
     "design_tree": {
       "axi_vip_0": "",
-      "rhd_headstage_slave_0": "",
-      "rhd_headstage_slave_1": "",
-      "rhs_axi_0": ""
+      "rhs_axi_0": "",
+      "rhs_headstage_slave_0": ""
     },
     "ports": {
       "aresetn": {
@@ -169,99 +168,6 @@
               "range": "4G",
               "width": "32"
             }
-          }
-        }
-      },
-      "rhd_headstage_slave_0": {
-        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
-        "xci_name": "rhs_axi_tb_rhd_headstage_slave_0_0",
-        "xci_path": "ip\\rhs_axi_tb_rhd_headstage_slave_0_0\\rhs_axi_tb_rhd_headstage_slave_0_0.xci",
-        "inst_hier_path": "rhd_headstage_slave_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhd_headstage_slave",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
-          },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhs_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO": {
-            "direction": "O"
-          },
-          "channel": {
-            "direction": "I",
-            "left": "5",
-            "right": "0"
-          }
-        }
-      },
-      "rhd_headstage_slave_1": {
-        "vlnv": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
-        "xci_name": "rhs_axi_tb_rhd_headstage_slave_1_0",
-        "xci_path": "ip\\rhs_axi_tb_rhd_headstage_slave_1_0\\rhs_axi_tb_rhd_headstage_slave_1_0.xci",
-        "inst_hier_path": "rhd_headstage_slave_1",
-        "parameters": {
-          "STARTING_SEED": {
-            "value": "8"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhd_headstage_slave",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
-          },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhs_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO": {
-            "direction": "O"
-          },
-          "channel": {
-            "direction": "I",
-            "left": "5",
-            "right": "0"
           }
         }
       },
@@ -583,6 +489,11 @@
           "MISO2": {
             "direction": "I"
           },
+          "channel_out": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
           "FIFO_rstn": {
             "type": "rst",
             "direction": "O",
@@ -658,6 +569,95 @@
             }
           }
         }
+      },
+      "rhs_headstage_slave_0": {
+        "vlnv": "xilinx.com:module_ref:rhs_headstage_slave_full:1.0",
+        "xci_name": "rhs_axi_tb_rhs_headstage_slave_0_0",
+        "xci_path": "ip\\rhs_axi_tb_rhs_headstage_slave_0_0\\rhs_axi_tb_rhs_headstage_slave_0_0.xci",
+        "inst_hier_path": "rhs_headstage_slave_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rhs_headstage_slave_full",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MOSI": {
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "SCLK": {
+            "direction": "I"
+          },
+          "MISO_A": {
+            "direction": "O"
+          },
+          "MISO_B": {
+            "direction": "O"
+          },
+          "MISO_C": {
+            "direction": "O"
+          },
+          "MISO_D": {
+            "direction": "O"
+          },
+          "MISO_E": {
+            "direction": "O"
+          },
+          "MISO_F": {
+            "direction": "O"
+          },
+          "MISO_G": {
+            "direction": "O"
+          },
+          "MISO_H": {
+            "direction": "O"
+          },
+          "MISO_I": {
+            "direction": "O"
+          },
+          "MISO_J": {
+            "direction": "O"
+          },
+          "MISO_K": {
+            "direction": "O"
+          },
+          "MISO_L": {
+            "direction": "O"
+          },
+          "MISO_M": {
+            "direction": "O"
+          },
+          "MISO_N": {
+            "direction": "O"
+          },
+          "MISO_O": {
+            "direction": "O"
+          },
+          "MISO_P": {
+            "direction": "O"
+          },
+          "channel": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -673,9 +673,8 @@
         "ports": [
           "aclk",
           "axi_vip_0/aclk",
-          "rhd_headstage_slave_0/clk",
-          "rhd_headstage_slave_1/clk",
-          "rhs_axi_0/s00_axi_aclk"
+          "rhs_axi_0/s00_axi_aclk",
+          "rhs_headstage_slave_0/clk"
         ]
       },
       "aclk_out_1": {
@@ -697,46 +696,49 @@
           "rhs_axi_0/M_AXIS_ARESETN"
         ]
       },
-      "rhd_headstage_slave_0_MISO": {
-        "ports": [
-          "rhd_headstage_slave_0/MISO",
-          "rhs_axi_0/MISO1"
-        ]
-      },
-      "rhd_headstage_slave_1_MISO": {
-        "ports": [
-          "rhd_headstage_slave_1/MISO",
-          "rhs_axi_0/MISO2"
-        ]
-      },
       "rhs_axi_0_CS_b": {
         "ports": [
           "rhs_axi_0/CS_b",
           "CS_b",
-          "rhd_headstage_slave_0/CS",
-          "rhd_headstage_slave_1/CS"
+          "rhs_headstage_slave_0/CS"
         ]
       },
       "rhs_axi_0_MOSI1": {
         "ports": [
           "rhs_axi_0/MOSI1",
           "MOSI1",
-          "rhd_headstage_slave_0/MOSI"
+          "rhs_headstage_slave_0/MOSI"
         ]
       },
       "rhs_axi_0_MOSI2": {
         "ports": [
           "rhs_axi_0/MOSI2",
-          "MOSI2",
-          "rhd_headstage_slave_1/MOSI"
+          "MOSI2"
         ]
       },
       "rhs_axi_0_SCLK": {
         "ports": [
           "rhs_axi_0/SCLK",
           "SCLK",
-          "rhd_headstage_slave_0/SCLK",
-          "rhd_headstage_slave_1/SCLK"
+          "rhs_headstage_slave_0/SCLK"
+        ]
+      },
+      "rhs_axi_0_channel_out": {
+        "ports": [
+          "rhs_axi_0/channel_out",
+          "rhs_headstage_slave_0/channel"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_A": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_A",
+          "rhs_axi_0/MISO1"
+        ]
+      },
+      "rhs_headstage_slave_0_MISO_B": {
+        "ports": [
+          "rhs_headstage_slave_0/MISO_B",
+          "rhs_axi_0/MISO2"
         ]
       }
     }

@@ -1,18 +1,14 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "rhs_axi_tb_rhd_headstage_slave_0_0",
-    "cell_name": "rhd_headstage_slave_0",
-    "component_reference": "xilinx.com:module_ref:rhd_headstage_slave:1.0",
+    "xci_name": "rhs_axi_tb_rhs_headstage_slave_0_0",
+    "cell_name": "rhs_headstage_slave_0",
+    "component_reference": "xilinx.com:module_ref:rhs_headstage_slave_full:1.0",
     "ip_revision": "1",
-    "gen_directory": "../../../../../../rhs.gen/sources_1/bd/rhs_axi_tb/ip/rhs_axi_tb_rhd_headstage_slave_0_0",
+    "gen_directory": "../../../../../../rhs.gen/sources_1/bd/rhs_axi_tb/ip/rhs_axi_tb_rhs_headstage_slave_0_0",
     "parameters": {
       "component_parameters": {
-        "STARTING_SEED": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "Component_Name": [ { "value": "rhs_axi_tb_rhd_headstage_slave_0_0", "resolve_type": "user", "usage": "all" } ]
-      },
-      "model_parameters": {
-        "STARTING_SEED": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "Component_Name": [ { "value": "rhs_axi_tb_rhs_headstage_slave_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplus" } ],
@@ -31,7 +27,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "1" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../rhs.gen/sources_1/bd/rhs_axi_tb/ip/rhs_axi_tb_rhd_headstage_slave_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../rhs.gen/sources_1/bd/rhs_axi_tb/ip/rhs_axi_tb_rhs_headstage_slave_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
@@ -44,7 +40,22 @@
         "CS": [ { "direction": "in" } ],
         "clk": [ { "direction": "in" } ],
         "SCLK": [ { "direction": "in" } ],
-        "MISO": [ { "direction": "out" } ],
+        "MISO_A": [ { "direction": "out" } ],
+        "MISO_B": [ { "direction": "out" } ],
+        "MISO_C": [ { "direction": "out" } ],
+        "MISO_D": [ { "direction": "out" } ],
+        "MISO_E": [ { "direction": "out" } ],
+        "MISO_F": [ { "direction": "out" } ],
+        "MISO_G": [ { "direction": "out" } ],
+        "MISO_H": [ { "direction": "out" } ],
+        "MISO_I": [ { "direction": "out" } ],
+        "MISO_J": [ { "direction": "out" } ],
+        "MISO_K": [ { "direction": "out" } ],
+        "MISO_L": [ { "direction": "out" } ],
+        "MISO_M": [ { "direction": "out" } ],
+        "MISO_N": [ { "direction": "out" } ],
+        "MISO_O": [ { "direction": "out" } ],
+        "MISO_P": [ { "direction": "out" } ],
         "channel": [ { "direction": "in", "size_left": "5", "size_right": "0" } ]
       },
       "interfaces": {

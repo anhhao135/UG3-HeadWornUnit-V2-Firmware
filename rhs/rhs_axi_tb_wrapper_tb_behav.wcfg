@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="4,435.000001 us"></ZoomEndTime>
-      <Cursor1Time time="360.597665 us"></Cursor1Time>
+      <ZoomStartTime time="2.089355 us"></ZoomStartTime>
+      <ZoomEndTime time="37.039356 us"></ZoomEndTime>
+      <Cursor1Time time="8.389355 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="448"></NameColumnWidth>
-      <ValueColumnWidth column_width="160"></ValueColumnWidth>
+      <ValueColumnWidth column_width="156"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="46" />
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aclk_out" type="logic">
       <obj_property name="ElementShortName">aclk_out</obj_property>
       <obj_property name="ObjectShortName">aclk_out</obj_property>
@@ -176,5 +176,37 @@
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/time_counter" type="array">
       <obj_property name="ElementShortName">time_counter[10:0]</obj_property>
       <obj_property name="ObjectShortName">time_counter[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/sclk_counter" type="array">
+      <obj_property name="ElementShortName">sclk_counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sclk_counter[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/clk_counter" type="array">
+      <obj_property name="ElementShortName">clk_counter[6:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_counter[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/miso_out_reg" type="array">
+      <obj_property name="ElementShortName">miso_out_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">miso_out_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/MOSI" type="logic">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/CS" type="logic">
+      <obj_property name="ElementShortName">CS</obj_property>
+      <obj_property name="ObjectShortName">CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
 </wave_config>

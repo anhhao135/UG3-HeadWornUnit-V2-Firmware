@@ -80,6 +80,7 @@ module rhs_axi_tb_rhs_axi_0_0 (
   MOSI2,
   MISO1,
   MISO2,
+  channel_out,
   FIFO_rstn,
   M_AXIS_tdata,
   M_AXIS_tvalid,
@@ -137,6 +138,7 @@ output wire MOSI1;
 output wire MOSI2;
 input wire MISO1;
 input wire MISO2;
+output wire [5 : 0] channel_out;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIFO_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FIFO_rstn RST" *)
 output wire FIFO_rstn;
@@ -193,6 +195,7 @@ input wire M_AXIS_ARESETN;
     .MOSI2(MOSI2),
     .MISO1(MISO1),
     .MISO2(MISO2),
+    .channel_out(channel_out),
     .FIFO_rstn(FIFO_rstn),
     .M_AXIS_tdata(M_AXIS_tdata),
     .M_AXIS_tvalid(M_AXIS_tvalid),

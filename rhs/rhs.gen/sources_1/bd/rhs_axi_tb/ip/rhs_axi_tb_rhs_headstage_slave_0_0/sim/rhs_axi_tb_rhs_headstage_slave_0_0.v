@@ -47,19 +47,34 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:rhd_headstage_slave:1.0
+// IP VLNV: xilinx.com:module_ref:rhs_headstage_slave_full:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module rhs_axi_tb_rhd_headstage_slave_1_0 (
+module rhs_axi_tb_rhs_headstage_slave_0_0 (
   MOSI,
   CS,
   clk,
   SCLK,
-  MISO,
+  MISO_A,
+  MISO_B,
+  MISO_C,
+  MISO_D,
+  MISO_E,
+  MISO_F,
+  MISO_G,
+  MISO_H,
+  MISO_I,
+  MISO_J,
+  MISO_K,
+  MISO_L,
+  MISO_M,
+  MISO_N,
+  MISO_O,
+  MISO_P,
   channel
 );
 
@@ -69,17 +84,45 @@ input wire CS;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire SCLK;
-output wire MISO;
+output wire MISO_A;
+output wire MISO_B;
+output wire MISO_C;
+output wire MISO_D;
+output wire MISO_E;
+output wire MISO_F;
+output wire MISO_G;
+output wire MISO_H;
+output wire MISO_I;
+output wire MISO_J;
+output wire MISO_K;
+output wire MISO_L;
+output wire MISO_M;
+output wire MISO_N;
+output wire MISO_O;
+output wire MISO_P;
 input wire [5 : 0] channel;
 
-  rhd_headstage_slave #(
-    .STARTING_SEED(8)
-  ) inst (
+  rhs_headstage_slave_full inst (
     .MOSI(MOSI),
     .CS(CS),
     .clk(clk),
     .SCLK(SCLK),
-    .MISO(MISO),
+    .MISO_A(MISO_A),
+    .MISO_B(MISO_B),
+    .MISO_C(MISO_C),
+    .MISO_D(MISO_D),
+    .MISO_E(MISO_E),
+    .MISO_F(MISO_F),
+    .MISO_G(MISO_G),
+    .MISO_H(MISO_H),
+    .MISO_I(MISO_I),
+    .MISO_J(MISO_J),
+    .MISO_K(MISO_K),
+    .MISO_L(MISO_L),
+    .MISO_M(MISO_M),
+    .MISO_N(MISO_N),
+    .MISO_O(MISO_O),
+    .MISO_P(MISO_P),
     .channel(channel)
   );
 endmodule

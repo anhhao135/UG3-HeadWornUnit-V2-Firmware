@@ -92,7 +92,9 @@ module rhs
 
     // REG7: NUMBER OF PULSES
     input wire [9:0]                         stim_num_pulse, 
-    input wire                               stim_inf_pulse_mode //bit 10
+    input wire                               stim_inf_pulse_mode, //bit 10
+    
+    output wire [5:0]                        channel_out //for fake data headstage slave to keep track
     );
 
 
@@ -141,6 +143,8 @@ module rhs
     reg [15:0] 		timestamp;			 
     reg [5:0] 		channel; 
     reg [6:0]       channel_config;  // varies from 0-19 (amplfier channels 0-15, plus 3 auxiliary commands)
+
+    assign channel_out = channel;
 
 
     // [State machine for pulse generation]
@@ -293,10 +297,10 @@ module rhs
     // MISO phase selectors (to compensate for headstage cable delays)
 
     MISO_phase_selector MISO_falling_edge_1 (
-        .phase_select(4'b0), .MISO4x(in4x_1), .MISO(in_1));	
+        .phase_select(4'd2), .MISO4x(in4x_1), .MISO(in_1));	
 
     MISO_phase_selector MISO_falling_edge_2 (
-        .phase_select(4'b0), .MISO4x(in4x_2), .MISO(in_2));	
+        .phase_select(4'd2), .MISO4x(in4x_2), .MISO(in_2));	
 
     // [INITIALIZATION]
     reg [31:0] 		MOSI_cmd_1, MOSI_cmd_2 ;
@@ -1460,7 +1464,7 @@ endmodule
 module MISO_phase_selector(
 	input wire [3:0] 		phase_select,	// MISO sampling phase lag to compensate for headstage cable delay
 	input wire [133:0] 	MISO4x,			// 4x oversampled MISO input
-	output reg [32:0] 	MISO				// 32-bit MISO output
+	output reg [31:0] 	MISO				// 32-bit MISO output
 	);
 	
 	always @(*) begin

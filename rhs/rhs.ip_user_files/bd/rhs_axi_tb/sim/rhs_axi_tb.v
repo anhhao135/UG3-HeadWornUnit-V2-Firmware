@@ -2,15 +2,15 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Tue Jan 16 14:17:07 2024
-//Host        : GramForGram running 64-bit major release  (build 9200)
+//Date        : Wed Jan 17 14:36:08 2024
+//Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb.bd
 //Design      : rhs_axi_tb
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "rhs_axi_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhs_axi_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhs_axi_tb.hwdef" *) 
+(* CORE_GENERATION_INFO = "rhs_axi_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhs_axi_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhs_axi_tb.hwdef" *) 
 module rhs_axi_tb
    (CS_b,
     MOSI1,
@@ -52,12 +52,13 @@ module rhs_axi_tb
   wire axi_vip_0_M_AXI_WREADY;
   wire [3:0]axi_vip_0_M_AXI_WSTRB;
   wire axi_vip_0_M_AXI_WVALID;
-  wire rhd_headstage_slave_0_MISO;
-  wire rhd_headstage_slave_1_MISO;
   wire rhs_axi_0_CS_b;
   wire rhs_axi_0_MOSI1;
   wire rhs_axi_0_MOSI2;
   wire rhs_axi_0_SCLK;
+  wire [5:0]rhs_axi_0_channel_out;
+  wire rhs_headstage_slave_0_MISO_A;
+  wire rhs_headstage_slave_0_MISO_B;
 
   assign CS_b = rhs_axi_0_CS_b;
   assign MOSI1 = rhs_axi_0_MOSI1;
@@ -89,30 +90,17 @@ module rhs_axi_tb
         .m_axi_wready(axi_vip_0_M_AXI_WREADY),
         .m_axi_wstrb(axi_vip_0_M_AXI_WSTRB),
         .m_axi_wvalid(axi_vip_0_M_AXI_WVALID));
-  rhs_axi_tb_rhd_headstage_slave_0_0 rhd_headstage_slave_0
-       (.CS(rhs_axi_0_CS_b),
-        .MISO(rhd_headstage_slave_0_MISO),
-        .MOSI(rhs_axi_0_MOSI1),
-        .SCLK(rhs_axi_0_SCLK),
-        .channel({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .clk(aclk_1));
-  rhs_axi_tb_rhd_headstage_slave_1_0 rhd_headstage_slave_1
-       (.CS(rhs_axi_0_CS_b),
-        .MISO(rhd_headstage_slave_1_MISO),
-        .MOSI(rhs_axi_0_MOSI2),
-        .SCLK(rhs_axi_0_SCLK),
-        .channel({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .clk(aclk_1));
   rhs_axi_tb_rhs_axi_0_0 rhs_axi_0
        (.CS_b(rhs_axi_0_CS_b),
-        .MISO1(rhd_headstage_slave_0_MISO),
-        .MISO2(rhd_headstage_slave_1_MISO),
+        .MISO1(rhs_headstage_slave_0_MISO_A),
+        .MISO2(rhs_headstage_slave_0_MISO_B),
         .MOSI1(rhs_axi_0_MOSI1),
         .MOSI2(rhs_axi_0_MOSI2),
         .M_AXIS_ACLK(aclk_out_1),
         .M_AXIS_ARESETN(aresetn_out_1),
         .M_AXIS_tready(1'b1),
         .SCLK(rhs_axi_0_SCLK),
+        .channel_out(rhs_axi_0_channel_out),
         .s00_axi_aclk(aclk_1),
         .s00_axi_araddr(axi_vip_0_M_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(aresetn_1),
@@ -134,4 +122,12 @@ module rhs_axi_tb
         .s00_axi_wready(axi_vip_0_M_AXI_WREADY),
         .s00_axi_wstrb(axi_vip_0_M_AXI_WSTRB),
         .s00_axi_wvalid(axi_vip_0_M_AXI_WVALID));
+  rhs_axi_tb_rhs_headstage_slave_0_0 rhs_headstage_slave_0
+       (.CS(rhs_axi_0_CS_b),
+        .MISO_A(rhs_headstage_slave_0_MISO_A),
+        .MISO_B(rhs_headstage_slave_0_MISO_B),
+        .MOSI(rhs_axi_0_MOSI1),
+        .SCLK(rhs_axi_0_SCLK),
+        .channel(rhs_axi_0_channel_out),
+        .clk(aclk_1));
 endmodule

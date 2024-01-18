@@ -1,3 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_axi_tb_wrapper_tb
-WARNING: [VRFC 10-8658] /* is inside a comment [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi_tb_wrapper_tb.sv:179]

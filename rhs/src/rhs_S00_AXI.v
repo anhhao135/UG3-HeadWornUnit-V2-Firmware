@@ -26,6 +26,8 @@ module rhs_S00_AXI #
 
 	output wire FIFO_rstn,
 
+	output wire [5:0] channel_out,
+
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
 	input wire		   M_AXIS_tready,
@@ -504,7 +506,8 @@ rhs rhs
 	.stim_pulse_width(slv_reg5[10:0]),
 	.stim_intrapulse_delay(slv_reg6[10:0]),
 	.stim_num_pulse(slv_reg7[9:0]),
-	.stim_inf_pulse_mode(slv_reg7[10])
+	.stim_inf_pulse_mode(slv_reg7[10]),
+	.channel_out(channel_out)
 	);
 
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 16 14:17:07 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 17 14:36:09 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhs_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -13,9 +13,8 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_vip_0" PORT="aclk"/>
-        <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="clk"/>
-        <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="clk"/>
         <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aclk"/>
+        <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk_out" SIGIS="clk" SIGNAME="External_Ports_aclk_out">
@@ -281,80 +280,6 @@
         <PERIPHERAL INSTANCE="rhs_axi_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/rhd_headstage_slave_0" HWVERSION="1.0" INSTANCE="rhd_headstage_slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhd_headstage_slave" VLNV="xilinx.com:module_ref:rhd_headstage_slave:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="STARTING_SEED" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="rhs_axi_tb_rhd_headstage_slave_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="MOSI" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="CS" SIGIS="undef" SIGNAME="rhs_axi_0_CS_b">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="CS_b"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_aclk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="SCLK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="MISO" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="channel" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/rhd_headstage_slave_1" HWVERSION="1.0" INSTANCE="rhd_headstage_slave_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhd_headstage_slave" VLNV="xilinx.com:module_ref:rhd_headstage_slave:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="STARTING_SEED" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="rhs_axi_tb_rhd_headstage_slave_1_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="MOSI" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="CS" SIGIS="undef" SIGNAME="rhs_axi_0_CS_b">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="CS_b"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_aclk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="SCLK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="MISO" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="channel" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/rhs_axi_0" HWVERSION="1.0" INSTANCE="rhs_axi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhs_axi" VLNV="xilinx.com:module_ref:rhs_axi:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -464,37 +389,39 @@
         <PORT DIR="O" NAME="CS_b" SIGIS="undef" SIGNAME="rhs_axi_0_CS_b">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="CS_b"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="CS"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="CS"/>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="CS"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="SCLK"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="SCLK"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="SCLK"/>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="SCLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="MOSI1" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="MOSI1"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MOSI"/>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="MOSI"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="MOSI2" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="MOSI2"/>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MOSI"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO1" SIGIS="undef" SIGNAME="rhd_headstage_slave_0_MISO">
+        <PORT DIR="I" NAME="MISO1" SIGIS="undef" SIGNAME="rhs_headstage_slave_0_MISO_A">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_0" PORT="MISO"/>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="MISO_A"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="MISO2" SIGIS="undef" SIGNAME="rhd_headstage_slave_1_MISO">
+        <PORT DIR="I" NAME="MISO2" SIGIS="undef" SIGNAME="rhs_headstage_slave_0_MISO_B">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rhd_headstage_slave_1" PORT="MISO"/>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="MISO_B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="channel_out" RIGHT="0" SIGIS="undef" SIGNAME="rhs_axi_0_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="channel"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FIFO_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
@@ -600,6 +527,65 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/rhs_headstage_slave_0" HWVERSION="1.0" INSTANCE="rhs_headstage_slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rhs_headstage_slave_full" VLNV="xilinx.com:module_ref:rhs_headstage_slave_full:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="rhs_axi_tb_rhs_headstage_slave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="MOSI" SIGIS="undef" SIGNAME="rhs_axi_0_MOSI1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="MOSI1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CS" SIGIS="undef" SIGNAME="rhs_axi_0_CS_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="CS_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MISO_A" SIGIS="undef" SIGNAME="rhs_headstage_slave_0_MISO_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MISO_B" SIGIS="undef" SIGNAME="rhs_headstage_slave_0_MISO_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="MISO2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MISO_C" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_D" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_E" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_F" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_G" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_H" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_J" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_K" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_L" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_M" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_N" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="MISO_P" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="5" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="rhs_axi_0_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="channel_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 
