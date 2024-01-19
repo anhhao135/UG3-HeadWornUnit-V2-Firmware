@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="2,315.000001 us"></ZoomEndTime>
-      <Cursor1Time time="1,791.324801 us"></Cursor1Time>
+      <ZoomStartTime time="2.877503 us"></ZoomStartTime>
+      <ZoomEndTime time="47.527504 us"></ZoomEndTime>
+      <Cursor1Time time="10.319169 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="144"></NameColumnWidth>
-      <ValueColumnWidth column_width="233"></ValueColumnWidth>
+      <NameColumnWidth column_width="428"></NameColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="50" />
+   <WVObjectSize size="59" />
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aclk_out" type="logic">
       <obj_property name="ElementShortName">aclk_out</obj_property>
       <obj_property name="ObjectShortName">aclk_out</obj_property>
@@ -224,5 +224,41 @@
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/M_AXIS_tlast" type="logic">
       <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/INTAN_reg" type="array">
+      <obj_property name="ElementShortName">INTAN_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">INTAN_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/state_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/flag_cable_delay_found" type="logic">
+      <obj_property name="ElementShortName">flag_cable_delay_found</obj_property>
+      <obj_property name="ObjectShortName">flag_cable_delay_found</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MOSI_cmd_1" type="array">
+      <obj_property name="ElementShortName">MOSI_cmd_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSI_cmd_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MOSI_1" type="logic">
+      <obj_property name="ElementShortName">MOSI_1</obj_property>
+      <obj_property name="ObjectShortName">MOSI_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MOSI_cmd_selected_norm_1" type="array">
+      <obj_property name="ElementShortName">MOSI_cmd_selected_norm_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSI_cmd_selected_norm_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/MOSI_cmd_selected_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">MOSI_cmd_selected_cable_delay_finder[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSI_cmd_selected_cable_delay_finder[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/result_1" type="array">
+      <obj_property name="ElementShortName">result_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/phase_select" type="array">
+      <obj_property name="ElementShortName">phase_select[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_select[3:0]</obj_property>
    </wvobject>
 </wave_config>

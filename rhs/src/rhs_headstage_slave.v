@@ -4,7 +4,8 @@ module  rhs_headstage_slave #(parameter STARTING_SEED = 0) (
     input wire clk,
     input wire SCLK,
     output wire MISO,
-    input wire [4:0] channel
+    input wire [4:0] channel,
+    input wire [2:0] state_cable_delay_finder
 );
 
 
@@ -29,7 +30,23 @@ module  rhs_headstage_slave #(parameter STARTING_SEED = 0) (
     always @(posedge clk) begin
 
         counter_0_15 = channel - 2 + STARTING_SEED;
-        miso_out_reg = {counter_0_15, 16'd0};
+
+        case (state_cable_delay_finder)
+
+            2: begin
+                miso_out_reg = {16'd0, 16'b0100100101001110};
+            end
+            3: begin
+                miso_out_reg = {16'd0, 16'b0101010001000001};
+            end
+            4: begin
+                miso_out_reg = {16'd0, 16'b0100111000000000};
+            end
+            default: begin
+                miso_out_reg = {counter_0_15, 16'd0};
+            end
+
+        endcase
 
         if (CS == 1) begin
             clk_counter <= 1;

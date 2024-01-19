@@ -96,7 +96,7 @@ module rhs
     
     output wire [5:0]                        channel_out, //for fake data headstage slave to keep track
 
-    output wire [2:0]                        state_cable_delay_finder_out; //for fake data headstage slave to keep track
+    output wire [2:0]                        state_cable_delay_finder_out //for fake data headstage slave to keep track
 
     );
 
@@ -149,10 +149,7 @@ module rhs
 
     assign channel_out = channel;
 
-
     // [State machine for cable delay finder]
-
-    
     localparam
         IN_TX = 0,
         TA_TX = 1,
@@ -161,7 +158,7 @@ module rhs
         N0_RX = 4,
         DONE = 5;
 
-    reg [2:0] state_cable_delay_finder = OFF;
+    reg [2:0] state_cable_delay_finder = IN_TX;
 
     assign state_cable_delay_finder_out = state_cable_delay_finder;
 
@@ -390,6 +387,8 @@ module rhs
     */
 
     wire [31:0] 	MOSI_cmd_selected_init;
+
+    reg [31:0]     MOSI_cmd_selected_cable_delay_finder;
 
     wire [31:0]     MOSI_cmd_selected_amp;
 
@@ -2239,22 +2238,22 @@ module rhs
 
 
     reg [47:0] INTAN_reg = 0;
-    reg [47:0] INTAN_expected = 48'b01001001 01001110 01010100 01000001 01001110 00000000;
+    reg [47:0] INTAN_expected = 48'b010010010100111001010100010000010100111000000000;
 
     always @(posedge clk) begin
         if (!resetn) begin
-            flag_cable_delay_found = 0;
-            MOSI_cmd_selected_cable_delay_finder = 0;
-            state_cable_delay_finder = IN_TX;
-            phase_select = 0;
-            INTAN_reg = 0;
+            flag_cable_delay_found <= 0;
+            MOSI_cmd_selected_cable_delay_finder <= 0;
+            state_cable_delay_finder <= IN_TX;
+            phase_select <= 0;
+            INTAN_reg <= 0;
         end 
         else begin
             case (main_state) 
                 ms_wait: begin
-                    MOSI_cmd_selected_cable_delay_finder = 0;
+                    MOSI_cmd_selected_cable_delay_finder <= 0;
                 end
-                ms_cs_l: begin
+                ms_cs_h: begin
                     case (state_cable_delay_finder) 
                         IN_TX: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd251, 16'b0 };

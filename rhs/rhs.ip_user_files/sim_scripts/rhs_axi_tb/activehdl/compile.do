@@ -42,8 +42,8 @@ vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../rhs.gen/sources_1/bd/rhs
 "../../../bd/rhs_axi_tb/ip/rhs_axi_tb_axi_vip_0_0/sim/rhs_axi_tb_axi_vip_0_0.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rhs.gen/sources_1/bd/rhs_axi_tb/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l xil_defaultlib -l axi_vip_v1_1_14 \
-"../../../bd/rhs_axi_tb/ip/rhs_axi_tb_rhs_axi_0_0/sim/rhs_axi_tb_rhs_axi_0_0.v" \
 "../../../bd/rhs_axi_tb/ip/rhs_axi_tb_rhs_headstage_slave_0_0/sim/rhs_axi_tb_rhs_headstage_slave_0_0.v" \
+"../../../bd/rhs_axi_tb/ip/rhs_axi_tb_rhs_axi_0_0/sim/rhs_axi_tb_rhs_axi_0_0.v" \
 "../../../bd/rhs_axi_tb/sim/rhs_axi_tb.v" \
 
 vlog -work xil_defaultlib \
