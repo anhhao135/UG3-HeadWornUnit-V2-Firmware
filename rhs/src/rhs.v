@@ -94,7 +94,10 @@ module rhs
     input wire [9:0]                         stim_num_pulse, 
     input wire                               stim_inf_pulse_mode, //bit 10
     
-    output wire [5:0]                        channel_out //for fake data headstage slave to keep track
+    output wire [5:0]                        channel_out, //for fake data headstage slave to keep track
+
+    output wire [2:0]                        state_cable_delay_finder_out; //for fake data headstage slave to keep track
+
     );
 
 
@@ -145,6 +148,22 @@ module rhs
     reg [6:0]       channel_config;  // varies from 0-19 (amplfier channels 0-15, plus 3 auxiliary commands)
 
     assign channel_out = channel;
+
+
+    // [State machine for cable delay finder]
+
+    
+    localparam
+        IN_TX = 0,
+        TA_TX = 1,
+        N0_TX_IN_RX = 2,
+        TA_RX = 3,
+        N0_RX = 4,
+        DONE = 5;
+
+    reg [2:0] state_cable_delay_finder = OFF;
+
+    assign state_cable_delay_finder_out = state_cable_delay_finder;
 
 
     // [State machine for pulse generation]
@@ -245,6 +264,7 @@ module rhs
     assign header_magic_number          = { ZCheck_loop == 0 }? header_magic_number_normal: header_magic_number_impCheck;
 
 
+    reg             flag_cable_delay_found = 0;
 
     reg             flag_spi_stop;
     reg             flag_stim_done;
@@ -306,7 +326,7 @@ module rhs
     assign data_stream_15 = result_15;
     assign data_stream_16 = result_16;
 
-    reg [3:0] phase_select = 4'd2;
+    reg [3:0] phase_select = 0;
 
 
     // MISO phase selectors (to compensate for headstage cable delays)
@@ -1082,7 +1102,25 @@ module rhs
                     MOSI_cmd_16 <= 32'b0;
                 end
                 ms_cs_j: begin
-                    if (init_en) begin
+                    if (!flag_cable_delay_found && init_en) begin
+                        MOSI_cmd_1 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_2 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_3 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_4 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_5 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_6 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_7 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_8 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_9 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_10 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_11 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_12 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_13 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_14 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_15 <= MOSI_cmd_selected_cable_delay_finder;
+                        MOSI_cmd_16 <= MOSI_cmd_selected_cable_delay_finder;
+                    end
+                    else if (flag_cable_delay_found && init_en) begin
                         MOSI_cmd_1 <= MOSI_cmd_selected_init;
                         MOSI_cmd_2 <= MOSI_cmd_selected_init;
                         MOSI_cmd_3 <= MOSI_cmd_selected_init;
@@ -2189,6 +2227,64 @@ module rhs
                                 charge_recov_mode <= 0;
                                 flag_stim_done <= 1'b1; 
                             end
+                        end
+                    endcase
+                end
+            endcase
+        end
+    end
+
+
+    // Cable day finder state machine
+
+
+    reg [47:0] INTAN_reg = 0;
+    reg [47:0] INTAN_expected = 48'b01001001 01001110 01010100 01000001 01001110 00000000;
+
+    always @(posedge clk) begin
+        if (!resetn) begin
+            flag_cable_delay_found = 0;
+            MOSI_cmd_selected_cable_delay_finder = 0;
+            state_cable_delay_finder = IN_TX;
+            phase_select = 0;
+            INTAN_reg = 0;
+        end 
+        else begin
+            case (main_state) 
+                ms_wait: begin
+                    MOSI_cmd_selected_cable_delay_finder = 0;
+                end
+                ms_cs_l: begin
+                    case (state_cable_delay_finder) 
+                        IN_TX: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd251, 16'b0 };
+                            state_cable_delay_finder <= TA_TX;
+                        end
+                        TA_TX: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd252, 16'b0 };
+                            state_cable_delay_finder <= N0_TX_IN_RX;
+                        end
+                        N0_TX_IN_RX: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd253, 16'b0 };
+                            INTAN_reg[47:32] <= result_1[15:0];
+                            state_cable_delay_finder <= TA_RX;
+                        end
+                        TA_RX: begin
+                            INTAN_reg[31:16] <= result_1[15:0];
+                            state_cable_delay_finder <= N0_RX;
+                        end
+                        N0_RX: begin
+                            INTAN_reg[15:0] = result_1[15:0];
+                            if (INTAN_reg == INTAN_expected) begin
+                                state_cable_delay_finder <= DONE;
+                            end
+                            else begin
+                                phase_select = phase_select + 1;
+                                state_cable_delay_finder <= IN_TX;
+                            end
+                        end
+                        DONE: begin
+                            flag_cable_delay_found = 1;
                         end
                     endcase
                 end

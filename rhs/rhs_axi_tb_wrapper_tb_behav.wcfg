@@ -15,13 +15,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="7.049355 us"></ZoomStartTime>
-      <ZoomEndTime time="12.559356 us"></ZoomEndTime>
-      <Cursor1Time time="8.389355 us"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="2,315.000001 us"></ZoomEndTime>
+      <Cursor1Time time="1,791.324801 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="448"></NameColumnWidth>
-      <ValueColumnWidth column_width="152"></ValueColumnWidth>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="233"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="50" />
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/aclk_out" type="logic">
@@ -91,11 +91,6 @@
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/init_en" type="logic">
       <obj_property name="ElementShortName">init_en</obj_property>
       <obj_property name="ObjectShortName">init_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/channel" type="array">
-      <obj_property name="ElementShortName">channel[5:0]</obj_property>
-      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/mag_set_en" type="logic">
       <obj_property name="ElementShortName">mag_set_en</obj_property>
@@ -188,6 +183,11 @@
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/miso_out_reg" type="array">
       <obj_property name="ElementShortName">miso_out_reg[31:0]</obj_property>
       <obj_property name="ObjectShortName">miso_out_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_axi_0/inst/rhs_S00_AXI/rhs/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/rhs_axi_tb_wrapper_tb/DUT/rhs_axi_tb_i/rhs_headstage_slave_0/inst/A/MISO" type="logic">
       <obj_property name="ElementShortName">MISO</obj_property>
