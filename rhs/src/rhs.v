@@ -151,14 +151,15 @@ module rhs
 
     // [State machine for cable delay finder]
     localparam
-        IN_TX = 0,
-        TA_TX = 1,
-        N0_TX_IN_RX = 2,
-        TA_RX = 3,
-        N0_RX = 4,
-        DONE = 5;
+        IN_LOAD = 0,
+        IN_SEND_TA_LOAD = 1,
+        TA_SEND_IN_LOAD = 2,
+        IN_GET_N0_SEND = 3,
+        TA_GET = 4,
+        N0_GET = 5,
+        DONE = 6;
 
-    reg [2:0] state_cable_delay_finder = IN_TX;
+    reg [2:0] state_cable_delay_finder = IN_LOAD;
 
     assign state_cable_delay_finder_out = state_cable_delay_finder;
 
@@ -272,6 +273,8 @@ module rhs
     wire            flag_terminate_stim;
     wire            flag_terminate_ZCheck;
     wire            flag_terminate_config;
+
+    reg             flag_cable_delay_found_trigger_init = 0;
 
 
     assign  flag_lastBatch        = (timestamp == batch_size);
@@ -952,7 +955,14 @@ module rhs
                         if (flag_lastconfig) begin
                             channel_config <= 0;
                         end else begin
-                            channel_config <= channel_config + 1;
+                            if (flag_cable_delay_found) begin
+                                if (channel_config == 0 && flag_cable_delay_found_trigger_init) begin
+                                    channel_config <= 0;
+                                    flag_cable_delay_found_trigger_init <= 0;
+                                end
+                                else
+                                    channel_config <= channel_config + 1;
+                            end
                         end
                     end
 				end
@@ -2244,7 +2254,7 @@ module rhs
         if (!resetn) begin
             flag_cable_delay_found <= 0;
             MOSI_cmd_selected_cable_delay_finder <= 0;
-            state_cable_delay_finder <= IN_TX;
+            state_cable_delay_finder <= IN_LOAD;
             phase_select <= 0;
             INTAN_reg <= 0;
         end 
@@ -2255,35 +2265,41 @@ module rhs
                 end
                 ms_cs_h: begin
                     case (state_cable_delay_finder) 
-                        IN_TX: begin
+                        IN_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd251, 16'b0 };
-                            state_cable_delay_finder <= TA_TX;
+                            state_cable_delay_finder <= IN_SEND_TA_LOAD;
                         end
-                        TA_TX: begin
+                        IN_SEND_TA_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd252, 16'b0 };
-                            state_cable_delay_finder <= N0_TX_IN_RX;
+                            state_cable_delay_finder <= TA_SEND_IN_LOAD;
                         end
-                        N0_TX_IN_RX: begin
+                        TA_SEND_IN_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 2'b00, 4'b0000, 8'd253, 16'b0 };
+                            state_cable_delay_finder <= IN_GET_N0_SEND;
+                        end
+                        IN_GET_N0_SEND: begin
                             INTAN_reg[47:32] <= result_1[15:0];
-                            state_cable_delay_finder <= TA_RX;
+                            state_cable_delay_finder <= TA_GET;
                         end
-                        TA_RX: begin
+                        TA_GET: begin
                             INTAN_reg[31:16] <= result_1[15:0];
-                            state_cable_delay_finder <= N0_RX;
+                            state_cable_delay_finder <= N0_GET;
                         end
-                        N0_RX: begin
+                        N0_GET: begin
                             INTAN_reg[15:0] = result_1[15:0];
                             if (INTAN_reg == INTAN_expected) begin
                                 state_cable_delay_finder <= DONE;
+                                flag_cable_delay_found_trigger_init <= 1;
                             end
                             else begin
                                 phase_select = phase_select + 1;
-                                state_cable_delay_finder <= IN_TX;
+                                state_cable_delay_finder <= IN_LOAD;
                             end
+                            MOSI_cmd_selected_cable_delay_finder <= 0;
                         end
                         DONE: begin
-                            flag_cable_delay_found = 1;
+                            flag_cable_delay_found <= 1;
+                            MOSI_cmd_selected_cable_delay_finder <= 0;
                         end
                     endcase
                 end

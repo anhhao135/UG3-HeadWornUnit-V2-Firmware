@@ -12,8 +12,8 @@
     },
     "design_tree": {
       "axi_vip_0": "",
-      "rhs_axi_0": "",
-      "rhs_headstage_slave_0": ""
+      "rhs_headstage_slave_0": "",
+      "rhs_axi_0": ""
     },
     "ports": {
       "aresetn": {
@@ -168,6 +168,100 @@
               "range": "4G",
               "width": "32"
             }
+          }
+        }
+      },
+      "rhs_headstage_slave_0": {
+        "vlnv": "xilinx.com:module_ref:rhs_headstage_slave_full:1.0",
+        "xci_name": "rhs_axi_tb_rhs_headstage_slave_0_0",
+        "xci_path": "ip\\rhs_axi_tb_rhs_headstage_slave_0_0\\rhs_axi_tb_rhs_headstage_slave_0_0.xci",
+        "inst_hier_path": "rhs_headstage_slave_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rhs_headstage_slave_full",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MOSI": {
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhs_axi_tb_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "SCLK": {
+            "direction": "I"
+          },
+          "MISO_A": {
+            "direction": "O"
+          },
+          "MISO_B": {
+            "direction": "O"
+          },
+          "MISO_C": {
+            "direction": "O"
+          },
+          "MISO_D": {
+            "direction": "O"
+          },
+          "MISO_E": {
+            "direction": "O"
+          },
+          "MISO_F": {
+            "direction": "O"
+          },
+          "MISO_G": {
+            "direction": "O"
+          },
+          "MISO_H": {
+            "direction": "O"
+          },
+          "MISO_I": {
+            "direction": "O"
+          },
+          "MISO_J": {
+            "direction": "O"
+          },
+          "MISO_K": {
+            "direction": "O"
+          },
+          "MISO_L": {
+            "direction": "O"
+          },
+          "MISO_M": {
+            "direction": "O"
+          },
+          "MISO_N": {
+            "direction": "O"
+          },
+          "MISO_O": {
+            "direction": "O"
+          },
+          "MISO_P": {
+            "direction": "O"
+          },
+          "channel": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "state_cable_delay_finder": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
           }
         }
       },
@@ -578,6 +672,11 @@
             "left": "5",
             "right": "0"
           },
+          "state_cable_delay_finder_out": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
           "FIFO_rstn": {
             "type": "rst",
             "direction": "O",
@@ -653,95 +752,6 @@
             }
           }
         }
-      },
-      "rhs_headstage_slave_0": {
-        "vlnv": "xilinx.com:module_ref:rhs_headstage_slave_full:1.0",
-        "xci_name": "rhs_axi_tb_rhs_headstage_slave_0_0",
-        "xci_path": "ip\\rhs_axi_tb_rhs_headstage_slave_0_0\\rhs_axi_tb_rhs_headstage_slave_0_0.xci",
-        "inst_hier_path": "rhs_headstage_slave_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhs_headstage_slave_full",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
-          },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhs_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO_A": {
-            "direction": "O"
-          },
-          "MISO_B": {
-            "direction": "O"
-          },
-          "MISO_C": {
-            "direction": "O"
-          },
-          "MISO_D": {
-            "direction": "O"
-          },
-          "MISO_E": {
-            "direction": "O"
-          },
-          "MISO_F": {
-            "direction": "O"
-          },
-          "MISO_G": {
-            "direction": "O"
-          },
-          "MISO_H": {
-            "direction": "O"
-          },
-          "MISO_I": {
-            "direction": "O"
-          },
-          "MISO_J": {
-            "direction": "O"
-          },
-          "MISO_K": {
-            "direction": "O"
-          },
-          "MISO_L": {
-            "direction": "O"
-          },
-          "MISO_M": {
-            "direction": "O"
-          },
-          "MISO_N": {
-            "direction": "O"
-          },
-          "MISO_O": {
-            "direction": "O"
-          },
-          "MISO_P": {
-            "direction": "O"
-          },
-          "channel": {
-            "direction": "I",
-            "left": "5",
-            "right": "0"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -757,8 +767,8 @@
         "ports": [
           "aclk",
           "axi_vip_0/aclk",
-          "rhs_axi_0/s00_axi_aclk",
-          "rhs_headstage_slave_0/clk"
+          "rhs_headstage_slave_0/clk",
+          "rhs_axi_0/s00_axi_aclk"
         ]
       },
       "aclk_out_1": {
@@ -811,6 +821,12 @@
         "ports": [
           "rhs_axi_0/channel_out",
           "rhs_headstage_slave_0/channel"
+        ]
+      },
+      "rhs_axi_0_state_cable_delay_finder_out": {
+        "ports": [
+          "rhs_axi_0/state_cable_delay_finder_out",
+          "rhs_headstage_slave_0/state_cable_delay_finder"
         ]
       },
       "rhs_headstage_slave_0_MISO_A": {

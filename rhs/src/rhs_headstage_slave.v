@@ -33,13 +33,13 @@ module  rhs_headstage_slave #(parameter STARTING_SEED = 0) (
 
         case (state_cable_delay_finder)
 
-            2: begin
+            3: begin
                 miso_out_reg = {16'd0, 16'b0100100101001110};
             end
-            3: begin
+            4: begin
                 miso_out_reg = {16'd0, 16'b0101010001000001};
             end
-            4: begin
+            5: begin
                 miso_out_reg = {16'd0, 16'b0100111000000000};
             end
             default: begin

@@ -56,7 +56,8 @@
         "MISO_N": [ { "direction": "out" } ],
         "MISO_O": [ { "direction": "out" } ],
         "MISO_P": [ { "direction": "out" } ],
-        "channel": [ { "direction": "in", "size_left": "5", "size_right": "0" } ]
+        "channel": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "state_cable_delay_finder": [ { "direction": "in", "size_left": "2", "size_right": "0" } ]
       },
       "interfaces": {
         "clk": {

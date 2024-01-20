@@ -2,8 +2,8 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Jan 19 12:36:51 2024
-//Host        : GramForGram running 64-bit major release  (build 9200)
+//Date        : Fri Jan 19 15:22:29 2024
+//Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb.bd
 //Design      : rhs_axi_tb
 //Purpose     : IP block netlist
@@ -57,6 +57,7 @@ module rhs_axi_tb
   wire rhs_axi_0_MOSI2;
   wire rhs_axi_0_SCLK;
   wire [5:0]rhs_axi_0_channel_out;
+  wire [2:0]rhs_axi_0_state_cable_delay_finder_out;
   wire rhs_headstage_slave_0_MISO_A;
   wire rhs_headstage_slave_0_MISO_B;
   wire rhs_headstage_slave_0_MISO_C;
@@ -149,7 +150,8 @@ module rhs_axi_tb
         .s00_axi_wdata(axi_vip_0_M_AXI_WDATA),
         .s00_axi_wready(axi_vip_0_M_AXI_WREADY),
         .s00_axi_wstrb(axi_vip_0_M_AXI_WSTRB),
-        .s00_axi_wvalid(axi_vip_0_M_AXI_WVALID));
+        .s00_axi_wvalid(axi_vip_0_M_AXI_WVALID),
+        .state_cable_delay_finder_out(rhs_axi_0_state_cable_delay_finder_out));
   rhs_axi_tb_rhs_headstage_slave_0_0 rhs_headstage_slave_0
        (.CS(rhs_axi_0_CS_b),
         .MISO_A(rhs_headstage_slave_0_MISO_A),
@@ -171,5 +173,6 @@ module rhs_axi_tb
         .MOSI(rhs_axi_0_MOSI1),
         .SCLK(rhs_axi_0_SCLK),
         .channel(rhs_axi_0_channel_out),
-        .clk(aclk_1));
+        .clk(aclk_1),
+        .state_cable_delay_finder(rhs_axi_0_state_cable_delay_finder_out));
 endmodule

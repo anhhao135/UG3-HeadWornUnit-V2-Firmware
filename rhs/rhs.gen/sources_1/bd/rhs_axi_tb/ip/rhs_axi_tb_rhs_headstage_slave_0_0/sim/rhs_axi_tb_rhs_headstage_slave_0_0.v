@@ -75,7 +75,8 @@ module rhs_axi_tb_rhs_headstage_slave_0_0 (
   MISO_N,
   MISO_O,
   MISO_P,
-  channel
+  channel,
+  state_cable_delay_finder
 );
 
 input wire MOSI;
@@ -101,6 +102,7 @@ output wire MISO_N;
 output wire MISO_O;
 output wire MISO_P;
 input wire [5 : 0] channel;
+input wire [2 : 0] state_cable_delay_finder;
 
   rhs_headstage_slave_full inst (
     .MOSI(MOSI),
@@ -123,6 +125,7 @@ input wire [5 : 0] channel;
     .MISO_N(MISO_N),
     .MISO_O(MISO_O),
     .MISO_P(MISO_P),
-    .channel(channel)
+    .channel(channel),
+    .state_cable_delay_finder(state_cable_delay_finder)
   );
 endmodule

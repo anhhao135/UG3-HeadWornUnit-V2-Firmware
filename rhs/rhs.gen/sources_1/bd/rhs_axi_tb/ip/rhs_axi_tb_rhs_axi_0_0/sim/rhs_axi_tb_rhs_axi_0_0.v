@@ -109,6 +109,7 @@ module rhs_axi_tb_rhs_axi_0_0 (
   MISO15,
   MISO16,
   channel_out,
+  state_cable_delay_finder_out,
   FIFO_rstn,
   M_AXIS_tdata,
   M_AXIS_tvalid,
@@ -195,6 +196,7 @@ input wire MISO14;
 input wire MISO15;
 input wire MISO16;
 output wire [5 : 0] channel_out;
+output wire [2 : 0] state_cable_delay_finder_out;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIFO_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FIFO_rstn RST" *)
 output wire FIFO_rstn;
@@ -280,6 +282,7 @@ input wire M_AXIS_ARESETN;
     .MISO15(MISO15),
     .MISO16(MISO16),
     .channel_out(channel_out),
+    .state_cable_delay_finder_out(state_cable_delay_finder_out),
     .FIFO_rstn(FIFO_rstn),
     .M_AXIS_tdata(M_AXIS_tdata),
     .M_AXIS_tvalid(M_AXIS_tvalid),

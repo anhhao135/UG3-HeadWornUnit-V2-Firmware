@@ -77,6 +77,8 @@ module rhs_axi #
 
     output wire [5:0] channel_out,
 
+    output wire [2:0] state_cable_delay_finder_out,
+
     output wire FIFO_rstn,
 
     //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
@@ -170,7 +172,8 @@ module rhs_axi #
       .S_AXI_RRESP(s00_axi_rresp),
       .S_AXI_RVALID(s00_axi_rvalid),
       .S_AXI_RREADY(s00_axi_rready),
-      .channel_out(channel_out)
+      .channel_out(channel_out),
+      .state_cable_delay_finder_out(state_cable_delay_finder_out)
     );
 
   // Add user logic here

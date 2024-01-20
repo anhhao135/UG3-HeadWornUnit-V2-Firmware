@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 19 12:36:51 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 19 15:22:29 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhs_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -13,8 +13,8 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_vip_0" PORT="aclk"/>
-        <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aclk"/>
         <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="clk"/>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="s00_axi_aclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk_out" SIGIS="clk" SIGNAME="External_Ports_aclk_out">
@@ -508,6 +508,11 @@
             <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="channel"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="2" NAME="state_cable_delay_finder_out" RIGHT="0" SIGIS="undef" SIGNAME="rhs_axi_0_state_cable_delay_finder_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_headstage_slave_0" PORT="state_cable_delay_finder"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="FIFO_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
         <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="M_AXIS_tvalid" SIGIS="undef"/>
@@ -722,6 +727,11 @@
         <PORT DIR="I" LEFT="5" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="rhs_axi_0_channel_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rhs_axi_0" PORT="channel_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="state_cable_delay_finder" RIGHT="0" SIGIS="undef" SIGNAME="rhs_axi_0_state_cable_delay_finder_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rhs_axi_0" PORT="state_cable_delay_finder_out"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
