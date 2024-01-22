@@ -275,6 +275,7 @@ module rhs
     wire            flag_terminate_config;
 
     reg             flag_cable_delay_found_trigger_init = 0;
+    reg             flag_cable_delay_low_found = 0;
 
 
     assign  flag_lastBatch        = (timestamp == batch_size);
@@ -327,6 +328,8 @@ module rhs
     assign data_stream_16 = result_16;
 
     reg [3:0] phase_select = 0;
+
+    reg [3:0] phase_select_low;
 
 
     // MISO phase selectors (to compensate for headstage cable delays)
@@ -2253,6 +2256,7 @@ module rhs
     always @(posedge clk) begin
         if (!resetn) begin
             flag_cable_delay_found <= 0;
+            flag_cable_delay_low_found <= 0;
             MOSI_cmd_selected_cable_delay_finder <= 0;
             state_cable_delay_finder <= IN_LOAD;
             phase_select <= 0;
@@ -2287,9 +2291,16 @@ module rhs
                         end
                         N0_GET: begin
                             INTAN_reg[15:0] = result_1[15:0];
-                            if (INTAN_reg == INTAN_expected) begin
-                                state_cable_delay_finder <= DONE;
-                                flag_cable_delay_found_trigger_init <= 1;
+                            if (INTAN_reg == INTAN_expected && !flag_cable_delay_low_found) begin
+                                state_cable_delay_finder = IN_LOAD;
+                                flag_cable_delay_low_found = 1;
+                                phase_select_low = phase_select;
+                                phase_select = phase_select + 1;
+                            end
+                            else if (INTAN_reg != INTAN_expected && flag_cable_delay_low_found) begin
+                                state_cable_delay_finder = DONE;
+                                flag_cable_delay_found_trigger_init = 1;
+                                phase_select = (phase_select_low + phase_select) / 2;
                             end
                             else begin
                                 phase_select = phase_select + 1;

@@ -7,7 +7,8 @@
       "name": "stimulation",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "util_vector_logic_0": "",
@@ -34,7 +35,7 @@
           },
           "HAS_TLAST": {
             "value": "1",
-            "value_src": "auto_prop"
+            "value_src": "user_prop"
           },
           "HAS_TREADY": {
             "value": "1",
@@ -58,7 +59,7 @@
           },
           "TDATA_NUM_BYTES": {
             "value": "8",
-            "value_src": "auto_prop"
+            "value_src": "user_prop"
           },
           "TDEST_WIDTH": {
             "value": "0",
@@ -306,8 +307,32 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "M_AXIS",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "rstn_dma",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "stimulation_clk_dma",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
@@ -321,18 +346,62 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXI_LITE",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "rstn_rhs",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "stimulation_clk_rhs",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
       "rstn_rhs": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "rstn_dma": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "CS": {
         "direction": "O"
@@ -423,6 +492,14 @@
               "HAS_TLAST": {
                 "value": "1",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "stimulation_clk_dma",
+                "value_src": "default_prop"
               }
             },
             "port_maps": {
@@ -458,6 +535,10 @@
               "PROTOCOL": {
                 "value": "AXI4LITE",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "ID_WIDTH": {
                 "value": "0",
@@ -542,6 +623,26 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "stimulation_clk_rhs",
+                "value_src": "default_prop"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
               }
             },
             "memory_map_ref": "s00_axi",
@@ -656,11 +757,105 @@
           "MOSI2": {
             "direction": "O"
           },
+          "MOSI3": {
+            "direction": "O"
+          },
+          "MOSI4": {
+            "direction": "O"
+          },
+          "MOSI5": {
+            "direction": "O"
+          },
+          "MOSI6": {
+            "direction": "O"
+          },
+          "MOSI7": {
+            "direction": "O"
+          },
+          "MOSI8": {
+            "direction": "O"
+          },
+          "MOSI9": {
+            "direction": "O"
+          },
+          "MOSI10": {
+            "direction": "O"
+          },
+          "MOSI11": {
+            "direction": "O"
+          },
+          "MOSI12": {
+            "direction": "O"
+          },
+          "MOSI13": {
+            "direction": "O"
+          },
+          "MOSI14": {
+            "direction": "O"
+          },
+          "MOSI15": {
+            "direction": "O"
+          },
+          "MOSI16": {
+            "direction": "O"
+          },
           "MISO1": {
             "direction": "I"
           },
           "MISO2": {
             "direction": "I"
+          },
+          "MISO3": {
+            "direction": "I"
+          },
+          "MISO4": {
+            "direction": "I"
+          },
+          "MISO5": {
+            "direction": "I"
+          },
+          "MISO6": {
+            "direction": "I"
+          },
+          "MISO7": {
+            "direction": "I"
+          },
+          "MISO8": {
+            "direction": "I"
+          },
+          "MISO9": {
+            "direction": "I"
+          },
+          "MISO10": {
+            "direction": "I"
+          },
+          "MISO11": {
+            "direction": "I"
+          },
+          "MISO12": {
+            "direction": "I"
+          },
+          "MISO13": {
+            "direction": "I"
+          },
+          "MISO14": {
+            "direction": "I"
+          },
+          "MISO15": {
+            "direction": "I"
+          },
+          "MISO16": {
+            "direction": "I"
+          },
+          "channel_out": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "state_cable_delay_finder_out": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
           },
           "FIFO_rstn": {
             "type": "rst",
@@ -683,6 +878,14 @@
               "ASSOCIATED_RESET": {
                 "value": "s00_axi_aresetn",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "stimulation_clk_rhs",
+                "value_src": "default_prop"
               }
             }
           },
@@ -707,6 +910,14 @@
               "ASSOCIATED_RESET": {
                 "value": "M_AXIS_ARESETN",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "stimulation_clk_dma",
+                "value_src": "default_prop"
               }
             }
           },
