@@ -64,9 +64,7 @@ rhs_axi_tb_axi_vip_0_0_mst_t          mst_agent_0;
       .aclk(aclk),
       .aclk_out(aclk_out),
       .CS_b(CS_b),
-      .SCLK(SCLK),
-      .MOSI1(MOSI1),
-      .MOSI2(MOSI2)
+      .SCLK(SCLK)
     ); 
   
 initial begin
@@ -157,7 +155,7 @@ begin
   #1us;
 
   // (1a) Init
-  mtestWDataL = 32'h00000003;
+  mtestWDataL = 32'h000000023; // hex 3 turns off loopback 6th bit = 0 | hex 23 turns on loopback
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL[15:0], mtestRDataL[15:0]);
@@ -171,7 +169,7 @@ begin
 
 
   // (1b) Magnitude set
-  mtestWDataL = 32'h00000005;
+  mtestWDataL = 32'h00000025; //hex 5 turns off loopback, hex 25 turns on
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL[15:0], mtestRDataL[15:0]);
@@ -185,7 +183,7 @@ begin
   
 
   // (1c) enable stim
-  mtestWDataL = 32'h00000009;
+  mtestWDataL = 32'h000000029; //hex 9 turns loopback off, hex 29 turns on
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL[15:0], mtestRDataL[15:0]);

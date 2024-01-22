@@ -76,41 +76,38 @@ module rhs_axi_tb_rhs_axi_0_0 (
   s00_axi_rready,
   CS_b,
   SCLK,
-  MOSI1,
-  MOSI2,
-  MOSI3,
-  MOSI4,
-  MOSI5,
-  MOSI6,
-  MOSI7,
-  MOSI8,
-  MOSI9,
-  MOSI10,
-  MOSI11,
-  MOSI12,
-  MOSI13,
-  MOSI14,
-  MOSI15,
-  MOSI16,
-  MISO1,
-  MISO2,
-  MISO3,
-  MISO4,
-  MISO5,
-  MISO6,
-  MISO7,
-  MISO8,
-  MISO9,
-  MISO10,
-  MISO11,
-  MISO12,
-  MISO13,
-  MISO14,
-  MISO15,
-  MISO16,
-  channel_out,
-  state_cable_delay_finder_out,
-  FIFO_rstn,
+  MOSI_A,
+  MOSI_B,
+  MOSI_C,
+  MOSI_D,
+  MOSI_E,
+  MOSI_F,
+  MOSI_G,
+  MOSI_H,
+  MOSI_I,
+  MOSI_J,
+  MOSI_K,
+  MOSI_L,
+  MOSI_M,
+  MOSI_N,
+  MOSI_O,
+  MOSI_P,
+  MISO_A,
+  MISO_B,
+  MISO_C,
+  MISO_D,
+  MISO_E,
+  MISO_F,
+  MISO_G,
+  MISO_H,
+  MISO_I,
+  MISO_J,
+  MISO_K,
+  MISO_L,
+  MISO_M,
+  MISO_N,
+  MISO_O,
+  MISO_P,
   M_AXIS_tdata,
   M_AXIS_tvalid,
   M_AXIS_tready,
@@ -163,43 +160,38 @@ USER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 input wire s00_axi_rready;
 output wire CS_b;
 output wire SCLK;
-output wire MOSI1;
-output wire MOSI2;
-output wire MOSI3;
-output wire MOSI4;
-output wire MOSI5;
-output wire MOSI6;
-output wire MOSI7;
-output wire MOSI8;
-output wire MOSI9;
-output wire MOSI10;
-output wire MOSI11;
-output wire MOSI12;
-output wire MOSI13;
-output wire MOSI14;
-output wire MOSI15;
-output wire MOSI16;
-input wire MISO1;
-input wire MISO2;
-input wire MISO3;
-input wire MISO4;
-input wire MISO5;
-input wire MISO6;
-input wire MISO7;
-input wire MISO8;
-input wire MISO9;
-input wire MISO10;
-input wire MISO11;
-input wire MISO12;
-input wire MISO13;
-input wire MISO14;
-input wire MISO15;
-input wire MISO16;
-output wire [5 : 0] channel_out;
-output wire [2 : 0] state_cable_delay_finder_out;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIFO_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FIFO_rstn RST" *)
-output wire FIFO_rstn;
+output wire MOSI_A;
+output wire MOSI_B;
+output wire MOSI_C;
+output wire MOSI_D;
+output wire MOSI_E;
+output wire MOSI_F;
+output wire MOSI_G;
+output wire MOSI_H;
+output wire MOSI_I;
+output wire MOSI_J;
+output wire MOSI_K;
+output wire MOSI_L;
+output wire MOSI_M;
+output wire MOSI_N;
+output wire MOSI_O;
+output wire MOSI_P;
+input wire MISO_A;
+input wire MISO_B;
+input wire MISO_C;
+input wire MISO_D;
+input wire MISO_E;
+input wire MISO_F;
+input wire MISO_G;
+input wire MISO_H;
+input wire MISO_I;
+input wire MISO_J;
+input wire MISO_K;
+input wire MISO_L;
+input wire MISO_M;
+input wire MISO_N;
+input wire MISO_O;
+input wire MISO_P;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 output wire [63 : 0] M_AXIS_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
@@ -249,41 +241,38 @@ input wire M_AXIS_ARESETN;
     .s00_axi_rready(s00_axi_rready),
     .CS_b(CS_b),
     .SCLK(SCLK),
-    .MOSI1(MOSI1),
-    .MOSI2(MOSI2),
-    .MOSI3(MOSI3),
-    .MOSI4(MOSI4),
-    .MOSI5(MOSI5),
-    .MOSI6(MOSI6),
-    .MOSI7(MOSI7),
-    .MOSI8(MOSI8),
-    .MOSI9(MOSI9),
-    .MOSI10(MOSI10),
-    .MOSI11(MOSI11),
-    .MOSI12(MOSI12),
-    .MOSI13(MOSI13),
-    .MOSI14(MOSI14),
-    .MOSI15(MOSI15),
-    .MOSI16(MOSI16),
-    .MISO1(MISO1),
-    .MISO2(MISO2),
-    .MISO3(MISO3),
-    .MISO4(MISO4),
-    .MISO5(MISO5),
-    .MISO6(MISO6),
-    .MISO7(MISO7),
-    .MISO8(MISO8),
-    .MISO9(MISO9),
-    .MISO10(MISO10),
-    .MISO11(MISO11),
-    .MISO12(MISO12),
-    .MISO13(MISO13),
-    .MISO14(MISO14),
-    .MISO15(MISO15),
-    .MISO16(MISO16),
-    .channel_out(channel_out),
-    .state_cable_delay_finder_out(state_cable_delay_finder_out),
-    .FIFO_rstn(FIFO_rstn),
+    .MOSI_A(MOSI_A),
+    .MOSI_B(MOSI_B),
+    .MOSI_C(MOSI_C),
+    .MOSI_D(MOSI_D),
+    .MOSI_E(MOSI_E),
+    .MOSI_F(MOSI_F),
+    .MOSI_G(MOSI_G),
+    .MOSI_H(MOSI_H),
+    .MOSI_I(MOSI_I),
+    .MOSI_J(MOSI_J),
+    .MOSI_K(MOSI_K),
+    .MOSI_L(MOSI_L),
+    .MOSI_M(MOSI_M),
+    .MOSI_N(MOSI_N),
+    .MOSI_O(MOSI_O),
+    .MOSI_P(MOSI_P),
+    .MISO_A(MISO_A),
+    .MISO_B(MISO_B),
+    .MISO_C(MISO_C),
+    .MISO_D(MISO_D),
+    .MISO_E(MISO_E),
+    .MISO_F(MISO_F),
+    .MISO_G(MISO_G),
+    .MISO_H(MISO_H),
+    .MISO_I(MISO_I),
+    .MISO_J(MISO_J),
+    .MISO_K(MISO_K),
+    .MISO_L(MISO_L),
+    .MISO_M(MISO_M),
+    .MISO_N(MISO_N),
+    .MISO_O(MISO_O),
+    .MISO_P(MISO_P),
     .M_AXIS_tdata(M_AXIS_tdata),
     .M_AXIS_tvalid(M_AXIS_tvalid),
     .M_AXIS_tready(M_AXIS_tready),

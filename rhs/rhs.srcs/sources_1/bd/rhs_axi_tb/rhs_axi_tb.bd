@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x996AC300E92EFE52",
+      "boundary_crc": "0xE07733322A402F9A",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../rhs.gen/sources_1/bd/rhs_axi_tb",
       "name": "rhs_axi_tb",
@@ -12,7 +12,6 @@
     },
     "design_tree": {
       "axi_vip_0": "",
-      "rhs_headstage_slave_0": "",
       "rhs_axi_0": ""
     },
     "ports": {
@@ -107,12 +106,6 @@
       },
       "SCLK": {
         "direction": "O"
-      },
-      "MOSI1": {
-        "direction": "O"
-      },
-      "MOSI2": {
-        "direction": "O"
       }
     },
     "components": {
@@ -168,100 +161,6 @@
               "range": "4G",
               "width": "32"
             }
-          }
-        }
-      },
-      "rhs_headstage_slave_0": {
-        "vlnv": "xilinx.com:module_ref:rhs_headstage_slave_full:1.0",
-        "xci_name": "rhs_axi_tb_rhs_headstage_slave_0_0",
-        "xci_path": "ip\\rhs_axi_tb_rhs_headstage_slave_0_0\\rhs_axi_tb_rhs_headstage_slave_0_0.xci",
-        "inst_hier_path": "rhs_headstage_slave_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rhs_headstage_slave_full",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "MOSI": {
-            "direction": "I"
-          },
-          "CS": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "rhs_axi_tb_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "SCLK": {
-            "direction": "I"
-          },
-          "MISO_A": {
-            "direction": "O"
-          },
-          "MISO_B": {
-            "direction": "O"
-          },
-          "MISO_C": {
-            "direction": "O"
-          },
-          "MISO_D": {
-            "direction": "O"
-          },
-          "MISO_E": {
-            "direction": "O"
-          },
-          "MISO_F": {
-            "direction": "O"
-          },
-          "MISO_G": {
-            "direction": "O"
-          },
-          "MISO_H": {
-            "direction": "O"
-          },
-          "MISO_I": {
-            "direction": "O"
-          },
-          "MISO_J": {
-            "direction": "O"
-          },
-          "MISO_K": {
-            "direction": "O"
-          },
-          "MISO_L": {
-            "direction": "O"
-          },
-          "MISO_M": {
-            "direction": "O"
-          },
-          "MISO_N": {
-            "direction": "O"
-          },
-          "MISO_O": {
-            "direction": "O"
-          },
-          "MISO_P": {
-            "direction": "O"
-          },
-          "channel": {
-            "direction": "I",
-            "left": "5",
-            "right": "0"
-          },
-          "state_cable_delay_finder": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
           }
         }
       },
@@ -571,121 +470,101 @@
           "SCLK": {
             "direction": "O"
           },
-          "MOSI1": {
+          "MOSI_A": {
             "direction": "O"
           },
-          "MOSI2": {
+          "MOSI_B": {
             "direction": "O"
           },
-          "MOSI3": {
+          "MOSI_C": {
             "direction": "O"
           },
-          "MOSI4": {
+          "MOSI_D": {
             "direction": "O"
           },
-          "MOSI5": {
+          "MOSI_E": {
             "direction": "O"
           },
-          "MOSI6": {
+          "MOSI_F": {
             "direction": "O"
           },
-          "MOSI7": {
+          "MOSI_G": {
             "direction": "O"
           },
-          "MOSI8": {
+          "MOSI_H": {
             "direction": "O"
           },
-          "MOSI9": {
+          "MOSI_I": {
             "direction": "O"
           },
-          "MOSI10": {
+          "MOSI_J": {
             "direction": "O"
           },
-          "MOSI11": {
+          "MOSI_K": {
             "direction": "O"
           },
-          "MOSI12": {
+          "MOSI_L": {
             "direction": "O"
           },
-          "MOSI13": {
+          "MOSI_M": {
             "direction": "O"
           },
-          "MOSI14": {
+          "MOSI_N": {
             "direction": "O"
           },
-          "MOSI15": {
+          "MOSI_O": {
             "direction": "O"
           },
-          "MOSI16": {
+          "MOSI_P": {
             "direction": "O"
           },
-          "MISO1": {
+          "MISO_A": {
             "direction": "I"
           },
-          "MISO2": {
+          "MISO_B": {
             "direction": "I"
           },
-          "MISO3": {
+          "MISO_C": {
             "direction": "I"
           },
-          "MISO4": {
+          "MISO_D": {
             "direction": "I"
           },
-          "MISO5": {
+          "MISO_E": {
             "direction": "I"
           },
-          "MISO6": {
+          "MISO_F": {
             "direction": "I"
           },
-          "MISO7": {
+          "MISO_G": {
             "direction": "I"
           },
-          "MISO8": {
+          "MISO_H": {
             "direction": "I"
           },
-          "MISO9": {
+          "MISO_I": {
             "direction": "I"
           },
-          "MISO10": {
+          "MISO_J": {
             "direction": "I"
           },
-          "MISO11": {
+          "MISO_K": {
             "direction": "I"
           },
-          "MISO12": {
+          "MISO_L": {
             "direction": "I"
           },
-          "MISO13": {
+          "MISO_M": {
             "direction": "I"
           },
-          "MISO14": {
+          "MISO_N": {
             "direction": "I"
           },
-          "MISO15": {
+          "MISO_O": {
             "direction": "I"
           },
-          "MISO16": {
+          "MISO_P": {
             "direction": "I"
-          },
-          "channel_out": {
-            "direction": "O",
-            "left": "5",
-            "right": "0"
-          },
-          "state_cable_delay_finder_out": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "FIFO_rstn": {
-            "type": "rst",
-            "direction": "O",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
           },
           "s00_axi_aclk": {
             "type": "clk",
@@ -767,7 +646,6 @@
         "ports": [
           "aclk",
           "axi_vip_0/aclk",
-          "rhs_headstage_slave_0/clk",
           "rhs_axi_0/s00_axi_aclk"
         ]
       },
@@ -793,136 +671,13 @@
       "rhs_axi_0_CS_b": {
         "ports": [
           "rhs_axi_0/CS_b",
-          "CS_b",
-          "rhs_headstage_slave_0/CS"
-        ]
-      },
-      "rhs_axi_0_MOSI1": {
-        "ports": [
-          "rhs_axi_0/MOSI1",
-          "MOSI1",
-          "rhs_headstage_slave_0/MOSI"
-        ]
-      },
-      "rhs_axi_0_MOSI2": {
-        "ports": [
-          "rhs_axi_0/MOSI2",
-          "MOSI2"
+          "CS_b"
         ]
       },
       "rhs_axi_0_SCLK": {
         "ports": [
           "rhs_axi_0/SCLK",
-          "SCLK",
-          "rhs_headstage_slave_0/SCLK"
-        ]
-      },
-      "rhs_axi_0_channel_out": {
-        "ports": [
-          "rhs_axi_0/channel_out",
-          "rhs_headstage_slave_0/channel"
-        ]
-      },
-      "rhs_axi_0_state_cable_delay_finder_out": {
-        "ports": [
-          "rhs_axi_0/state_cable_delay_finder_out",
-          "rhs_headstage_slave_0/state_cable_delay_finder"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_A": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_A",
-          "rhs_axi_0/MISO1"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_B": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_B",
-          "rhs_axi_0/MISO2"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_C": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_C",
-          "rhs_axi_0/MISO3"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_D": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_D",
-          "rhs_axi_0/MISO4"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_E": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_E",
-          "rhs_axi_0/MISO5"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_F": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_F",
-          "rhs_axi_0/MISO6"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_G": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_G",
-          "rhs_axi_0/MISO7"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_H": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_H",
-          "rhs_axi_0/MISO8"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_I": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_I",
-          "rhs_axi_0/MISO9"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_J": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_J",
-          "rhs_axi_0/MISO10"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_K": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_K",
-          "rhs_axi_0/MISO11"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_L": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_L",
-          "rhs_axi_0/MISO12"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_M": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_M",
-          "rhs_axi_0/MISO13"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_N": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_N",
-          "rhs_axi_0/MISO14"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_O": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_O",
-          "rhs_axi_0/MISO15"
-        ]
-      },
-      "rhs_headstage_slave_0_MISO_P": {
-        "ports": [
-          "rhs_headstage_slave_0/MISO_P",
-          "rhs_axi_0/MISO16"
+          "SCLK"
         ]
       }
     }

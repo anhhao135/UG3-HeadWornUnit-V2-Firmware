@@ -57,7 +57,6 @@ module rhs_S00_AXI #
 	output wire FIFO_rstn,
 
 	output wire [5:0] channel_out,
-
 	output wire [2:0] state_cable_delay_finder_out,
 
 	output wire [63:0] M_AXIS_tdata,
@@ -131,6 +130,89 @@ module rhs_S00_AXI #
 		// accept the read data and response information.
 	input wire  S_AXI_RREADY
 );
+
+
+wire MISO_A_LOOP;
+wire MISO_B_LOOP;
+wire MISO_C_LOOP;
+wire MISO_D_LOOP;
+wire MISO_E_LOOP;
+wire MISO_F_LOOP;
+wire MISO_G_LOOP;
+wire MISO_H_LOOP;
+wire MISO_I_LOOP;
+wire MISO_J_LOOP;
+wire MISO_K_LOOP;
+wire MISO_L_LOOP;
+wire MISO_M_LOOP;
+wire MISO_N_LOOP;
+wire MISO_O_LOOP;
+wire MISO_P_LOOP;
+
+wire MISO_A_SW;
+wire MISO_B_SW;
+wire MISO_C_SW;
+wire MISO_D_SW;
+wire MISO_E_SW;
+wire MISO_F_SW;
+wire MISO_G_SW;
+wire MISO_H_SW;
+wire MISO_I_SW;
+wire MISO_J_SW;
+wire MISO_K_SW;
+wire MISO_L_SW;
+wire MISO_M_SW;
+wire MISO_N_SW;
+wire MISO_O_SW;
+wire MISO_P_SW;
+
+
+rhs_headstage_slave_full RHS_LOOPBACK(
+	.MOSI(MOSI1),
+	.CS(CS_b),
+	.SCLK(SCLK),
+	.clk(S_AXI_ACLK),
+	.MISO_A(MISO_A_LOOP),
+	.MISO_B(MISO_B_LOOP),
+	.MISO_C(MISO_C_LOOP),
+	.MISO_D(MISO_D_LOOP),
+	.MISO_E(MISO_E_LOOP),
+	.MISO_F(MISO_F_LOOP),
+	.MISO_G(MISO_G_LOOP),
+	.MISO_H(MISO_H_LOOP),
+	.MISO_I(MISO_I_LOOP),
+	.MISO_J(MISO_J_LOOP),
+	.MISO_K(MISO_K_LOOP),
+	.MISO_L(MISO_L_LOOP),
+	.MISO_M(MISO_M_LOOP),
+	.MISO_N(MISO_N_LOOP),
+	.MISO_O(MISO_O_LOOP),
+	.MISO_P(MISO_P_LOOP),
+	.channel(channel_out),
+	.state_cable_delay_finder(state_cable_delay_finder_out)
+);
+
+
+
+assign MISO_A_SW = slv_reg0[5] ? MISO_A_LOOP : MISO1; //mux between real and loopback based on register 1's 6th bit, if high this means loopback is enabled
+assign MISO_B_SW = slv_reg0[5] ? MISO_B_LOOP : MISO2;
+assign MISO_C_SW = slv_reg0[5] ? MISO_C_LOOP : MISO3;
+assign MISO_D_SW = slv_reg0[5] ? MISO_D_LOOP : MISO4;
+
+assign MISO_E_SW = slv_reg0[5] ? MISO_E_LOOP : MISO5;
+assign MISO_F_SW = slv_reg0[5] ? MISO_F_LOOP : MISO6;
+assign MISO_G_SW = slv_reg0[5] ? MISO_G_LOOP : MISO7;
+assign MISO_H_SW = slv_reg0[5] ? MISO_H_LOOP : MISO8;
+
+assign MISO_I_SW = slv_reg0[5] ? MISO_I_LOOP : MISO9;
+assign MISO_J_SW = slv_reg0[5] ? MISO_J_LOOP : MISO10;
+assign MISO_K_SW = slv_reg0[5] ? MISO_K_LOOP : MISO11;
+assign MISO_L_SW = slv_reg0[5] ? MISO_L_LOOP : MISO12;
+
+assign MISO_M_SW = slv_reg0[5] ? MISO_M_LOOP : MISO13;
+assign MISO_N_SW = slv_reg0[5] ? MISO_N_LOOP : MISO14;
+assign MISO_O_SW = slv_reg0[5] ? MISO_O_LOOP : MISO15;
+assign MISO_P_SW = slv_reg0[5] ? MISO_P_LOOP : MISO16;
 
 // AXI4LITE signals
 reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
@@ -528,22 +610,22 @@ rhs rhs
 	.MOSI14(MOSI14),
 	.MOSI15(MOSI15),
 	.MOSI16(MOSI16),
-	.MISO1(MISO1),
-	.MISO2(MISO2),
-	.MISO3(MISO3),
-	.MISO4(MISO4),
-	.MISO5(MISO5),
-	.MISO6(MISO6),
-	.MISO7(MISO7),
-	.MISO8(MISO8),
-	.MISO9(MISO9),
-	.MISO10(MISO10),
-	.MISO11(MISO11),
-	.MISO12(MISO12),
-	.MISO13(MISO13),
-	.MISO14(MISO14),
-	.MISO15(MISO15),
-	.MISO16(MISO16),
+	.MISO1(MISO_A_SW),
+	.MISO2(MISO_B_SW),
+	.MISO3(MISO_C_SW),
+	.MISO4(MISO_D_SW),
+	.MISO5(MISO_E_SW),
+	.MISO6(MISO_F_SW),
+	.MISO7(MISO_G_SW),
+	.MISO8(MISO_H_SW),
+	.MISO9(MISO_I_SW),
+	.MISO10(MISO_J_SW),
+	.MISO11(MISO_K_SW),
+	.MISO12(MISO_L_SW),
+	.MISO13(MISO_M_SW),
+	.MISO14(MISO_N_SW),
+	.MISO15(MISO_O_SW),
+	.MISO16(MISO_P_SW),
 	.rhs_status(rhs_status),
 	.FIFO_rstn(FIFO_rstn),
 	.M_AXIS_tdata(M_AXIS_tdata),

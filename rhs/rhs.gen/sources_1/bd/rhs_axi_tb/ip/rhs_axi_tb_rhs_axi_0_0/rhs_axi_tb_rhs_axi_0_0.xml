@@ -608,37 +608,6 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>FIFO_rstn</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
-      <spirit:master/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>FIFO_rstn</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FIFO_RSTN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>INSERT_VIP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.FIFO_RSTN.INSERT_VIP">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
-    <spirit:busInterface>
       <spirit:name>M_AXIS_ARESETN</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
@@ -885,7 +854,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7ae65771</spirit:value>
+            <spirit:value>9:5f8239c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -901,11 +870,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 22 18:13:28 UTC 2024</spirit:value>
+            <spirit:value>Mon Jan 22 22:29:01 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7ae65771</spirit:value>
+            <spirit:value>9:5f8239c7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1233,7 +1202,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI1</spirit:name>
+        <spirit:name>MOSI_A</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1245,7 +1214,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI2</spirit:name>
+        <spirit:name>MOSI_B</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1257,7 +1226,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI3</spirit:name>
+        <spirit:name>MOSI_C</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1269,7 +1238,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI4</spirit:name>
+        <spirit:name>MOSI_D</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1281,7 +1250,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI5</spirit:name>
+        <spirit:name>MOSI_E</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1293,7 +1262,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI6</spirit:name>
+        <spirit:name>MOSI_F</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1305,7 +1274,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI7</spirit:name>
+        <spirit:name>MOSI_G</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1317,7 +1286,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI8</spirit:name>
+        <spirit:name>MOSI_H</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1329,7 +1298,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI9</spirit:name>
+        <spirit:name>MOSI_I</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1341,7 +1310,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI10</spirit:name>
+        <spirit:name>MOSI_J</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1353,7 +1322,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI11</spirit:name>
+        <spirit:name>MOSI_K</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1365,7 +1334,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI12</spirit:name>
+        <spirit:name>MOSI_L</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1377,7 +1346,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI13</spirit:name>
+        <spirit:name>MOSI_M</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1389,7 +1358,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI14</spirit:name>
+        <spirit:name>MOSI_N</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1401,7 +1370,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI15</spirit:name>
+        <spirit:name>MOSI_O</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1413,7 +1382,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MOSI16</spirit:name>
+        <spirit:name>MOSI_P</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1425,7 +1394,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO1</spirit:name>
+        <spirit:name>MISO_A</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1437,7 +1406,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO2</spirit:name>
+        <spirit:name>MISO_B</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1449,7 +1418,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO3</spirit:name>
+        <spirit:name>MISO_C</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1461,7 +1430,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO4</spirit:name>
+        <spirit:name>MISO_D</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1473,7 +1442,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO5</spirit:name>
+        <spirit:name>MISO_E</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1485,7 +1454,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO6</spirit:name>
+        <spirit:name>MISO_F</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1497,7 +1466,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO7</spirit:name>
+        <spirit:name>MISO_G</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1509,7 +1478,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO8</spirit:name>
+        <spirit:name>MISO_H</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1521,7 +1490,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO9</spirit:name>
+        <spirit:name>MISO_I</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1533,7 +1502,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO10</spirit:name>
+        <spirit:name>MISO_J</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1545,7 +1514,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO11</spirit:name>
+        <spirit:name>MISO_K</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1557,7 +1526,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO12</spirit:name>
+        <spirit:name>MISO_L</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1569,7 +1538,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO13</spirit:name>
+        <spirit:name>MISO_M</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1581,7 +1550,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO14</spirit:name>
+        <spirit:name>MISO_N</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1593,7 +1562,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO15</spirit:name>
+        <spirit:name>MISO_O</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1605,53 +1574,9 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>MISO16</spirit:name>
+        <spirit:name>MISO_P</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>channel_out</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">5</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>state_cable_delay_finder_out</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">2</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>FIFO_rstn</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
@@ -1837,7 +1762,6 @@
       <xilinx:definitionSource>module_ref</xilinx:definitionSource>
       <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:configElementInfos>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.FIFO_RSTN.POLARITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>

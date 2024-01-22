@@ -183,35 +183,35 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_zynq_ultra_ps_e_0_0/main_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="main_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_0/main_smartconnect_0_0.xci">
+          <Proxy FileSetName="main_smartconnect_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_clk_wiz_1_0/main_clk_wiz_1_0.xci">
           <Proxy FileSetName="main_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_1/main_proc_sys_reset_0_1.xci">
           <Proxy FileSetName="main_proc_sys_reset_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_0/main_smartconnect_0_0.xci">
-          <Proxy FileSetName="main_smartconnect_0_0"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_2/main_smartconnect_0_2.xci">
+          <Proxy FileSetName="main_smartconnect_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_axi_dma_0_0/main_axi_dma_0_0.xci">
           <Proxy FileSetName="main_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_2/main_smartconnect_0_2.xci">
-          <Proxy FileSetName="main_smartconnect_0_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_3/main_proc_sys_reset_0_3.xci">
           <Proxy FileSetName="main_proc_sys_reset_0_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_zynq_ultra_ps_e_0_0/main_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="main_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_1/main_smartconnect_0_1.xci">
-          <Proxy FileSetName="main_smartconnect_0_1"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_2/main_proc_sys_reset_0_2.xci">
+          <Proxy FileSetName="main_proc_sys_reset_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_0/main_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="main_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_proc_sys_reset_0_2/main_proc_sys_reset_0_2.xci">
-          <Proxy FileSetName="main_proc_sys_reset_0_2"/>
+        <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_smartconnect_0_1/main_smartconnect_0_1.xci">
+          <Proxy FileSetName="main_smartconnect_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="main.bd" FileRelPathName="ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xci">
           <Proxy FileSetName="main_clk_wiz_0_0"/>

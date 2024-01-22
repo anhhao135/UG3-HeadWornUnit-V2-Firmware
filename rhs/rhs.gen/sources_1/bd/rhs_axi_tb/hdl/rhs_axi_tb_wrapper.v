@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Jan 22 10:13:28 2024
+//Date        : Mon Jan 22 14:29:01 2024
 //Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb_wrapper.bd
 //Design      : rhs_axi_tb_wrapper
@@ -12,16 +12,12 @@
 
 module rhs_axi_tb_wrapper
    (CS_b,
-    MOSI1,
-    MOSI2,
     SCLK,
     aclk,
     aclk_out,
     aresetn,
     aresetn_out);
   output CS_b;
-  output MOSI1;
-  output MOSI2;
   output SCLK;
   input aclk;
   input aclk_out;
@@ -29,8 +25,6 @@ module rhs_axi_tb_wrapper
   input aresetn_out;
 
   wire CS_b;
-  wire MOSI1;
-  wire MOSI2;
   wire SCLK;
   wire aclk;
   wire aclk_out;
@@ -39,8 +33,6 @@ module rhs_axi_tb_wrapper
 
   rhs_axi_tb rhs_axi_tb_i
        (.CS_b(CS_b),
-        .MOSI1(MOSI1),
-        .MOSI2(MOSI2),
         .SCLK(SCLK),
         .aclk(aclk),
         .aclk_out(aclk_out),
