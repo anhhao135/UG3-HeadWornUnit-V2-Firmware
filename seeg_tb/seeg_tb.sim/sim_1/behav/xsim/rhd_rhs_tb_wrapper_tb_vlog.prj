@@ -1,0 +1,37 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../seeg_tb.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../seeg_tb.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" \
+"../../../../seeg_tb.ip_user_files/bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v" \
+"../../../../../rhd/src/rhd.v" \
+"../../../../../rhd/src/rhd_S00_AXI.v" \
+"../../../../../rhd/src/rhd_axi.v" \
+"../../../../../rhd/src/rhd_diff_to_single.v" \
+"../../../../../rhd/src/rhd_headstage_slave.v" \
+"../../../../../rhd/src/rhd_headstage_slave_full_16_probes.v" \
+"../../../../../rhs/src/rhs.v" \
+"../../../../../rhs/src/rhs_S00_AXI.v" \
+"../../../../../rhs/src/rhs_axi.v" \
+"../../../../../rhs/src/rhs_headstage_slave.v" \
+"../../../../../rhs/src/rhs_headstage_slave_full.v" \
+"../../../../../seeg/src/seeg.v" \
+
+sv xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_0/sim/rhd_rhs_tb_axi_vip_0_0_pkg.sv" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_0/sim/rhd_rhs_tb_axi_vip_0_0.sv" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1_pkg.sv" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1.sv" \
+
+verilog xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/sim/rhd_rhs_tb.v" \
+"../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/hdl/rhd_rhs_tb_wrapper.v" \
+
+sv xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
+"../../../../src/rhd_rhs_tb_wrapper_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

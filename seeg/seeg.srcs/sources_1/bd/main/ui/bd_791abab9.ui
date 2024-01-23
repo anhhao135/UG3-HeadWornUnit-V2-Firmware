@@ -6,12 +6,12 @@
    "Color Coded_ScaleFactor":"0.215247",
    "Color Coded_TopLeft":"-1264,5",
    "Default View_Layers":"/proc_sys_reset_250M_peripheral_aresetn:true|/zynq_ultra_ps_e_0_pl_clk0:true|/zynq_ultra_ps_e_0_pl_resetn0:true|/proc_sys_reset_100M_peripheral_aresetn:true|/stimulation_0/rhs_axi_0_FIFO_rstn:true|/clk_wiz_0_clk_rhd:true|/Net:true|/proc_sys_reset_rhd_peripheral_aresetn:true|/clk_wiz_0_clk_rhs:true|/proc_sys_reset_rhs_peripheral_aresetn:true|/recording_0/rhd_axi_0_FIFO_rstn:true|",
-   "Default View_ScaleFactor":"0.679375",
-   "Default View_TopLeft":"1743,1125",
+   "Default View_ScaleFactor":"0.222433",
+   "Default View_TopLeft":"1785,-252",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
-   "ExpandedHierarchyInLayout":"",
+   "ExpandedHierarchyInLayout":"/recording_0",
    "Interfaces View_Layers":"/proc_sys_reset_250M_peripheral_aresetn:false|/zynq_ultra_ps_e_0_pl_clk0:false|/zynq_ultra_ps_e_0_pl_resetn0:false|/proc_sys_reset_100M_peripheral_aresetn:false|/stimulation_0/rhs_axi_0_FIFO_rstn:false|/clk_wiz_0_clk_rhd:false|/Net:false|/proc_sys_reset_rhd_peripheral_aresetn:false|/clk_wiz_0_clk_rhs:false|/proc_sys_reset_rhs_peripheral_aresetn:false|/recording_0/rhd_axi_0_FIFO_rstn:false|",
    "Interfaces View_ScaleFactor":"0.37684",
    "Interfaces View_TopLeft":"-640,0",
@@ -23,13 +23,13 @@
    "commentid":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_RHD_CS -pg 1 -lvl 9 -x 3850 -y 560 -defaultsOSRD
-preplace port port-id_RHD_MOSI -pg 1 -lvl 9 -x 3850 -y 580 -defaultsOSRD
-preplace port port-id_RHD_SCLK -pg 1 -lvl 9 -x 3850 -y 600 -defaultsOSRD
-preplace port port-id_RHS_CS -pg 1 -lvl 9 -x 3850 -y 1650 -defaultsOSRD
-preplace port port-id_RHS_SCLK -pg 1 -lvl 9 -x 3850 -y 1670 -defaultsOSRD
-preplace port port-id_RHS_MOSI1 -pg 1 -lvl 9 -x 3850 -y 1690 -defaultsOSRD
-preplace port port-id_RHS_MOSI2 -pg 1 -lvl 9 -x 3850 -y 1710 -defaultsOSRD
+preplace port port-id_RHD_CS -pg 1 -lvl 9 -x 4860 -y 560 -defaultsOSRD
+preplace port port-id_RHD_MOSI -pg 1 -lvl 9 -x 4860 -y 580 -defaultsOSRD
+preplace port port-id_RHD_SCLK -pg 1 -lvl 9 -x 4860 -y 600 -defaultsOSRD
+preplace port port-id_RHS_CS -pg 1 -lvl 9 -x 4860 -y 1650 -defaultsOSRD
+preplace port port-id_RHS_SCLK -pg 1 -lvl 9 -x 4860 -y 1670 -defaultsOSRD
+preplace port port-id_RHS_MOSI1 -pg 1 -lvl 9 -x 4860 -y 1690 -defaultsOSRD
+preplace port port-id_RHS_MOSI2 -pg 1 -lvl 9 -x 4860 -y 1710 -defaultsOSRD
 preplace port port-id_RHS_MISO1 -pg 1 -lvl 0 -x -10 -y 1890 -defaultsOSRD
 preplace port port-id_RHS_MISO2 -pg 1 -lvl 0 -x -10 -y 1910 -defaultsOSRD
 preplace port port-id_RHD_MISO1_A -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
@@ -91,90 +91,178 @@ preplace inst slave_smartconnect_0 -pg 1 -lvl 4 -x 1210 -y 1160 -defaultsOSRD
 preplace inst axi_dma_0 -pg 1 -lvl 3 -x 830 -y 1340 -defaultsOSRD
 preplace inst proc_sys_reset_250M -pg 1 -lvl 2 -x 450 -y 1350 -defaultsOSRD
 preplace inst clk_wiz_dma -pg 1 -lvl 1 -x 130 -y 1400 -defaultsOSRD
-preplace inst recording_0 -pg 1 -lvl 8 -x 3630 -y 580 -defaultsOSRD
-preplace inst stimulation_0 -pg 1 -lvl 8 -x 3630 -y 1710 -defaultsOSRD
-preplace netloc MISO1_1 1 0 8 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 2380J 1900 2900J
-preplace netloc MISO1_A_1 1 0 8 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ
-preplace netloc MISO1_B_1 1 0 8 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
-preplace netloc MISO1_C_1 1 0 8 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ
-preplace netloc MISO1_D_1 1 0 8 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ
-preplace netloc MISO1_E_1 1 0 8 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ
-preplace netloc MISO1_F_1 1 0 8 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ
-preplace netloc MISO1_G_1 1 0 8 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ
-preplace netloc MISO1_H_1 1 0 8 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ
-preplace netloc MISO1_I_N_1 1 0 8 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 NJ
-preplace netloc MISO1_I_P_1 1 0 8 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ
-preplace netloc MISO1_J_N_1 1 0 8 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ
-preplace netloc MISO1_J_P_1 1 0 8 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ
-preplace netloc MISO1_K_N_1 1 0 8 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ
-preplace netloc MISO1_K_P_1 1 0 8 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ
-preplace netloc MISO1_L_N_1 1 0 8 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ
-preplace netloc MISO1_L_P_1 1 0 8 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ
-preplace netloc MISO1_M_N_1 1 0 8 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ
-preplace netloc MISO1_M_P_1 1 0 8 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ
-preplace netloc MISO1_N_N_1 1 0 8 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ
-preplace netloc MISO1_N_P_1 1 0 8 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ
-preplace netloc MISO1_O_N_1 1 0 8 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ
-preplace netloc MISO1_O_P_1 1 0 8 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ
-preplace netloc MISO1_P_N_1 1 0 8 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ
-preplace netloc MISO1_P_P_1 1 0 8 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ
-preplace netloc MISO2_1 1 0 8 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 3460J
-preplace netloc MISO2_A_1 1 0 8 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ
-preplace netloc MISO2_B_1 1 0 8 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ
-preplace netloc MISO2_C_1 1 0 8 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ
-preplace netloc MISO2_D_1 1 0 8 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ
-preplace netloc MISO2_E_1 1 0 8 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ
-preplace netloc MISO2_F_1 1 0 8 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ
-preplace netloc MISO2_G_1 1 0 8 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ
-preplace netloc MISO2_H_1 1 0 8 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ
-preplace netloc MISO2_I_N_1 1 0 8 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ
-preplace netloc MISO2_I_P_1 1 0 8 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ
-preplace netloc MISO2_J_N_1 1 0 8 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ
-preplace netloc MISO2_J_P_1 1 0 8 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 NJ
-preplace netloc MISO2_K_N_1 1 0 8 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ
-preplace netloc MISO2_K_P_1 1 0 8 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ
-preplace netloc MISO2_L_N_1 1 0 8 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ
-preplace netloc MISO2_L_P_1 1 0 8 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ
-preplace netloc MISO2_M_N_1 1 0 8 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ
-preplace netloc MISO2_M_P_1 1 0 8 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ
-preplace netloc MISO2_N_N_1 1 0 8 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ
-preplace netloc MISO2_N_P_1 1 0 8 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ
-preplace netloc MISO2_O_N_1 1 0 8 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ
-preplace netloc MISO2_O_P_1 1 0 8 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ
-preplace netloc MISO2_P_N_1 1 0 8 10J 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2890J
-preplace netloc MISO2_P_P_1 1 0 8 NJ 1080 NJ 1080 NJ 1080 1020J 1280 1350J 1080 NJ 1080 NJ 1080 NJ
-preplace netloc Net 1 1 7 260 1450 670 1450 1060 1370 1370 1460 2040 1470 2430J 1480 3440
+preplace inst recording_0 -pg 1 -lvl 8 -x 3630 -y 582 -defaultsOSRD
+preplace inst stimulation_0 -pg 1 -lvl 8 -x 3630 -y 2014 -defaultsOSRD
+preplace inst recording_0|axis_data_fifo_0 -pg 1 -lvl 3 -x 4520 -y 332 -defaultsOSRD
+preplace inst recording_0|util_vector_logic_0 -pg 1 -lvl 2 -x 4180 -y 112 -defaultsOSRD
+preplace inst recording_0|util_vector_logic_1 -pg 1 -lvl 2 -x 4180 -y 252 -defaultsOSRD
+preplace inst recording_0|RisingEdgeCounter_0 -pg 1 -lvl 3 -x 4520 -y 502 -defaultsOSRD
+preplace inst recording_0|rhd_diff_to_single_0 -pg 1 -lvl 1 -x 3690 -y 1032 -defaultsOSRD
+preplace inst recording_0|rhd_axi_0 -pg 1 -lvl 2 -x 4180 -y 772 -defaultsOSRD
+preplace netloc MISO1_1 1 0 8 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 2380J 1900 2840J
+preplace netloc MISO1_A_1 1 0 8 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 3400J
+preplace netloc MISO1_B_1 1 0 8 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 3390J
+preplace netloc MISO1_C_1 1 0 8 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 3380J
+preplace netloc MISO1_D_1 1 0 8 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 3370J
+preplace netloc MISO1_E_1 1 0 8 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 3360J
+preplace netloc MISO1_F_1 1 0 8 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 3350J
+preplace netloc MISO1_G_1 1 0 8 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 3340J
+preplace netloc MISO1_H_1 1 0 8 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 3330J
+preplace netloc MISO1_I_N_1 1 0 8 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 3240J
+preplace netloc MISO1_I_P_1 1 0 8 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 3250J
+preplace netloc MISO1_J_N_1 1 0 8 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 3210J
+preplace netloc MISO1_J_P_1 1 0 8 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 3220J
+preplace netloc MISO1_K_N_1 1 0 8 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 3110J
+preplace netloc MISO1_K_P_1 1 0 8 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 3100J
+preplace netloc MISO1_L_N_1 1 0 8 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 3080J
+preplace netloc MISO1_L_P_1 1 0 8 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 3120J
+preplace netloc MISO1_M_N_1 1 0 8 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 3030J
+preplace netloc MISO1_M_P_1 1 0 8 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 3040J
+preplace netloc MISO1_N_N_1 1 0 8 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 2990J
+preplace netloc MISO1_N_P_1 1 0 8 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 3000J
+preplace netloc MISO1_O_N_1 1 0 8 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 2960J
+preplace netloc MISO1_O_P_1 1 0 8 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 960 2970J
+preplace netloc MISO1_P_N_1 1 0 8 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 2910J
+preplace netloc MISO1_P_P_1 1 0 8 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 2920J
+preplace netloc MISO2_1 1 0 8 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 2830J
+preplace netloc MISO2_A_1 1 0 8 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 3320J
+preplace netloc MISO2_B_1 1 0 8 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 3310J
+preplace netloc MISO2_C_1 1 0 8 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 3300J
+preplace netloc MISO2_D_1 1 0 8 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 3080J
+preplace netloc MISO2_E_1 1 0 8 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 3290J
+preplace netloc MISO2_F_1 1 0 8 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 3280J
+preplace netloc MISO2_G_1 1 0 8 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 3270J
+preplace netloc MISO2_H_1 1 0 8 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 3260J
+preplace netloc MISO2_I_N_1 1 0 8 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 3070J
+preplace netloc MISO2_I_P_1 1 0 8 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 3230J
+preplace netloc MISO2_J_N_1 1 0 8 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 3190J
+preplace netloc MISO2_J_P_1 1 0 8 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 NJ 600 3200J
+preplace netloc MISO2_K_N_1 1 0 8 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 3140J
+preplace netloc MISO2_K_P_1 1 0 8 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 2930J
+preplace netloc MISO2_L_N_1 1 0 8 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 3050J
+preplace netloc MISO2_L_P_1 1 0 8 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 3060J
+preplace netloc MISO2_M_N_1 1 0 8 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 3010J
+preplace netloc MISO2_M_P_1 1 0 8 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 3020J
+preplace netloc MISO2_N_N_1 1 0 8 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 2980J
+preplace netloc MISO2_N_P_1 1 0 8 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 2880J
+preplace netloc MISO2_O_N_1 1 0 8 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 NJ 1020 2930J
+preplace netloc MISO2_O_P_1 1 0 8 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 2950J
+preplace netloc MISO2_P_N_1 1 0 8 10J 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2900J
+preplace netloc MISO2_P_P_1 1 0 8 NJ 1080 NJ 1080 NJ 1080 1030J 1280 1360J 1080 NJ 1080 NJ 1080 2890J
+preplace netloc Net 1 1 7 260 1450 660 1450 1050 1370 1350 1460 2040 1470 2430J 1480 3180
 preplace netloc Net1 1 6 2 2470 1490 2830
-preplace netloc axi_dma_0_s2mm_introut 1 3 2 990 1390 NJ
-preplace netloc clk_wiz_0_clk_rhd 1 6 2 2490 1500 2850
-preplace netloc clk_wiz_0_clk_rhs 1 6 2 2480 1700 2860
+preplace netloc axi_dma_0_s2mm_introut 1 3 2 1000 1390 NJ
+preplace netloc clk_wiz_0_clk_rhd 1 6 2 2490 1500 3130
+preplace netloc clk_wiz_0_clk_rhs 1 6 2 2480 1700 2850
 preplace netloc clk_wiz_dma_locked 1 1 1 270 1390n
 preplace netloc proc_sys_reset_100M_peripheral_aresetn 1 6 1 2460 1390n
-preplace netloc proc_sys_reset_250M_peripheral_aresetn 1 2 6 650 1210 1080 1270 1370J 1250 NJ 1250 NJ 1250 3450
-preplace netloc proc_sys_reset_rhd_peripheral_aresetn 1 7 1 2880 460n
-preplace netloc proc_sys_reset_rhs_peripheral_aresetn 1 7 1 3470 1750n
-preplace netloc recording_0_CS 1 8 1 NJ 560
-preplace netloc recording_0_MOSI 1 8 1 NJ 580
-preplace netloc recording_0_SCLK 1 8 1 NJ 600
-preplace netloc recording_0_fifo_full_cnt 1 5 4 1990J 1450 2450J 1470 NJ 1470 3790
-preplace netloc stimulation_0_CS 1 8 1 3800J 1650n
-preplace netloc stimulation_0_MOSI1 1 8 1 3820J 1690n
-preplace netloc stimulation_0_MOSI2 1 8 1 3830J 1710n
-preplace netloc stimulation_0_SCLK 1 8 1 3810J 1670n
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 20 1470 NJ 1470 NJ 1470 NJ 1470 1400 1470 2030 1480 2420
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 6 280 1480 NJ 1480 NJ 1480 NJ 1480 1980 1490 2410
-preplace netloc S_AXI_LITE_1 1 7 1 2840 60n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1000 1150n
-preplace netloc axi_dma_0_M_AXI_SG 1 3 1 990 1130n
-preplace netloc master_smartconnect_0_M00_AXI 1 2 5 660 1220 1070J 1250 1340J 1240 NJ 1240 2400
+preplace netloc proc_sys_reset_250M_peripheral_aresetn 1 2 6 640 1210 1070 1270 1380J 1250 NJ 1250 NJ 1250 2940
+preplace netloc proc_sys_reset_rhd_peripheral_aresetn 1 7 1 3150 702n
+preplace netloc proc_sys_reset_rhs_peripheral_aresetn 1 7 1 2830 2050n
+preplace netloc recording_0_CS 1 8 1 4810J 560n
+preplace netloc recording_0_MOSI 1 8 1 4830J 580n
+preplace netloc recording_0_SCLK 1 8 1 4840J 600n
+preplace netloc recording_0_fifo_full_cnt 1 5 4 2010J 1450 2450J 1470 2870J 1774 4790
+preplace netloc stimulation_0_CS 1 8 1 4810J 1650n
+preplace netloc stimulation_0_MOSI1 1 8 1 4830J 1690n
+preplace netloc stimulation_0_MOSI2 1 8 1 4840J 1710n
+preplace netloc stimulation_0_SCLK 1 8 1 4820J 1670n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 20 1470 NJ 1470 NJ 1470 NJ 1470 1380 1470 2030 1480 2420
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 6 280 1480 NJ 1480 NJ 1480 NJ 1480 2000 1490 2410
+preplace netloc S_AXI_LITE_1 1 7 1 3090 302n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1010 1150n
+preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1000 1130n
+preplace netloc master_smartconnect_0_M00_AXI 1 2 5 650 1220 1060J 1250 1350J 1240 NJ 1240 2400
 preplace netloc master_smartconnect_0_M01_AXI 1 6 1 2400 1350n
 preplace netloc master_smartconnect_0_M02_AXI 1 6 1 2440 1380n
-preplace netloc master_smartconnect_1_M01_AXI 1 7 1 2870 1610n
-preplace netloc recording_0_M_AXIS 1 2 7 670 1230 1010J 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 3800
-preplace netloc smartconnect_0_M00_AXI 1 4 1 1360 1160n
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 5 1 2010 1320n
-levelinfo -pg 1 -10 130 450 830 1210 1690 2210 2660 3630 3850
-pagesize -pg 1 -db -bbox -sgen -190 0 5050 2110
+preplace netloc master_smartconnect_1_M01_AXI 1 7 1 2860 1610n
+preplace netloc recording_0_M_AXIS 1 2 7 660 1230 1020J 1260 NJ 1260 NJ 1260 NJ 1260 2880J 1564 4800
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1370 1160n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 5 1 2030 1320n
+preplace netloc recording_0|MISO1_A_1 1 0 2 NJ 322 4000
+preplace netloc recording_0|MISO1_B_1 1 0 2 NJ 342 3930
+preplace netloc recording_0|MISO1_C_1 1 0 2 NJ 362 3990
+preplace netloc recording_0|MISO1_D_1 1 0 2 NJ 382 3980
+preplace netloc recording_0|MISO1_E_1 1 0 2 NJ 402 3970
+preplace netloc recording_0|MISO1_F_1 1 0 2 NJ 422 3960
+preplace netloc recording_0|MISO1_G_1 1 0 2 NJ 442 3820
+preplace netloc recording_0|MISO1_H_1 1 0 2 NJ 462 3920
+preplace netloc recording_0|MISO1_I_N_1 1 0 1 N 742
+preplace netloc recording_0|MISO1_I_P_1 1 0 1 N 722
+preplace netloc recording_0|MISO1_J_N_1 1 0 1 N 822
+preplace netloc recording_0|MISO1_J_P_1 1 0 1 N 802
+preplace netloc recording_0|MISO1_K_N_1 1 0 1 N 902
+preplace netloc recording_0|MISO1_K_P_1 1 0 1 N 882
+preplace netloc recording_0|MISO1_L_N_1 1 0 1 N 982
+preplace netloc recording_0|MISO1_L_P_1 1 0 1 N 962
+preplace netloc recording_0|MISO1_M_N_1 1 0 1 N 1062
+preplace netloc recording_0|MISO1_M_P_1 1 0 1 N 1042
+preplace netloc recording_0|MISO1_N_N_1 1 0 1 N 1142
+preplace netloc recording_0|MISO1_N_P_1 1 0 1 N 1122
+preplace netloc recording_0|MISO1_O_N_1 1 0 1 N 1222
+preplace netloc recording_0|MISO1_O_P_1 1 0 1 N 1202
+preplace netloc recording_0|MISO1_P_N_1 1 0 1 N 1302
+preplace netloc recording_0|MISO1_P_P_1 1 0 1 N 1282
+preplace netloc recording_0|MISO2_A_1 1 0 2 NJ 482 3840
+preplace netloc recording_0|MISO2_B_1 1 0 2 NJ 502 3910
+preplace netloc recording_0|MISO2_C_1 1 0 2 NJ 522 N
+preplace netloc recording_0|MISO2_D_1 1 0 2 NJ 542 3950
+preplace netloc recording_0|MISO2_E_1 1 0 2 NJ 562 3930
+preplace netloc recording_0|MISO2_F_1 1 0 2 NJ 582 3910
+preplace netloc recording_0|MISO2_G_1 1 0 2 NJ 602 3840
+preplace netloc recording_0|MISO2_H_1 1 0 2 NJ 622 3830
+preplace netloc recording_0|MISO2_I_N_1 1 0 1 N 782
+preplace netloc recording_0|MISO2_I_P_1 1 0 1 N 762
+preplace netloc recording_0|MISO2_J_N_1 1 0 1 N 862
+preplace netloc recording_0|MISO2_J_P_1 1 0 1 N 842
+preplace netloc recording_0|MISO2_K_N_1 1 0 1 N 942
+preplace netloc recording_0|MISO2_K_P_1 1 0 1 N 922
+preplace netloc recording_0|MISO2_L_N_1 1 0 1 N 1022
+preplace netloc recording_0|MISO2_L_P_1 1 0 1 N 1002
+preplace netloc recording_0|MISO2_M_N_1 1 0 1 N 1102
+preplace netloc recording_0|MISO2_M_P_1 1 0 1 N 1082
+preplace netloc recording_0|MISO2_N_N_1 1 0 1 N 1182
+preplace netloc recording_0|MISO2_N_P_1 1 0 1 N 1162
+preplace netloc recording_0|MISO2_O_N_1 1 0 1 N 1262
+preplace netloc recording_0|MISO2_O_P_1 1 0 1 N 1242
+preplace netloc recording_0|MISO2_P_N_1 1 0 1 N 1342
+preplace netloc recording_0|MISO2_P_P_1 1 0 1 N 1322
+preplace netloc recording_0|RisingEdgeCounter_0_count 1 3 1 4650 502n
+preplace netloc recording_0|axis_data_fifo_0_prog_full 1 1 3 4030 182 4380J 422 4650
+preplace netloc recording_0|axis_data_fifo_0_s_axis_tready 1 1 2 4030 322 N
+preplace netloc recording_0|clk_dma_1 1 0 3 NJ 642 3900 332 4370
+preplace netloc recording_0|clk_rhd_1 1 0 2 3560J 1412 4020
+preplace netloc recording_0|rhd_axi_0_CS_b 1 2 2 4380 722 NJ
+preplace netloc recording_0|rhd_axi_0_FIFO_rstn 1 1 2 4030 42 4330
+preplace netloc recording_0|rhd_axi_0_MOSI1 1 2 2 4390 742 NJ
+preplace netloc recording_0|rhd_axi_0_SCLK 1 2 2 N 762 NJ
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_I 1 1 1 3820 742n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_J 1 1 1 3850 782n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_K 1 1 1 3870 822n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_L 1 1 1 3830 862n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_M 1 1 1 3960 902n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_N 1 1 1 3980 942n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_O 1 1 1 3890 982n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO1_P 1 1 1 4000 1022n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_I 1 1 1 3840 762n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_J 1 1 1 3860 802n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_K 1 1 1 3880 842n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_L 1 1 1 3950 882n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_M 1 1 1 3970 922n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_N 1 1 1 3990 962n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_O 1 1 1 3920 1002n
+preplace netloc recording_0|rhd_diff_to_single_0_MISO2_P 1 1 1 4010 1042n
+preplace netloc recording_0|rstn_dma_1 1 0 3 3550J 1402 3940 342 4340J
+preplace netloc recording_0|rstn_rhd_1 1 0 2 3540J 1422 4030
+preplace netloc recording_0|util_vector_logic_0_Res 1 2 1 4390 112n
+preplace netloc recording_0|util_vector_logic_1_Res 1 2 1 4350 252n
+preplace netloc recording_0|S_AXI_LITE_1 1 0 2 NJ 302 4010
+preplace netloc recording_0|axis_data_fifo_0_M_AXIS 1 3 1 N 322
+preplace netloc recording_0|rhd_axi_0_M_AXIS 1 2 1 4360 302n
+levelinfo -pg 1 -10 130 450 830 1210 1690 2210 2660 3630 4860
+levelinfo -hier recording_0 * 3690 4180 4520 *
+pagesize -pg 1 -db -bbox -sgen -190 0 5050 2140
+pagesize -hier recording_0 -db -bbox -sgen 3510 32 4680 1432
 "
 }
 0
