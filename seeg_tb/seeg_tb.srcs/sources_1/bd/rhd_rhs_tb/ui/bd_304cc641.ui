@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.16629",
-   "Default View_TopLeft":"-138,-20",
+   "Default View_TopLeft":"-139,-20",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -14,10 +14,10 @@ preplace port port-id_rstn_dma -pg 1 -lvl 0 -x -40 -y 270 -defaultsOSRD
 preplace inst axi_vip_0 -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
 preplace inst axi_vip_1 -pg 1 -lvl 1 -x 130 -y 190 -defaultsOSRD
 preplace inst seeg_0 -pg 1 -lvl 2 -x 450 -y 1000 -defaultsOSRD
-preplace netloc rhd_aclk_1 1 0 2 20 -10 260
-preplace netloc rhs_aclk_2 1 0 2 30 270 250
 preplace netloc clk_dma_1 1 0 2 20J 260 260
+preplace netloc rhd_aclk_1 1 0 2 20 -10 260
 preplace netloc rhd_aresetn_1 1 0 2 30 0 240
+preplace netloc rhs_aclk_2 1 0 2 30 270 250
 preplace netloc rhs_aresetn_1 1 0 2 10 280 270
 preplace netloc rstn_dma_1 1 0 2 -20J 290 280
 preplace netloc axi_vip_0_M_AXI 1 1 1 250J 70n
