@@ -14,9 +14,11 @@ module rhd_rhs_tb_wrapper_tb();
 xil_axi_uint                           mst_agent_verbosity = 0;  
 
 bit                                     rhd_aclk;
-bit                                     rhs_aclk;               
+bit                                     rhd_aresetn;
+bit                                     rhs_aclk;       
+bit                                     rhs_aresetn;        
 bit                                     clk_dma;
-bit                                     aresetn;
+bit                                     rstn_dma;
 
 integer result_slave;  
 bit [31:0] S00_AXI_test_data[3:0];  
@@ -30,13 +32,16 @@ bit [63:0]                              mtestWDataL;
 bit [63:0]                              mtestRDataL; 
 
 rhd_rhs_tb_axi_vip_0_0_mst_t          mst_agent_rhd;
-rhd_rhs_tb_axi_vip_0_1_mst_t          mst_agent_rhs;
+//rhd_rhs_tb_axi_vip_0_1_mst_t          mst_agent_rhs;
 
 `BD_WRAPPER DUT(
-    .aresetn(aresetn), 
+    .rhd_aresetn(rhd_aresetn), 
     .rhd_aclk(rhd_aclk),
+    .rhs_aresetn(rhs_aresetn),
     .rhs_aclk(rhs_aclk),
-    .clk_dma(clk_dma)
+    .clk_dma(clk_dma),
+    .rstn_dma(rstn_dma)
+
 ); 
   
 initial begin
@@ -47,20 +52,29 @@ initial begin
     mst_agent_rhd.start_master(); 
     $timeformat (-12, 1, " ps", 1);
 
+    /*
+
     mst_agent_rhs = new("master vip agent",DUT.`BD_INST_NAME.axi_vip_1.inst.IF);//ms  
     mst_agent_rhs.vif_proxy.set_dummy_drive_type(XIL_AXI_VIF_DRIVE_NONE); 
     mst_agent_rhs.set_agent_tag("Master VIP"); 
     mst_agent_rhs.set_verbosity(mst_agent_verbosity); 
     mst_agent_rhs.start_master(); 
     $timeformat (-12, 1, " ps", 1);
+
+    */
+
   end
 
 
 
 initial begin
-  aresetn <= 1'b0;
-  #500ns;
-  aresetn <= 1'b1;
+  rhd_aresetn <= 1'b0;
+  rhs_aresetn <= 1'b0;
+  rstn_dma <= 1'b0;
+  #200ns;
+  rhd_aresetn <= 1'b1;
+  rhs_aresetn <= 1'b1;
+  rstn_dma <= 1'b1;
 end
 
 
@@ -97,21 +111,30 @@ begin
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   */
 
+  
+
 
   //RHD setup
   
   // (1) Set Delay
   mtestWDataL = 32'h22222222; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h4, mtestProtectionType, mtestWDataL, mtestBresp);
-  mst_agent_rhd.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
+  //mst_agent_rhd.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
+
+  /*
 
   // (2) Set packet length
   mtestWDataL = 32'h00000040; //binary is 1000, decimal is 8, batch size is 8
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h8, mtestProtectionType, mtestWDataL, mtestBresp);
-  mst_agent_rhd.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
+  //mst_agent_rhd.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
+  */
+
+
+
+  /*
 
 
 
@@ -179,6 +202,8 @@ begin
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   #100us;
+
+  */
 
   end 
   

@@ -58,7 +58,9 @@
 				"/seeg_0/s00_axi_rhd": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
+						"ACLK": { "actual": "s00_axi_rhd_aclk"},
 						"ARADDR": { "actual": "s00_axi_rhd_araddr"},
+						"ARESETN": { "actual": "s00_axi_rhd_aresetn"},
 						"ARPROT": { "actual": "s00_axi_rhd_arprot"},
 						"ARREADY": { "actual": "s00_axi_rhd_arready"},
 						"ARVALID": { "actual": "s00_axi_rhd_arvalid"},
@@ -82,7 +84,9 @@
 				"/seeg_0/s00_axi_rhs": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
+						"ACLK": { "actual": "s00_axi_rhs_aclk"},
 						"ARADDR": { "actual": "s00_axi_rhs_araddr"},
+						"ARESETN": { "actual": "s00_axi_rhs_aresetn"},
 						"ARPROT": { "actual": "s00_axi_rhs_arprot"},
 						"ARREADY": { "actual": "s00_axi_rhs_arready"},
 						"ARVALID": { "actual": "s00_axi_rhs_arvalid"},

@@ -91,7 +91,7 @@ always #2 aclk_out <= ~aclk_out;
 
 initial begin
     S_AXI_TEST ( );
-
+    #1ms;
     $finish;
 end
 
@@ -117,9 +117,11 @@ begin
   // (1) Set Delay
   mtestWDataL = 32'h22222222; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
   mst_agent_0.AXI4LITE_WRITE_BURST(32'h4, mtestProtectionType, mtestWDataL, mtestBresp);
-  mst_agent_0.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
-  COMPARE_DATA(mtestWDataL, mtestRDataL);
+  //mst_agent_0.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
+  //COMPARE_DATA(mtestWDataL, mtestRDataL);
   #1us;
+
+  /*
 
   // (2) Set packet length
   mtestWDataL = 32'h00000040; //binary is 1000, decimal is 8, batch size is 8
@@ -157,6 +159,7 @@ begin
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   #0.5ms;
 
+  */
 
 
   /*

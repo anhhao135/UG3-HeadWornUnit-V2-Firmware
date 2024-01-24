@@ -1,25 +1,29 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.16629",
-   "Default View_TopLeft":"-388,-20",
+   "Default View_TopLeft":"-138,-20",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port port-id_rhd_aclk -pg 1 -lvl 0 -x -40 -y 60 -defaultsOSRD
 preplace port port-id_rhs_aclk -pg 1 -lvl 0 -x -40 -y 230 -defaultsOSRD
-preplace port port-id_aresetn -pg 1 -lvl 0 -x -40 -y 80 -defaultsOSRD
-preplace port port-id_clk_dma -pg 1 -lvl 0 -x -40 -y 210 -defaultsOSRD
-preplace inst axi_vip_0 -pg 1 -lvl 1 -x 120 -y 70 -defaultsOSRD
-preplace inst axi_vip_1 -pg 1 -lvl 1 -x 120 -y 190 -defaultsOSRD
-preplace inst seeg_0 -pg 1 -lvl 2 -x 430 -y 1000 -defaultsOSRD
-preplace netloc Net 1 0 2 10 -10 260
-preplace netloc rhd_aclk_1 1 0 2 0 0 230
-preplace netloc rhs_aclk_2 1 0 2 20 270 230
-preplace netloc clk_dma_1 1 0 2 -20J 260 270
-preplace netloc axi_vip_0_M_AXI 1 1 1 220J 70n
-preplace netloc axi_vip_1_M_AXI 1 1 1 220J 150n
-levelinfo -pg 1 -40 120 430 590
-pagesize -pg 1 -db -bbox -sgen -220 -20 630 2310
+preplace port port-id_clk_dma -pg 1 -lvl 0 -x -40 -y 250 -defaultsOSRD
+preplace port port-id_rhd_aresetn -pg 1 -lvl 0 -x -40 -y 80 -defaultsOSRD
+preplace port port-id_rhs_aresetn -pg 1 -lvl 0 -x -40 -y 200 -defaultsOSRD
+preplace port port-id_rstn_dma -pg 1 -lvl 0 -x -40 -y 270 -defaultsOSRD
+preplace inst axi_vip_0 -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
+preplace inst axi_vip_1 -pg 1 -lvl 1 -x 130 -y 190 -defaultsOSRD
+preplace inst seeg_0 -pg 1 -lvl 2 -x 450 -y 1000 -defaultsOSRD
+preplace netloc rhd_aclk_1 1 0 2 20 -10 260
+preplace netloc rhs_aclk_2 1 0 2 30 270 250
+preplace netloc clk_dma_1 1 0 2 20J 260 260
+preplace netloc rhd_aresetn_1 1 0 2 30 0 240
+preplace netloc rhs_aresetn_1 1 0 2 10 280 270
+preplace netloc rstn_dma_1 1 0 2 -20J 290 280
+preplace netloc axi_vip_0_M_AXI 1 1 1 250J 70n
+preplace netloc axi_vip_1_M_AXI 1 1 1 230J 150n
+levelinfo -pg 1 -40 130 450 610
+pagesize -pg 1 -db -bbox -sgen -220 -20 730 2310
 "
 }
 0

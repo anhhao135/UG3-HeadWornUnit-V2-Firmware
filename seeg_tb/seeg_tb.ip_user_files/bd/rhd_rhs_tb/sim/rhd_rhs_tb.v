@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Tue Jan 23 11:37:04 2024
+//Date        : Tue Jan 23 14:38:58 2024
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhd_rhs_tb.bd
 //Design      : rhd_rhs_tb
@@ -12,16 +12,19 @@
 
 (* CORE_GENERATION_INFO = "rhd_rhs_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhd_rhs_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhd_rhs_tb.hwdef" *) 
 module rhd_rhs_tb
-   (aresetn,
-    clk_dma,
+   (clk_dma,
     rhd_aclk,
-    rhs_aclk);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
+    rhd_aresetn,
+    rhs_aclk,
+    rhs_aresetn,
+    rstn_dma);
   input clk_dma;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RHD_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RHD_ACLK, ASSOCIATED_RESET aresetn, CLK_DOMAIN rhd_rhs_tb_rhd_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input rhd_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RHS_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RHS_ACLK, ASSOCIATED_RESET aresetn, CLK_DOMAIN rhd_rhs_tb_rhs_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input rhs_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RHD_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RHD_ACLK, ASSOCIATED_RESET aresetn:rhd_aresetn, CLK_DOMAIN rhd_rhs_tb_rhd_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input rhd_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RHD_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RHD_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rhd_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RHS_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RHS_ACLK, ASSOCIATED_RESET aresetn:rhs_aresetn, CLK_DOMAIN rhd_rhs_tb_rhs_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input rhs_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RHS_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RHS_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rhs_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RSTN_DMA RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RSTN_DMA, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rstn_dma;
 
-  wire Net;
   wire [31:0]axi_vip_0_M_AXI_ARADDR;
   wire [2:0]axi_vip_0_M_AXI_ARPROT;
   wire axi_vip_0_M_AXI_ARREADY;
@@ -62,15 +65,20 @@ module rhd_rhs_tb
   wire axi_vip_1_M_AXI_WVALID;
   wire clk_dma_1;
   wire rhd_aclk_1;
+  wire rhd_aresetn_1;
   wire rhs_aclk_2;
+  wire rhs_aresetn_1;
+  wire rstn_dma_1;
 
-  assign Net = aresetn;
   assign clk_dma_1 = clk_dma;
   assign rhd_aclk_1 = rhd_aclk;
+  assign rhd_aresetn_1 = rhd_aresetn;
   assign rhs_aclk_2 = rhs_aclk;
+  assign rhs_aresetn_1 = rhs_aresetn;
+  assign rstn_dma_1 = rstn_dma;
   rhd_rhs_tb_axi_vip_0_0 axi_vip_0
        (.aclk(rhd_aclk_1),
-        .aresetn(Net),
+        .aresetn(rhd_aresetn_1),
         .m_axi_araddr(axi_vip_0_M_AXI_ARADDR),
         .m_axi_arprot(axi_vip_0_M_AXI_ARPROT),
         .m_axi_arready(axi_vip_0_M_AXI_ARREADY),
@@ -92,7 +100,7 @@ module rhd_rhs_tb
         .m_axi_wvalid(axi_vip_0_M_AXI_WVALID));
   rhd_rhs_tb_axi_vip_0_1 axi_vip_1
        (.aclk(rhs_aclk_2),
-        .aresetn(Net),
+        .aresetn(rhs_aresetn_1),
         .m_axi_araddr(axi_vip_1_M_AXI_ARADDR),
         .m_axi_arprot(axi_vip_1_M_AXI_ARPROT),
         .m_axi_arready(axi_vip_1_M_AXI_ARREADY),
@@ -113,7 +121,9 @@ module rhd_rhs_tb
         .m_axi_wstrb(axi_vip_1_M_AXI_WSTRB),
         .m_axi_wvalid(axi_vip_1_M_AXI_WVALID));
   rhd_rhs_tb_seeg_0_0 seeg_0
-       (.M_AXIS_tready(1'b1),
+       (.M_AXIS_ACLK(clk_dma_1),
+        .M_AXIS_ARESETN(rstn_dma_1),
+        .M_AXIS_tready(1'b1),
         .RHD_MISO1_A(1'b0),
         .RHD_MISO1_B(1'b0),
         .RHD_MISO1_C(1'b0),
@@ -194,13 +204,9 @@ module rhd_rhs_tb
         .RHS_MISO_N(1'b0),
         .RHS_MISO_O(1'b0),
         .RHS_MISO_P(1'b0),
-        .clk_dma(clk_dma_1),
-        .clk_rhd(rhd_aclk_1),
-        .clk_rhs(rhs_aclk_2),
-        .rstn_dma(Net),
-        .rstn_rhd(Net),
-        .rstn_rhs(Net),
+        .s00_axi_rhd_aclk(rhd_aclk_1),
         .s00_axi_rhd_araddr(axi_vip_0_M_AXI_ARADDR[4:0]),
+        .s00_axi_rhd_aresetn(rhd_aresetn_1),
         .s00_axi_rhd_arprot(axi_vip_0_M_AXI_ARPROT),
         .s00_axi_rhd_arready(axi_vip_0_M_AXI_ARREADY),
         .s00_axi_rhd_arvalid(axi_vip_0_M_AXI_ARVALID),
@@ -219,7 +225,9 @@ module rhd_rhs_tb
         .s00_axi_rhd_wready(axi_vip_0_M_AXI_WREADY),
         .s00_axi_rhd_wstrb(axi_vip_0_M_AXI_WSTRB),
         .s00_axi_rhd_wvalid(axi_vip_0_M_AXI_WVALID),
+        .s00_axi_rhs_aclk(rhs_aclk_2),
         .s00_axi_rhs_araddr(axi_vip_1_M_AXI_ARADDR[4:0]),
+        .s00_axi_rhs_aresetn(rhs_aresetn_1),
         .s00_axi_rhs_arprot(axi_vip_1_M_AXI_ARPROT),
         .s00_axi_rhs_arready(axi_vip_1_M_AXI_ARREADY),
         .s00_axi_rhs_arvalid(axi_vip_1_M_AXI_ARVALID),

@@ -1,0 +1,21 @@
+Time resolution is 1 ps
+XilinxAXIVIP: Found at Path: rhd_rhs_tb_wrapper_tb.DUT.rhd_rhs_tb_i.axi_vip_0.inst
+XilinxAXIVIP: Found at Path: rhd_rhs_tb_wrapper_tb.DUT.rhd_rhs_tb_i.axi_vip_1.inst
+Note: Actual FIFO Depth = 4097
+Time: 0 ps  Iteration: 0
+Note: Actual FIFO Depth = 4097
+Time: 0 ps  Iteration: 0
+Note:  DEPTH = 4096 WIDTH = 9 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1152 DEEP = 1 WIDE = 2
+Time: 0 ps  Iteration: 0
+Note: Actual FIFO Depth = 4097
+Time: 0 ps  Iteration: 0
+Note: Actual FIFO Depth = 4097
+Time: 0 ps  Iteration: 0
+Note:  DEPTH = 4096 WIDTH = 9 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1152 DEEP = 1 WIDE = 2
+Time: 0 ps  Iteration: 0
+ERROR: 205367.0 ps rhd_rhs_tb_wrapper_tb.DUT.rhd_rhs_tb_i.axi_vip_1.inst.IF  : XILINX_RESET_PULSE_WIDTH: Holding AXI ARESETN asserted for 16 cycles of the slowest AXI clock is generally a sufficient reset pulse width for Xilinx IP. --UG1037. To downgrade, use <hierarchy_path to VIP>.IF.set_xilinx_reset_check_to_warn(), or filter using clr_xilinx_reset_check().
+Fatal: AXI4_ERRS_BRESP_AW: A slave must not give a write response before the write address. Spec: section A3.3.1 and figure A3-7.
+Time: 1785625 ps  Iteration: 2  Process: /rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0/inst/IF/PC/Always3445_127  Scope: rhd_rhs_tb_wrapper_tb.DUT.rhd_rhs_tb_i.axi_vip_0.inst.IF.PC.arm_amba4_pc_msg_err  File: C:/Xilinx/Vivado/2023.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv Line: 727
+$finish called at time : 1785625 ps
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks

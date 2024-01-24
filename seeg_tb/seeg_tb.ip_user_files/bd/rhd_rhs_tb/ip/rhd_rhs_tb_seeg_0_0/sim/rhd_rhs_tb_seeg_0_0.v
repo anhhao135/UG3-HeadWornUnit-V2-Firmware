@@ -97,12 +97,12 @@ module rhd_rhs_tb_seeg_0_0 (
   M_AXIS_tvalid,
   M_AXIS_tready,
   M_AXIS_tlast,
-  clk_rhd,
-  clk_rhs,
-  clk_dma,
-  rstn_rhd,
-  rstn_rhs,
-  rstn_dma,
+  s00_axi_rhd_aclk,
+  s00_axi_rhs_aclk,
+  M_AXIS_ACLK,
+  s00_axi_rhd_aresetn,
+  s00_axi_rhs_aresetn,
+  M_AXIS_ARESETN,
   RHD_CS,
   RHD_MOSI,
   RHD_SCLK,
@@ -242,8 +242,8 @@ output wire [31 : 0] s00_axi_rhd_rdata;
 output wire [1 : 0] s00_axi_rhd_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhd RVALID" *)
 output wire s00_axi_rhd_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhd, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WU\
-SER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhd, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN rhd_rhs_tb_rhd_aclk, NUM_READ_THREADS 1, NUM_WRITE_THRE\
+ADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhd RREADY" *)
 input wire s00_axi_rhd_rready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhs AWADDR" *)
@@ -282,8 +282,8 @@ output wire [31 : 0] s00_axi_rhs_rdata;
 output wire [1 : 0] s00_axi_rhs_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhs RVALID" *)
 output wire s00_axi_rhs_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhs, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WU\
-SER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhs, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN rhd_rhs_tb_rhs_aclk, NUM_READ_THREADS 1, NUM_WRITE_THRE\
+ADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhs RREADY" *)
 input wire s00_axi_rhs_rready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
@@ -295,12 +295,24 @@ input wire M_AXIS_tready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire M_AXIS_tlast;
-input wire clk_rhd;
-input wire clk_rhs;
-input wire clk_dma;
-input wire rstn_rhd;
-input wire rstn_rhs;
-input wire rstn_dma;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhd_aclk, ASSOCIATED_BUSIF s00_axi_rhd, ASSOCIATED_RESET s00_axi_rhd_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN rhd_rhs_tb_rhd_aclk, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s00_axi_rhd_aclk CLK" *)
+input wire s00_axi_rhd_aclk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhs_aclk, ASSOCIATED_BUSIF s00_axi_rhs, ASSOCIATED_RESET s00_axi_rhs_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN rhd_rhs_tb_rhs_aclk, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s00_axi_rhs_aclk CLK" *)
+input wire s00_axi_rhs_aclk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_ACLK, ASSOCIATED_BUSIF M_AXIS, ASSOCIATED_RESET M_AXIS_ARESETN, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_AXIS_ACLK CLK" *)
+input wire M_AXIS_ACLK;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhd_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s00_axi_rhd_aresetn RST" *)
+input wire s00_axi_rhd_aresetn;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhs_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s00_axi_rhs_aresetn RST" *)
+input wire s00_axi_rhs_aresetn;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M_AXIS_ARESETN RST" *)
+input wire M_AXIS_ARESETN;
 output wire RHD_CS;
 output wire RHD_MOSI;
 output wire RHD_SCLK;
@@ -453,12 +465,12 @@ input wire RHS_MISO_P;
     .M_AXIS_tvalid(M_AXIS_tvalid),
     .M_AXIS_tready(M_AXIS_tready),
     .M_AXIS_tlast(M_AXIS_tlast),
-    .clk_rhd(clk_rhd),
-    .clk_rhs(clk_rhs),
-    .clk_dma(clk_dma),
-    .rstn_rhd(rstn_rhd),
-    .rstn_rhs(rstn_rhs),
-    .rstn_dma(rstn_dma),
+    .s00_axi_rhd_aclk(s00_axi_rhd_aclk),
+    .s00_axi_rhs_aclk(s00_axi_rhs_aclk),
+    .M_AXIS_ACLK(M_AXIS_ACLK),
+    .s00_axi_rhd_aresetn(s00_axi_rhd_aresetn),
+    .s00_axi_rhs_aresetn(s00_axi_rhs_aresetn),
+    .M_AXIS_ARESETN(M_AXIS_ARESETN),
     .RHD_CS(RHD_CS),
     .RHD_MOSI(RHD_MOSI),
     .RHD_SCLK(RHD_SCLK),

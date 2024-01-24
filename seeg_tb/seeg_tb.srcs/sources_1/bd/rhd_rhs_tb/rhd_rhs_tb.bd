@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCDF5119E1BBFE7F2",
+      "boundary_crc": "0x6A082E94C84FB95F",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb",
       "name": "rhd_rhs_tb",
@@ -21,7 +21,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "aresetn",
+            "value": "aresetn:rhd_aresetn",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
@@ -50,7 +50,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "aresetn",
+            "value": "aresetn:rhs_aresetn",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
@@ -74,7 +74,10 @@
           }
         }
       },
-      "aresetn": {
+      "clk_dma": {
+        "direction": "I"
+      },
+      "rhd_aresetn": {
         "type": "rst",
         "direction": "I",
         "parameters": {
@@ -88,8 +91,33 @@
           }
         }
       },
-      "clk_dma": {
-        "direction": "I"
+      "rhs_aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "rstn_dma": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -286,6 +314,10 @@
                 "value": "AXI4LITE",
                 "value_src": "constant"
               },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
               "ID_WIDTH": {
                 "value": "0",
                 "value_src": "constant"
@@ -369,6 +401,10 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhd_rhs_tb_rhd_aclk",
+                "value_src": "default_prop"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0",
@@ -490,6 +526,10 @@
                 "value": "AXI4LITE",
                 "value_src": "constant"
               },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
               "ID_WIDTH": {
                 "value": "0",
                 "value_src": "constant"
@@ -573,6 +613,10 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "rhd_rhs_tb_rhs_aclk",
+                "value_src": "default_prop"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0",
@@ -683,16 +727,21 @@
           }
         },
         "ports": {
-          "clk_rhd": {
+          "s00_axi_rhd_aclk": {
+            "type": "clk",
             "direction": "I",
             "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "s00_axi_rhd",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "s00_axi_rhd_aresetn",
+                "value_src": "constant"
+              },
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
               },
               "CLK_DOMAIN": {
                 "value": "rhd_rhs_tb_rhd_aclk",
@@ -700,16 +749,21 @@
               }
             }
           },
-          "clk_rhs": {
+          "s00_axi_rhs_aclk": {
+            "type": "clk",
             "direction": "I",
             "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "s00_axi_rhs",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "s00_axi_rhs_aresetn",
+                "value_src": "constant"
+              },
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
               },
               "CLK_DOMAIN": {
                 "value": "rhd_rhs_tb_rhs_aclk",
@@ -717,33 +771,47 @@
               }
             }
           },
-          "clk_dma": {
-            "direction": "I"
-          },
-          "rstn_rhd": {
+          "M_AXIS_ACLK": {
+            "type": "clk",
             "direction": "I",
             "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "default_prop"
+              "ASSOCIATED_BUSIF": {
+                "value": "M_AXIS",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "M_AXIS_ARESETN",
+                "value_src": "constant"
               }
             }
           },
-          "rstn_rhs": {
+          "s00_axi_rhd_aresetn": {
+            "type": "rst",
             "direction": "I",
             "parameters": {
               "POLARITY": {
                 "value": "ACTIVE_LOW",
-                "value_src": "default_prop"
+                "value_src": "constant"
               }
             }
           },
-          "rstn_dma": {
+          "s00_axi_rhs_aresetn": {
+            "type": "rst",
             "direction": "I",
             "parameters": {
               "POLARITY": {
                 "value": "ACTIVE_LOW",
-                "value_src": "default_prop"
+                "value_src": "constant"
+              }
+            }
+          },
+          "M_AXIS_ARESETN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
               }
             }
           },
@@ -1068,34 +1136,44 @@
       }
     },
     "nets": {
-      "Net": {
-        "ports": [
-          "aresetn",
-          "axi_vip_0/aresetn",
-          "axi_vip_1/aresetn",
-          "seeg_0/rstn_rhd",
-          "seeg_0/rstn_rhs",
-          "seeg_0/rstn_dma"
-        ]
-      },
       "clk_dma_1": {
         "ports": [
           "clk_dma",
-          "seeg_0/clk_dma"
+          "seeg_0/M_AXIS_ACLK"
         ]
       },
       "rhd_aclk_1": {
         "ports": [
           "rhd_aclk",
           "axi_vip_0/aclk",
-          "seeg_0/clk_rhd"
+          "seeg_0/s00_axi_rhd_aclk"
+        ]
+      },
+      "rhd_aresetn_1": {
+        "ports": [
+          "rhd_aresetn",
+          "axi_vip_0/aresetn",
+          "seeg_0/s00_axi_rhd_aresetn"
         ]
       },
       "rhs_aclk_2": {
         "ports": [
           "rhs_aclk",
           "axi_vip_1/aclk",
-          "seeg_0/clk_rhs"
+          "seeg_0/s00_axi_rhs_aclk"
+        ]
+      },
+      "rhs_aresetn_1": {
+        "ports": [
+          "rhs_aresetn",
+          "axi_vip_1/aresetn",
+          "seeg_0/s00_axi_rhs_aresetn"
+        ]
+      },
+      "rstn_dma_1": {
+        "ports": [
+          "rstn_dma",
+          "seeg_0/M_AXIS_ARESETN"
         ]
       }
     }

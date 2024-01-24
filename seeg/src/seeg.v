@@ -80,15 +80,15 @@ module seeg #
 
     //clocks
 
-    input wire clk_rhd,
-    input wire clk_rhs,
-    input wire clk_dma,
+    input wire s00_axi_rhd_aclk,
+    input wire s00_axi_rhs_aclk,
+    input wire M_AXIS_ACLK,
 
     //resets
 
-    input wire rstn_rhd,
-    input wire rstn_rhs,
-    input wire rstn_dma,
+    input wire s00_axi_rhd_aresetn,
+    input wire s00_axi_rhs_aresetn,
+    input wire M_AXIS_ARESETN,
 
 
     //RHD data
@@ -364,10 +364,10 @@ module seeg #
       .MISO2_O(RHD_MISO2_O),
       .MISO1_P(RHD_MISO1_P),
       .MISO2_P(RHD_MISO2_P),
-      .s00_axi_aclk(clk_rhd),
-      .s00_axi_aresetn(rstn_rhd),
-      .M_AXIS_ACLK(clk_dma),
-      .M_AXIS_ARESETN(rstn_dma)
+      .s00_axi_aclk(s00_axi_rhd_aclk),
+      .s00_axi_aresetn(s00_axi_rhd_aresetn),
+      .M_AXIS_ACLK(M_AXIS_ACLK),
+      .M_AXIS_ARESETN(M_AXIS_ARESETN)
     );
 
     rhs_axi stimulator (
@@ -424,10 +424,10 @@ module seeg #
       .MISO_N(RHS_MISO_N),
       .MISO_O(RHS_MISO_O),
       .MISO_P(RHS_MISO_P),
-      .s00_axi_aclk(clk_rhs),
-      .s00_axi_aresetn(rstn_rhs),
-      .M_AXIS_ACLK(clk_dma),
-      .M_AXIS_ARESETN(rstn_dma)
+      .s00_axi_aclk(s00_axi_rhs_aclk),
+      .s00_axi_aresetn(s00_axi_rhs_aresetn),
+      .M_AXIS_ACLK(M_AXIS_ACLK),
+      .M_AXIS_ARESETN(M_AXIS_ARESETN)
     );
 
 
