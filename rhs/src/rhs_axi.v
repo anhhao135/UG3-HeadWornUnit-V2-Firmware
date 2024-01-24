@@ -92,7 +92,9 @@ module rhs_axi #
     input wire  s00_axi_aresetn,
     //! AXIS clock
     input wire  M_AXIS_ACLK,
-    input wire  M_AXIS_ARESETN
+    input wire  M_AXIS_ARESETN,
+
+    input wire rhs_record_trigger
 
   );
 
@@ -165,7 +167,8 @@ module rhs_axi #
       .S_AXI_RDATA(s00_axi_rdata),
       .S_AXI_RRESP(s00_axi_rresp),
       .S_AXI_RVALID(s00_axi_rvalid),
-      .S_AXI_RREADY(s00_axi_rready)
+      .S_AXI_RREADY(s00_axi_rready),
+      .rhs_record_trigger(rhs_record_trigger)
     );
 
   // Add user logic here

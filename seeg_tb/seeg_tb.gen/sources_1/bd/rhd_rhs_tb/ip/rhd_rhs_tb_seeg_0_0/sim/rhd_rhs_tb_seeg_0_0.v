@@ -93,10 +93,14 @@ module rhd_rhs_tb_seeg_0_0 (
   s00_axi_rhs_rresp,
   s00_axi_rhs_rvalid,
   s00_axi_rhs_rready,
-  M_AXIS_tdata,
-  M_AXIS_tvalid,
-  M_AXIS_tready,
-  M_AXIS_tlast,
+  M_AXIS_RHD_tdata,
+  M_AXIS_RHD_tvalid,
+  M_AXIS_RHD_tready,
+  M_AXIS_RHD_tlast,
+  M_AXIS_RHS_tdata,
+  M_AXIS_RHS_tvalid,
+  M_AXIS_RHS_tready,
+  M_AXIS_RHS_tlast,
   s00_axi_rhd_aclk,
   s00_axi_rhs_aclk,
   M_AXIS_ACLK,
@@ -287,14 +291,23 @@ ADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhs RREADY" *)
 input wire s00_axi_rhs_rready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-output wire [63 : 0] M_AXIS_tdata;
+output wire [63 : 0] M_AXIS_RHD_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
-output wire M_AXIS_tvalid;
+output wire M_AXIS_RHD_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
-input wire M_AXIS_tready;
+input wire M_AXIS_RHD_tready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-output wire M_AXIS_tlast;
+output wire M_AXIS_RHD_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_RHS TDATA" *)
+output wire [63 : 0] M_AXIS_RHS_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_RHS TVALID" *)
+output wire M_AXIS_RHS_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_RHS TREADY" *)
+input wire M_AXIS_RHS_tready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_RHS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_RHS TLAST" *)
+output wire M_AXIS_RHS_tlast;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_rhd_aclk, ASSOCIATED_BUSIF s00_axi_rhd, ASSOCIATED_RESET s00_axi_rhd_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN rhd_rhs_tb_rhd_aclk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s00_axi_rhd_aclk CLK" *)
 input wire s00_axi_rhd_aclk;
@@ -461,10 +474,14 @@ input wire RHS_MISO_P;
     .s00_axi_rhs_rresp(s00_axi_rhs_rresp),
     .s00_axi_rhs_rvalid(s00_axi_rhs_rvalid),
     .s00_axi_rhs_rready(s00_axi_rhs_rready),
-    .M_AXIS_tdata(M_AXIS_tdata),
-    .M_AXIS_tvalid(M_AXIS_tvalid),
-    .M_AXIS_tready(M_AXIS_tready),
-    .M_AXIS_tlast(M_AXIS_tlast),
+    .M_AXIS_RHD_tdata(M_AXIS_RHD_tdata),
+    .M_AXIS_RHD_tvalid(M_AXIS_RHD_tvalid),
+    .M_AXIS_RHD_tready(M_AXIS_RHD_tready),
+    .M_AXIS_RHD_tlast(M_AXIS_RHD_tlast),
+    .M_AXIS_RHS_tdata(M_AXIS_RHS_tdata),
+    .M_AXIS_RHS_tvalid(M_AXIS_RHS_tvalid),
+    .M_AXIS_RHS_tready(M_AXIS_RHS_tready),
+    .M_AXIS_RHS_tlast(M_AXIS_RHS_tlast),
     .s00_axi_rhd_aclk(s00_axi_rhd_aclk),
     .s00_axi_rhs_aclk(s00_axi_rhs_aclk),
     .M_AXIS_ACLK(M_AXIS_ACLK),

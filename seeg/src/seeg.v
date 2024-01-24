@@ -62,15 +62,26 @@ module seeg #
 
 
 
-    //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
+    //! @virtualbus M_AXIS_RHD @dir out an AXI-Stream Master interface to send the burst data
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-		output wire [63:0] M_AXIS_tdata,
+		output wire [63:0] M_AXIS_RHD_tdata,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
-		output wire		     M_AXIS_tvalid,
+		output wire		     M_AXIS_RHD_tvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
-		input wire		     M_AXIS_tready,
+		input wire		     M_AXIS_RHD_tready,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-		output wire		     M_AXIS_tlast,
+		output wire		     M_AXIS_RHD_tlast,
+    //! @end
+
+    //! @virtualbus M_AXIS_RHS @dir out an AXI-Stream Master interface to send the burst data
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
+		output wire [63:0] M_AXIS_RHS_tdata,
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
+		output wire		     M_AXIS_RHS_tvalid,
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
+		input wire		     M_AXIS_RHS_tready,
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
+		output wire		     M_AXIS_RHS_tlast,
     //! @end
 
 
@@ -251,6 +262,12 @@ module seeg #
     wire RHD_MISO1_P;
     wire RHD_MISO2_P;
 
+    wire [5:0] rhd_channel;
+
+    wire rhs_record_trigger;
+
+    assign rhs_record_trigger = rhd_channel ==  2? 1 : 0;
+
     rhd_diff_to_single rhdDiffToSingle(
     .MISO1_I_P(RHD_MISO1_I_P),
     .MISO1_I_N(RHD_MISO1_I_N),
@@ -367,7 +384,12 @@ module seeg #
       .s00_axi_aclk(s00_axi_rhd_aclk),
       .s00_axi_aresetn(s00_axi_rhd_aresetn),
       .M_AXIS_ACLK(M_AXIS_ACLK),
-      .M_AXIS_ARESETN(M_AXIS_ARESETN)
+      .M_AXIS_ARESETN(M_AXIS_ARESETN),
+      .M_AXIS_tdata(M_AXIS_RHD_tdata),
+      .M_AXIS_tvalid(M_AXIS_RHD_tvalid),
+      .M_AXIS_tready(M_AXIS_RHD_tready),
+      .M_AXIS_tlast(M_AXIS_RHD_tlast),
+      .channelOut(rhd_channel)
     );
 
     rhs_axi stimulator (
@@ -427,7 +449,12 @@ module seeg #
       .s00_axi_aclk(s00_axi_rhs_aclk),
       .s00_axi_aresetn(s00_axi_rhs_aresetn),
       .M_AXIS_ACLK(M_AXIS_ACLK),
-      .M_AXIS_ARESETN(M_AXIS_ARESETN)
+      .M_AXIS_ARESETN(M_AXIS_ARESETN),
+      .M_AXIS_tdata(M_AXIS_RHS_tdata),
+      .M_AXIS_tvalid(M_AXIS_RHS_tvalid),
+      .M_AXIS_tready(M_AXIS_RHS_tready),
+      .M_AXIS_tlast(M_AXIS_RHS_tlast),
+      .rhs_record_trigger(rhs_record_trigger)
     );
 
 

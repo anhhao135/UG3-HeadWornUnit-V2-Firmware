@@ -96,7 +96,9 @@ module rhs
     
     output wire [5:0]                        channel_out, //for fake data headstage slave to keep track
 
-    output wire [2:0]                        state_cable_delay_finder_out //for fake data headstage slave to keep track
+    output wire [2:0]                        state_cable_delay_finder_out, //for fake data headstage slave to keep track
+
+    input wire                               rhs_record_trigger
 
     );
 
@@ -162,6 +164,11 @@ module rhs
     reg [2:0] state_cable_delay_finder = IN_LOAD;
 
     assign state_cable_delay_finder_out = state_cable_delay_finder;
+
+
+
+    reg rhs_record_flag = 0;
+
 
 
     // [State machine for pulse generation]
@@ -633,6 +640,8 @@ module rhs
     wire valid_fifo_out;
     wire [63:0] data_fifo_out;
 
+    reg rhs_fifo_pass = 0;
+
     wire SPI_running_250M;
     
     xpm_cdc_1bit xpm_cdc_1bit_inst_1(
@@ -647,7 +656,7 @@ module rhs
         .wr_clk(clk),
         .rd_clk(M_AXIS_ACLK),
         .din(rhs_data_out),
-        .wr_en(rhd_valid_out && (channel >= 3) && (channel <= 18)), // overwrite if FIFO is full, there are 2-channel delay in the SPI interface
+        .wr_en(rhd_valid_out && (channel >= 3) && (channel <= 18) && rhs_fifo_pass), // overwrite if FIFO is full, there are 2-channel delay in the SPI interface
         .rd_en(M_AXIS_tready && SPI_running_250M && !empty), // read when SPI is running + FIFO is not empty
         .dout(data_fifo_out),
         .full(),
@@ -656,7 +665,6 @@ module rhs
         .wr_rst_busy(),
         .rd_rst_busy()
         );
-
 
 
     assign FIFO_rstn        = SPI_running_250M;
@@ -700,11 +708,11 @@ module rhs
     //end
 
 
-
-
-
     reg [63:0] maxis_data_reg;
     reg        maxis_valid_reg;
+
+
+
 
     always @(posedge M_AXIS_ACLK) begin
         if (!M_AXIS_ARESETN) begin
@@ -720,6 +728,9 @@ module rhs
     assign M_AXIS_tvalid = maxis_valid_reg;
     assign M_AXIS_tlast  = flag_lastBatch_250M && tlast_flag_bit;
     assign M_AXIS_tdata  = maxis_data_reg;
+
+    reg rhs_record_trigger_rising_edge_previous;
+    reg flag_lastchannel_rising_edge_previous;
 
 
 
@@ -888,6 +899,24 @@ module rhs
   
     /* SPI main state */
     always @(posedge clk) begin
+
+        if (rhs_record_trigger == 1 && rhs_record_trigger_rising_edge_previous == 0) begin
+            rhs_record_flag = 1;
+        end
+
+
+        if (flag_lastchannel == 1 && flag_lastchannel_rising_edge_previous == 0) begin
+            if (rhs_record_flag) begin
+                rhs_fifo_pass = 1;
+                rhs_record_flag = 0;
+            end
+            else
+                rhs_fifo_pass = 0;
+        end
+
+        rhs_record_trigger_rising_edge_previous = rhs_record_trigger;
+        flag_lastchannel_rising_edge_previous = flag_lastchannel;
+
         if (!resetn) begin
             main_state <= ms_wait;
         end

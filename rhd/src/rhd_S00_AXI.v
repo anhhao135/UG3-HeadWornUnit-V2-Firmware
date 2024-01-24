@@ -58,6 +58,8 @@ module rhd_S00_AXI #
 
 	output wire FIFO_rstn,
 
+	output wire [5:0] channelOut,
+
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
 	input wire		   M_AXIS_tready,
@@ -197,6 +199,8 @@ wire MISO1_P_SW;
 wire MISO2_P_SW;
 
 wire [5:0] channel;
+
+assign channelOut = channel;
 
 
 rhd_headstage_slave_full_16_probes RHD_LOOPBACK(

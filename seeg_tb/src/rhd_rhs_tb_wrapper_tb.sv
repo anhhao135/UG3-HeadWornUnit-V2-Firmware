@@ -32,7 +32,7 @@ bit [63:0]                              mtestWDataL;
 bit [63:0]                              mtestRDataL; 
 
 rhd_rhs_tb_axi_vip_0_0_mst_t          mst_agent_rhd;
-//rhd_rhs_tb_axi_vip_0_1_mst_t          mst_agent_rhs;
+rhd_rhs_tb_axi_vip_0_1_mst_t          mst_agent_rhs;
 
 `BD_WRAPPER DUT(
     .rhd_aresetn(rhd_aresetn), 
@@ -52,7 +52,7 @@ initial begin
     mst_agent_rhd.start_master(); 
     $timeformat (-12, 1, " ps", 1);
 
-    /*
+    
 
     mst_agent_rhs = new("master vip agent",DUT.`BD_INST_NAME.axi_vip_1.inst.IF);//ms  
     mst_agent_rhs.vif_proxy.set_dummy_drive_type(XIL_AXI_VIF_DRIVE_NONE); 
@@ -60,8 +60,6 @@ initial begin
     mst_agent_rhs.set_verbosity(mst_agent_verbosity); 
     mst_agent_rhs.start_master(); 
     $timeformat (-12, 1, " ps", 1);
-
-    */
 
   end
 
@@ -86,8 +84,6 @@ always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
 
 initial begin
     S_AXI_TEST ( );
-
-    #1ms;
 
     $finish;
 end
@@ -122,21 +118,12 @@ begin
   //mst_agent_rhd.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
-  /*
 
   // (2) Set packet length
-  mtestWDataL = 32'h00000040; //binary is 1000, decimal is 8, batch size is 8
+  mtestWDataL = 32'h00000002; //binary is 1000, decimal is 8, batch size is 8
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h8, mtestProtectionType, mtestWDataL, mtestBresp);
   //mst_agent_rhd.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
-
-  */
-
-
-
-  /*
-
-
 
 
   //RHS setup
@@ -148,7 +135,7 @@ begin
   #1us;
 
   // (2) Set packet length
-  mtestWDataL = 32'h00000004; //packet length of 255, 8 Bytes for magic number + 4 Bytes/Channel * 32 Channels = 136 Bytes, total number 136 Bytes * [BATCH_SIZE] 
+  mtestWDataL = 32'h00000002; //packet length of 255, 8 Bytes for magic number + 4 Bytes/Channel * 32 Channels = 136 Bytes, total number 136 Bytes * [BATCH_SIZE] 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h8, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
@@ -203,7 +190,36 @@ begin
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   #100us;
 
-  */
+
+
+  //start session
+
+
+  //RHD
+  // (3) Start acqusition (w/o amp fast settle)
+  mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
+  mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+
+  //RHS
+  // (1c) enable stim
+  mtestWDataL = 32'h000000029; //hex 9 turns loopback off, hex 29 turns on
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #3ms
+
+
+
+
+  //stop
+
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+  mtestWDataL = 32'h00000000;
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  mtestWDataL = 32'h00000000;
+  mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
   end 
   

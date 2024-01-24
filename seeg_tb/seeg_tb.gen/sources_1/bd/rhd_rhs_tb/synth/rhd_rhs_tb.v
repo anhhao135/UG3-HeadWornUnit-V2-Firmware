@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Jan 24 10:40:51 2024
+//Date        : Wed Jan 24 14:10:28 2024
 //Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
 //Command     : generate_target rhd_rhs_tb.bd
 //Design      : rhd_rhs_tb
@@ -123,7 +123,8 @@ module rhd_rhs_tb
   rhd_rhs_tb_seeg_0_0 seeg_0
        (.M_AXIS_ACLK(clk_dma_1),
         .M_AXIS_ARESETN(rstn_dma_1),
-        .M_AXIS_tready(1'b1),
+        .M_AXIS_RHD_tready(1'b1),
+        .M_AXIS_RHS_tready(1'b1),
         .RHD_MISO1_A(1'b0),
         .RHD_MISO1_B(1'b0),
         .RHD_MISO1_C(1'b0),

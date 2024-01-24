@@ -59,20 +59,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="k26c"/>
-    <Option Name="WTXSimLaunchSim" Val="39"/>
+    <Option Name="WTXSimLaunchSim" Val="112"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="9"/>
-    <Option Name="WTModelSimExportSim" Val="9"/>
-    <Option Name="WTQuestaExportSim" Val="9"/>
+    <Option Name="WTXSimExportSim" Val="11"/>
+    <Option Name="WTModelSimExportSim" Val="11"/>
+    <Option Name="WTQuestaExportSim" Val="11"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="9"/>
-    <Option Name="WTRivieraExportSim" Val="9"/>
-    <Option Name="WTActivehdlExportSim" Val="9"/>
+    <Option Name="WTVcsExportSim" Val="11"/>
+    <Option Name="WTRivieraExportSim" Val="11"/>
+    <Option Name="WTActivehdlExportSim" Val="11"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -193,6 +193,9 @@
         <CompFileExtendedInfo CompFileName="rhd_rhs_tb.bd" FileRelPathName="ip/rhd_rhs_tb_axi_vip_0_1/rhd_rhs_tb_axi_vip_0_1.xci">
           <Proxy FileSetName="rhd_rhs_tb_axi_vip_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="rhd_rhs_tb.bd" FileRelPathName="ip/rhd_rhs_tb_seeg_0_0/rhd_rhs_tb_seeg_0_0.xci">
+          <Proxy FileSetName="rhd_rhs_tb_seeg_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rhd_rhs_tb.bd" FileRelPathName="ip/rhd_rhs_tb_axi_vip_0_0/rhd_rhs_tb_axi_vip_0_0.xci">
           <Proxy FileSetName="rhd_rhs_tb_axi_vip_0_0"/>
         </CompFileExtendedInfo>
@@ -299,6 +302,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="rhd_rhs_tb_seeg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rhd_rhs_tb_seeg_0_0" RelGenDir="$PGENDIR/rhd_rhs_tb_seeg_0_0">
+      <Config>
+        <Option Name="TopModule" Val="rhd_rhs_tb_seeg_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -358,6 +367,17 @@
     <Run Id="rhd_rhs_tb_axi_vip_0_0_synth_1" Type="Ft3:Synth" SrcSet="rhd_rhs_tb_axi_vip_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="rhd_rhs_tb_axi_vip_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_axi_vip_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_axi_vip_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="rhd_rhs_tb_seeg_0_0_synth_1" Type="Ft3:Synth" SrcSet="rhd_rhs_tb_seeg_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="rhd_rhs_tb_seeg_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_seeg_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_seeg_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
@@ -435,6 +455,25 @@
     <Run Id="rhd_rhs_tb_axi_vip_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="rhd_rhs_tb_axi_vip_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rhd_rhs_tb_axi_vip_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_axi_vip_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_axi_vip_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="rhd_rhs_tb_seeg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="rhd_rhs_tb_seeg_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rhd_rhs_tb_seeg_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_seeg_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/rhd_rhs_tb_seeg_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

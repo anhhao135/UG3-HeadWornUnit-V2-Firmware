@@ -16,14 +16,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="14.640001 us"></ZoomEndTime>
+      <ZoomEndTime time="105.800001 us"></ZoomEndTime>
       <Cursor1Time time="1.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="319"></NameColumnWidth>
-      <ValueColumnWidth column_width="115"></ValueColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="54" />
+   <WVObjectSize size="22" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/clk_dma" type="logic">
       <obj_property name="ElementShortName">clk_dma</obj_property>
       <obj_property name="ObjectShortName">clk_dma</obj_property>
@@ -48,196 +48,449 @@
       <obj_property name="ElementShortName">rstn_dma</obj_property>
       <obj_property name="ObjectShortName">rstn_dma</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_ARADDR" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_ARADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_ARADDR[31:0]</obj_property>
+   <wvobject fp_name="group116" type="group">
+      <obj_property name="label">recorder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/CS_b" type="logic">
+         <obj_property name="ElementShortName">CS_b</obj_property>
+         <obj_property name="ObjectShortName">CS_b</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/SCLK" type="logic">
+         <obj_property name="ElementShortName">SCLK</obj_property>
+         <obj_property name="ObjectShortName">SCLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MOSI1" type="logic">
+         <obj_property name="ElementShortName">MOSI1</obj_property>
+         <obj_property name="ObjectShortName">MOSI1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MOSI2" type="logic">
+         <obj_property name="ElementShortName">MOSI2</obj_property>
+         <obj_property name="ObjectShortName">MOSI2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_A" type="logic">
+         <obj_property name="ElementShortName">MISO1_A</obj_property>
+         <obj_property name="ObjectShortName">MISO1_A</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_A" type="logic">
+         <obj_property name="ElementShortName">MISO2_A</obj_property>
+         <obj_property name="ObjectShortName">MISO2_A</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_B" type="logic">
+         <obj_property name="ElementShortName">MISO1_B</obj_property>
+         <obj_property name="ObjectShortName">MISO1_B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_B" type="logic">
+         <obj_property name="ElementShortName">MISO2_B</obj_property>
+         <obj_property name="ObjectShortName">MISO2_B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_C" type="logic">
+         <obj_property name="ElementShortName">MISO1_C</obj_property>
+         <obj_property name="ObjectShortName">MISO1_C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_C" type="logic">
+         <obj_property name="ElementShortName">MISO2_C</obj_property>
+         <obj_property name="ObjectShortName">MISO2_C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_D" type="logic">
+         <obj_property name="ElementShortName">MISO1_D</obj_property>
+         <obj_property name="ObjectShortName">MISO1_D</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_D" type="logic">
+         <obj_property name="ElementShortName">MISO2_D</obj_property>
+         <obj_property name="ObjectShortName">MISO2_D</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_E" type="logic">
+         <obj_property name="ElementShortName">MISO1_E</obj_property>
+         <obj_property name="ObjectShortName">MISO1_E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_E" type="logic">
+         <obj_property name="ElementShortName">MISO2_E</obj_property>
+         <obj_property name="ObjectShortName">MISO2_E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_F" type="logic">
+         <obj_property name="ElementShortName">MISO1_F</obj_property>
+         <obj_property name="ObjectShortName">MISO1_F</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_F" type="logic">
+         <obj_property name="ElementShortName">MISO2_F</obj_property>
+         <obj_property name="ObjectShortName">MISO2_F</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_G" type="logic">
+         <obj_property name="ElementShortName">MISO1_G</obj_property>
+         <obj_property name="ObjectShortName">MISO1_G</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_G" type="logic">
+         <obj_property name="ElementShortName">MISO2_G</obj_property>
+         <obj_property name="ObjectShortName">MISO2_G</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_H" type="logic">
+         <obj_property name="ElementShortName">MISO1_H</obj_property>
+         <obj_property name="ObjectShortName">MISO1_H</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_H" type="logic">
+         <obj_property name="ElementShortName">MISO2_H</obj_property>
+         <obj_property name="ObjectShortName">MISO2_H</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_I" type="logic">
+         <obj_property name="ElementShortName">MISO1_I</obj_property>
+         <obj_property name="ObjectShortName">MISO1_I</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_I" type="logic">
+         <obj_property name="ElementShortName">MISO2_I</obj_property>
+         <obj_property name="ObjectShortName">MISO2_I</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_J" type="logic">
+         <obj_property name="ElementShortName">MISO1_J</obj_property>
+         <obj_property name="ObjectShortName">MISO1_J</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_J" type="logic">
+         <obj_property name="ElementShortName">MISO2_J</obj_property>
+         <obj_property name="ObjectShortName">MISO2_J</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_K" type="logic">
+         <obj_property name="ElementShortName">MISO1_K</obj_property>
+         <obj_property name="ObjectShortName">MISO1_K</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_K" type="logic">
+         <obj_property name="ElementShortName">MISO2_K</obj_property>
+         <obj_property name="ObjectShortName">MISO2_K</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_L" type="logic">
+         <obj_property name="ElementShortName">MISO1_L</obj_property>
+         <obj_property name="ObjectShortName">MISO1_L</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_L" type="logic">
+         <obj_property name="ElementShortName">MISO2_L</obj_property>
+         <obj_property name="ObjectShortName">MISO2_L</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_M" type="logic">
+         <obj_property name="ElementShortName">MISO1_M</obj_property>
+         <obj_property name="ObjectShortName">MISO1_M</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_M" type="logic">
+         <obj_property name="ElementShortName">MISO2_M</obj_property>
+         <obj_property name="ObjectShortName">MISO2_M</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_N" type="logic">
+         <obj_property name="ElementShortName">MISO1_N</obj_property>
+         <obj_property name="ObjectShortName">MISO1_N</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_N" type="logic">
+         <obj_property name="ElementShortName">MISO2_N</obj_property>
+         <obj_property name="ObjectShortName">MISO2_N</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_O" type="logic">
+         <obj_property name="ElementShortName">MISO1_O</obj_property>
+         <obj_property name="ObjectShortName">MISO1_O</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_O" type="logic">
+         <obj_property name="ElementShortName">MISO2_O</obj_property>
+         <obj_property name="ObjectShortName">MISO2_O</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO1_P" type="logic">
+         <obj_property name="ElementShortName">MISO1_P</obj_property>
+         <obj_property name="ObjectShortName">MISO1_P</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/MISO2_P" type="logic">
+         <obj_property name="ElementShortName">MISO2_P</obj_property>
+         <obj_property name="ObjectShortName">MISO2_P</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/irq1" type="logic">
+         <obj_property name="ElementShortName">irq1</obj_property>
+         <obj_property name="ObjectShortName">irq1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/FIFO_rstn" type="logic">
+         <obj_property name="ElementShortName">FIFO_rstn</obj_property>
+         <obj_property name="ObjectShortName">FIFO_rstn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/s00_axi_aclk" type="logic">
+         <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
+         <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/s00_axi_aresetn" type="logic">
+         <obj_property name="ElementShortName">s00_axi_aresetn</obj_property>
+         <obj_property name="ObjectShortName">s00_axi_aresetn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_ACLK" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_ACLK</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_ACLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_ARESETN" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_ARESETN</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_ARESETN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/init_mode" type="logic">
+         <obj_property name="ElementShortName">init_mode</obj_property>
+         <obj_property name="ObjectShortName">init_mode</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_ARPROT" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_ARPROT[2:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_ARPROT[2:0]</obj_property>
+   <wvobject fp_name="group160" type="group">
+      <obj_property name="label">stimulator</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/CS_b" type="logic">
+         <obj_property name="ElementShortName">CS_b</obj_property>
+         <obj_property name="ObjectShortName">CS_b</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/SCLK" type="logic">
+         <obj_property name="ElementShortName">SCLK</obj_property>
+         <obj_property name="ObjectShortName">SCLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_A" type="logic">
+         <obj_property name="ElementShortName">MOSI_A</obj_property>
+         <obj_property name="ObjectShortName">MOSI_A</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_B" type="logic">
+         <obj_property name="ElementShortName">MOSI_B</obj_property>
+         <obj_property name="ObjectShortName">MOSI_B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_C" type="logic">
+         <obj_property name="ElementShortName">MOSI_C</obj_property>
+         <obj_property name="ObjectShortName">MOSI_C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_D" type="logic">
+         <obj_property name="ElementShortName">MOSI_D</obj_property>
+         <obj_property name="ObjectShortName">MOSI_D</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_E" type="logic">
+         <obj_property name="ElementShortName">MOSI_E</obj_property>
+         <obj_property name="ObjectShortName">MOSI_E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_F" type="logic">
+         <obj_property name="ElementShortName">MOSI_F</obj_property>
+         <obj_property name="ObjectShortName">MOSI_F</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_G" type="logic">
+         <obj_property name="ElementShortName">MOSI_G</obj_property>
+         <obj_property name="ObjectShortName">MOSI_G</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_H" type="logic">
+         <obj_property name="ElementShortName">MOSI_H</obj_property>
+         <obj_property name="ObjectShortName">MOSI_H</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_I" type="logic">
+         <obj_property name="ElementShortName">MOSI_I</obj_property>
+         <obj_property name="ObjectShortName">MOSI_I</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_J" type="logic">
+         <obj_property name="ElementShortName">MOSI_J</obj_property>
+         <obj_property name="ObjectShortName">MOSI_J</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_K" type="logic">
+         <obj_property name="ElementShortName">MOSI_K</obj_property>
+         <obj_property name="ObjectShortName">MOSI_K</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_L" type="logic">
+         <obj_property name="ElementShortName">MOSI_L</obj_property>
+         <obj_property name="ObjectShortName">MOSI_L</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_M" type="logic">
+         <obj_property name="ElementShortName">MOSI_M</obj_property>
+         <obj_property name="ObjectShortName">MOSI_M</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_N" type="logic">
+         <obj_property name="ElementShortName">MOSI_N</obj_property>
+         <obj_property name="ObjectShortName">MOSI_N</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_O" type="logic">
+         <obj_property name="ElementShortName">MOSI_O</obj_property>
+         <obj_property name="ObjectShortName">MOSI_O</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MOSI_P" type="logic">
+         <obj_property name="ElementShortName">MOSI_P</obj_property>
+         <obj_property name="ObjectShortName">MOSI_P</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_A" type="logic">
+         <obj_property name="ElementShortName">MISO_A</obj_property>
+         <obj_property name="ObjectShortName">MISO_A</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_B" type="logic">
+         <obj_property name="ElementShortName">MISO_B</obj_property>
+         <obj_property name="ObjectShortName">MISO_B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_C" type="logic">
+         <obj_property name="ElementShortName">MISO_C</obj_property>
+         <obj_property name="ObjectShortName">MISO_C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_D" type="logic">
+         <obj_property name="ElementShortName">MISO_D</obj_property>
+         <obj_property name="ObjectShortName">MISO_D</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_E" type="logic">
+         <obj_property name="ElementShortName">MISO_E</obj_property>
+         <obj_property name="ObjectShortName">MISO_E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_F" type="logic">
+         <obj_property name="ElementShortName">MISO_F</obj_property>
+         <obj_property name="ObjectShortName">MISO_F</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_G" type="logic">
+         <obj_property name="ElementShortName">MISO_G</obj_property>
+         <obj_property name="ObjectShortName">MISO_G</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_H" type="logic">
+         <obj_property name="ElementShortName">MISO_H</obj_property>
+         <obj_property name="ObjectShortName">MISO_H</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_I" type="logic">
+         <obj_property name="ElementShortName">MISO_I</obj_property>
+         <obj_property name="ObjectShortName">MISO_I</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_J" type="logic">
+         <obj_property name="ElementShortName">MISO_J</obj_property>
+         <obj_property name="ObjectShortName">MISO_J</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_K" type="logic">
+         <obj_property name="ElementShortName">MISO_K</obj_property>
+         <obj_property name="ObjectShortName">MISO_K</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_L" type="logic">
+         <obj_property name="ElementShortName">MISO_L</obj_property>
+         <obj_property name="ObjectShortName">MISO_L</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_M" type="logic">
+         <obj_property name="ElementShortName">MISO_M</obj_property>
+         <obj_property name="ObjectShortName">MISO_M</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_N" type="logic">
+         <obj_property name="ElementShortName">MISO_N</obj_property>
+         <obj_property name="ObjectShortName">MISO_N</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_O" type="logic">
+         <obj_property name="ElementShortName">MISO_O</obj_property>
+         <obj_property name="ObjectShortName">MISO_O</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/MISO_P" type="logic">
+         <obj_property name="ElementShortName">MISO_P</obj_property>
+         <obj_property name="ObjectShortName">MISO_P</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/s00_axi_aclk" type="logic">
+         <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
+         <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/s00_axi_aresetn" type="logic">
+         <obj_property name="ElementShortName">s00_axi_aresetn</obj_property>
+         <obj_property name="ObjectShortName">s00_axi_aresetn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_ACLK" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_ACLK</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_ACLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_ARESETN" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_ARESETN</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_ARESETN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/SPI_ONOFF" type="logic">
+         <obj_property name="ElementShortName">SPI_ONOFF</obj_property>
+         <obj_property name="ObjectShortName">SPI_ONOFF</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/init_en" type="logic">
+         <obj_property name="ElementShortName">init_en</obj_property>
+         <obj_property name="ObjectShortName">init_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_set_en" type="logic">
+         <obj_property name="ElementShortName">mag_set_en</obj_property>
+         <obj_property name="ObjectShortName">mag_set_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_en" type="logic">
+         <obj_property name="ElementShortName">stim_en</obj_property>
+         <obj_property name="ObjectShortName">stim_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/timestamp" type="array">
+         <obj_property name="ElementShortName">timestamp[15:0]</obj_property>
+         <obj_property name="ObjectShortName">timestamp[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel" type="array">
+         <obj_property name="ElementShortName">channel[5:0]</obj_property>
+         <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_config" type="array">
+         <obj_property name="ElementShortName">channel_config[6:0]</obj_property>
+         <obj_property name="ObjectShortName">channel_config[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/state_cable_delay_finder" type="array">
+         <obj_property name="ElementShortName">state_cable_delay_finder[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state_cable_delay_finder[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_cable_delay_found_trigger_init" type="logic">
+         <obj_property name="ElementShortName">flag_cable_delay_found_trigger_init</obj_property>
+         <obj_property name="ObjectShortName">flag_cable_delay_found_trigger_init</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_cable_delay_low_found" type="logic">
+         <obj_property name="ElementShortName">flag_cable_delay_low_found</obj_property>
+         <obj_property name="ObjectShortName">flag_cable_delay_low_found</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/phase_select" type="array">
+         <obj_property name="ElementShortName">phase_select[3:0]</obj_property>
+         <obj_property name="ObjectShortName">phase_select[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/slv_reg0" type="array">
+         <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/FIFO_rstn" type="logic">
+         <obj_property name="ElementShortName">FIFO_rstn</obj_property>
+         <obj_property name="ObjectShortName">FIFO_rstn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhd_valid_out" type="logic">
+         <obj_property name="ElementShortName">rhd_valid_out</obj_property>
+         <obj_property name="ObjectShortName">rhd_valid_out</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_ARREADY" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_ARREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_ARREADY</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHD_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_RHD_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHD_tdata[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_ARVALID" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_ARVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_ARVALID</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHD_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_RHD_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHD_tlast</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_AWADDR" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_AWADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_AWADDR[31:0]</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHD_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_RHD_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHD_tready</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_AWPROT" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_AWPROT[2:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_AWPROT[2:0]</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHD_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_RHD_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHD_tvalid</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_AWREADY" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_AWREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_AWREADY</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_AWVALID" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_AWVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_AWVALID</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_RHS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHS_tdata[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_BREADY" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_BREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_BREADY</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_RHS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHS_tlast</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_BRESP" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_BRESP[1:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_BRESP[1:0]</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_RHS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHS_tready</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_BVALID" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_BVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_BVALID</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_RHS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_RHS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_RHS_tvalid</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_RDATA" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_RDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_RDATA[31:0]</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/channelOut" type="array">
+      <obj_property name="ElementShortName">channelOut[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channelOut[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_RREADY" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_RREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_RREADY</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhd_channel" type="array">
+      <obj_property name="ElementShortName">rhd_channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rhd_channel[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_RRESP" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_RRESP[1:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_RRESP[1:0]</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_RVALID" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_RVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_RVALID</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhs_record_trigger" type="logic">
+      <obj_property name="ElementShortName">rhs_record_trigger</obj_property>
+      <obj_property name="ObjectShortName">rhs_record_trigger</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_WDATA" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_WDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_WDATA[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_WREADY" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_WREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_WREADY</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_WSTRB" type="array">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_WSTRB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_WSTRB[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/axi_vip_0_M_AXI_WVALID" type="logic">
-      <obj_property name="ElementShortName">axi_vip_0_M_AXI_WVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_vip_0_M_AXI_WVALID</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/result_slave" type="array">
-      <obj_property name="ElementShortName">result_slave[31:0]</obj_property>
-      <obj_property name="ObjectShortName">result_slave[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/S00_AXI_test_data" type="array">
-      <obj_property name="ElementShortName">S00_AXI_test_data[3:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">S00_AXI_test_data[3:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/mtestProtectionType" type="array">
-      <obj_property name="ElementShortName">mtestProtectionType[2:0]</obj_property>
-      <obj_property name="ObjectShortName">mtestProtectionType[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/mtestBresp" type="array">
-      <obj_property name="ElementShortName">mtestBresp[1:0]</obj_property>
-      <obj_property name="ObjectShortName">mtestBresp[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/mtestWDataL" type="array">
-      <obj_property name="ElementShortName">mtestWDataL[63:0]</obj_property>
-      <obj_property name="ObjectShortName">mtestWDataL[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/mtestRDataL" type="array">
-      <obj_property name="ElementShortName">mtestRDataL[63:0]</obj_property>
-      <obj_property name="ObjectShortName">mtestRDataL[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/LC_AXI_BURST_LENGTH" type="array">
-      <obj_property name="ElementShortName">LC_AXI_BURST_LENGTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">LC_AXI_BURST_LENGTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/LC_AXI_DATA_WIDTH" type="array">
-      <obj_property name="ElementShortName">LC_AXI_DATA_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">LC_AXI_DATA_WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_ACLK" type="logic">
-      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_ARESETN" type="logic">
-      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_AWADDR" type="array">
-      <obj_property name="ElementShortName">S_AXI_AWADDR[4:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_AWADDR[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_AWPROT" type="array">
-      <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_AWVALID" type="logic">
-      <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_AWREADY" type="logic">
-      <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_WDATA" type="array">
-      <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_WSTRB" type="array">
-      <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_WVALID" type="logic">
-      <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_WREADY" type="logic">
-      <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_BRESP" type="array">
-      <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_BVALID" type="logic">
-      <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_BREADY" type="logic">
-      <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_ARADDR" type="array">
-      <obj_property name="ElementShortName">S_AXI_ARADDR[4:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ARADDR[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_ARPROT" type="array">
-      <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_ARVALID" type="logic">
-      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_ARREADY" type="logic">
-      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_RDATA" type="array">
-      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_RRESP" type="array">
-      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_RVALID" type="logic">
-      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/S_AXI_RREADY" type="logic">
-      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhs_record_trigger" type="logic">
+      <obj_property name="ElementShortName">rhs_record_trigger</obj_property>
+      <obj_property name="ObjectShortName">rhs_record_trigger</obj_property>
    </wvobject>
 </wave_config>

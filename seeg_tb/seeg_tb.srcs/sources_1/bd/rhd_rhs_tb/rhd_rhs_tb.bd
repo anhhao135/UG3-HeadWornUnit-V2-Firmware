@@ -282,21 +282,80 @@
             },
             "port_maps": {
               "TDATA": {
-                "physical_name": "M_AXIS_tdata",
+                "physical_name": "M_AXIS_RHD_tdata",
                 "direction": "O",
                 "left": "63",
                 "right": "0"
               },
               "TLAST": {
-                "physical_name": "M_AXIS_tlast",
+                "physical_name": "M_AXIS_RHD_tlast",
                 "direction": "O"
               },
               "TVALID": {
-                "physical_name": "M_AXIS_tvalid",
+                "physical_name": "M_AXIS_RHD_tvalid",
                 "direction": "O"
               },
               "TREADY": {
-                "physical_name": "M_AXIS_tready",
+                "physical_name": "M_AXIS_RHD_tready",
+                "direction": "I"
+              }
+            }
+          },
+          "M_AXIS_RHS": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "8",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "M_AXIS_RHS_tdata",
+                "direction": "O",
+                "left": "63",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "M_AXIS_RHS_tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "M_AXIS_RHS_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "M_AXIS_RHS_tready",
                 "direction": "I"
               }
             }
