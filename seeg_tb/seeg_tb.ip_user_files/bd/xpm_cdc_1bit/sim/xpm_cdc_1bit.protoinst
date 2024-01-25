@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"xpm_cdc_1bit": {
-			"proto_instances": {
-			}
-		}
-	}
-}

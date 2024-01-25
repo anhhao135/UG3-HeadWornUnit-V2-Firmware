@@ -1,28 +1,30 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.18415",
-   "Default View_TopLeft":"-166,61",
+   "Default View_TopLeft":"-182,140",
    "ExpandedHierarchyInLayout":"",
    "commentid":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
 #  -string -flagsOSRD
-preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port port-id_aclk_out -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
-preplace port port-id_aresetn_out -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace port port-id_aclk_out -pg 1 -lvl 0 -x -10 -y 450 -defaultsOSRD
+preplace port port-id_aresetn_out -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
 preplace port port-id_CS_b -pg 1 -lvl 3 -x 580 -y 100 -defaultsOSRD
 preplace port port-id_SCLK -pg 1 -lvl 3 -x 580 -y 120 -defaultsOSRD
+preplace port port-id_rhs_record_trigger -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
 preplace inst axi_vip_0 -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
 preplace inst rhs_axi_0 -pg 1 -lvl 2 -x 410 -y 270 -defaultsOSRD
-preplace netloc aclk_1 1 0 2 30 410 NJ
-preplace netloc aclk_out_1 1 0 2 NJ 450 NJ
-preplace netloc aresetn_1 1 0 2 20 430 NJ
-preplace netloc aresetn_out_1 1 0 2 NJ 470 NJ
+preplace netloc aclk_1 1 0 2 20 -10 250J
+preplace netloc aclk_out_1 1 0 2 10J 440 NJ
+preplace netloc aresetn_1 1 0 2 30 0 230J
+preplace netloc aresetn_out_1 1 0 2 20J 460 NJ
 preplace netloc rhs_axi_0_CS_b 1 2 1 560J 100n
 preplace netloc rhs_axi_0_SCLK 1 2 1 560J 120n
-preplace netloc axi_vip_0_M_AXI 1 1 1 N 70
-levelinfo -pg 1 0 130 410 580
-pagesize -pg 1 -db -bbox -sgen -130 0 700 910
+preplace netloc rhs_record_trigger_1 1 0 2 NJ 480 N
+preplace netloc axi_vip_0_M_AXI 1 1 1 240 60n
+levelinfo -pg 1 -10 130 410 580
+pagesize -pg 1 -db -bbox -sgen -180 -20 700 910
 "
 }
 0

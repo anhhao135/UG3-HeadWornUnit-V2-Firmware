@@ -4,7 +4,7 @@ onerror {quit -force}
 transcript on
 
 vlib work
-vmap -link {C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.cache/compile_simlib/activehdl}
+vmap -link {C:/UG3-HeadWornUnit-V2-Firmware/rhs/rhs.cache/compile_simlib/activehdl}
 vlib activehdl/xilinx_vip
 vlib activehdl/xpm
 vlib activehdl/axi_infrastructure_v1_1_0

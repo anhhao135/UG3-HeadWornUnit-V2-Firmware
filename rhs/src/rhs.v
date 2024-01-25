@@ -281,7 +281,7 @@ module rhs
     wire            flag_terminate_ZCheck;
     wire            flag_terminate_config;
 
-    reg             flag_cable_delay_found_trigger_init = 0;
+    reg             flag_cable_delay_found_rising_edge_previous = 0;
     reg             flag_cable_delay_low_found = 0;
 
 
@@ -984,18 +984,18 @@ module rhs
 						channel <= channel + 1;
 					end
                     if (init_en || mag_set_en) begin
+                        
                         if (flag_lastconfig) begin
                             channel_config <= 0;
                         end else begin
-                            if (flag_cable_delay_found) begin
-                                if (channel_config == 0 && flag_cable_delay_found_trigger_init) begin
-                                    channel_config <= 0;
-                                    flag_cable_delay_found_trigger_init <= 0;
-                                end
-                                else
-                                    channel_config <= channel_config + 1;
+                            if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0) begin
+                                channel_config = 0;
                             end
+                            else if (flag_cable_delay_found)
+                                channel_config = channel_config + 1;
                         end
+
+                        flag_cable_delay_found_rising_edge_previous = flag_cable_delay_found;
                     end
 				end
                 ms_cs_l: begin
@@ -2328,7 +2328,6 @@ module rhs
                             end
                             else if (INTAN_reg != INTAN_expected && flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = DONE;
-                                flag_cable_delay_found_trigger_init = 1;
                                 phase_select = (phase_select_low + phase_select) / 2;
                             end
                             else begin

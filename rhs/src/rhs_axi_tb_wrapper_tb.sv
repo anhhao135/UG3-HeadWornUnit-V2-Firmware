@@ -20,6 +20,7 @@ bit CS_b;
 bit SCLK;
 bit MOSI1;
 bit MOSI2;
+bit rhs_record_trigger;
 
 integer result_slave;  
 bit [31:0] S00_AXI_test_data[3:0]; 
@@ -64,7 +65,8 @@ rhs_axi_tb_axi_vip_0_0_mst_t          mst_agent_0;
       .aclk(aclk),
       .aclk_out(aclk_out),
       .CS_b(CS_b),
-      .SCLK(SCLK)
+      .SCLK(SCLK),
+      .rhs_record_trigger(rhs_record_trigger)
     ); 
   
 initial begin
@@ -86,6 +88,7 @@ initial begin
 end
 always #8.92857 aclk <= ~aclk;
 always #1.95312 aclk_out <= ~aclk_out;
+always #50us rhs_record_trigger <= ~rhs_record_trigger;
 
 initial begin
     S_AXI_TEST ( );

@@ -126,22 +126,6 @@ module rhd_rhs_tb_seeg_0_0 (
   RHD_MISO2_G,
   RHD_MISO1_H,
   RHD_MISO2_H,
-  RHD_MISO1_I,
-  RHD_MISO2_I,
-  RHD_MISO1_J,
-  RHD_MISO2_J,
-  RHD_MISO1_K,
-  RHD_MISO2_K,
-  RHD_MISO1_L,
-  RHD_MISO2_L,
-  RHD_MISO1_M,
-  RHD_MISO2_M,
-  RHD_MISO1_N,
-  RHD_MISO2_N,
-  RHD_MISO1_O,
-  RHD_MISO2_O,
-  RHD_MISO1_P,
-  RHD_MISO2_P,
   RHD_MISO1_I_P,
   RHD_MISO1_I_N,
   RHD_MISO2_I_P,
@@ -345,22 +329,6 @@ input wire RHD_MISO1_G;
 input wire RHD_MISO2_G;
 input wire RHD_MISO1_H;
 input wire RHD_MISO2_H;
-input wire RHD_MISO1_I;
-input wire RHD_MISO2_I;
-input wire RHD_MISO1_J;
-input wire RHD_MISO2_J;
-input wire RHD_MISO1_K;
-input wire RHD_MISO2_K;
-input wire RHD_MISO1_L;
-input wire RHD_MISO2_L;
-input wire RHD_MISO1_M;
-input wire RHD_MISO2_M;
-input wire RHD_MISO1_N;
-input wire RHD_MISO2_N;
-input wire RHD_MISO1_O;
-input wire RHD_MISO2_O;
-input wire RHD_MISO1_P;
-input wire RHD_MISO2_P;
 input wire RHD_MISO1_I_P;
 input wire RHD_MISO1_I_N;
 input wire RHD_MISO2_I_P;
@@ -507,22 +475,6 @@ input wire RHS_MISO_P;
     .RHD_MISO2_G(RHD_MISO2_G),
     .RHD_MISO1_H(RHD_MISO1_H),
     .RHD_MISO2_H(RHD_MISO2_H),
-    .RHD_MISO1_I(RHD_MISO1_I),
-    .RHD_MISO2_I(RHD_MISO2_I),
-    .RHD_MISO1_J(RHD_MISO1_J),
-    .RHD_MISO2_J(RHD_MISO2_J),
-    .RHD_MISO1_K(RHD_MISO1_K),
-    .RHD_MISO2_K(RHD_MISO2_K),
-    .RHD_MISO1_L(RHD_MISO1_L),
-    .RHD_MISO2_L(RHD_MISO2_L),
-    .RHD_MISO1_M(RHD_MISO1_M),
-    .RHD_MISO2_M(RHD_MISO2_M),
-    .RHD_MISO1_N(RHD_MISO1_N),
-    .RHD_MISO2_N(RHD_MISO2_N),
-    .RHD_MISO1_O(RHD_MISO1_O),
-    .RHD_MISO2_O(RHD_MISO2_O),
-    .RHD_MISO1_P(RHD_MISO1_P),
-    .RHD_MISO2_P(RHD_MISO2_P),
     .RHD_MISO1_I_P(RHD_MISO1_I_P),
     .RHD_MISO1_I_N(RHD_MISO1_I_N),
     .RHD_MISO2_I_P(RHD_MISO2_I_P),

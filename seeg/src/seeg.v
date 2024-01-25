@@ -132,30 +132,6 @@ module seeg #
     input wire RHD_MISO1_H,
     input wire RHD_MISO2_H,
 
-    input wire RHD_MISO1_I,
-    input wire RHD_MISO2_I,
-
-    input wire RHD_MISO1_J,
-    input wire RHD_MISO2_J,
-
-    input wire RHD_MISO1_K,
-    input wire RHD_MISO2_K,
-
-    input wire RHD_MISO1_L,
-    input wire RHD_MISO2_L,
-
-    input wire RHD_MISO1_M,
-    input wire RHD_MISO2_M,
-
-    input wire RHD_MISO1_N,
-    input wire RHD_MISO2_N,
-
-    input wire RHD_MISO1_O,
-    input wire RHD_MISO2_O,
-
-    input wire RHD_MISO1_P,
-    input wire RHD_MISO2_P,
-
     input wire RHD_MISO1_I_P,
     input wire RHD_MISO1_I_N,
     input wire RHD_MISO2_I_P,

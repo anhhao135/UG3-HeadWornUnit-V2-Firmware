@@ -1,0 +1,26 @@
+
+*** Running vivado
+    with args -log rhd_rhs_tb_axi_vip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rhd_rhs_tb_axi_vip_0_0.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source rhd_rhs_tb_axi_vip_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 454.387 ; gain = 157.809
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: rhd_rhs_tb_axi_vip_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 7a9549e84297e28f to dir: C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1.dcp to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1_sim_netlist.v to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1_sim_netlist.vhdl to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1_stub.v to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1_stub.vhdl to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP rhd_rhs_tb_axi_vip_0_0, cache-ID = 7a9549e84297e28f.
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 17:16:43 2024...

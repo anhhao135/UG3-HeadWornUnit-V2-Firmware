@@ -2,8 +2,8 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Tue Jan 23 09:17:53 2024
-//Host        : GramForGram running 64-bit major release  (build 9200)
+//Date        : Wed Jan 24 17:13:04 2024
+//Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
 //Command     : generate_target rhs_axi_tb.bd
 //Design      : rhs_axi_tb
 //Purpose     : IP block netlist
@@ -17,13 +17,15 @@ module rhs_axi_tb
     aclk,
     aclk_out,
     aresetn,
-    aresetn_out);
+    aresetn_out,
+    rhs_record_trigger);
   output CS_b;
   output SCLK;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_RESET aresetn, CLK_DOMAIN rhs_axi_tb_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK_OUT CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK_OUT, ASSOCIATED_RESET aresetn_out, CLK_DOMAIN rhs_axi_tb_aclk_out, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk_out;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN_OUT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN_OUT, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn_out;
+  input rhs_record_trigger;
 
   wire aclk_1;
   wire aclk_out_1;
@@ -50,6 +52,7 @@ module rhs_axi_tb
   wire axi_vip_0_M_AXI_WVALID;
   wire rhs_axi_0_CS_b;
   wire rhs_axi_0_SCLK;
+  wire rhs_record_trigger_1;
 
   assign CS_b = rhs_axi_0_CS_b;
   assign SCLK = rhs_axi_0_SCLK;
@@ -57,6 +60,7 @@ module rhs_axi_tb
   assign aclk_out_1 = aclk_out;
   assign aresetn_1 = aresetn;
   assign aresetn_out_1 = aresetn_out;
+  assign rhs_record_trigger_1 = rhs_record_trigger;
   rhs_axi_tb_axi_vip_0_0 axi_vip_0
        (.aclk(aclk_1),
         .aresetn(aresetn_1),
@@ -101,6 +105,7 @@ module rhs_axi_tb
         .M_AXIS_ARESETN(aresetn_out_1),
         .M_AXIS_tready(1'b1),
         .SCLK(rhs_axi_0_SCLK),
+        .rhs_record_trigger(rhs_record_trigger_1),
         .s00_axi_aclk(aclk_1),
         .s00_axi_araddr(axi_vip_0_M_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(aresetn_1),

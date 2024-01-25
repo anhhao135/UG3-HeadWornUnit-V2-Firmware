@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 14:10:29 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 17:15:30 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhd_rhs_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -757,22 +757,6 @@
         <PORT DIR="I" NAME="RHD_MISO2_G" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHD_MISO1_H" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHD_MISO2_H" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_I" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_J" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_J" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_K" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_K" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_L" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_L" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_M" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_M" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_N" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_N" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_O" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_O" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO1_P" SIGIS="undef"/>
-        <PORT DIR="I" NAME="RHD_MISO2_P" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHD_MISO1_I_P" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHD_MISO1_I_N" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHD_MISO2_I_P" SIGIS="undef"/>

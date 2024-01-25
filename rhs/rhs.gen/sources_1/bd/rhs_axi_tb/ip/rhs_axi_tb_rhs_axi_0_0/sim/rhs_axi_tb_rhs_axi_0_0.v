@@ -115,7 +115,8 @@ module rhs_axi_tb_rhs_axi_0_0 (
   s00_axi_aclk,
   s00_axi_aresetn,
   M_AXIS_ACLK,
-  M_AXIS_ARESETN
+  M_AXIS_ARESETN,
+  rhs_record_trigger
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi AWADDR" *)
@@ -213,6 +214,7 @@ input wire M_AXIS_ACLK;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M_AXIS_ARESETN RST" *)
 input wire M_AXIS_ARESETN;
+input wire rhs_record_trigger;
 
   rhs_axi #(
     .WIDTH_OUT(128),
@@ -280,6 +282,7 @@ input wire M_AXIS_ARESETN;
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .M_AXIS_ACLK(M_AXIS_ACLK),
-    .M_AXIS_ARESETN(M_AXIS_ARESETN)
+    .M_AXIS_ARESETN(M_AXIS_ARESETN),
+    .rhs_record_trigger(rhs_record_trigger)
   );
 endmodule

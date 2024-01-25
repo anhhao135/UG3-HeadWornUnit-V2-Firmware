@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 23 09:17:53 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 17:13:04 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhs_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -34,6 +34,11 @@
     <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="rhs_axi_0_SCLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="rhs_axi_0" PORT="SCLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rhs_record_trigger" SIGIS="undef" SIGNAME="External_Ports_rhs_record_trigger">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rhs_axi_0" PORT="rhs_record_trigger"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -439,6 +444,11 @@
         <PORT DIR="I" NAME="M_AXIS_ARESETN" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_aresetn_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aresetn_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rhs_record_trigger" SIGIS="undef" SIGNAME="External_Ports_rhs_record_trigger">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rhs_record_trigger"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

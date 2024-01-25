@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE07733322A402F9A",
+      "boundary_crc": "0x652CC8C73D5CBA36",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../rhs.gen/sources_1/bd/rhs_axi_tb",
       "name": "rhs_axi_tb",
@@ -106,6 +106,9 @@
       },
       "SCLK": {
         "direction": "O"
+      },
+      "rhs_record_trigger": {
+        "direction": "I"
       }
     },
     "components": {
@@ -629,6 +632,9 @@
                 "value_src": "constant"
               }
             }
+          },
+          "rhs_record_trigger": {
+            "direction": "I"
           }
         }
       }
@@ -678,6 +684,12 @@
         "ports": [
           "rhs_axi_0/SCLK",
           "SCLK"
+        ]
+      },
+      "rhs_record_trigger_1": {
+        "ports": [
+          "rhs_record_trigger",
+          "rhs_axi_0/rhs_record_trigger"
         ]
       }
     }
