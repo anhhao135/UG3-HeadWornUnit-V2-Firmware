@@ -98,7 +98,9 @@ module rhs
 
     output wire [2:0]                        state_cable_delay_finder_out, //for fake data headstage slave to keep track
 
-    input wire                               rhs_record_trigger
+    input wire                               rhs_record_trigger,
+
+    output wire                              rhs_fifo_pass_out
 
     );
 
@@ -641,6 +643,8 @@ module rhs
     wire [63:0] data_fifo_out;
 
     reg rhs_fifo_pass = 0;
+
+    assign rhs_fifo_pass_out = rhs_fifo_pass || rhs_record_flag;
 
     wire SPI_running_250M;
     

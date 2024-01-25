@@ -94,7 +94,8 @@ module rhs_axi #
     input wire  M_AXIS_ACLK,
     input wire  M_AXIS_ARESETN,
 
-    input wire rhs_record_trigger
+    input wire rhs_record_trigger,
+    output wire rhs_fifo_pass_out
 
   );
 
@@ -168,7 +169,8 @@ module rhs_axi #
       .S_AXI_RRESP(s00_axi_rresp),
       .S_AXI_RVALID(s00_axi_rvalid),
       .S_AXI_RREADY(s00_axi_rready),
-      .rhs_record_trigger(rhs_record_trigger)
+      .rhs_record_trigger(rhs_record_trigger),
+      .rhs_fifo_pass_out(rhs_fifo_pass_out)
     );
 
   // Add user logic here

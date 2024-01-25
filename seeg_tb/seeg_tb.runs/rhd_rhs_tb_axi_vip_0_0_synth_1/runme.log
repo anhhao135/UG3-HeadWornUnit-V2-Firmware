@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source rhd_rhs_tb_axi_vip_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 454.387 ; gain = 157.809
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 454.695 ; gain = 159.449
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: rhd_rhs_tb_axi_vip_0_0
 INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 7a9549e84297e28f to dir: C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1.dcp to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0.dcp.
@@ -23,4 +23,4 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmw
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1_stub.v to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0_stub.v.
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.cache/ip/2023.1/7/a/7a9549e84297e28f/rhd_rhs_tb_axi_vip_0_1_stub.vhdl to C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/rhd_rhs_tb_axi_vip_0_0_synth_1/rhd_rhs_tb_axi_vip_0_0_stub.vhdl.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP rhd_rhs_tb_axi_vip_0_0, cache-ID = 7a9549e84297e28f.
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 17:16:43 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 25 12:16:36 2024...

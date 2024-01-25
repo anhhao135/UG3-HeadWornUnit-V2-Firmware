@@ -136,7 +136,7 @@ begin
   #1us;
 
   // (2) Set packet length
-  mtestWDataL = 32'h00000002; //packet length of 255, 8 Bytes for magic number + 4 Bytes/Channel * 32 Channels = 136 Bytes, total number 136 Bytes * [BATCH_SIZE] 
+  mtestWDataL = 32'h00000001; //packet length of 255, 8 Bytes for magic number + 4 Bytes/Channel * 32 Channels = 136 Bytes, total number 136 Bytes * [BATCH_SIZE] 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h8, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h8, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;

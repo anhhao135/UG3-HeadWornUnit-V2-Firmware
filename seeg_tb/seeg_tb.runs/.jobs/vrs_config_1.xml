@@ -17,14 +17,6 @@
 		<Parent Id="rhd_rhs_tb_axi_vip_0_0_synth_1"/>
 		<Parent Id="rhd_rhs_tb_seeg_0_0_synth_1"/>
 	</Run>
-	<Run Id="impl_1" LaunchDir="C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
-		<Parent Id="synth_1"/>
-		<Parent Id="fifo_generator_0_synth_1"/>
-		<Parent Id="xpm_cdc_1bit_xpm_cdc_0_0_synth_1"/>
-		<Parent Id="rhd_rhs_tb_axi_vip_0_1_synth_1"/>
-		<Parent Id="rhd_rhs_tb_axi_vip_0_0_synth_1"/>
-		<Parent Id="rhd_rhs_tb_seeg_0_0_synth_1"/>
-	</Run>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>

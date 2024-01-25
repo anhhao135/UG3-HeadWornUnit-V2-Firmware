@@ -61,6 +61,9 @@ module seeg #
     //! @end
 
 
+    /*
+
+
 
     //! @virtualbus M_AXIS_RHD @dir out an AXI-Stream Master interface to send the burst data
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
@@ -73,6 +76,8 @@ module seeg #
 		output wire		     M_AXIS_RHD_tlast,
     //! @end
 
+
+
     //! @virtualbus M_AXIS_RHS @dir out an AXI-Stream Master interface to send the burst data
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 		output wire [63:0] M_AXIS_RHS_tdata,
@@ -82,6 +87,19 @@ module seeg #
 		input wire		     M_AXIS_RHS_tready,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 		output wire		     M_AXIS_RHS_tlast,
+    //! @end
+
+    */
+
+    //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
+		output wire [63:0] M_AXIS_tdata,
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
+		output wire		     M_AXIS_tvalid,
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
+		input wire		     M_AXIS_tready,
+    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
+		output wire		     M_AXIS_tlast,
     //! @end
 
 
@@ -214,6 +232,53 @@ module seeg #
 
   );
 
+
+    wire [63:0] M_AXIS_RHD_tdata;
+    wire M_AXIS_RHD_tvalid;
+    wire M_AXIS_RHD_tready;
+    wire M_AXIS_RHD_tlast;
+
+    wire [63:0] M_AXIS_RHS_tdata;
+    wire M_AXIS_RHS_tvalid;
+    wire M_AXIS_RHS_tready;
+    wire M_AXIS_RHS_tlast;
+
+
+    wire rhs_fifo_pass_out;
+
+    reg [63:0] tdata;
+    reg tvalid;
+    reg tready;
+    reg tlast;
+    reg tready_rhd;
+    reg tready_rhs;
+
+    assign M_AXIS_tdata = tdata;
+    assign M_AXIS_tvalid = tvalid;
+    assign M_AXIS_tlast = tlast;
+    assign M_AXIS_RHD_tready = tready_rhd;
+    assign M_AXIS_RHS_tready = tready_rhs;
+
+    always @(posedge M_AXIS_ACLK) begin
+
+      tready <= M_AXIS_tready;
+
+      if (rhs_fifo_pass_out) begin
+        tdata <= M_AXIS_RHS_tdata;
+        tvalid <= M_AXIS_RHS_tvalid;
+        tready_rhs <= tready;
+        tlast <= M_AXIS_RHD_tlast;
+        tready_rhd <= 0;
+      end
+      else begin
+        tdata <= M_AXIS_RHD_tdata;
+        tvalid <= M_AXIS_RHD_tvalid;
+        tready_rhd <= tready;
+        tlast <= M_AXIS_RHD_tlast;
+        tready_rhs <= 0;
+      end
+    end
+
     wire RHD_MISO1_I;
     wire RHD_MISO2_I;
 
@@ -242,7 +307,7 @@ module seeg #
 
     wire rhs_record_trigger;
 
-    assign rhs_record_trigger = rhd_channel ==  2? 1 : 0;
+    assign rhs_record_trigger = rhd_channel ==  1? 1 : 0;
 
     rhd_diff_to_single rhdDiffToSingle(
     .MISO1_I_P(RHD_MISO1_I_P),
@@ -430,7 +495,8 @@ module seeg #
       .M_AXIS_tvalid(M_AXIS_RHS_tvalid),
       .M_AXIS_tready(M_AXIS_RHS_tready),
       .M_AXIS_tlast(M_AXIS_RHS_tlast),
-      .rhs_record_trigger(rhs_record_trigger)
+      .rhs_record_trigger(rhs_record_trigger),
+      .rhs_fifo_pass_out(rhs_fifo_pass_out)
     );
 
 

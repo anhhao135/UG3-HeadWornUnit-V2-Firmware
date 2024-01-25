@@ -59,6 +59,7 @@ module rhs_S00_AXI #
 	output wire [5:0] channel_out,
 	output wire [2:0] state_cable_delay_finder_out,
 	input wire rhs_record_trigger,
+	output wire rhs_fifo_pass_out,
 
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
@@ -652,7 +653,8 @@ rhs rhs
 	.stim_inf_pulse_mode(slv_reg7[10]),
 	.channel_out(channel_out),
 	.state_cable_delay_finder_out(state_cable_delay_finder_out),
-	.rhs_record_trigger(rhs_record_trigger)
+	.rhs_record_trigger(rhs_record_trigger),
+	.rhs_fifo_pass_out(rhs_fifo_pass_out)
 	);
 
 

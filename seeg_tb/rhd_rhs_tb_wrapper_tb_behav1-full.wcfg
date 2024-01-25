@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="105.800001 us"></ZoomEndTime>
-      <Cursor1Time time="1.000000 us"></Cursor1Time>
+      <ZoomStartTime time="758.135240 us"></ZoomStartTime>
+      <ZoomEndTime time="788.585241 us"></ZoomEndTime>
+      <Cursor1Time time="781.735240 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="319"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="103"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="22" />
+   <WVObjectSize size="27" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/clk_dma" type="logic">
       <obj_property name="ElementShortName">clk_dma</obj_property>
       <obj_property name="ObjectShortName">clk_dma</obj_property>
@@ -412,10 +412,6 @@
          <obj_property name="ElementShortName">state_cable_delay_finder[2:0]</obj_property>
          <obj_property name="ObjectShortName">state_cable_delay_finder[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_cable_delay_found_trigger_init" type="logic">
-         <obj_property name="ElementShortName">flag_cable_delay_found_trigger_init</obj_property>
-         <obj_property name="ObjectShortName">flag_cable_delay_found_trigger_init</obj_property>
-      </wvobject>
       <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_cable_delay_low_found" type="logic">
          <obj_property name="ElementShortName">flag_cable_delay_low_found</obj_property>
          <obj_property name="ObjectShortName">flag_cable_delay_low_found</obj_property>
@@ -492,5 +488,25 @@
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhs_record_trigger" type="logic">
       <obj_property name="ElementShortName">rhs_record_trigger</obj_property>
       <obj_property name="ObjectShortName">rhs_record_trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_channel16_stream_250M" type="logic">
+      <obj_property name="ElementShortName">flag_channel16_stream_250M</obj_property>
+      <obj_property name="ObjectShortName">flag_channel16_stream_250M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/valid_fifo_out" type="logic">
+      <obj_property name="ElementShortName">valid_fifo_out</obj_property>
+      <obj_property name="ObjectShortName">valid_fifo_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_lastBatch_250M" type="logic">
+      <obj_property name="ElementShortName">flag_lastBatch_250M</obj_property>
+      <obj_property name="ObjectShortName">flag_lastBatch_250M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhs_record_flag" type="logic">
+      <obj_property name="ElementShortName">rhs_record_flag</obj_property>
+      <obj_property name="ObjectShortName">rhs_record_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhs_fifo_pass" type="logic">
+      <obj_property name="ElementShortName">rhs_fifo_pass</obj_property>
+      <obj_property name="ObjectShortName">rhs_fifo_pass</obj_property>
    </wvobject>
 </wave_config>
