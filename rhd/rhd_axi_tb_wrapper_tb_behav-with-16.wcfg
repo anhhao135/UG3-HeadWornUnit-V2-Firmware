@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="33.352000 us"></ZoomStartTime>
-      <ZoomEndTime time="58.172001 us"></ZoomEndTime>
-      <Cursor1Time time="37.872000 us"></Cursor1Time>
+      <ZoomStartTime time="4.297742 us"></ZoomStartTime>
+      <ZoomEndTime time="3,474.297743 us"></ZoomEndTime>
+      <Cursor1Time time="1,094.297742 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="161"></ValueColumnWidth>
+      <ValueColumnWidth column_width="153"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="54" />
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mst_agent_verbosity" type="array">
       <obj_property name="ElementShortName">mst_agent_verbosity[31:0]</obj_property>
       <obj_property name="ObjectShortName">mst_agent_verbosity[31:0]</obj_property>
@@ -43,22 +43,6 @@
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/aresetn_out" type="logic">
       <obj_property name="ElementShortName">aresetn_out</obj_property>
       <obj_property name="ObjectShortName">aresetn_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/CS" type="logic">
-      <obj_property name="ElementShortName">CS</obj_property>
-      <obj_property name="ObjectShortName">CS</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/SCLK" type="logic">
-      <obj_property name="ElementShortName">SCLK</obj_property>
-      <obj_property name="ObjectShortName">SCLK</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI1" type="logic">
-      <obj_property name="ElementShortName">MOSI1</obj_property>
-      <obj_property name="ObjectShortName">MOSI1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI2" type="logic">
-      <obj_property name="ElementShortName">MOSI2</obj_property>
-      <obj_property name="ObjectShortName">MOSI2</obj_property>
    </wvobject>
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/result_slave" type="array">
       <obj_property name="ElementShortName">result_slave[31:0]</obj_property>
@@ -126,15 +110,6 @@
       <obj_property name="ElementShortName">tlast_cnt[4:0]</obj_property>
       <obj_property name="ObjectShortName">tlast_cnt[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/J1/channel" type="array">
-      <obj_property name="ElementShortName">channel[5:0]</obj_property>
-      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/A1/channel" type="array">
-      <obj_property name="ElementShortName">channel[5:0]</obj_property>
-      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/A1/miso_out" type="logic">
       <obj_property name="ElementShortName">miso_out</obj_property>
       <obj_property name="ObjectShortName">miso_out</obj_property>
@@ -185,5 +160,95 @@
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/init_en" type="logic">
+      <obj_property name="ElementShortName">init_en</obj_property>
+      <obj_property name="ObjectShortName">init_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/A1/counter_0_31" type="array">
+      <obj_property name="ElementShortName">counter_0_31[16:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_0_31[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/A1/counter_32_63" type="array">
+      <obj_property name="ElementShortName">counter_32_63[16:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_32_63[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_A1" type="array">
+      <obj_property name="ElementShortName">result_A1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_A1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_A1" type="array">
+      <obj_property name="ElementShortName">result_DDR_A1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_A1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/init_mode_out" type="logic">
+      <obj_property name="ElementShortName">init_mode_out</obj_property>
+      <obj_property name="ObjectShortName">init_mode_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/state_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/phase_select" type="array">
+      <obj_property name="ElementShortName">phase_select[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_select[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/phase_select_low" type="array">
+      <obj_property name="ElementShortName">phase_select_low[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_select_low[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/MOSI_cmd_selected_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">MOSI_cmd_selected_cable_delay_finder[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSI_cmd_selected_cable_delay_finder[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/flag_cable_delay_found" type="logic">
+      <obj_property name="ElementShortName">flag_cable_delay_found</obj_property>
+      <obj_property name="ObjectShortName">flag_cable_delay_found</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/flag_cable_delay_low_found" type="logic">
+      <obj_property name="ElementShortName">flag_cable_delay_low_found</obj_property>
+      <obj_property name="ObjectShortName">flag_cable_delay_low_found</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/INTAN_reg" type="array">
+      <obj_property name="ElementShortName">INTAN_reg[39:0]</obj_property>
+      <obj_property name="ObjectShortName">INTAN_reg[39:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/INTAN_expected" type="array">
+      <obj_property name="ElementShortName">INTAN_expected[39:0]</obj_property>
+      <obj_property name="ObjectShortName">INTAN_expected[39:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/CS" type="logic">
+      <obj_property name="ElementShortName">CS</obj_property>
+      <obj_property name="ObjectShortName">CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI1" type="logic">
+      <obj_property name="ElementShortName">MOSI1</obj_property>
+      <obj_property name="ObjectShortName">MOSI1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/MOSI2" type="logic">
+      <obj_property name="ElementShortName">MOSI2</obj_property>
+      <obj_property name="ObjectShortName">MOSI2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/state_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/J1/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/A1/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/MOSI_cmd" type="array">
+      <obj_property name="ElementShortName">MOSI_cmd[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSI_cmd[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>

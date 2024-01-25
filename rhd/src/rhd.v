@@ -99,7 +99,11 @@ module rhd
     input wire [3:0]                         delay_P,
 
 
-    output wire [5:0]                        channelOut
+
+
+    output wire [5:0]                        channelOut,
+    output wire [3:0]                        state_cable_delay_finder_out,
+    output wire                              init_mode_out
 
 
     );
@@ -182,10 +186,31 @@ module rhd
     // [Channel/Batch/Init]
     reg             SPI_running;
     reg             init_mode;
+    assign          init_mode_out = init_mode;
     reg [15:0] 		timestamp;			 
     reg [5:0] 		channel;  // varies from 0-34 (amplfier channels 0-31, plus 3 auxiliary commands)
 
     assign channelOut = channel;
+
+
+
+    localparam
+        I_LOAD = 0,
+        I_SEND_N_LOAD = 1,
+        N_SEND_T_LOAD = 2,
+        I_GET_T_SEND_A_LOAD = 3,
+        N_GET_A_SEND_N_LOAD = 4,
+        T_GET_N_SEND = 5,
+        A_GET = 6,
+        N_GET = 7,
+        DONE = 8;
+
+    reg [3:0] state_cable_delay_finder = I_LOAD;
+    reg [3:0] phase_select;
+    reg [3:0] phase_select_low;
+
+    assign state_cable_delay_finder_out = state_cable_delay_finder;
+
 
     wire            flag_lastBatch;
     wire            flag_lastchannel;
@@ -399,207 +424,207 @@ module rhd
     // MISO phase selectors (to compensate for headstage cable delays)
 
     MISO_falling_edge MISO_falling_edge_1 (
-        .phase_select(delay_A), .MISO4x(in4x_A1), .MISO(in_A1));	
+        .phase_select(phase_select), .MISO4x(in4x_A1), .MISO(in_A1));	
 
     MISO_falling_edge MISO_falling_edge_2 (
-        .phase_select(delay_A), .MISO4x(in4x_A2), .MISO(in_A2));	
+        .phase_select(phase_select), .MISO4x(in4x_A2), .MISO(in_A2));	
 
     MISO_falling_edge MISO_falling_edge_3 (
-        .phase_select(delay_B), .MISO4x(in4x_B1), .MISO(in_B1));	
+        .phase_select(phase_select), .MISO4x(in4x_B1), .MISO(in_B1));	
 
     MISO_falling_edge MISO_falling_edge_4 (
-        .phase_select(delay_B), .MISO4x(in4x_B2), .MISO(in_B2));	
+        .phase_select(phase_select), .MISO4x(in4x_B2), .MISO(in_B2));	
     
     MISO_falling_edge MISO_falling_edge_5 (
-        .phase_select(delay_C), .MISO4x(in4x_C1), .MISO(in_C1));	
+        .phase_select(phase_select), .MISO4x(in4x_C1), .MISO(in_C1));	
 
     MISO_falling_edge MISO_falling_edge_6 (
-        .phase_select(delay_C), .MISO4x(in4x_C2), .MISO(in_C2));	
+        .phase_select(phase_select), .MISO4x(in4x_C2), .MISO(in_C2));	
     
     MISO_falling_edge MISO_falling_edge_7 (
-        .phase_select(delay_D), .MISO4x(in4x_D1), .MISO(in_D1));
+        .phase_select(phase_select), .MISO4x(in4x_D1), .MISO(in_D1));
 
     MISO_falling_edge MISO_falling_edge_8 (
-        .phase_select(delay_D), .MISO4x(in4x_D2), .MISO(in_D2));	
+        .phase_select(phase_select), .MISO4x(in4x_D2), .MISO(in_D2));	
 
     MISO_falling_edge MISO_falling_edge_9 (
-        .phase_select(delay_E), .MISO4x(in4x_E1), .MISO(in_E1));	
+        .phase_select(phase_select), .MISO4x(in4x_E1), .MISO(in_E1));	
 
     MISO_falling_edge MISO_falling_edge_10 (
-        .phase_select(delay_E), .MISO4x(in4x_E2), .MISO(in_E2));	
+        .phase_select(phase_select), .MISO4x(in4x_E2), .MISO(in_E2));	
 
     MISO_falling_edge MISO_falling_edge_11 (
-        .phase_select(delay_F), .MISO4x(in4x_F1), .MISO(in_F1));	
+        .phase_select(phase_select), .MISO4x(in4x_F1), .MISO(in_F1));	
 
     MISO_falling_edge MISO_falling_edge_12 (
-        .phase_select(delay_F), .MISO4x(in4x_F2), .MISO(in_F2));	
+        .phase_select(phase_select), .MISO4x(in4x_F2), .MISO(in_F2));	
     
     MISO_falling_edge MISO_falling_edge_13 (
-        .phase_select(delay_G), .MISO4x(in4x_G1), .MISO(in_G1));	
+        .phase_select(phase_select), .MISO4x(in4x_G1), .MISO(in_G1));	
 
     MISO_falling_edge MISO_falling_edge_14 (
-        .phase_select(delay_G), .MISO4x(in4x_G2), .MISO(in_G2));	
+        .phase_select(phase_select), .MISO4x(in4x_G2), .MISO(in_G2));	
     
     MISO_falling_edge MISO_falling_edge_15 (
-        .phase_select(delay_H), .MISO4x(in4x_H1), .MISO(in_H1));
+        .phase_select(phase_select), .MISO4x(in4x_H1), .MISO(in_H1));
 
     MISO_falling_edge MISO_falling_edge_16 (
-        .phase_select(delay_H), .MISO4x(in4x_H2), .MISO(in_H2));	
+        .phase_select(phase_select), .MISO4x(in4x_H2), .MISO(in_H2));	
 
     MISO_falling_edge MISO_falling_edge_17 (
-        .phase_select(delay_I), .MISO4x(in4x_I1), .MISO(in_I1));	
+        .phase_select(phase_select), .MISO4x(in4x_I1), .MISO(in_I1));	
 
     MISO_falling_edge MISO_falling_edge_18 (
-        .phase_select(delay_I), .MISO4x(in4x_I2), .MISO(in_I2));	
+        .phase_select(phase_select), .MISO4x(in4x_I2), .MISO(in_I2));	
 
     MISO_falling_edge MISO_falling_edge_19 (
-        .phase_select(delay_J), .MISO4x(in4x_J1), .MISO(in_J1));	
+        .phase_select(phase_select), .MISO4x(in4x_J1), .MISO(in_J1));	
 
     MISO_falling_edge MISO_falling_edge_20 (
-        .phase_select(delay_J), .MISO4x(in4x_J2), .MISO(in_J2));	
+        .phase_select(phase_select), .MISO4x(in4x_J2), .MISO(in_J2));	
     
     MISO_falling_edge MISO_falling_edge_21 (
-        .phase_select(delay_K), .MISO4x(in4x_K1), .MISO(in_K1));	
+        .phase_select(phase_select), .MISO4x(in4x_K1), .MISO(in_K1));	
 
     MISO_falling_edge MISO_falling_edge_22 (
-        .phase_select(delay_K), .MISO4x(in4x_K2), .MISO(in_K2));	
+        .phase_select(phase_select), .MISO4x(in4x_K2), .MISO(in_K2));	
     
     MISO_falling_edge MISO_falling_edge_23 (
-        .phase_select(delay_L), .MISO4x(in4x_L1), .MISO(in_L1));
+        .phase_select(phase_select), .MISO4x(in4x_L1), .MISO(in_L1));
 
     MISO_falling_edge MISO_falling_edge_24 (
-        .phase_select(delay_L), .MISO4x(in4x_L2), .MISO(in_L2));	
+        .phase_select(phase_select), .MISO4x(in4x_L2), .MISO(in_L2));	
 
     MISO_falling_edge MISO_falling_edge_25 (
-        .phase_select(delay_M), .MISO4x(in4x_M1), .MISO(in_M1));	
+        .phase_select(phase_select), .MISO4x(in4x_M1), .MISO(in_M1));	
 
     MISO_falling_edge MISO_falling_edge_26 (
-        .phase_select(delay_M), .MISO4x(in4x_M2), .MISO(in_M2));	
+        .phase_select(phase_select), .MISO4x(in4x_M2), .MISO(in_M2));	
 
     MISO_falling_edge MISO_falling_edge_27 (
-        .phase_select(delay_N), .MISO4x(in4x_N1), .MISO(in_N1));	
+        .phase_select(phase_select), .MISO4x(in4x_N1), .MISO(in_N1));	
 
     MISO_falling_edge MISO_falling_edge_28 (
-        .phase_select(delay_N), .MISO4x(in4x_N2), .MISO(in_N2));	
+        .phase_select(phase_select), .MISO4x(in4x_N2), .MISO(in_N2));	
     
     MISO_falling_edge MISO_falling_edge_29 (
-        .phase_select(delay_O), .MISO4x(in4x_O1), .MISO(in_O1));	
+        .phase_select(phase_select), .MISO4x(in4x_O1), .MISO(in_O1));	
 
     MISO_falling_edge MISO_falling_edge_30 (
-        .phase_select(delay_O), .MISO4x(in4x_O2), .MISO(in_O2));	
+        .phase_select(phase_select), .MISO4x(in4x_O2), .MISO(in_O2));	
     
     MISO_falling_edge MISO_falling_edge_31 (
-        .phase_select(delay_P), .MISO4x(in4x_P1), .MISO(in_P1));
+        .phase_select(phase_select), .MISO4x(in4x_P1), .MISO(in_P1));
 
     MISO_falling_edge MISO_falling_edge_32 (
-        .phase_select(delay_P), .MISO4x(in4x_P2), .MISO(in_P2));
-
-
+        .phase_select(phase_select), .MISO4x(in4x_P2), .MISO(in_P2));
 
 
 
 
     MISO_rising_edge MISO_rising_edge_1 (
-        .phase_select(delay_A), .MISO4x(in4x_A1), .MISO(in_DDR_A1));	
+        .phase_select(phase_select), .MISO4x(in4x_A1), .MISO(in_DDR_A1));	
 
     MISO_rising_edge MISO_rising_edge_2 (
-        .phase_select(delay_A), .MISO4x(in4x_A2), .MISO(in_DDR_A2));	
+        .phase_select(phase_select), .MISO4x(in4x_A2), .MISO(in_DDR_A2));	
 
     MISO_rising_edge MISO_rising_edge_3 (
-        .phase_select(delay_B), .MISO4x(in4x_B1), .MISO(in_DDR_B1));	
+        .phase_select(phase_select), .MISO4x(in4x_B1), .MISO(in_DDR_B1));	
 
     MISO_rising_edge MISO_rising_edge_4 (
-        .phase_select(delay_B), .MISO4x(in4x_B2), .MISO(in_DDR_B2));
-
+        .phase_select(phase_select), .MISO4x(in4x_B2), .MISO(in_DDR_B2));	
+    
     MISO_rising_edge MISO_rising_edge_5 (
-        .phase_select(delay_C), .MISO4x(in4x_C1), .MISO(in_DDR_C1));	
+        .phase_select(phase_select), .MISO4x(in4x_C1), .MISO(in_DDR_C1));	
 
     MISO_rising_edge MISO_rising_edge_6 (
-        .phase_select(delay_C), .MISO4x(in4x_C2), .MISO(in_DDR_C2));	
-
+        .phase_select(phase_select), .MISO4x(in4x_C2), .MISO(in_DDR_C2));	
+    
     MISO_rising_edge MISO_rising_edge_7 (
-        .phase_select(delay_D), .MISO4x(in4x_D1), .MISO(in_DDR_D1));	
+        .phase_select(phase_select), .MISO4x(in4x_D1), .MISO(in_DDR_D1));
 
     MISO_rising_edge MISO_rising_edge_8 (
-        .phase_select(delay_D), .MISO4x(in4x_D2), .MISO(in_DDR_D2));
+        .phase_select(phase_select), .MISO4x(in4x_D2), .MISO(in_DDR_D2));	
 
     MISO_rising_edge MISO_rising_edge_9 (
-        .phase_select(delay_E), .MISO4x(in4x_E1), .MISO(in_DDR_E1));	
+        .phase_select(phase_select), .MISO4x(in4x_E1), .MISO(in_DDR_E1));	
 
     MISO_rising_edge MISO_rising_edge_10 (
-        .phase_select(delay_E), .MISO4x(in4x_E2), .MISO(in_DDR_E2));	
+        .phase_select(phase_select), .MISO4x(in4x_E2), .MISO(in_DDR_E2));	
 
     MISO_rising_edge MISO_rising_edge_11 (
-        .phase_select(delay_F), .MISO4x(in4x_F1), .MISO(in_DDR_F1));	
+        .phase_select(phase_select), .MISO4x(in4x_F1), .MISO(in_DDR_F1));	
 
     MISO_rising_edge MISO_rising_edge_12 (
-        .phase_select(delay_F), .MISO4x(in4x_F2), .MISO(in_DDR_F2));
-
+        .phase_select(phase_select), .MISO4x(in4x_F2), .MISO(in_DDR_F2));	
+    
     MISO_rising_edge MISO_rising_edge_13 (
-        .phase_select(delay_G), .MISO4x(in4x_G1), .MISO(in_DDR_G1));	
+        .phase_select(phase_select), .MISO4x(in4x_G1), .MISO(in_DDR_G1));	
 
     MISO_rising_edge MISO_rising_edge_14 (
-        .phase_select(delay_G), .MISO4x(in4x_G2), .MISO(in_DDR_G2));	
-
+        .phase_select(phase_select), .MISO4x(in4x_G2), .MISO(in_DDR_G2));	
+    
     MISO_rising_edge MISO_rising_edge_15 (
-        .phase_select(delay_H), .MISO4x(in4x_H1), .MISO(in_DDR_H1));	
+        .phase_select(phase_select), .MISO4x(in4x_H1), .MISO(in_DDR_H1));
 
     MISO_rising_edge MISO_rising_edge_16 (
-        .phase_select(delay_H), .MISO4x(in4x_H2), .MISO(in_DDR_H2));
+        .phase_select(phase_select), .MISO4x(in4x_H2), .MISO(in_DDR_H2));	
 
     MISO_rising_edge MISO_rising_edge_17 (
-        .phase_select(delay_I), .MISO4x(in4x_I1), .MISO(in_DDR_I1));	
+        .phase_select(phase_select), .MISO4x(in4x_I1), .MISO(in_DDR_I1));	
 
     MISO_rising_edge MISO_rising_edge_18 (
-        .phase_select(delay_I), .MISO4x(in4x_I2), .MISO(in_DDR_I2));	
+        .phase_select(phase_select), .MISO4x(in4x_I2), .MISO(in_DDR_I2));	
 
     MISO_rising_edge MISO_rising_edge_19 (
-        .phase_select(delay_J), .MISO4x(in4x_J1), .MISO(in_DDR_J1));	
+        .phase_select(phase_select), .MISO4x(in4x_J1), .MISO(in_DDR_J1));	
 
     MISO_rising_edge MISO_rising_edge_20 (
-        .phase_select(delay_J), .MISO4x(in4x_J2), .MISO(in_DDR_J2));	
+        .phase_select(phase_select), .MISO4x(in4x_J2), .MISO(in_DDR_J2));	
     
     MISO_rising_edge MISO_rising_edge_21 (
-        .phase_select(delay_K), .MISO4x(in4x_K1), .MISO(in_DDR_K1));	
+        .phase_select(phase_select), .MISO4x(in4x_K1), .MISO(in_DDR_K1));	
 
     MISO_rising_edge MISO_rising_edge_22 (
-        .phase_select(delay_K), .MISO4x(in4x_K2), .MISO(in_DDR_K2));	
+        .phase_select(phase_select), .MISO4x(in4x_K2), .MISO(in_DDR_K2));	
     
     MISO_rising_edge MISO_rising_edge_23 (
-        .phase_select(delay_L), .MISO4x(in4x_L1), .MISO(in_DDR_L1));
+        .phase_select(phase_select), .MISO4x(in4x_L1), .MISO(in_DDR_L1));
 
     MISO_rising_edge MISO_rising_edge_24 (
-        .phase_select(delay_L), .MISO4x(in4x_L2), .MISO(in_DDR_L2));	
+        .phase_select(phase_select), .MISO4x(in4x_L2), .MISO(in_DDR_L2));	
 
     MISO_rising_edge MISO_rising_edge_25 (
-        .phase_select(delay_M), .MISO4x(in4x_M1), .MISO(in_DDR_M1));	
+        .phase_select(phase_select), .MISO4x(in4x_M1), .MISO(in_DDR_M1));	
 
     MISO_rising_edge MISO_rising_edge_26 (
-        .phase_select(delay_M), .MISO4x(in4x_M2), .MISO(in_DDR_M2));	
+        .phase_select(phase_select), .MISO4x(in4x_M2), .MISO(in_DDR_M2));	
 
     MISO_rising_edge MISO_rising_edge_27 (
-        .phase_select(delay_N), .MISO4x(in4x_N1), .MISO(in_DDR_N1));	
+        .phase_select(phase_select), .MISO4x(in4x_N1), .MISO(in_DDR_N1));	
 
     MISO_rising_edge MISO_rising_edge_28 (
-        .phase_select(delay_N), .MISO4x(in4x_N2), .MISO(in_DDR_N2));	
+        .phase_select(phase_select), .MISO4x(in4x_N2), .MISO(in_DDR_N2));	
     
     MISO_rising_edge MISO_rising_edge_29 (
-        .phase_select(delay_O), .MISO4x(in4x_O1), .MISO(in_DDR_O1));	
+        .phase_select(phase_select), .MISO4x(in4x_O1), .MISO(in_DDR_O1));	
 
     MISO_rising_edge MISO_rising_edge_30 (
-        .phase_select(delay_O), .MISO4x(in4x_O2), .MISO(in_DDR_O2));	
+        .phase_select(phase_select), .MISO4x(in4x_O2), .MISO(in_DDR_O2));	
     
     MISO_rising_edge MISO_rising_edge_31 (
-        .phase_select(delay_P), .MISO4x(in4x_P1), .MISO(in_DDR_P1));
+        .phase_select(phase_select), .MISO4x(in4x_P1), .MISO(in_DDR_P1));
 
     MISO_rising_edge MISO_rising_edge_32 (
-        .phase_select(delay_P), .MISO4x(in4x_P2), .MISO(in_DDR_P2));
+        .phase_select(phase_select), .MISO4x(in4x_P2), .MISO(in_DDR_P2));
+
 
 
 
 	// [MOSI] - All chips are sharing the same MOSI
     reg [15:0] 		MOSI_cmd;
     wire [15:0] 	MOSI_cmd_selected;
+    reg [15:0] MOSI_cmd_selected_cable_delay_finder;
 
     // `command selector` controls the MOSI commands.
     // It supports 
@@ -792,6 +817,94 @@ module rhd
         ms_cs_l    = 79,
         ms_cs_m    = 80;
 
+
+
+    // Cable day finder state machine
+
+
+    reg [39:0] INTAN_reg = 0;
+    reg [39:0] INTAN_expected = 40'b0100100101001110010101000100000101001110; //"INTAN"
+    reg flag_cable_delay_found = 0;
+    reg flag_cable_delay_low_found = 0;
+    reg flag_cable_delay_found_rising_edge_previous = 0;
+
+    always @(posedge clk) begin
+        if (!resetn) begin
+            flag_cable_delay_found <= 0;
+            flag_cable_delay_low_found <= 0;
+            MOSI_cmd_selected_cable_delay_finder <= 0;
+            state_cable_delay_finder <= I_LOAD;
+            phase_select <= 0;
+            INTAN_reg <= 0;
+        end 
+        else begin
+            case (main_state) 
+                ms_wait: begin
+                    MOSI_cmd_selected_cable_delay_finder <= 0;
+                end
+                ms_cs_l: begin
+                    case (state_cable_delay_finder) //INTAN IS STORED FROM REG 40-44
+                        I_LOAD: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd40, 8'd0 }; //read from register 40 load
+                            state_cable_delay_finder <= I_SEND_N_LOAD;
+                        end
+                        I_SEND_N_LOAD: begin //in this state, the read from register 40 has been sent on the MOSI line
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd41, 8'd0 };
+                            state_cable_delay_finder <= N_SEND_T_LOAD;
+                        end
+                        N_SEND_T_LOAD: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd42, 8'd0 };
+                            state_cable_delay_finder <= I_GET_T_SEND_A_LOAD;
+                        end
+                        I_GET_T_SEND_A_LOAD: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd43, 8'd0 };
+                            INTAN_reg[39:32] <= result_A1[7:0];
+                            state_cable_delay_finder <= N_GET_A_SEND_N_LOAD;
+                        end
+                        N_GET_A_SEND_N_LOAD: begin
+                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd44, 8'd0 };
+                            INTAN_reg[31:24] <= result_A1[7:0];
+                            state_cable_delay_finder <= T_GET_N_SEND;
+                        end
+                        T_GET_N_SEND: begin
+                            MOSI_cmd_selected_cable_delay_finder <= 0;
+                            INTAN_reg[23:16] <= result_A1[7:0];
+                            state_cable_delay_finder <= A_GET;
+                        end
+                        A_GET: begin
+                            MOSI_cmd_selected_cable_delay_finder <= 0;
+                            INTAN_reg[15:8] <= result_A1[7:0];
+                            state_cable_delay_finder <= N_GET;
+                        end
+                        N_GET: begin
+                            INTAN_reg[7:0] <= result_A1[7:0];
+                            if (INTAN_reg == INTAN_expected && !flag_cable_delay_low_found) begin
+                                state_cable_delay_finder = I_LOAD;
+                                flag_cable_delay_low_found = 1;
+                                phase_select_low = phase_select;
+                                phase_select = phase_select + 1;
+                            end
+                            else if (INTAN_reg != INTAN_expected && flag_cable_delay_low_found) begin
+                                state_cable_delay_finder = DONE;
+                                phase_select = (phase_select_low + phase_select) / 2;
+                            end
+                            else begin
+                                phase_select = phase_select + 1;
+                                state_cable_delay_finder <= I_LOAD;
+                            end
+                            MOSI_cmd_selected_cable_delay_finder <= 0;
+                        end
+                        DONE: begin
+                            flag_cable_delay_found <= 1;
+                            MOSI_cmd_selected_cable_delay_finder <= 0;
+                        end
+                    endcase
+                end
+            endcase
+        end
+    end
+
+
      
                           
     always @(posedge clk) begin
@@ -846,7 +959,13 @@ module rhd
                 end
     
                 ms_cs_n: begin
-                    MOSI_cmd <= MOSI_cmd_selected;
+
+
+                    if (flag_cable_delay_found)
+                        MOSI_cmd <= MOSI_cmd_selected;
+                    else
+                        MOSI_cmd <= MOSI_cmd_selected_cable_delay_finder;
+
                     CS_b <= 1'b1;
                     main_state <= ms_clk1_a;
                     SPI_running <= 1'b1;
@@ -2712,8 +2831,13 @@ module rhd
                         channel <= 0;
                         init_mode <= 1'b0;
                     end else begin
-                        channel <= channel + 1;
+                        if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0)
+                            channel <= 0;
+                        else if (flag_cable_delay_found)
+                            channel <= channel + 1;
                     end
+
+                    flag_cable_delay_found_rising_edge_previous = flag_cable_delay_found;
 
                     if (flag_lastchannel && flag_lastBatch && !SPI_ONOFF) begin
                         main_state <= ms_wait;

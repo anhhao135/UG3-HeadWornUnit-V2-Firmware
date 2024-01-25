@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 11:54:14 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 25 15:08:47 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26i:part0:1.4" DEVICE="xck26" NAME="rhd_axi_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LVI"/>
 
@@ -438,6 +438,7 @@
         <PORT DIR="I" NAME="MISO2_P" SIGIS="undef"/>
         <PORT DIR="I" NAME="irq1" SIGIS="undef"/>
         <PORT DIR="O" NAME="FIFO_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="5" NAME="channelOut" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="63" NAME="M_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="M_AXIS_tvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="M_AXIS_tready" SIGIS="undef"/>

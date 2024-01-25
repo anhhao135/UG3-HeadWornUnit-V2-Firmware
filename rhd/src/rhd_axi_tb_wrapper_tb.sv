@@ -142,6 +142,7 @@ begin
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   #0.5ms;
+  /*
 
     // (3) Start acqusition (w/o amp fast settle)
   mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
@@ -156,6 +157,8 @@ begin
   mst_agent_0.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   COMPARE_DATA(mtestWDataL, mtestRDataL);
   #0.5ms;
+
+  */
 
 
   /*

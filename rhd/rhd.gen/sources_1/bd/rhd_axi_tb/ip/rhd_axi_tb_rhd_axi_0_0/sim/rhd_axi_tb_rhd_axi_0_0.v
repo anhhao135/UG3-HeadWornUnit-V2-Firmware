@@ -112,6 +112,7 @@ module rhd_axi_tb_rhd_axi_0_0 (
   MISO2_P,
   irq1,
   FIFO_rstn,
+  channelOut,
   M_AXIS_tdata,
   M_AXIS_tvalid,
   M_AXIS_tready,
@@ -202,6 +203,7 @@ input wire irq1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIFO_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FIFO_rstn RST" *)
 output wire FIFO_rstn;
+output wire [5 : 0] channelOut;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 output wire [63 : 0] M_AXIS_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
@@ -287,6 +289,7 @@ input wire M_AXIS_ARESETN;
     .MISO2_P(MISO2_P),
     .irq1(irq1),
     .FIFO_rstn(FIFO_rstn),
+    .channelOut(channelOut),
     .M_AXIS_tdata(M_AXIS_tdata),
     .M_AXIS_tvalid(M_AXIS_tvalid),
     .M_AXIS_tready(M_AXIS_tready),

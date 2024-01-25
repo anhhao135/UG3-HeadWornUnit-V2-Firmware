@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.996513",
-   "Default View_TopLeft":"-214,3",
+   "Default View_ScaleFactor":"0.613426",
+   "Default View_TopLeft":"-636,-194",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -19,9 +19,9 @@ preplace netloc aclk_1 1 0 2 40 750 NJ
 preplace netloc aclk_out_1 1 0 2 20J 790 NJ
 preplace netloc aresetn_1 1 0 2 50 770 NJ
 preplace netloc aresetn_out_1 1 0 2 NJ 810 NJ
-preplace netloc rhd_axi_0_CS_b 1 2 1 580J 380n
-preplace netloc rhd_axi_0_MOSI1 1 2 1 580J 440n
-preplace netloc rhd_axi_0_MOSI2 1 2 1 NJ 470
+preplace netloc rhd_axi_0_CS_b 1 2 1 590J 380n
+preplace netloc rhd_axi_0_MOSI1 1 2 1 NJ 440
+preplace netloc rhd_axi_0_MOSI2 1 2 1 590J 460n
 preplace netloc rhd_axi_0_SCLK 1 2 1 590J 410n
 preplace netloc axi_vip_0_M_AXI 1 1 1 N 70
 levelinfo -pg 1 0 150 430 610

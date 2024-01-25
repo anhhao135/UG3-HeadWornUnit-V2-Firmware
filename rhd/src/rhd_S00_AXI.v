@@ -199,6 +199,8 @@ wire MISO1_P_SW;
 wire MISO2_P_SW;
 
 wire [5:0] channel;
+wire init_mode_out;
+wire [3:0] state_cable_delay_finder;
 
 assign channelOut = channel;
 
@@ -240,7 +242,9 @@ rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
 	.MISO2_O(MISO2_O_LOOP),
 	.MISO1_P(MISO1_P_LOOP),
 	.MISO2_P(MISO2_P_LOOP),
-	.channel(channel)
+	.channel(channel),
+	.init_en(init_mode_out),
+	.state_cable_delay_finder(state_cable_delay_finder)
 );
 
 
@@ -713,7 +717,9 @@ rhd rhd
 	.delay_N(slv_reg1[23:20]),
 	.delay_O(slv_reg1[27:24]),
 	.delay_P(slv_reg1[31:28]),
-	.channelOut(channel)
+	.channelOut(channel),
+	.init_mode_out(init_mode_out),
+	.state_cable_delay_finder_out(state_cable_delay_finder)
 	);
 
 

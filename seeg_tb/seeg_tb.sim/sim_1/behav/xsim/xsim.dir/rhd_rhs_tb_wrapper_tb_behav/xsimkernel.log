@@ -2,3 +2,6 @@ Running: xsim.dir/rhd_rhs_tb_wrapper_tb_behav/xsimk.exe -simmode gui -wdb rhd_rh
 Design successfully loaded
 Design Loading Memory Usage: 12608 KB (Peak: 12608 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 29436 KB (Peak: 29436 KB)
+Simulation CPU Usage: 45764 ms
