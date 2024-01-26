@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4.297742 us"></ZoomStartTime>
-      <ZoomEndTime time="3,474.297743 us"></ZoomEndTime>
-      <Cursor1Time time="1,094.297742 us"></Cursor1Time>
+      <ZoomStartTime time="0.959000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,205.959001 us"></ZoomEndTime>
+      <Cursor1Time time="511.959000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="153"></ValueColumnWidth>
+      <NameColumnWidth column_width="211"></NameColumnWidth>
+      <ValueColumnWidth column_width="288"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="54" />
+   <WVObjectSize size="59" />
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/mst_agent_verbosity" type="array">
       <obj_property name="ElementShortName">mst_agent_verbosity[31:0]</obj_property>
       <obj_property name="ObjectShortName">mst_agent_verbosity[31:0]</obj_property>
@@ -149,6 +149,36 @@
       <obj_property name="ObjectShortName">result_DDR_A1[15:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_A2" type="array">
+      <obj_property name="ElementShortName">result_A2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_A2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_A2" type="array">
+      <obj_property name="ElementShortName">result_DDR_A2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_A2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_B1" type="array">
+      <obj_property name="ElementShortName">result_B1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_B1[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_B1" type="array">
+      <obj_property name="ElementShortName">result_DDR_B1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_B1[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_B2" type="array">
+      <obj_property name="ElementShortName">result_B2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_B2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_B2" type="array">
+      <obj_property name="ElementShortName">result_DDR_B2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">result_DDR_B2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/MISO1_A" type="logic">
       <obj_property name="ElementShortName">MISO1_A</obj_property>
       <obj_property name="ObjectShortName">MISO1_A</obj_property>
@@ -172,14 +202,6 @@
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/RHD_LOOPBACK/A1/counter_32_63" type="array">
       <obj_property name="ElementShortName">counter_32_63[16:0]</obj_property>
       <obj_property name="ObjectShortName">counter_32_63[16:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_A1" type="array">
-      <obj_property name="ElementShortName">result_A1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">result_A1[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/result_DDR_A1" type="array">
-      <obj_property name="ElementShortName">result_DDR_A1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">result_DDR_A1[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/init_mode_out" type="logic">
       <obj_property name="ElementShortName">init_mode_out</obj_property>
@@ -212,6 +234,10 @@
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/INTAN_reg" type="array">
       <obj_property name="ElementShortName">INTAN_reg[39:0]</obj_property>
       <obj_property name="ObjectShortName">INTAN_reg[39:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/INTAN_DDR_reg" type="array">
+      <obj_property name="ElementShortName">INTAN_DDR_reg[39:0]</obj_property>
+      <obj_property name="ObjectShortName">INTAN_DDR_reg[39:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/rhd_axi_tb_wrapper_tb/DUT/rhd_axi_tb_i/rhd_axi_0/inst/rhd_S00_AXI/rhd/INTAN_expected" type="array">
       <obj_property name="ElementShortName">INTAN_expected[39:0]</obj_property>

@@ -823,6 +823,7 @@ module rhd
 
 
     reg [39:0] INTAN_reg = 0;
+    reg [39:0] INTAN_DDR_reg = 0;
     reg [39:0] INTAN_expected = 40'b0100100101001110010101000100000101001110; //"INTAN"
     reg flag_cable_delay_found = 0;
     reg flag_cable_delay_low_found = 0;
@@ -859,33 +860,38 @@ module rhd
                         I_GET_T_SEND_A_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd43, 8'd0 };
                             INTAN_reg[39:32] <= result_A1[7:0];
+                            INTAN_DDR_reg[39:32] <= result_DDR_A1[7:0];
                             state_cable_delay_finder <= N_GET_A_SEND_N_LOAD;
                         end
                         N_GET_A_SEND_N_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd44, 8'd0 };
                             INTAN_reg[31:24] <= result_A1[7:0];
+                            INTAN_DDR_reg[31:24] <= result_DDR_A1[7:0];
                             state_cable_delay_finder <= T_GET_N_SEND;
                         end
                         T_GET_N_SEND: begin
                             MOSI_cmd_selected_cable_delay_finder <= 0;
                             INTAN_reg[23:16] <= result_A1[7:0];
+                            INTAN_DDR_reg[23:16] <= result_DDR_A1[7:0];
                             state_cable_delay_finder <= A_GET;
                         end
                         A_GET: begin
                             MOSI_cmd_selected_cable_delay_finder <= 0;
                             INTAN_reg[15:8] <= result_A1[7:0];
+                            INTAN_DDR_reg[15:8] <= result_DDR_A1[7:0];
                             state_cable_delay_finder <= N_GET;
                         end
                         N_GET: begin
                             INTAN_reg[7:0] <= result_A1[7:0];
-                            if (INTAN_reg == INTAN_expected && !flag_cable_delay_low_found) begin
+                            INTAN_DDR_reg[7:0] <= result_DDR_A1[7:0];
+                            if (INTAN_reg == INTAN_expected && INTAN_DDR_reg == INTAN_expected && !flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = I_LOAD;
                                 flag_cable_delay_low_found = 1;
                                 phase_select_low = phase_select;
                                 phase_select = phase_select + 1;
                             end
-                            else if (INTAN_reg != INTAN_expected && flag_cable_delay_low_found) begin
-                                state_cable_delay_finder = DONE;
+                            else if ((INTAN_reg != INTAN_expected || INTAN_DDR_reg != INTAN_expected) && flag_cable_delay_low_found) begin
+                                state_cable_delay_finder = DONE; 
                                 phase_select = (phase_select_low + phase_select) / 2;
                             end
                             else begin
@@ -2831,8 +2837,10 @@ module rhd
                         channel <= 0;
                         init_mode <= 1'b0;
                     end else begin
-                        if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0)
+                        if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0) begin
                             channel <= 0;
+                            init_mode <= 0;
+                        end
                         else if (flag_cable_delay_found)
                             channel <= channel + 1;
                     end

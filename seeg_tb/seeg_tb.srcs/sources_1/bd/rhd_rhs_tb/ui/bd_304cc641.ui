@@ -1,22 +1,22 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.441941",
-   "Default View_TopLeft":"-658,-115",
+   "Default View_ScaleFactor":"0.717935",
+   "Default View_TopLeft":"-322,-20",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_rhd_aclk -pg 1 -lvl 0 -x -40 -y 60 -defaultsOSRD
-preplace port port-id_rhs_aclk -pg 1 -lvl 0 -x -40 -y 230 -defaultsOSRD
-preplace port port-id_clk_dma -pg 1 -lvl 0 -x -40 -y 250 -defaultsOSRD
+preplace port port-id_rhd_aclk -pg 1 -lvl 0 -x -40 -y 50 -defaultsOSRD
+preplace port port-id_rhs_aclk -pg 1 -lvl 0 -x -40 -y 210 -defaultsOSRD
+preplace port port-id_clk_dma -pg 1 -lvl 0 -x -40 -y 240 -defaultsOSRD
 preplace port port-id_rhd_aresetn -pg 1 -lvl 0 -x -40 -y 80 -defaultsOSRD
-preplace port port-id_rhs_aresetn -pg 1 -lvl 0 -x -40 -y 200 -defaultsOSRD
+preplace port port-id_rhs_aresetn -pg 1 -lvl 0 -x -40 -y 180 -defaultsOSRD
 preplace port port-id_rstn_dma -pg 1 -lvl 0 -x -40 -y 270 -defaultsOSRD
 preplace inst axi_vip_0 -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
 preplace inst axi_vip_1 -pg 1 -lvl 1 -x 130 -y 190 -defaultsOSRD
 preplace inst seeg_0 -pg 1 -lvl 2 -x 480 -y 1000 -defaultsOSRD
 preplace netloc clk_dma_1 1 0 2 20J 260 230
-preplace netloc rhd_aclk_1 1 0 2 20 -10 270
-preplace netloc rhd_aresetn_1 1 0 2 30 0 240
+preplace netloc rhd_aclk_1 1 0 2 30 -10 270
+preplace netloc rhd_aresetn_1 1 0 2 10 0 240
 preplace netloc rhs_aclk_2 1 0 2 30 350 N
 preplace netloc rhs_aresetn_1 1 0 2 10 410 N
 preplace netloc rstn_dma_1 1 0 2 -20J 430 N
