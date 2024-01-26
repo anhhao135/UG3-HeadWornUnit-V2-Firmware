@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="458.366001 us"></ZoomStartTime>
-      <ZoomEndTime time="1,641.366002 us"></ZoomEndTime>
-      <Cursor1Time time="655.532667 us"></Cursor1Time>
+      <ZoomStartTime time="1,472,892.520 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,472,913.061 ns"></ZoomEndTime>
+      <Cursor1Time time="1,472,896.900 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="319"></NameColumnWidth>
-      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+      <ValueColumnWidth column_width="93"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
+   <WVObjectSize size="40" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/clk_dma" type="logic">
       <obj_property name="ElementShortName">clk_dma</obj_property>
       <obj_property name="ObjectShortName">clk_dma</obj_property>
@@ -527,5 +527,39 @@
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tlast" type="logic">
       <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_cable_delay_found" type="logic">
+      <obj_property name="ElementShortName">flag_cable_delay_found</obj_property>
+      <obj_property name="ObjectShortName">flag_cable_delay_found</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_cable_delay_low_found" type="logic">
+      <obj_property name="ElementShortName">flag_cable_delay_low_found</obj_property>
+      <obj_property name="ObjectShortName">flag_cable_delay_low_found</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_cable_delay_found_rising_edge_previous" type="logic">
+      <obj_property name="ElementShortName">flag_cable_delay_found_rising_edge_previous</obj_property>
+      <obj_property name="ObjectShortName">flag_cable_delay_found_rising_edge_previous</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/state_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/init_mode_out" type="logic">
+      <obj_property name="ElementShortName">init_mode_out</obj_property>
+      <obj_property name="ObjectShortName">init_mode_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/data_fifo_out" type="array">
+      <obj_property name="ElementShortName">data_fifo_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data_fifo_out[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/rhd_data_out" type="array">
+      <obj_property name="ElementShortName">rhd_data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rhd_data_out[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

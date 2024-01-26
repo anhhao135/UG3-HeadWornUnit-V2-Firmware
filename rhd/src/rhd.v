@@ -978,7 +978,7 @@ module rhd
 
                     // Timestamp is used to define the "batch size"
                     // Timestamp starts with 1 .... ends with BATCH_SIZE. 
-                    if (channel == 0) begin
+                    if (channel == 0 && flag_cable_delay_found) begin
                         if (flag_lastBatch) begin
                             timestamp <= 1;
                         end
