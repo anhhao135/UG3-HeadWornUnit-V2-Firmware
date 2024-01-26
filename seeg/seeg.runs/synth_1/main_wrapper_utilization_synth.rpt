@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Wed Dec 20 23:33:22 2023
-| Host         : ug3linux running 64-bit Ubuntu 20.04.6 LTS
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Jan 26 14:40:34 2024
+| Host         : GramForGram running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_wrapper_utilization_synth.rpt -pb main_wrapper_utilization_synth.pb
 | Design       : main_wrapper
 | Device       : xck26-sfvc784-2LV-c
@@ -96,7 +96,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   25 |     0 |          0 |       189 | 13.23 |
+| Bonded IOB |   53 |     0 |          0 |       189 | 28.04 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -157,39 +157,31 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| INBUF    |   18 |                 I/O |
-| IBUFCTRL |   18 |              Others |
-| OBUF     |    7 |                 I/O |
+| INBUF    |   32 |                 I/O |
+| IBUFCTRL |   32 |              Others |
+| OBUF     |   21 |                 I/O |
 +----------+------+---------------------+
 
 
 9. Black Boxes
 --------------
 
-+------------------------------------------+------+
-|                 Ref Name                 | Used |
-+------------------------------------------+------+
-| stimulation_inst_0_util_vector_logic_0_0 |    1 |
-| stimulation_inst_0_rhs_axi_0_0           |    1 |
-| stimulation_inst_0_axis_data_fifo_0_0    |    1 |
-| recording_inst_0_util_vector_logic_1_0   |    1 |
-| recording_inst_0_util_vector_logic_0_0   |    1 |
-| recording_inst_0_rhd_diff_to_single_0_0  |    1 |
-| recording_inst_0_rhd_axi_0_0             |    1 |
-| recording_inst_0_axis_data_fifo_0_0      |    1 |
-| recording_inst_0_RisingEdgeCounter_0_0   |    1 |
-| main_zynq_ultra_ps_e_0_0                 |    1 |
-| main_smartconnect_0_2                    |    1 |
-| main_smartconnect_0_1                    |    1 |
-| main_smartconnect_0_0                    |    1 |
-| main_proc_sys_reset_0_3                  |    1 |
-| main_proc_sys_reset_0_2                  |    1 |
-| main_proc_sys_reset_0_1                  |    1 |
-| main_proc_sys_reset_0_0                  |    1 |
-| main_clk_wiz_1_0                         |    1 |
-| main_clk_wiz_0_0                         |    1 |
-| main_axi_dma_0_0                         |    1 |
-+------------------------------------------+------+
++--------------------------+------+
+|         Ref Name         | Used |
++--------------------------+------+
+| main_zynq_ultra_ps_e_0_0 |    1 |
+| main_smartconnect_0_2    |    1 |
+| main_smartconnect_0_1    |    1 |
+| main_smartconnect_0_0    |    1 |
+| main_seeg_0_0            |    1 |
+| main_proc_sys_reset_0_3  |    1 |
+| main_proc_sys_reset_0_2  |    1 |
+| main_proc_sys_reset_0_1  |    1 |
+| main_proc_sys_reset_0_0  |    1 |
+| main_clk_wiz_1_0         |    1 |
+| main_clk_wiz_0_0         |    1 |
+| main_axi_dma_0_0         |    1 |
++--------------------------+------+
 
 
 10. Instantiated Netlists

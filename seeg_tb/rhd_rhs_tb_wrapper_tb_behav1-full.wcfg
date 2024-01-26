@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,472,892.520 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,472,913.061 ns"></ZoomEndTime>
-      <Cursor1Time time="1,472,896.900 ns"></Cursor1Time>
+      <ZoomStartTime time="0.012534000 ms"></ZoomStartTime>
+      <ZoomEndTime time="23.872534001 ms"></ZoomEndTime>
+      <Cursor1Time time="1.832534000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="319"></NameColumnWidth>
-      <ValueColumnWidth column_width="93"></ValueColumnWidth>
+      <ValueColumnWidth column_width="89"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="40" />
+   <WVObjectSize size="44" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/clk_dma" type="logic">
       <obj_property name="ElementShortName">clk_dma</obj_property>
       <obj_property name="ObjectShortName">clk_dma</obj_property>
@@ -561,5 +561,21 @@
       <obj_property name="ElementShortName">rhd_data_out[15:0]</obj_property>
       <obj_property name="ObjectShortName">rhd_data_out[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/tlast_cnt" type="array">
+      <obj_property name="ElementShortName">tlast_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">tlast_cnt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_lastBatch_250M" type="logic">
+      <obj_property name="ElementShortName">flag_lastBatch_250M</obj_property>
+      <obj_property name="ObjectShortName">flag_lastBatch_250M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/tlast_flag_bit" type="logic">
+      <obj_property name="ElementShortName">tlast_flag_bit</obj_property>
+      <obj_property name="ObjectShortName">tlast_flag_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/timestamp" type="array">
+      <obj_property name="ElementShortName">timestamp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">timestamp[15:0]</obj_property>
    </wvobject>
 </wave_config>

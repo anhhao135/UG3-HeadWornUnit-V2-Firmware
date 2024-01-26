@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
 # Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Dec 20 23:30:20 2023
-# Process ID: 302102
-# Current directory: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1
-# Command line: vivado -log main_smartconnect_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_smartconnect_0_2.tcl
-# Log file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.vds
-# Journal file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/vivado.jou
-# Running On: ug3linux, OS: Linux, CPU Frequency: 4374.791 MHz, CPU Physical cores: 6, Host memory: 33339 MB
+# Start of session at: Fri Jan 26 14:26:36 2024
+# Process ID: 24416
+# Current directory: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1
+# Command line: vivado.exe -log main_smartconnect_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_smartconnect_0_2.tcl
+# Log file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.vds
+# Journal file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1\vivado.jou
+# Running On: GramForGram, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 16847 MB
 #-----------------------------------------------------------
 source main_smartconnect_0_2.tcl -notrace

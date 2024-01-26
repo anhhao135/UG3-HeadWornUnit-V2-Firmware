@@ -2,100 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="main" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1703143808"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1703143808"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1703143808"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1703143808"/>
-    <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\main.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="sim\main.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="main_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="hw_handoff\main.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="main.bda">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="synth\main.hwdef">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="sim\main.protoinst">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-    </FileCollection>
-    <BlockContainerCollection>
-      <BlockContainer InstPath="/stimulation_0" IsPR="false" State="Stale">
-        <ActiveVariantSynth FileName="bd\stimulation_inst_0\stimulation_inst_0.bd"/>
-        <ActiveVariantSim FileName="bd\stimulation_inst_0\stimulation_inst_0.bd"/>
-        <VariantsCollection>
-          <BDFile BDFilePath="bd\stimulation_inst_0\stimulation_inst_0.bd" BDFileset="stimulation_inst_0" BDSourceFile="..\..\..\..\seeg.srcs\sources_1\bd\stimulation\stimulation.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
-        </VariantsCollection>
-      </BlockContainer>
-      <BlockContainer InstPath="/recording_0" IsPR="false" State="Stale">
-        <ActiveVariantSynth FileName="bd\recording_inst_0\recording_inst_0.bd"/>
-        <ActiveVariantSim FileName="bd\recording_inst_0\recording_inst_0.bd"/>
-        <VariantsCollection>
-          <BDFile BDFilePath="bd\recording_inst_0\recording_inst_0.bd" BDFileset="recording_inst_0" BDSourceFile="..\..\..\..\seeg.srcs\sources_1\bd\recording\recording.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
-        </VariantsCollection>
-      </BlockContainer>
-    </BlockContainerCollection>
-    <ReferenceCollection>
-      <ModuleReference TargetName="recording" Type="Block Design" SubInstancePath="main_recording_0">
-        <TopFile Name="..\..\..\..\seeg.srcs\sources_1\bd\recording\recording.bd"/>
-        <FileCollection>
-          <File Name="..\..\..\..\src\RisingEdgeCounter.v"/>
-          <File Name="..\..\..\..\..\rhd\src\rhd_diff_to_single.v"/>
-          <File Name="..\..\..\..\seeg.srcs\sources_1\bd\xpm_cdc_1bit\xpm_cdc_1bit.bd"/>
-          <File Name="..\..\..\..\seeg.srcs\sources_1\ip\fifo_generator_0\fifo_generator_0.xci"/>
-          <File Name="..\..\..\..\..\rhd\src\rhd.v"/>
-          <File Name="..\..\..\..\..\rhd\src\rhd_S00_AXI.v"/>
-          <File Name="..\..\..\..\..\rhd\src\rhd_headstage_slave.v"/>
-          <File Name="..\..\..\..\..\rhd\src\rhd_headstage_slave_full_16_probes.v"/>
-          <File Name="..\..\..\..\..\rhd\src\rhd_axi.v"/>
-          <File Name="..\..\..\..\seeg.srcs\sources_1\bd\recording\recording.bd"/>
-        </FileCollection>
-      </ModuleReference>
-      <ModuleReference TargetName="stimulation" Type="Block Design" SubInstancePath="main_stimulation_0">
-        <TopFile Name="..\..\..\..\seeg.srcs\sources_1\bd\stimulation\stimulation.bd"/>
-        <FileCollection>
-          <File Name="..\..\..\..\seeg.srcs\sources_1\bd\xpm_cdc_1bit\xpm_cdc_1bit.bd"/>
-          <File Name="..\..\..\..\seeg.srcs\sources_1\ip\fifo_generator_0\fifo_generator_0.xci"/>
-          <File Name="..\..\..\..\..\rhs\src\rhs.v"/>
-          <File Name="..\..\..\..\..\rhs\src\rhs_S00_AXI.v"/>
-          <File Name="..\..\..\..\..\rhs\src\rhs_axi.v"/>
-          <File Name="..\..\..\..\seeg.srcs\sources_1\bd\stimulation\stimulation.bd"/>
-        </FileCollection>
-      </ModuleReference>
-    </ReferenceCollection>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1706311411"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1706311411"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1706311411"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1706311411"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
   </CompositeFile>
 </Root>

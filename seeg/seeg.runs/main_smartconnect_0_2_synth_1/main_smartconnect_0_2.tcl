@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.tcl"
+  variable script "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.tcl"
   variable category "vivado_synth"
 }
 
@@ -80,41 +80,41 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.cache/wt [current_project]
-set_property parent.project_path /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.xpr [current_project]
+set_property webtalk.parent_dir C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.cache/wt [current_project]
+set_property parent.project_path C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:k26c:part0:1.4 [current_project]
-set_property ip_output_repo /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.cache/ip [current_project]
+set_property ip_output_repo c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.srcs/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2.xci
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_1/bd_b612_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_1/bd_b612_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_2/bd_b612_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_3/bd_b612_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_4/bd_b612_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_5/bd_b612_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_6/bd_b612_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_10/bd_b612_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_11/bd_b612_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_12/bd_b612_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_13/bd_b612_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_14/bd_b612_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_15/bd_b612_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_19/bd_b612_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_20/bd_b612_sawn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_21/bd_b612_swn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_22/bd_b612_sbn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_23/bd_b612_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_24/bd_b612_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_25/bd_b612_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_26/bd_b612_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_27/bd_b612_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_28/bd_b612_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/ooc.xdc]
+read_ip -quiet C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.srcs/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2.xci
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_1/bd_b612_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_1/bd_b612_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_2/bd_b612_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_3/bd_b612_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_4/bd_b612_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_5/bd_b612_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_6/bd_b612_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_10/bd_b612_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_11/bd_b612_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_12/bd_b612_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_13/bd_b612_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_14/bd_b612_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_15/bd_b612_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_19/bd_b612_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_20/bd_b612_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_21/bd_b612_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_22/bd_b612_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_23/bd_b612_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_24/bd_b612_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_25/bd_b612_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_26/bd_b612_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_27/bd_b612_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/bd_0/ip/ip_28/bd_b612_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -130,7 +130,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1 -new_name main_smartconnect_0_2 -ip [get_ips main_smartconnect_0_2]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1 -new_name main_smartconnect_0_2 -ip [get_ips main_smartconnect_0_2]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -185,32 +185,32 @@ create_report "main_smartconnect_0_2_synth_1_synth_report_utilization_0" "report
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.dcp /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2.dcp
+  file copy -force C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.dcp c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v
+  write_verilog -force -mode synth_stub c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -220,32 +220,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.dcp /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2.dcp
+  file copy -force C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2.dcp c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_stub.v /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v
+  file rename -force C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_stub.v c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_stub.vhdl /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.vhdl
+  file rename -force C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_stub.vhdl c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_sim_netlist.v /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.v
+  file rename -force C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_sim_netlist.v c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_sim_netlist.vhdl /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.vhdl
+  file rename -force C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_smartconnect_0_2_synth_1/main_smartconnect_0_2_sim_netlist.vhdl c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -253,15 +253,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2]} {
+if {[file isdir C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2]} {
   catch { 
-    file copy -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2
+    file copy -force c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.v C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2
   }
 }
 
-if {[file isdir /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2]} {
+if {[file isdir C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2]} {
   catch { 
-    file copy -force /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.vhdl /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2
+    file copy -force c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_smartconnect_0_2/main_smartconnect_0_2_stub.vhdl C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.ip_user_files/ip/main_smartconnect_0_2
   }
 }
 file delete __synthesis_is_running__
