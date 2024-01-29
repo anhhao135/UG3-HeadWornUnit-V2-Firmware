@@ -164,14 +164,22 @@ module rhd_rhs_tb_seeg_0_0 (
   RHS_MOSI_F,
   RHS_MOSI_G,
   RHS_MOSI_H,
-  RHS_MOSI_I,
-  RHS_MOSI_J,
-  RHS_MOSI_K,
-  RHS_MOSI_L,
-  RHS_MOSI_M,
-  RHS_MOSI_N,
-  RHS_MOSI_O,
-  RHS_MOSI_P,
+  RHS_MOSI_I_P,
+  RHS_MOSI_I_N,
+  RHS_MOSI_J_P,
+  RHS_MOSI_J_N,
+  RHS_MOSI_K_P,
+  RHS_MOSI_K_N,
+  RHS_MOSI_L_P,
+  RHS_MOSI_L_N,
+  RHS_MOSI_M_P,
+  RHS_MOSI_M_N,
+  RHS_MOSI_N_P,
+  RHS_MOSI_N_N,
+  RHS_MOSI_O_P,
+  RHS_MOSI_O_N,
+  RHS_MOSI_P_P,
+  RHS_MOSI_P_N,
   RHS_MISO_A,
   RHS_MISO_B,
   RHS_MISO_C,
@@ -180,14 +188,22 @@ module rhd_rhs_tb_seeg_0_0 (
   RHS_MISO_F,
   RHS_MISO_G,
   RHS_MISO_H,
-  RHS_MISO_I,
-  RHS_MISO_J,
-  RHS_MISO_K,
-  RHS_MISO_L,
-  RHS_MISO_M,
-  RHS_MISO_N,
-  RHS_MISO_O,
-  RHS_MISO_P
+  RHS_MISO_I_P,
+  RHS_MISO_I_N,
+  RHS_MISO_J_P,
+  RHS_MISO_J_N,
+  RHS_MISO_K_P,
+  RHS_MISO_K_N,
+  RHS_MISO_L_P,
+  RHS_MISO_L_N,
+  RHS_MISO_M_P,
+  RHS_MISO_M_N,
+  RHS_MISO_N_P,
+  RHS_MISO_N_N,
+  RHS_MISO_O_P,
+  RHS_MISO_O_N,
+  RHS_MISO_P_P,
+  RHS_MISO_P_N
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhd AWADDR" *)
@@ -358,14 +374,22 @@ output wire RHS_MOSI_E;
 output wire RHS_MOSI_F;
 output wire RHS_MOSI_G;
 output wire RHS_MOSI_H;
-output wire RHS_MOSI_I;
-output wire RHS_MOSI_J;
-output wire RHS_MOSI_K;
-output wire RHS_MOSI_L;
-output wire RHS_MOSI_M;
-output wire RHS_MOSI_N;
-output wire RHS_MOSI_O;
-output wire RHS_MOSI_P;
+output wire RHS_MOSI_I_P;
+output wire RHS_MOSI_I_N;
+output wire RHS_MOSI_J_P;
+output wire RHS_MOSI_J_N;
+output wire RHS_MOSI_K_P;
+output wire RHS_MOSI_K_N;
+output wire RHS_MOSI_L_P;
+output wire RHS_MOSI_L_N;
+output wire RHS_MOSI_M_P;
+output wire RHS_MOSI_M_N;
+output wire RHS_MOSI_N_P;
+output wire RHS_MOSI_N_N;
+output wire RHS_MOSI_O_P;
+output wire RHS_MOSI_O_N;
+output wire RHS_MOSI_P_P;
+output wire RHS_MOSI_P_N;
 input wire RHS_MISO_A;
 input wire RHS_MISO_B;
 input wire RHS_MISO_C;
@@ -374,14 +398,22 @@ input wire RHS_MISO_E;
 input wire RHS_MISO_F;
 input wire RHS_MISO_G;
 input wire RHS_MISO_H;
-input wire RHS_MISO_I;
-input wire RHS_MISO_J;
-input wire RHS_MISO_K;
-input wire RHS_MISO_L;
-input wire RHS_MISO_M;
-input wire RHS_MISO_N;
-input wire RHS_MISO_O;
-input wire RHS_MISO_P;
+input wire RHS_MISO_I_P;
+input wire RHS_MISO_I_N;
+input wire RHS_MISO_J_P;
+input wire RHS_MISO_J_N;
+input wire RHS_MISO_K_P;
+input wire RHS_MISO_K_N;
+input wire RHS_MISO_L_P;
+input wire RHS_MISO_L_N;
+input wire RHS_MISO_M_P;
+input wire RHS_MISO_M_N;
+input wire RHS_MISO_N_P;
+input wire RHS_MISO_N_N;
+input wire RHS_MISO_O_P;
+input wire RHS_MISO_O_N;
+input wire RHS_MISO_P_P;
+input wire RHS_MISO_P_N;
 
   seeg #(
     .WIDTH_OUT(128),
@@ -500,14 +532,22 @@ input wire RHS_MISO_P;
     .RHS_MOSI_F(RHS_MOSI_F),
     .RHS_MOSI_G(RHS_MOSI_G),
     .RHS_MOSI_H(RHS_MOSI_H),
-    .RHS_MOSI_I(RHS_MOSI_I),
-    .RHS_MOSI_J(RHS_MOSI_J),
-    .RHS_MOSI_K(RHS_MOSI_K),
-    .RHS_MOSI_L(RHS_MOSI_L),
-    .RHS_MOSI_M(RHS_MOSI_M),
-    .RHS_MOSI_N(RHS_MOSI_N),
-    .RHS_MOSI_O(RHS_MOSI_O),
-    .RHS_MOSI_P(RHS_MOSI_P),
+    .RHS_MOSI_I_P(RHS_MOSI_I_P),
+    .RHS_MOSI_I_N(RHS_MOSI_I_N),
+    .RHS_MOSI_J_P(RHS_MOSI_J_P),
+    .RHS_MOSI_J_N(RHS_MOSI_J_N),
+    .RHS_MOSI_K_P(RHS_MOSI_K_P),
+    .RHS_MOSI_K_N(RHS_MOSI_K_N),
+    .RHS_MOSI_L_P(RHS_MOSI_L_P),
+    .RHS_MOSI_L_N(RHS_MOSI_L_N),
+    .RHS_MOSI_M_P(RHS_MOSI_M_P),
+    .RHS_MOSI_M_N(RHS_MOSI_M_N),
+    .RHS_MOSI_N_P(RHS_MOSI_N_P),
+    .RHS_MOSI_N_N(RHS_MOSI_N_N),
+    .RHS_MOSI_O_P(RHS_MOSI_O_P),
+    .RHS_MOSI_O_N(RHS_MOSI_O_N),
+    .RHS_MOSI_P_P(RHS_MOSI_P_P),
+    .RHS_MOSI_P_N(RHS_MOSI_P_N),
     .RHS_MISO_A(RHS_MISO_A),
     .RHS_MISO_B(RHS_MISO_B),
     .RHS_MISO_C(RHS_MISO_C),
@@ -516,13 +556,21 @@ input wire RHS_MISO_P;
     .RHS_MISO_F(RHS_MISO_F),
     .RHS_MISO_G(RHS_MISO_G),
     .RHS_MISO_H(RHS_MISO_H),
-    .RHS_MISO_I(RHS_MISO_I),
-    .RHS_MISO_J(RHS_MISO_J),
-    .RHS_MISO_K(RHS_MISO_K),
-    .RHS_MISO_L(RHS_MISO_L),
-    .RHS_MISO_M(RHS_MISO_M),
-    .RHS_MISO_N(RHS_MISO_N),
-    .RHS_MISO_O(RHS_MISO_O),
-    .RHS_MISO_P(RHS_MISO_P)
+    .RHS_MISO_I_P(RHS_MISO_I_P),
+    .RHS_MISO_I_N(RHS_MISO_I_N),
+    .RHS_MISO_J_P(RHS_MISO_J_P),
+    .RHS_MISO_J_N(RHS_MISO_J_N),
+    .RHS_MISO_K_P(RHS_MISO_K_P),
+    .RHS_MISO_K_N(RHS_MISO_K_N),
+    .RHS_MISO_L_P(RHS_MISO_L_P),
+    .RHS_MISO_L_N(RHS_MISO_L_N),
+    .RHS_MISO_M_P(RHS_MISO_M_P),
+    .RHS_MISO_M_N(RHS_MISO_M_N),
+    .RHS_MISO_N_P(RHS_MISO_N_P),
+    .RHS_MISO_N_N(RHS_MISO_N_N),
+    .RHS_MISO_O_P(RHS_MISO_O_P),
+    .RHS_MISO_O_N(RHS_MISO_O_N),
+    .RHS_MISO_P_P(RHS_MISO_P_P),
+    .RHS_MISO_P_N(RHS_MISO_P_N)
   );
 endmodule

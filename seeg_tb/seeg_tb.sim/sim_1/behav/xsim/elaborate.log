@@ -21,7 +21,7 @@ WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:40]
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:41]
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:42]
-WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:370]
+WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:462]
 WARNING: [VRFC 10-5021] port 'biphasic_polarity' is not connected on this instance [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:590]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

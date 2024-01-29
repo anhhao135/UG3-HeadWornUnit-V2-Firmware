@@ -14,6 +14,7 @@ verilog xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_
 "../../../../../rhs/src/rhs_axi.v" \
 "../../../../../rhs/src/rhs_headstage_slave.v" \
 "../../../../../rhs/src/rhs_headstage_slave_full.v" \
+"../../../../../rhs/src/rhs_single_diff_converter.v" \
 "../../../../../seeg/src/seeg.v" \
 
 sv xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \

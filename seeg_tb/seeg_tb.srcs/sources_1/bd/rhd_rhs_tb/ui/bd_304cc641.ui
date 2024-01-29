@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.441941",
-   "Default View_TopLeft":"-1039,-208",
+   "Default View_ScaleFactor":"0.717935",
+   "Default View_TopLeft":"-531,117",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -17,9 +17,9 @@ preplace inst seeg_0 -pg 1 -lvl 2 -x 480 -y 1000 -defaultsOSRD
 preplace netloc clk_dma_1 1 0 2 20J 260 230
 preplace netloc rhd_aclk_1 1 0 2 30 -10 270
 preplace netloc rhd_aresetn_1 1 0 2 10 0 240
-preplace netloc rhs_aclk_2 1 0 2 30 350 N
-preplace netloc rhs_aresetn_1 1 0 2 10 410 N
-preplace netloc rstn_dma_1 1 0 2 -20J 430 N
+preplace netloc rhs_aclk_2 1 0 2 30 270 N
+preplace netloc rhs_aresetn_1 1 0 2 10 330 N
+preplace netloc rstn_dma_1 1 0 2 -20J 350 N
 preplace netloc axi_vip_0_M_AXI 1 1 1 260J 70n
 preplace netloc axi_vip_1_M_AXI 1 1 1 250J 190n
 levelinfo -pg 1 -40 130 480 680

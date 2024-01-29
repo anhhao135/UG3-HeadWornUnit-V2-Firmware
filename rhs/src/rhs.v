@@ -719,6 +719,25 @@ module rhs
 
 
     always @(posedge M_AXIS_ACLK) begin
+
+        if (rhs_record_trigger == 1 && rhs_record_trigger_rising_edge_previous == 0) begin
+            rhs_record_flag = 1;
+        end
+
+
+        if (flag_lastchannel == 1 && flag_lastchannel_rising_edge_previous == 0) begin
+            if (rhs_record_flag) begin
+                rhs_fifo_pass = 1;
+                rhs_record_flag = 0;
+            end
+            else
+                rhs_fifo_pass = 0;
+        end
+
+        rhs_record_trigger_rising_edge_previous = rhs_record_trigger;
+        flag_lastchannel_rising_edge_previous = flag_lastchannel;
+
+
         if (!M_AXIS_ARESETN) begin
             maxis_data_reg  <= 0;
             maxis_valid_reg <= 0;
@@ -903,23 +922,6 @@ module rhs
   
     /* SPI main state */
     always @(posedge clk) begin
-
-        if (rhs_record_trigger == 1 && rhs_record_trigger_rising_edge_previous == 0) begin
-            rhs_record_flag = 1;
-        end
-
-
-        if (flag_lastchannel == 1 && flag_lastchannel_rising_edge_previous == 0) begin
-            if (rhs_record_flag) begin
-                rhs_fifo_pass = 1;
-                rhs_record_flag = 0;
-            end
-            else
-                rhs_fifo_pass = 0;
-        end
-
-        rhs_record_trigger_rising_edge_previous = rhs_record_trigger;
-        flag_lastchannel_rising_edge_previous = flag_lastchannel;
 
         if (!resetn) begin
             main_state <= ms_wait;

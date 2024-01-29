@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Jan 26 13:13:25 2024
+//Date        : Mon Jan 29 13:15:44 2024
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhd_rhs_tb.bd
 //Design      : rhd_rhs_tb
@@ -180,14 +180,22 @@ module rhd_rhs_tb
         .RHS_MISO_F(1'b0),
         .RHS_MISO_G(1'b0),
         .RHS_MISO_H(1'b0),
-        .RHS_MISO_I(1'b0),
-        .RHS_MISO_J(1'b0),
-        .RHS_MISO_K(1'b0),
-        .RHS_MISO_L(1'b0),
-        .RHS_MISO_M(1'b0),
-        .RHS_MISO_N(1'b0),
-        .RHS_MISO_O(1'b0),
-        .RHS_MISO_P(1'b0),
+        .RHS_MISO_I_N(1'b0),
+        .RHS_MISO_I_P(1'b0),
+        .RHS_MISO_J_N(1'b0),
+        .RHS_MISO_J_P(1'b0),
+        .RHS_MISO_K_N(1'b0),
+        .RHS_MISO_K_P(1'b0),
+        .RHS_MISO_L_N(1'b0),
+        .RHS_MISO_L_P(1'b0),
+        .RHS_MISO_M_N(1'b0),
+        .RHS_MISO_M_P(1'b0),
+        .RHS_MISO_N_N(1'b0),
+        .RHS_MISO_N_P(1'b0),
+        .RHS_MISO_O_N(1'b0),
+        .RHS_MISO_O_P(1'b0),
+        .RHS_MISO_P_N(1'b0),
+        .RHS_MISO_P_P(1'b0),
         .s00_axi_rhd_aclk(rhd_aclk_1),
         .s00_axi_rhd_araddr(axi_vip_0_M_AXI_ARADDR[4:0]),
         .s00_axi_rhd_aresetn(rhd_aresetn_1),
