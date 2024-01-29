@@ -1,35 +1,35 @@
 #-----------------------------------------------------------
 # Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jan 26 14:26:36 2024
-# Process ID: 9356
-# Current directory: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1
-# Command line: vivado.exe -log main_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_clk_wiz_0_0.tcl
-# Log file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.vds
-# Journal file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1\vivado.jou
-# Running On: GramForGram, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 16847 MB
+# Start of session at: Fri Jan 26 15:31:12 2024
+# Process ID: 586078
+# Current directory: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1
+# Command line: vivado -log main_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_clk_wiz_0_0.tcl
+# Log file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.vds
+# Journal file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/vivado.jou
+# Running On: ug3linux, OS: Linux, CPU Frequency: 4383.062 MHz, CPU Physical cores: 6, Host memory: 33339 MB
 #-----------------------------------------------------------
 source main_clk_wiz_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 455.762 ; gain = 163.121
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1337.227 ; gain = 0.023 ; free physical = 279 ; free virtual = 52676
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: main_clk_wiz_0_0
 Command: synth_design -top main_clk_wiz_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17176
+INFO: [Synth 8-7075] Helper process launched with PID 586559
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 1844.883 ; gain = 338.633
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2506.777 ; gain = 259.832 ; free physical = 548 ; free virtual = 35511
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.v:69]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_axi_clk_config' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:178]
+INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.v:69]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_axi_clk_config' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:178]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_axi_lite_ipif' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_axi_lite_ipif.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_axi_lite_ipif' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_axi_lite_ipif.vhd:245]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000011111111111 
@@ -38,7 +38,7 @@ INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_axi_lite_ipif' [c:/Rep
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000011111111111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000100000000000000000000000000000000001 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_slave_attachment' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_slave_attachment.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_slave_attachment' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_slave_attachment.vhd:236]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000011111111111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000100000000000000000000000000000000001 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 11 - type: integer 
@@ -47,91 +47,91 @@ INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_slave_attachment' [c:/
 	Parameter C_USE_WSTRB bound to: 1 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_address_decoder' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_address_decoder.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_address_decoder' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_address_decoder.vhd:186]
 	Parameter C_BUS_AWIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000011111111111 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000011111111111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000100000000000000000000000000000000001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 6 - type: integer 
 	Parameter C_AW bound to: 11 - type: integer 
 	Parameter C_BAR bound to: 11'b00000000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized0' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized0' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized0' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized1' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized0' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized1' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized1' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized2' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized1' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized2' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized2' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized3' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized2' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized3' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized3' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized4' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized3' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized4' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized4' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized5' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized4' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized5' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized5' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized6' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized5' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized6' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized6' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized7' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized6' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized7' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized7' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized8' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized7' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
 	Parameter C_AB bound to: 0 - type: integer 
 	Parameter C_AW bound to: 11 - type: integer 
 	Parameter C_BAR bound to: 11'b01000000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized8' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_address_decoder' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_address_decoder.vhd:186]
-INFO: [Synth 8-226] default block is never used [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_slave_attachment.vhd:438]
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_slave_attachment' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_slave_attachment.vhd:236]
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_axi_lite_ipif' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_axi_lite_ipif.vhd:245]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_pselect_f__parameterized8' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_pselect_f.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_address_decoder' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_address_decoder.vhd:186]
+INFO: [Synth 8-226] default block is never used [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_slave_attachment.vhd:438]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_slave_attachment' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_slave_attachment.vhd:236]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_axi_lite_ipif' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/main_clk_wiz_0_0_axi_lite_ipif.vhd:245]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
 	Parameter CE_NUMBERS bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'main_clk_wiz_0_0_clk_wiz_drp' declared at 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:115' bound to instance 'CLK_CORE_DRP_I' of component 'main_clk_wiz_0_0_clk_wiz_drp' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:442]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_clk_wiz_drp' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:154]
+INFO: [Synth 8-3491] module 'main_clk_wiz_0_0_clk_wiz_drp' declared at '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:115' bound to instance 'CLK_CORE_DRP_I' of component 'main_clk_wiz_0_0_clk_wiz_drp' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:442]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_clk_wiz_drp' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:154]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
 	Parameter CE_NUMBERS bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'main_clk_wiz_0_0_clk_wiz' declared at 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz.v:69' bound to instance 'clk_inst' of component 'main_clk_wiz_0_0_clk_wiz' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:555]
-INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0_clk_wiz' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz.v:69]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
-INFO: [Synth 8-6157] synthesizing module 'MMCME4_ADV' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80704]
+INFO: [Synth 8-3491] module 'main_clk_wiz_0_0_clk_wiz' declared at '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz.v:69' bound to instance 'clk_inst' of component 'main_clk_wiz_0_0_clk_wiz' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:555]
+INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0_clk_wiz' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6157] synthesizing module 'MMCME4_ADV' [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80704]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 42.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
@@ -149,8 +149,8 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME4_ADV' [C:/Xilinx/Vivado/2023.1/s
 	Parameter COMPENSATION bound to: AUTO - type: string 
 	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME4_ADV' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80704]
-INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0_clk_wiz' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME4_ADV' (0#1) [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80704]
+INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0_clk_wiz' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz.v:69]
 	Parameter S1_CLKFBOUT_MULT bound to: 42 - type: integer 
 	Parameter S1_CLKFBOUT_PHASE bound to: 0 - type: integer 
 	Parameter S1_CLKFBOUT_FRAC bound to: 0 - type: integer 
@@ -180,8 +180,8 @@ INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0_clk_wiz' (0#1) [
 	Parameter S1_CLKOUT6_DIVIDE bound to: 1 - type: integer 
 	Parameter S1_CLKOUT6_PHASE bound to: 0 - type: integer 
 	Parameter S1_CLKOUT6_DUTY bound to: 50000 - type: integer 
-INFO: [Synth 8-3491] module 'main_clk_wiz_0_0_mmcm_drp' declared at 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:47' bound to instance 'mmcm_drp_inst' of component 'main_clk_wiz_0_0_mmcm_drp' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:574]
-INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0_mmcm_drp' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:47]
+INFO: [Synth 8-3491] module 'main_clk_wiz_0_0_mmcm_drp' declared at '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:47' bound to instance 'mmcm_drp_inst' of component 'main_clk_wiz_0_0_mmcm_drp' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:574]
+INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0_mmcm_drp' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:47]
 	Parameter S1_CLKFBOUT_MULT bound to: 42 - type: integer 
 	Parameter S1_CLKFBOUT_PHASE bound to: 0 - type: integer 
 	Parameter S1_CLKFBOUT_FRAC bound to: 0 - type: integer 
@@ -211,96 +211,96 @@ INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0_mmcm_drp' [c:/Repos/U
 	Parameter S1_CLKOUT6_DIVIDE bound to: 1 - type: integer 
 	Parameter S1_CLKOUT6_PHASE bound to: 0 - type: integer 
 	Parameter S1_CLKOUT6_DUTY bound to: 50000 - type: integer 
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[63]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[62]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[61]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[60]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[59]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[58]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[57]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[56]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[55]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[54]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[53]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[52]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[51]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[50]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[49]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[48]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[47]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[46]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[45]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[44]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[43]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[42]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[41]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[40]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[39]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[38]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[37]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[36]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[35]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[34]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[33]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[32]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[31]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[30]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[29]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[28]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[27]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[26]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[25]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[24]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[23]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[22]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[21]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[20]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[19]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[18]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[17]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[16]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[15]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[14]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[13]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[12]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[11]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[10]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[9]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[8]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[7]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[6]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[5]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[4]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[3]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[2]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[1]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[0]' is not inferred as ram due to incorrect usage [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
-INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0_mmcm_drp' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:47]
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_clk_wiz_drp' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:154]
-INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_soft_reset' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:142]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[63]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[62]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[61]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[60]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[59]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[58]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[57]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[56]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[55]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[54]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[53]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[52]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[51]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[50]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[49]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[48]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[47]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[46]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[45]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[44]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[43]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[42]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[41]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[40]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[39]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[38]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[37]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[36]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[35]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[34]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[33]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[32]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[31]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[30]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[29]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[28]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[27]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[26]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[25]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[24]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[23]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[22]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[21]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[20]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[19]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[18]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[17]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[16]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[15]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[14]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[13]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[12]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[11]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[10]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[9]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[8]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[7]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[6]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[5]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[4]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[3]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[2]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[1]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "distributed" is ignored, object 'ram[0]' is not inferred as ram due to incorrect usage [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:223]
+INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0_mmcm_drp' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_mmcm_pll_drp.v:47]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_clk_wiz_drp' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'main_clk_wiz_0_0_soft_reset' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:142]
 	Parameter C_SIPIF_DWIDTH bound to: 32 - type: integer 
 	Parameter C_RESET_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
-INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:296]
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_soft_reset' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:142]
-INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_axi_clk_config' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:178]
-INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0' (0#1) [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.v:69]
-WARNING: [Synth 8-6014] Unused sequential element clk_mon_error_reg_sig_reg was removed.  [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:513]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:296]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_soft_reset' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/main_clk_wiz_0_0_soft_reset.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'main_clk_wiz_0_0_axi_clk_config' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_axi_clk_config.vhd:178]
+INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.v:69]
+WARNING: [Synth 8-6014] Unused sequential element clk_mon_error_reg_sig_reg was removed.  [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:513]
 WARNING: [Synth 8-7129] Port Bus2IP_Data[0] in module main_clk_wiz_0_0_soft_reset is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Bus2IP_Data[1] in module main_clk_wiz_0_0_soft_reset is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Bus2IP_Data[2] in module main_clk_wiz_0_0_soft_reset is either unconnected or has no load
@@ -357,46 +357,45 @@ WARNING: [Synth 8-7129] Port A[9] in module main_clk_wiz_0_0_pselect_f is either
 WARNING: [Synth 8-7129] Port A[10] in module main_clk_wiz_0_0_pselect_f is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Bus_RNW in module main_clk_wiz_0_0_address_decoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:01:05 . Memory (MB): peak = 1970.465 ; gain = 464.215
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2602.684 ; gain = 355.738 ; free physical = 292 ; free virtual = 34867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:01:06 . Memory (MB): peak = 1970.465 ; gain = 464.215
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2602.684 ; gain = 355.738 ; free physical = 290 ; free virtual = 34856
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:01:06 . Memory (MB): peak = 1970.465 ; gain = 464.215
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2602.684 ; gain = 355.738 ; free physical = 290 ; free virtual = 34856
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.213 . Memory (MB): peak = 1970.465 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2613.652 ; gain = 0.000 ; free physical = 284 ; free virtual = 34827
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_ooc.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 2054.801 ; gain = 2.781
-Finished Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_board.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_board.xdc] for cell 'inst'
-Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xdc] for cell 'inst'
-Parsing XDC File [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_board.xdc] for cell 'inst'
+Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0.xdc] for cell 'inst'
+Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2054.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2747.434 ; gain = 0.000 ; free physical = 286 ; free virtual = 34396
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 20 instances were transformed.
   BUFG => BUFGCE: 3 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.504 . Memory (MB): peak = 2056.824 ; gain = 2.023
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2747.434 ; gain = 0.000 ; free physical = 284 ; free virtual = 34395
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:53 . Memory (MB): peak = 2056.824 ; gain = 550.574
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2747.434 ; gain = 500.488 ; free physical = 261 ; free virtual = 34134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -404,18 +403,18 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:53 . Memory (MB): peak = 2056.824 ; gain = 550.574
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2747.434 ; gain = 500.488 ; free physical = 261 ; free virtual = 34134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:54 . Memory (MB): peak = 2056.824 ; gain = 550.574
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2747.434 ; gain = 500.488 ; free physical = 260 ; free virtual = 34132
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'main_clk_wiz_0_0_slave_attachment'
-WARNING: [Synth 8-3936] Found unconnected internal register 'clkout0_reg_reg' and it is trimmed from '32' to '18' bits. [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:421]
-WARNING: [Synth 8-3936] Found unconnected internal register 'clkfbout_reg_reg' and it is trimmed from '32' to '26' bits. [c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:418]
+WARNING: [Synth 8-3936] Found unconnected internal register 'clkout0_reg_reg' and it is trimmed from '32' to '18' bits. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:421]
+WARNING: [Synth 8-3936] Found unconnected internal register 'clkfbout_reg_reg' and it is trimmed from '32' to '26' bits. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_0_0/main_clk_wiz_0_0_clk_wiz_drp.vhd:418]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -426,7 +425,7 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'clkfbout_reg_reg' a
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'main_clk_wiz_0_0_slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:20 ; elapsed = 00:02:25 . Memory (MB): peak = 2056.824 ; gain = 550.574
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2747.434 ; gain = 500.488 ; free physical = 266 ; free virtual = 30916
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -496,25 +495,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:17 ; elapsed = 00:05:19 . Memory (MB): peak = 2056.824 ; gain = 550.574
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 2747.434 ; gain = 500.488 ; free physical = 14103 ; free virtual = 44200
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:33 ; elapsed = 00:06:21 . Memory (MB): peak = 2513.883 ; gain = 1007.633
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 3154.488 ; gain = 907.543 ; free physical = 18166 ; free virtual = 48314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:42 ; elapsed = 00:07:05 . Memory (MB): peak = 2629.289 ; gain = 1123.039
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 3243.277 ; gain = 996.332 ; free physical = 20244 ; free virtual = 50412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:43 ; elapsed = 00:07:09 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 20109 ; free virtual = 50279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -532,37 +531,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:44 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:44 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:45 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:45 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:45 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:45 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -593,19 +592,19 @@ Report Cell Usage:
 |13    |FDSE       |    68|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:45 ; elapsed = 00:07:26 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 3259.293 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:02 ; elapsed = 00:06:58 . Memory (MB): peak = 2645.766 ; gain = 1053.156
-Synthesis Optimization Complete : Time (s): cpu = 00:02:45 ; elapsed = 00:07:27 . Memory (MB): peak = 2645.766 ; gain = 1139.516
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 3259.293 ; gain = 867.598 ; free physical = 19961 ; free virtual = 50133
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 3259.301 ; gain = 1012.348 ; free physical = 19961 ; free virtual = 50133
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 2645.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3259.301 ; gain = 0.000 ; free physical = 20235 ; free virtual = 50407
 INFO: [Netlist 29-17] Analyzing 170 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/CLK_CORE_DRP_I/clk_inst/mmcme4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2662.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3294.277 ; gain = 0.000 ; free physical = 20232 ; free virtual = 50409
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   BUFG => BUFGCE: 3 instances
@@ -614,9 +613,11 @@ Synth Design complete | Checksum: f70ccfac
 INFO: [Common 17-83] Releasing license: Synthesis
 86 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:02 ; elapsed = 00:08:42 . Memory (MB): peak = 2662.547 ; gain = 2132.664
-INFO: [Common 17-1381] The checkpoint 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 3294.277 ; gain = 1957.051 ; free physical = 20232 ; free virtual = 50409
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2421.713; main = 2241.602; forked = 291.232
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4141.145; main = 3294.281; forked = 978.652
+INFO: [Common 17-1381] The checkpoint '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_clk_wiz_0_0, cache-ID = 8374e329ec716f38
-INFO: [Common 17-1381] The checkpoint 'C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_clk_wiz_0_0_utilization_synth.rpt -pb main_clk_wiz_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 26 14:35:51 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 26 15:32:40 2024...

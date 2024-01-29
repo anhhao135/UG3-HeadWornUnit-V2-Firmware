@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Jan 26 14:25:26 2024
-//Host        : GramForGram running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+//Date        : Fri Jan 26 15:30:50 2024
+//Host        : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target main_wrapper.bd
 //Design      : main_wrapper
 //Purpose     : IP block netlist
@@ -71,14 +71,22 @@ module main_wrapper
     RHS_MISO_F,
     RHS_MISO_G,
     RHS_MISO_H,
-    RHS_MISO_I,
-    RHS_MISO_J,
-    RHS_MISO_K,
-    RHS_MISO_L,
-    RHS_MISO_M,
-    RHS_MISO_N,
-    RHS_MISO_O,
-    RHS_MISO_P,
+    RHS_MISO_I_N,
+    RHS_MISO_I_P,
+    RHS_MISO_J_N,
+    RHS_MISO_J_P,
+    RHS_MISO_K_N,
+    RHS_MISO_K_P,
+    RHS_MISO_L_N,
+    RHS_MISO_L_P,
+    RHS_MISO_M_N,
+    RHS_MISO_M_P,
+    RHS_MISO_N_N,
+    RHS_MISO_N_P,
+    RHS_MISO_O_N,
+    RHS_MISO_O_P,
+    RHS_MISO_P_N,
+    RHS_MISO_P_P,
     RHS_MOSI_A,
     RHS_MOSI_B,
     RHS_MOSI_C,
@@ -87,14 +95,22 @@ module main_wrapper
     RHS_MOSI_F,
     RHS_MOSI_G,
     RHS_MOSI_H,
-    RHS_MOSI_I,
-    RHS_MOSI_J,
-    RHS_MOSI_K,
-    RHS_MOSI_L,
-    RHS_MOSI_M,
-    RHS_MOSI_N,
-    RHS_MOSI_O,
-    RHS_MOSI_P,
+    RHS_MOSI_I_N,
+    RHS_MOSI_I_P,
+    RHS_MOSI_J_N,
+    RHS_MOSI_J_P,
+    RHS_MOSI_K_N,
+    RHS_MOSI_K_P,
+    RHS_MOSI_L_N,
+    RHS_MOSI_L_P,
+    RHS_MOSI_M_N,
+    RHS_MOSI_M_P,
+    RHS_MOSI_N_N,
+    RHS_MOSI_N_P,
+    RHS_MOSI_O_N,
+    RHS_MOSI_O_P,
+    RHS_MOSI_P_N,
+    RHS_MOSI_P_P,
     RHS_SCLK);
   output RHD_CS;
   input RHD_MISO1_A;
@@ -156,14 +172,22 @@ module main_wrapper
   input RHS_MISO_F;
   input RHS_MISO_G;
   input RHS_MISO_H;
-  input RHS_MISO_I;
-  input RHS_MISO_J;
-  input RHS_MISO_K;
-  input RHS_MISO_L;
-  input RHS_MISO_M;
-  input RHS_MISO_N;
-  input RHS_MISO_O;
-  input RHS_MISO_P;
+  input RHS_MISO_I_N;
+  input RHS_MISO_I_P;
+  input RHS_MISO_J_N;
+  input RHS_MISO_J_P;
+  input RHS_MISO_K_N;
+  input RHS_MISO_K_P;
+  input RHS_MISO_L_N;
+  input RHS_MISO_L_P;
+  input RHS_MISO_M_N;
+  input RHS_MISO_M_P;
+  input RHS_MISO_N_N;
+  input RHS_MISO_N_P;
+  input RHS_MISO_O_N;
+  input RHS_MISO_O_P;
+  input RHS_MISO_P_N;
+  input RHS_MISO_P_P;
   output RHS_MOSI_A;
   output RHS_MOSI_B;
   output RHS_MOSI_C;
@@ -172,14 +196,22 @@ module main_wrapper
   output RHS_MOSI_F;
   output RHS_MOSI_G;
   output RHS_MOSI_H;
-  output RHS_MOSI_I;
-  output RHS_MOSI_J;
-  output RHS_MOSI_K;
-  output RHS_MOSI_L;
-  output RHS_MOSI_M;
-  output RHS_MOSI_N;
-  output RHS_MOSI_O;
-  output RHS_MOSI_P;
+  output RHS_MOSI_I_N;
+  output RHS_MOSI_I_P;
+  output RHS_MOSI_J_N;
+  output RHS_MOSI_J_P;
+  output RHS_MOSI_K_N;
+  output RHS_MOSI_K_P;
+  output RHS_MOSI_L_N;
+  output RHS_MOSI_L_P;
+  output RHS_MOSI_M_N;
+  output RHS_MOSI_M_P;
+  output RHS_MOSI_N_N;
+  output RHS_MOSI_N_P;
+  output RHS_MOSI_O_N;
+  output RHS_MOSI_O_P;
+  output RHS_MOSI_P_N;
+  output RHS_MOSI_P_P;
   output RHS_SCLK;
 
   wire RHD_CS;
@@ -242,14 +274,22 @@ module main_wrapper
   wire RHS_MISO_F;
   wire RHS_MISO_G;
   wire RHS_MISO_H;
-  wire RHS_MISO_I;
-  wire RHS_MISO_J;
-  wire RHS_MISO_K;
-  wire RHS_MISO_L;
-  wire RHS_MISO_M;
-  wire RHS_MISO_N;
-  wire RHS_MISO_O;
-  wire RHS_MISO_P;
+  wire RHS_MISO_I_N;
+  wire RHS_MISO_I_P;
+  wire RHS_MISO_J_N;
+  wire RHS_MISO_J_P;
+  wire RHS_MISO_K_N;
+  wire RHS_MISO_K_P;
+  wire RHS_MISO_L_N;
+  wire RHS_MISO_L_P;
+  wire RHS_MISO_M_N;
+  wire RHS_MISO_M_P;
+  wire RHS_MISO_N_N;
+  wire RHS_MISO_N_P;
+  wire RHS_MISO_O_N;
+  wire RHS_MISO_O_P;
+  wire RHS_MISO_P_N;
+  wire RHS_MISO_P_P;
   wire RHS_MOSI_A;
   wire RHS_MOSI_B;
   wire RHS_MOSI_C;
@@ -258,14 +298,22 @@ module main_wrapper
   wire RHS_MOSI_F;
   wire RHS_MOSI_G;
   wire RHS_MOSI_H;
-  wire RHS_MOSI_I;
-  wire RHS_MOSI_J;
-  wire RHS_MOSI_K;
-  wire RHS_MOSI_L;
-  wire RHS_MOSI_M;
-  wire RHS_MOSI_N;
-  wire RHS_MOSI_O;
-  wire RHS_MOSI_P;
+  wire RHS_MOSI_I_N;
+  wire RHS_MOSI_I_P;
+  wire RHS_MOSI_J_N;
+  wire RHS_MOSI_J_P;
+  wire RHS_MOSI_K_N;
+  wire RHS_MOSI_K_P;
+  wire RHS_MOSI_L_N;
+  wire RHS_MOSI_L_P;
+  wire RHS_MOSI_M_N;
+  wire RHS_MOSI_M_P;
+  wire RHS_MOSI_N_N;
+  wire RHS_MOSI_N_P;
+  wire RHS_MOSI_O_N;
+  wire RHS_MOSI_O_P;
+  wire RHS_MOSI_P_N;
+  wire RHS_MOSI_P_P;
   wire RHS_SCLK;
 
   main main_i
@@ -329,14 +377,22 @@ module main_wrapper
         .RHS_MISO_F(RHS_MISO_F),
         .RHS_MISO_G(RHS_MISO_G),
         .RHS_MISO_H(RHS_MISO_H),
-        .RHS_MISO_I(RHS_MISO_I),
-        .RHS_MISO_J(RHS_MISO_J),
-        .RHS_MISO_K(RHS_MISO_K),
-        .RHS_MISO_L(RHS_MISO_L),
-        .RHS_MISO_M(RHS_MISO_M),
-        .RHS_MISO_N(RHS_MISO_N),
-        .RHS_MISO_O(RHS_MISO_O),
-        .RHS_MISO_P(RHS_MISO_P),
+        .RHS_MISO_I_N(RHS_MISO_I_N),
+        .RHS_MISO_I_P(RHS_MISO_I_P),
+        .RHS_MISO_J_N(RHS_MISO_J_N),
+        .RHS_MISO_J_P(RHS_MISO_J_P),
+        .RHS_MISO_K_N(RHS_MISO_K_N),
+        .RHS_MISO_K_P(RHS_MISO_K_P),
+        .RHS_MISO_L_N(RHS_MISO_L_N),
+        .RHS_MISO_L_P(RHS_MISO_L_P),
+        .RHS_MISO_M_N(RHS_MISO_M_N),
+        .RHS_MISO_M_P(RHS_MISO_M_P),
+        .RHS_MISO_N_N(RHS_MISO_N_N),
+        .RHS_MISO_N_P(RHS_MISO_N_P),
+        .RHS_MISO_O_N(RHS_MISO_O_N),
+        .RHS_MISO_O_P(RHS_MISO_O_P),
+        .RHS_MISO_P_N(RHS_MISO_P_N),
+        .RHS_MISO_P_P(RHS_MISO_P_P),
         .RHS_MOSI_A(RHS_MOSI_A),
         .RHS_MOSI_B(RHS_MOSI_B),
         .RHS_MOSI_C(RHS_MOSI_C),
@@ -345,13 +401,21 @@ module main_wrapper
         .RHS_MOSI_F(RHS_MOSI_F),
         .RHS_MOSI_G(RHS_MOSI_G),
         .RHS_MOSI_H(RHS_MOSI_H),
-        .RHS_MOSI_I(RHS_MOSI_I),
-        .RHS_MOSI_J(RHS_MOSI_J),
-        .RHS_MOSI_K(RHS_MOSI_K),
-        .RHS_MOSI_L(RHS_MOSI_L),
-        .RHS_MOSI_M(RHS_MOSI_M),
-        .RHS_MOSI_N(RHS_MOSI_N),
-        .RHS_MOSI_O(RHS_MOSI_O),
-        .RHS_MOSI_P(RHS_MOSI_P),
+        .RHS_MOSI_I_N(RHS_MOSI_I_N),
+        .RHS_MOSI_I_P(RHS_MOSI_I_P),
+        .RHS_MOSI_J_N(RHS_MOSI_J_N),
+        .RHS_MOSI_J_P(RHS_MOSI_J_P),
+        .RHS_MOSI_K_N(RHS_MOSI_K_N),
+        .RHS_MOSI_K_P(RHS_MOSI_K_P),
+        .RHS_MOSI_L_N(RHS_MOSI_L_N),
+        .RHS_MOSI_L_P(RHS_MOSI_L_P),
+        .RHS_MOSI_M_N(RHS_MOSI_M_N),
+        .RHS_MOSI_M_P(RHS_MOSI_M_P),
+        .RHS_MOSI_N_N(RHS_MOSI_N_N),
+        .RHS_MOSI_N_P(RHS_MOSI_N_P),
+        .RHS_MOSI_O_N(RHS_MOSI_O_N),
+        .RHS_MOSI_O_P(RHS_MOSI_O_P),
+        .RHS_MOSI_P_N(RHS_MOSI_P_N),
+        .RHS_MOSI_P_P(RHS_MOSI_P_P),
         .RHS_SCLK(RHS_SCLK));
 endmodule

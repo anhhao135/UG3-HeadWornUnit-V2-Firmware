@@ -60,24 +60,24 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==main_seeg_0
 # IP: ip/fifo_generator_0/fifo_generator_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] -quiet
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/synth/xpm_cdc_1bit_xpm_cdc_0_0_ooc.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/synth/xpm_cdc_1bit_xpm_cdc_0_0_ooc.xdc
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/synth/xpm_cdc_1bit_xpm_cdc_0_0_ooc.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/synth/xpm_cdc_1bit_xpm_cdc_0_0_ooc.xdc
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/xpm_cdc_1bit_ooc.xdc
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/main_ooc.xdc
+# XDC: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/main_ooc.xdc

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="xpm_cdc_1bit_xpm_cdc_0_0_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1706307989">
-  <File Type="PA-TCL" Name="xpm_cdc_1bit_xpm_cdc_0_0.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="xpm_cdc_1bit_xpm_cdc_0_0_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="xpm_cdc_1bit_xpm_cdc_0_0_reports.tcl"/>
-  <File Type="RDS-RDS" Name="xpm_cdc_1bit_xpm_cdc_0_0.vds"/>
-  <File Type="RDS-UTIL" Name="xpm_cdc_1bit_xpm_cdc_0_0_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="xpm_cdc_1bit_xpm_cdc_0_0_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="xpm_cdc_1bit_xpm_cdc_0_0.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="xpm_cdc_1bit_xpm_cdc_0_0_timing_summary_synth.rpt"/>
+<GenRun Id="xpm_cdc_1bit_xpm_cdc_0_0_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1706311870">
   <File Type="VDS-TIMING-PB" Name="xpm_cdc_1bit_xpm_cdc_0_0_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="xpm_cdc_1bit_xpm_cdc_0_0_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="xpm_cdc_1bit_xpm_cdc_0_0.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="xpm_cdc_1bit_xpm_cdc_0_0_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="xpm_cdc_1bit_xpm_cdc_0_0_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="xpm_cdc_1bit_xpm_cdc_0_0_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="xpm_cdc_1bit_xpm_cdc_0_0.vds"/>
+  <File Type="REPORTS-TCL" Name="xpm_cdc_1bit_xpm_cdc_0_0_reports.tcl"/>
+  <File Type="PA-TCL" Name="xpm_cdc_1bit_xpm_cdc_0_0.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/xpm_cdc_1bit_xpm_cdc_0_0" RelGenDir="$PGENDIR/xpm_cdc_1bit_xpm_cdc_0_0">
     <File Path="$PSRCDIR/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/xpm_cdc_1bit_xpm_cdc_0_0.xci">
       <FileInfo>
