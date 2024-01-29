@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jan 26 15:31:12 2024
-# Process ID: 586082
+# Start of session at: Mon Jan 29 14:36:01 2024
+# Process ID: 1387919
 # Current directory: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_proc_sys_reset_0_0_synth_1
 # Command line: vivado -log main_proc_sys_reset_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_proc_sys_reset_0_0.tcl
 # Log file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_proc_sys_reset_0_0_synth_1/main_proc_sys_reset_0_0.vds
 # Journal file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_proc_sys_reset_0_0_synth_1/vivado.jou
-# Running On: ug3linux, OS: Linux, CPU Frequency: 4382.720 MHz, CPU Physical cores: 6, Host memory: 33339 MB
+# Running On: ug3linux, OS: Linux, CPU Frequency: 4386.803 MHz, CPU Physical cores: 6, Host memory: 33339 MB
 #-----------------------------------------------------------
 source main_proc_sys_reset_0_0.tcl -notrace
