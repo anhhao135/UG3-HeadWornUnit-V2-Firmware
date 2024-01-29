@@ -651,10 +651,10 @@ module rhs
     wire SPI_running_250M;
 
     xpm_cdc_1bit xpm_cdc_1bit_inst_rhs_fifo_pass_out(
-    .dest_clk(M_AXIS_ACLK),
-    .dest_out(rhs_fifo_pass_out),
-    .src_clk(clk),
-    .src_in(rhs_fifo_pass_out_internal));    
+        .dest_clk(M_AXIS_ACLK),
+        .dest_out(rhs_fifo_pass_out),
+        .src_clk(clk),
+        .src_in(rhs_fifo_pass_out_internal));    
     
     xpm_cdc_1bit xpm_cdc_1bit_inst_1(
         .dest_clk(M_AXIS_ACLK),
@@ -685,6 +685,7 @@ module rhs
 
     wire         flag_lastBatch_250M;
     wire         flag_channel16_stream_250M;
+    wire         rhs_record_trigger_internal;
 
 
     xpm_cdc_1bit xpm_cdc_1bit_inst_2(
@@ -698,6 +699,12 @@ module rhs
         .dest_out(flag_channel16_stream_250M),
         .src_clk(clk),
         .src_in(flag_channel16_stream));    
+
+    xpm_cdc_1bit xpm_cdc_5bit_inst_rhs_record_trigger(
+        .dest_clk(clk),
+        .dest_out(rhs_record_trigger_internal),
+        .src_clk(M_AXIS_ACLK),
+        .src_in(rhs_record_trigger));    
 
     wire        tlast_flag_bit;
     assign      tlast_flag_bit = flag_channel16_stream_250M && valid_fifo_out;
@@ -915,7 +922,7 @@ module rhs
     always @(posedge clk) begin
 
 
-        if (rhs_record_trigger == 1 && rhs_record_trigger_rising_edge_previous == 0) begin
+        if (rhs_record_trigger_internal == 1 && rhs_record_trigger_rising_edge_previous == 0) begin
             rhs_record_flag = 1;
         end
 
@@ -929,7 +936,7 @@ module rhs
                 rhs_fifo_pass = 0;
         end
 
-        rhs_record_trigger_rising_edge_previous = rhs_record_trigger;
+        rhs_record_trigger_rising_edge_previous = rhs_record_trigger_internal;
         flag_lastchannel_rising_edge_previous = flag_lastchannel;
 
         if (!resetn) begin
