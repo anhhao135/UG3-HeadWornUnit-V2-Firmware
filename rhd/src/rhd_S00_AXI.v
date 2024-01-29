@@ -58,7 +58,7 @@ module rhd_S00_AXI #
 
 	output wire FIFO_rstn,
 
-	output wire [5:0] channelOut,
+	output wire [5:0] channelOut250M,
 
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
@@ -201,8 +201,6 @@ wire MISO2_P_SW;
 wire [5:0] channel;
 wire init_mode_out;
 wire [3:0] state_cable_delay_finder;
-
-assign channelOut = channel;
 
 
 rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
@@ -719,7 +717,8 @@ rhd rhd
 	.delay_P(slv_reg1[31:28]),
 	.channelOut(channel),
 	.init_mode_out(init_mode_out),
-	.state_cable_delay_finder_out(state_cable_delay_finder)
+	.state_cable_delay_finder_out(state_cable_delay_finder),
+	.channelOut250M(channelOut250M)
 	);
 
 

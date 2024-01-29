@@ -102,6 +102,7 @@ module rhd
 
 
     output wire [5:0]                        channelOut,
+    output wire [5:0]                        channelOut250M,
     output wire [3:0]                        state_cable_delay_finder_out,
     output wire                              init_mode_out
 
@@ -647,6 +648,27 @@ module rhd
         .dest_out(SPI_running_250M),
         .src_clk(clk),
         .src_in(SPI_running));    
+
+
+    xpm_cdc_array_single #(
+        .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
+        .INIT_SYNC_FF(0),   // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
+        .SIM_ASSERT_CHK(0), // DECIMAL; 0=disable simulation messages, 1=enable simulation messages
+        .SRC_INPUT_REG(1),  // DECIMAL; 0=do not register input, 1=register input
+        .WIDTH(6)           // DECIMAL; range: 1-1024
+    )
+    xpm_cdc_array_single_inst_channelOut (
+        .dest_out(channelOut250M), // WIDTH-bit output: src_in synchronized to the destination clock domain. This
+                                // output is registered.
+
+        .dest_clk(M_AXIS_ACLK), // 1-bit input: Clock signal for the destination clock domain.
+        .src_clk(clk),   // 1-bit input: optional; required when SRC_INPUT_REG = 1
+        .src_in(channel)      // WIDTH-bit input: Input single-bit array to be synchronized to destination clock
+                                // domain. It is assumed that each bit of the array is unrelated to the others. This
+                                // is reflected in the constraints applied to this macro. To transfer a binary value
+                                // losslessly across the two clock domains, use the XPM_CDC_GRAY macro instead.
+
+    );
 
 
     fifo_generator_0 fifo_inst (

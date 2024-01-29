@@ -522,7 +522,7 @@ module seeg #
       .M_AXIS_tvalid(M_AXIS_RHD_tvalid),
       .M_AXIS_tready(M_AXIS_RHD_tready),
       .M_AXIS_tlast(M_AXIS_RHD_tlast),
-      .channelOut(rhd_channel)
+      .channelOut250M(rhd_channel)
     );
 
     rhs_axi stimulator (
