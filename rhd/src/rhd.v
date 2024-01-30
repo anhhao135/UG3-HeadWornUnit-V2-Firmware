@@ -1016,19 +1016,23 @@ module rhd
                 end
     
                 ms_clk1_b: begin
+                    /*
                     if (channel == 3) begin
                         rhd_data_out <= header_magic_number[15:0];
                         rhd_valid_out <= 1'b1;
                     end
+                    */
 
                     main_state <= ms_clk1_c;
                 end
     
                 ms_clk1_c: begin
+                    /*
                     if (channel == 3) begin
                         rhd_data_out <= header_magic_number[31:16];
                         rhd_valid_out <= 1'b1;
                     end
+                    */
 
                     SCLK <= 1'b1;
 					in4x_A1[0] <= MISO_A1; in4x_A2[0] <= MISO_A2;
@@ -1052,10 +1056,12 @@ module rhd
                 end
                     
                 ms_clk1_d: begin
+                    /*
                     if (channel == 3) begin
                         rhd_data_out <= header_magic_number[47:32];
                         rhd_valid_out <= 1'b1;
                     end
+                    */
 
                     SCLK <= 1'b1;
                     in4x_A1[1] <= MISO_A1; in4x_A2[1] <= MISO_A2;
@@ -1078,10 +1084,12 @@ module rhd
                 end
     
                 ms_clk2_a: begin
+                    /*
                     if (channel == 3) begin
                         rhd_data_out <= header_magic_number[63:48];
                         rhd_valid_out <= 1'b1;
                     end
+                    */
 
                     MOSI <= MOSI_cmd[14];
 

@@ -266,7 +266,8 @@ module rhs
     wire [63:0]		header_magic_number_impCheck;
     wire [63:0]     header_magic_number;
 
-    assign header_magic_number_normal   = 64'hAAAAAAAAAAAAAAAA;  // Fixed 64-bit "magic number" that begins each data frame
+    //assign header_magic_number_normal   = 64'hAAAAAAAAAAAAAAAA;  // Fixed 64-bit "magic number" that begins each data frame
+    assign header_magic_number_normal   = 64'hCCCCCCCCCCCCCCCC;  
     assign header_magic_number_impCheck = 64'h8080808080808080;  // Fixed 64-bit "magic number" that begins each data frame
     assign header_magic_number          = { ZCheck_loop == 0 }? header_magic_number_normal: header_magic_number_impCheck;
 
@@ -1988,8 +1989,8 @@ module rhs
 
 
                 ms_clk3_a: begin
-                    rhs_data_out <= data_stream_1[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_1[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk3_b: begin
@@ -1998,8 +1999,8 @@ module rhs
                 end
 
                 ms_clk3_c: begin
-                    rhs_data_out <= data_stream_2[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_2[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk3_d: begin
@@ -2009,8 +2010,8 @@ module rhs
 
 
                 ms_clk4_a: begin
-                    rhs_data_out <= data_stream_3[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_3[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk4_b: begin
@@ -2019,8 +2020,8 @@ module rhs
                 end
 
                 ms_clk4_c: begin
-                    rhs_data_out <= data_stream_4[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_4[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk4_d: begin
@@ -2030,8 +2031,8 @@ module rhs
 
 
                 ms_clk5_a: begin
-                    rhs_data_out <= data_stream_5[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_5[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk5_b: begin
@@ -2040,8 +2041,8 @@ module rhs
                 end
 
                 ms_clk5_c: begin
-                    rhs_data_out <= data_stream_6[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_6[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk5_d: begin
@@ -2051,8 +2052,8 @@ module rhs
 
 
                 ms_clk6_a: begin
-                    rhs_data_out <= data_stream_7[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_7[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk6_b: begin
@@ -2061,8 +2062,8 @@ module rhs
                 end
 
                 ms_clk6_c: begin
-                    rhs_data_out <= data_stream_8[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_8[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk6_d: begin
@@ -2073,8 +2074,8 @@ module rhs
 
 
                 ms_clk7_a: begin
-                    rhs_data_out <= data_stream_9[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_9[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk7_b: begin
@@ -2083,8 +2084,8 @@ module rhs
                 end
 
                 ms_clk7_c: begin
-                    rhs_data_out <= data_stream_10[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_10[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk7_d: begin
@@ -2094,8 +2095,8 @@ module rhs
 
 
                 ms_clk8_a: begin
-                    rhs_data_out <= data_stream_11[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_11[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk8_b: begin
@@ -2104,8 +2105,8 @@ module rhs
                 end
 
                 ms_clk8_c: begin
-                    rhs_data_out <= data_stream_12[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_12[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk8_d: begin
@@ -2115,8 +2116,8 @@ module rhs
 
 
                 ms_clk9_a: begin
-                    rhs_data_out <= data_stream_13[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_13[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk9_b: begin
@@ -2125,8 +2126,8 @@ module rhs
                 end
 
                 ms_clk9_c: begin
-                    rhs_data_out <= data_stream_14[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_14[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk9_d: begin
@@ -2136,8 +2137,8 @@ module rhs
 
 
                 ms_clk10_a: begin
-                    rhs_data_out <= data_stream_15[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_15[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk10_b: begin
@@ -2146,8 +2147,8 @@ module rhs
                 end
 
                 ms_clk10_c: begin
-                    rhs_data_out <= data_stream_16[15:0];
-                    rhd_valid_out <= 1'b1;
+                    //rhs_data_out <= data_stream_16[15:0];
+                    //rhd_valid_out <= 1'b1;
                 end
 
                 ms_clk10_d: begin
