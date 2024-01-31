@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Mon Jan 29 14:35:28 2024
+//Date        : Wed Jan 31 12:14:00 2024
 //Host        : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target xpm_cdc_1bit.bd
 //Design      : xpm_cdc_1bit

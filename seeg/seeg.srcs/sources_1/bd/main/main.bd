@@ -22,7 +22,8 @@
       "axi_dma_0": "",
       "proc_sys_reset_250M": "",
       "clk_wiz_dma": "",
-      "seeg_0": ""
+      "seeg_0": "",
+      "axis_data_fifo_0": ""
     },
     "ports": {
       "RHD_CS": {
@@ -3398,6 +3399,23 @@
             "direction": "I"
           }
         }
+      },
+      "axis_data_fifo_0": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "xci_name": "main_axis_data_fifo_0_0",
+        "xci_path": "ip/main_axis_data_fifo_0_0/main_axis_data_fifo_0_0.xci",
+        "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "32768"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "8"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3411,6 +3429,12 @@
         "interface_ports": [
           "axi_dma_0/M_AXI_SG",
           "slave_smartconnect_0/S00_AXI"
+        ]
+      },
+      "axis_data_fifo_0_M_AXIS": {
+        "interface_ports": [
+          "axis_data_fifo_0/M_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       },
       "master_smartconnect_0_M00_AXI": {
@@ -3445,8 +3469,8 @@
       },
       "seeg_0_M_AXIS": {
         "interface_ports": [
-          "axi_dma_0/S_AXIS_S2MM",
-          "seeg_0/M_AXIS"
+          "seeg_0/M_AXIS",
+          "axis_data_fifo_0/S_AXIS"
         ]
       },
       "smartconnect_0_M00_AXI": {
@@ -3473,7 +3497,8 @@
           "axi_dma_0/m_axi_s2mm_aclk",
           "proc_sys_reset_250M/slowest_sync_clk",
           "master_smartconnect_0/aclk1",
-          "seeg_0/M_AXIS_ACLK"
+          "seeg_0/M_AXIS_ACLK",
+          "axis_data_fifo_0/s_axis_aclk"
         ]
       },
       "Net1": {
@@ -3955,7 +3980,8 @@
           "proc_sys_reset_250M/peripheral_aresetn",
           "axi_dma_0/axi_resetn",
           "slave_smartconnect_0/aresetn",
-          "seeg_0/M_AXIS_ARESETN"
+          "seeg_0/M_AXIS_ARESETN",
+          "axis_data_fifo_0/s_axis_aresetn"
         ]
       },
       "proc_sys_reset_rhd_peripheral_aresetn": {

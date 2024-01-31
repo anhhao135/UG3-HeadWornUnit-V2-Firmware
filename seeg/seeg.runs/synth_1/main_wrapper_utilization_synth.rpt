@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Mon Jan 29 14:38:55 2024
+| Date         : Wed Jan 31 12:17:30 2024
 | Host         : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file main_wrapper_utilization_synth.rpt -pb main_wrapper_utilization_synth.pb
 | Design       : main_wrapper
@@ -180,6 +180,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | main_proc_sys_reset_0_0  |    1 |
 | main_clk_wiz_1_0         |    1 |
 | main_clk_wiz_0_0         |    1 |
+| main_axis_data_fifo_0_0  |    1 |
 | main_axi_dma_0_0         |    1 |
 +--------------------------+------+
 

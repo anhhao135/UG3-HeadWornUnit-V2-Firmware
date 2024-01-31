@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
@@ -226,6 +228,7 @@ set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-Hea
 set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_1_0/main_clk_wiz_1_0.xdc]
 set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_clk_wiz_1_0/main_clk_wiz_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_seeg_0_0/main_seeg_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_axis_data_fifo_0_0/main_axis_data_fifo_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/main_ooc.xdc]
 
 OPTRACE "Adding files" END { }
