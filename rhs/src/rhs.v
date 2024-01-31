@@ -1986,7 +1986,7 @@ module rhs
                     end
                 end
 
-                /*
+                
 
 
 
@@ -2158,7 +2158,7 @@ module rhs
                     rhd_valid_out <= 1'b1;
                 end
 
-                */
+                
 
 
 

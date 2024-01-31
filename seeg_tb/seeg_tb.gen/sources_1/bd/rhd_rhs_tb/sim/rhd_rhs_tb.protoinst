@@ -55,6 +55,28 @@
 						"WVALID": { "actual": "m_axi_wvalid"}
 					}
 				},
+				"/axis_data_fifo_0/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s_axis_aclk"},
+						"ARESETN": { "actual": "s_axis_aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TLAST": { "actual": "s_axis_tlast"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
+				"/seeg_0/M_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "M_AXIS_ACLK"},
+						"ARESETN": { "actual": "M_AXIS_ARESETN"},
+						"TDATA": { "actual": "M_AXIS_tdata"},
+						"TLAST": { "actual": "M_AXIS_tlast"},
+						"TREADY": { "actual": "M_AXIS_tready"},
+						"TVALID": { "actual": "M_AXIS_tvalid"}
+					}
+				},
 				"/seeg_0/s00_axi_rhd": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {

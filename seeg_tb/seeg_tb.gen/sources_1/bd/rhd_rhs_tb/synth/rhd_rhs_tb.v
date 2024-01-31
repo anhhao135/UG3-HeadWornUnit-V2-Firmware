@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Jan 31 11:10:03 2024
+//Date        : Wed Jan 31 13:11:41 2024
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhd_rhs_tb.bd
 //Design      : rhd_rhs_tb
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "rhd_rhs_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhd_rhs_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhd_rhs_tb.hwdef" *) 
+(* CORE_GENERATION_INFO = "rhd_rhs_tb,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rhd_rhs_tb,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rhd_rhs_tb.hwdef" *) 
 module rhd_rhs_tb
    (clk_dma,
     rhd_aclk,
@@ -69,6 +69,10 @@ module rhd_rhs_tb
   wire rhs_aclk_2;
   wire rhs_aresetn_1;
   wire rstn_dma_1;
+  wire [63:0]seeg_0_M_AXIS_TDATA;
+  wire seeg_0_M_AXIS_TLAST;
+  wire seeg_0_M_AXIS_TREADY;
+  wire seeg_0_M_AXIS_TVALID;
 
   assign clk_dma_1 = clk_dma;
   assign rhd_aclk_1 = rhd_aclk;
@@ -120,10 +124,21 @@ module rhd_rhs_tb
         .m_axi_wready(axi_vip_1_M_AXI_WREADY),
         .m_axi_wstrb(axi_vip_1_M_AXI_WSTRB),
         .m_axi_wvalid(axi_vip_1_M_AXI_WVALID));
+  rhd_rhs_tb_axis_data_fifo_0_0 axis_data_fifo_0
+       (.m_axis_tready(1'b1),
+        .s_axis_aclk(clk_dma_1),
+        .s_axis_aresetn(rstn_dma_1),
+        .s_axis_tdata(seeg_0_M_AXIS_TDATA),
+        .s_axis_tlast(seeg_0_M_AXIS_TLAST),
+        .s_axis_tready(seeg_0_M_AXIS_TREADY),
+        .s_axis_tvalid(seeg_0_M_AXIS_TVALID));
   rhd_rhs_tb_seeg_0_0 seeg_0
        (.M_AXIS_ACLK(clk_dma_1),
         .M_AXIS_ARESETN(rstn_dma_1),
-        .M_AXIS_tready(1'b1),
+        .M_AXIS_tdata(seeg_0_M_AXIS_TDATA),
+        .M_AXIS_tlast(seeg_0_M_AXIS_TLAST),
+        .M_AXIS_tready(seeg_0_M_AXIS_TREADY),
+        .M_AXIS_tvalid(seeg_0_M_AXIS_TVALID),
         .RHD_MISO1_A(1'b0),
         .RHD_MISO1_B(1'b0),
         .RHD_MISO1_C(1'b0),

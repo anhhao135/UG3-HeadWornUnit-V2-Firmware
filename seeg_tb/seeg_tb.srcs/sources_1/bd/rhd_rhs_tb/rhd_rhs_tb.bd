@@ -13,7 +13,8 @@
     "design_tree": {
       "axi_vip_0": "",
       "axi_vip_1": "",
-      "seeg_0": ""
+      "seeg_0": "",
+      "axis_data_fifo_0": ""
     },
     "ports": {
       "rhd_aclk": {
@@ -1119,6 +1120,23 @@
             "direction": "I"
           }
         }
+      },
+      "axis_data_fifo_0": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "xci_name": "rhd_rhs_tb_axis_data_fifo_0_0",
+        "xci_path": "ip\\rhd_rhs_tb_axis_data_fifo_0_0\\rhd_rhs_tb_axis_data_fifo_0_0.xci",
+        "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "32768"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "8"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1133,13 +1151,20 @@
           "axi_vip_1/M_AXI",
           "seeg_0/s00_axi_rhs"
         ]
+      },
+      "seeg_0_M_AXIS": {
+        "interface_ports": [
+          "seeg_0/M_AXIS",
+          "axis_data_fifo_0/S_AXIS"
+        ]
       }
     },
     "nets": {
       "clk_dma_1": {
         "ports": [
           "clk_dma",
-          "seeg_0/M_AXIS_ACLK"
+          "seeg_0/M_AXIS_ACLK",
+          "axis_data_fifo_0/s_axis_aclk"
         ]
       },
       "rhd_aclk_1": {
@@ -1173,7 +1198,8 @@
       "rstn_dma_1": {
         "ports": [
           "rstn_dma",
-          "seeg_0/M_AXIS_ARESETN"
+          "seeg_0/M_AXIS_ARESETN",
+          "axis_data_fifo_0/s_axis_aresetn"
         ]
       }
     }

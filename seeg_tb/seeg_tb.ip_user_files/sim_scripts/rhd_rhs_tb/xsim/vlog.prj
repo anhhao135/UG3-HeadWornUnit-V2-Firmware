@@ -1,11 +1,12 @@
-sv xil_defaultlib --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" \
+sv xil_defaultlib --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_0/sim/rhd_rhs_tb_axi_vip_0_0_pkg.sv" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_0/sim/rhd_rhs_tb_axi_vip_0_0.sv" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1_pkg.sv" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1.sv" \
 
-verilog xil_defaultlib --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" \
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" \
+"../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axis_data_fifo_0_0/sim/rhd_rhs_tb_axis_data_fifo_0_0.v" \
 "../../../bd/rhd_rhs_tb/sim/rhd_rhs_tb.v" \
 
 verilog xil_defaultlib "glbl.v"
