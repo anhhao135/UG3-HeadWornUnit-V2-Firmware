@@ -1986,6 +1986,8 @@ module rhs
                     end
                 end
 
+                /*
+
 
 
                 ms_clk3_a: begin
@@ -2155,6 +2157,8 @@ module rhs
                     rhs_data_out <= data_stream_16[31:16];
                     rhd_valid_out <= 1'b1;
                 end
+
+                */
 
 
 

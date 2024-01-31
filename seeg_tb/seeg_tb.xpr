@@ -59,20 +59,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="k26c"/>
-    <Option Name="WTXSimLaunchSim" Val="201"/>
+    <Option Name="WTXSimLaunchSim" Val="211"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="22"/>
-    <Option Name="WTModelSimExportSim" Val="22"/>
-    <Option Name="WTQuestaExportSim" Val="22"/>
+    <Option Name="WTXSimExportSim" Val="23"/>
+    <Option Name="WTModelSimExportSim" Val="23"/>
+    <Option Name="WTQuestaExportSim" Val="23"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="22"/>
-    <Option Name="WTRivieraExportSim" Val="22"/>
-    <Option Name="WTActivehdlExportSim" Val="22"/>
+    <Option Name="WTVcsExportSim" Val="23"/>
+    <Option Name="WTRivieraExportSim" Val="23"/>
+    <Option Name="WTActivehdlExportSim" Val="23"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -197,11 +197,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="rhd_rhs_tb.bd" FileRelPathName="ip/rhd_rhs_tb_axi_vip_0_0/rhd_rhs_tb_axi_vip_0_0.xci">
-          <Proxy FileSetName="rhd_rhs_tb_axi_vip_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rhd_rhs_tb.bd" FileRelPathName="ip/rhd_rhs_tb_axi_vip_0_1/rhd_rhs_tb_axi_vip_0_1.xci">
           <Proxy FileSetName="rhd_rhs_tb_axi_vip_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="rhd_rhs_tb.bd" FileRelPathName="ip/rhd_rhs_tb_axi_vip_0_0/rhd_rhs_tb_axi_vip_0_0.xci">
+          <Proxy FileSetName="rhd_rhs_tb_axi_vip_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/rhd_rhs_tb/hdl/rhd_rhs_tb_wrapper.v">

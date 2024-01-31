@@ -129,6 +129,8 @@ begin
 
   //RHS setup
 
+  /*
+
   // (1) Set stim magnitude 
   mtestWDataL = 32'h80FF80FF;
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h4, mtestProtectionType, mtestWDataL, mtestBresp);
@@ -191,21 +193,27 @@ begin
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   #100us;
 
+  */
+
 
 
   //start session
 
 
-  //RHD
-  // (3) Start acqusition (w/o amp fast settle)
-  mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
-  mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
   //RHS
   // (1c) enable stim
   mtestWDataL = 32'h000000029; //hex 9 turns loopback off, hex 29 turns on
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #500us
+
+
+  //RHD
+  // (3) Start acqusition (w/o amp fast settle)
+  mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
+  mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
   #4ms;
 
