@@ -15,9 +15,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1.454000 us"></ZoomStartTime>
-      <ZoomEndTime time="3,431.454001 us"></ZoomEndTime>
-      <Cursor1Time time="1,773.454000 us"></Cursor1Time>
+      <ZoomStartTime time="1,299.695000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,385.445001 us"></ZoomEndTime>
+      <Cursor1Time time="1,365.945000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="300"></NameColumnWidth>
@@ -543,6 +543,7 @@
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/channel" type="array">
       <obj_property name="ElementShortName">channel[5:0]</obj_property>
       <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/init_mode_out" type="logic">
       <obj_property name="ElementShortName">init_mode_out</obj_property>

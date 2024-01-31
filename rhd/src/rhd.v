@@ -217,7 +217,7 @@ module rhd
     wire            flag_lastchannel;
     
     assign  flag_lastBatch = (timestamp == batch_size);
-    assign  flag_lastchannel = (channel == 34);
+    assign  flag_lastchannel = (channel == 30);
 
 
     // [ZCheck]
