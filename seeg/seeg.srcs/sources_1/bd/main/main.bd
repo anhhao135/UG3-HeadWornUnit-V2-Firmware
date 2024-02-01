@@ -22,8 +22,8 @@
       "proc_sys_reset_250M": "",
       "clk_wiz_dma": "",
       "axis_data_fifo_0": "",
-      "seeg_0": "",
-      "util_vector_logic_0": ""
+      "util_vector_logic_0": "",
+      "seeg_0": ""
     },
     "ports": {
       "RHD_CS": {
@@ -2472,6 +2472,20 @@
           }
         }
       },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "main_util_vector_logic_0_0",
+        "xci_path": "ip\\main_util_vector_logic_0_0\\main_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
       "seeg_0": {
         "vlnv": "xilinx.com:module_ref:seeg:1.0",
         "xci_name": "main_seeg_0_0",
@@ -3322,20 +3336,6 @@
             }
           }
         }
-      },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "main_util_vector_logic_0_0",
-        "xci_path": "ip\\main_util_vector_logic_0_0\\main_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "or"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -3900,8 +3900,8 @@
           "proc_sys_reset_250M/peripheral_aresetn",
           "axi_dma_0/axi_resetn",
           "slave_smartconnect_0/aresetn",
-          "seeg_0/M_AXIS_ARESETN",
-          "util_vector_logic_0/Op1"
+          "util_vector_logic_0/Op1",
+          "seeg_0/M_AXIS_ARESETN"
         ]
       },
       "proc_sys_reset_rhd_peripheral_aresetn": {

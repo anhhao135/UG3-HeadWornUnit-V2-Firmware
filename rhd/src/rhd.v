@@ -881,31 +881,31 @@ module rhd
                         end
                         I_GET_T_SEND_A_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd43, 8'd0 };
-                            INTAN_reg[39:32] <= result_A1[7:0];
-                            INTAN_DDR_reg[39:32] <= result_DDR_A1[7:0];
+                            INTAN_reg[39:32] <= result_B1[7:0];
+                            INTAN_DDR_reg[39:32] <= result_DDR_B1[7:0];
                             state_cable_delay_finder <= N_GET_A_SEND_N_LOAD;
                         end
                         N_GET_A_SEND_N_LOAD: begin
                             MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd44, 8'd0 };
-                            INTAN_reg[31:24] <= result_A1[7:0];
-                            INTAN_DDR_reg[31:24] <= result_DDR_A1[7:0];
+                            INTAN_reg[31:24] <= result_B1[7:0];
+                            INTAN_DDR_reg[31:24] <= result_DDR_B1[7:0];
                             state_cable_delay_finder <= T_GET_N_SEND;
                         end
                         T_GET_N_SEND: begin
                             MOSI_cmd_selected_cable_delay_finder <= 0;
-                            INTAN_reg[23:16] <= result_A1[7:0];
-                            INTAN_DDR_reg[23:16] <= result_DDR_A1[7:0];
+                            INTAN_reg[23:16] <= result_B1[7:0];
+                            INTAN_DDR_reg[23:16] <= result_DDR_B1[7:0];
                             state_cable_delay_finder <= A_GET;
                         end
                         A_GET: begin
                             MOSI_cmd_selected_cable_delay_finder <= 0;
-                            INTAN_reg[15:8] <= result_A1[7:0];
-                            INTAN_DDR_reg[15:8] <= result_DDR_A1[7:0];
+                            INTAN_reg[15:8] <= result_B1[7:0];
+                            INTAN_DDR_reg[15:8] <= result_DDR_B1[7:0];
                             state_cable_delay_finder <= N_GET;
                         end
                         N_GET: begin
-                            INTAN_reg[7:0] <= result_A1[7:0];
-                            INTAN_DDR_reg[7:0] <= result_DDR_A1[7:0];
+                            INTAN_reg[7:0] <= result_B1[7:0];
+                            INTAN_DDR_reg[7:0] <= result_DDR_B1[7:0];
                             if (INTAN_reg == INTAN_expected && INTAN_DDR_reg == INTAN_expected && !flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = I_LOAD;
                                 flag_cable_delay_low_found = 1;

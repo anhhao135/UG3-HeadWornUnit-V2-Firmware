@@ -2338,15 +2338,15 @@ module rhs
                             state_cable_delay_finder <= IN_GET_N0_SEND;
                         end
                         IN_GET_N0_SEND: begin
-                            INTAN_reg[47:32] <= result_1[15:0];
+                            INTAN_reg[47:32] <= result_2[15:0];
                             state_cable_delay_finder <= TA_GET;
                         end
                         TA_GET: begin
-                            INTAN_reg[31:16] <= result_1[15:0];
+                            INTAN_reg[31:16] <= result_2[15:0];
                             state_cable_delay_finder <= N0_GET;
                         end
                         N0_GET: begin
-                            INTAN_reg[15:0] = result_1[15:0];
+                            INTAN_reg[15:0] = result_2[15:0];
                             if (INTAN_reg == INTAN_expected && !flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = IN_LOAD;
                                 flag_cable_delay_low_found = 1;
