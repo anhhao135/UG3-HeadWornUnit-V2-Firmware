@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 31 13:11:42 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb  1 11:44:05 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="rhd_rhs_tb" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -18,8 +18,8 @@
     </PORT>
     <PORT DIR="I" NAME="clk_dma" SIGIS="undef" SIGNAME="External_Ports_clk_dma">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="seeg_0" PORT="M_AXIS_ACLK"/>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="seeg_0" PORT="M_AXIS_ACLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rhd_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rhd_aresetn">
@@ -37,7 +37,6 @@
     <PORT DIR="I" NAME="rstn_dma" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rstn_dma">
       <CONNECTIONS>
         <CONNECTION INSTANCE="seeg_0" PORT="M_AXIS_ARESETN"/>
-        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -548,9 +547,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="s_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rstn_dma">
+        <PORT DIR="I" NAME="s_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="seeg_0_FIFO_rstn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rstn_dma"/>
+            <CONNECTION INSTANCE="seeg_0" PORT="FIFO_rstn"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_clk_dma">
@@ -982,6 +981,11 @@
         <PORT DIR="I" NAME="RHS_MISO_O_N" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHS_MISO_P_P" SIGIS="undef"/>
         <PORT DIR="I" NAME="RHS_MISO_P_N" SIGIS="undef"/>
+        <PORT DIR="O" NAME="FIFO_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="seeg_0_FIFO_rstn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="seeg_0_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">

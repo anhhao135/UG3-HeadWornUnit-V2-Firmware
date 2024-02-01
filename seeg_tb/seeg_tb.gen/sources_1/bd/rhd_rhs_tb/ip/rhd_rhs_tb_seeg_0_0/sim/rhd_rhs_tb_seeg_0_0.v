@@ -203,7 +203,8 @@ module rhd_rhs_tb_seeg_0_0 (
   RHS_MISO_O_P,
   RHS_MISO_O_N,
   RHS_MISO_P_P,
-  RHS_MISO_P_N
+  RHS_MISO_P_N,
+  FIFO_rstn
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi_rhd AWADDR" *)
@@ -414,6 +415,9 @@ input wire RHS_MISO_O_P;
 input wire RHS_MISO_O_N;
 input wire RHS_MISO_P_P;
 input wire RHS_MISO_P_N;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIFO_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FIFO_rstn RST" *)
+output wire FIFO_rstn;
 
   seeg #(
     .WIDTH_OUT(128),
@@ -571,6 +575,7 @@ input wire RHS_MISO_P_N;
     .RHS_MISO_O_P(RHS_MISO_O_P),
     .RHS_MISO_O_N(RHS_MISO_O_N),
     .RHS_MISO_P_P(RHS_MISO_P_P),
-    .RHS_MISO_P_N(RHS_MISO_P_N)
+    .RHS_MISO_P_N(RHS_MISO_P_N),
+    .FIFO_rstn(FIFO_rstn)
   );
 endmodule

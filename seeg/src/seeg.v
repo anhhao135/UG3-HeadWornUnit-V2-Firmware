@@ -247,7 +247,9 @@ module seeg #
     input wire RHS_MISO_O_P,
     input wire RHS_MISO_O_N,
     input wire RHS_MISO_P_P,
-    input wire RHS_MISO_P_N
+    input wire RHS_MISO_P_N,
+
+    output wire FIFO_rstn
 
 
   );
@@ -522,7 +524,8 @@ module seeg #
       .M_AXIS_tvalid(M_AXIS_RHD_tvalid),
       .M_AXIS_tready(M_AXIS_RHD_tready),
       .M_AXIS_tlast(M_AXIS_RHD_tlast),
-      .channelOut250M(rhd_channel)
+      .channelOut250M(rhd_channel),
+      .FIFO_rstn(FIFO_rstn)
     );
 
     rhs_axi stimulator (

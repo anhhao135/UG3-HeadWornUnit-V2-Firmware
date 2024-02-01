@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Jan 31 13:11:41 2024
+//Date        : Thu Feb  1 11:44:04 2024
 //Host        : GramForGram running 64-bit major release  (build 9200)
 //Command     : generate_target rhd_rhs_tb.bd
 //Design      : rhd_rhs_tb
@@ -69,6 +69,7 @@ module rhd_rhs_tb
   wire rhs_aclk_2;
   wire rhs_aresetn_1;
   wire rstn_dma_1;
+  wire seeg_0_FIFO_rstn;
   wire [63:0]seeg_0_M_AXIS_TDATA;
   wire seeg_0_M_AXIS_TLAST;
   wire seeg_0_M_AXIS_TREADY;
@@ -127,13 +128,14 @@ module rhd_rhs_tb
   rhd_rhs_tb_axis_data_fifo_0_0 axis_data_fifo_0
        (.m_axis_tready(1'b1),
         .s_axis_aclk(clk_dma_1),
-        .s_axis_aresetn(rstn_dma_1),
+        .s_axis_aresetn(seeg_0_FIFO_rstn),
         .s_axis_tdata(seeg_0_M_AXIS_TDATA),
         .s_axis_tlast(seeg_0_M_AXIS_TLAST),
         .s_axis_tready(seeg_0_M_AXIS_TREADY),
         .s_axis_tvalid(seeg_0_M_AXIS_TVALID));
   rhd_rhs_tb_seeg_0_0 seeg_0
-       (.M_AXIS_ACLK(clk_dma_1),
+       (.FIFO_rstn(seeg_0_FIFO_rstn),
+        .M_AXIS_ACLK(clk_dma_1),
         .M_AXIS_ARESETN(rstn_dma_1),
         .M_AXIS_tdata(seeg_0_M_AXIS_TDATA),
         .M_AXIS_tlast(seeg_0_M_AXIS_TLAST),
