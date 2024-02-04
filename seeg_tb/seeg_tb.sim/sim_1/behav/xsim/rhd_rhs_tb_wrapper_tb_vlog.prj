@@ -24,8 +24,8 @@ sv xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ip
 "../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1.sv" \
 
 verilog xil_defaultlib  --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" --include "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl" --include "C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" \
 "../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axis_data_fifo_0_0/sim/rhd_rhs_tb_axis_data_fifo_0_0.v" \
+"../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" \
 "../../../../seeg_tb.ip_user_files/bd/rhd_rhs_tb/sim/rhd_rhs_tb.v" \
 "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/hdl/rhd_rhs_tb_wrapper.v" \
 

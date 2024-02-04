@@ -50,9 +50,6 @@ vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_14 -L xilinx_vip "+i
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1_pkg.sv" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1.sv" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" "+incdir+../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
-"../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" \
-
 vlog -work axis_infrastructure_v1_1_0  -incr -mfcu  "+incdir+../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" "+incdir+../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
 
@@ -61,6 +58,7 @@ vlog -work axis_data_fifo_v2_0_10  -incr -mfcu  "+incdir+../../../../seeg_tb.gen
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/ec67/hdl" "+incdir+../../../../seeg_tb.gen/sources_1/bd/rhd_rhs_tb/ipshared/8713/hdl" "+incdir+C:/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_axis_data_fifo_0_0/sim/rhd_rhs_tb_axis_data_fifo_0_0.v" \
+"../../../bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" \
 "../../../bd/rhd_rhs_tb/sim/rhd_rhs_tb.v" \
 
 vlog -work xil_defaultlib \
