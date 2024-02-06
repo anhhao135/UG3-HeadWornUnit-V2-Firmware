@@ -114,8 +114,8 @@ begin
   //RHD setup
   
   // (1) Set Delay
-  //mtestWDataL = 32'h22222222; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
-  mtestWDataL = 32'h88888888; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
+  mtestWDataL = 32'h22222222; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
+  //mtestWDataL = 32'h88888888; //binary is 00010001000100010001000100010001 i.e. all miso lines are assumed to have 1 clock cycle delay
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h4, mtestProtectionType, mtestWDataL, mtestBresp);
   //mst_agent_rhd.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
@@ -129,8 +129,6 @@ begin
 
 
   //RHS setup
-
-  /*
 
   // (1) Set stim magnitude 
   mtestWDataL = 32'h80FF80FF;
@@ -193,9 +191,6 @@ begin
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   #100us;
-
-  */
-
 
 
   //start session
