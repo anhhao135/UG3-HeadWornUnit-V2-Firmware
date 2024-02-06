@@ -198,8 +198,8 @@ begin
 
 
   //RHS
-  // (1c) enable stim
-  mtestWDataL = 32'h000000029; //hex 9 turns loopback off, hex 29 turns on
+  // (1c) enable stim hex29 = 00101001 hex669 = 11001101001
+  mtestWDataL = 32'h669; //hex 9 turns loopback off, hex 29 turns on
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
 

@@ -654,7 +654,9 @@ rhs rhs
 	.channel_out(channel_out),
 	.state_cable_delay_finder_out(state_cable_delay_finder_out),
 	.rhs_record_trigger(rhs_record_trigger),
-	.rhs_fifo_pass_out(rhs_fifo_pass_out)
+	.rhs_fifo_pass_out(rhs_fifo_pass_out),
+	.use_manual_cable_delay(slv_reg0[6]),
+	.manual_cable_delay(slv_reg0[10:7])
 	);
 
 

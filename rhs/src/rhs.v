@@ -100,7 +100,11 @@ module rhs
 
     input wire                               rhs_record_trigger,
 
-    output wire                              rhs_fifo_pass_out
+    output wire                              rhs_fifo_pass_out,
+
+    input wire                               use_manual_cable_delay,
+
+    input wire [3:0]                         manual_cable_delay
 
     );
 
@@ -341,56 +345,60 @@ module rhs
 
     reg [3:0] phase_select_low;
 
+    wire [3:0] phase_select_out;
+
+    
+    assign phase_select_out = use_manual_cable_delay ? manual_cable_delay : phase_select;
 
     // MISO phase selectors (to compensate for headstage cable delays)
 
     MISO_phase_selector MISO_falling_edge_1 (
-        .phase_select(phase_select), .MISO4x(in4x_1), .MISO(in_1));	
+        .phase_select(phase_select_out), .MISO4x(in4x_1), .MISO(in_1));	
 
     MISO_phase_selector MISO_falling_edge_2 (
-        .phase_select(phase_select), .MISO4x(in4x_2), .MISO(in_2));
+        .phase_select(phase_select_out), .MISO4x(in4x_2), .MISO(in_2));
 
     MISO_phase_selector MISO_falling_edge_3 (
-        .phase_select(phase_select), .MISO4x(in4x_3), .MISO(in_3));	
+        .phase_select(phase_select_out), .MISO4x(in4x_3), .MISO(in_3));	
 
     MISO_phase_selector MISO_falling_edge_4 (
-        .phase_select(phase_select), .MISO4x(in4x_4), .MISO(in_4));
+        .phase_select(phase_select_out), .MISO4x(in4x_4), .MISO(in_4));
 
     MISO_phase_selector MISO_falling_edge_5 (
-        .phase_select(phase_select), .MISO4x(in4x_5), .MISO(in_5));	
+        .phase_select(phase_select_out), .MISO4x(in4x_5), .MISO(in_5));	
 
     MISO_phase_selector MISO_falling_edge_6 (
-        .phase_select(phase_select), .MISO4x(in4x_6), .MISO(in_6));
+        .phase_select(phase_select_out), .MISO4x(in4x_6), .MISO(in_6));
 
     MISO_phase_selector MISO_falling_edge_7 (
-        .phase_select(phase_select), .MISO4x(in4x_7), .MISO(in_7));	
+        .phase_select(phase_select_out), .MISO4x(in4x_7), .MISO(in_7));	
 
     MISO_phase_selector MISO_falling_edge_8 (
-        .phase_select(phase_select), .MISO4x(in4x_8), .MISO(in_8));
+        .phase_select(phase_select_out), .MISO4x(in4x_8), .MISO(in_8));
 
     MISO_phase_selector MISO_falling_edge_9 (
-        .phase_select(phase_select), .MISO4x(in4x_9), .MISO(in_9));	
+        .phase_select(phase_select_out), .MISO4x(in4x_9), .MISO(in_9));	
 
     MISO_phase_selector MISO_falling_edge_10 (
-        .phase_select(phase_select), .MISO4x(in4x_10), .MISO(in_10));
+        .phase_select(phase_select_out), .MISO4x(in4x_10), .MISO(in_10));
 
     MISO_phase_selector MISO_falling_edge_11 (
-        .phase_select(phase_select), .MISO4x(in4x_11), .MISO(in_11));	
+        .phase_select(phase_select_out), .MISO4x(in4x_11), .MISO(in_11));	
 
     MISO_phase_selector MISO_falling_edge_12 (
-        .phase_select(phase_select), .MISO4x(in4x_12), .MISO(in_12));
+        .phase_select(phase_select_out), .MISO4x(in4x_12), .MISO(in_12));
 
     MISO_phase_selector MISO_falling_edge_13 (
-        .phase_select(phase_select), .MISO4x(in4x_13), .MISO(in_13));	
+        .phase_select(phase_select_out), .MISO4x(in4x_13), .MISO(in_13));	
 
     MISO_phase_selector MISO_falling_edge_14 (
-        .phase_select(phase_select), .MISO4x(in4x_14), .MISO(in_14));
+        .phase_select(phase_select_out), .MISO4x(in4x_14), .MISO(in_14));
 
     MISO_phase_selector MISO_falling_edge_15 (
-        .phase_select(phase_select), .MISO4x(in4x_15), .MISO(in_15));	
+        .phase_select(phase_select_out), .MISO4x(in4x_15), .MISO(in_15));	
 
     MISO_phase_selector MISO_falling_edge_16 (
-        .phase_select(phase_select), .MISO4x(in4x_16), .MISO(in_16));
+        .phase_select(phase_select_out), .MISO4x(in4x_16), .MISO(in_16));
 
 
 
@@ -669,7 +677,7 @@ module rhs
         .wr_clk(clk),
         .rd_clk(M_AXIS_ACLK),
         .din(rhs_data_out),
-        .wr_en(rhd_valid_out && (channel >= 3) && (channel <= 18) && rhs_fifo_pass), // overwrite if FIFO is full, there are 2-channel delay in the SPI interface
+        .wr_en(rhd_valid_out && (channel >= 3) && (channel <= 18) && rhs_fifo_pass && flag_cable_delay_found), // overwrite if FIFO is full, there are 2-channel delay in the SPI interface
         .rd_en(M_AXIS_tready && SPI_running_250M && !empty), // read when SPI is running + FIFO is not empty
         .dout(data_fifo_out),
         .full(),

@@ -85,3 +85,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/rhs
 INFO: [VRFC 10-311] analyzing module rhs_single_diff_converter
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module seeg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/src/rhd_rhs_tb_wrapper_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_wrapper_tb
