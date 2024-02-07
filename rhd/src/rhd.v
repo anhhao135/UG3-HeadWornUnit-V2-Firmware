@@ -914,7 +914,8 @@ module rhd
                             end
                             else if ((INTAN_reg != INTAN_expected || INTAN_DDR_reg != INTAN_expected) && flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = DONE; 
-                                phase_select = (phase_select_low + phase_select) / 2;
+                                if (phase_select > 2)
+                                    phase_select = (phase_select_low + phase_select) / 2;
                                 //phase_select = delay_A;
                             end
                             else begin
