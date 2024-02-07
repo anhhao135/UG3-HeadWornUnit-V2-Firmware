@@ -76,7 +76,10 @@ initial begin
 end
 
 
-always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
+always #(71.4248/4) rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
+
+//always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz IN HIGH SAMPLING MODE
+
 always #8.9285 rhs_aclk <= ~rhs_aclk; //rhd runs at 56 MHz
 //always #5.208 rhs_aclk <= ~rhs_aclk; //rhd runs at 96 MHz
 always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
@@ -199,7 +202,7 @@ begin
 
   //RHS
   // (1c) enable stim hex29 = 00101001 hex669 = 11001101001
-  mtestWDataL = 32'h669; //hex 9 turns loopback off, hex 29 turns on
+  mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
 

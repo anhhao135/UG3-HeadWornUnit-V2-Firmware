@@ -2363,7 +2363,7 @@ module rhs
                             end
                             else if (INTAN_reg != INTAN_expected && flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = DONE;
-                                if (phase_select >= 2)
+                                if (phase_select >= 3)
                                     phase_select = (phase_select_low + phase_select) / 2;
                             end
                             else begin
