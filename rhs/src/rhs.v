@@ -272,7 +272,7 @@ module rhs
 
     //assign header_magic_number_normal   = 64'hAAAAAAAAAAAAAAAA;  // Fixed 64-bit "magic number" that begins each data frame
     assign header_magic_number_normal   = 64'hCCCCCCCCCCCCCCCC;  
-    assign header_magic_number_impCheck = 64'h8080808080808080;  // Fixed 64-bit "magic number" that begins each data frame
+    assign header_magic_number_impCheck = 64'hF00FF00FF00FF00F;  // Fixed 64-bit "magic number" that begins each data frame
     assign header_magic_number          = { ZCheck_loop == 0 }? header_magic_number_normal: header_magic_number_impCheck;
 
 
@@ -2363,7 +2363,8 @@ module rhs
                             end
                             else if (INTAN_reg != INTAN_expected && flag_cable_delay_low_found) begin
                                 state_cable_delay_finder = DONE;
-                                phase_select = (phase_select_low + phase_select) / 2;
+                                if (phase_select >= 2)
+                                    phase_select = (phase_select_low + phase_select) / 2;
                             end
                             else begin
                                 phase_select = phase_select + 1;
