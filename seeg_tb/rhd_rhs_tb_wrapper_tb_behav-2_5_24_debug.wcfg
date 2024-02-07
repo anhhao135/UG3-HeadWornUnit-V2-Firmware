@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,087.010000 us"></ZoomStartTime>
-      <ZoomEndTime time="4,337.010001 us"></ZoomEndTime>
-      <Cursor1Time time="1,802.010000 us"></Cursor1Time>
+      <ZoomStartTime time="1,640.212000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,821.012001 us"></ZoomEndTime>
+      <Cursor1Time time="1,772.612000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="237"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="207"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="49" />
+   <WVObjectSize size="52" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -216,5 +216,17 @@
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tlast" type="logic">
       <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhs_fifo_pass_out" type="logic">
+      <obj_property name="ElementShortName">rhs_fifo_pass_out</obj_property>
+      <obj_property name="ObjectShortName">rhs_fifo_pass_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhd_channel" type="array">
+      <obj_property name="ElementShortName">rhd_channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rhd_channel[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhs_record_trigger" type="logic">
+      <obj_property name="ElementShortName">rhs_record_trigger</obj_property>
+      <obj_property name="ObjectShortName">rhs_record_trigger</obj_property>
    </wvobject>
 </wave_config>

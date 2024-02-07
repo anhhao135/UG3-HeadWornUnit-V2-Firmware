@@ -104,7 +104,8 @@ module rhd
     output wire [5:0]                        channelOut,
     output wire [5:0]                        channelOut250M,
     output wire [3:0]                        state_cable_delay_finder_out,
-    output wire                              init_mode_out
+    output wire                              init_mode_out,
+    input wire                               rhs_fifo_pass_in_250M
 
 
     );
@@ -648,6 +649,12 @@ module rhd
         .dest_out(SPI_running_250M),
         .src_clk(clk),
         .src_in(SPI_running));    
+
+    xpm_cdc_1bit xpm_cdc_1bit_rhs_fifo_pass_in(
+        .dest_clk(clk),
+        .dest_out(rhs_fifo_pass_in),
+        .src_clk(M_AXIS_ACLK),
+        .src_in(rhs_fifo_pass_in_250M));    
 
 
     xpm_cdc_array_single #(
@@ -2872,7 +2879,7 @@ module rhd
                         if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0) begin
                             channel <= 0;
                         end
-                        else if (flag_cable_delay_found)
+                        else if (flag_cable_delay_found && !rhs_fifo_pass_in)
                             channel <= channel + 1;
                     end
 

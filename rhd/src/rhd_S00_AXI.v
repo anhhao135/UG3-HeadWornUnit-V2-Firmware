@@ -60,6 +60,8 @@ module rhd_S00_AXI #
 
 	output wire [5:0] channelOut250M,
 
+	input wire rhs_fifo_pass_in,
+
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
 	input wire		   M_AXIS_tready,
@@ -718,7 +720,8 @@ rhd rhd
 	.channelOut(channel),
 	.init_mode_out(init_mode_out),
 	.state_cable_delay_finder_out(state_cable_delay_finder),
-	.channelOut250M(channelOut250M)
+	.channelOut250M(channelOut250M),
+	.rhs_fifo_pass_in_250M(rhs_fifo_pass_in)
 	);
 
 

@@ -525,7 +525,8 @@ module seeg #
       .M_AXIS_tready(M_AXIS_RHD_tready),
       .M_AXIS_tlast(M_AXIS_RHD_tlast),
       .channelOut250M(rhd_channel),
-      .FIFO_rstn(FIFO_rstn)
+      .FIFO_rstn(FIFO_rstn),
+      .rhs_fifo_pass_in(rhs_fifo_pass_out)
     );
 
     rhs_axi stimulator (

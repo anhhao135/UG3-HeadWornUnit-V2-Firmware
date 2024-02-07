@@ -87,6 +87,8 @@ module rhd_axi #
 
     output wire [5:0] channelOut250M,
 
+    input wire rhs_fifo_pass_in,
+
     //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 		output wire [63:0] M_AXIS_tdata,
@@ -205,7 +207,8 @@ module rhd_axi #
       .S_AXI_RRESP(s00_axi_rresp),
       .S_AXI_RVALID(s00_axi_rvalid),
       .S_AXI_RREADY(s00_axi_rready),
-      .channelOut250M(channelOut250M)
+      .channelOut250M(channelOut250M),
+      .rhs_fifo_pass_in(rhs_fifo_pass_in)
     );
 
   // Add user logic here
