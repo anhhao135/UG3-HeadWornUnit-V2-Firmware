@@ -66,7 +66,7 @@ module rhs
     input wire                               mag_set_en,              // AXI4-Lite
     input wire				                 stim_en,                 // AXI4-Lite
     input wire                               impedance_check,         // AXI4-Lite
-    input wire                               biphasic_polarity,       // AXI4-Lite
+
 
     // REG1: STIM_MAG
     input wire [15:0]                        mag_pos,                 // AXI4-Lite , 31:24 pos trim (128 by default), 23:16 pos mag
@@ -80,15 +80,17 @@ module rhs
     input wire [1:0]                         impedance_check_scale,
 
     // REG4: STIM_CH
-    input wire                               stim_mono_vs_bi, //bit 10
-    input wire [4:0]                         stim_ch_p, //choose positive electrode from 0 to 31
-    input wire [4:0]                         stim_ch_n, //choose negative electrode from 0 to 31
+    input wire [15:0]                        stim_mask, // enable probe corresponds to 1 in bit index A-P <-> bit 0 - bit 15
+    input wire                               stim_mono_vs_bi, //0 is mono, 1 is bi
+    input wire                               stim_biphasic_polarity,       // 1 corresponds to rising edge first, 0 is falling edge first
+    input wire [3:0]                         stim_ch_p, //choose positive electrode from 0 to 15, this will also be the monopolar channel
+    input wire [3:0]                         stim_ch_n, //choose negative electrode from 0 to 15, this will not matter if in monopolar mode
 
     // REG5: PULSE_WIDTH
-    input wire [10:0]                        stim_pulse_width, // 0-2047 * 50us
+    input wire [10:0]                        stim_pulse_width, // 0-2047 * 29.1648us
 
     // REG6: INTRAPULSE_DELAY
-    input wire [10:0]                        stim_intrapulse_delay, // 0-2047 * 50us
+    input wire [10:0]                        stim_intrapulse_delay, // 0-2047 * 29.1648us
 
     // REG7: NUMBER OF PULSES
     input wire [9:0]                         stim_num_pulse, 
@@ -171,11 +173,7 @@ module rhs
 
     assign state_cable_delay_finder_out = state_cable_delay_finder;
 
-
-
     reg rhs_record_flag = 0;
-
-
 
     // [State machine for pulse generation]
     reg  [2:0]      state_pulse;
@@ -186,14 +184,13 @@ module rhs
         S_INTRAPULSE  = 3'b011,
         S_Q_RECOVERY  = 3'b100;
     reg  [10:0]     stim_counter; // stim counter [1, 1024]
-    reg  [10:0]     time_counter; // step size = 50 us, max time length = 50 * 2047 = 102.35 ms
+    reg  [10:0]     time_counter; // step size = 29.1 us, max time length = 29.1 * 2047 = 59.5ms
     wire [10:0]     charge_recov_on_time; // time after D2 for recovery to start
     wire [10:0]     charge_recov_off_time; // time after D2 for recovery to stop
     reg             charge_recov_mode;
     
-    assign charge_recov_on_time = 2; //default 2 * 50 = 100us
-    assign charge_recov_off_time = 10; //default 10 * 50 = 500us
-
+    assign charge_recov_on_time = 4; //default 4 * 29.1 = 116.4us
+    assign charge_recov_off_time = 18; //default 18 * 29.1 = 523.8us
 
     // [registers related to stim] RHS2116 registers are 16 bit 
     reg [15:0] stim_on;
@@ -203,33 +200,48 @@ module rhs
 
     wire [15:0] stim_on_1, stim_on_2, stim_on_3, stim_on_4, stim_on_5, stim_on_6, stim_on_7, stim_on_8, stim_on_9, stim_on_10, stim_on_11, stim_on_12, stim_on_13, stim_on_14, stim_on_15, stim_on_16; 
 
-    assign stim_on_1 = (stim_ch_p[4]) ? 16'b0     :   stim_on; // checks MSB of channel selection, if 1, then must be 16 - 31 - RHS2 select
-    assign stim_on_2 = (stim_ch_p[4]) ? stim_on   :   16'b0; // if MSB = 0, 0-15 RHS1 select
+    //currently, the same channel on/off pattern will be broadcasted to all activated probes
+    //future to implement individual probe pattern customization
+    assign stim_on_1 = (stim_mask[0]) ? stim_on     :   0; //mask decides which probes will be activated
+    assign stim_on_2 = (stim_mask[1]) ? stim_on     :   0;
+    assign stim_on_3 = (stim_mask[2]) ? stim_on     :   0;
+    assign stim_on_4 = (stim_mask[3]) ? stim_on     :   0;
+    assign stim_on_5 = (stim_mask[4]) ? stim_on     :   0;
+    assign stim_on_6 = (stim_mask[5]) ? stim_on     :   0;
+    assign stim_on_7 = (stim_mask[6]) ? stim_on     :   0;
+    assign stim_on_8 = (stim_mask[7]) ? stim_on     :   0;
+    assign stim_on_9 = (stim_mask[8]) ? stim_on     :   0;
+    assign stim_on_10 = (stim_mask[9]) ? stim_on     :   0;
+    assign stim_on_11 = (stim_mask[10]) ? stim_on     :   0;
+    assign stim_on_12 = (stim_mask[11]) ? stim_on     :   0;
+    assign stim_on_13 = (stim_mask[12]) ? stim_on     :   0;
+    assign stim_on_14 = (stim_mask[13]) ? stim_on     :   0;
+    assign stim_on_15 = (stim_mask[14]) ? stim_on     :   0;
+    assign stim_on_16 = (stim_mask[15]) ? stim_on     :   0;
 
 
     always @(*) begin //* means to autogenerate sensitivity list
-        case (stim_ch_p[3:0]) //bit mask channel select to be written to stimulator on register 42 of RHS
-        0:      channel_select_p <= 16'b0000000000000001;      
-        1:      channel_select_p <= 16'b0000000000000010;
-        2:      channel_select_p <= 16'b0000000000000100;
-        3:      channel_select_p <= 16'b0000000000001000;
-        4:      channel_select_p <= 16'b0000000000010000;
-        5:      channel_select_p <= 16'b0000000000100000;  
-        6:      channel_select_p <= 16'b0000000001000000;
-        7:      channel_select_p <= 16'b0000000010000000;
-        8:      channel_select_p <= 16'b0000000100000000;
-        9:      channel_select_p <= 16'b0000001000000000;
-        10:     channel_select_p <= 16'b0000010000000000;
-        11:     channel_select_p <= 16'b0000100000000000;
-        12:     channel_select_p <= 16'b0001000000000000;
-        13:     channel_select_p <= 16'b0010000000000000;
-        14:     channel_select_p <= 16'b0100000000000000;
-        15:     channel_select_p <= 16'b1000000000000000;
+    
+        case (stim_ch_p) //bit mask channel select to be written to stimulator on register 42 of RHS
+            0:      channel_select_p <= 16'b0000000000000001;      
+            1:      channel_select_p <= 16'b0000000000000010;
+            2:      channel_select_p <= 16'b0000000000000100;
+            3:      channel_select_p <= 16'b0000000000001000;
+            4:      channel_select_p <= 16'b0000000000010000;
+            5:      channel_select_p <= 16'b0000000000100000;  
+            6:      channel_select_p <= 16'b0000000001000000;
+            7:      channel_select_p <= 16'b0000000010000000;
+            8:      channel_select_p <= 16'b0000000100000000;
+            9:      channel_select_p <= 16'b0000001000000000;
+            10:     channel_select_p <= 16'b0000010000000000;
+            11:     channel_select_p <= 16'b0000100000000000;
+            12:     channel_select_p <= 16'b0001000000000000;
+            13:     channel_select_p <= 16'b0010000000000000;
+            14:     channel_select_p <= 16'b0100000000000000;
+            15:     channel_select_p <= 16'b1000000000000000;
         endcase
-    end
-    always @(*) begin
-        if (stim_mono_vs_bi) begin //if mono_vs_bi is high, that means bi mode, so select negative channel; this is mask of register 44
-            case (stim_ch_n[3:0])
+
+        case (stim_ch_n)
             0:      channel_select_n <= 16'b0000000000000001;      
             1:      channel_select_n <= 16'b0000000000000010;
             2:      channel_select_n <= 16'b0000000000000100;
@@ -246,13 +258,8 @@ module rhs
             13:     channel_select_n <= 16'b0010000000000000;
             14:     channel_select_n <= 16'b0100000000000000;
             15:     channel_select_n <= 16'b1000000000000000;
-            endcase
-        end
-        else begin
-                    channel_select_n <= 16'b0000000000000000;
-        end
+        endcase
     end
-
 
 
     // [ZCheck]
@@ -302,8 +309,6 @@ module rhs
 
     // Status register
     assign rhs_status   =  {15'b0, flag_stim_done};
-
-
 
 
     // [MISO]
@@ -2224,7 +2229,7 @@ module rhs
                             S_PULSE_ON_P: begin
                                 if (time_counter == stim_pulse_width) begin
                                     time_counter <= 0;
-                                    if (!stim_inf_pulse_mode && stim_counter == stim_num_pulse) begin
+                                    if (!stim_inf_pulse_mode && stim_counter == stim_num_pulse - 1) begin
                                         state_pulse  <= S_Q_RECOVERY;
                                         stim_counter <= 0;
                                     end
@@ -2245,7 +2250,7 @@ module rhs
                                 end
                             end
                             S_Q_RECOVERY: begin
-                                if (time_counter == stim_intrapulse_delay) begin
+                                if (time_counter == 2 * (charge_recov_off_time - charge_recov_on_time)) begin
                                     time_counter <= 0;   
                                     state_pulse  <= S_OFF;
                                 end
@@ -2279,13 +2284,39 @@ module rhs
                 ms_cs_a: begin
                     case (state_pulse) 
                         S_PULSE_ON_N: begin
-                            stim_on     <= channel_select_p | channel_select_n;
-                            stim_pol    <= channel_select_n;
+
+                            if (stim_mono_vs_bi) begin //1 means bipolar
+                                stim_on = channel_select_p | channel_select_n; //build mask based on the hot one encodings of selected channels
+                            end
+                            else begin //0 means monopolar
+                                stim_on = channel_select_p; //channel mask is just positive channel selection
+                            end
+
+                            if (stim_biphasic_polarity) begin //if true means rising edge first
+                                stim_pol = channel_select_p; //stim pol is register 44, 1 means positive current, 0 means negative current
+                            end
+                            else begin
+                                stim_pol = ~channel_select_p;
+                            end
+
                             charge_recov<= 16'b0;
                         end
                         S_PULSE_ON_P: begin
-                            stim_on     <= channel_select_p | channel_select_n;
-                            stim_pol    <= channel_select_p;
+
+                            if (stim_mono_vs_bi) begin //1 means bipolar
+                                stim_on = channel_select_p | channel_select_n; //build mask based on the hot one encodings of selected channels
+                            end
+                            else begin //0 means monopolar
+                                stim_on = channel_select_p; //channel mask is just positive channel selection
+                            end
+
+                            if (stim_biphasic_polarity) begin //if true means rising edge first
+                                stim_pol = ~channel_select_p; //stim pol is register 44, 1 means positive current, 0 means negative current
+                            end
+                            else begin
+                                stim_pol = channel_select_p;
+                            end
+
                             charge_recov<= 16'b0;
                         end
                         S_INTRAPULSE: begin
@@ -2296,7 +2327,9 @@ module rhs
                         S_Q_RECOVERY: begin
                             stim_on     <= 16'b0;
                             stim_pol    <= 16'b0;
+
                             charge_recov<= channel_select_p | channel_select_n;
+
                             if (time_counter == charge_recov_on_time)
                                 charge_recov_mode <= 1;
                             if (time_counter == charge_recov_off_time) begin
@@ -2663,8 +2696,8 @@ module command_selector_stim (
 	wire [7:0] charge_recov_register, compliance_register, stim_on_register, stim_pol_register;
 	
 	assign compliance_register = 8'd40;
-	assign stim_on_register = 8'd42;
-	assign stim_pol_register = 8'd44;
+	assign stim_on_register = 8'd42; //BIT MASK TO TURN ON CHANNEL CURRENT SOURCES
+	assign stim_pol_register = 8'd44; //BIT MASK TO CONFIGURE POLARITY OF CHANNEL CURRENT SOURCES
 	// If charge_recov_mode = 0, use current-limited charge recovery drivers (Register 48)
 	// If charge_recov_mode = 1, use charge recovery switch (Register 46)
 	assign charge_recov_register = charge_recov_mode ? 8'd46 : 8'd48;

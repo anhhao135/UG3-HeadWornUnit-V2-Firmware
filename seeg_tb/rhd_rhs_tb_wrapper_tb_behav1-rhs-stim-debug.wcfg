@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhd_rhs_tb_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhd_rhs_tb_wrapper_tb" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="11,182.047624 us"></ZoomStartTime>
+      <ZoomEndTime time="11,255.247625 us"></ZoomEndTime>
+      <Cursor1Time time="11,295.047624 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="249"></NameColumnWidth>
+      <ValueColumnWidth column_width="197"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider103">
+      <obj_property name="label">Above is master</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhs_status" type="array">
+      <obj_property name="ElementShortName">rhs_status[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rhs_status[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/SPI_ONOFF" type="logic">
+      <obj_property name="ElementShortName">SPI_ONOFF</obj_property>
+      <obj_property name="ObjectShortName">SPI_ONOFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/init_en" type="logic">
+      <obj_property name="ElementShortName">init_en</obj_property>
+      <obj_property name="ObjectShortName">init_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_set_en" type="logic">
+      <obj_property name="ElementShortName">mag_set_en</obj_property>
+      <obj_property name="ObjectShortName">mag_set_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_en" type="logic">
+      <obj_property name="ElementShortName">stim_en</obj_property>
+      <obj_property name="ObjectShortName">stim_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_pos" type="array">
+      <obj_property name="ElementShortName">mag_pos[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mag_pos[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_neg" type="array">
+      <obj_property name="ElementShortName">mag_neg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mag_neg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_mask" type="array">
+      <obj_property name="ElementShortName">stim_mask[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_mask[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_biphasic_polarity" type="logic">
+      <obj_property name="ElementShortName">stim_biphasic_polarity</obj_property>
+      <obj_property name="ObjectShortName">stim_biphasic_polarity</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_ch_p" type="array">
+      <obj_property name="ElementShortName">stim_ch_p[3:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_ch_p[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_ch_n" type="array">
+      <obj_property name="ElementShortName">stim_ch_n[3:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_ch_n[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_pulse_width" type="array">
+      <obj_property name="ElementShortName">stim_pulse_width[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_pulse_width[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_intrapulse_delay" type="array">
+      <obj_property name="ElementShortName">stim_intrapulse_delay[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_intrapulse_delay[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_num_pulse" type="array">
+      <obj_property name="ElementShortName">stim_num_pulse[9:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_num_pulse[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_inf_pulse_mode" type="logic">
+      <obj_property name="ElementShortName">stim_inf_pulse_mode</obj_property>
+      <obj_property name="ObjectShortName">stim_inf_pulse_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_out" type="array">
+      <obj_property name="ElementShortName">channel_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/state_pulse" type="array">
+      <obj_property name="ElementShortName">state_pulse[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_pulse[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_pol" type="array">
+      <obj_property name="ElementShortName">stim_pol[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_pol[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/charge_recov" type="array">
+      <obj_property name="ElementShortName">charge_recov[15:0]</obj_property>
+      <obj_property name="ObjectShortName">charge_recov[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_select_p" type="array">
+      <obj_property name="ElementShortName">channel_select_p[15:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_select_p[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_select_n" type="array">
+      <obj_property name="ElementShortName">channel_select_n[15:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_select_n[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_1" type="array">
+      <obj_property name="ElementShortName">stim_on_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_1[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_2" type="array">
+      <obj_property name="ElementShortName">stim_on_2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_2[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_3" type="array">
+      <obj_property name="ElementShortName">stim_on_3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_3[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_4" type="array">
+      <obj_property name="ElementShortName">stim_on_4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_4[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_5" type="array">
+      <obj_property name="ElementShortName">stim_on_5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_5[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_6" type="array">
+      <obj_property name="ElementShortName">stim_on_6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_6[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_7" type="array">
+      <obj_property name="ElementShortName">stim_on_7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_7[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_8" type="array">
+      <obj_property name="ElementShortName">stim_on_8[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_8[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_9" type="array">
+      <obj_property name="ElementShortName">stim_on_9[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_9[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_10" type="array">
+      <obj_property name="ElementShortName">stim_on_10[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_10[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_11" type="array">
+      <obj_property name="ElementShortName">stim_on_11[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_11[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_12" type="array">
+      <obj_property name="ElementShortName">stim_on_12[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_12[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_13" type="array">
+      <obj_property name="ElementShortName">stim_on_13[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_13[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_14" type="array">
+      <obj_property name="ElementShortName">stim_on_14[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_14[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_15" type="array">
+      <obj_property name="ElementShortName">stim_on_15[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_15[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on_16" type="array">
+      <obj_property name="ElementShortName">stim_on_16[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on_16[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_stim_done" type="logic">
+      <obj_property name="ElementShortName">flag_stim_done</obj_property>
+      <obj_property name="ObjectShortName">flag_stim_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/charge_recov_mode" type="logic">
+      <obj_property name="ElementShortName">charge_recov_mode</obj_property>
+      <obj_property name="ObjectShortName">charge_recov_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/main_state" type="array">
+      <obj_property name="ElementShortName">main_state[7:0]</obj_property>
+      <obj_property name="ObjectShortName">main_state[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_mono_vs_bi" type="logic">
+      <obj_property name="ElementShortName">stim_mono_vs_bi</obj_property>
+      <obj_property name="ObjectShortName">stim_mono_vs_bi</obj_property>
+   </wvobject>
+</wave_config>

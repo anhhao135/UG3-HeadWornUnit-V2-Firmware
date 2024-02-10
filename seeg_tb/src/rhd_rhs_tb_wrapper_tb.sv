@@ -77,8 +77,8 @@ end
 
 
 always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
-always #8.9285 rhs_aclk <= ~rhs_aclk; //rhd runs at 56 MHz
-//always #5.208 rhs_aclk <= ~rhs_aclk; //rhd runs at 96 MHz
+//always #8.9285 rhs_aclk <= ~rhs_aclk; //rhd runs at 56 MHz
+always #5.208 rhs_aclk <= ~rhs_aclk; //rhd runs at 96 MHz
 always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
 
 
@@ -131,7 +131,7 @@ begin
   //RHS setup
 
   // (1) Set stim magnitude 
-  mtestWDataL = 32'h80FF80FF;
+  mtestWDataL = 32'h80FF80FF; //pos 128 trim 255  | neg mag 128 trim 255 mag
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h4, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h4, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
@@ -148,29 +148,33 @@ begin
   mst_agent_rhs.AXI4LITE_READ_BURST(32'hC, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
-  // (4) Set stim channel
-  mtestWDataL = (1'b0 <<  10 | 5'b10010 << 5 | 5'b10001 << 0); //bipolar , channel 18 negative , channel 17 positive 
+  // (4) Set stim channel, biphase polarity, mono or bipolar mode
+  mtestWDataL = 32'h10007F0; //  [25:10] stim mask [9] stim biphasic polarity [8] stim mono vs bi[7:4] stim ch n [3:0] stim ch p
+  // 0100 0000 0000 0001 1 1 1111 0000  channel 15 is negative, channel 0 is positive, rising edge first, bipolar mode, probe A (0) is enabled, probe O (14) is enabled 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h10, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h10, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
   // (5) Set stim pulse width
-  mtestWDataL = 32'h00000001; //pulse width is 1 * 50us = 50us
+  mtestWDataL = 32'h00000005; //pulse width is 5 * 29.1us = 145.5us
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h14, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h14, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
   // (6) Set intrapulse delay
-  mtestWDataL = 32'h00000010; //intrapulse delay is 16 * 50us = 800us
+  mtestWDataL = 32'h00000010; //intrapulse delay is 10 * 29.1us = 291us 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h18, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h18, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
   // (7) Set num pulse
-  mtestWDataL = 32'h00000008; //number of pulse = 1 + 1 = 2
+  mtestWDataL = 32'h400; //infinite pulse until stop
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h1C, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h1C, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
+
+  //each pulse with intrapulse will take 2*146 + 291 = 583
+  //for 3 pulses, it would take 1800us
 
   // (1a) Init
   mtestWDataL = 32'h000000023; // hex 3 turns off loopback 6th bit = 0 | hex 23 turns on loopback
@@ -198,8 +202,8 @@ begin
 
 
   //RHS
-  // (1c) enable stim hex29 = 00101001 hex669 = 11001101001
-  mtestWDataL = 32'h669; //hex 9 turns loopback off, hex 29 turns on
+  // (1c) enable stim hex29 = 00101001 hex669 = 11001101001 for use of manual cable delay
+  mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
 
@@ -211,10 +215,7 @@ begin
   mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
-  #10ms;
-
-
-
+  #4ms;
 
   //stop
 
@@ -226,7 +227,7 @@ begin
   mtestWDataL = 32'h00000000;
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
-  #100us;
+  #2ms;
 
   end 
   
