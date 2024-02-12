@@ -2167,22 +2167,22 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "459.729"
+            "value": "234.929"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "310.959"
+            "value": "107.949"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "7"
           },
           "CLKOUT2_JITTER": {
-            "value": "317.080"
+            "value": "139.123"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "310.959"
+            "value": "107.949"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "56"
+            "value": "96"
           },
           "CLKOUT2_USED": {
             "value": "true"
@@ -2194,16 +2194,16 @@
             "value": "clk_rhs"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "42.000"
+            "value": "8.625"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "120.000"
+            "value": "123.250"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "15"
+            "value": "9"
           },
           "MMCM_DIVCLK_DIVIDE": {
-            "value": "5"
+            "value": "1"
           },
           "NUM_OUT_CLKS": {
             "value": "2"

@@ -1,0 +1,105 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_1bit_xpm_cdc_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd
+INFO: [VRFC 10-311] analyzing module command_selector
+INFO: [VRFC 10-311] analyzing module MISO_falling_edge
+INFO: [VRFC 10-311] analyzing module MISO_rising_edge
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_S00_AXI
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:250]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:251]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:252]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:253]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:254]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:255]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:256]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:257]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:259]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:260]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:261]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:262]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:263]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:264]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:265]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:266]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:268]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:269]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:270]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:271]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:272]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:273]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:274]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:275]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:277]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:278]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:279]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:280]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:281]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:282]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:283]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:284]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_diff_to_single.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_diff_to_single
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_headstage_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_headstage_slave_full_16_probes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_headstage_slave_full_16_probes
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhs
+INFO: [VRFC 10-311] analyzing module command_initialization
+INFO: [VRFC 10-311] analyzing module command_amplitudeSetup
+INFO: [VRFC 10-311] analyzing module command_selector_stim
+INFO: [VRFC 10-311] analyzing module MISO_phase_selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhs_S00_AXI
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:199]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:200]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:201]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:202]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:204]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:205]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:206]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:207]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:209]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:210]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:211]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:212]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:214]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:215]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:216]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:217]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhs_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhs_headstage_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhs_headstage_slave_full
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_single_diff_converter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhs_single_diff_converter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seeg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_0/sim/rhd_rhs_tb_axi_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_0/sim/rhd_rhs_tb_axi_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_axi_vip_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axi_vip_0_1/sim/rhd_rhs_tb_axi_vip_0_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_axi_vip_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_axis_data_fifo_0_0/sim/rhd_rhs_tb_axis_data_fifo_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_axis_data_fifo_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/ip/rhd_rhs_tb_seeg_0_0/sim/rhd_rhs_tb_seeg_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_seeg_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.ip_user_files/bd/rhd_rhs_tb/sim/rhd_rhs_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.gen/sources_1/bd/rhd_rhs_tb/hdl/rhd_rhs_tb_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/src/rhd_rhs_tb_wrapper_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_wrapper_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg_tb/seeg_tb.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
