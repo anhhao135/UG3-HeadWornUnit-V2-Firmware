@@ -2569,7 +2569,7 @@ module command_initialization (
                 2:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd33, 16'h0000}; //clears magic number reg B
                 3:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd38, 16'hFFFF}; //set all 1s to provide DC amp power to all channels upon power up
                 4:       MOSI_cmd <=  clean_cmd; //recalibrate ADC
-                5:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd0,  16'h00C5}; //11 000101 page 16
+                5:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd0,  16'h00C7}; //11 000101 page 16
                 // HAL FOR 5:, CHANGED WRITE DATA FROM 16'h00C7 to 16'h00C5, so ADC sampling rate is >=440kS/s , ADC buffer bias is 3, MUX bias is 5
                 6:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd1,  16'h051A}; //0 1 0 1 0 0 0 1 1 010 digout 1 and 2 are driven to aux outs, driven to high, enable twos complement
                 7:       MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd2,  16'h0040}; // 0100 0000 6bit high sets Zcheck DAC power on, waveform generator will be constantly on, zcheck scale is set to 0.1pF series capacitor
@@ -2606,7 +2606,7 @@ module command_initialization (
                 21:      MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd44, 16'h0000}; //stim polarity ,triggered
                 // 10101000  0 is negative, 1 is positive
                 22:      MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd46, 16'h0000}; //charge recovery switch to gnd, not current limited, 1010, so elec 2 and 4 by default are tied to gnd, triggered
-                23:      MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd48, 16'h0000}; //charge recovery switch, uses DAC, all to 1 so all electrodes settle to 0V, from register 36, triggered
+                23:      MOSI_cmd <=  { 2'b10, 2'b00, 4'b0000, 8'd48, 16'hFFFF}; //charge recovery switch, uses DAC, all to 1 so all electrodes settle to 0V, from register 36, triggered
                 default: MOSI_cmd <=  read_rom255_cmd;
                 endcase
             end

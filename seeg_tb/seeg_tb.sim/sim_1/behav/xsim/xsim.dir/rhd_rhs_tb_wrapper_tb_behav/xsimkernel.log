@@ -1,7 +1,4 @@
-Running: xsim.dir/rhd_rhs_tb_wrapper_tb_behav/xsimk.exe -simmode gui -wdb rhd_rhs_tb_wrapper_tb_behav.wdb -simrunnum 0 -socket 52340
+Running: xsim.dir/rhd_rhs_tb_wrapper_tb_behav/xsimk.exe -simmode gui -wdb rhd_rhs_tb_wrapper_tb_behav.wdb -simrunnum 0 -socket 56578
 Design successfully loaded
-Design Loading Memory Usage: 14284 KB (Peak: 14284 KB)
+Design Loading Memory Usage: 14276 KB (Peak: 14276 KB)
 Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 31368 KB (Peak: 31368 KB)
-Simulation CPU Usage: 32514 ms
