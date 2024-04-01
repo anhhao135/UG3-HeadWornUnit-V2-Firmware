@@ -1,0 +1,99 @@
+
+*** Running vivado
+    with args -log main_seeg_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_seeg_0_0.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source main_seeg_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 454.715 ; gain = 163.008
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 495.312 ; gain = 40.598
+WARNING: [IP_Flow 19-3664] IP 'xpm_cdc_1bit_xpm_cdc_0_0' generated file not found 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/xpm_cdc_1bit_xpm_cdc_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xpm_cdc_1bit_xpm_cdc_0_0' generated file not found 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/xpm_cdc_1bit_xpm_cdc_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xpm_cdc_1bit_xpm_cdc_0_0' generated file not found 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/xpm_cdc_1bit_xpm_cdc_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xpm_cdc_1bit_xpm_cdc_0_0' generated file not found 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/xpm_cdc_1bit_xpm_cdc_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xpm_cdc_1bit_xpm_cdc_0_0' generated file not found 'c:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/xpm_cdc_1bit_xpm_cdc_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+Command: synth_design -top main_seeg_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16940
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:250]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:251]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:252]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:253]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:254]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:255]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:256]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:257]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:259]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:260]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:261]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:262]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:263]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:264]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:265]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:266]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:268]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:269]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:270]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:271]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:272]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:273]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:274]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:275]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:277]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:278]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:279]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:280]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:281]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:282]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:283]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:284]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:199]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:200]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:201]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:202]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:204]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:205]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:206]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:207]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:209]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:210]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:211]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:212]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:214]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:215]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:216]
+WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:217]
+INFO: [Synth 8-11241] undeclared symbol 'FIFO_rstn', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_axi.v:144]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_I', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:395]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_J', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:399]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_K', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:403]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_L', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:407]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_M', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:411]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_N', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:415]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_O', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:419]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MISO_P', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:423]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_I', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:431]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_J', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:435]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_K', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:439]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_L', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:443]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_M', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:447]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_N', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:451]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_O', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:455]
+INFO: [Synth 8-11241] undeclared symbol 'RHS_MOSI_P', assumed default net type 'wire' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:459]

@@ -30,7 +30,7 @@
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>Slowest Sync clock frequency</spirit:displayName>
           <spirit:description>Slowest Synchronous clock frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLOCK.FREQ_HZ">55999440</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLOCK.FREQ_HZ">95832375</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
@@ -397,12 +397,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:15:25 UTC 2024</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:386e91fc</spirit:value>
+            <spirit:value>9:2cfe8ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -416,11 +412,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:14:28 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 01 21:45:40 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:386e91fc</spirit:value>
+            <spirit:value>9:2cfe8ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -434,11 +430,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:14:28 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 01 21:45:40 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:386e91fc</spirit:value>
+            <spirit:value>9:2cfe8ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -457,11 +453,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:14:24 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 01 21:45:22 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ab167c01</spirit:value>
+            <spirit:value>9:fb78aab9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -477,11 +473,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:14:28 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 01 21:45:40 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ab167c01</spirit:value>
+            <spirit:value>9:fb78aab9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -500,11 +496,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:14:28 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 01 21:45:40 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:386e91fc</spirit:value>
+            <spirit:value>9:2cfe8ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -520,11 +516,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 31 20:14:28 UTC 2024</spirit:value>
+            <spirit:value>Mon Apr 01 21:45:40 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:386e91fc</spirit:value>
+            <spirit:value>9:2cfe8ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

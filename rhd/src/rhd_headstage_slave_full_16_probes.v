@@ -42,38 +42,38 @@ module rhd_headstage_slave_full_16_probes(
 );
 
     rhd_headstage_slave #(.STARTING_SEED(0)) A1 (MOSI, CS, clk, SCLK, MISO1_A, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(128)) B1 (MOSI, CS, clk, SCLK, MISO1_B, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(256)) C1 (MOSI, CS, clk, SCLK, MISO1_C, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(384)) D1 (MOSI, CS, clk, SCLK, MISO1_D, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(512)) E1 (MOSI, CS, clk, SCLK, MISO1_E, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(640)) F1 (MOSI, CS, clk, SCLK, MISO1_F, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(768)) G1 (MOSI, CS, clk, SCLK, MISO1_G, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(896)) H1 (MOSI, CS, clk, SCLK, MISO1_H, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1024)) I1 (MOSI, CS, clk, SCLK, MISO1_I, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1152)) J1 (MOSI, CS, clk, SCLK, MISO1_J, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1280)) K1 (MOSI, CS, clk, SCLK, MISO1_K, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1408)) L1 (MOSI, CS, clk, SCLK, MISO1_L, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1536)) M1 (MOSI, CS, clk, SCLK, MISO1_M, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1664)) N1 (MOSI, CS, clk, SCLK, MISO1_N, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1792)) O1 (MOSI, CS, clk, SCLK, MISO1_O, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1920)) P1 (MOSI, CS, clk, SCLK, MISO1_P, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(144)) B1 (MOSI, CS, clk, SCLK, MISO1_B, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(288)) C1 (MOSI, CS, clk, SCLK, MISO1_C, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(432)) D1 (MOSI, CS, clk, SCLK, MISO1_D, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(576)) E1 (MOSI, CS, clk, SCLK, MISO1_E, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(720)) F1 (MOSI, CS, clk, SCLK, MISO1_F, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(864)) G1 (MOSI, CS, clk, SCLK, MISO1_G, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1008)) H1 (MOSI, CS, clk, SCLK, MISO1_H, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1152)) I1 (MOSI, CS, clk, SCLK, MISO1_I, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1296)) J1 (MOSI, CS, clk, SCLK, MISO1_J, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1440)) K1 (MOSI, CS, clk, SCLK, MISO1_K, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1584)) L1 (MOSI, CS, clk, SCLK, MISO1_L, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1728)) M1 (MOSI, CS, clk, SCLK, MISO1_M, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1872)) N1 (MOSI, CS, clk, SCLK, MISO1_N, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(2016)) O1 (MOSI, CS, clk, SCLK, MISO1_O, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(2160)) P1 (MOSI, CS, clk, SCLK, MISO1_P, channel, init_en, state_cable_delay_finder);
 
     rhd_headstage_slave #(.STARTING_SEED(64)) A2 (MOSI, CS, clk, SCLK, MISO2_A, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(192)) B2 (MOSI, CS, clk, SCLK, MISO2_B, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(320)) C2 (MOSI, CS, clk, SCLK, MISO2_C, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(448)) D2 (MOSI, CS, clk, SCLK, MISO2_D, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(576)) E2 (MOSI, CS, clk, SCLK, MISO2_E, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(704)) F2 (MOSI, CS, clk, SCLK, MISO2_F, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(832)) G2 (MOSI, CS, clk, SCLK, MISO2_G, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(960)) H2 (MOSI, CS, clk, SCLK, MISO2_H, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1088)) I2 (MOSI, CS, clk, SCLK, MISO2_I, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1216)) J2 (MOSI, CS, clk, SCLK, MISO2_J, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1344)) K2 (MOSI, CS, clk, SCLK, MISO2_K, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1472)) L2 (MOSI, CS, clk, SCLK, MISO2_L, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1600)) M2 (MOSI, CS, clk, SCLK, MISO2_M, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1728)) N2 (MOSI, CS, clk, SCLK, MISO2_N, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1856)) O2 (MOSI, CS, clk, SCLK, MISO2_O, channel, init_en, state_cable_delay_finder);
-    rhd_headstage_slave #(.STARTING_SEED(1984)) P2 (MOSI, CS, clk, SCLK, MISO2_P, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(208)) B2 (MOSI, CS, clk, SCLK, MISO2_B, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(352)) C2 (MOSI, CS, clk, SCLK, MISO2_C, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(496)) D2 (MOSI, CS, clk, SCLK, MISO2_D, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(640)) E2 (MOSI, CS, clk, SCLK, MISO2_E, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(784)) F2 (MOSI, CS, clk, SCLK, MISO2_F, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(928)) G2 (MOSI, CS, clk, SCLK, MISO2_G, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1072)) H2 (MOSI, CS, clk, SCLK, MISO2_H, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1216)) I2 (MOSI, CS, clk, SCLK, MISO2_I, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1360)) J2 (MOSI, CS, clk, SCLK, MISO2_J, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1504)) K2 (MOSI, CS, clk, SCLK, MISO2_K, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1648)) L2 (MOSI, CS, clk, SCLK, MISO2_L, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1792)) M2 (MOSI, CS, clk, SCLK, MISO2_M, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(1936)) N2 (MOSI, CS, clk, SCLK, MISO2_N, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(2080)) O2 (MOSI, CS, clk, SCLK, MISO2_O, channel, init_en, state_cable_delay_finder);
+    rhd_headstage_slave #(.STARTING_SEED(2224)) P2 (MOSI, CS, clk, SCLK, MISO2_P, channel, init_en, state_cable_delay_finder);
 
 
 endmodule
