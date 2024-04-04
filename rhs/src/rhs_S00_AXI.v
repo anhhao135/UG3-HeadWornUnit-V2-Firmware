@@ -364,13 +364,13 @@ begin
 	if ( S_AXI_ARESETN == 1'b0 )
 	begin
 		slv_reg0 <= 0;
-		slv_reg1 <= 0;
-		slv_reg2 <= 0;
-		slv_reg3 <= 0;
-		slv_reg4 <= 0;
-		slv_reg5 <= 0;
-		slv_reg6 <= 0;
-		slv_reg7 <= 0;
+		//slv_reg1 <= 0;
+		//slv_reg2 <= 0;
+		//slv_reg3 <= 0;
+		//slv_reg4 <= 0;
+		//slv_reg5 <= 0;
+		//slv_reg6 <= 0;
+		//slv_reg7 <= 0; Hao SHOULD UNCOMMENT THIS
 	end 
 	else begin
 	if (slv_reg_wren)
