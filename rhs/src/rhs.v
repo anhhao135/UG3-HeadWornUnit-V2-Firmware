@@ -271,6 +271,7 @@ module rhs
     reg  [6:0]      ZCheck_sine_cycle; 
     reg  [5:0]      ZCheck_channel;
     reg             reg_risingEdge_impCheck;
+    reg             stim_en_fallingEdge;
 
     // [Magic number]
     wire [63:0]		header_magic_number_normal;
@@ -964,7 +965,14 @@ module rhs
                 end
             end
             ms_cs_i: begin
+                /*
                 if (flag_terminate_stim || flag_terminate_config || flag_terminate_ZCheck) begin
+                    main_state <= ms_cs_k;
+                end else begin
+                    main_state <= ms_cs_j;
+                end
+                */
+                if (flag_terminate_config || flag_terminate_ZCheck) begin
                     main_state <= ms_cs_k;
                 end else begin
                     main_state <= ms_cs_j;
@@ -2201,6 +2209,13 @@ module rhs
 
     // stim_counter & time_counter & state_pulse
     always @(posedge clk) begin
+
+        if(stim_en_fallingEdge && !stim_en)
+            flag_stim_done <= 1'b0;
+
+        stim_en_fallingEdge <= stim_en;
+
+
         if (!resetn) begin
             state_pulse <= 3'b00;
             stim_counter <= 10'b0;
@@ -2212,14 +2227,14 @@ module rhs
                     state_pulse <= S_OFF;
                 end
                 ms_cs_i: begin
-                    if (flag_lastchannel && !flag_stim_done) begin
+                    if (flag_lastchannel) begin
                         time_counter <= time_counter + 1;
                         case (state_pulse) 
                             S_OFF: begin
-                            time_counter <= 0; 
-                            if (stim_en && SPI_ONOFF)
-                                    state_pulse  <= S_PULSE_ON_N;
-                            end
+                                time_counter <= 0; 
+                                if (stim_en && SPI_ONOFF && !flag_stim_done)
+                                        state_pulse  <= S_PULSE_ON_N;
+                                end
                             S_PULSE_ON_N: begin
                                 if (time_counter == stim_pulse_width) begin
                                     time_counter <= 0;
@@ -2233,7 +2248,7 @@ module rhs
                                         state_pulse  <= S_Q_RECOVERY;
                                         stim_counter <= 0;
                                     end
-                                    else if (stim_inf_pulse_mode && !SPI_ONOFF) begin
+                                    else if (stim_inf_pulse_mode && !stim_en) begin
                                         state_pulse  <= S_Q_RECOVERY;
                                         stim_counter <= 0;
                                     end
@@ -2250,7 +2265,7 @@ module rhs
                                 end
                             end
                             S_Q_RECOVERY: begin
-                                if (time_counter == 2 * (charge_recov_off_time - charge_recov_on_time)) begin
+                                if (time_counter > charge_recov_off_time) begin
                                     time_counter <= 0;   
                                     state_pulse  <= S_OFF;
                                 end
@@ -2264,6 +2279,7 @@ module rhs
 
     // stim registers
     always @(posedge clk) begin
+
         if (!resetn) begin
             flag_stim_done <= 1'b0;
             stim_on      <= 16'b0;
@@ -2334,7 +2350,8 @@ module rhs
                                 charge_recov_mode <= 1;
                             if (time_counter == charge_recov_off_time) begin
                                 charge_recov_mode <= 0;
-                                flag_stim_done <= 1'b1; 
+                                if (!stim_inf_pulse_mode)
+                                    flag_stim_done <= 1'b1; 
                             end
                         end
                     endcase

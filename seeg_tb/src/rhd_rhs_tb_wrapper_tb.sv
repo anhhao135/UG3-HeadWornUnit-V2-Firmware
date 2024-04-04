@@ -77,7 +77,7 @@ end
 
 
 //always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
-always #35.7124 rhd_aclk <= ~rhd_aclk; //rhd runs at 14 MHz
+always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz
 //always #8.9285 rhs_aclk <= ~rhs_aclk; //rhd runs at 56 MHz
 always #5.208 rhs_aclk <= ~rhs_aclk; //rhs runs at 96 MHz
 always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
@@ -163,13 +163,14 @@ begin
   #1us;
 
   // (6) Set intrapulse delay
-  mtestWDataL = 32'h0000000; //intrapulse delay is 10 * 29.1us = 291us 
+  mtestWDataL = 32'h0000001; //intrapulse delay is 10 * 29.1us = 291us 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h18, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h18, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
 
   // (7) Set num pulse
   mtestWDataL = 32'h400; //infinite pulse until stop
+  //mtestWDataL = 32'h2; //2 pulses 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h1C, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h1C, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
@@ -234,18 +235,57 @@ begin
 
 
   //RHS
+
+  /*
   // (1c) enable stim hex29 = 00101001 hex669 = 11001101001 for use of manual cable delay
   mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+  */
 
+  //START RHS RECORDING WITHOUT STIMULATION
+  mtestWDataL = 32'h21; //hex 21 (b00100001) turns loopback on, recording, but no stim
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
 
   //RHD
   // (3) Start acqusition (w/o amp fast settle)
   mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
-  #4ms;
+
+  #400us //wait before enabling stimulation midway through
+
+  //START STIMULATION DURING RECORDING
+  mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on (b101001)
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #1200us //wait before stopping stimulation midway through
+
+  //STOP STIMULATION DURING RECORDING
+  mtestWDataL = 32'h21;
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #600us //wait before enabling stimulation midway through
+
+  //START STIMULATION DURING RECORDING
+  mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on (b101001)
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #1200us //wait before stopping stimulation midway through
+
+  //STOP STIMULATION DURING RECORDING
+  mtestWDataL = 32'h21;
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+
+
+  #1ms;
+
 
   //stop
 
