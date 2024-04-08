@@ -1,27 +1,30 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xpm_cdc_gen_v1_0_2 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_14 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rhd_rhs_tb_wrapper_tb_behav xil_defaultlib.rhd_rhs_tb_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_8 -L xpm_cdc_gen_v1_0_2 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_14 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rhd_rhs_tb_wrapper_tb_behav xil_defaultlib.rhd_rhs_tb_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:27]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:28]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:29]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:30]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:31]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:32]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:33]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:34]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:35]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:36]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:37]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:38]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:39]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:40]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:41]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:42]
-WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:464]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:27]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:28]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:29]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:30]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:31]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:32]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:33]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:34]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:35]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:36]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:37]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:38]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:39]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:40]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:41]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:42]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'probe0' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2794]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'probe1' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2795]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'probe2' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2796]
+WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:473]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -62,7 +65,7 @@ Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
 Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=3...
 Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=32768,T...
 Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
-Compiling module xil_defaultlib.rhd_rhs_tb_axis_data_fifo_0_0
+Compiling module xil_defaultlib.axis_data_fifo_0
 Compiling module unisims_ver.IBUFDS
 Compiling module xil_defaultlib.rhd_diff_to_single
 Compiling module unisims_ver.OBUFDS
@@ -92,6 +95,7 @@ Compiling module xil_defaultlib.rhd_S00_AXI_default
 Compiling module xil_defaultlib.rhd_axi
 Compiling module xil_defaultlib.rhs_headstage_slave
 Compiling module xil_defaultlib.rhs_headstage_slave_full
+Compiling module xil_defaultlib.ila_0
 Compiling module xil_defaultlib.MISO_phase_selector
 Compiling module xil_defaultlib.command_initialization
 Compiling module xil_defaultlib.command_amplitudeSetup

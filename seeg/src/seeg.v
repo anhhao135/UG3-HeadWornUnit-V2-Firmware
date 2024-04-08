@@ -247,12 +247,10 @@ module seeg #
     input wire RHS_MISO_O_P,
     input wire RHS_MISO_O_N,
     input wire RHS_MISO_P_P,
-    input wire RHS_MISO_P_N,
-
-    output wire FIFO_rstn
-
-
+    input wire RHS_MISO_P_N
   );
+
+    wire FIFO_rstn;
 
 
     wire [63:0] M_AXIS_RHD_tdata;
@@ -270,20 +268,12 @@ module seeg #
 
     reg [63:0] tdata;
     reg tvalid;
-    reg tready;
+    wire tready;
     reg tlast;
     reg tready_rhd;
     reg tready_rhs;
 
-    assign M_AXIS_tdata = tdata;
-    assign M_AXIS_tvalid = tvalid;
-    assign M_AXIS_tlast = tlast;
-    assign M_AXIS_RHD_tready = tready_rhd;
-    assign M_AXIS_RHS_tready = tready_rhs;
-
     always @(posedge M_AXIS_ACLK) begin
-
-      tready <= M_AXIS_tready;
 
       if (rhs_fifo_pass_out) begin
         tdata <= M_AXIS_RHS_tdata;
@@ -300,6 +290,25 @@ module seeg #
         tready_rhs <= 0;
       end
     end
+
+    assign M_AXIS_RHD_tready = tready_rhd;
+    assign M_AXIS_RHS_tready = tready_rhs;
+
+    wire axis_data_fifo_0_resetn;
+    assign axis_data_fifo_0_resetn = FIFO_rstn || M_AXIS_ARESETN;
+
+    axis_data_fifo_0 axis_data_fifo_0 (
+      .s_axis_aresetn(axis_data_fifo_0_resetn),  // input wire s_axis_aresetn
+      .s_axis_aclk(M_AXIS_ACLK),        // input wire s_axis_aclk
+      .s_axis_tvalid(tvalid),    // input wire s_axis_tvalid 
+      .s_axis_tready(tready),    // output wire s_axis_tready
+      .s_axis_tdata(tdata),      // input wire [63 : 0] s_axis_tdata
+      .s_axis_tlast(tlast),      // input wire s_axis_tlast
+      .m_axis_tvalid(M_AXIS_tvalid),    // output wire m_axis_tvalid
+      .m_axis_tready(M_AXIS_tready),    // input wire m_axis_tready
+      .m_axis_tdata(M_AXIS_tdata),      // output wire [63 : 0] m_axis_tdata
+      .m_axis_tlast(M_AXIS_tlast)      // output wire m_axis_tlast
+    );
 
     wire RHD_MISO1_I;
     wire RHD_MISO2_I;
