@@ -95,7 +95,8 @@ module rhs_axi #
     input wire  M_AXIS_ARESETN,
 
     input wire rhs_record_trigger,
-    output wire rhs_fifo_pass_out
+    output wire rhs_fifo_pass_out,
+    output wire flag_channel16_stream_250M_out
 
   );
 
@@ -170,7 +171,8 @@ module rhs_axi #
       .S_AXI_RVALID(s00_axi_rvalid),
       .S_AXI_RREADY(s00_axi_rready),
       .rhs_record_trigger(rhs_record_trigger),
-      .rhs_fifo_pass_out(rhs_fifo_pass_out)
+      .rhs_fifo_pass_out(rhs_fifo_pass_out),
+      .flag_channel16_stream_250M_out(flag_channel16_stream_250M_out)
     );
 
   // Add user logic here

@@ -265,6 +265,7 @@ module seeg #
 
 
     wire rhs_fifo_pass_out;
+    wire rhs_channel16_flag;
 
     reg [63:0] tdata;
     reg tvalid;
@@ -333,6 +334,10 @@ module seeg #
 
     wire RHD_MISO1_P;
     wire RHD_MISO2_P;
+
+    wire RHD_RHS_Sample_Ready;
+
+    assign RHD_RHS_Sample_Ready = (rhd_channel == 34) && rhs_channel16_flag;
 
     wire [5:0] rhd_channel;
 
@@ -600,7 +605,8 @@ module seeg #
       .M_AXIS_tready(M_AXIS_RHS_tready),
       .M_AXIS_tlast(M_AXIS_RHS_tlast),
       .rhs_record_trigger(rhs_record_trigger),
-      .rhs_fifo_pass_out(rhs_fifo_pass_out)
+      .rhs_fifo_pass_out(rhs_fifo_pass_out),
+      .flag_channel16_stream_250M_out(rhs_channel16_flag)
     );
 
 

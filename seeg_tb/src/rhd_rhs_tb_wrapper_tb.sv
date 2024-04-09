@@ -78,10 +78,13 @@ end
 
 //always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
 always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz
-//always #8.9285 rhs_aclk <= ~rhs_aclk; //rhd runs at 56 MHz
+//always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz
+//always #8.9285 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz
 always #5.208 rhs_aclk <= ~rhs_aclk; //rhs runs at 96 MHz
 always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
 
+//always #8.9285 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz for 20ks/s
+//always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz for 20ks/s
 
 
 initial begin
@@ -234,6 +237,9 @@ begin
 
 
 
+  //normal recording with stim
+
+
   //RHS
 
   /*
@@ -242,6 +248,7 @@ begin
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
   */
+
 
   //START RHS RECORDING WITHOUT STIMULATION
   mtestWDataL = 32'h21; //hex 21 (b00100001) turns loopback on, recording, but no stim
@@ -260,6 +267,31 @@ begin
   mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on (b101001)
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #1200us //wait before stopping stimulation midway through
+
+  //STOP STIMULATION DURING RECORDING
+  mtestWDataL = 32'h21;
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #600us //wait before enabling stimulation midway through
+
+  //START STIMULATION DURING RECORDING
+  mtestWDataL = 32'h29; //hex 9 turns loopback off, hex 29 turns on (b101001)
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+  #1200us //wait before stopping stimulation midway through
+
+  //STOP STIMULATION DURING RECORDING
+  mtestWDataL = 32'h21;
+  mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
+  mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
+
+
+
+  #1ms;
 
 
   #10ms;

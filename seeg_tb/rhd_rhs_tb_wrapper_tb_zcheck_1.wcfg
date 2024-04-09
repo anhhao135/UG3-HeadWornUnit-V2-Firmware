@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhd_rhs_tb_wrapper_tb_zcheck_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhd_rhs_tb_wrapper_tb_zcheck" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,737.856667 us"></ZoomStartTime>
+      <ZoomEndTime time="2,189.856668 us"></ZoomEndTime>
+      <Cursor1Time time="1,813.190000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="238"></NameColumnWidth>
+      <ValueColumnWidth column_width="61"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="group277" type="group">
+      <obj_property name="label">RHS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/timestamp" type="array">
+         <obj_property name="ElementShortName">timestamp[15:0]</obj_property>
+         <obj_property name="ObjectShortName">timestamp[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/state_cable_delay_finder_out" type="array">
+         <obj_property name="ElementShortName">state_cable_delay_finder_out[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state_cable_delay_finder_out[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/impedance_check_cycle" type="array">
+         <obj_property name="ElementShortName">impedance_check_cycle[7:0]</obj_property>
+         <obj_property name="ObjectShortName">impedance_check_cycle[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/impedance_check_scale" type="array">
+         <obj_property name="ElementShortName">impedance_check_scale[1:0]</obj_property>
+         <obj_property name="ObjectShortName">impedance_check_scale[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/init_en" type="logic">
+         <obj_property name="ElementShortName">init_en</obj_property>
+         <obj_property name="ObjectShortName">init_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_set_en" type="logic">
+         <obj_property name="ElementShortName">mag_set_en</obj_property>
+         <obj_property name="ObjectShortName">mag_set_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_en" type="logic">
+         <obj_property name="ElementShortName">stim_en</obj_property>
+         <obj_property name="ObjectShortName">stim_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/impedance_check" type="logic">
+         <obj_property name="ElementShortName">impedance_check</obj_property>
+         <obj_property name="ObjectShortName">impedance_check</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/SPI_ONOFF" type="logic">
+         <obj_property name="ElementShortName">SPI_ONOFF</obj_property>
+         <obj_property name="ObjectShortName">SPI_ONOFF</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/FIFO_rstn" type="logic">
+         <obj_property name="ElementShortName">FIFO_rstn</obj_property>
+         <obj_property name="ObjectShortName">FIFO_rstn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/M_AXIS_tvalid" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/M_AXIS_tready" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/M_AXIS_tlast" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/M_AXIS_tdata" type="array">
+         <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_config" type="array">
+         <obj_property name="ElementShortName">channel_config[6:0]</obj_property>
+         <obj_property name="ObjectShortName">channel_config[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/rhs_record_flag" type="logic">
+         <obj_property name="ElementShortName">rhs_record_flag</obj_property>
+         <obj_property name="ObjectShortName">rhs_record_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel" type="array">
+         <obj_property name="ElementShortName">channel[5:0]</obj_property>
+         <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_cmd_1" type="array">
+         <obj_property name="ElementShortName">ZCheck_cmd_1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_cmd_1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_cmd_2" type="array">
+         <obj_property name="ElementShortName">ZCheck_cmd_2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_cmd_2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_run" type="logic">
+         <obj_property name="ElementShortName">ZCheck_run</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_run</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_command_count" type="array">
+         <obj_property name="ElementShortName">ZCheck_command_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_command_count[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_loop" type="logic">
+         <obj_property name="ElementShortName">ZCheck_loop</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_loop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_off_flag" type="logic">
+         <obj_property name="ElementShortName">ZCheck_off_flag</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_off_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_sine_cycle" type="array">
+         <obj_property name="ElementShortName">ZCheck_sine_cycle[6:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_sine_cycle[6:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/ZCheck_channel" type="array">
+         <obj_property name="ElementShortName">ZCheck_channel[5:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_channel[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/reg_risingEdge_impCheck" type="logic">
+         <obj_property name="ElementShortName">reg_risingEdge_impCheck</obj_property>
+         <obj_property name="ObjectShortName">reg_risingEdge_impCheck</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_en_fallingEdge" type="logic">
+         <obj_property name="ElementShortName">stim_en_fallingEdge</obj_property>
+         <obj_property name="ObjectShortName">stim_en_fallingEdge</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_cable_delay_found" type="logic">
+         <obj_property name="ElementShortName">flag_cable_delay_found</obj_property>
+         <obj_property name="ObjectShortName">flag_cable_delay_found</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group276" type="group">
+      <obj_property name="label">RHD</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/M_AXIS_tdata" type="array">
+         <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/M_AXIS_tvalid" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/M_AXIS_tready" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/M_AXIS_tlast" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/SPI_ONOFF" type="logic">
+         <obj_property name="ElementShortName">SPI_ONOFF</obj_property>
+         <obj_property name="ObjectShortName">SPI_ONOFF</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/amp_fast_settle" type="logic">
+         <obj_property name="ElementShortName">amp_fast_settle</obj_property>
+         <obj_property name="ObjectShortName">amp_fast_settle</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/high_sampling_mode" type="logic">
+         <obj_property name="ElementShortName">high_sampling_mode</obj_property>
+         <obj_property name="ObjectShortName">high_sampling_mode</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/impedance_check" type="logic">
+         <obj_property name="ElementShortName">impedance_check</obj_property>
+         <obj_property name="ObjectShortName">impedance_check</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/impedance_check_cycle" type="array">
+         <obj_property name="ElementShortName">impedance_check_cycle[7:0]</obj_property>
+         <obj_property name="ObjectShortName">impedance_check_cycle[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/impedance_check_scale" type="array">
+         <obj_property name="ElementShortName">impedance_check_scale[1:0]</obj_property>
+         <obj_property name="ObjectShortName">impedance_check_scale[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/batch_size" type="array">
+         <obj_property name="ElementShortName">batch_size[15:0]</obj_property>
+         <obj_property name="ObjectShortName">batch_size[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/state_cable_delay_finder_out" type="array">
+         <obj_property name="ElementShortName">state_cable_delay_finder_out[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state_cable_delay_finder_out[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/init_mode_out" type="logic">
+         <obj_property name="ElementShortName">init_mode_out</obj_property>
+         <obj_property name="ObjectShortName">init_mode_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/phase_select_low" type="array">
+         <obj_property name="ElementShortName">phase_select_low[3:0]</obj_property>
+         <obj_property name="ObjectShortName">phase_select_low[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_lastBatch" type="logic">
+         <obj_property name="ElementShortName">flag_lastBatch</obj_property>
+         <obj_property name="ObjectShortName">flag_lastBatch</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_lastchannel" type="logic">
+         <obj_property name="ElementShortName">flag_lastchannel</obj_property>
+         <obj_property name="ObjectShortName">flag_lastchannel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_cmd_1" type="array">
+         <obj_property name="ElementShortName">ZCheck_cmd_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_cmd_1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_cmd_2" type="array">
+         <obj_property name="ElementShortName">ZCheck_cmd_2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_cmd_2[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_run" type="logic">
+         <obj_property name="ElementShortName">ZCheck_run</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_run</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_command_count" type="array">
+         <obj_property name="ElementShortName">ZCheck_command_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_command_count[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_loop" type="logic">
+         <obj_property name="ElementShortName">ZCheck_loop</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_loop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_sine_cycle" type="array">
+         <obj_property name="ElementShortName">ZCheck_sine_cycle[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_sine_cycle[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/ZCheck_channel" type="array">
+         <obj_property name="ElementShortName">ZCheck_channel[5:0]</obj_property>
+         <obj_property name="ObjectShortName">ZCheck_channel[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/reg_risingEdge_impCheck" type="logic">
+         <obj_property name="ElementShortName">reg_risingEdge_impCheck</obj_property>
+         <obj_property name="ObjectShortName">reg_risingEdge_impCheck</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/channelOut" type="array">
+         <obj_property name="ElementShortName">channelOut[5:0]</obj_property>
+         <obj_property name="ObjectShortName">channelOut[5:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group369" type="group">
+      <obj_property name="label">MASTER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/clk_dma" type="logic">
+         <obj_property name="ElementShortName">clk_dma</obj_property>
+         <obj_property name="ObjectShortName">clk_dma</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_aclk" type="logic">
+         <obj_property name="ElementShortName">rhd_aclk</obj_property>
+         <obj_property name="ObjectShortName">rhd_aclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_aresetn" type="logic">
+         <obj_property name="ElementShortName">rhd_aresetn</obj_property>
+         <obj_property name="ObjectShortName">rhd_aresetn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhs_aclk" type="logic">
+         <obj_property name="ElementShortName">rhs_aclk</obj_property>
+         <obj_property name="ObjectShortName">rhs_aclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhs_aresetn" type="logic">
+         <obj_property name="ElementShortName">rhs_aresetn</obj_property>
+         <obj_property name="ObjectShortName">rhs_aresetn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rstn_dma" type="logic">
+         <obj_property name="ElementShortName">rstn_dma</obj_property>
+         <obj_property name="ObjectShortName">rstn_dma</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tdata" type="array">
+         <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tvalid" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tready" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rhd_rhs_tb_wrapper_tb_zcheck/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tlast" type="logic">
+         <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

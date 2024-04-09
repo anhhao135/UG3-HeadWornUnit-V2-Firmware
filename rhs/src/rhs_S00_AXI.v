@@ -60,6 +60,7 @@ module rhs_S00_AXI #
 	output wire [2:0] state_cable_delay_finder_out,
 	input wire rhs_record_trigger,
 	output wire rhs_fifo_pass_out,
+	output wire flag_channel16_stream_250M_out,
 
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
@@ -364,13 +365,13 @@ begin
 	if ( S_AXI_ARESETN == 1'b0 )
 	begin
 		slv_reg0 <= 0;
-		//slv_reg1 <= 0;
-		//slv_reg2 <= 0;
-		//slv_reg3 <= 0;
-		//slv_reg4 <= 0;
-		//slv_reg5 <= 0;
-		//slv_reg6 <= 0;
-		//slv_reg7 <= 0; Hao SHOULD UNCOMMENT THIS
+		slv_reg1 <= 0;
+		slv_reg2 <= 0;
+		slv_reg3 <= 0;
+		slv_reg4 <= 0;
+		slv_reg5 <= 0;
+		slv_reg6 <= 0;
+		slv_reg7 <= 0;
 	end 
 	else begin
 	if (slv_reg_wren)
@@ -658,7 +659,8 @@ rhs rhs
 	.rhs_record_trigger(rhs_record_trigger),
 	.rhs_fifo_pass_out(rhs_fifo_pass_out),
 	.use_manual_cable_delay(slv_reg0[6]),
-	.manual_cable_delay(slv_reg0[10:7])
+	.manual_cable_delay(slv_reg0[10:7]),
+	.flag_channel16_stream_250M_out(flag_channel16_stream_250M_out)
 	);
 
 

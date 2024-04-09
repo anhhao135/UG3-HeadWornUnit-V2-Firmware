@@ -106,7 +106,9 @@ module rhs
 
     input wire                               use_manual_cable_delay,
 
-    input wire [3:0]                         manual_cable_delay
+    input wire [3:0]                         manual_cable_delay,
+
+    output wire                              flag_channel16_stream_250M_out
 
     );
     
@@ -666,6 +668,7 @@ module rhs
 
     wire SPI_running_250M;
 
+
     xpm_cdc_1bit xpm_cdc_1bit_inst_rhs_fifo_pass_out(
         .dest_clk(M_AXIS_ACLK),
         .dest_out(rhs_fifo_pass_out),
@@ -724,6 +727,7 @@ module rhs
 
     wire        tlast_flag_bit;
     assign      tlast_flag_bit = flag_channel16_stream_250M && valid_fifo_out;
+    assign      flag_channel16_stream_250M_out = flag_channel16_stream_250M;
 
     //reg [3:0]   tlast_cnt; 
     //assign      tlast_flag_bit = tlast_cnt[3];
@@ -974,9 +978,9 @@ module rhs
                 end
                 */
                 if (flag_terminate_config || flag_terminate_ZCheck) begin
-                    main_state <= ms_cs_k;
+                    main_state <= ms_cs_k; //exit spi
                 end else begin
-                    main_state <= ms_cs_j;
+                    main_state <= ms_cs_j; //loop spi
                 end
             end
             ms_cs_l: begin
@@ -2003,7 +2007,8 @@ module rhs
                 
                 ms_clk2_a: begin
                     if (channel == 3) begin
-                        rhs_data_out <= header_magic_number[63:48];
+                        //rhs_data_out <= header_magic_number[63:48];
+                        rhs_data_out <= state_pulse; //the most sig 2 bytes of the header is going to be the state pulse, this is going to be the stimulation marker
                         rhd_valid_out <= 1'b1;
                     end
                 end
@@ -2481,8 +2486,8 @@ module rhs
                     if (channel == 15) begin
                         if (ZCheck_loop) begin
                             case (ZCheck_command_count)
-                                0:          begin ZCheck_cmd_1 <= { 2'b10, 2'b00, 4'b0000, 8'h02, 2'b00, ZCheck_channel, 1'b0, 1'b1, 1'b0, impedance_check_scale, 2'b0, 1'b0 };   ZCheck_command_count <= ZCheck_command_count + 1; end
-                                1:          begin ZCheck_cmd_1 <= { 2'b10, 2'b00, 4'b0000, 8'h02, 2'b00, ZCheck_channel, 1'b0, 1'b1, 1'b0, impedance_check_scale, 2'b0, 1'b1 };   ZCheck_command_count <= ZCheck_command_count + 1; end
+                                0:          begin ZCheck_cmd_1 <= { 2'b10, 2'b00, 4'b0000, 8'h02, 2'b00, ZCheck_channel, 1'b0, 1'b1, 1'b0, impedance_check_scale, 2'b0, 1'b0 };   ZCheck_command_count <= ZCheck_command_count + 1; end //zcheck en, last bit, is 0
+                                1:          begin ZCheck_cmd_1 <= { 2'b10, 2'b00, 4'b0000, 8'h02, 2'b00, ZCheck_channel, 1'b0, 1'b1, 1'b0, impedance_check_scale, 2'b0, 1'b1 };   ZCheck_command_count <= ZCheck_command_count + 1; end //zcheck en, last bit, is 1 to activate
                                 2:          begin ZCheck_cmd_1 <= { 2'b11, 2'b00, 4'b0000, 8'hff, 16'b0 };                     ZCheck_command_count <= ZCheck_command_count + 1; end
                                 3:          begin ZCheck_cmd_1 <= { 2'b11, 2'b00, 4'b0000, 8'hff, 16'b0 };                     ZCheck_command_count <= ZCheck_command_count + 1; end
                                 4:          begin ZCheck_cmd_1 <= { 2'b11, 2'b00, 4'b0000, 8'hff, 16'b0 };                     ZCheck_command_count <= ZCheck_command_count + 1; end
