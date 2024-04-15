@@ -108,7 +108,10 @@ module rhs
 
     input wire [3:0]                         manual_cable_delay,
 
-    output wire                              flag_channel16_stream_250M_out
+    output wire                              flag_channel16_stream_250M_out,
+
+    output wire fifoDoneLatchOut_250M,
+    input wire fifoDoneLatchResetnIn_250M
 
     );
     
@@ -687,7 +690,7 @@ module rhs
         .wr_clk(clk),
         .rd_clk(M_AXIS_ACLK),
         .din(rhs_data_out),
-        .wr_en(rhd_valid_out && (channel >= 3) && (channel <= 18) && rhs_fifo_pass && flag_cable_delay_found), // overwrite if FIFO is full, there are 2-channel delay in the SPI interface
+        .wr_en(rhd_valid_out && (channel >= 3) && (channel <= 18) && flag_cable_delay_found), // overwrite if FIFO is full, there are 2-channel delay in the SPI interface
         .rd_en(M_AXIS_tready && SPI_running_250M && !empty), // read when SPI is running + FIFO is not empty
         .dout(data_fifo_out),
         .full(),
@@ -696,6 +699,28 @@ module rhs
         .wr_rst_busy(),
         .rd_rst_busy()
         );
+
+
+
+
+    wire fifoDoneLatchResetn;
+
+    xpm_cdc_1bit fifoDoneLatchBuffer(
+        .dest_clk(M_AXIS_ACLK),
+        .dest_out(fifoDoneLatchOut_250M),
+        .src_clk(clk),
+        .src_in(fifoDoneLatch)); 
+
+    xpm_cdc_1bit fifoDoneLatchResetnBuffer(
+        .dest_clk(clk),
+        .dest_out(fifoDoneLatchResetn),
+        .src_clk(M_AXIS_ACLK),
+        .src_in(fifoDoneLatchResetnIn_250M)); 
+
+
+    wire fifoDoneLatch;
+    assign fifoDoneLatch = (flag_lastchannel) && (!init_en) && (!mag_set_en);
+    //risingEdgeLatch fifoDoneLatchModule (resetn, (flag_lastchannel) && (!init_en) && (!mag_set_en), fifoDoneLatch);
 
 
     assign FIFO_rstn        = SPI_running_250M;
@@ -769,6 +794,11 @@ module rhs
     assign M_AXIS_tvalid = maxis_valid_reg;
     assign M_AXIS_tlast  = flag_lastBatch_250M && tlast_flag_bit;
     assign M_AXIS_tdata  = maxis_data_reg;
+
+
+
+
+
 
     reg rhs_record_trigger_rising_edge_previous;
     reg flag_lastchannel_rising_edge_previous;
@@ -1027,11 +1057,15 @@ module rhs
                     end
                 end	
 				ms_cs_i: begin
-					if (flag_lastchannel) begin
-						channel <= 0;
-					end else begin
-						channel <= channel + 1;
-					end
+
+                    if (!fifoDoneLatch || !fifoDoneLatchResetn) begin
+                        if (flag_lastchannel) begin
+                            channel <= 0;
+                        end else begin
+                            channel <= channel + 1;
+                        end
+                    end
+
                     if (init_en || mag_set_en) begin
                         
                         if (flag_lastconfig) begin
@@ -2806,4 +2840,13 @@ module MISO_phase_selector(
 	.probe7(CS_b) // input wire [0:0]  probe7
 );
 	
+endmodule
+
+module risingEdgeLatch (input resetn, input data, output reg q);
+    always @ (resetn, data) begin
+        if (!resetn)
+            q <= 0;
+        else if (data == 1 && q == 0)
+            q <= 1;
+    end
 endmodule

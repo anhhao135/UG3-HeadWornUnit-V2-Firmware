@@ -61,6 +61,8 @@ module rhs_S00_AXI #
 	input wire rhs_record_trigger,
 	output wire rhs_fifo_pass_out,
 	output wire flag_channel16_stream_250M_out,
+	output wire fifoDoneLatchOut_250M,
+    input wire fifoDoneLatchResetnIn_250M,
 
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
@@ -660,7 +662,9 @@ rhs rhs
 	.rhs_fifo_pass_out(rhs_fifo_pass_out),
 	.use_manual_cable_delay(slv_reg0[6]),
 	.manual_cable_delay(slv_reg0[10:7]),
-	.flag_channel16_stream_250M_out(flag_channel16_stream_250M_out)
+	.flag_channel16_stream_250M_out(flag_channel16_stream_250M_out),
+	.fifoDoneLatchOut_250M(fifoDoneLatchOut_250M),
+    .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M)
 	);
 
 

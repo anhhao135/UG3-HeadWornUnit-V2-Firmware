@@ -343,6 +343,35 @@ module seeg #
 
     wire rhs_record_trigger;
 
+    wire rhdFifoDone;
+    wire rhsFifoDone;
+    wire rhdTriggerNextSample_n;
+    wire rhsTriggerNextSample_n;
+
+
+    reg triggerNextSampleState = 0;
+    reg triggerNextSample_n = 1;
+
+    always @(posedge M_AXIS_ACLK) begin
+      case(triggerNextSampleState)
+        0: begin
+          if (rhdFifoDone && rhsFifoDone) begin
+            triggerNextSample_n <= 0;
+            triggerNextSampleState <= 1;
+          end
+        end
+        1: begin
+          if ((!rhdFifoDone && !rhsFifoDone)) begin
+            triggerNextSample_n <= 1;
+            triggerNextSampleState <= 0;
+          end
+        end
+      endcase
+    end
+
+    assign rhdTriggerNextSample_n = triggerNextSample_n;
+    assign rhsTriggerNextSample_n = triggerNextSample_n;
+
     assign rhs_record_trigger = rhd_channel ==  1? 1 : 0;
 
     rhd_diff_to_single rhdDiffToSingle(
@@ -539,7 +568,9 @@ module seeg #
       .M_AXIS_tready(M_AXIS_RHD_tready),
       .M_AXIS_tlast(M_AXIS_RHD_tlast),
       .channelOut250M(rhd_channel),
-      .FIFO_rstn(FIFO_rstn)
+      .FIFO_rstn(FIFO_rstn),
+      .fifoDoneLatchOut_250M(rhdFifoDone),
+      .fifoDoneLatchResetnIn_250M(rhdTriggerNextSample_n)
     );
 
     rhs_axi stimulator (
@@ -606,7 +637,9 @@ module seeg #
       .M_AXIS_tlast(M_AXIS_RHS_tlast),
       .rhs_record_trigger(rhs_record_trigger),
       .rhs_fifo_pass_out(rhs_fifo_pass_out),
-      .flag_channel16_stream_250M_out(rhs_channel16_flag)
+      .flag_channel16_stream_250M_out(rhs_channel16_flag),
+      .fifoDoneLatchOut_250M(rhsFifoDone),
+      .fifoDoneLatchResetnIn_250M(rhsTriggerNextSample_n)
     );
 
 

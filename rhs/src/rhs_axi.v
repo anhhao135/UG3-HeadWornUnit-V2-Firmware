@@ -96,7 +96,9 @@ module rhs_axi #
 
     input wire rhs_record_trigger,
     output wire rhs_fifo_pass_out,
-    output wire flag_channel16_stream_250M_out
+    output wire flag_channel16_stream_250M_out,
+    output wire fifoDoneLatchOut_250M,
+    input wire fifoDoneLatchResetnIn_250M
 
   );
 
@@ -172,7 +174,9 @@ module rhs_axi #
       .S_AXI_RREADY(s00_axi_rready),
       .rhs_record_trigger(rhs_record_trigger),
       .rhs_fifo_pass_out(rhs_fifo_pass_out),
-      .flag_channel16_stream_250M_out(flag_channel16_stream_250M_out)
+      .flag_channel16_stream_250M_out(flag_channel16_stream_250M_out),
+      .fifoDoneLatchOut_250M(fifoDoneLatchOut_250M),
+      .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M)
     );
 
   // Add user logic here

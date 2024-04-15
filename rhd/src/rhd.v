@@ -104,7 +104,9 @@ module rhd
     output wire [5:0]                        channelOut,
     output wire [5:0]                        channelOut250M,
     output wire [3:0]                        state_cable_delay_finder_out,
-    output wire                              init_mode_out
+    output wire                              init_mode_out,
+    output wire fifoDoneLatchOut_250M,
+    input wire fifoDoneLatchResetnIn_250M
 
 
     );
@@ -671,6 +673,7 @@ module rhd
     );
 
 
+
     fifo_generator_0 fifo_inst (
         .srst(!resetn && !SPI_running),
         .wr_clk(clk),
@@ -685,9 +688,25 @@ module rhd
         .wr_rst_busy(),
         .rd_rst_busy()
         );
-    
 
 
+    wire fifoDoneLatchResetn;
+
+    xpm_cdc_1bit fifoDoneLatchBuffer(
+        .dest_clk(M_AXIS_ACLK),
+        .dest_out(fifoDoneLatchOut_250M),
+        .src_clk(clk),
+        .src_in(fifoDoneLatch)); 
+
+    xpm_cdc_1bit fifoDoneLatchResetnBuffer(
+        .dest_clk(clk),
+        .dest_out(fifoDoneLatchResetn),
+        .src_clk(M_AXIS_ACLK),
+        .src_in(fifoDoneLatchResetnIn_250M)); 
+
+    wire fifoDoneLatch;
+    assign fifoDoneLatch = flag_lastchannel;
+    //risingEdgeLatch fifoDoneLatchModule (resetn, flag_lastchannel, fifoDoneLatch);
 
 
     assign FIFO_rstn        = SPI_running_250M;
@@ -2863,17 +2882,21 @@ module rhd
                 end
                     
                 ms_cs_m: begin
-                    CS_b <= 1'b1;	
-                    if (flag_lastchannel) begin
-                        channel <= 0;
-                        init_mode <= 1'b0;
-                    end else begin
-                        if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0) begin
+                    CS_b <= 1'b1;
+
+                    if (!fifoDoneLatch || !fifoDoneLatchResetn) begin
+                        if (flag_lastchannel) begin
                             channel <= 0;
+                            init_mode <= 1'b0;
+                        end else begin
+                            if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0) begin
+                                channel <= 0;
+                            end
+                            else if (flag_cable_delay_found)
+                                channel <= channel + 1;
                         end
-                        else if (flag_cable_delay_found)
-                            channel <= channel + 1;
-                    end
+                    end	
+
 
                     flag_cable_delay_found_rising_edge_previous = flag_cable_delay_found;
 
@@ -3164,4 +3187,13 @@ module MISO_rising_edge(
 		endcase
 	end
 	
+endmodule
+
+module risingEdgeLatch (input resetn, input data, output reg q);
+    always @ (resetn, data) begin
+        if (!resetn)
+            q <= 0;
+        else if (data == 1 && q == 0)
+            q <= 1;
+    end
 endmodule

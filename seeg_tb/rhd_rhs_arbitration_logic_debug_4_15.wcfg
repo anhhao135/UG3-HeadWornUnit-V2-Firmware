@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhd_rhs_tb_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhd_rhs_tb_wrapper_tb" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="240.885696 us"></ZoomStartTime>
+      <ZoomEndTime time="1,466.885697 us"></ZoomEndTime>
+      <Cursor1Time time="948.885696 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="236"></NameColumnWidth>
+      <ValueColumnWidth column_width="59"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="50" />
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/din" type="array">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/dout" type="array">
+      <obj_property name="ElementShortName">dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/rd_clk" type="logic">
+      <obj_property name="ElementShortName">rd_clk</obj_property>
+      <obj_property name="ObjectShortName">rd_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/rd_rst_busy" type="logic">
+      <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/srst" type="logic">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/wr_clk" type="logic">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/fifo_inst/wr_rst_busy" type="logic">
+      <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider151">
+      <obj_property name="label">rhd</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/din" type="array">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/dout" type="array">
+      <obj_property name="ElementShortName">dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/rd_clk" type="logic">
+      <obj_property name="ElementShortName">rd_clk</obj_property>
+      <obj_property name="ObjectShortName">rd_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/rd_rst_busy" type="logic">
+      <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/srst" type="logic">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/wr_clk" type="logic">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/fifo_inst/wr_rst_busy" type="logic">
+      <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/init_en" type="logic">
+      <obj_property name="ElementShortName">init_en</obj_property>
+      <obj_property name="ObjectShortName">init_en</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_set_en" type="logic">
+      <obj_property name="ElementShortName">mag_set_en</obj_property>
+      <obj_property name="ObjectShortName">mag_set_en</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_config" type="array">
+      <obj_property name="ElementShortName">channel_config[6:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_config[6:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider156">
+      <obj_property name="label">rhs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdFifoDone" type="logic">
+      <obj_property name="ElementShortName">rhdFifoDone</obj_property>
+      <obj_property name="ObjectShortName">rhdFifoDone</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhsFifoDone" type="logic">
+      <obj_property name="ElementShortName">rhsFifoDone</obj_property>
+      <obj_property name="ObjectShortName">rhsFifoDone</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdTriggerNextSample_n" type="logic">
+      <obj_property name="ElementShortName">rhdTriggerNextSample_n</obj_property>
+      <obj_property name="ObjectShortName">rhdTriggerNextSample_n</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhsTriggerNextSample_n" type="logic">
+      <obj_property name="ElementShortName">rhsTriggerNextSample_n</obj_property>
+      <obj_property name="ObjectShortName">rhsTriggerNextSample_n</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/triggerNextSample_n" type="logic">
+      <obj_property name="ElementShortName">triggerNextSample_n</obj_property>
+      <obj_property name="ObjectShortName">triggerNextSample_n</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/triggerNextSampleState" type="logic">
+      <obj_property name="ElementShortName">triggerNextSampleState</obj_property>
+      <obj_property name="ObjectShortName">triggerNextSampleState</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider189">
+      <obj_property name="label">master</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+</wave_config>
