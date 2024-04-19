@@ -17,7 +17,6 @@ INFO: [VRFC 10-311] analyzing module MISO_rising_edge
 INFO: [VRFC 10-311] analyzing module risingEdgeLatch
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rhd_S00_AXI
-WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:253]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:254]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:255]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:256]
@@ -25,7 +24,7 @@ WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:258]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:259]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:260]
-WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:262]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:261]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:263]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:264]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:265]
@@ -33,7 +32,7 @@ WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:267]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:268]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:269]
-WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:271]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:270]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:272]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:273]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:274]
@@ -41,7 +40,7 @@ WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:276]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:277]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:278]
-WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:280]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:279]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:281]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:282]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:283]
@@ -49,6 +48,8 @@ WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:285]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:286]
 WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:287]
+WARNING: [VRFC 10-3380] identifier 'slv_reg0' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:288]
+WARNING: [VRFC 10-3380] identifier 'slv_reg2' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:290]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rhd_axi
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_diff_to_single.v" into library xil_defaultlib
@@ -94,6 +95,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/rhs
 INFO: [VRFC 10-311] analyzing module rhs_single_diff_converter
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module seeg
-WARNING: [VRFC 10-3380] identifier 'rhd_channel' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:340]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/UG3-HeadWornUnit-V2-Firmware/seeg_tb/src/rhd_rhs_tb_wrapper_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rhd_rhs_tb_wrapper_tb
+WARNING: [VRFC 10-2938] 'rhdBatchSizeOut' is already implicitly declared on line 380 [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:413]
+WARNING: [VRFC 10-2938] 'rhdBatchSizeOut_250M' is already implicitly declared on line 375 [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:414]
+WARNING: [VRFC 10-3380] identifier 'triggerNextSampleState' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:301]
+WARNING: [VRFC 10-3380] identifier 'rhdBatchSizeOut_250M' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:328]
+WARNING: [VRFC 10-3380] identifier 'rhd_channel' is used before its declaration [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:416]

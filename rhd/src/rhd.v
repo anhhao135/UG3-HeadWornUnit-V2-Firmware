@@ -716,9 +716,9 @@ module rhd
     wire         flag_lastBatch_250M;
     wire         flag_lastchannel_250M;
 
-    reg [4:0]   tlast_cnt; 
+    reg [9:0]   tlast_cnt; 
     wire        tlast_flag_bit;
-    assign      tlast_flag_bit = tlast_cnt[4];
+    assign      tlast_flag_bit = tlast_cnt[9];
 
 
     xpm_cdc_1bit xpm_cdc_1bit_inst_2(
@@ -732,7 +732,6 @@ module rhd
         .dest_out(flag_lastchannel_250M),
         .src_clk(clk),
         .src_in(flag_lastchannel));    
-
 
     always @(posedge M_AXIS_ACLK) begin //changed to negedge
         if (!M_AXIS_ARESETN) begin

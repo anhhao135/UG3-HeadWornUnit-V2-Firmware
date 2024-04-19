@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="240.885696 us"></ZoomStartTime>
-      <ZoomEndTime time="1,466.885697 us"></ZoomEndTime>
-      <Cursor1Time time="948.885696 us"></Cursor1Time>
+      <ZoomStartTime time="1.790000 us"></ZoomStartTime>
+      <ZoomEndTime time="5,466.790001 us"></ZoomEndTime>
+      <Cursor1Time time="1,091.774000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="236"></NameColumnWidth>
-      <ValueColumnWidth column_width="59"></ValueColumnWidth>
+      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="50" />
+   <WVObjectSize size="64" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tdata" type="array">
       <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
@@ -102,6 +102,31 @@
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_lastBatch" type="logic">
+      <obj_property name="ElementShortName">flag_lastBatch</obj_property>
+      <obj_property name="ObjectShortName">flag_lastBatch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/flag_lastchannel" type="logic">
+      <obj_property name="ElementShortName">flag_lastchannel</obj_property>
+      <obj_property name="ObjectShortName">flag_lastchannel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/timestamp" type="array">
+      <obj_property name="ElementShortName">timestamp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">timestamp[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/tlast_flag_bit" type="logic">
+      <obj_property name="ElementShortName">tlast_flag_bit</obj_property>
+      <obj_property name="ObjectShortName">tlast_flag_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/tlast_cnt" type="array">
+      <obj_property name="ElementShortName">tlast_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">tlast_cnt[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/batchSizeOut" type="array">
+      <obj_property name="ElementShortName">batchSizeOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">batchSizeOut[15:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider151">
       <obj_property name="label">rhd</obj_property>
@@ -208,6 +233,10 @@
       <obj_property name="label">rhs</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_ACLK" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_ACLK</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_ACLK</obj_property>
+   </wvobject>
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tdata" type="array">
       <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
@@ -259,6 +288,53 @@
       <obj_property name="ObjectShortName">triggerNextSampleState</obj_property>
       <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdrhsArbitraterState" type="array">
+      <obj_property name="ElementShortName">rhdrhsArbitraterState[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rhdrhsArbitraterState[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhsDataPassCount" type="array">
+      <obj_property name="ElementShortName">rhsDataPassCount[6:0]</obj_property>
+      <obj_property name="ObjectShortName">rhsDataPassCount[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdDataPassCount" type="array">
+      <obj_property name="ElementShortName">rhdDataPassCount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rhdDataPassCount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tlast_reg" type="logic">
+      <obj_property name="ElementShortName">tlast_reg</obj_property>
+      <obj_property name="ObjectShortName">tlast_reg</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tlast" type="logic">
+      <obj_property name="ElementShortName">tlast</obj_property>
+      <obj_property name="ObjectShortName">tlast</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/batchCount" type="array">
+      <obj_property name="ElementShortName">batchCount[15:0]</obj_property>
+      <obj_property name="ObjectShortName">batchCount[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdBatchSizeOut_250M" type="array">
+      <obj_property name="ElementShortName">rhdBatchSizeOut_250M[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rhdBatchSizeOut_250M[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider189">
       <obj_property name="label">master</obj_property>

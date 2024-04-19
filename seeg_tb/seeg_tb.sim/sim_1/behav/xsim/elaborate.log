@@ -24,7 +24,7 @@ WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'probe0' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2833]
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 6 for port 'probe1' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2834]
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'probe2' [C:/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2835]
-WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:507]
+WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:583]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -66,6 +66,7 @@ Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=3...
 Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=32768,T...
 Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
 Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling module xpm.xpm_cdc_array_single(WIDTH=16)
 Compiling module unisims_ver.IBUFDS
 Compiling module xil_defaultlib.rhd_diff_to_single
 Compiling module unisims_ver.OBUFDS

@@ -62,6 +62,7 @@ module rhd_S00_AXI #
 
 	output wire fifoDoneLatchOut_250M,
     input wire fifoDoneLatchResetnIn_250M,
+	output wire [15:0] batchSizeOut,
 
 	output wire [63:0] M_AXIS_tdata,
 	output wire		   M_AXIS_tvalid,
@@ -285,6 +286,8 @@ assign MISO1_O_SW = slv_reg0[4] ? MISO1_O_LOOP : MISO1_O;
 assign MISO2_O_SW = slv_reg0[4] ? MISO2_O_LOOP : MISO2_O;
 assign MISO1_P_SW = slv_reg0[4] ? MISO1_P_LOOP : MISO1_P;
 assign MISO2_P_SW = slv_reg0[4] ? MISO2_P_LOOP : MISO2_P;
+
+assign batchSizeOut = slv_reg2[15:0];
 
 
 

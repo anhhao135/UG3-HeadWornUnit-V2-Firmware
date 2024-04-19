@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Apr 15 13:14:34 2024
+//Date        : Fri Apr 19 09:30:41 2024
 //Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
 //Command     : generate_target xpm_cdc_1bit_wrapper.bd
 //Design      : xpm_cdc_1bit_wrapper

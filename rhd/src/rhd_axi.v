@@ -88,6 +88,7 @@ module rhd_axi #
     output wire [5:0] channelOut250M,
     output wire fifoDoneLatchOut_250M,
     input wire fifoDoneLatchResetnIn_250M,
+    output wire [15:0] batchSizeOut,
 
 
     //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
@@ -210,7 +211,8 @@ module rhd_axi #
       .S_AXI_RREADY(s00_axi_rready),
       .channelOut250M(channelOut250M),
       .fifoDoneLatchOut_250M(fifoDoneLatchOut_250M),
-      .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M)
+      .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M),
+      .batchSizeOut(batchSizeOut)
     );
 
   // Add user logic here

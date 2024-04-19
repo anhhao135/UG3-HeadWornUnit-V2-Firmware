@@ -270,27 +270,80 @@ module seeg #
     reg [63:0] tdata;
     reg tvalid;
     wire tready;
-    reg tlast;
+    wire tlast;
+    reg tlast_reg = 0;
+    assign tlast = tlast_reg;
     reg tready_rhd;
     reg tready_rhs;
 
-    always @(posedge M_AXIS_ACLK) begin
+    reg [1:0] rhdrhsArbitraterState = 0; //0 is idle, 1 is passing through rhs, 2 is passing through rhd
+    reg [9:0] rhdDataPassCount = 511;
+    reg [6:0] rhsDataPassCount = 64;
+    reg [15:0] batchCount = 0;
 
-      if (rhs_fifo_pass_out) begin
-        tdata <= M_AXIS_RHS_tdata;
-        tvalid <= M_AXIS_RHS_tvalid;
-        tready_rhs <= tready;
-        tlast <= M_AXIS_RHD_tlast;
-        tready_rhd <= 0;
-      end
-      else begin
-        tdata <= M_AXIS_RHD_tdata;
-        tvalid <= M_AXIS_RHD_tvalid;
-        tready_rhd <= tready;
-        tlast <= M_AXIS_RHD_tlast;
-        tready_rhs <= 0;
-      end
+    //assign tlast = M_AXIS_RHD_tlast;
+
+    always @(posedge M_AXIS_ACLK) begin
+      if (!M_AXIS_ARESETN) begin
+        rhdrhsArbitraterState = 0;
+        rhdDataPassCount = 511;
+        rhsDataPassCount = 64;
+        batchCount = 0;
+      end 
+      case(rhdrhsArbitraterState)
+        0: begin
+          tready_rhs <= 0;
+          tready_rhd <= 0;
+          tdata <= 0;
+          tvalid <= 0;
+          tlast_reg <= 0;
+
+          if (triggerNextSampleState) begin
+            rhdrhsArbitraterState <= 1;
+          end
+        end
+        1: begin
+          tready_rhs <= tready;
+          tready_rhd <= 0;
+          tdata <= M_AXIS_RHS_tdata;
+          tvalid <= M_AXIS_RHS_tvalid;
+
+          if (rhsDataPassCount == 0) begin
+            rhdrhsArbitraterState <= 2;
+            rhsDataPassCount <= 64;
+          end
+          else begin
+            if (M_AXIS_RHS_tvalid == 1) begin
+              rhsDataPassCount <= rhsDataPassCount - 1;
+            end
+          end
+        end
+        2: begin
+          tready_rhs <= 0;
+          tready_rhd <= tready;
+          tdata <= M_AXIS_RHD_tdata;
+          tvalid <= M_AXIS_RHD_tvalid;
+          
+          if (rhdDataPassCount == 0) begin
+            if (batchCount == rhdBatchSizeOut_250M - 1) begin
+              tlast_reg <= 1;
+              batchCount <= 0;
+            end
+            else begin
+              batchCount <= batchCount + 1;
+            end
+            rhdrhsArbitraterState <= 0;
+            rhdDataPassCount <= 511;
+          end
+          else begin
+            if (M_AXIS_RHD_tvalid == 1) begin
+              rhdDataPassCount <= rhdDataPassCount - 1;
+            end
+          end
+        end
+      endcase
     end
+
 
     assign M_AXIS_RHD_tready = tready_rhd;
     assign M_AXIS_RHS_tready = tready_rhs;
@@ -309,6 +362,26 @@ module seeg #
       .m_axis_tready(M_AXIS_tready),    // input wire m_axis_tready
       .m_axis_tdata(M_AXIS_tdata),      // output wire [63 : 0] m_axis_tdata
       .m_axis_tlast(M_AXIS_tlast)      // output wire m_axis_tlast
+    );
+
+    xpm_cdc_array_single #(
+        .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
+        .INIT_SYNC_FF(0),   // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
+        .SIM_ASSERT_CHK(0), // DECIMAL; 0=disable simulation messages, 1=enable simulation messages
+        .SRC_INPUT_REG(1),  // DECIMAL; 0=do not register input, 1=register input
+        .WIDTH(16)           // DECIMAL; range: 1-1024
+    )
+    rhd_batch_size_out_buffer (
+        .dest_out(rhdBatchSizeOut_250M), // WIDTH-bit output: src_in synchronized to the destination clock domain. This
+                                // output is registered.
+
+        .dest_clk(M_AXIS_ACLK), // 1-bit input: Clock signal for the destination clock domain.
+        .src_clk(s00_axi_rhd_aclk),   // 1-bit input: optional; required when SRC_INPUT_REG = 1
+        .src_in(rhdBatchSizeOut)      // WIDTH-bit input: Input single-bit array to be synchronized to destination clock
+                                // domain. It is assumed that each bit of the array is unrelated to the others. This
+                                // is reflected in the constraints applied to this macro. To transfer a binary value
+                                // losslessly across the two clock domains, use the XPM_CDC_GRAY macro instead.
+
     );
 
     wire RHD_MISO1_I;
@@ -336,6 +409,9 @@ module seeg #
     wire RHD_MISO2_P;
 
     wire RHD_RHS_Sample_Ready;
+
+    wire [15:0] rhdBatchSizeOut;
+    wire [15:0] rhdBatchSizeOut_250M;
 
     assign RHD_RHS_Sample_Ready = (rhd_channel == 34) && rhs_channel16_flag;
 
@@ -570,7 +646,8 @@ module seeg #
       .channelOut250M(rhd_channel),
       .FIFO_rstn(FIFO_rstn),
       .fifoDoneLatchOut_250M(rhdFifoDone),
-      .fifoDoneLatchResetnIn_250M(rhdTriggerNextSample_n)
+      .fifoDoneLatchResetnIn_250M(rhdTriggerNextSample_n),
+      .batchSizeOut(rhdBatchSizeOut)
     );
 
     rhs_axi stimulator (
