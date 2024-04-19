@@ -705,7 +705,7 @@ module rhd
         .src_in(fifoDoneLatchResetnIn_250M)); 
 
     wire fifoDoneLatch;
-    assign fifoDoneLatch = flag_lastchannel;
+    assign fifoDoneLatch = (flag_lastchannel) && (main_state == 79);
     //risingEdgeLatch fifoDoneLatchModule (resetn, flag_lastchannel, fifoDoneLatch);
 
 
@@ -716,7 +716,7 @@ module rhd
     wire         flag_lastBatch_250M;
     wire         flag_lastchannel_250M;
 
-    reg [9:0]   tlast_cnt; 
+    reg [8:0]   tlast_cnt; 
     wire        tlast_flag_bit;
     assign      tlast_flag_bit = tlast_cnt[9];
 
@@ -732,6 +732,7 @@ module rhd
         .dest_out(flag_lastchannel_250M),
         .src_clk(clk),
         .src_in(flag_lastchannel));    
+
 
     always @(posedge M_AXIS_ACLK) begin //changed to negedge
         if (!M_AXIS_ARESETN) begin

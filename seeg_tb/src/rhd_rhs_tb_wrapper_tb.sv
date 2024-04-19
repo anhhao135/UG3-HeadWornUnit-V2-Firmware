@@ -77,9 +77,14 @@ end
 
 
 //always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
-//always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz
-always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz
-always #8.9285 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz
+//always #35.7124 rhd_aclk <= ~rhd_aclk; //rhd runs at 14 MHz 5ks/s
+always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz 10ks/s
+//always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz
+
+
+//always #35.7124 rhs_aclk <= ~rhs_aclk; //rhs runs at 14 MHz 5ks/s
+always #17.8562 rhs_aclk <= ~rhs_aclk; //rhs runs at 28 MHz 10ks/s
+//always #8.9285 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz
 //always #5.208 rhs_aclk <= ~rhs_aclk; //rhs runs at 96 MHz
 always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
 
@@ -260,7 +265,7 @@ begin
   mtestWDataL = 5'b10101; //binary 10101 (hex 15) is for loopback, 00101 (hex 5) for real data
   mst_agent_rhd.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
 
-/*
+
   #400us //wait before enabling stimulation midway through
 
   //START STIMULATION DURING RECORDING
@@ -288,12 +293,6 @@ begin
   mtestWDataL = 32'h21;
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
-
-
-
-  #1ms;
-
-  */
 
 
   #2ms;

@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1.790000 us"></ZoomStartTime>
-      <ZoomEndTime time="5,466.790001 us"></ZoomEndTime>
-      <Cursor1Time time="1,091.774000 us"></Cursor1Time>
+      <ZoomStartTime time="2,879.634000 us"></ZoomStartTime>
+      <ZoomEndTime time="3,307.134001 us"></ZoomEndTime>
+      <Cursor1Time time="3,149.134000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="233"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="64" />
+   <WVObjectSize size="78" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tdata" type="array">
       <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
@@ -339,5 +339,63 @@
    <wvobject type="divider" fp_name="divider189">
       <obj_property name="label">master</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/CS" type="logic">
+      <obj_property name="ElementShortName">CS</obj_property>
+      <obj_property name="ObjectShortName">CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/MISO" type="logic">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/MOSI" type="logic">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/STARTING_SEED" type="array">
+      <obj_property name="ElementShortName">STARTING_SEED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STARTING_SEED[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/clk_counter" type="array">
+      <obj_property name="ElementShortName">clk_counter[6:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_counter[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/counter_0_31" type="array">
+      <obj_property name="ElementShortName">counter_0_31[16:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_0_31[16:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/counter_32_63" type="array">
+      <obj_property name="ElementShortName">counter_32_63[16:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_32_63[16:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/init_en" type="logic">
+      <obj_property name="ElementShortName">init_en</obj_property>
+      <obj_property name="ObjectShortName">init_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/miso_out" type="logic">
+      <obj_property name="ElementShortName">miso_out</obj_property>
+      <obj_property name="ObjectShortName">miso_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/sclk_counter" type="array">
+      <obj_property name="ElementShortName">sclk_counter[4:0]</obj_property>
+      <obj_property name="ObjectShortName">sclk_counter[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/RHD_LOOPBACK/A1/state_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder[3:0]</obj_property>
    </wvobject>
 </wave_config>
