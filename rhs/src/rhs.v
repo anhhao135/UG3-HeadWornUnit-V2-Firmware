@@ -2267,7 +2267,7 @@ module rhs
                     state_pulse <= S_OFF;
                 end
                 ms_cs_i: begin
-                    if (flag_lastchannel) begin
+                    if (flag_lastchannel && !fifoDoneLatchResetn) begin
                         time_counter <= time_counter + 1;
                         case (state_pulse) 
                             S_OFF: begin

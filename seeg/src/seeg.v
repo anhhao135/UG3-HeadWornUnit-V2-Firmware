@@ -298,7 +298,7 @@ module seeg #
           tvalid <= 0;
           tlast_reg <= 0;
 
-          if (triggerNextSampleState) begin
+          if (bothSystemsDoneRisingEdge) begin
             rhdrhsArbitraterState <= 1;
           end
         end
@@ -427,6 +427,21 @@ module seeg #
 
     reg triggerNextSampleState = 0;
     reg triggerNextSample_n = 1;
+
+
+    wire bothSystemsDone;
+    assign bothSystemsDone = rhdFifoDone && rhsFifoDone;
+    reg bothSystemsDoneRisingEdge = 0;
+    reg bothSystemsDoneRisingEdgeTracker = 0;
+
+
+    always @(posedge M_AXIS_ACLK) begin
+      if (!bothSystemsDoneRisingEdgeTracker && bothSystemsDone)
+        bothSystemsDoneRisingEdge = 1;
+      else 
+        bothSystemsDoneRisingEdge = 0;
+      bothSystemsDoneRisingEdgeTracker = bothSystemsDone;
+    end
 
     always @(posedge M_AXIS_ACLK) begin
       case(triggerNextSampleState)

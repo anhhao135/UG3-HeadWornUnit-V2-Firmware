@@ -219,7 +219,7 @@ module rhd
     wire            flag_lastchannel;
     
     assign  flag_lastBatch = (timestamp == batch_size);
-    assign  flag_lastchannel = (channel == 34); //comment to channel 30 to fit 2048 with rhs
+    assign  flag_lastchannel = (channel == 35); //comment to channel 30 to fit 2048 with rhs
 
 
     // [ZCheck]
@@ -675,7 +675,7 @@ module rhd
 
 
     fifo_generator_0 fifo_inst (
-        .srst(!resetn && !SPI_running),
+        .srst(!resetn || !SPI_running),
         .wr_clk(clk),
         .rd_clk(M_AXIS_ACLK),
         .din(rhd_data_out),

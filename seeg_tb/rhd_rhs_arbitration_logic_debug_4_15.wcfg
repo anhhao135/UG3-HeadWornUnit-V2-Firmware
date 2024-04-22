@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1.790000 us"></ZoomStartTime>
-      <ZoomEndTime time="5,466.790001 us"></ZoomEndTime>
-      <Cursor1Time time="1,091.774000 us"></Cursor1Time>
+      <ZoomStartTime time="704.002000 us"></ZoomStartTime>
+      <ZoomEndTime time="4,424.002001 us"></ZoomEndTime>
+      <Cursor1Time time="1,324.002000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <NameColumnWidth column_width="229"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="64" />
+   <WVObjectSize size="70" />
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tdata" type="array">
       <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
@@ -229,6 +229,26 @@
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/state_pulse" type="array">
+      <obj_property name="ElementShortName">state_pulse[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_pulse[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_counter" type="array">
+      <obj_property name="ElementShortName">stim_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_counter[10:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/time_counter" type="array">
+      <obj_property name="ElementShortName">time_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">time_counter[10:0]</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject type="divider" fp_name="divider156">
       <obj_property name="label">rhs</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -286,14 +306,14 @@
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/triggerNextSampleState" type="logic">
       <obj_property name="ElementShortName">triggerNextSampleState</obj_property>
       <obj_property name="ObjectShortName">triggerNextSampleState</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdrhsArbitraterState" type="array">
       <obj_property name="ElementShortName">rhdrhsArbitraterState[1:0]</obj_property>
       <obj_property name="ObjectShortName">rhdrhsArbitraterState[1:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhsDataPassCount" type="array">
@@ -339,5 +359,23 @@
    <wvobject type="divider" fp_name="divider189">
       <obj_property name="label">master</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/bothSystemsDone" type="logic">
+      <obj_property name="ElementShortName">bothSystemsDone</obj_property>
+      <obj_property name="ObjectShortName">bothSystemsDone</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/bothSystemsDoneRisingEdge" type="logic">
+      <obj_property name="ElementShortName">bothSystemsDoneRisingEdge</obj_property>
+      <obj_property name="ObjectShortName">bothSystemsDoneRisingEdge</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/bothSystemsDoneRisingEdgeTracker" type="logic">
+      <obj_property name="ElementShortName">bothSystemsDoneRisingEdgeTracker</obj_property>
+      <obj_property name="ObjectShortName">bothSystemsDoneRisingEdgeTracker</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>
