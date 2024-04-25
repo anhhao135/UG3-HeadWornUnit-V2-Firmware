@@ -2825,21 +2825,6 @@ module MISO_phase_selector(
 			default: MISO <= {MISO4x[9],  MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65], MISO4x[69], MISO4x[73], MISO4x[77], MISO4x[81], MISO4x[85], MISO4x[89], MISO4x[93], MISO4x[97], MISO4x[101], MISO4x[105], MISO4x[109], MISO4x[113], MISO4x[117], MISO4x[121], MISO4x[126], MISO4x[129], MISO4x[133]};
 		endcase
 	end
-
-    ila_0 ila0 (
-	.clk(clk), // input wire clk
-
-
-	.probe0(state_pulse), // input wire [2:0]  probe0  
-	.probe1(channel), // input wire [5:0]  probe1 
-	.probe2(stim_counter), // input wire [10:0]  probe2 
-	.probe3(flag_stim_done), // input wire [0:0]  probe3 
-	.probe4(MOSI1), // input wire [0:0]  probe4 
-	.probe5(MISO1), // input wire [0:0]  probe5 
-	.probe6(resetn), // input wire [0:0]  probe6 
-	.probe7(CS_b) // input wire [0:0]  probe7
-);
-	
 endmodule
 
 module risingEdgeLatch (input resetn, input data, output reg q);
