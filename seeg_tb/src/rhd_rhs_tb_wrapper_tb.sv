@@ -77,8 +77,8 @@ end
 
 
 //always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
-//always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz
-always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz
+always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz
+//always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz
 //always #8.9285 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz
 always #17.8562 rhs_aclk <= ~rhs_aclk; //rhs runs at 28 MHz
 //always #5.208 rhs_aclk <= ~rhs_aclk; //rhs runs at 96 MHz

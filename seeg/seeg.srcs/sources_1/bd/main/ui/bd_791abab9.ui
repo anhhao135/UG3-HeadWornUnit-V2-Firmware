@@ -6,8 +6,8 @@
    "Color Coded_ScaleFactor":"0.215247",
    "Color Coded_TopLeft":"-1264,5",
    "Default View_Layers":"/proc_sys_reset_250M_peripheral_aresetn:true|/zynq_ultra_ps_e_0_pl_clk0:true|/zynq_ultra_ps_e_0_pl_resetn0:true|/proc_sys_reset_100M_peripheral_aresetn:true|/stimulation_0/rhs_axi_0_FIFO_rstn:true|/clk_wiz_0_clk_rhd:true|/Net:true|/proc_sys_reset_rhd_peripheral_aresetn:true|/clk_wiz_0_clk_rhs:true|/proc_sys_reset_rhs_peripheral_aresetn:true|/recording_0/rhd_axi_0_FIFO_rstn:true|",
-   "Default View_ScaleFactor":"0.537617",
-   "Default View_TopLeft":"768,259",
+   "Default View_ScaleFactor":"0.330941",
+   "Default View_TopLeft":"583,-378",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -256,9 +256,9 @@ preplace netloc master_smartconnect_0_M01_AXI 1 6 1 2290 450n
 preplace netloc master_smartconnect_0_M02_AXI 1 6 1 2260 500n
 preplace netloc master_smartconnect_1_M00_AXI 1 7 1 2710 660n
 preplace netloc master_smartconnect_1_M01_AXI 1 7 1 2680 680n
+preplace netloc seeg_0_M_AXIS 1 2 7 610 370 NJ 370 NJ 370 NJ 370 2290J 380 NJ 380 3070
 preplace netloc smartconnect_0_M00_AXI 1 4 1 N 510
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 5 1 1920 450n
-preplace netloc seeg_0_M_AXIS 1 2 7 610 370 NJ 370 NJ 370 NJ 370 2290J 380 NJ 380 3070
 levelinfo -pg 1 0 130 420 790 1120 1580 2090 2490 2900 3090
 pagesize -pg 1 -db -bbox -sgen -180 0 3260 2480
 "

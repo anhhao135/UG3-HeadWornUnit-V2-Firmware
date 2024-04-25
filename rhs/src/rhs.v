@@ -2041,8 +2041,8 @@ module rhs
                 
                 ms_clk2_a: begin
                     if (channel == 3) begin
-                        //rhs_data_out <= header_magic_number[63:48];
-                        rhs_data_out <= state_pulse; //the most sig 2 bytes of the header is going to be the state pulse, this is going to be the stimulation marker
+                        rhs_data_out <= header_magic_number[63:48];
+                        //rhs_data_out <= state_pulse; //the most sig 2 bytes of the header is going to be the state pulse, this is going to be the stimulation marker
                         rhd_valid_out <= 1'b1;
                     end
                 end
