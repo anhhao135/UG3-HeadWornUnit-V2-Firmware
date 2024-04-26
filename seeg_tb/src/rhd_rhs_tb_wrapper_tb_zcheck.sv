@@ -77,8 +77,10 @@ end
 
 
 //always #71.4248 rhd_aclk <= ~rhd_aclk; //rhd runs at 7 MHz
-always #17.8562 rhd_aclk <= ~rhd_aclk; //rhd runs at 28 MHz
-always #5.208 rhs_aclk <= ~rhs_aclk; //rhs runs at 96 MHz
+//always #8.9285 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz for 20ks/s
+//always #8.9285 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz for 20ks/s
+always #8.68 rhd_aclk <= ~rhd_aclk; //rhd runs at 56 MHz for 20ks/s
+always #8.68 rhs_aclk <= ~rhs_aclk; //rhs runs at 56 MHz for 20ks/s
 always #2 clk_dma <= ~clk_dma; //dma runs at 250 MHz
 
 
@@ -220,13 +222,13 @@ begin
   mtestWDataL = 32'h00000000;
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
-  #10us;
+  #100us;
 
   // (1b) Magnitude set
   mtestWDataL = 32'h0000025; //hex 5 turns off loopback, hex 25 turns on
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
-  #100us;
+  #500us;
   mtestWDataL = 32'h00000000;
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
@@ -254,7 +256,7 @@ begin
 
 
 
-  #10ms;
+  #68ms;
 
 
   //stop

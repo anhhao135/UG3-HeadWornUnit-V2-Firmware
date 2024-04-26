@@ -1007,7 +1007,8 @@ module rhs
                     main_state <= ms_cs_j;
                 end
                 */
-                if (flag_terminate_config || flag_terminate_ZCheck) begin
+                //if (flag_terminate_config || flag_terminate_ZCheck) begin
+                if (flag_terminate_config) begin
                     main_state <= ms_cs_k; //exit spi
                 end else begin
                     main_state <= ms_cs_j; //loop spi

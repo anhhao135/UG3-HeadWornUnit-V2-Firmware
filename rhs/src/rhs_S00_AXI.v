@@ -194,7 +194,8 @@ rhs_headstage_slave_full RHS_LOOPBACK(
 	.MISO_O(MISO_O_LOOP),
 	.MISO_P(MISO_P_LOOP),
 	.channel(channel_out),
-	.state_cable_delay_finder(state_cable_delay_finder_out)
+	.state_cable_delay_finder(state_cable_delay_finder_out),
+	.zcheck_en(slv_reg0[4])
 );
 
 

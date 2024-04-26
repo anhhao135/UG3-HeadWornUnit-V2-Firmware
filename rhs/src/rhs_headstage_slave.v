@@ -5,7 +5,8 @@ module  rhs_headstage_slave #(parameter STARTING_SEED = 0) (
     input wire SCLK,
     output wire MISO,
     input wire [4:0] channel,
-    input wire [2:0] state_cable_delay_finder
+    input wire [2:0] state_cable_delay_finder,
+    input wire zcheck_en
 );
 
 

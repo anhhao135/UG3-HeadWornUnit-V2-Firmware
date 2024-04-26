@@ -106,7 +106,8 @@ module rhd
     output wire [3:0]                        state_cable_delay_finder_out,
     output wire                              init_mode_out,
     output wire fifoDoneLatchOut_250M,
-    input wire fifoDoneLatchResetnIn_250M
+    input wire fifoDoneLatchResetnIn_250M,
+    output wire [5:0] zcheck_channel
 
 
     );
@@ -230,6 +231,7 @@ module rhd
     reg             ZCheck_loop;
     reg  [7:0]      ZCheck_sine_cycle; 
     reg  [5:0]      ZCheck_channel;
+    assign zcheck_channel = ZCheck_channel;
     reg             reg_risingEdge_impCheck;
 
     // [Magic number]
@@ -2934,7 +2936,7 @@ module rhd
                                                         begin 
                                                             ZCheck_sine_cycle <= 0;  
                                                             ZCheck_command_count <= 0;  
-                                                            if (ZCheck_channel == 63) begin
+                                                            if (ZCheck_channel == 63) begin //zcheck channel goes up to 63
                                                                     ZCheck_channel <= 0; 
                                                                     ZCheck_loop <= 0; 
                                                                 end
@@ -2954,7 +2956,7 @@ module rhd
                     if (channel == 32) begin
                         if (ZCheck_loop) begin
                             case (ZCheck_command_count)
-                                0:          begin ZCheck_cmd_2 <= {2'b10, 6'b000111, 2'b00, ZCheck_channel};  end 
+                                0:          begin ZCheck_cmd_2 <= {2'b10, 6'b000111, 2'b00, ZCheck_channel};  end //zcheck register selects each 64 channel individually
                                 // Generate the 1 kHz sine wave - 20 kSps 
                                 // MATLAB code: 
                                     // fs = 20e3;

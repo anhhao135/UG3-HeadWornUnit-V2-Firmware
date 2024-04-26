@@ -6,13 +6,16 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
     output wire MISO,
     input wire [5:0] channel,
     input wire init_en,
-    input wire [3:0] state_cable_delay_finder
+    input wire [3:0] state_cable_delay_finder,
+    input wire zcheck_en,
+    input wire [5:0] zcheck_channel //goes from 0 to 63 for each amplifier channel
 );
 
 
     reg miso_out;
     reg [16:0] counter_0_31;
     reg [16:0] counter_32_63;
+    reg [16:0] counter_zcheck;
     reg [6:0] clk_counter = 0;
     reg [4:0] sclk_counter = 16;
     
@@ -61,6 +64,7 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
         else begin
             counter_0_31 <= channel - 2 + STARTING_SEED;
             counter_32_63 <= channel - 2 + 32 + STARTING_SEED;
+            counter_zcheck <= (zcheck_channel + STARTING_SEED) * 10; //zcheck loopback will return the active zcheck channel index * 10
         end
         
 
@@ -70,15 +74,32 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
             end
         else begin
             clk_counter = clk_counter + 1;
-            
-            if (clk_counter % 2 == 0) begin
-                if (clk_counter % 4 == 0) begin
-                    sclk_counter = sclk_counter - 1;
-                    miso_out = counter_0_31[sclk_counter];
-                    
+            if (!zcheck_en || init_en) begin
+                if (clk_counter % 2 == 0) begin
+                    if (clk_counter % 4 == 0) begin
+                        sclk_counter = sclk_counter - 1;
+                        miso_out = counter_0_31[sclk_counter];
+                        
+                    end
+                    else
+                        miso_out = counter_32_63[sclk_counter];
                 end
-                else
-                    miso_out = counter_32_63[sclk_counter];
+            end
+            else begin
+                if (clk_counter % 2 == 0) begin
+                    if (clk_counter % 4 == 0) begin
+                        sclk_counter = sclk_counter - 1;
+                        if (zcheck_channel <= 31 && (zcheck_channel == (channel - 2)))
+                            miso_out = counter_zcheck[sclk_counter];
+                        else
+                            miso_out = 0;
+                    end
+                    else
+                        if (zcheck_channel >= 32 && ((zcheck_channel - 32) == (channel - 2)))
+                            miso_out = counter_zcheck[sclk_counter];
+                        else
+                            miso_out = 0;
+                end
             end
         end
     end

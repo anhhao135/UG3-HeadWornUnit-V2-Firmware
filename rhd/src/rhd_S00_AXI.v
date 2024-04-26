@@ -205,6 +205,7 @@ wire MISO2_P_SW;
 wire [5:0] channel;
 wire init_mode_out;
 wire [3:0] state_cable_delay_finder;
+wire [5:0] zcheck_channel;
 
 
 rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
@@ -246,7 +247,9 @@ rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
 	.MISO2_P(MISO2_P_LOOP),
 	.channel(channel),
 	.init_en(init_mode_out),
-	.state_cable_delay_finder(state_cable_delay_finder)
+	.state_cable_delay_finder(state_cable_delay_finder),
+	.zcheck_en(slv_reg0[3]),
+	.zcheck_channel(zcheck_channel)
 );
 
 
@@ -726,7 +729,8 @@ rhd rhd
 	.state_cable_delay_finder_out(state_cable_delay_finder),
 	.channelOut250M(channelOut250M),
 	.fifoDoneLatchOut_250M(fifoDoneLatchOut_250M),
-    .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M)
+    .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M),
+	.zcheck_channel(zcheck_channel)
 	);
 
 
