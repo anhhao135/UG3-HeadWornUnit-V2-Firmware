@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1'
+HD_PWD='C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -349,7 +349,7 @@ module seeg #
     assign M_AXIS_RHS_tready = tready_rhs;
 
     wire axis_data_fifo_0_resetn;
-    assign axis_data_fifo_0_resetn = FIFO_rstn || M_AXIS_ARESETN;
+    assign axis_data_fifo_0_resetn = FIFO_rstn && M_AXIS_ARESETN;
 
     axis_data_fifo_0 axis_data_fifo_0 (
       .s_axis_aresetn(axis_data_fifo_0_resetn),  // input wire s_axis_aresetn

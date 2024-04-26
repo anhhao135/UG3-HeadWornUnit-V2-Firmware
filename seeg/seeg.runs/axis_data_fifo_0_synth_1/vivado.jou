@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Apr  8 12:33:39 2024
-# Process ID: 27236
-# Current directory: C:/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1
+# Start of session at: Fri Apr 26 14:22:41 2024
+# Process ID: 3068
+# Current directory: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1
 # Command line: vivado.exe -log axis_data_fifo_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_data_fifo_0.tcl
-# Log file: C:/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1/axis_data_fifo_0.vds
-# Journal file: C:/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1\vivado.jou
-# Running On: DESKTOP-JS8NSUT, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34265 MB
+# Log file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1/axis_data_fifo_0.vds
+# Journal file: C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/axis_data_fifo_0_synth_1\vivado.jou
+# Running On: GramForGram, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 16847 MB
 #-----------------------------------------------------------
 source axis_data_fifo_0.tcl -notrace
