@@ -351,6 +351,8 @@ module seeg #
     wire axis_data_fifo_0_resetn;
     assign axis_data_fifo_0_resetn = FIFO_rstn || M_AXIS_ARESETN;
 
+    /*
+
     axis_data_fifo_0 axis_data_fifo_0 (
       .s_axis_aresetn(axis_data_fifo_0_resetn),  // input wire s_axis_aresetn
       .s_axis_aclk(M_AXIS_ACLK),        // input wire s_axis_aclk
@@ -363,6 +365,15 @@ module seeg #
       .m_axis_tdata(M_AXIS_tdata),      // output wire [63 : 0] m_axis_tdata
       .m_axis_tlast(M_AXIS_tlast)      // output wire m_axis_tlast
     );
+
+    */
+
+    assign M_AXIS_tvalid = tvalid;
+    assign M_AXIS_tdata = tdata;
+    assign M_AXIS_tlast = tlast;
+    assign tready = M_AXIS_tready;
+
+
 
     xpm_cdc_array_single #(
         .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
