@@ -32540,6 +32540,20 @@
 #define GPIO_MASK_DATA_1_MSW_OFFSET                                                0XFF0A000C
 #undef GPIO_MASK_DATA_1_MSW_OFFSET 
 #define GPIO_MASK_DATA_1_MSW_OFFSET                                                0XFF0A000C
+#undef GPIO_DIRM_1_OFFSET 
+#define GPIO_DIRM_1_OFFSET                                                         0XFF0A0244
+#undef GPIO_OEN_1_OFFSET 
+#define GPIO_OEN_1_OFFSET                                                          0XFF0A0248
+#undef GPIO_MASK_DATA_1_LSW_OFFSET 
+#define GPIO_MASK_DATA_1_LSW_OFFSET                                                0XFF0A0008
+#undef GPIO_MASK_DATA_1_LSW_OFFSET 
+#define GPIO_MASK_DATA_1_LSW_OFFSET                                                0XFF0A0008
+#undef GPIO_DIRM_1_OFFSET 
+#define GPIO_DIRM_1_OFFSET                                                         0XFF0A0244
+#undef GPIO_OEN_1_OFFSET 
+#define GPIO_OEN_1_OFFSET                                                          0XFF0A0248
+#undef GPIO_MASK_DATA_1_LSW_OFFSET 
+#define GPIO_MASK_DATA_1_LSW_OFFSET                                                0XFF0A0008
 
 /*
 * PCIE config reset
@@ -33638,6 +33652,106 @@
 #define GPIO_MASK_DATA_1_MSW_DATA_1_MSW_DEFVAL                 0x00000000
 #define GPIO_MASK_DATA_1_MSW_DATA_1_MSW_SHIFT                  0
 #define GPIO_MASK_DATA_1_MSW_DATA_1_MSW_MASK                   0x000003FFU
+
+/*
+* Operation is the same as DIRM_0[DIRECTION_0]
+*/
+#undef GPIO_DIRM_1_DIRECTION_1_DEFVAL 
+#undef GPIO_DIRM_1_DIRECTION_1_SHIFT 
+#undef GPIO_DIRM_1_DIRECTION_1_MASK 
+#define GPIO_DIRM_1_DIRECTION_1_DEFVAL                         0x00000000
+#define GPIO_DIRM_1_DIRECTION_1_SHIFT                          0
+#define GPIO_DIRM_1_DIRECTION_1_MASK                           0x03FFFFFFU
+
+/*
+* Operation is the same as OEN_0[OP_ENABLE_0]
+*/
+#undef GPIO_OEN_1_OP_ENABLE_1_DEFVAL 
+#undef GPIO_OEN_1_OP_ENABLE_1_SHIFT 
+#undef GPIO_OEN_1_OP_ENABLE_1_MASK 
+#define GPIO_OEN_1_OP_ENABLE_1_DEFVAL                          0x00000000
+#define GPIO_OEN_1_OP_ENABLE_1_SHIFT                           0
+#define GPIO_OEN_1_OP_ENABLE_1_MASK                            0x03FFFFFFU
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT                  16
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK                   0xFFFF0000U
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT                  0
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK                   0x0000FFFFU
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT                  16
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK                   0xFFFF0000U
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT                  0
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK                   0x0000FFFFU
+
+/*
+* Operation is the same as DIRM_0[DIRECTION_0]
+*/
+#undef GPIO_DIRM_1_DIRECTION_1_DEFVAL 
+#undef GPIO_DIRM_1_DIRECTION_1_SHIFT 
+#undef GPIO_DIRM_1_DIRECTION_1_MASK 
+#define GPIO_DIRM_1_DIRECTION_1_DEFVAL                         0x00000000
+#define GPIO_DIRM_1_DIRECTION_1_SHIFT                          0
+#define GPIO_DIRM_1_DIRECTION_1_MASK                           0x03FFFFFFU
+
+/*
+* Operation is the same as OEN_0[OP_ENABLE_0]
+*/
+#undef GPIO_OEN_1_OP_ENABLE_1_DEFVAL 
+#undef GPIO_OEN_1_OP_ENABLE_1_SHIFT 
+#undef GPIO_OEN_1_OP_ENABLE_1_MASK 
+#define GPIO_OEN_1_OP_ENABLE_1_DEFVAL                          0x00000000
+#define GPIO_OEN_1_OP_ENABLE_1_SHIFT                           0
+#define GPIO_OEN_1_OP_ENABLE_1_MASK                            0x03FFFFFFU
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT                  16
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK                   0xFFFF0000U
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT                  0
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK                   0x0000FFFFU
 #undef FPD_SLCR_SECURE_SLCR_DPDMA_OFFSET 
 #define FPD_SLCR_SECURE_SLCR_DPDMA_OFFSET                                          0XFD690040
 #undef FPD_SLCR_SECURE_SLCR_PCIE_OFFSET 
@@ -34290,8 +34404,6 @@
 #define SERDES_L3_TM_EQ11_OFFSET                                                   0XFD40D978
 #undef SIOU_ECO_0_OFFSET 
 #define SIOU_ECO_0_OFFSET                                                          0XFD3D001C
-#undef PCIE_ATTRIB_ECO_0_OFFSET 
-#define PCIE_ATTRIB_ECO_0_OFFSET                                                   0XFD480314
 #undef SERDES_ICM_CFG0_OFFSET 
 #define SERDES_ICM_CFG0_OFFSET                                                     0XFD410010
 #undef SERDES_ICM_CFG1_OFFSET 
@@ -35154,16 +35266,6 @@
 #define SIOU_ECO_0_FIELD_MASK                                  0xFFFFFFFFU
 
 /*
-* Reserved for future use
-*/
-#undef PCIE_ATTRIB_ECO_0_ECO_0_DEFVAL 
-#undef PCIE_ATTRIB_ECO_0_ECO_0_SHIFT 
-#undef PCIE_ATTRIB_ECO_0_ECO_0_MASK 
-#define PCIE_ATTRIB_ECO_0_ECO_0_DEFVAL                         
-#define PCIE_ATTRIB_ECO_0_ECO_0_SHIFT                          0
-#define PCIE_ATTRIB_ECO_0_ECO_0_MASK                           0xFFFFFFFFU
-
-/*
 * Controls UPHY Lane 0 protocol configuration. 0 - PowerDown, 1 - PCIe .0,
     *  2 - Sata0, 3 - USB0, 4 - DP.1, 5 - SGMII0, 6 - Unused, 7 - Unused
 */
@@ -35272,6 +35374,8 @@
 #define PCIE_ATTRIB_ATTR_101_OFFSET                                                0XFD480194
 #undef PCIE_ATTRIB_ATTR_37_OFFSET 
 #define PCIE_ATTRIB_ATTR_37_OFFSET                                                 0XFD480094
+#undef PCIE_ATTRIB_ATTR_93_OFFSET 
+#define PCIE_ATTRIB_ATTR_93_OFFSET                                                 0XFD480174
 #undef PCIE_ATTRIB_ID_OFFSET 
 #define PCIE_ATTRIB_ID_OFFSET                                                      0XFD480200
 #undef PCIE_ATTRIB_SUBSYS_ID_OFFSET 
@@ -35282,14 +35386,22 @@
 #define PCIE_ATTRIB_ATTR_24_OFFSET                                                 0XFD480060
 #undef PCIE_ATTRIB_ATTR_25_OFFSET 
 #define PCIE_ATTRIB_ATTR_25_OFFSET                                                 0XFD480064
-#undef AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_OFFSET 
-#define AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_OFFSET                               0XFD0E0000
+#undef PCIE_ATTRIB_ATTR_2_OFFSET 
+#define PCIE_ATTRIB_ATTR_2_OFFSET                                                  0XFD480008
 #undef PCIE_ATTRIB_ATTR_4_OFFSET 
 #define PCIE_ATTRIB_ATTR_4_OFFSET                                                  0XFD480010
-#undef PCIE_ATTRIB_ATTR_89_OFFSET 
-#define PCIE_ATTRIB_ATTR_89_OFFSET                                                 0XFD480164
+#undef PCIE_ATTRIB_ATTR_79_OFFSET 
+#define PCIE_ATTRIB_ATTR_79_OFFSET                                                 0XFD48013C
 #undef PCIE_ATTRIB_ATTR_43_OFFSET 
 #define PCIE_ATTRIB_ATTR_43_OFFSET                                                 0XFD4800AC
+#undef PCIE_ATTRIB_ATTR_48_OFFSET 
+#define PCIE_ATTRIB_ATTR_48_OFFSET                                                 0XFD4800C0
+#undef PCIE_ATTRIB_ATTR_46_OFFSET 
+#define PCIE_ATTRIB_ATTR_46_OFFSET                                                 0XFD4800B8
+#undef PCIE_ATTRIB_ATTR_47_OFFSET 
+#define PCIE_ATTRIB_ATTR_47_OFFSET                                                 0XFD4800BC
+#undef PCIE_ATTRIB_ATTR_44_OFFSET 
+#define PCIE_ATTRIB_ATTR_44_OFFSET                                                 0XFD4800B0
 #undef PCIE_ATTRIB_ATTR_45_OFFSET 
 #define PCIE_ATTRIB_ATTR_45_OFFSET                                                 0XFD4800B4
 #undef PCIE_ATTRIB_CB_OFFSET 
@@ -35298,6 +35410,8 @@
 #define PCIE_ATTRIB_ATTR_35_OFFSET                                                 0XFD48008C
 #undef CRF_APB_RST_FPD_TOP_OFFSET 
 #define CRF_APB_RST_FPD_TOP_OFFSET                                                 0XFD1A0100
+#undef GPIO_MASK_DATA_1_LSW_OFFSET 
+#define GPIO_MASK_DATA_1_LSW_OFFSET                                                0XFF0A0008
 
 /*
 * USB 0 reset for control registers
@@ -36388,18 +36502,6 @@
 #define PCIE_ATTRIB_ATTR_34_ATTR_HEADER_TYPE_MASK              0x000000FFU
 
 /*
-* Indicates mapping for legacy interrupt messages. Valid values are 1 INTA
-    * , 2 INTB, 3 INTC, 4 INTD. Zero indicates no legacy interrupt messages us
-    * ed.; EP=0x0001; RP=0x0001
-*/
-#undef PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN_DEFVAL 
-#undef PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN_SHIFT 
-#undef PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN_MASK 
-#define PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN_DEFVAL          0x00000100
-#define PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN_SHIFT           8
-#define PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN_MASK            0x0000FF00U
-
-/*
 * PM Capability's Next Capability Offset pointer to the next item in the c
     * apabilities list, or 00h if this is the final capability.; EP=0x0048; RP
     * =0x0060
@@ -36519,6 +36621,18 @@
 #define PCIE_ATTRIB_ATTR_101_ATTR_DISABLE_BAR_FILTERING_MASK   0x00000002U
 
 /*
+* Link Bandwidth notification capability. Indicates support for the link b
+    * andwidth notification status and interrupt mechanism. Required for Root.
+    * ; EP=0x0000; RP=0x0001
+*/
+#undef PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP_SHIFT 
+#undef PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP_MASK 
+#define PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP_DEFVAL  0x000009FF
+#define PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP_SHIFT  9
+#define PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP_MASK  0x00000200U
+
+/*
 * Maximum Link Speed. Valid settings are: 0001b [2.5 GT/s], 0010b [5.0 GT/
     * s and 2.5 GT/s].; EP=0x0002; RP=0x0002
 */
@@ -36540,6 +36654,32 @@
 #define PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_ASPM_OPTIONALITY_DEFVAL  0x000009FF
 #define PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_ASPM_OPTIONALITY_SHIFT  14
 #define PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_ASPM_OPTIONALITY_MASK  0x00004000U
+
+/*
+* Enables the Replay Timer to use the user-defined LL_REPLAY_TIMEOUT value
+    *  (or combined with the built-in value, depending on LL_REPLAY_TIMEOUT_FU
+    * NC). If FALSE, the built-in value is used.; EP=0x0000; RP=0x0000
+*/
+#undef PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN_SHIFT 
+#undef PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN_MASK 
+#define PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN_DEFVAL   0x00000000
+#define PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN_SHIFT    15
+#define PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN_MASK     0x00008000U
+
+/*
+* Sets a user-defined timeout for the Replay Timer to force cause the retr
+    * ansmission of unacknowledged TLPs; refer to LL_REPLAY_TIMEOUT_EN and LL_
+    * REPLAY_TIMEOUT_FUNC to see how this value is used. The unit for this att
+    * ribute is in symbol times, which is 4ns at GEN1 speeds and 2ns at GEN2.;
+    *  EP=0x0000; RP=0x0000
+*/
+#undef PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_SHIFT 
+#undef PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_MASK 
+#define PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_DEFVAL      0x00000000
+#define PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_SHIFT       0
+#define PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_MASK        0x00007FFFU
 
 /*
 * Device ID for the the PCIe Cap Structure Device ID field
@@ -36625,20 +36765,15 @@
 #define PCIE_ATTRIB_ATTR_25_ATTR_CMD_INTX_IMPLEMENTED_MASK     0x00000100U
 
 /*
-* Determines which PCI Express Base Address Region (BAR) is used to access
-    *  DMA and Bridge Registers from PCI Express. If a received PCI Express re
-    * ad/write requests' BAR hit information is equal to cfg_dma_reg_bar, then
-    *  the transaction is terminated by the internal DMA/Bridge Register imple
-    * mentation, otherwise the transaction is forwarded to the AXI Master Inte
-    * rface. cfg_dma_reg_bar is only for received PCI Express read and write r
-    * equests and has no impact on received AXI Slave Interface requests.
+* If TRUE, permits the AER Root Status and Error Source ID reg to be updat
+    * ed. If FALSE, these registers are forced to 0.; EP=0x0000; RP=0x0000
 */
-#undef AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR_DEFVAL 
-#undef AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR_SHIFT 
-#undef AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR_MASK 
-#define AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR_DEFVAL  0x00010000
-#define AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR_SHIFT  0
-#define AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR_MASK  0x00000007U
+#undef PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE_SHIFT 
+#undef PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE_MASK 
+#define PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE_DEFVAL  0x00000002
+#define PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE_SHIFT  0
+#define PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE_MASK  0x00000001U
 
 /*
 * Indicates that the AER structures exists. If this is FALSE, then the AER
@@ -36669,15 +36804,15 @@
 #define PCIE_ATTRIB_ATTR_4_ATTR_AER_CAP_ON_MASK                0x00001000U
 
 /*
-* VSEC's Next Capability Offset pointer to the next item in the capabiliti
-    * es list, or 000h if this is the final capability.; EP=0x0140; RP=0x0140
+* CRS SW Visibility. Indicates RC can return CRS to SW. Transferred to the
+    *  Root Capabilities register.; EP=0x0000; RP=0x0000
 */
-#undef PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR_DEFVAL 
-#undef PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR_SHIFT 
-#undef PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR_MASK 
-#define PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR_DEFVAL       0x00002281
-#define PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR_SHIFT        1
-#define PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR_MASK         0x00001FFEU
+#undef PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY_SHIFT 
+#undef PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY_MASK 
+#define PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY_DEFVAL  0x00000000
+#define PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY_SHIFT  5
+#define PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY_MASK  0x00000020U
 
 /*
 * Indicates that the MSIX structures exists. If this is FALSE, then the MS
@@ -36692,26 +36827,61 @@
 #define PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_ON_MASK              0x00000100U
 
 /*
-* MSI-X Pending Bit Array BIR. This value is transferred to the MSI-X PBA
-    * BIR field. Set to 0 if MSI-X is not enabled.; EP=0x0000; RP=0x0000
+* MSI-X Table Size. This value is transferred to the MSI-X Message Control
+    * [10:0] field. Set to 0 if MSI-X is not enabled. Note that the core does
+    * not implement the table; that must be implemented in user logic.; EP=0x0
+    * 003; RP=0x0000
 */
-#undef PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR_DEFVAL 
-#undef PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR_SHIFT 
-#undef PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR_MASK 
-#define PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR_DEFVAL       0x00000100
-#define PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR_SHIFT        9
-#define PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR_MASK         0x00000E00U
+#undef PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE_SHIFT 
+#undef PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE_MASK 
+#define PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE_DEFVAL    
+#define PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE_SHIFT     0
+#define PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE_MASK      0x000007FFU
 
 /*
-* MSI-X Table BIR. This value is transferred to the MSI-X Table BIR field.
-    *  Set to 0 if MSI-X is not enabled.; EP=0x0000; RP=0x0000
+* MSI-X Table Offset. This value is transferred to the MSI-X Table Offset
+    * field. Set to 0 if MSI-X is not enabled.; EP=0x0001; RP=0x0000
 */
-#undef PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR_DEFVAL 
-#undef PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR_SHIFT 
-#undef PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR_MASK 
-#define PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR_DEFVAL     0x00008000
-#define PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR_SHIFT      0
-#define PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR_MASK       0x00000007U
+#undef PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET_SHIFT 
+#undef PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET_MASK 
+#define PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET_DEFVAL  
+#define PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET_SHIFT   0
+#define PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET_MASK    0x0000FFFFU
+
+/*
+* MSI-X Table Offset. This value is transferred to the MSI-X Table Offset
+    * field. Set to 0 if MSI-X is not enabled.; EP=0x0000; RP=0x0000
+*/
+#undef PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET_SHIFT 
+#undef PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET_MASK 
+#define PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET_DEFVAL  
+#define PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET_SHIFT   0
+#define PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET_MASK    0x00001FFFU
+
+/*
+* MSI-X Pending Bit Array Offset This value is transferred to the MSI-X PB
+    * A Offset field. Set to 0 if MSI-X is not enabled.; EP=0x0001; RP=0x0000
+*/
+#undef PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET_SHIFT 
+#undef PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET_MASK 
+#define PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET_DEFVAL    
+#define PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET_SHIFT     0
+#define PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET_MASK      0x0000FFFFU
+
+/*
+* MSI-X Pending Bit Array Offset This value is transferred to the MSI-X PB
+    * A Offset field. Set to 0 if MSI-X is not enabled.; EP=0x1000; RP=0x0000
+*/
+#undef PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET_DEFVAL 
+#undef PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET_SHIFT 
+#undef PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET_MASK 
+#define PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET_DEFVAL    0x00008000
+#define PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET_SHIFT     3
+#define PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET_MASK      0x0000FFF8U
 
 /*
 * DT837748 Enable
@@ -36756,6 +36926,26 @@
 #define CRF_APB_RST_FPD_TOP_PCIE_CTRL_RESET_DEFVAL             0x000F9FFE
 #define CRF_APB_RST_FPD_TOP_PCIE_CTRL_RESET_SHIFT              17
 #define CRF_APB_RST_FPD_TOP_PCIE_CTRL_RESET_MASK               0x00020000U
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_SHIFT                  16
+#define GPIO_MASK_DATA_1_LSW_MASK_1_LSW_MASK                   0xFFFF0000U
+
+/*
+* Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+*/
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT 
+#undef GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK 
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_DEFVAL                 0x00000000
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_SHIFT                  0
+#define GPIO_MASK_DATA_1_LSW_DATA_1_LSW_MASK                   0x0000FFFFU
 
 /*
 * Status Read value of PLL Lock
