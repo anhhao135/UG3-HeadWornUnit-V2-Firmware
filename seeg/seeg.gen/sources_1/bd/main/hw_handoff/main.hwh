@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 26 11:27:20 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 26 14:21:29 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:k26c:part0:1.4" DEVICE="xck26" NAME="main" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -6735,7 +6735,7 @@
         <PARAMETER NAME="C_TRACE_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_USE_DEBUG_TEST" VALUE="0"/>
         <PARAMETER NAME="C_SD0_INTERNAL_BUS_WIDTH" VALUE="5"/>
-        <PARAMETER NAME="C_SD1_INTERNAL_BUS_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_NUM_F2P_0_INTR_INPUTS" VALUE="1"/>
         <PARAMETER NAME="C_NUM_F2P_1_INTR_INPUTS" VALUE="1"/>
         <PARAMETER NAME="C_EMIO_GPIO_WIDTH" VALUE="4"/>
@@ -6966,8 +6966,8 @@
         <PARAMETER NAME="SUBPRESET1" VALUE="Custom"/>
         <PARAMETER NAME="SUBPRESET2" VALUE="Custom"/>
         <PARAMETER NAME="PSU_UIPARAM_GENERATE_SUMMARY" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#UART 0#UART 0###PCIE#PMU GPI 5####PMU GPO 3#UART 1#UART 1##SD 1#SD 1#SD 1#SD 1#SD 1#USB0 Reset#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1##"/>
-        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#rxd#txd###reset_n#gpi[5]####gpo[3]#txd#rxd##sdio1_data_out[4]#sdio1_data_out[5]#sdio1_data_out[6]#sdio1_data_out[7]#sdio1_bus_pow#reset#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]##"/>
+        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#UART 0#UART 0###PCIE#PMU GPI 5####PMU GPO 3#UART 1#UART 1######SD 1#USB0 Reset#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1##"/>
+        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#rxd#txd###reset_n#gpi[5]####gpo[3]#txd#rxd######sdio1_bus_pow#reset#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]##"/>
         <PARAMETER NAME="PSU_PERIPHERAL_BOARD_PRESET"/>
         <PARAMETER NAME="PSU__NAND__PERIPHERAL__IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PSU__NAND__PERIPHERAL__ENABLE" VALUE="0"/>
@@ -7043,22 +7043,22 @@
         <PARAMETER NAME="PSU__SD0__CLK_100_SDR_OTAP_DLY" VALUE="0x3"/>
         <PARAMETER NAME="PSU__SD0__CLK_200_SDR_OTAP_DLY" VALUE="0x3"/>
         <PARAMETER NAME="PSU__SD1__PERIPHERAL__ENABLE" VALUE="1"/>
-        <PARAMETER NAME="PSU__SD1__PERIPHERAL__IO" VALUE="MIO 39 .. 51"/>
+        <PARAMETER NAME="PSU__SD1__PERIPHERAL__IO" VALUE="MIO 46 .. 51"/>
         <PARAMETER NAME="PSU__SD1__GRP_CD__ENABLE" VALUE="1"/>
         <PARAMETER NAME="PSU__SD1__GRP_CD__IO" VALUE="MIO 45"/>
         <PARAMETER NAME="PSU__SD1__GRP_POW__ENABLE" VALUE="1"/>
         <PARAMETER NAME="PSU__SD1__GRP_POW__IO" VALUE="MIO 43"/>
         <PARAMETER NAME="PSU__SD1__GRP_WP__ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__SD1__GRP_WP__IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PSU__SD1__SLOT_TYPE" VALUE="SD 3.0"/>
+        <PARAMETER NAME="PSU__SD1__SLOT_TYPE" VALUE="SD 2.0"/>
         <PARAMETER NAME="PSU__SD1__RESET__ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PSU__SD1__DATA_TRANSFER_MODE" VALUE="8Bit"/>
+        <PARAMETER NAME="PSU__SD1__DATA_TRANSFER_MODE" VALUE="4Bit"/>
         <PARAMETER NAME="PSU__SD1__CLK_50_SDR_ITAP_DLY" VALUE="0x15"/>
         <PARAMETER NAME="PSU__SD1__CLK_50_SDR_OTAP_DLY" VALUE="0x5"/>
-        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_ITAP_DLY" VALUE="0x3D"/>
-        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_OTAP_DLY" VALUE="0x4"/>
-        <PARAMETER NAME="PSU__SD1__CLK_100_SDR_OTAP_DLY" VALUE="0x3"/>
-        <PARAMETER NAME="PSU__SD1__CLK_200_SDR_OTAP_DLY" VALUE="0x3"/>
+        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_ITAP_DLY" VALUE="0x0"/>
+        <PARAMETER NAME="PSU__SD1__CLK_50_DDR_OTAP_DLY" VALUE="0x0"/>
+        <PARAMETER NAME="PSU__SD1__CLK_100_SDR_OTAP_DLY" VALUE="0x0"/>
+        <PARAMETER NAME="PSU__SD1__CLK_200_SDR_OTAP_DLY" VALUE="0x0"/>
         <PARAMETER NAME="PSU__DEVICE_TYPE" VALUE="EV"/>
         <PARAMETER NAME="PSU_SMC_CYCLE_T0" VALUE="NA"/>
         <PARAMETER NAME="PSU_SMC_CYCLE_T1" VALUE="NA"/>
@@ -8428,7 +8428,7 @@
         <PARAMETER NAME="PSU__S_AXI_GP4__FREQMHZ" VALUE="10"/>
         <PARAMETER NAME="PSU__S_AXI_GP5__FREQMHZ" VALUE="10"/>
         <PARAMETER NAME="PSU__S_AXI_GP6__FREQMHZ" VALUE="10"/>
-        <PARAMETER NAME="PSU_SD1_INTERNAL_BUS_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="PSU_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="main_zynq_ultra_ps_e_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x800000000"/>

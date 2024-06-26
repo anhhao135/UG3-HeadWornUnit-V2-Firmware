@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Jun 26 11:27:26 2024
-# Process ID: 1050050
+# Start of session at: Wed Jun 26 14:21:35 2024
+# Process ID: 1449948
 # Current directory: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_zynq_ultra_ps_e_0_0_synth_1
 # Command line: vivado -log main_zynq_ultra_ps_e_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_zynq_ultra_ps_e_0_0.tcl
 # Log file: /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_zynq_ultra_ps_e_0_0_synth_1/main_zynq_ultra_ps_e_0_0.vds
@@ -20,10 +20,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1050141
-INFO: [Synth 8-11241] undeclared symbol 'dp_audi_ref_clk', assumed default net type 'wire' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:2499]
+INFO: [Synth 8-7075] Helper process launched with PID 1449984
+INFO: [Synth 8-11241] undeclared symbol 'dp_audi_ref_clk', assumed default net type 'wire' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:2495]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2516.406 ; gain = 259.801 ; free physical = 203 ; free virtual = 53405
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2516.891 ; gain = 260.801 ; free physical = 574 ; free virtual = 56513
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_zynq_ultra_ps_e_0_0' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/synth/main_zynq_ultra_ps_e_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:68]
@@ -31,67 +31,69 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG_PS' [/tools/Xilinx/Vivado/2023.1/
 INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (0#1) [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1754]
 INFO: [Synth 8-6157] synthesizing module 'PS8' [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:111167]
 INFO: [Synth 8-6155] done synthesizing module 'PS8' (0#1) [/tools/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:111167]
-WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO0DATAOUT' does not match port width (8) of module 'PS8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:4684]
-WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO0DATAENA' does not match port width (8) of module 'PS8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:4685]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_BOOTMODE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_CLK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DONEB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMACTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMALERTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBG' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDM' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMRAMRSTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERROROUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERRORSTATUS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_INITB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTMS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MIO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PORB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PROGB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_RCALIBINOUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_SRSTB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ZQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
-WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3874]
+WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO0DATAOUT' does not match port width (8) of module 'PS8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:4680]
+WARNING: [Synth 8-689] width (5) of port connection 'EMIOSDIO0DATAENA' does not match port width (8) of module 'PS8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:4681]
+WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO1DATAOUT' does not match port width (8) of module 'PS8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:4693]
+WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO1DATAENA' does not match port width (8) of module 'PS8' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:4694]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_BOOTMODE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_CLK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DONEB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMACTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMALERTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBG' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDM' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMRAMRSTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERROROUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERRORSTATUS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_INITB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTMS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MIO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PORB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PROGB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_RCALIBINOUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_SRSTB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ZQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
+WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:3870]
 INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:68]
 WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/synth/main_zynq_ultra_ps_e_0_0.v:368]
 WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/synth/main_zynq_ultra_ps_e_0_0.v:368]
@@ -99,11 +101,11 @@ WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps
 WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/synth/main_zynq_ultra_ps_e_0_0.v:368]
 WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/synth/main_zynq_ultra_ps_e_0_0.v:368]
 INFO: [Synth 8-6155] done synthesizing module 'main_zynq_ultra_ps_e_0_0' (0#1) [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/synth/main_zynq_ultra_ps_e_0_0.v:53]
-WARNING: [Synth 8-3848] Net dp_audio_ref_clk in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:373]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_0 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1393]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_1 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1394]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_2 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1395]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_3 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1396]
+WARNING: [Synth 8-3848] Net dp_audio_ref_clk in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:369]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_0 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1389]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_1 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1390]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_2 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1391]
+WARNING: [Synth 8-3848] Net irq_ipi_pl_3 in module/entity zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e does not have driver. [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_0.v:1392]
 WARNING: [Synth 8-7129] Port dp_audio_ref_clk in module zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e is either unconnected or has no load
 WARNING: [Synth 8-7129] Port irq_ipi_pl_0 in module zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e is either unconnected or has no load
 WARNING: [Synth 8-7129] Port irq_ipi_pl_1 in module zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e is either unconnected or has no load
@@ -206,18 +208,18 @@ WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_5_0_zy
 WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2594.312 ; gain = 337.707 ; free physical = 241 ; free virtual = 53177
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2593.797 ; gain = 337.707 ; free physical = 473 ; free virtual = 56414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2597.281 ; gain = 340.676 ; free physical = 230 ; free virtual = 53166
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2596.766 ; gain = 340.676 ; free physical = 473 ; free virtual = 56414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2597.281 ; gain = 340.676 ; free physical = 230 ; free virtual = 53166
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2596.766 ; gain = 340.676 ; free physical = 473 ; free virtual = 56414
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2608.250 ; gain = 0.000 ; free physical = 266 ; free virtual = 53133
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2607.734 ; gain = 0.000 ; free physical = 473 ; free virtual = 56414
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -230,14 +232,14 @@ Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/mai
 Finished Parsing XDC File [/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2675.250 ; gain = 0.000 ; free physical = 258 ; free virtual = 52633
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2671.766 ; gain = 0.000 ; free physical = 462 ; free virtual = 56403
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2675.250 ; gain = 0.000 ; free physical = 258 ; free virtual = 52632
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2671.766 ; gain = 0.000 ; free physical = 462 ; free virtual = 56403
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2675.250 ; gain = 418.645 ; free physical = 303 ; free virtual = 52627
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2671.766 ; gain = 415.676 ; free physical = 474 ; free virtual = 56416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -245,7 +247,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2675.250 ; gain = 418.645 ; free physical = 303 ; free virtual = 52627
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2671.766 ; gain = 415.676 ; free physical = 474 ; free virtual = 56416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -253,10 +255,10 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for inst/PS8_i. (constraint file  /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_zynq_ultra_ps_e_0_0/main_zynq_ultra_ps_e_0_0.xdc, line 25).
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2675.250 ; gain = 418.645 ; free physical = 303 ; free virtual = 52627
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2671.766 ; gain = 415.676 ; free physical = 474 ; free virtual = 56416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2675.250 ; gain = 418.645 ; free physical = 302 ; free virtual = 52627
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2671.766 ; gain = 415.676 ; free physical = 473 ; free virtual = 56415
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -281,25 +283,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2675.250 ; gain = 418.645 ; free physical = 278 ; free virtual = 52603
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2671.766 ; gain = 415.676 ; free physical = 473 ; free virtual = 56415
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4268.719 ; gain = 2012.113 ; free physical = 678 ; free virtual = 50515
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 4268.594 ; gain = 2012.504 ; free physical = 270 ; free virtual = 54971
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4293.727 ; gain = 2037.121 ; free physical = 652 ; free virtual = 50489
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 4293.602 ; gain = 2037.512 ; free physical = 266 ; free virtual = 54946
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4301.734 ; gain = 2045.129 ; free physical = 644 ; free virtual = 50481
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 4301.609 ; gain = 2045.520 ; free physical = 257 ; free virtual = 54937
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -418,37 +420,37 @@ INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[5] to co
 INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[4] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -469,28 +471,28 @@ Report Cell Usage:
 |3     |PS8     |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4312.641 ; gain = 2056.035 ; free physical = 627 ; free virtual = 50472
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.484 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54929
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 570 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 4312.641 ; gain = 1978.066 ; free physical = 626 ; free virtual = 50471
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 4312.648 ; gain = 2056.035 ; free physical = 626 ; free virtual = 50471
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 4313.484 ; gain = 1982.395 ; free physical = 252 ; free virtual = 54928
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4313.492 ; gain = 2057.395 ; free physical = 252 ; free virtual = 54928
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4312.648 ; gain = 0.000 ; free physical = 902 ; free virtual = 50748
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4313.492 ; gain = 0.000 ; free physical = 531 ; free virtual = 55208
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4350.297 ; gain = 0.000 ; free physical = 875 ; free virtual = 50721
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4349.172 ; gain = 0.000 ; free physical = 505 ; free virtual = 55182
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 9d2e4e25
+Synth Design complete | Checksum: 11068070
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 172 Warnings, 0 Critical Warnings and 0 Errors encountered.
+126 Infos, 174 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 4350.297 ; gain = 3015.785 ; free physical = 868 ; free virtual = 50721
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3393.266; main = 3393.266; forked = 328.078
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4350.301; main = 4350.301; forked = 978.648
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 4349.172 ; gain = 3015.176 ; free physical = 504 ; free virtual = 55180
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3692.519; main = 3692.519; forked = 414.798
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4349.176; main = 4349.176; forked = 978.648
 INFO: [Common 17-1381] The checkpoint '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_zynq_ultra_ps_e_0_0_synth_1/main_zynq_ultra_ps_e_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_zynq_ultra_ps_e_0_0, cache-ID = f40b2edb61d4bf93
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_zynq_ultra_ps_e_0_0, cache-ID = 5ff004a7be73cfff
 INFO: [Common 17-1381] The checkpoint '/home/ug3linux/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_zynq_ultra_ps_e_0_0_synth_1/main_zynq_ultra_ps_e_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb main_zynq_ultra_ps_e_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 26 11:27:55 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 26 14:22:03 2024...

@@ -31797,7 +31797,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:36635eb2</spirit:value>
+            <spirit:value>9:81c73b63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31812,11 +31812,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 26 18:27:15 UTC 2024</spirit:value>
+            <spirit:value>Wed Jun 26 21:21:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:36635eb2</spirit:value>
+            <spirit:value>9:81c73b63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31831,11 +31831,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 26 18:27:14 UTC 2024</spirit:value>
+            <spirit:value>Wed Jun 26 21:21:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2049e300</spirit:value>
+            <spirit:value>9:41e2b123</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31849,11 +31849,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 26 18:27:55 UTC 2024</spirit:value>
+            <spirit:value>Wed Jun 26 21:22:03 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2049e300</spirit:value>
+            <spirit:value>9:41e2b123</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31864,7 +31864,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2049e300</spirit:value>
+            <spirit:value>9:41e2b123</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31875,7 +31875,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2049e300</spirit:value>
+            <spirit:value>9:41e2b123</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31891,11 +31891,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 26 18:27:15 UTC 2024</spirit:value>
+            <spirit:value>Wed Jun 26 21:21:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:86de9fc9</spirit:value>
+            <spirit:value>9:8cd88a64</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -31915,11 +31915,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 26 18:27:15 UTC 2024</spirit:value>
+            <spirit:value>Wed Jun 26 21:21:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:86de9fc9</spirit:value>
+            <spirit:value>9:8cd88a64</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -31939,11 +31939,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 26 18:27:15 UTC 2024</spirit:value>
+            <spirit:value>Wed Jun 26 21:21:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2049e300</spirit:value>
+            <spirit:value>9:41e2b123</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -51063,7 +51063,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -51090,7 +51090,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -51114,7 +51114,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -66854,7 +66854,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_SD1_INTERNAL_BUS_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 2.0&quot;)? 4 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 3.0&quot;)? 8 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;eMMC&quot;)? (spirit:decode(id(PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH))) : 5 )))">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 2.0&quot;)? 4 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 3.0&quot;)? 8 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;eMMC&quot;)? (spirit:decode(id(PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH))) : 5 )))">4</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -67604,11 +67604,6 @@
       <spirit:enumeration>MIO 73</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_6f1b2678</spirit:name>
-      <spirit:enumeration>EMIO</spirit:enumeration>
-      <spirit:enumeration>MIO 39 .. 51</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_6f5507b7</spirit:name>
       <spirit:enumeration>None</spirit:enumeration>
     </spirit:choice>
@@ -67636,6 +67631,10 @@
       <spirit:enumeration>1X</spirit:enumeration>
       <spirit:enumeration>2X</spirit:enumeration>
       <spirit:enumeration>4X</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_7460f5b5</spirit:name>
+      <spirit:enumeration>4Bit</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_75476074</spirit:name>
@@ -68328,10 +68327,6 @@
       <spirit:enumeration>MIO 26 .. 51</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_d882b919</spirit:name>
-      <spirit:enumeration>8Bit</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_dacb5057</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>27</spirit:enumeration>
@@ -68472,6 +68467,12 @@
       <spirit:enumeration>128</spirit:enumeration>
       <spirit:enumeration>256</spirit:enumeration>
       <spirit:enumeration>512</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_f16967e3</spirit:name>
+      <spirit:enumeration>EMIO</spirit:enumeration>
+      <spirit:enumeration>MIO 46 .. 51</spirit:enumeration>
+      <spirit:enumeration>MIO 71 .. 76</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_f1c2743c</spirit:name>
@@ -70824,14 +70825,14 @@ FFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD050000;FD05FFFF;1|FPD;DD
     <spirit:parameter>
       <spirit:name>PSU_MIO_TREE_PERIPHERALS</spirit:name>
       <spirit:displayName>PSU MIO TREE PERIPHERALS</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_PERIPHERALS" spirit:choiceRef="choice_list_44945da6">Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#UART 0#UART 0###PCIE#PMU GPI 5####PMU GPO 3#UART 1#UART 1##SD 1#SD 1#SD 1#SD 1#SD 1#USB0 Reset#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#US
-B 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1##</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_PERIPHERALS" spirit:choiceRef="choice_list_44945da6">Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#UART 0#UART 0###PCIE#PMU GPI 5####PMU GPO 3#UART 1#UART 1######SD 1#USB0 Reset#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#
+USB 1#USB 1#USB 1#USB 1##</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU_MIO_TREE_SIGNALS</spirit:name>
       <spirit:displayName>PSU MIO TREE SIGNALS</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_SIGNALS" spirit:choiceRef="choice_list_44945da6">sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#rxd#txd###reset_n#gpi[5]####gpo[3]#txd#rxd##sdio1_data_out[4]#sdio1_data_out[5]#sdio1_data_out[6]#sdio1_data_out[7]#sdio1_bus_pow#reset#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulp
-i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]##</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_SIGNALS" spirit:choiceRef="choice_list_44945da6">sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#rxd#txd###reset_n#gpi[5]####gpo[3]#txd#rxd######sdio1_bus_pow#reset#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_
+tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]##</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU_PERIPHERAL_BOARD_PRESET</spirit:name>
@@ -71441,7 +71442,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU__SD1__PERIPHERAL__IO</spirit:name>
       <spirit:displayName>SD1 IO</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__PERIPHERAL__IO" spirit:choiceRef="choice_list_6f1b2678">MIO 39 .. 51</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__PERIPHERAL__IO" spirit:choiceRef="choice_list_f16967e3">MIO 46 .. 51</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__GRP_CD__ENABLE</spirit:name>
@@ -71483,7 +71484,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU__SD1__SLOT_TYPE</spirit:name>
       <spirit:displayName>SD1 Slot Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__SLOT_TYPE" spirit:choiceRef="choice_list_06ccc409">SD 3.0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__SLOT_TYPE" spirit:choiceRef="choice_list_06ccc409">SD 2.0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__RESET__ENABLE</spirit:name>
@@ -71500,7 +71501,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU__SD1__DATA_TRANSFER_MODE</spirit:name>
       <spirit:displayName>Data Transfer Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__DATA_TRANSFER_MODE" spirit:choiceRef="choice_list_d882b919">8Bit</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__DATA_TRANSFER_MODE" spirit:choiceRef="choice_list_7460f5b5">4Bit</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_50_SDR_ITAP_DLY</spirit:name>
@@ -71512,19 +71513,47 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_50_DDR_ITAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_ITAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x3D</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_ITAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_50_DDR_ITAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_50_DDR_OTAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x4</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_50_DDR_OTAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_100_SDR_OTAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_100_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x3</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_100_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_100_SDR_OTAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_200_SDR_OTAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_200_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x3</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_200_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_200_SDR_OTAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__DEVICE_TYPE</spirit:name>
@@ -81801,7 +81830,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU_SD1_INTERNAL_BUS_WIDTH</spirit:name>
       <spirit:displayName>internal1</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH" spirit:choiceRef="choice_list_fd37a6fb">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH" spirit:choiceRef="choice_list_fd37a6fb">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
