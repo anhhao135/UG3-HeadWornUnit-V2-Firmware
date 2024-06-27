@@ -3,7 +3,6 @@ verilog xil_defaultlib  --include "../../../../../seeg/seeg.gen/sources_1/ip/axi
 "../../../../seeg_tb.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
 "../../../../seeg_tb.ip_user_files/bd/xpm_cdc_1bit/ip/xpm_cdc_1bit_xpm_cdc_0_0/sim/xpm_cdc_1bit_xpm_cdc_0_0.v" \
 "../../../../seeg_tb.ip_user_files/bd/xpm_cdc_1bit/sim/xpm_cdc_1bit.v" \
-"../../../../../seeg/seeg.gen/sources_1/ip/ila_0/sim/ila_0.v" \
 "../../../../../seeg/seeg.gen/sources_1/ip/axis_data_fifo_0_1/sim/axis_data_fifo_0.v" \
 "../../../../../rhd/src/rhd.v" \
 "../../../../../rhd/src/rhd_S00_AXI.v" \

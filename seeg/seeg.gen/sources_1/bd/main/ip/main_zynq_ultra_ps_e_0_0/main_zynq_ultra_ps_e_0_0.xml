@@ -51063,7 +51063,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -51090,7 +51090,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -51114,7 +51114,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH)) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -66854,7 +66854,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_SD1_INTERNAL_BUS_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 2.0&quot;)? 4 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 3.0&quot;)? 8 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;eMMC&quot;)? (spirit:decode(id(PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH))) : 5 )))">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_SD1_INTERNAL_BUS_WIDTH" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 2.0&quot;)? 4 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;SD 3.0&quot;)? 8 : ((spirit:decode(id(PARAM_VALUE.PSU__SD1__SLOT_TYPE))==&quot;eMMC&quot;)? (spirit:decode(id(PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH))) : 5 )))">4</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -66988,10 +66988,6 @@
     <spirit:choice>
       <spirit:name>choice_list_10e3e533</spirit:name>
       <spirit:enumeration>PSS_REF_CLK</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_13349b4c</spirit:name>
-      <spirit:enumeration>INTA</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_13965467</spirit:name>
@@ -67433,13 +67429,6 @@
       <spirit:enumeration>MIO 64 .. 75</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_52d29139</spirit:name>
-      <spirit:enumeration>Bytes</spirit:enumeration>
-      <spirit:enumeration>Kilobytes</spirit:enumeration>
-      <spirit:enumeration>Megabytes</spirit:enumeration>
-      <spirit:enumeration>Gigabytes</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_53dd55b0</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>MIO 33</spirit:enumeration>
@@ -67513,13 +67502,6 @@
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>MIO 9</spirit:enumeration>
       <spirit:enumeration>MIO 26</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_63729757</spirit:name>
-      <spirit:enumeration>&lt;Select></spirit:enumeration>
-      <spirit:enumeration>1 Vector</spirit:enumeration>
-      <spirit:enumeration>2 Vector</spirit:enumeration>
-      <spirit:enumeration>4 Vector</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_646f3f18</spirit:name>
@@ -67622,11 +67604,6 @@
       <spirit:enumeration>MIO 73</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_6f1b2678</spirit:name>
-      <spirit:enumeration>EMIO</spirit:enumeration>
-      <spirit:enumeration>MIO 39 .. 51</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_6f5507b7</spirit:name>
       <spirit:enumeration>None</spirit:enumeration>
     </spirit:choice>
@@ -67654,6 +67631,10 @@
       <spirit:enumeration>1X</spirit:enumeration>
       <spirit:enumeration>2X</spirit:enumeration>
       <spirit:enumeration>4X</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_7460f5b5</spirit:name>
+      <spirit:enumeration>4Bit</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_75476074</spirit:name>
@@ -67806,10 +67787,32 @@
       <spirit:enumeration>MIO 28</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_9bb03d3e</spirit:name>
+      <spirit:enumeration>&lt;Select></spirit:enumeration>
+      <spirit:enumeration>1 Vector</spirit:enumeration>
+      <spirit:enumeration>2 Vector</spirit:enumeration>
+      <spirit:enumeration>4 Vector</spirit:enumeration>
+      <spirit:enumeration>8 Vector</spirit:enumeration>
+      <spirit:enumeration>16 Vector</spirit:enumeration>
+      <spirit:enumeration>32 Vector</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_9fecc7c7</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>150</spirit:enumeration>
       <spirit:enumeration>125</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_a5fef9df</spirit:name>
+      <spirit:enumeration>&lt;Select></spirit:enumeration>
+      <spirit:enumeration>MIO 29</spirit:enumeration>
+      <spirit:enumeration>MIO 30</spirit:enumeration>
+      <spirit:enumeration>MIO 31</spirit:enumeration>
+      <spirit:enumeration>MIO 33</spirit:enumeration>
+      <spirit:enumeration>MIO 34</spirit:enumeration>
+      <spirit:enumeration>MIO 35</spirit:enumeration>
+      <spirit:enumeration>MIO 36</spirit:enumeration>
+      <spirit:enumeration>MIO 37</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_a65f507d</spirit:name>
@@ -68018,17 +68021,6 @@
       <spirit:enumeration>100</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_b6bc4dd4</spirit:name>
-      <spirit:enumeration>MIO 29</spirit:enumeration>
-      <spirit:enumeration>MIO 30</spirit:enumeration>
-      <spirit:enumeration>MIO 31</spirit:enumeration>
-      <spirit:enumeration>MIO 33</spirit:enumeration>
-      <spirit:enumeration>MIO 34</spirit:enumeration>
-      <spirit:enumeration>MIO 35</spirit:enumeration>
-      <spirit:enumeration>MIO 36</spirit:enumeration>
-      <spirit:enumeration>MIO 37</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_b6d2a295</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>Reserve</spirit:enumeration>
@@ -68082,19 +68074,6 @@
       <spirit:enumeration>64bit</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_c15e8c67</spirit:name>
-      <spirit:enumeration>1</spirit:enumeration>
-      <spirit:enumeration>2</spirit:enumeration>
-      <spirit:enumeration>4</spirit:enumeration>
-      <spirit:enumeration>8</spirit:enumeration>
-      <spirit:enumeration>16</spirit:enumeration>
-      <spirit:enumeration>32</spirit:enumeration>
-      <spirit:enumeration>64</spirit:enumeration>
-      <spirit:enumeration>128</spirit:enumeration>
-      <spirit:enumeration>256</spirit:enumeration>
-      <spirit:enumeration>512</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_c1d99ced</spirit:name>
       <spirit:enumeration>cmos</spirit:enumeration>
       <spirit:enumeration>schmitt</spirit:enumeration>
@@ -68127,10 +68106,6 @@
       <spirit:enumeration>CG</spirit:enumeration>
       <spirit:enumeration>EV</spirit:enumeration>
       <spirit:enumeration>RFSOC</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_c3d223d9</spirit:name>
-      <spirit:enumeration>Memory</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_c44e8cf5</spirit:name>
@@ -68307,6 +68282,12 @@
       <spirit:enumeration>S_AXI_ACP_FPD</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_d192e982</spirit:name>
+      <spirit:enumeration>&lt;Select></spirit:enumeration>
+      <spirit:enumeration>Memory</spirit:enumeration>
+      <spirit:enumeration>IO</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_d1ac4c0e</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>Ref Clk0</spirit:enumeration>
@@ -68346,10 +68327,6 @@
       <spirit:enumeration>MIO 26 .. 51</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_d882b919</spirit:name>
-      <spirit:enumeration>8Bit</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_dacb5057</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>27</spirit:enumeration>
@@ -68372,10 +68349,6 @@
       <spirit:name>choice_list_de9aba51</spirit:name>
       <spirit:enumeration>&lt;Select></spirit:enumeration>
       <spirit:enumeration>MIO 27</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_e1752dc2</spirit:name>
-      <spirit:enumeration>BAR 0</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_e2ddd45b</spirit:name>
@@ -68496,6 +68469,12 @@
       <spirit:enumeration>512</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_f16967e3</spirit:name>
+      <spirit:enumeration>EMIO</spirit:enumeration>
+      <spirit:enumeration>MIO 46 .. 51</spirit:enumeration>
+      <spirit:enumeration>MIO 71 .. 76</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_f1c2743c</spirit:name>
       <spirit:enumeration>APB</spirit:enumeration>
       <spirit:enumeration>CPU_R5</spirit:enumeration>
@@ -68516,6 +68495,11 @@
       <spirit:enumeration>MIO 31</spirit:enumeration>
       <spirit:enumeration>MIO 32</spirit:enumeration>
       <spirit:enumeration>MIO 33</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_f34ad768</spirit:name>
+      <spirit:enumeration>&lt;Select></spirit:enumeration>
+      <spirit:enumeration>INTA</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_f477f715</spirit:name>
@@ -69567,29 +69551,29 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__PERIPHERAL__ENDPOINT_ENABLE</spirit:name>
       <spirit:displayName>PCIE ENDPOINT</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENDPOINT_ENABLE" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENDPOINT_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__PERIPHERAL__ROOTPORT_ENABLE</spirit:name>
       <spirit:displayName>PCIE ROOTPORT</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ROOTPORT_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ROOTPORT_ENABLE" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__PERIPHERAL__ENDPOINT_IO</spirit:name>
       <spirit:displayName>PCIE ENDPOINT IO</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENDPOINT_IO" spirit:choiceRef="choice_list_b6bc4dd4">MIO 30</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENDPOINT_IO" spirit:choiceRef="choice_list_a5fef9df">&lt;Select></spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__PERIPHERAL__ENDPOINT_IO">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__PERIPHERAL__ROOTPORT_IO</spirit:name>
       <spirit:displayName>PCIE ROOTPORT IO</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ROOTPORT_IO" spirit:choiceRef="choice_list_aff9de2b">&lt;Select></spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__PERIPHERAL__ROOTPORT_IO">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ROOTPORT_IO" spirit:choiceRef="choice_list_cdbb5c96">MIO 30</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__LANE0__ENABLE</spirit:name>
@@ -69896,7 +69880,7 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__DEVICE_PORT_TYPE</spirit:name>
       <spirit:displayName>Device Port Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__DEVICE_PORT_TYPE" spirit:choiceRef="choice_list_8060dc5c">Endpoint Device</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__DEVICE_PORT_TYPE" spirit:choiceRef="choice_list_8060dc5c">Root Port</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MAXIMUM_LINK_WIDTH</spirit:name>
@@ -69916,37 +69900,72 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_ENABLE</spirit:name>
       <spirit:displayName>BAR0 Enable</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_ENABLE" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_TYPE</spirit:name>
       <spirit:displayName>Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_TYPE" spirit:choiceRef="choice_list_c3d223d9">Memory</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_TYPE" spirit:choiceRef="choice_list_d192e982">&lt;Select></spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR0_TYPE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_SCALE</spirit:name>
       <spirit:displayName>Size Unit</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_SCALE" spirit:choiceRef="choice_list_52d29139">Megabytes</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_SCALE" spirit:choiceRef="choice_list_1b389372">&lt;Select></spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR0_SCALE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_64BIT</spirit:name>
       <spirit:displayName>64 bit</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_64BIT" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR0_64BIT">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_SIZE</spirit:name>
       <spirit:displayName>Size Value</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_SIZE" spirit:choiceRef="choice_list_c15e8c67">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_SIZE" spirit:choiceRef="choice_list_b9ee5112">&lt;Select></spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR0_SIZE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_VAL</spirit:name>
       <spirit:displayName>Value (Hex)</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_VAL" spirit:choiceRef="choice_list_44945da6">0xfff00000</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_VAL" spirit:choiceRef="choice_list_44945da6">0x0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR0_PREFETCHABLE</spirit:name>
       <spirit:displayName>Prefetchable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR0_PREFETCHABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR0_PREFETCHABLE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR1_ENABLE</spirit:name>
@@ -69956,7 +69975,7 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR1_TYPE</spirit:name>
       <spirit:displayName>Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR1_TYPE" spirit:choiceRef="choice_list_84b4d914">&lt;Select></spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR1_TYPE" spirit:choiceRef="choice_list_d192e982">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -70022,6 +70041,13 @@
       <spirit:name>PSU__PCIE__BAR2_ENABLE</spirit:name>
       <spirit:displayName>BAR2 Enable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR2_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR2_ENABLE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR2_TYPE</spirit:name>
@@ -70092,6 +70118,13 @@
       <spirit:name>PSU__PCIE__BAR3_ENABLE</spirit:name>
       <spirit:displayName>BAR3 Enable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR3_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR3_ENABLE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR3_TYPE</spirit:name>
@@ -70162,6 +70195,13 @@
       <spirit:name>PSU__PCIE__BAR4_ENABLE</spirit:name>
       <spirit:displayName>BAR4 Enable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR4_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR4_ENABLE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR4_TYPE</spirit:name>
@@ -70232,6 +70272,13 @@
       <spirit:name>PSU__PCIE__BAR5_ENABLE</spirit:name>
       <spirit:displayName>BAR5 Enable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BAR5_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BAR5_ENABLE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BAR5_TYPE</spirit:name>
@@ -70390,12 +70437,12 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__CLASS_CODE_BASE</spirit:name>
       <spirit:displayName>Base Class</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CLASS_CODE_BASE" spirit:choiceRef="choice_list_44945da6">0x05</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CLASS_CODE_BASE" spirit:choiceRef="choice_list_44945da6">0x06</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__CLASS_CODE_SUB</spirit:name>
       <spirit:displayName>Sub Class</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CLASS_CODE_SUB" spirit:choiceRef="choice_list_44945da6">0x80</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CLASS_CODE_SUB" spirit:choiceRef="choice_list_44945da6">0x4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__CLASS_CODE_INTERFACE</spirit:name>
@@ -70405,120 +70452,57 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__CLASS_CODE_VALUE</spirit:name>
       <spirit:displayName>Class Code Value (Hex)</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CLASS_CODE_VALUE" spirit:choiceRef="choice_list_44945da6">0x58000</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CLASS_CODE_VALUE" spirit:choiceRef="choice_list_44945da6">0x60400</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__AER_CAPABILITY</spirit:name>
       <spirit:displayName>Enable AER Capability</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__AER_CAPABILITY" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__AER_CAPABILITY" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__CORRECTABLE_INT_ERR</spirit:name>
       <spirit:displayName>Correctable Internal Error</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CORRECTABLE_INT_ERR" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__CORRECTABLE_INT_ERR">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__HEADER_LOG_OVERFLOW</spirit:name>
       <spirit:displayName>Header Log Overflow</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__HEADER_LOG_OVERFLOW" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__HEADER_LOG_OVERFLOW">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__RECEIVER_ERR</spirit:name>
       <spirit:displayName>Receiver Error</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__RECEIVER_ERR" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__RECEIVER_ERR">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__SURPRISE_DOWN</spirit:name>
       <spirit:displayName>Surprise Down</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__SURPRISE_DOWN" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__SURPRISE_DOWN">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__FLOW_CONTROL_ERR</spirit:name>
       <spirit:displayName>Flow Control Protocol Error</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__FLOW_CONTROL_ERR" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__FLOW_CONTROL_ERR">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__COMPLTION_TIMEOUT</spirit:name>
       <spirit:displayName>Completion Timeout</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__COMPLTION_TIMEOUT" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__COMPLTION_TIMEOUT">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__COMPLETER_ABORT</spirit:name>
       <spirit:displayName>Completer Abort</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__COMPLETER_ABORT" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__COMPLETER_ABORT">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__RECEIVER_OVERFLOW</spirit:name>
       <spirit:displayName>Receiver Overflow</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__RECEIVER_OVERFLOW" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__RECEIVER_OVERFLOW">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__ECRC_ERR</spirit:name>
       <spirit:displayName>ECRC Error</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__ECRC_ERR" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__ECRC_ERR">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__ACS_VIOLAION</spirit:name>
@@ -70529,133 +70513,56 @@
       <spirit:name>PSU__PCIE__UNCORRECTABL_INT_ERR</spirit:name>
       <spirit:displayName>Uncorrectable Internal Error</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__UNCORRECTABL_INT_ERR" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__UNCORRECTABL_INT_ERR">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MC_BLOCKED_TLP</spirit:name>
       <spirit:displayName>MC Blocked TLP</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MC_BLOCKED_TLP" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__MC_BLOCKED_TLP">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__ATOMICOP_EGRESS_BLOCKED</spirit:name>
       <spirit:displayName>AtomicOp Egress Blocked</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__ATOMICOP_EGRESS_BLOCKED" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__ATOMICOP_EGRESS_BLOCKED">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__TLP_PREFIX_BLOCKED</spirit:name>
       <spirit:displayName>TLP Prefix Blocked</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__TLP_PREFIX_BLOCKED" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__TLP_PREFIX_BLOCKED">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__FLOW_CONTROL_PROTOCOL_ERR</spirit:name>
       <spirit:displayName>Flow Control Protocol Error</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__FLOW_CONTROL_PROTOCOL_ERR" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__FLOW_CONTROL_PROTOCOL_ERR">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__ACS_VIOLATION</spirit:name>
       <spirit:displayName>ACS Violation</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__ACS_VIOLATION" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__ACS_VIOLATION">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MULTIHEADER</spirit:name>
       <spirit:displayName>Multiheader</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MULTIHEADER" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__MULTIHEADER">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__ECRC_CHECK</spirit:name>
       <spirit:displayName>ECRC Check Capable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__ECRC_CHECK" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__ECRC_CHECK">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__ECRC_GEN</spirit:name>
       <spirit:displayName>ECRC Generate Capable</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__ECRC_GEN" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__ECRC_GEN">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__PERM_ROOT_ERR_UPDATE</spirit:name>
       <spirit:displayName>Permit Root Error Update</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__PERM_ROOT_ERR_UPDATE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__PERM_ROOT_ERR_UPDATE">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__CRS_SW_VISIBILITY</spirit:name>
       <spirit:displayName>CRS Software Visibility</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CRS_SW_VISIBILITY" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__CRS_SW_VISIBILITY">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__CRS_SW_VISIBILITY" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__INTX_GENERATION</spirit:name>
@@ -70665,12 +70572,26 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__INTX_PIN</spirit:name>
       <spirit:displayName>Interrupt PIN</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__INTX_PIN" spirit:choiceRef="choice_list_13349b4c">INTA</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__INTX_PIN" spirit:choiceRef="choice_list_f34ad768">&lt;Select></spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__INTX_PIN">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSI_CAPABILITY</spirit:name>
       <spirit:displayName>Enable MSI Capability Structure</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSI_CAPABILITY" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__MSI_CAPABILITY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSI_64BIT_ADDR_CAPABLE</spirit:name>
@@ -70687,7 +70608,7 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSI_MULTIPLE_MSG_CAPABLE</spirit:name>
       <spirit:displayName>Multiple Message Capable</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSI_MULTIPLE_MSG_CAPABLE" spirit:choiceRef="choice_list_63729757">&lt;Select></spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSI_MULTIPLE_MSG_CAPABLE" spirit:choiceRef="choice_list_9bb03d3e">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -70700,6 +70621,13 @@
       <spirit:name>PSU__PCIE__MSIX_CAPABILITY</spirit:name>
       <spirit:displayName>Enable MSIx Capability Structure</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSIX_CAPABILITY" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__MSIX_CAPABILITY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSIX_TABLE_SIZE</spirit:name>
@@ -70728,7 +70656,14 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSIX_BAR_INDICATOR</spirit:name>
       <spirit:displayName>BAR Indicator</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSIX_BAR_INDICATOR" spirit:choiceRef="choice_list_44945da6">BAR 0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSIX_BAR_INDICATOR" spirit:choiceRef="choice_list_44945da6"/>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__MSIX_BAR_INDICATOR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSIX_PBA_OFFSET</spirit:name>
@@ -70745,12 +70680,26 @@
     <spirit:parameter>
       <spirit:name>PSU__PCIE__MSIX_PBA_BAR_INDICATOR</spirit:name>
       <spirit:displayName>PBA BAR Indicator</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSIX_PBA_BAR_INDICATOR" spirit:choiceRef="choice_list_44945da6">BAR 0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__MSIX_PBA_BAR_INDICATOR" spirit:choiceRef="choice_list_44945da6"/>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__MSIX_PBA_BAR_INDICATOR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__PCIE__BRIDGE_BAR_INDICATOR</spirit:name>
       <spirit:displayName>Bridge BAR Indicator</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BRIDGE_BAR_INDICATOR" spirit:choiceRef="choice_list_e1752dc2">BAR 0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PCIE__BRIDGE_BAR_INDICATOR" spirit:choiceRef="choice_list_9434c73e">&lt;Select></spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__PCIE__BRIDGE_BAR_INDICATOR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU_IMPORT_BOARD_PRESET</spirit:name>
@@ -70876,14 +70825,14 @@ FFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD050000;FD05FFFF;1|FPD;DD
     <spirit:parameter>
       <spirit:name>PSU_MIO_TREE_PERIPHERALS</spirit:name>
       <spirit:displayName>PSU MIO TREE PERIPHERALS</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_PERIPHERALS" spirit:choiceRef="choice_list_44945da6">Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#UART 0#UART 0###PCIE#PMU GPI 5####PMU GPO 3#UART 1#UART 1##SD 1#SD 1#SD 1#SD 1#SD 1#USB0 Reset#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#US
-B 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1##</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_PERIPHERALS" spirit:choiceRef="choice_list_44945da6">Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#UART 0#UART 0###PCIE#PMU GPI 5####PMU GPO 3#UART 1#UART 1######SD 1#USB0 Reset#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#
+USB 1#USB 1#USB 1#USB 1##</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU_MIO_TREE_SIGNALS</spirit:name>
       <spirit:displayName>PSU MIO TREE SIGNALS</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_SIGNALS" spirit:choiceRef="choice_list_44945da6">sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#rxd#txd###reset_n#gpi[5]####gpo[3]#txd#rxd##sdio1_data_out[4]#sdio1_data_out[5]#sdio1_data_out[6]#sdio1_data_out[7]#sdio1_bus_pow#reset#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulp
-i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]##</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_TREE_SIGNALS" spirit:choiceRef="choice_list_44945da6">sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#rxd#txd###reset_n#gpi[5]####gpo[3]#txd#rxd######sdio1_bus_pow#reset#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_
+tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]##</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU_PERIPHERAL_BOARD_PRESET</spirit:name>
@@ -71493,7 +71442,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU__SD1__PERIPHERAL__IO</spirit:name>
       <spirit:displayName>SD1 IO</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__PERIPHERAL__IO" spirit:choiceRef="choice_list_6f1b2678">MIO 39 .. 51</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__PERIPHERAL__IO" spirit:choiceRef="choice_list_f16967e3">MIO 46 .. 51</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__GRP_CD__ENABLE</spirit:name>
@@ -71535,7 +71484,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU__SD1__SLOT_TYPE</spirit:name>
       <spirit:displayName>SD1 Slot Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__SLOT_TYPE" spirit:choiceRef="choice_list_06ccc409">SD 3.0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__SLOT_TYPE" spirit:choiceRef="choice_list_06ccc409">SD 2.0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__RESET__ENABLE</spirit:name>
@@ -71552,7 +71501,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU__SD1__DATA_TRANSFER_MODE</spirit:name>
       <spirit:displayName>Data Transfer Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__DATA_TRANSFER_MODE" spirit:choiceRef="choice_list_d882b919">8Bit</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__DATA_TRANSFER_MODE" spirit:choiceRef="choice_list_7460f5b5">4Bit</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_50_SDR_ITAP_DLY</spirit:name>
@@ -71564,19 +71513,47 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_50_DDR_ITAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_ITAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x3D</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_ITAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_50_DDR_ITAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_50_DDR_OTAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x4</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_50_DDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_50_DDR_OTAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_100_SDR_OTAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_100_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x3</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_100_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_100_SDR_OTAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__SD1__CLK_200_SDR_OTAP_DLY</spirit:name>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_200_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x3</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__SD1__CLK_200_SDR_OTAP_DLY" spirit:bitStringLength="8" spirit:rangeType="long">0x0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__SD1__CLK_200_SDR_OTAP_DLY">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__DEVICE_TYPE</spirit:name>
@@ -75055,13 +75032,6 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
       <spirit:name>PSU_MIO_30_DRIVE_STRENGTH</spirit:name>
       <spirit:displayName>PSU MIO 30 DRIVE0</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_30_DRIVE_STRENGTH" spirit:choiceRef="choice_list_dd25daf4">12</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU_MIO_30_DRIVE_STRENGTH">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU_MIO_30_POLARITY</spirit:name>
@@ -75079,23 +75049,23 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
       <spirit:name>PSU_MIO_30_INPUT_TYPE</spirit:name>
       <spirit:displayName>PSU MIO 30 INPUT TYPE</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_30_INPUT_TYPE" spirit:choiceRef="choice_list_c1d99ced">cmos</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>PSU_MIO_30_SLEW</spirit:name>
-      <spirit:displayName>PSU MIO 30 SLEW</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_30_SLEW" spirit:choiceRef="choice_list_86458347">fast</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU_MIO_30_SLEW">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU_MIO_30_INPUT_TYPE">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>PSU_MIO_30_SLEW</spirit:name>
+      <spirit:displayName>PSU MIO 30 SLEW</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_30_SLEW" spirit:choiceRef="choice_list_86458347">fast</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>PSU_MIO_30_DIRECTION</spirit:name>
       <spirit:displayName>PSU MIO 30 DIRECTION</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_30_DIRECTION" spirit:choiceRef="choice_list_95a9da0c">in</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_MIO_30_DIRECTION" spirit:choiceRef="choice_list_95a9da0c">out</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -81860,7 +81830,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
     <spirit:parameter>
       <spirit:name>PSU_SD1_INTERNAL_BUS_WIDTH</spirit:name>
       <spirit:displayName>internal1</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH" spirit:choiceRef="choice_list_fd37a6fb">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU_SD1_INTERNAL_BUS_WIDTH" spirit:choiceRef="choice_list_fd37a6fb">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -82066,6 +82036,7 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_2_SLEW" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_30_DIRECTION" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_30_DRIVE_STRENGTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_30_INPUT_TYPE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_30_POLARITY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_30_SLEW" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU_MIO_31_DIRECTION" xilinx:valueSource="user"/>
@@ -82620,6 +82591,9 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__NUM_F2P0__INTR__INPUTS" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__NUM_F2P1__INTR__INPUTS" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__OVERRIDE__BASIC_CLOCK" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__ACS_VIOLATION" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__AER_CAPABILITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__ATOMICOP_EGRESS_BLOCKED" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__BAR0_64BIT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__BAR0_ENABLE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__BAR0_PREFETCHABLE" xilinx:valueSource="user"/>
@@ -82652,11 +82626,20 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__CLASS_CODE_INTERFACE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__CLASS_CODE_SUB" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__CLASS_CODE_VALUE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__COMPLETER_ABORT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__COMPLTION_TIMEOUT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__CORRECTABLE_INT_ERR" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__CRS_SW_VISIBILITY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__DEVICE_ID" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__DEVICE_PORT_TYPE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__ECRC_CHECK" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__ECRC_ERR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__ECRC_GEN" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__EROM_ENABLE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__EROM_VAL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__FLOW_CONTROL_ERR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__FLOW_CONTROL_PROTOCOL_ERR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__HEADER_LOG_OVERFLOW" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__INTX_GENERATION" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__INTX_PIN" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__LANE0__ENABLE" xilinx:valueSource="user"/>
@@ -82667,18 +82650,33 @@ i_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#u
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__LINK_SPEED" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MAXIMUM_LINK_WIDTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MAX_PAYLOAD_SIZE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MC_BLOCKED_TLP" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSIX_BAR_INDICATOR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSIX_CAPABILITY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSIX_PBA_BAR_INDICATOR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSIX_PBA_OFFSET" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSIX_TABLE_OFFSET" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSIX_TABLE_SIZE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSI_64BIT_ADDR_CAPABLE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MSI_CAPABILITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__MULTIHEADER" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENABLE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENDPOINT_ENABLE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ENDPOINT_IO" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ROOTPORT_ENABLE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__PERIPHERAL__ROOTPORT_IO" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__PERM_ROOT_ERR_UPDATE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__RECEIVER_ERR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__RECEIVER_OVERFLOW" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__REF_CLK_FREQ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__REF_CLK_SEL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__RESET__POLARITY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__REVISION_ID" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__SUBSYSTEM_ID" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__SUBSYSTEM_VENDOR_ID" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__SURPRISE_DOWN" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__TLP_PREFIX_BLOCKED" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__UNCORRECTABL_INT_ERR" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PCIE__VENDOR_ID" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PL_CLK0_BUF" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PL_CLK1_BUF" xilinx:valueSource="user"/>
