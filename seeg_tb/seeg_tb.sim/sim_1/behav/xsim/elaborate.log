@@ -22,7 +22,6 @@ WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:42]
 WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'channel' [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_headstage_slave_full.v:43]
 WARNING: [VRFC 10-5021] port 'irq1' is not connected on this instance [C:/Repos/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:598]
-WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [C:/Repos/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2801]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

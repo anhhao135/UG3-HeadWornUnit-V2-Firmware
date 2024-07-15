@@ -176,7 +176,7 @@ begin
 
   // (7) Set num pulse
   //mtestWDataL = 32'h400; //infinite pulse until stop
-  mtestWDataL = 32'h2; //2 pulses 
+  mtestWDataL = 32'h3; //2 pulses 
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h1C, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h1C, mtestProtectionType, mtestRDataL, mtestBresp);
   #1us;
@@ -270,8 +270,6 @@ begin
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
 
-  /*
-
   #1200us //wait before stopping stimulation midway through
 
   //STOP STIMULATION DURING RECORDING
@@ -293,10 +291,8 @@ begin
   mst_agent_rhs.AXI4LITE_WRITE_BURST(32'h0, mtestProtectionType, mtestWDataL, mtestBresp);
   mst_agent_rhs.AXI4LITE_READ_BURST(32'h0, mtestProtectionType, mtestRDataL, mtestBresp);
 
-  */
 
-
-  #6ms;
+  #2ms;
 
 
   //stop
