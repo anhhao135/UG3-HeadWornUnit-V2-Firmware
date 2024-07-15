@@ -195,8 +195,8 @@ module rhs
     wire [10:0]     charge_recov_off_time; // time after D2 for recovery to stop
     reg             charge_recov_mode;
     
-    assign charge_recov_on_time = 4; //default 4 * 29.1 = 116.4us
-    assign charge_recov_off_time = 18; //default 18 * 29.1 = 523.8us
+    assign charge_recov_on_time = 2;
+    assign charge_recov_off_time = 5;
 
     // [registers related to stim] RHS2116 registers are 16 bit 
     reg [15:0] stim_on;
@@ -2794,7 +2794,8 @@ module command_selector_stim (
 			15:      MOSI_cmd <= { 1'b0, 2'b00, 2'b01, DSP_settle, 4'b0000, channel, 16'h0000 };
 			16:		 MOSI_cmd <= stim_en ? { 2'b10, 2'b00, 4'b0000, stim_on_register, stim_on_cmd  }            : ZCheck_cmd_1; // turn stim on/off
 			17:		 MOSI_cmd <= stim_en ? { 2'b10, 2'b00, 4'b0000, stim_pol_register, stim_pol_cmd }           : ZCheck_cmd_2; // set stim polarity , 1 is pos, 0 is neg
-			18:		 MOSI_cmd <= { 2'b11, 2'b00, 4'b0000, compliance_register, 16'h0000 }; //            : read_rom255_cmd;
+            18:		 MOSI_cmd <= !stim_en ? { 2'b10, 2'b00, 4'b0000, stim_on_register, 0} : read_rom255_cmd; // when stim_en is low, always turn off the stimulators; else just do dummy command
+			//18:		 MOSI_cmd <= { 2'b11, 2'b00, 4'b0000, compliance_register, 16'h0000 }; //            : read_rom255_cmd;
 			19:		 MOSI_cmd <= stim_en ? { 2'b10, 2'b11, 4'b0000, charge_recov_register, charge_recov_cmd }   : read_rom255_cmd; // set charge recovery, trigger U flag
 			default: MOSI_cmd <= 32'b0;
 			endcase
