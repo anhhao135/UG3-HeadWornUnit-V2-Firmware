@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rhd_rhs_tb_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="rhd_rhs_tb_wrapper_tb" />
+            <top_module name="std" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5.131048 us"></ZoomStartTime>
+      <ZoomEndTime time="4,750.131049 us"></ZoomEndTime>
+      <Cursor1Time time="3,730.131048 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="225"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="54" />
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_ACLK" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_ACLK</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_ACLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/M_AXIS_ARESETN" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_ARESETN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhs_fifo_pass_out" type="logic">
+      <obj_property name="ElementShortName">rhs_fifo_pass_out</obj_property>
+      <obj_property name="ObjectShortName">rhs_fifo_pass_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhs_channel16_flag" type="logic">
+      <obj_property name="ElementShortName">rhs_channel16_flag</obj_property>
+      <obj_property name="ObjectShortName">rhs_channel16_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tvalid" type="logic">
+      <obj_property name="ElementShortName">tvalid</obj_property>
+      <obj_property name="ObjectShortName">tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tready" type="logic">
+      <obj_property name="ElementShortName">tready</obj_property>
+      <obj_property name="ObjectShortName">tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tlast" type="logic">
+      <obj_property name="ElementShortName">tlast</obj_property>
+      <obj_property name="ObjectShortName">tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tlast_reg" type="logic">
+      <obj_property name="ElementShortName">tlast_reg</obj_property>
+      <obj_property name="ObjectShortName">tlast_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tready_rhd" type="logic">
+      <obj_property name="ElementShortName">tready_rhd</obj_property>
+      <obj_property name="ObjectShortName">tready_rhd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/tready_rhs" type="logic">
+      <obj_property name="ElementShortName">tready_rhs</obj_property>
+      <obj_property name="ObjectShortName">tready_rhs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdrhsArbitraterState" type="array">
+      <obj_property name="ElementShortName">rhdrhsArbitraterState[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rhdrhsArbitraterState[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdDataPassCount" type="array">
+      <obj_property name="ElementShortName">rhdDataPassCount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rhdDataPassCount[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhsDataPassCount" type="array">
+      <obj_property name="ElementShortName">rhsDataPassCount[6:0]</obj_property>
+      <obj_property name="ObjectShortName">rhsDataPassCount[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/batchCount" type="array">
+      <obj_property name="ElementShortName">batchCount[15:0]</obj_property>
+      <obj_property name="ObjectShortName">batchCount[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/axis_data_fifo_0_resetn" type="logic">
+      <obj_property name="ElementShortName">axis_data_fifo_0_resetn</obj_property>
+      <obj_property name="ObjectShortName">axis_data_fifo_0_resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhdFifoDone" type="logic">
+      <obj_property name="ElementShortName">rhdFifoDone</obj_property>
+      <obj_property name="ObjectShortName">rhdFifoDone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhsFifoDone" type="logic">
+      <obj_property name="ElementShortName">rhsFifoDone</obj_property>
+      <obj_property name="ObjectShortName">rhsFifoDone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/rhs_record_trigger" type="logic">
+      <obj_property name="ElementShortName">rhs_record_trigger</obj_property>
+      <obj_property name="ObjectShortName">rhs_record_trigger</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider242">
+      <obj_property name="label">SEEG ABOVE, RHD BELOW</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/init_mode" type="logic">
+      <obj_property name="ElementShortName">init_mode</obj_property>
+      <obj_property name="ObjectShortName">init_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/state_cable_delay_finder" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/phase_select" type="array">
+      <obj_property name="ElementShortName">phase_select[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_select[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/phase_select_low" type="array">
+      <obj_property name="ElementShortName">phase_select_low[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_select_low[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/recorder/rhd_S00_AXI/rhd/channel" type="array">
+      <obj_property name="ElementShortName">channel[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider247">
+      <obj_property name="label">RHD ABOVE, RHS BELOW</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tdata" type="array">
+      <obj_property name="ElementShortName">M_AXIS_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tvalid" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tready" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tready</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/M_AXIS_tlast" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_tlast</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/init_en" type="logic">
+      <obj_property name="ElementShortName">init_en</obj_property>
+      <obj_property name="ObjectShortName">init_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/mag_set_en" type="logic">
+      <obj_property name="ElementShortName">mag_set_en</obj_property>
+      <obj_property name="ObjectShortName">mag_set_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_en" type="logic">
+      <obj_property name="ElementShortName">stim_en</obj_property>
+      <obj_property name="ObjectShortName">stim_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/SPI_ONOFF" type="logic">
+      <obj_property name="ElementShortName">SPI_ONOFF</obj_property>
+      <obj_property name="ObjectShortName">SPI_ONOFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/channel_out" type="array">
+      <obj_property name="ElementShortName">channel_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_out[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/state_cable_delay_finder_out" type="array">
+      <obj_property name="ElementShortName">state_cable_delay_finder_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_cable_delay_finder_out[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/use_manual_cable_delay" type="logic">
+      <obj_property name="ElementShortName">use_manual_cable_delay</obj_property>
+      <obj_property name="ObjectShortName">use_manual_cable_delay</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_counter" type="array">
+      <obj_property name="ElementShortName">stim_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_counter[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/time_counter" type="array">
+      <obj_property name="ElementShortName">time_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">time_counter[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/state_pulse" type="array">
+      <obj_property name="ElementShortName">state_pulse[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_pulse[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/charge_recov" type="array">
+      <obj_property name="ElementShortName">charge_recov[15:0]</obj_property>
+      <obj_property name="ObjectShortName">charge_recov[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/charge_recov_mode" type="logic">
+      <obj_property name="ElementShortName">charge_recov_mode</obj_property>
+      <obj_property name="ObjectShortName">charge_recov_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/phase_select" type="array">
+      <obj_property name="ElementShortName">phase_select[3:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_select[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/flag_stim_done" type="logic">
+      <obj_property name="ElementShortName">flag_stim_done</obj_property>
+      <obj_property name="ObjectShortName">flag_stim_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_on" type="array">
+      <obj_property name="ElementShortName">stim_on[15:0]</obj_property>
+      <obj_property name="ObjectShortName">stim_on[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/stim_en_fallingEdge" type="logic">
+      <obj_property name="ElementShortName">stim_en_fallingEdge</obj_property>
+      <obj_property name="ObjectShortName">stim_en_fallingEdge</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rhd_rhs_tb_wrapper_tb/DUT/rhd_rhs_tb_i/seeg_0/inst/stimulator/rhs_S00_AXI/rhs/MOSI_cmd_16" type="array">
+      <obj_property name="ElementShortName">MOSI_cmd_16[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MOSI_cmd_16[31:0]</obj_property>
+   </wvobject>
+</wave_config>
