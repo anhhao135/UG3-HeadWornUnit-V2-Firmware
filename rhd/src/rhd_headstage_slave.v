@@ -4,105 +4,38 @@ module  rhd_headstage_slave #(parameter STARTING_SEED = 0) (
     input wire clk,
     input wire SCLK,
     output wire MISO,
-    input wire [5:0] channel,
-    input wire init_en,
-    input wire [3:0] state_cable_delay_finder,
-    input wire zcheck_en,
-    input wire [5:0] zcheck_channel //goes from 0 to 63 for each amplifier channel
+    input wire [5:0] channel
 );
 
 
     reg miso_out;
     reg [16:0] counter_0_31;
     reg [16:0] counter_32_63;
-    reg [16:0] counter_zcheck;
     reg [6:0] clk_counter = 0;
     reg [4:0] sclk_counter = 16;
     
     assign MISO = miso_out;
 
-    /*
-    
-    always @(negedge CS) begin
-        //counter <= counter + 1;
+    counter_0_31 <= channel - 2 + STARTING_SEED;
+    counter_32_63 <= channel - 2 + 32 + STARTING_SEED;
+
+    if (CS == 1) begin
         clk_counter <= 1;
         sclk_counter <= 16;
-    end
-
-    */
-
-    always @(posedge clk) begin
-
-        if (init_en) begin
-            case(state_cable_delay_finder)
-                3: begin
-                    counter_0_31 = {8'd0, 8'b01001001}; //I
-                    counter_32_63 = {8'd0, 8'b01001001};
-                end
-                4: begin
-                    counter_0_31 = {8'd0, 8'b01001110}; //N
-                    counter_32_63 = {8'd0, 8'b01001110};
-                end
-                5: begin
-                    counter_0_31 = {8'd0, 8'b01010100}; //T
-                    counter_32_63 = {8'd0, 8'b01010100};
-                end
-                6: begin
-                    counter_0_31 = {8'd0, 8'b01000001}; //A
-                    counter_32_63 = {8'd0, 8'b01000001};
-                end
-                7: begin
-                    counter_0_31 = {8'd0, 8'b01001110}; //N
-                    counter_32_63 = {8'd0, 8'b01001110};
-                end
-                default: begin
-                    counter_0_31 = 0;
-                    counter_32_63 = 0;
-                end
-            endcase
         end
-        else begin
-            counter_0_31 <= channel - 2 + STARTING_SEED;
-            counter_32_63 <= channel - 2 + 32 + STARTING_SEED;
-            counter_zcheck <= (zcheck_channel + STARTING_SEED) * 10; //zcheck loopback will return the active zcheck channel index * 10
-        end
-        
-
-        if (CS == 1) begin
-            clk_counter <= 1;
-            sclk_counter <= 16;
+    else begin
+        clk_counter = clk_counter + 1;
+        if (clk_counter % 2 == 0) begin
+            if (clk_counter % 4 == 0) begin
+                sclk_counter = sclk_counter - 1;
+                miso_out = counter_0_31[sclk_counter];
+                
             end
-        else begin
-            clk_counter = clk_counter + 1;
-            if (!zcheck_en || init_en) begin
-                if (clk_counter % 2 == 0) begin
-                    if (clk_counter % 4 == 0) begin
-                        sclk_counter = sclk_counter - 1;
-                        miso_out = counter_0_31[sclk_counter];
-                        
-                    end
-                    else
-                        miso_out = counter_32_63[sclk_counter];
-                end
-            end
-            else begin
-                if (clk_counter % 2 == 0) begin
-                    if (clk_counter % 4 == 0) begin
-                        sclk_counter = sclk_counter - 1;
-                        if (zcheck_channel <= 31 && (zcheck_channel == (channel - 2)))
-                            miso_out = counter_zcheck[sclk_counter];
-                        else
-                            miso_out = 0;
-                    end
-                    else
-                        if (zcheck_channel >= 32 && ((zcheck_channel - 32) == (channel - 2)))
-                            miso_out = counter_zcheck[sclk_counter];
-                        else
-                            miso_out = 0;
-                end
-            end
+            else
+                miso_out = counter_32_63[sclk_counter];
         end
     end
+
 
 
 endmodule

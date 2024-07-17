@@ -1,738 +1,609 @@
+
 module seeg #
-  (
-    // Users to add parameters here
-    parameter integer WIDTH_OUT = 128,
-    parameter integer MAX_PACKET_NBIT = 16, 
-
-
-    // User parameters ends
-    // Do not modify the parameters beyond this line
-    // Parameters of Axi Slave Bus Interface S00_AXI
-    parameter integer C_S00_AXI_RHD_DATA_WIDTH	= 32,
-    parameter integer C_S00_AXI_RHD_ADDR_WIDTH	= 5,
-    parameter integer C_S00_AXI_RHS_DATA_WIDTH	= 32,
-    parameter integer C_S00_AXI_RHS_ADDR_WIDTH	= 5
-  )
-  (
-    //! @virtualbus S00_AXI_RHD @dir in an AXI4-Lite interface to write/read core registers
-    input wire [C_S00_AXI_RHD_ADDR_WIDTH-1 : 0] s00_axi_rhd_awaddr,
-    input wire [2 : 0] s00_axi_rhd_awprot,
-    input wire  s00_axi_rhd_awvalid,
-    output wire  s00_axi_rhd_awready,
-    input wire [C_S00_AXI_RHD_DATA_WIDTH-1 : 0] s00_axi_rhd_wdata,
-    input wire [(C_S00_AXI_RHD_DATA_WIDTH/8)-1 : 0] s00_axi_rhd_wstrb,
-    input wire  s00_axi_rhd_wvalid,
-    output wire  s00_axi_rhd_wready,
-    output wire [1 : 0] s00_axi_rhd_bresp,
-    output wire  s00_axi_rhd_bvalid,
-    input wire  s00_axi_rhd_bready,
-    input wire [C_S00_AXI_RHD_ADDR_WIDTH-1 : 0] s00_axi_rhd_araddr,
-    input wire [2 : 0] s00_axi_rhd_arprot,
-    input wire  s00_axi_rhd_arvalid,
-    output wire  s00_axi_rhd_arready,
-    output wire [C_S00_AXI_RHD_DATA_WIDTH-1 : 0] s00_axi_rhd_rdata,
-    output wire [1 : 0] s00_axi_rhd_rresp,
-    output wire  s00_axi_rhd_rvalid,
-    input wire  s00_axi_rhd_rready,
-    //! @end
-
-
-
-    //! @virtualbus S00_AXI_RHS @dir in an AXI4-Lite interface to write/read core registers
-    input wire [C_S00_AXI_RHS_ADDR_WIDTH-1 : 0] s00_axi_rhs_awaddr,
-    input wire [2 : 0] s00_axi_rhs_awprot,
-    input wire  s00_axi_rhs_awvalid,
-    output wire  s00_axi_rhs_awready,
-    input wire [C_S00_AXI_RHS_DATA_WIDTH-1 : 0] s00_axi_rhs_wdata,
-    input wire [(C_S00_AXI_RHS_DATA_WIDTH/8)-1 : 0] s00_axi_rhs_wstrb,
-    input wire  s00_axi_rhs_wvalid,
-    output wire  s00_axi_rhs_wready,
-    output wire [1 : 0] s00_axi_rhs_bresp,
-    output wire  s00_axi_rhs_bvalid,
-    input wire  s00_axi_rhs_bready,
-    input wire [C_S00_AXI_RHS_ADDR_WIDTH-1 : 0] s00_axi_rhs_araddr,
-    input wire [2 : 0] s00_axi_rhs_arprot,
-    input wire  s00_axi_rhs_arvalid,
-    output wire  s00_axi_rhs_arready,
-    output wire [C_S00_AXI_RHS_DATA_WIDTH-1 : 0] s00_axi_rhs_rdata,
-    output wire [1 : 0] s00_axi_rhs_rresp,
-    output wire  s00_axi_rhs_rvalid,
-    input wire  s00_axi_rhs_rready,
-    //! @end
-
-
-    /*
-
-
-
-    //! @virtualbus M_AXIS_RHD @dir out an AXI-Stream Master interface to send the burst data
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-		output wire [63:0] M_AXIS_RHD_tdata,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
-		output wire		     M_AXIS_RHD_tvalid,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
-		input wire		     M_AXIS_RHD_tready,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-		output wire		     M_AXIS_RHD_tlast,
-    //! @end
-
-
-
-    //! @virtualbus M_AXIS_RHS @dir out an AXI-Stream Master interface to send the burst data
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-		output wire [63:0] M_AXIS_RHS_tdata,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
-		output wire		     M_AXIS_RHS_tvalid,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
-		input wire		     M_AXIS_RHS_tready,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-		output wire		     M_AXIS_RHS_tlast,
-    //! @end
-
-    */
-
-    //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-		output wire [63:0] M_AXIS_tdata,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
-		output wire		     M_AXIS_tvalid,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
-		input wire		     M_AXIS_tready,
-    (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-		output wire		     M_AXIS_tlast,
-    //! @end
-
-
-
-	// Users to add ports here
-
-
-    //clocks
-
-    input wire s00_axi_rhd_aclk,
-    input wire s00_axi_rhs_aclk,
-    input wire M_AXIS_ACLK,
-
-    //resets
-
-    input wire s00_axi_rhd_aresetn,
-    input wire s00_axi_rhs_aresetn,
-    input wire M_AXIS_ARESETN,
-
-
-    //RHD data
-
-    output wire RHD_CS,
-    output wire RHD_MOSI,
-    output wire RHD_SCLK,
-
-    input wire RHD_MISO1_A,
-    input wire RHD_MISO2_A,
-
-    input wire RHD_MISO1_B,
-    input wire RHD_MISO2_B,
-
-    input wire RHD_MISO1_C,
-    input wire RHD_MISO2_C,
-
-    input wire RHD_MISO1_D,
-    input wire RHD_MISO2_D,
-
-    input wire RHD_MISO1_E,
-    input wire RHD_MISO2_E,
-
-    input wire RHD_MISO1_F,
-    input wire RHD_MISO2_F,
-
-    input wire RHD_MISO1_G,
-    input wire RHD_MISO2_G,
-
-    input wire RHD_MISO1_H,
-    input wire RHD_MISO2_H,
-
-    input wire RHD_MISO1_I_P,
-    input wire RHD_MISO1_I_N,
-    input wire RHD_MISO2_I_P,
-    input wire RHD_MISO2_I_N,
-
-    input wire RHD_MISO1_J_P,
-    input wire RHD_MISO1_J_N,
-    input wire RHD_MISO2_J_P,
-    input wire RHD_MISO2_J_N,
-
-    input wire RHD_MISO1_K_P,
-    input wire RHD_MISO1_K_N,
-    input wire RHD_MISO2_K_P,
-    input wire RHD_MISO2_K_N,
-    
-    input wire RHD_MISO1_L_P,
-    input wire RHD_MISO1_L_N,
-    input wire RHD_MISO2_L_P,
-    input wire RHD_MISO2_L_N,
-
-    input wire RHD_MISO1_M_P,
-    input wire RHD_MISO1_M_N,
-    input wire RHD_MISO2_M_P,
-    input wire RHD_MISO2_M_N,
-
-    input wire RHD_MISO1_N_P,
-    input wire RHD_MISO1_N_N,
-    input wire RHD_MISO2_N_P,
-    input wire RHD_MISO2_N_N,
-
-    input wire RHD_MISO1_O_P,
-    input wire RHD_MISO1_O_N,
-    input wire RHD_MISO2_O_P,
-    input wire RHD_MISO2_O_N,
-
-    input wire RHD_MISO1_P_P,
-    input wire RHD_MISO1_P_N,
-    input wire RHD_MISO2_P_P,
-    input wire RHD_MISO2_P_N,
-
-
-    //RHS data
-
-    output wire RHS_CS,
-    output wire RHS_SCLK,
-    output wire RHS_MOSI_A,
-    output wire RHS_MOSI_B,
-    output wire RHS_MOSI_C,
-    output wire RHS_MOSI_D,
-    output wire RHS_MOSI_E,
-    output wire RHS_MOSI_F,
-    output wire RHS_MOSI_G,
-    output wire RHS_MOSI_H,
-
-    output wire RHS_MOSI_I_P,
-    output wire RHS_MOSI_I_N,
-    output wire RHS_MOSI_J_P,
-    output wire RHS_MOSI_J_N,
-    output wire RHS_MOSI_K_P,
-    output wire RHS_MOSI_K_N,
-    output wire RHS_MOSI_L_P,
-    output wire RHS_MOSI_L_N,
-    output wire RHS_MOSI_M_P,
-    output wire RHS_MOSI_M_N,
-    output wire RHS_MOSI_N_P,
-    output wire RHS_MOSI_N_N,
-    output wire RHS_MOSI_O_P,
-    output wire RHS_MOSI_O_N,
-    output wire RHS_MOSI_P_P,
-    output wire RHS_MOSI_P_N,
-
-
-
-    input wire RHS_MISO_A,
-    input wire RHS_MISO_B,
-    input wire RHS_MISO_C,
-    input wire RHS_MISO_D,
-    input wire RHS_MISO_E,
-    input wire RHS_MISO_F,
-    input wire RHS_MISO_G,
-    input wire RHS_MISO_H,
-
-    input wire RHS_MISO_I_P,
-    input wire RHS_MISO_I_N,
-    input wire RHS_MISO_J_P,
-    input wire RHS_MISO_J_N,
-    input wire RHS_MISO_K_P,
-    input wire RHS_MISO_K_N,
-    input wire RHS_MISO_L_P,
-    input wire RHS_MISO_L_N,
-    input wire RHS_MISO_M_P,
-    input wire RHS_MISO_M_N,
-    input wire RHS_MISO_N_P,
-    input wire RHS_MISO_N_N,
-    input wire RHS_MISO_O_P,
-    input wire RHS_MISO_O_N,
-    input wire RHS_MISO_P_P,
-    input wire RHS_MISO_P_N
-  );
-
-    wire FIFO_rstn;
-
-
-    wire [63:0] M_AXIS_RHD_tdata;
-    wire M_AXIS_RHD_tvalid;
-    wire M_AXIS_RHD_tready;
-    wire M_AXIS_RHD_tlast;
-
-    wire [63:0] M_AXIS_RHS_tdata;
-    wire M_AXIS_RHS_tvalid;
-    wire M_AXIS_RHS_tready;
-    wire M_AXIS_RHS_tlast;
-
-
-    wire rhs_fifo_pass_out;
-    wire rhs_channel16_flag;
-
-    reg [63:0] tdata;
-    reg tvalid;
-    wire tready;
-    wire tlast;
-    reg tlast_reg = 0;
-    assign tlast = tlast_reg;
-    reg tready_rhd;
-    reg tready_rhs;
-
-    reg [1:0] rhdrhsArbitraterState = 0; //0 is idle, 1 is passing through rhs, 2 is passing through rhd
-    reg [9:0] rhdDataPassCount = 511;
-    reg [6:0] rhsDataPassCount = 64;
-    reg [15:0] batchCount = 0;
-
-    //assign tlast = M_AXIS_RHD_tlast;
-
-    always @(posedge M_AXIS_ACLK) begin
-      if (!M_AXIS_ARESETN) begin
-        rhdrhsArbitraterState = 0;
-        rhdDataPassCount = 511;
-        rhsDataPassCount = 64;
-        batchCount = 0;
-      end 
-      case(rhdrhsArbitraterState)
-        0: begin
-          tready_rhs <= 0;
-          tready_rhd <= 0;
-          tdata <= 0;
-          tvalid <= 0;
-          tlast_reg <= 0;
-
-          if (bothSystemsDoneRisingEdge) begin
-            rhdrhsArbitraterState <= 1;
-          end
-        end
-        1: begin
-          tready_rhs <= tready;
-          tready_rhd <= 0;
-          tdata <= M_AXIS_RHS_tdata;
-          tvalid <= M_AXIS_RHS_tvalid;
-
-          if (rhsDataPassCount == 0) begin
-            rhdrhsArbitraterState <= 2;
-            rhsDataPassCount <= 64;
-          end
-          else begin
-            if (M_AXIS_RHS_tvalid == 1) begin
-              rhsDataPassCount <= rhsDataPassCount - 1;
-            end
-          end
-        end
-        2: begin
-          tready_rhs <= 0;
-          tready_rhd <= tready;
-          tdata <= M_AXIS_RHD_tdata;
-          tvalid <= M_AXIS_RHD_tvalid;
-          
-          if (rhdDataPassCount == 0) begin
-            if (batchCount == rhdBatchSizeOut_250M - 1) begin
-              tlast_reg <= 1;
-              batchCount <= 0;
-            end
-            else begin
-              batchCount <= batchCount + 1;
-            end
-            rhdrhsArbitraterState <= 0;
-            rhdDataPassCount <= 511;
-          end
-          else begin
-            if (M_AXIS_RHD_tvalid == 1) begin
-              rhdDataPassCount <= rhdDataPassCount - 1;
-            end
-          end
-        end
-      endcase
-    end
-
-
-    assign M_AXIS_RHD_tready = tready_rhd;
-    assign M_AXIS_RHS_tready = tready_rhs;
-
-    wire axis_data_fifo_0_resetn;
-    assign axis_data_fifo_0_resetn = FIFO_rstn && M_AXIS_ARESETN;
-
-    axis_data_fifo_0 axis_data_fifo_0 (
-      .s_axis_aresetn(axis_data_fifo_0_resetn),  // input wire s_axis_aresetn
-      .s_axis_aclk(M_AXIS_ACLK),        // input wire s_axis_aclk
-      .s_axis_tvalid(tvalid),    // input wire s_axis_tvalid 
-      .s_axis_tready(tready),    // output wire s_axis_tready
-      .s_axis_tdata(tdata),      // input wire [63 : 0] s_axis_tdata
-      .s_axis_tlast(tlast),      // input wire s_axis_tlast
-      .m_axis_tvalid(M_AXIS_tvalid),    // output wire m_axis_tvalid
-      .m_axis_tready(M_AXIS_tready),    // input wire m_axis_tready
-      .m_axis_tdata(M_AXIS_tdata),      // output wire [63 : 0] m_axis_tdata
-      .m_axis_tlast(M_AXIS_tlast)      // output wire m_axis_tlast
-    );
-
-    xpm_cdc_array_single #(
-        .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
-        .INIT_SYNC_FF(0),   // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
-        .SIM_ASSERT_CHK(0), // DECIMAL; 0=disable simulation messages, 1=enable simulation messages
-        .SRC_INPUT_REG(1),  // DECIMAL; 0=do not register input, 1=register input
-        .WIDTH(16)           // DECIMAL; range: 1-1024
-    )
-    rhd_batch_size_out_buffer (
-        .dest_out(rhdBatchSizeOut_250M), // WIDTH-bit output: src_in synchronized to the destination clock domain. This
-                                // output is registered.
-
-        .dest_clk(M_AXIS_ACLK), // 1-bit input: Clock signal for the destination clock domain.
-        .src_clk(s00_axi_rhd_aclk),   // 1-bit input: optional; required when SRC_INPUT_REG = 1
-        .src_in(rhdBatchSizeOut)      // WIDTH-bit input: Input single-bit array to be synchronized to destination clock
-                                // domain. It is assumed that each bit of the array is unrelated to the others. This
-                                // is reflected in the constraints applied to this macro. To transfer a binary value
-                                // losslessly across the two clock domains, use the XPM_CDC_GRAY macro instead.
-
-    );
-
-    wire RHD_MISO1_I;
-    wire RHD_MISO2_I;
-
-    wire RHD_MISO1_J;
-    wire RHD_MISO2_J;
-
-    wire RHD_MISO1_K;
-    wire RHD_MISO2_K;
-
-    wire RHD_MISO1_L;
-    wire RHD_MISO2_L;
-
-    wire RHD_MISO1_M;
-    wire RHD_MISO2_M;
-
-    wire RHD_MISO1_N;
-    wire RHD_MISO2_N;
-
-    wire RHD_MISO1_O;
-    wire RHD_MISO2_O;
-
-    wire RHD_MISO1_P;
-    wire RHD_MISO2_P;
-
-    wire RHD_RHS_Sample_Ready;
-
-    wire [15:0] rhdBatchSizeOut;
-    wire [15:0] rhdBatchSizeOut_250M;
-
-    assign RHD_RHS_Sample_Ready = (rhd_channel == 34) && rhs_channel16_flag;
-
-    wire [5:0] rhd_channel;
-
-    wire rhs_record_trigger;
-
-    wire rhdFifoDone;
-    wire rhsFifoDone;
-    wire rhdTriggerNextSample_n;
-    wire rhsTriggerNextSample_n;
-
-
-    reg triggerNextSampleState = 0;
-    reg triggerNextSample_n = 1;
-
-
-    wire bothSystemsDone;
-    assign bothSystemsDone = rhdFifoDone && rhsFifoDone;
-    reg bothSystemsDoneRisingEdge = 0;
-    reg bothSystemsDoneRisingEdgeTracker = 0;
-
-
-    always @(posedge M_AXIS_ACLK) begin
-      if (!bothSystemsDoneRisingEdgeTracker && bothSystemsDone)
-        bothSystemsDoneRisingEdge = 1;
-      else 
-        bothSystemsDoneRisingEdge = 0;
-      bothSystemsDoneRisingEdgeTracker = bothSystemsDone;
-    end
-
-    always @(posedge M_AXIS_ACLK) begin
-      case(triggerNextSampleState)
-        0: begin
-          if (rhdFifoDone && rhsFifoDone) begin
-            triggerNextSample_n <= 0;
-            triggerNextSampleState <= 1;
-          end
-        end
-        1: begin
-          if ((!rhdFifoDone && !rhsFifoDone)) begin
-            triggerNextSample_n <= 1;
-            triggerNextSampleState <= 0;
-          end
-        end
-      endcase
-    end
-
-    assign rhdTriggerNextSample_n = triggerNextSample_n;
-    assign rhsTriggerNextSample_n = triggerNextSample_n;
-
-    assign rhs_record_trigger = rhd_channel ==  1? 1 : 0;
-
-    rhd_diff_to_single rhdDiffToSingle(
-    .MISO1_I_P(RHD_MISO1_I_P),
-    .MISO1_I_N(RHD_MISO1_I_N),
-    .MISO1_I(RHD_MISO1_I),
-    .MISO2_I_P(RHD_MISO2_I_P),
-    .MISO2_I_N(RHD_MISO2_I_N),
-    .MISO2_I(RHD_MISO2_I),
-
-    .MISO1_J_P(RHD_MISO1_J_P),
-    .MISO1_J_N(RHD_MISO1_J_N),
-    .MISO1_J(RHD_MISO1_J),
-    .MISO2_J_P(RHD_MISO2_J_P),
-    .MISO2_J_N(RHD_MISO2_J_N),
-    .MISO2_J(RHD_MISO2_J),
-
-    .MISO1_K_P(RHD_MISO1_K_P),
-    .MISO1_K_N(RHD_MISO1_K_N),
-    .MISO1_K(RHD_MISO1_K),
-    .MISO2_K_P(RHD_MISO2_K_P),
-    .MISO2_K_N(RHD_MISO2_K_N),
-    .MISO2_K(RHD_MISO2_K),
-
-    .MISO1_L_P(RHD_MISO1_L_P),
-    .MISO1_L_N(RHD_MISO1_L_N),
-    .MISO1_L(RHD_MISO1_L),
-    .MISO2_L_P(RHD_MISO2_L_P),
-    .MISO2_L_N(RHD_MISO2_L_N),
-    .MISO2_L(RHD_MISO2_L),
-
-    .MISO1_M_P(RHD_MISO1_M_P),
-    .MISO1_M_N(RHD_MISO1_M_N),
-    .MISO1_M(RHD_MISO1_M),
-    .MISO2_M_P(RHD_MISO2_M_P),
-    .MISO2_M_N(RHD_MISO2_M_N),
-    .MISO2_M(RHD_MISO2_M),
-
-    .MISO1_N_P(RHD_MISO1_N_P),
-    .MISO1_N_N(RHD_MISO1_N_N),
-    .MISO1_N(RHD_MISO1_N),
-    .MISO2_N_P(RHD_MISO2_N_P),
-    .MISO2_N_N(RHD_MISO2_N_N),
-    .MISO2_N(RHD_MISO2_N),
-
-    .MISO1_O_P(RHD_MISO1_O_P),
-    .MISO1_O_N(RHD_MISO1_O_N),
-    .MISO1_O(RHD_MISO1_O),
-    .MISO2_O_P(RHD_MISO2_O_P),
-    .MISO2_O_N(RHD_MISO2_O_N),
-    .MISO2_O(RHD_MISO2_O),
-
-    .MISO1_P_P(RHD_MISO1_P_P),
-    .MISO1_P_N(RHD_MISO1_P_N),
-    .MISO1_P(RHD_MISO1_P),
-    .MISO2_P_P(RHD_MISO2_P_P),
-    .MISO2_P_N(RHD_MISO2_P_N),
-    .MISO2_P(RHD_MISO2_P)
-    );
-
-    rhs_single_diff_converter rhsSingleDiffConverter(
-    .MISO_I_P(RHS_MISO_I_P),
-    .MISO_I_N(RHS_MISO_I_N),
-    .MISO_I(RHS_MISO_I),
-
-    .MISO_J_P(RHS_MISO_J_P),
-    .MISO_J_N(RHS_MISO_J_N),
-    .MISO_J(RHS_MISO_J),
-
-    .MISO_K_P(RHS_MISO_K_P),
-    .MISO_K_N(RHS_MISO_K_N),
-    .MISO_K(RHS_MISO_K),
-
-    .MISO_L_P(RHS_MISO_L_P),
-    .MISO_L_N(RHS_MISO_L_N),
-    .MISO_L(RHS_MISO_L),
-
-    .MISO_M_P(RHS_MISO_M_P),
-    .MISO_M_N(RHS_MISO_M_N),
-    .MISO_M(RHS_MISO_M),
-
-    .MISO_N_P(RHS_MISO_N_P),
-    .MISO_N_N(RHS_MISO_N_N),
-    .MISO_N(RHS_MISO_N),
-
-    .MISO_O_P(RHS_MISO_O_P),
-    .MISO_O_N(RHS_MISO_O_N),
-    .MISO_O(RHS_MISO_O),
-
-    .MISO_P_P(RHS_MISO_P_P),
-    .MISO_P_N(RHS_MISO_P_N),
-    .MISO_P(RHS_MISO_P),
-
-
-
-
-
-    .MOSI_I_P(RHS_MOSI_I_P),
-    .MOSI_I_N(RHS_MOSI_I_N),
-    .MOSI_I(RHS_MOSI_I),
-
-    .MOSI_J_P(RHS_MOSI_J_P),
-    .MOSI_J_N(RHS_MOSI_J_N),
-    .MOSI_J(RHS_MOSI_J),
-
-    .MOSI_K_P(RHS_MOSI_K_P),
-    .MOSI_K_N(RHS_MOSI_K_N),
-    .MOSI_K(RHS_MOSI_K),
-
-    .MOSI_L_P(RHS_MOSI_L_P),
-    .MOSI_L_N(RHS_MOSI_L_N),
-    .MOSI_L(RHS_MOSI_L),
-
-    .MOSI_M_P(RHS_MOSI_M_P),
-    .MOSI_M_N(RHS_MOSI_M_N),
-    .MOSI_M(RHS_MOSI_M),
-
-    .MOSI_N_P(RHS_MOSI_N_P),
-    .MOSI_N_N(RHS_MOSI_N_N),
-    .MOSI_N(RHS_MOSI_N),
-
-    .MOSI_O_P(RHS_MOSI_O_P),
-    .MOSI_O_N(RHS_MOSI_O_N),
-    .MOSI_O(RHS_MOSI_O),
-
-    .MOSI_P_P(RHS_MOSI_P_P),
-    .MOSI_P_N(RHS_MOSI_P_N),
-    .MOSI_P(RHS_MOSI_P)
-
-    
-    );
-
-    rhd_axi recorder (
-      .s00_axi_awaddr(s00_axi_rhd_awaddr),
-      .s00_axi_awprot(s00_axi_rhd_awprot),
-      .s00_axi_awvalid(s00_axi_rhd_awvalid),
-      .s00_axi_awready(s00_axi_rhd_awready),
-      .s00_axi_wdata(s00_axi_rhd_wdata),
-      .s00_axi_wstrb(s00_axi_rhd_wstrb),
-      .s00_axi_wvalid(s00_axi_rhd_wvalid),
-      .s00_axi_wready(s00_axi_rhd_wready),
-      .s00_axi_bresp(s00_axi_rhd_bresp),
-      .s00_axi_bvalid(s00_axi_rhd_bvalid),
-      .s00_axi_bready(s00_axi_rhd_bready),
-      .s00_axi_araddr(s00_axi_rhd_araddr),
-      .s00_axi_arprot(s00_axi_rhd_arprot),
-      .s00_axi_arvalid(s00_axi_rhd_arvalid),
-      .s00_axi_arready(s00_axi_rhd_arready),
-      .s00_axi_rdata(s00_axi_rhd_rdata),
-      .s00_axi_rresp(s00_axi_rhd_rresp),
-      .s00_axi_rvalid(s00_axi_rhd_rvalid),
-      .s00_axi_rready(s00_axi_rhd_rready),
-      .CS_b(RHD_CS),
-      .SCLK(RHD_SCLK),
-      .MOSI1(RHD_MOSI),
-      .MISO1_A(RHD_MISO1_A),
-      .MISO2_A(RHD_MISO2_A),
-      .MISO1_B(RHD_MISO1_B),
-      .MISO2_B(RHD_MISO2_B),
-      .MISO1_C(RHD_MISO1_C),
-      .MISO2_C(RHD_MISO2_C),
-      .MISO1_D(RHD_MISO1_D),
-      .MISO2_D(RHD_MISO2_D),
-      .MISO1_E(RHD_MISO1_E),
-      .MISO2_E(RHD_MISO2_E),
-      .MISO1_F(RHD_MISO1_F),
-      .MISO2_F(RHD_MISO2_F),
-      .MISO1_G(RHD_MISO1_G),
-      .MISO2_G(RHD_MISO2_G),
-      .MISO1_H(RHD_MISO1_H),
-      .MISO2_H(RHD_MISO2_H),
-      .MISO1_I(RHD_MISO1_I),
-      .MISO2_I(RHD_MISO2_I),
-      .MISO1_J(RHD_MISO1_J),
-      .MISO2_J(RHD_MISO2_J),
-      .MISO1_K(RHD_MISO1_K),
-      .MISO2_K(RHD_MISO2_K),
-      .MISO1_L(RHD_MISO1_L),
-      .MISO2_L(RHD_MISO2_L),
-      .MISO1_M(RHD_MISO1_M),
-      .MISO2_M(RHD_MISO2_M),
-      .MISO1_N(RHD_MISO1_N),
-      .MISO2_N(RHD_MISO2_N),
-      .MISO1_O(RHD_MISO1_O),
-      .MISO2_O(RHD_MISO2_O),
-      .MISO1_P(RHD_MISO1_P),
-      .MISO2_P(RHD_MISO2_P),
-      .s00_axi_aclk(s00_axi_rhd_aclk),
-      .s00_axi_aresetn(s00_axi_rhd_aresetn),
-      .M_AXIS_ACLK(M_AXIS_ACLK),
-      .M_AXIS_ARESETN(M_AXIS_ARESETN),
-      .M_AXIS_tdata(M_AXIS_RHD_tdata),
-      .M_AXIS_tvalid(M_AXIS_RHD_tvalid),
-      .M_AXIS_tready(M_AXIS_RHD_tready),
-      .M_AXIS_tlast(M_AXIS_RHD_tlast),
-      .channelOut250M(rhd_channel),
-      .FIFO_rstn(FIFO_rstn),
-      .fifoDoneLatchOut_250M(rhdFifoDone),
-      .fifoDoneLatchResetnIn_250M(rhdTriggerNextSample_n),
-      .batchSizeOut(rhdBatchSizeOut)
-    );
-
-    rhs_axi stimulator (
-      .s00_axi_awaddr(s00_axi_rhs_awaddr),
-      .s00_axi_awprot(s00_axi_rhs_awprot),
-      .s00_axi_awvalid(s00_axi_rhs_awvalid),
-      .s00_axi_awready(s00_axi_rhs_awready),
-      .s00_axi_wdata(s00_axi_rhs_wdata),
-      .s00_axi_wstrb(s00_axi_rhs_wstrb),
-      .s00_axi_wvalid(s00_axi_rhs_wvalid),
-      .s00_axi_wready(s00_axi_rhs_wready),
-      .s00_axi_bresp(s00_axi_rhs_bresp),
-      .s00_axi_bvalid(s00_axi_rhs_bvalid),
-      .s00_axi_bready(s00_axi_rhs_bready),
-      .s00_axi_araddr(s00_axi_rhs_araddr),
-      .s00_axi_arprot(s00_axi_rhs_arprot),
-      .s00_axi_arvalid(s00_axi_rhs_arvalid),
-      .s00_axi_arready(s00_axi_rhs_arready),
-      .s00_axi_rdata(s00_axi_rhs_rdata),
-      .s00_axi_rresp(s00_axi_rhs_rresp),
-      .s00_axi_rvalid(s00_axi_rhs_rvalid),
-      .s00_axi_rready(s00_axi_rhs_rready),
-      .CS_b(RHS_CS),
-      .SCLK(RHS_SCLK),
-      .MOSI_A(RHS_MOSI_A),
-      .MOSI_B(RHS_MOSI_B),
-      .MOSI_C(RHS_MOSI_C),
-      .MOSI_D(RHS_MOSI_D),
-      .MOSI_E(RHS_MOSI_E),
-      .MOSI_F(RHS_MOSI_F),
-      .MOSI_G(RHS_MOSI_G),
-      .MOSI_H(RHS_MOSI_H),
-      .MOSI_I(RHS_MOSI_I),
-      .MOSI_J(RHS_MOSI_J),
-      .MOSI_K(RHS_MOSI_K),
-      .MOSI_L(RHS_MOSI_L),
-      .MOSI_M(RHS_MOSI_M),
-      .MOSI_N(RHS_MOSI_N),
-      .MOSI_O(RHS_MOSI_O),
-      .MOSI_P(RHS_MOSI_P),
-      .MISO_A(RHS_MISO_A),
-      .MISO_B(RHS_MISO_B),
-      .MISO_C(RHS_MISO_C),
-      .MISO_D(RHS_MISO_D),
-      .MISO_E(RHS_MISO_E),
-      .MISO_F(RHS_MISO_F),
-      .MISO_G(RHS_MISO_G),
-      .MISO_H(RHS_MISO_H),
-      .MISO_I(RHS_MISO_I),
-      .MISO_J(RHS_MISO_J),
-      .MISO_K(RHS_MISO_K),
-      .MISO_L(RHS_MISO_L),
-      .MISO_M(RHS_MISO_M),
-      .MISO_N(RHS_MISO_N),
-      .MISO_O(RHS_MISO_O),
-      .MISO_P(RHS_MISO_P),
-      .s00_axi_aclk(s00_axi_rhs_aclk),
-      .s00_axi_aresetn(s00_axi_rhs_aresetn),
-      .M_AXIS_ACLK(M_AXIS_ACLK),
-      .M_AXIS_ARESETN(M_AXIS_ARESETN),
-      .M_AXIS_tdata(M_AXIS_RHS_tdata),
-      .M_AXIS_tvalid(M_AXIS_RHS_tvalid),
-      .M_AXIS_tready(M_AXIS_RHS_tready),
-      .M_AXIS_tlast(M_AXIS_RHS_tlast),
-      .rhs_record_trigger(rhs_record_trigger),
-      .rhs_fifo_pass_out(rhs_fifo_pass_out),
-      .flag_channel16_stream_250M_out(rhs_channel16_flag),
-      .fifoDoneLatchOut_250M(rhsFifoDone),
-      .fifoDoneLatchResetnIn_250M(rhsTriggerNextSample_n)
-    );
-
+(
+	// Width of S_AXI data bus
+	parameter integer C_S_AXI_DATA_WIDTH	= 32,
+	// Width of S_AXI address bus
+	parameter integer C_S_AXI_ADDR_WIDTH	= 5,
+  parameter integer deadbeef = 32'hDEADBEEF
+)
+(
+  //! @virtualbus M_AXIS @dir out an AXI-Stream Master interface to send the burst data
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
+  output wire [63:0] M_AXIS_tdata,
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
+  output wire		     M_AXIS_tvalid,
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
+  input wire		     M_AXIS_tready,
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
+  output wire		     M_AXIS_tlast,
+  //! @end
+	input wire  	   M_AXIS_ACLK,
+	input wire		   M_AXIS_ARESETN,
+
+	// User ports ends
+	// Do not modify the ports beyond this line
+
+	// Global Clock Signal
+	input wire  S_AXI_ACLK,
+	// Global Reset Signal. This Signal is Active LOW
+	input wire  S_AXI_ARESETN,
+	// Write address (issued by master, acceped by Slave)
+	input wire [C_S_AXI_ADDR_WIDTH-1 : 0] S_AXI_AWADDR,
+	// Write channel Protection type. This signal indicates the
+		// privilege and security level of the transaction, and whether
+		// the transaction is a data access or an instruction access.
+	input wire [2 : 0] S_AXI_AWPROT,
+	// Write address valid. This signal indicates that the master signaling
+		// valid write address and control information.
+	input wire  S_AXI_AWVALID,
+	// Write address ready. This signal indicates that the slave is ready
+		// to accept an address and associated control signals.
+	output wire  S_AXI_AWREADY,
+	// Write data (issued by master, acceped by Slave) 
+	input wire [C_S_AXI_DATA_WIDTH-1 : 0] S_AXI_WDATA,
+	// Write strobes. This signal indicates which byte lanes hold
+		// valid data. There is one write strobe bit for each eight
+		// bits of the write data bus.    
+	input wire [(C_S_AXI_DATA_WIDTH/8)-1 : 0] S_AXI_WSTRB,
+	// Write valid. This signal indicates that valid write
+		// data and strobes are available.
+	input wire  S_AXI_WVALID,
+	// Write ready. This signal indicates that the slave
+		// can accept the write data.
+	output wire  S_AXI_WREADY,
+	// Write response. This signal indicates the status
+		// of the write transaction.
+	output wire [1 : 0] S_AXI_BRESP,
+	// Write response valid. This signal indicates that the channel
+		// is signaling a valid write response.
+	output wire  S_AXI_BVALID,
+	// Response ready. This signal indicates that the master
+		// can accept a write response.
+	input wire  S_AXI_BREADY,
+	// Read address (issued by master, acceped by Slave)
+	input wire [C_S_AXI_ADDR_WIDTH-1 : 0] S_AXI_ARADDR,
+	// Protection type. This signal indicates the privilege
+		// and security level of the transaction, and whether the
+		// transaction is a data access or an instruction access.
+	input wire [2 : 0] S_AXI_ARPROT,
+	// Read address valid. This signal indicates that the channel
+		// is signaling valid read address and control information.
+	input wire  S_AXI_ARVALID,
+	// Read address ready. This signal indicates that the slave is
+		// ready to accept an address and associated control signals.
+	output wire  S_AXI_ARREADY,
+	// Read data (issued by slave)
+	output wire [C_S_AXI_DATA_WIDTH-1 : 0] S_AXI_RDATA,
+	// Read response. This signal indicates the status of the
+		// read transfer.
+	output wire [1 : 0] S_AXI_RRESP,
+	// Read valid. This signal indicates that the channel is
+		// signaling the required read data.
+	output wire  S_AXI_RVALID,
+	// Read ready. This signal indicates that the master can
+		// accept the read data and response information.
+	input wire  S_AXI_RREADY
+
+
+
+//RHD data
+
+  output wire RHD_CS,
+  output wire RHD_MOSI,
+  output wire RHD_SCLK,
+
+  input wire RHD_MISO1_A,
+  input wire RHD_MISO2_A,
+
+  input wire RHD_MISO1_B,
+  input wire RHD_MISO2_B,
+
+  input wire RHD_MISO1_C,
+  input wire RHD_MISO2_C,
+
+  input wire RHD_MISO1_D,
+  input wire RHD_MISO2_D,
+
+  input wire RHD_MISO1_E,
+  input wire RHD_MISO2_E,
+
+  input wire RHD_MISO1_F,
+  input wire RHD_MISO2_F,
+
+  input wire RHD_MISO1_G,
+  input wire RHD_MISO2_G,
+
+  input wire RHD_MISO1_H,
+  input wire RHD_MISO2_H,
+
+  input wire RHD_MISO1_I_P,
+  input wire RHD_MISO1_I_N,
+  input wire RHD_MISO2_I_P,
+  input wire RHD_MISO2_I_N,
+
+  input wire RHD_MISO1_J_P,
+  input wire RHD_MISO1_J_N,
+  input wire RHD_MISO2_J_P,
+  input wire RHD_MISO2_J_N,
+
+  input wire RHD_MISO1_K_P,
+  input wire RHD_MISO1_K_N,
+  input wire RHD_MISO2_K_P,
+  input wire RHD_MISO2_K_N,
+  
+  input wire RHD_MISO1_L_P,
+  input wire RHD_MISO1_L_N,
+  input wire RHD_MISO2_L_P,
+  input wire RHD_MISO2_L_N,
+
+  input wire RHD_MISO1_M_P,
+  input wire RHD_MISO1_M_N,
+  input wire RHD_MISO2_M_P,
+  input wire RHD_MISO2_M_N,
+
+  input wire RHD_MISO1_N_P,
+  input wire RHD_MISO1_N_N,
+  input wire RHD_MISO2_N_P,
+  input wire RHD_MISO2_N_N,
+
+  input wire RHD_MISO1_O_P,
+  input wire RHD_MISO1_O_N,
+  input wire RHD_MISO2_O_P,
+  input wire RHD_MISO2_O_N,
+
+  input wire RHD_MISO1_P_P,
+  input wire RHD_MISO1_P_N,
+  input wire RHD_MISO2_P_P,
+  input wire RHD_MISO2_P_N,
+
+);
+
+// AXI4LITE signals
+reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
+reg  	axi_awready;
+reg  	axi_wready;
+reg [1 : 0] 	axi_bresp;
+reg  	axi_bvalid;
+reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
+reg  	axi_arready;
+reg [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
+reg [1 : 0] 	axi_rresp;
+reg  	axi_rvalid;
+
+
+localparam integer ADDR_LSB = 0;
+localparam integer OPT_MEM_ADDR_BITS = 4;
+//----------------------------------------------
+//-- Signals for user logic register space example
+//------------------------------------------------
+//-- Number of Slave Registers 6
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg0;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg1;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg2;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg3;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg4;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg5;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg6;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg7;
+reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg31;
+wire	 slv_reg_rden;
+wire	 slv_reg_wren;
+reg [C_S_AXI_DATA_WIDTH-1:0]	 reg_data_out;
+integer	 byte_index;
+reg	 aw_en;
+
+
+// I/O Connections assignments
+
+assign S_AXI_AWREADY	= axi_awready;
+assign S_AXI_WREADY	= axi_wready;
+assign S_AXI_BRESP	= axi_bresp;
+assign S_AXI_BVALID	= axi_bvalid;
+assign S_AXI_ARREADY	= axi_arready;
+assign S_AXI_RDATA	= axi_rdata;
+assign S_AXI_RRESP	= axi_rresp;
+assign S_AXI_RVALID	= axi_rvalid;
+// Implement axi_awready generation
+// axi_awready is asserted for one S_AXI_ACLK clock cycle when both
+// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
+// de-asserted when reset is low.
+
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_awready <= 1'b0;
+		aw_en <= 1'b1;
+	end 
+	else
+	begin    
+		if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)
+		begin
+			// slave is ready to accept write address when 
+			// there is a valid write address and write data
+			// on the write address and data bus. This design 
+			// expects no outstanding transactions. 
+			axi_awready <= 1'b1;
+			aw_en <= 1'b0;
+		end
+		else if (S_AXI_BREADY && axi_bvalid)
+			begin
+				aw_en <= 1'b1;
+				axi_awready <= 1'b0;
+			end
+		else           
+		begin
+			axi_awready <= 1'b0;
+		end
+	end 
+end       
+
+// Implement axi_awaddr latching
+// This process is used to latch the address when both 
+// S_AXI_AWVALID and S_AXI_WVALID are valid. 
+
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_awaddr <= 0;
+	end 
+	else
+	begin    
+		if (~axi_awready && S_AXI_AWVALID && S_AXI_WVALID && aw_en)
+		begin
+			// Write Address latching 
+			axi_awaddr <= S_AXI_AWADDR;
+		end
+	end 
+end       
+
+// Implement axi_wready generation
+// axi_wready is asserted for one S_AXI_ACLK clock cycle when both
+// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is 
+// de-asserted when reset is low. 
+
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_wready <= 1'b0;
+	end 
+	else
+	begin    
+		if (~axi_wready && S_AXI_WVALID && S_AXI_AWVALID && aw_en )
+		begin
+			// slave is ready to accept write data when 
+			// there is a valid write address and write data
+			// on the write address and data bus. This design 
+			// expects no outstanding transactions. 
+			axi_wready <= 1'b1;
+		end
+		else
+		begin
+			axi_wready <= 1'b0;
+		end
+	end 
+end       
+
+// Implement memory mapped register select and write logic generation
+// The write data is accepted and written to memory mapped registers when
+// axi_awready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted. Write strobes are used to
+// select byte enables of slave registers while writing.
+// These registers are cleared when reset (active low) is applied.
+// Slave register write enable is asserted when valid address and data are available
+// and the slave is ready to accept the write address and write data.
+assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID;
+
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		slv_reg0 <= 0;
+		slv_reg1 <= 0;
+		slv_reg2 <= 0;
+		slv_reg3 <= 0;
+		slv_reg4 <= 0;
+		slv_reg5 <= 0;
+		slv_reg6 <= 0;
+		slv_reg7 <= 0;
+    slv_reg31 <= deadbeef;
+	end 
+	else begin
+	if (slv_reg_wren)
+		begin
+		case ( axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
+			3'h0:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 0
+				slv_reg0[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  
+			3'h1:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 1
+				slv_reg1[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  
+			3'h2:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 2
+				slv_reg2[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  
+			3'h3:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 3
+				slv_reg3[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  
+			3'h4:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 3
+				slv_reg4[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  
+			3'h5:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 3
+				slv_reg5[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  			
+			3'h6:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 3
+				slv_reg6[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  		
+			3'h7:
+			for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+				if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+				// Respective byte enables are asserted as per write strobes 
+				// Slave register 3
+				slv_reg7[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+				end  	
+			default : begin
+						slv_reg0 <= slv_reg0;
+						slv_reg1 <= slv_reg1;
+						slv_reg2 <= slv_reg2;
+						slv_reg3 <= slv_reg3;
+						slv_reg4 <= slv_reg4;
+						slv_reg5 <= slv_reg5;
+						slv_reg6 <= slv_reg6;
+						slv_reg7 <= slv_reg7;
+            slv_reg31 <= deadbeef;
+					end
+		endcase
+		end
+	end
+end    
+
+// Implement write response logic generation
+// The write response and response valid signals are asserted by the slave 
+// when axi_wready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted.  
+// This marks the acceptance of address and indicates the status of 
+// write transaction.
+
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_bvalid  <= 0;
+		axi_bresp   <= 2'b0;
+	end 
+	else
+	begin    
+		if (axi_awready && S_AXI_AWVALID && ~axi_bvalid && axi_wready && S_AXI_WVALID)
+		begin
+			// indicates a valid write response is available
+			axi_bvalid <= 1'b1;
+			axi_bresp  <= 2'b0; // 'OKAY' response 
+		end                   // work error responses in future
+		else
+		begin
+			if (S_AXI_BREADY && axi_bvalid) 
+			//check if bready is asserted while bvalid is high) 
+			//(there is a possibility that bready is always asserted high)   
+			begin
+				axi_bvalid <= 1'b0; 
+			end  
+		end
+	end
+end   
+
+// Implement axi_arready generation
+// axi_arready is asserted for one S_AXI_ACLK clock cycle when
+// S_AXI_ARVALID is asserted. axi_awready is 
+// de-asserted when reset (active low) is asserted. 
+// The read address is also latched when S_AXI_ARVALID is 
+// asserted. axi_araddr is reset to zero on reset assertion.
+
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_arready <= 1'b0;
+		axi_araddr  <= 32'b0;
+	end 
+	else
+	begin    
+		if (~axi_arready && S_AXI_ARVALID)
+		begin
+			// indicates that the slave has acceped the valid read address
+			axi_arready <= 1'b1;
+			// Read address latching
+			axi_araddr  <= S_AXI_ARADDR;
+		end
+		else
+		begin
+			axi_arready <= 1'b0;
+		end
+	end 
+end       
+
+// Implement axi_arvalid generation
+// axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both 
+// S_AXI_ARVALID and axi_arready are asserted. The slave registers 
+// data are available on the axi_rdata bus at this instance. The 
+// assertion of axi_rvalid marks the validity of read data on the 
+// bus and axi_rresp indicates the status of read transaction.axi_rvalid 
+// is deasserted on reset (active low). axi_rresp and axi_rdata are 
+// cleared to zero on reset (active low).  
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_rvalid <= 0;
+		axi_rresp  <= 0;
+	end 
+	else
+	begin    
+		if (axi_arready && S_AXI_ARVALID && ~axi_rvalid)
+		begin
+			// Valid read data is available at the read data bus
+			axi_rvalid <= 1'b1;
+			axi_rresp  <= 2'b0; // 'OKAY' response
+		end   
+		else if (axi_rvalid && S_AXI_RREADY)
+		begin
+			// Read data is accepted by the master
+			axi_rvalid <= 1'b0;
+		end                
+	end
+end    
+
+// Implement memory mapped register select and read logic generation
+// Slave register read enable is asserted when valid address is available
+// and the slave is ready to accept the read address.
+assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
+always @(*)
+begin
+		// Address decoding for reading registers
+		case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
+		3'h0   : reg_data_out <= slv_reg0;
+		3'h1   : reg_data_out <= slv_reg1;
+		3'h2   : reg_data_out <= slv_reg2;
+		3'h3   : reg_data_out <= slv_reg3;
+		3'h4   : reg_data_out <= slv_reg4; 
+		3'h5   : reg_data_out <= slv_reg5;
+		3'h6   : reg_data_out <= slv_reg6;
+		3'h7   : reg_data_out <= slv_reg7;
+		default : reg_data_out <= 0;
+		endcase
+end
+
+// Output register or memory read data
+always @( posedge S_AXI_ACLK )
+begin
+	if ( S_AXI_ARESETN == 1'b0 )
+	begin
+		axi_rdata  <= 0;
+	end 
+	else
+	begin    
+		// When there is a valid read address (S_AXI_ARVALID) with 
+		// acceptance of read address by the slave (axi_arready), 
+		// output the read dada 
+		if (slv_reg_rden)
+		begin
+			axi_rdata <= reg_data_out;     // register read data
+		end   
+	end
+end    
+
+
+
+  output wire RHD_CS,
+  output wire RHD_MOSI,
+  output wire RHD_SCLK,
+
+
+
+rhd rhd
+	(
+	.clk(S_AXI_ACLK),
+	.resetn(S_AXI_ARESETN),
+	.M_AXIS_ACLK(M_AXIS_ACLK),
+	.M_AXIS_ARESETN(M_AXIS_ARESETN),
+	// SPI
+	.CS_b(RHD_CS),
+	.SCLK(RHD_SCLK),
+	.MOSI_out(RHD_MOSI),
+	.MISO1_A(MISO1_A_SW),
+	.MISO2_A(MISO2_A_SW),
+	.MISO1_B(MISO1_B_SW),
+	.MISO2_B(MISO2_B_SW),
+	.MISO1_C(MISO1_C_SW),
+	.MISO2_C(MISO2_C_SW),
+	.MISO1_D(MISO1_D_SW),
+	.MISO2_D(MISO2_D_SW),
+	.MISO1_E(MISO1_E_SW),
+	.MISO2_E(MISO2_E_SW),
+	.MISO1_F(MISO1_F_SW),
+	.MISO2_F(MISO2_F_SW),
+	.MISO1_G(MISO1_G_SW),
+	.MISO2_G(MISO2_G_SW),
+	.MISO1_H(MISO1_H_SW),
+	.MISO2_H(MISO2_H_SW),
+	.MISO1_I(MISO1_I_SW),
+	.MISO2_I(MISO2_I_SW),
+	.MISO1_J(MISO1_J_SW),
+	.MISO2_J(MISO2_J_SW),
+	.MISO1_K(MISO1_K_SW),
+	.MISO2_K(MISO2_K_SW),
+	.MISO1_L(MISO1_L_SW),
+	.MISO2_L(MISO2_L_SW),
+	.MISO1_M(MISO1_M_SW),
+	.MISO2_M(MISO2_M_SW),
+	.MISO1_N(MISO1_N_SW),
+	.MISO2_N(MISO2_N_SW),
+	.MISO1_O(MISO1_O_SW),
+	.MISO2_O(MISO2_O_SW),
+	.MISO1_P(MISO1_P_SW),
+	.MISO2_P(MISO2_P_SW),
+	.FIFO_rstn(FIFO_rstn),
+	.M_AXIS_tdata(M_AXIS_tdata),
+	.M_AXIS_tvalid(M_AXIS_tvalid),
+	.M_AXIS_tready(M_AXIS_tready),
+	.M_AXIS_tlast(M_AXIS_tlast),
+	.SPI_ONOFF(slv_reg0[0]),
+	.amp_fast_settle(slv_reg0[1]),
+	.high_sampling_mode(slv_reg0[2]),
+	.impedance_check(slv_reg0[3]),
+	.impedance_check_cycle(slv_reg3[7:0]),
+	.impedance_check_scale(slv_reg3[9:8]),
+	.batch_size(slv_reg2[15:0]),
+	.delay_A(slv_reg1[3:0]),
+	.delay_B(slv_reg1[7:4]),
+	.delay_C(slv_reg1[11:8]),
+	.delay_D(slv_reg1[15:12]),
+	.delay_E(slv_reg1[19:16]),
+	.delay_F(slv_reg1[23:20]),
+	.delay_G(slv_reg1[27:24]),
+	.delay_H(slv_reg1[31:28]),
+	.delay_I(slv_reg1[3:0]),
+	.delay_J(slv_reg1[7:4]),
+	.delay_K(slv_reg1[11:8]),
+	.delay_L(slv_reg1[15:12]),
+	.delay_M(slv_reg1[19:16]),
+	.delay_N(slv_reg1[23:20]),
+	.delay_O(slv_reg1[27:24]),
+	.delay_P(slv_reg1[31:28]),
+	.channelOut(channel),
+	.init_mode_out(init_mode_out),
+	.state_cable_delay_finder_out(state_cable_delay_finder),
+	.channelOut250M(channelOut250M),
+	.fifoDoneLatchOut_250M(fifoDoneLatchOut_250M),
+    .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M),
+	.zcheck_channel(zcheck_channel)
+	);
 
 endmodule

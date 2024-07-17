@@ -10,13 +10,15 @@ module rhd
     input  wire                              M_AXIS_ACLK,
     input  wire                              M_AXIS_ARESETN,
 
+    output wire [63:0]                       M_AXIS_tdata,
+    output wire		                         M_AXIS_tvalid,
+    input  wire		                         M_AXIS_tready,
+    output wire		                         M_AXIS_tlast,
 
     // SPI
     output reg                               CS_b,
     output reg                               SCLK,
-    output wire                              MOSI1,
-    output wire                              MOSI2,
-
+    output wire                              MOSI_out,
 
     input  wire                              MISO1_A,
     input  wire                              MISO2_A,
@@ -65,13 +67,6 @@ module rhd
 
     input  wire                              MISO1_P,
     input  wire                              MISO2_P,
-    
-    output wire                              FIFO_rstn,
-    // AXI-Stream
-    output wire [63:0]                       M_AXIS_tdata,
-    output wire		                         M_AXIS_tvalid,
-    input  wire		                         M_AXIS_tready,
-    output wire		                         M_AXIS_tlast,
 
     input wire                               SPI_ONOFF,
     input wire                               amp_fast_settle,       // Set when init mode (= init mode occurs when SPI_start becomes high)
@@ -98,18 +93,8 @@ module rhd
     input wire [3:0]                         delay_O,
     input wire [3:0]                         delay_P,
 
-
-
-
-    output wire [5:0]                        channelOut,
-    output wire [5:0]                        channelOut250M,
-    output wire [3:0]                        state_cable_delay_finder_out,
     output wire                              init_mode_out,
-    output wire fifoDoneLatchOut_250M,
-    input wire fifoDoneLatchResetnIn_250M,
-    output wire [5:0] zcheck_channel
-
-
+    input wire                               loopbackMode
     );
 
 
@@ -131,89 +116,216 @@ module rhd
 	wire        MISO_O1, MISO_O2;
 	wire        MISO_P1, MISO_P2;
 
-
     reg         MOSI;
+    assign MOSI_out = MOSI;
 
-    assign MISO_A1 = MISO1_A;
-    assign MISO_A2 = MISO2_A;
+    assign MISO_A1 = MISO1_A_SW;
+    assign MISO_A2 = MISO2_A_SW;
     
-    assign MISO_B1 = MISO1_B;
-    assign MISO_B2 = MISO2_B;
+    assign MISO_B1 = MISO1_B_SW;
+    assign MISO_B2 = MISO2_B_SW;
 
-    assign MISO_C1 = MISO1_C;
-    assign MISO_C2 = MISO2_C;
+    assign MISO_C1 = MISO1_C_SW;
+    assign MISO_C2 = MISO2_C_SW;
 
-    assign MISO_D1 = MISO1_D;
-    assign MISO_D2 = MISO2_D;
+    assign MISO_D1 = MISO1_D_SW;
+    assign MISO_D2 = MISO2_D_SW;
 
-	assign MISO_E1 = MISO1_E;
-	assign MISO_E2 = MISO2_E;
+	assign MISO_E1 = MISO1_E_SW;
+	assign MISO_E2 = MISO2_E_SW;
 	
-	assign MISO_F1 = MISO1_F;
-	assign MISO_F2 = MISO2_F;
+	assign MISO_F1 = MISO1_F_SW;
+	assign MISO_F2 = MISO2_F_SW;
 
-	assign MISO_G1 = MISO1_G;
-	assign MISO_G2 = MISO2_G;
+	assign MISO_G1 = MISO1_G_SW;
+	assign MISO_G2 = MISO2_G_SW;
 
-	assign MISO_H1 = MISO1_H;
-	assign MISO_H2 = MISO2_H;
+	assign MISO_H1 = MISO1_H_SW;
+	assign MISO_H2 = MISO2_H_SW;
 
-    assign MISO_I1 = MISO1_I;
-    assign MISO_I2 = MISO2_I;
+    assign MISO_I1 = MISO1_I_SW;
+    assign MISO_I2 = MISO2_I_SW;
     
-    assign MISO_J1 = MISO1_J;
-    assign MISO_J2 = MISO2_J;
+    assign MISO_J1 = MISO1_J_SW;
+    assign MISO_J2 = MISO2_J_SW;
 
-    assign MISO_K1 = MISO1_K;
-    assign MISO_K2 = MISO2_K;
+    assign MISO_K1 = MISO1_K_SW;
+    assign MISO_K2 = MISO2_K_SW;
 
-    assign MISO_L1 = MISO1_L;
-    assign MISO_L2 = MISO2_L;
+    assign MISO_L1 = MISO1_L_SW;
+    assign MISO_L2 = MISO2_L_SW;
 
-	assign MISO_M1 = MISO1_M;
-	assign MISO_M2 = MISO2_M;
+	assign MISO_M1 = MISO1_M_SW;
+	assign MISO_M2 = MISO2_M_SW;
 	
-	assign MISO_N1 = MISO1_N;
-	assign MISO_N2 = MISO2_N;
+	assign MISO_N1 = MISO1_N_SW;
+	assign MISO_N2 = MISO2_N_SW;
 
-	assign MISO_O1 = MISO1_O;
-	assign MISO_O2 = MISO2_O;
+	assign MISO_O1 = MISO1_O_SW;
+	assign MISO_O2 = MISO2_O_SW;
 
-	assign MISO_P1 = MISO1_P;
-	assign MISO_P2 = MISO2_P;
-
-    assign MOSI1 = MOSI;
-    assign MOSI2 = MOSI;
-
+	assign MISO_P1 = MISO1_P_SW;
+	assign MISO_P2 = MISO2_P_SW;
 
 
     // [Channel/Batch/Init]
     reg             SPI_running;
     reg             init_mode;
-    assign          init_mode_out = init_mode;
     reg [15:0] 		timestamp;			 
     reg [5:0] 		channel;  // varies from 0-34 (amplfier channels 0-31, plus 3 auxiliary commands)
 
-    assign channelOut = channel;
+
+    wire MISO1_A_LOOP;
+    wire MISO2_A_LOOP;
+    wire MISO1_B_LOOP;
+    wire MISO2_B_LOOP;
+    wire MISO1_C_LOOP;
+    wire MISO2_C_LOOP;
+    wire MISO1_D_LOOP;
+    wire MISO2_D_LOOP;
+    wire MISO1_E_LOOP;
+    wire MISO2_E_LOOP;
+    wire MISO1_F_LOOP;
+    wire MISO2_F_LOOP;
+    wire MISO1_G_LOOP;
+    wire MISO2_G_LOOP;
+    wire MISO1_H_LOOP;
+    wire MISO2_H_LOOP;
+    wire MISO1_I_LOOP;
+    wire MISO2_I_LOOP;
+    wire MISO1_J_LOOP;
+    wire MISO2_J_LOOP;
+    wire MISO1_K_LOOP;
+    wire MISO2_K_LOOP;
+    wire MISO1_L_LOOP;
+    wire MISO2_L_LOOP;
+    wire MISO1_M_LOOP;
+    wire MISO2_M_LOOP;
+    wire MISO1_N_LOOP;
+    wire MISO2_N_LOOP;
+    wire MISO1_O_LOOP;
+    wire MISO2_O_LOOP;
+    wire MISO1_P_LOOP;
+    wire MISO2_P_LOOP;
+
+    wire MISO1_A_SW;
+    wire MISO2_A_SW;
+    wire MISO1_B_SW;
+    wire MISO2_B_SW;
+    wire MISO1_C_SW;
+    wire MISO2_C_SW;
+    wire MISO1_D_SW;
+    wire MISO2_D_SW;
+    wire MISO1_E_SW;
+    wire MISO2_E_SW;
+    wire MISO1_F_SW;
+    wire MISO2_F_SW;
+    wire MISO1_G_SW;
+    wire MISO2_G_SW;
+    wire MISO1_H_SW;
+    wire MISO2_H_SW;
+    wire MISO1_I_SW;
+    wire MISO2_I_SW;
+    wire MISO1_J_SW;
+    wire MISO2_J_SW;
+    wire MISO1_K_SW;
+    wire MISO2_K_SW;
+    wire MISO1_L_SW;
+    wire MISO2_L_SW;
+    wire MISO1_M_SW;
+    wire MISO2_M_SW;
+    wire MISO1_N_SW;
+    wire MISO2_N_SW;
+    wire MISO1_O_SW;
+    wire MISO2_O_SW;
+    wire MISO1_P_SW;
+    wire MISO2_P_SW;
+
+    wire [5:0] channel;
+    wire init_mode_out;
+    wire [3:0] state_cable_delay_finder;
+    wire [5:0] zcheck_channel;
+
+
+    rhd_headstage_slave_full_16_probes RHD_LOOPBACK(
+        .MOSI(MOSI),
+        .CS(CS_b),
+        .SCLK(SCLK),
+        .clk(clk),
+        .MISO1_A(MISO1_A_LOOP),
+        .MISO2_A(MISO2_A_LOOP),
+        .MISO1_B(MISO1_B_LOOP),
+        .MISO2_B(MISO2_B_LOOP),
+        .MISO1_C(MISO1_C_LOOP),
+        .MISO2_C(MISO2_C_LOOP),
+        .MISO1_D(MISO1_D_LOOP),
+        .MISO2_D(MISO2_D_LOOP),
+        .MISO1_E(MISO1_E_LOOP),
+        .MISO2_E(MISO2_E_LOOP),
+        .MISO1_F(MISO1_F_LOOP),
+        .MISO2_F(MISO2_F_LOOP),
+        .MISO1_G(MISO1_G_LOOP),
+        .MISO2_G(MISO2_G_LOOP),
+        .MISO1_H(MISO1_H_LOOP),
+        .MISO2_H(MISO2_H_LOOP),
+        .MISO1_I(MISO1_I_LOOP),
+        .MISO2_I(MISO2_I_LOOP),
+        .MISO1_J(MISO1_J_LOOP),
+        .MISO2_J(MISO2_J_LOOP),
+        .MISO1_K(MISO1_K_LOOP),
+        .MISO2_K(MISO2_K_LOOP),
+        .MISO1_L(MISO1_L_LOOP),
+        .MISO2_L(MISO2_L_LOOP),
+        .MISO1_M(MISO1_M_LOOP),
+        .MISO2_M(MISO2_M_LOOP),
+        .MISO1_N(MISO1_N_LOOP),
+        .MISO2_N(MISO2_N_LOOP),
+        .MISO1_O(MISO1_O_LOOP),
+        .MISO2_O(MISO2_O_LOOP),
+        .MISO1_P(MISO1_P_LOOP),
+        .MISO2_P(MISO2_P_LOOP),
+        .channel(channel)
+    );
 
 
 
-    localparam
-        I_LOAD = 0,
-        I_SEND_N_LOAD = 1,
-        N_SEND_T_LOAD = 2,
-        I_GET_T_SEND_A_LOAD = 3,
-        N_GET_A_SEND_N_LOAD = 4,
-        T_GET_N_SEND = 5,
-        A_GET = 6,
-        N_GET = 7,
-        DONE = 8;
+    assign MISO1_A_SW = loopbackMode ? MISO1_A_LOOP : MISO1_A; //mux between real and loopback based on register 1's 5th bit, if high this means loopback is enabled
+    assign MISO2_A_SW = loopbackMode ? MISO2_A_LOOP : MISO2_A;
+    assign MISO1_B_SW = loopbackMode ? MISO1_B_LOOP : MISO1_B;
+    assign MISO2_B_SW = loopbackMode ? MISO2_B_LOOP : MISO2_B;
+    assign MISO1_C_SW = loopbackMode ? MISO1_C_LOOP : MISO1_C;
+    assign MISO2_C_SW = loopbackMode ? MISO2_C_LOOP : MISO2_C;
+    assign MISO1_D_SW = loopbackMode ? MISO1_D_LOOP : MISO1_D;
+    assign MISO2_D_SW = loopbackMode ? MISO2_D_LOOP : MISO2_D;
 
-    reg [3:0] state_cable_delay_finder = I_LOAD;
-    reg [3:0] phase_select;
-    reg [3:0] phase_select_low;
+    assign MISO1_E_SW = loopbackMode ? MISO1_E_LOOP : MISO1_E;
+    assign MISO2_E_SW = loopbackMode ? MISO2_E_LOOP : MISO2_E;
+    assign MISO1_F_SW = loopbackMode ? MISO1_F_LOOP : MISO1_F;
+    assign MISO2_F_SW = loopbackMode ? MISO2_F_LOOP : MISO2_F;
+    assign MISO1_G_SW = loopbackMode ? MISO1_G_LOOP : MISO1_G;
+    assign MISO2_G_SW = loopbackMode ? MISO2_G_LOOP : MISO2_G;
+    assign MISO1_H_SW = loopbackMode ? MISO1_H_LOOP : MISO1_H;
+    assign MISO2_H_SW = loopbackMode ? MISO2_H_LOOP : MISO2_H;
 
-    assign state_cable_delay_finder_out = state_cable_delay_finder;
+    assign MISO1_I_SW = loopbackMode ? MISO1_I_LOOP : MISO1_I;
+    assign MISO2_I_SW = loopbackMode ? MISO2_I_LOOP : MISO2_I;
+    assign MISO1_J_SW = loopbackMode ? MISO1_J_LOOP : MISO1_J;
+    assign MISO2_J_SW = loopbackMode ? MISO2_J_LOOP : MISO2_J;
+    assign MISO1_K_SW = loopbackMode ? MISO1_K_LOOP : MISO1_K;
+    assign MISO2_K_SW = loopbackMode ? MISO2_K_LOOP : MISO2_K;
+    assign MISO1_L_SW = loopbackMode ? MISO1_L_LOOP : MISO1_L;
+    assign MISO2_L_SW = loopbackMode ? MISO2_L_LOOP : MISO2_L;
+
+    assign MISO1_M_SW = loopbackMode ? MISO1_M_LOOP : MISO1_M;
+    assign MISO2_M_SW = loopbackMode ? MISO2_M_LOOP : MISO2_M;
+    assign MISO1_N_SW = loopbackMode ? MISO1_N_LOOP : MISO1_N;
+    assign MISO2_N_SW = loopbackMode ? MISO2_N_LOOP : MISO2_N;
+    assign MISO1_O_SW = loopbackMode ? MISO1_O_LOOP : MISO1_O;
+    assign MISO2_O_SW = loopbackMode ? MISO2_O_LOOP : MISO2_O;
+    assign MISO1_P_SW = loopbackMode ? MISO1_P_LOOP : MISO1_P;
+    assign MISO2_P_SW = loopbackMode ? MISO2_P_LOOP : MISO2_P;
+
+
 
 
     wire            flag_lastBatch;
@@ -425,6 +537,8 @@ module rhd
 	assign data_stream_63 = result_P2;
 	assign data_stream_64 = result_DDR_P2;
 
+    reg [3:0] phase_select = 3; //hardcoded HAO
+
 
     // MISO phase selectors (to compensate for headstage cable delays)
 
@@ -629,7 +743,6 @@ module rhd
 	// [MOSI] - All chips are sharing the same MOSI 
     reg [15:0] 		MOSI_cmd;
     wire [15:0] 	MOSI_cmd_selected;
-    reg [15:0] MOSI_cmd_selected_cable_delay_finder;
 
     // `command selector` controls the MOSI commands.
     // It supports 
@@ -654,27 +767,6 @@ module rhd
         .src_in(SPI_running));    
 
 
-    xpm_cdc_array_single #(
-        .DEST_SYNC_FF(4),   // DECIMAL; range: 2-10
-        .INIT_SYNC_FF(0),   // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
-        .SIM_ASSERT_CHK(0), // DECIMAL; 0=disable simulation messages, 1=enable simulation messages
-        .SRC_INPUT_REG(1),  // DECIMAL; 0=do not register input, 1=register input
-        .WIDTH(6)           // DECIMAL; range: 1-1024
-    )
-    xpm_cdc_array_single_inst_channelOut (
-        .dest_out(channelOut250M), // WIDTH-bit output: src_in synchronized to the destination clock domain. This
-                                // output is registered.
-
-        .dest_clk(M_AXIS_ACLK), // 1-bit input: Clock signal for the destination clock domain.
-        .src_clk(clk),   // 1-bit input: optional; required when SRC_INPUT_REG = 1
-        .src_in(channel)      // WIDTH-bit input: Input single-bit array to be synchronized to destination clock
-                                // domain. It is assumed that each bit of the array is unrelated to the others. This
-                                // is reflected in the constraints applied to this macro. To transfer a binary value
-                                // losslessly across the two clock domains, use the XPM_CDC_GRAY macro instead.
-
-    );
-
-
 
     fifo_generator_0 fifo_inst (
         .srst(!resetn || !SPI_running),
@@ -690,28 +782,6 @@ module rhd
         .wr_rst_busy(),
         .rd_rst_busy()
         );
-
-
-    wire fifoDoneLatchResetn;
-
-    xpm_cdc_1bit fifoDoneLatchBuffer(
-        .dest_clk(M_AXIS_ACLK),
-        .dest_out(fifoDoneLatchOut_250M),
-        .src_clk(clk),
-        .src_in(fifoDoneLatch)); 
-
-    xpm_cdc_1bit fifoDoneLatchResetnBuffer(
-        .dest_clk(clk),
-        .dest_out(fifoDoneLatchResetn),
-        .src_clk(M_AXIS_ACLK),
-        .src_in(fifoDoneLatchResetnIn_250M)); 
-
-    wire fifoDoneLatch;
-    assign fifoDoneLatch = flag_lastchannel;
-    //risingEdgeLatch fifoDoneLatchModule (resetn, flag_lastchannel, fifoDoneLatch);
-
-
-    assign FIFO_rstn        = SPI_running_250M;
 
     // TLAST Generator
 
@@ -735,7 +805,7 @@ module rhd
         .src_clk(clk),
         .src_in(flag_lastchannel));    
 
-    always @(posedge M_AXIS_ACLK) begin //changed to negedge
+    always @(posedge M_AXIS_ACLK) begin
         if (!M_AXIS_ARESETN) begin
             tlast_cnt <= 0;
         end 
@@ -860,100 +930,6 @@ module rhd
         ms_cs_m    = 80;
 
 
-
-    // Cable day finder state machine
-
-
-    reg [39:0] INTAN_reg = 0;
-    reg [39:0] INTAN_DDR_reg = 0;
-    reg [39:0] INTAN_expected = 40'b0100100101001110010101000100000101001110; //"INTAN"
-    reg flag_cable_delay_found = 0;
-    reg flag_cable_delay_low_found = 0;
-    reg flag_cable_delay_found_rising_edge_previous = 0;
-
-    always @(posedge clk) begin
-        if (!resetn) begin
-            flag_cable_delay_found <= 0;
-            flag_cable_delay_low_found <= 0;
-            MOSI_cmd_selected_cable_delay_finder <= 0;
-            state_cable_delay_finder <= I_LOAD;
-            phase_select <= 0;
-            INTAN_reg <= 0;
-        end 
-        else begin
-            case (main_state) 
-                ms_wait: begin
-                    MOSI_cmd_selected_cable_delay_finder <= 0;
-                end
-                ms_cs_l: begin
-                    case (state_cable_delay_finder) //INTAN IS STORED FROM REG 40-44
-                        I_LOAD: begin
-                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd40, 8'd0 }; //read from register 40 load
-                            state_cable_delay_finder <= I_SEND_N_LOAD;
-                        end
-                        I_SEND_N_LOAD: begin //in this state, the read from register 40 has been sent on the MOSI line
-                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd41, 8'd0 };
-                            state_cable_delay_finder <= N_SEND_T_LOAD;
-                        end
-                        N_SEND_T_LOAD: begin
-                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd42, 8'd0 };
-                            state_cable_delay_finder <= I_GET_T_SEND_A_LOAD;
-                        end
-                        I_GET_T_SEND_A_LOAD: begin
-                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd43, 8'd0 };
-                            INTAN_reg[39:32] <= result_B1[7:0];
-                            INTAN_DDR_reg[39:32] <= result_DDR_B1[7:0];
-                            state_cable_delay_finder <= N_GET_A_SEND_N_LOAD;
-                        end
-                        N_GET_A_SEND_N_LOAD: begin
-                            MOSI_cmd_selected_cable_delay_finder <= { 2'b11, 6'd44, 8'd0 };
-                            INTAN_reg[31:24] <= result_B1[7:0];
-                            INTAN_DDR_reg[31:24] <= result_DDR_B1[7:0];
-                            state_cable_delay_finder <= T_GET_N_SEND;
-                        end
-                        T_GET_N_SEND: begin
-                            MOSI_cmd_selected_cable_delay_finder <= 0;
-                            INTAN_reg[23:16] <= result_B1[7:0];
-                            INTAN_DDR_reg[23:16] <= result_DDR_B1[7:0];
-                            state_cable_delay_finder <= A_GET;
-                        end
-                        A_GET: begin
-                            MOSI_cmd_selected_cable_delay_finder <= 0;
-                            INTAN_reg[15:8] <= result_B1[7:0];
-                            INTAN_DDR_reg[15:8] <= result_DDR_B1[7:0];
-                            state_cable_delay_finder <= N_GET;
-                        end
-                        N_GET: begin
-                            INTAN_reg[7:0] <= result_B1[7:0];
-                            INTAN_DDR_reg[7:0] <= result_DDR_B1[7:0];
-                            if (INTAN_reg == INTAN_expected && INTAN_DDR_reg == INTAN_expected && !flag_cable_delay_low_found) begin
-                                state_cable_delay_finder = I_LOAD;
-                                flag_cable_delay_low_found = 1;
-                                phase_select_low = phase_select;
-                                phase_select = phase_select + 1;
-                            end
-                            else if ((INTAN_reg != INTAN_expected || INTAN_DDR_reg != INTAN_expected) && flag_cable_delay_low_found) begin
-                                state_cable_delay_finder = DONE; 
-                                phase_select = (phase_select_low + phase_select) / 2;
-                                //phase_select = delay_A;
-                            end
-                            else begin
-                                phase_select = phase_select + 1;
-                                state_cable_delay_finder <= I_LOAD;
-                            end
-                            MOSI_cmd_selected_cable_delay_finder <= 0;
-                        end
-                        DONE: begin
-                            flag_cable_delay_found <= 1;
-                            MOSI_cmd_selected_cable_delay_finder <= 0;
-                        end
-                    endcase
-                end
-            endcase
-        end
-    end
-
-
      
                           
     always @(posedge clk) begin
@@ -1008,26 +984,18 @@ module rhd
                 end
     
                 ms_cs_n: begin
-
-
-                    if (flag_cable_delay_found)
-                        MOSI_cmd <= MOSI_cmd_selected;
-                    else
-                        MOSI_cmd <= MOSI_cmd_selected_cable_delay_finder;
-
+                    MOSI_cmd <= MOSI_cmd_selected;
                     CS_b <= 1'b1;
                     main_state <= ms_clk1_a;
                     SPI_running <= 1'b1;
 
                     // Timestamp is used to define the "batch size"
                     // Timestamp starts with 1 .... ends with BATCH_SIZE. 
-                    if (channel == 0 && flag_cable_delay_found) begin
-                        if (flag_lastBatch) begin
-                            timestamp <= 1;
-                        end
-                        else begin 
-                            timestamp <= timestamp + 1;
-                        end
+                    if (flag_lastBatch) begin
+                        timestamp <= 1;
+                    end
+                    else begin 
+                        timestamp <= timestamp + 1;
                     end
                 end
     
@@ -2885,21 +2853,12 @@ module rhd
                 ms_cs_m: begin
                     CS_b <= 1'b1;
 
-                    if (!fifoDoneLatch || !fifoDoneLatchResetn) begin
-                        if (flag_lastchannel) begin
-                            channel <= 0;
-                            init_mode <= 1'b0;
-                        end else begin
-                            if (flag_cable_delay_found == 1 && flag_cable_delay_found_rising_edge_previous == 0) begin
-                                channel <= 0;
-                            end
-                            else if (flag_cable_delay_found)
-                                channel <= channel + 1;
-                        end
-                    end	
-
-
-                    flag_cable_delay_found_rising_edge_previous = flag_cable_delay_found;
+                    if (flag_lastchannel) begin
+                        channel <= 0;
+                        init_mode <= 1'b0;
+                    end else begin
+                        channel <= channel + 1;
+                    end
 
                     if (flag_lastchannel && flag_lastBatch && !SPI_ONOFF) begin
                         main_state <= ms_wait;
@@ -3079,63 +3038,6 @@ module command_selector (
     end	
 endmodule
 
-/* pre-16 probe test 12-15-23
-
-module MISO_falling_edge(
-	input wire [3:0] 	phase_select,	// MISO sampling phase lag to compensate for headstage cable delay
-	input wire [73:0] 	MISO4x,			// 4x oversampled MISO input
-	output reg [15:0] 	MISO			// 16-bit MISO output
-	);
-
-	always @(*) begin
-		case (phase_select)
-			//0:       MISO <= {MISO4x[0],  MISO4x[4],  MISO4x[8],  MISO4x[12], MISO4x[16], MISO4x[20], MISO4x[24], MISO4x[28], MISO4x[32], MISO4x[36], MISO4x[40], MISO4x[44], MISO4x[48], MISO4x[52], MISO4x[56], MISO4x[60]};
-			//1:       MISO <= {MISO4x[1],  MISO4x[5],  MISO4x[9],  MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61]};
-			0:       MISO <= {MISO4x[2],  MISO4x[6],  MISO4x[10], MISO4x[14], MISO4x[18], MISO4x[22], MISO4x[26], MISO4x[30], MISO4x[34], MISO4x[38], MISO4x[42], MISO4x[46], MISO4x[50], MISO4x[54], MISO4x[58], MISO4x[62]};
-			1:       MISO <= {MISO4x[3],  MISO4x[7],  MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63]};
-			2:       MISO <= {MISO4x[4],  MISO4x[8],  MISO4x[12], MISO4x[16], MISO4x[20], MISO4x[24], MISO4x[28], MISO4x[32], MISO4x[36], MISO4x[40], MISO4x[44], MISO4x[48], MISO4x[52], MISO4x[56], MISO4x[60], MISO4x[64]};
-			3:       MISO <= {MISO4x[5],  MISO4x[9],  MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65]};
-			4:       MISO <= {MISO4x[6],  MISO4x[10], MISO4x[14], MISO4x[18], MISO4x[22], MISO4x[26], MISO4x[30], MISO4x[34], MISO4x[38], MISO4x[42], MISO4x[46], MISO4x[50], MISO4x[54], MISO4x[58], MISO4x[62], MISO4x[66]};
-			5:       MISO <= {MISO4x[7],  MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63], MISO4x[67]};
-			6:       MISO <= {MISO4x[8],  MISO4x[12], MISO4x[16], MISO4x[20], MISO4x[24], MISO4x[28], MISO4x[32], MISO4x[36], MISO4x[40], MISO4x[44], MISO4x[48], MISO4x[52], MISO4x[56], MISO4x[60], MISO4x[64], MISO4x[68]};
-			7:       MISO <= {MISO4x[9],  MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65], MISO4x[69]};
-			8:       MISO <= {MISO4x[10], MISO4x[14], MISO4x[18], MISO4x[22], MISO4x[26], MISO4x[30], MISO4x[34], MISO4x[38], MISO4x[42], MISO4x[46], MISO4x[50], MISO4x[54], MISO4x[58], MISO4x[62], MISO4x[66], MISO4x[70]};
-			9:       MISO <= {MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63], MISO4x[67], MISO4x[71]};
-			default: MISO <= {MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63], MISO4x[67], MISO4x[71]};
-		endcase
-	end
-	
-endmodule
-
-
-module MISO_rising_edge(
-	input wire [3:0] 	phase_select,	// MISO sampling phase lag to compensate for headstage cable delay
-	input wire [73:0] 	MISO4x,			// 4x oversampled MISO input
-	output reg [15:0] 	MISO			// 16-bit MISO output
-	);
-	
-	always @(*) begin
-		case (phase_select)
-			//0:       MISO <= {MISO4x[2],  MISO4x[6],  MISO4x[10], MISO4x[14], MISO4x[18], MISO4x[22], MISO4x[26], MISO4x[30], MISO4x[34], MISO4x[38], MISO4x[42], MISO4x[46], MISO4x[50], MISO4x[54], MISO4x[58], MISO4x[62]};
-			//1:       MISO <= {MISO4x[3],  MISO4x[7],  MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63]};
-			0:       MISO <= {MISO4x[4],  MISO4x[8],  MISO4x[12], MISO4x[16], MISO4x[20], MISO4x[24], MISO4x[28], MISO4x[32], MISO4x[36], MISO4x[40], MISO4x[44], MISO4x[48], MISO4x[52], MISO4x[56], MISO4x[60], MISO4x[64]};
-			1:       MISO <= {MISO4x[5],  MISO4x[9],  MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65]};
-			2:       MISO <= {MISO4x[6],  MISO4x[10], MISO4x[14], MISO4x[18], MISO4x[22], MISO4x[26], MISO4x[30], MISO4x[34], MISO4x[38], MISO4x[42], MISO4x[46], MISO4x[50], MISO4x[54], MISO4x[58], MISO4x[62], MISO4x[66]};
-			3:       MISO <= {MISO4x[7],  MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63], MISO4x[67]};
-			4:       MISO <= {MISO4x[8],  MISO4x[12], MISO4x[16], MISO4x[20], MISO4x[24], MISO4x[28], MISO4x[32], MISO4x[36], MISO4x[40], MISO4x[44], MISO4x[48], MISO4x[52], MISO4x[56], MISO4x[60], MISO4x[64], MISO4x[68]};
-			5:       MISO <= {MISO4x[9],  MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65], MISO4x[69]};
-			6:       MISO <= {MISO4x[10], MISO4x[14], MISO4x[18], MISO4x[22], MISO4x[26], MISO4x[30], MISO4x[34], MISO4x[38], MISO4x[42], MISO4x[46], MISO4x[50], MISO4x[54], MISO4x[58], MISO4x[62], MISO4x[66], MISO4x[70]};
-			7:       MISO <= {MISO4x[11], MISO4x[15], MISO4x[19], MISO4x[23], MISO4x[27], MISO4x[31], MISO4x[35], MISO4x[39], MISO4x[43], MISO4x[47], MISO4x[51], MISO4x[55], MISO4x[59], MISO4x[63], MISO4x[67], MISO4x[71]};
-			8:       MISO <= {MISO4x[12], MISO4x[16], MISO4x[20], MISO4x[24], MISO4x[28], MISO4x[32], MISO4x[36], MISO4x[40], MISO4x[44], MISO4x[48], MISO4x[52], MISO4x[56], MISO4x[60], MISO4x[64], MISO4x[68], MISO4x[72]};
-			9:       MISO <= {MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65], MISO4x[69], MISO4x[73]};
-			default: MISO <= {MISO4x[13], MISO4x[17], MISO4x[21], MISO4x[25], MISO4x[29], MISO4x[33], MISO4x[37], MISO4x[41], MISO4x[45], MISO4x[49], MISO4x[53], MISO4x[57], MISO4x[61], MISO4x[65], MISO4x[69], MISO4x[73]};
-		endcase
-	end
-	
-endmodule
-
-*/
-
 
 module MISO_falling_edge(
 	input wire [3:0] 	phase_select,	// MISO sampling phase lag to compensate for headstage cable delay
@@ -3188,13 +3090,4 @@ module MISO_rising_edge(
 		endcase
 	end
 	
-endmodule
-
-module risingEdgeLatch (input resetn, input data, output reg q);
-    always @ (resetn, data) begin
-        if (!resetn)
-            q <= 0;
-        else if (data == 1 && q == 0)
-            q <= 1;
-    end
 endmodule
