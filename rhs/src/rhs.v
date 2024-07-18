@@ -106,7 +106,8 @@ module rhs
 
     input wire                               use_manual_cable_delay,
 
-    input wire [3:0]                         manual_cable_delay,
+    input wire [3:0]                         manual_cable_delay_single_ended,
+    input wire [3:0]                         manual_cable_delay_differential,
 
     output wire                              flag_channel16_stream_250M_out,
 
@@ -195,8 +196,8 @@ module rhs
     wire [10:0]     charge_recov_off_time; // time after D2 for recovery to stop
     reg             charge_recov_mode;
     
-    assign charge_recov_on_time = 4; //default 4 * 29.1 = 116.4us
-    assign charge_recov_off_time = 18; //default 18 * 29.1 = 523.8us
+    assign charge_recov_on_time = 1; //default 4 * 29.1 = 116.4us
+    assign charge_recov_off_time = 3; //default 18 * 29.1 = 523.8us
 
     // [registers related to stim] RHS2116 registers are 16 bit 
     reg [15:0] stim_on;
@@ -357,60 +358,63 @@ module rhs
 
     reg [3:0] phase_select_low;
 
-    wire [3:0] phase_select_out;
+    wire [3:0] phase_select_out_single_ended;
+    wire [3:0] phase_select_out_differential;
 
     
-    assign phase_select_out = use_manual_cable_delay ? manual_cable_delay : phase_select;
+    assign phase_select_out_single_ended = use_manual_cable_delay ? manual_cable_delay_single_ended : phase_select;
+    assign phase_select_out_differential = use_manual_cable_delay ? manual_cable_delay_differential : phase_select;
 
     // MISO phase selectors (to compensate for headstage cable delays)
+    // half of probes are single ended, others are differential
 
     MISO_phase_selector MISO_falling_edge_1 (
-        .phase_select(phase_select_out), .MISO4x(in4x_1), .MISO(in_1));	
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_1), .MISO(in_1));	
 
     MISO_phase_selector MISO_falling_edge_2 (
-        .phase_select(phase_select_out), .MISO4x(in4x_2), .MISO(in_2));
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_2), .MISO(in_2));
 
     MISO_phase_selector MISO_falling_edge_3 (
-        .phase_select(phase_select_out), .MISO4x(in4x_3), .MISO(in_3));	
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_3), .MISO(in_3));	
 
     MISO_phase_selector MISO_falling_edge_4 (
-        .phase_select(phase_select_out), .MISO4x(in4x_4), .MISO(in_4));
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_4), .MISO(in_4));
 
     MISO_phase_selector MISO_falling_edge_5 (
-        .phase_select(phase_select_out), .MISO4x(in4x_5), .MISO(in_5));	
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_5), .MISO(in_5));	
 
     MISO_phase_selector MISO_falling_edge_6 (
-        .phase_select(phase_select_out), .MISO4x(in4x_6), .MISO(in_6));
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_6), .MISO(in_6));
 
     MISO_phase_selector MISO_falling_edge_7 (
-        .phase_select(phase_select_out), .MISO4x(in4x_7), .MISO(in_7));	
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_7), .MISO(in_7));	
 
     MISO_phase_selector MISO_falling_edge_8 (
-        .phase_select(phase_select_out), .MISO4x(in4x_8), .MISO(in_8));
+        .phase_select(phase_select_out_single_ended), .MISO4x(in4x_8), .MISO(in_8));
 
     MISO_phase_selector MISO_falling_edge_9 (
-        .phase_select(phase_select_out), .MISO4x(in4x_9), .MISO(in_9));	
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_9), .MISO(in_9));	
 
     MISO_phase_selector MISO_falling_edge_10 (
-        .phase_select(phase_select_out), .MISO4x(in4x_10), .MISO(in_10));
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_10), .MISO(in_10));
 
     MISO_phase_selector MISO_falling_edge_11 (
-        .phase_select(phase_select_out), .MISO4x(in4x_11), .MISO(in_11));	
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_11), .MISO(in_11));	
 
     MISO_phase_selector MISO_falling_edge_12 (
-        .phase_select(phase_select_out), .MISO4x(in4x_12), .MISO(in_12));
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_12), .MISO(in_12));
 
     MISO_phase_selector MISO_falling_edge_13 (
-        .phase_select(phase_select_out), .MISO4x(in4x_13), .MISO(in_13));	
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_13), .MISO(in_13));	
 
     MISO_phase_selector MISO_falling_edge_14 (
-        .phase_select(phase_select_out), .MISO4x(in4x_14), .MISO(in_14));
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_14), .MISO(in_14));
 
     MISO_phase_selector MISO_falling_edge_15 (
-        .phase_select(phase_select_out), .MISO4x(in4x_15), .MISO(in_15));	
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_15), .MISO(in_15));	
 
     MISO_phase_selector MISO_falling_edge_16 (
-        .phase_select(phase_select_out), .MISO4x(in4x_16), .MISO(in_16));
+        .phase_select(phase_select_out_differential), .MISO4x(in4x_16), .MISO(in_16));
 
 
 
