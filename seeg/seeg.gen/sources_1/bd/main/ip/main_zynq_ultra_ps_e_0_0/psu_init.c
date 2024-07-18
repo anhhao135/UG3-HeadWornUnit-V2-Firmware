@@ -12392,7 +12392,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= pcie, Input, pcie_reset_n- (
     * PCIE Reset signal)
-    *  PSU_IOU_SLCR_MIO_PIN_30_L1_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_30_L1_SEL                              0
 
     * Level 2 Mux Select 0= Level 3 Mux Output 1= pmu, Input, pmu_gpi[4]- (PMU
     *  GPI) 2= test_scan, Input, test_scan_in[30]- (Test Scan Port) = test_sca
@@ -12411,9 +12411,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_30_L3_SEL                              0
 
     * Configures MIO Pin 30 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF180078, 0x000000FEU ,0x00000004U)
+    * (OFFSET, MASK, VALUE)      (0XFF180078, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_30_OFFSET, 0x000000FEU, 0x00000004U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_30_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12513,132 +12513,6 @@ unsigned long psu_mio_init_data(void)
     * (OFFSET, MASK, VALUE)      (0XFF180094, 0x000000FEU ,0x000000C0U)
     */
 	PSU_Mask_Write(IOU_SLCR_MIO_PIN_37_OFFSET, 0x000000FEU, 0x000000C0U);
-/*##################################################################### */
-
-    /*
-    * Register : MIO_PIN_39 @ 0XFF18009C
-
-    * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
-    * [0]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_39_L0_SEL                              0
-
-    * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_39_L1_SEL                              0
-
-    * Level 2 Mux Select 0= Level 3 Mux Output 1= sd0, Input, sdio0_cd_n- (SD
-    * card detect from connector) 2= sd1, Input, sd1_data_in[4]- (8-bit Data b
-    * us) = sd1, Output, sdio1_data_out[4]- (8-bit Data bus) 3= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_39_L2_SEL                              2
-
-    * Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[13]- (GPIO bank 1) 0=
-    * gpio1, Output, gpio_1_pin_out[13]- (GPIO bank 1) 1= can0, Output, can0_p
-    * hy_tx- (Can TX signal) 2= i2c0, Input, i2c0_sda_input- (SDA signal) 2= i
-    * 2c0, Output, i2c0_sda_out- (SDA signal) 3= pjtag, Input, pjtag_tdi- (PJT
-    * AG TDI) 4= spi0, Output, spi0_n_ss_out[2]- (SPI Master Selects) 5= ttc0,
-    *  Output, ttc0_wave_out- (TTC Waveform Clock) 6= ua0, Output, ua0_txd- (U
-    * ART transmitter serial output) 7= trace, Output, trace_ctl- (Trace Port
-    * Control Signal)
-    *  PSU_IOU_SLCR_MIO_PIN_39_L3_SEL                              0
-
-    * Configures MIO Pin 39 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF18009C, 0x000000FEU ,0x00000010U)
-    */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_39_OFFSET, 0x000000FEU, 0x00000010U);
-/*##################################################################### */
-
-    /*
-    * Register : MIO_PIN_40 @ 0XFF1800A0
-
-    * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
-    * [1]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_40_L0_SEL                              0
-
-    * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_40_L1_SEL                              0
-
-    * Level 2 Mux Select 0= Level 3 Mux Output 1= sd0, Input, sd0_cmd_in- (Com
-    * mand Indicator) = sd0, Output, sdio0_cmd_out- (Command Indicator) 2= sd1
-    * , Input, sd1_data_in[5]- (8-bit Data bus) = sd1, Output, sdio1_data_out[
-    * 5]- (8-bit Data bus) 3= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_40_L2_SEL                              2
-
-    * Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[14]- (GPIO bank 1) 0=
-    * gpio1, Output, gpio_1_pin_out[14]- (GPIO bank 1) 1= can1, Output, can1_p
-    * hy_tx- (Can TX signal) 2= i2c1, Input, i2c1_scl_input- (SCL signal) 2= i
-    * 2c1, Output, i2c1_scl_out- (SCL signal) 3= pjtag, Output, pjtag_tdo- (PJ
-    * TAG TDO) 4= spi0, Output, spi0_n_ss_out[1]- (SPI Master Selects) 5= ttc3
-    * , Input, ttc3_clk_in- (TTC Clock) 6= ua1, Output, ua1_txd- (UART transmi
-    * tter serial output) 7= trace, Output, tracedq[0]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_40_L3_SEL                              0
-
-    * Configures MIO Pin 40 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A0, 0x000000FEU ,0x00000010U)
-    */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_40_OFFSET, 0x000000FEU, 0x00000010U);
-/*##################################################################### */
-
-    /*
-    * Register : MIO_PIN_41 @ 0XFF1800A4
-
-    * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
-    * [2]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_41_L0_SEL                              0
-
-    * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_41_L1_SEL                              0
-
-    * Level 2 Mux Select 0= Level 3 Mux Output 1= sd0, Input, sd0_data_in[0]-
-    * (8-bit Data bus) = sd0, Output, sdio0_data_out[0]- (8-bit Data bus) 2= s
-    * d1, Input, sd1_data_in[6]- (8-bit Data bus) = sd1, Output, sdio1_data_ou
-    * t[6]- (8-bit Data bus) 3= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_41_L2_SEL                              2
-
-    * Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[15]- (GPIO bank 1) 0=
-    * gpio1, Output, gpio_1_pin_out[15]- (GPIO bank 1) 1= can1, Input, can1_ph
-    * y_rx- (Can RX signal) 2= i2c1, Input, i2c1_sda_input- (SDA signal) 2= i2
-    * c1, Output, i2c1_sda_out- (SDA signal) 3= pjtag, Input, pjtag_tms- (PJTA
-    * G TMS) 4= spi0, Input, spi0_n_ss_in- (SPI Master Selects) 4= spi0, Outpu
-    * t, spi0_n_ss_out[0]- (SPI Master Selects) 5= ttc3, Output, ttc3_wave_out
-    * - (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART receiver serial inp
-    * ut) 7= trace, Output, tracedq[1]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_41_L3_SEL                              0
-
-    * Configures MIO Pin 41 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000010U)
-    */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_41_OFFSET, 0x000000FEU, 0x00000010U);
-/*##################################################################### */
-
-    /*
-    * Register : MIO_PIN_42 @ 0XFF1800A8
-
-    * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
-    * [3]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_42_L0_SEL                              0
-
-    * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_42_L1_SEL                              0
-
-    * Level 2 Mux Select 0= Level 3 Mux Output 1= sd0, Input, sd0_data_in[1]-
-    * (8-bit Data bus) = sd0, Output, sdio0_data_out[1]- (8-bit Data bus) 2= s
-    * d1, Input, sd1_data_in[7]- (8-bit Data bus) = sd1, Output, sdio1_data_ou
-    * t[7]- (8-bit Data bus) 3= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_42_L2_SEL                              2
-
-    * Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[16]- (GPIO bank 1) 0=
-    * gpio1, Output, gpio_1_pin_out[16]- (GPIO bank 1) 1= can0, Input, can0_ph
-    * y_rx- (Can RX signal) 2= i2c0, Input, i2c0_scl_input- (SCL signal) 2= i2
-    * c0, Output, i2c0_scl_out- (SCL signal) 3= swdt0, Input, swdt0_clk_in- (W
-    * atch Dog Timer Input clock) 4= spi0, Input, spi0_mi- (MISO signal) 4= sp
-    * i0, Output, spi0_so- (MISO signal) 5= ttc2, Input, ttc2_clk_in- (TTC Clo
-    * ck) 6= ua0, Input, ua0_rxd- (UART receiver serial input) 7= trace, Outpu
-    * t, tracedq[2]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_42_L3_SEL                              0
-
-    * Configures MIO Pin 42 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000010U)
-    */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_42_OFFSET, 0x000000FEU, 0x00000010U);
 /*##################################################################### */
 
     /*
@@ -13775,16 +13649,16 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_27_TRI                        0
 
     * Master Tri-state Enable for pin 30, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_30_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_30_TRI                        0
 
     * Master Tri-state Enable for pin 31, active high
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_31_TRI                        1
 
     * MIO pin Tri-state Enables, 31:0
-    * (OFFSET, MASK, VALUE)      (0XFF180204, 0xCFFFFFFFU ,0xC4000000U)
+    * (OFFSET, MASK, VALUE)      (0XFF180204, 0xCFFFFFFFU ,0x84000000U)
     */
 	PSU_Mask_Write(IOU_SLCR_MIO_MST_TRI0_OFFSET,
-		0xCFFFFFFFU, 0xC4000000U);
+		0xCFFFFFFFU, 0x84000000U);
 /*##################################################################### */
 
     /*
@@ -15806,10 +15680,10 @@ unsigned long psu_peripherals_init_data(void)
 
     * 8-bit Support for Embedded Device 1: The Core supports 8-bit Interface 0
     * : Supports only 4-bit SD Interface
-    *  PSU_IOU_SLCR_SD_CONFIG_REG2_SD1_8BIT                        1
+    *  PSU_IOU_SLCR_SD_CONFIG_REG2_SD1_8BIT                        0
 
     * 1.8V Support 1: 1.8V supported 0: 1.8V not supported support
-    *  PSU_IOU_SLCR_SD_CONFIG_REG2_SD1_1P8V                        1
+    *  PSU_IOU_SLCR_SD_CONFIG_REG2_SD1_1P8V                        0
 
     * 3.0V Support 1: 3.0V supported 0: 3.0V not supported support
     *  PSU_IOU_SLCR_SD_CONFIG_REG2_SD1_3P0V                        0
@@ -15818,10 +15692,10 @@ unsigned long psu_peripherals_init_data(void)
     *  PSU_IOU_SLCR_SD_CONFIG_REG2_SD1_3P3V                        1
 
     * SD Config Register 2
-    * (OFFSET, MASK, VALUE)      (0XFF180320, 0x33840000U ,0x02840000U)
+    * (OFFSET, MASK, VALUE)      (0XFF180320, 0x33840000U ,0x00800000U)
     */
 	PSU_Mask_Write(IOU_SLCR_SD_CONFIG_REG2_OFFSET,
-		0x33840000U, 0x02840000U);
+		0x33840000U, 0x00800000U);
 /*##################################################################### */
 
     /*
@@ -16377,12 +16251,12 @@ unsigned long psu_peripherals_init_data(void)
     * Register : DIRM_1 @ 0XFF0A0244
 
     * Operation is the same as DIRM_0[DIRECTION_0]
-    *  PSU_GPIO_DIRM_1_DIRECTION_1                                 0x40000
+    *  PSU_GPIO_DIRM_1_DIRECTION_1                                 0x40010
 
     * Direction mode (GPIO Bank1, MIO)
-    * (OFFSET, MASK, VALUE)      (0XFF0A0244, 0x03FFFFFFU ,0x00040000U)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0244, 0x03FFFFFFU ,0x00040010U)
     */
-	PSU_Mask_Write(GPIO_DIRM_1_OFFSET, 0x03FFFFFFU, 0x00040000U);
+	PSU_Mask_Write(GPIO_DIRM_1_OFFSET, 0x03FFFFFFU, 0x00040010U);
 /*##################################################################### */
 
     /*
@@ -16398,12 +16272,12 @@ unsigned long psu_peripherals_init_data(void)
     * Register : OEN_1 @ 0XFF0A0248
 
     * Operation is the same as OEN_0[OP_ENABLE_0]
-    *  PSU_GPIO_OEN_1_OP_ENABLE_1                                  0x40000
+    *  PSU_GPIO_OEN_1_OP_ENABLE_1                                  0x40010
 
     * Output enable (GPIO Bank1, MIO)
-    * (OFFSET, MASK, VALUE)      (0XFF0A0248, 0x03FFFFFFU ,0x00040000U)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0248, 0x03FFFFFFU ,0x00040010U)
     */
-	PSU_Mask_Write(GPIO_OEN_1_OFFSET, 0x03FFFFFFU, 0x00040000U);
+	PSU_Mask_Write(GPIO_OEN_1_OFFSET, 0x03FFFFFFU, 0x00040010U);
 /*##################################################################### */
 
     /*
@@ -16526,8 +16400,175 @@ unsigned long psu_peripherals_init_data(void)
     * MASK_DATA_1_LSW HIGH BANK [77:68]
     */
     /*
+    * PCIE RESET
+    */
+    /*
+    * DIR MODE BANK 0
+    */
+    /*
+    * DIR MODE BANK 1
+    */
+    /*
+    * Register : DIRM_1 @ 0XFF0A0244
+
+    * Operation is the same as DIRM_0[DIRECTION_0]
+    *  PSU_GPIO_DIRM_1_DIRECTION_1                                 0x40010
+
+    * Direction mode (GPIO Bank1, MIO)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0244, 0x03FFFFFFU ,0x00040010U)
+    */
+	PSU_Mask_Write(GPIO_DIRM_1_OFFSET, 0x03FFFFFFU, 0x00040010U);
+/*##################################################################### */
+
+    /*
+    * DIR MODE BANK 2
+    */
+    /*
+    * OUTPUT ENABLE BANK 0
+    */
+    /*
+    * OUTPUT ENABLE BANK 1
+    */
+    /*
+    * Register : OEN_1 @ 0XFF0A0248
+
+    * Operation is the same as OEN_0[OP_ENABLE_0]
+    *  PSU_GPIO_OEN_1_OP_ENABLE_1                                  0x40010
+
+    * Output enable (GPIO Bank1, MIO)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0248, 0x03FFFFFFU ,0x00040010U)
+    */
+	PSU_Mask_Write(GPIO_OEN_1_OFFSET, 0x03FFFFFFU, 0x00040010U);
+/*##################################################################### */
+
+    /*
+    * OUTPUT ENABLE BANK 2
+    */
+    /*
+    * MASK_DATA_0_LSW LOW BANK [15:0]
+    */
+    /*
+    * MASK_DATA_0_MSW LOW BANK [25:16]
+    */
+    /*
+    * MASK_DATA_1_LSW LOW BANK [41:26]
+    */
+    /*
+    * Register : MASK_DATA_1_LSW @ 0XFF0A0008
+
+    * Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_MASK_1_LSW                         0xffef
+
+    * Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_DATA_1_LSW                         0x10
+
+    * Maskable Output Data (GPIO Bank1, MIO, Lower 16bits)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0008, 0xFFFFFFFFU ,0xFFEF0010U)
+    */
+	PSU_Mask_Write(GPIO_MASK_DATA_1_LSW_OFFSET,
+		0xFFFFFFFFU, 0xFFEF0010U);
+/*##################################################################### */
+
+    /*
+    * MASK_DATA_1_MSW HIGH BANK [51:42]
+    */
+    /*
+    * MASK_DATA_1_LSW HIGH BANK [67:52]
+    */
+    /*
+    * MASK_DATA_1_LSW HIGH BANK [77:68]
+    */
+    /*
+    * ADD 1US DELAY
+    */
+		mask_delay(1);
+
+/*##################################################################### */
+
+    /*
+    * MASK_DATA_0_LSW LOW BANK [15:0]
+    */
+    /*
+    * MASK_DATA_0_MSW LOW BANK [25:16]
+    */
+    /*
+    * MASK_DATA_1_LSW LOW BANK [41:26]
+    */
+    /*
+    * Register : MASK_DATA_1_LSW @ 0XFF0A0008
+
+    * Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_MASK_1_LSW                         0xffef
+
+    * Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_DATA_1_LSW                         0x0
+
+    * Maskable Output Data (GPIO Bank1, MIO, Lower 16bits)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0008, 0xFFFFFFFFU ,0xFFEF0000U)
+    */
+	PSU_Mask_Write(GPIO_MASK_DATA_1_LSW_OFFSET,
+		0xFFFFFFFFU, 0xFFEF0000U);
+/*##################################################################### */
+
+    /*
+    * MASK_DATA_1_MSW HIGH BANK [51:42]
+    */
+    /*
+    * MASK_DATA_1_LSW HIGH BANK [67:52]
+    */
+    /*
+    * MASK_DATA_1_LSW HIGH BANK [77:68]
+    */
+    /*
+    * ADD 5US DELAY
+    */
+		mask_delay(5);
+
+/*##################################################################### */
+
+    /*
     * GPIO POLARITY INITIALIZATION
     */
+    /*
+    * Register : DIRM_1 @ 0XFF0A0244
+
+    * Operation is the same as DIRM_0[DIRECTION_0]
+    *  PSU_GPIO_DIRM_1_DIRECTION_1                                 0x40010
+
+    * Direction mode (GPIO Bank1, MIO)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0244, 0x03FFFFFFU ,0x00040010U)
+    */
+	PSU_Mask_Write(GPIO_DIRM_1_OFFSET, 0x03FFFFFFU, 0x00040010U);
+/*##################################################################### */
+
+    /*
+    * Register : OEN_1 @ 0XFF0A0248
+
+    * Operation is the same as OEN_0[OP_ENABLE_0]
+    *  PSU_GPIO_OEN_1_OP_ENABLE_1                                  0x40010
+
+    * Output enable (GPIO Bank1, MIO)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0248, 0x03FFFFFFU ,0x00040010U)
+    */
+	PSU_Mask_Write(GPIO_OEN_1_OFFSET, 0x03FFFFFFU, 0x00040010U);
+/*##################################################################### */
+
+    /*
+    * Register : MASK_DATA_1_LSW @ 0XFF0A0008
+
+    * Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_MASK_1_LSW                         0xffef
+
+    * Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_DATA_1_LSW                         0x0
+
+    * Maskable Output Data (GPIO Bank1, MIO, Lower 16bits)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0008, 0xFFFFFFFFU ,0xFFEF0000U)
+    */
+	PSU_Mask_Write(GPIO_MASK_DATA_1_LSW_OFFSET,
+		0xFFFFFFFFU, 0xFFEF0000U);
+/*##################################################################### */
+
 
 	return 1;
 }
@@ -19327,18 +19368,6 @@ unsigned long psu_serdes_init_data(void)
 /*##################################################################### */
 
     /*
-    * Register : ECO_0 @ 0XFD480314
-
-    * Reserved for future use
-    *  PSU_PCIE_ATTRIB_ECO_0_ECO_0                                 0x4
-
-    * ECO Register 0
-    * (OFFSET, MASK, VALUE)      (0XFD480314, 0xFFFFFFFFU ,0x00000004U)
-    */
-	PSU_Mask_Write(PCIE_ATTRIB_ECO_0_OFFSET, 0xFFFFFFFFU, 0x00000004U);
-/*##################################################################### */
-
-    /*
     * GT LANE SETTINGS
     */
     /*
@@ -19992,12 +20021,12 @@ unsigned long psu_resetout_init_data(void)
     * set to 1) [1] = Reserved (set to 0) [31:2] = Mask for writable bits of B
     * AR; set uppermost 31:n bits to 1, where 2^n=i/o aperture size in bytes.;
     *  EP=0xFFF0; RP=0x0000
-    *  PSU_PCIE_ATTRIB_ATTR_8_ATTR_BAR0                            0xfff0
+    *  PSU_PCIE_ATTRIB_ATTR_8_ATTR_BAR0                            0x0
 
     * ATTR_8
-    * (OFFSET, MASK, VALUE)      (0XFD480020, 0x0000FFFFU ,0x0000FFF0U)
+    * (OFFSET, MASK, VALUE)      (0XFD480020, 0x0000FFFFU ,0x00000000U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_8_OFFSET, 0x0000FFFFU, 0x0000FFF0U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_8_OFFSET, 0x0000FFFFU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -20063,12 +20092,12 @@ unsigned long psu_resetout_init_data(void)
     * or (set to 1) [1] = Reserved (set to 0) [31:2] = Mask for writable bits
     * of BAR; set uppermost 31:n bits to 1, where 2^n=i/o aperture size in byt
     * es.; EP=0x0004; RP=0xFFFF
-    *  PSU_PCIE_ATTRIB_ATTR_11_ATTR_BAR2                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_11_ATTR_BAR2                           0xFFFF
 
     * ATTR_11
-    * (OFFSET, MASK, VALUE)      (0XFD48002C, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD48002C, 0x0000FFFFU ,0x0000FFFFU)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_11_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_11_OFFSET, 0x0000FFFFU, 0x0000FFFFU);
 /*##################################################################### */
 
     /*
@@ -20088,12 +20117,12 @@ unsigned long psu_resetout_init_data(void)
     * or (set to 1) [1] = Reserved (set to 0) [31:2] = Mask for writable bits
     * of BAR; set uppermost 31:n bits to 1, where 2^n=i/o aperture size in byt
     * es.; EP=0xFFF0; RP=0x00FF
-    *  PSU_PCIE_ATTRIB_ATTR_12_ATTR_BAR2                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_12_ATTR_BAR2                           0xFF
 
     * ATTR_12
-    * (OFFSET, MASK, VALUE)      (0XFD480030, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480030, 0x0000FFFFU ,0x000000FFU)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_12_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_12_OFFSET, 0x0000FFFFU, 0x000000FFU);
 /*##################################################################### */
 
     /*
@@ -20142,12 +20171,12 @@ unsigned long psu_resetout_init_data(void)
     * ndicator (set to 1) [1] = Reserved (set to 0) [31:2] = Mask for writable
     *  bits of BAR; set uppermost 31:n bits to 1, where 2^n=i/o aperture size
     * in bytes.; EP=0xFFFF; RP=0xFFFF
-    *  PSU_PCIE_ATTRIB_ATTR_14_ATTR_BAR3                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_14_ATTR_BAR3                           0xFFFF
 
     * ATTR_14
-    * (OFFSET, MASK, VALUE)      (0XFD480038, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480038, 0x0000FFFFU ,0x0000FFFFU)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_14_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_14_OFFSET, 0x0000FFFFU, 0x0000FFFFU);
 /*##################################################################### */
 
     /*
@@ -20167,12 +20196,12 @@ unsigned long psu_resetout_init_data(void)
     * or (set to 1) [1] = Reserved (set to 0) [31:2] = Mask for writable bits
     * of BAR; set uppermost 31:n bits to 1, where 2^n=i/o aperture size in byt
     * es.; EP=0x0004; RP=0xFFF0
-    *  PSU_PCIE_ATTRIB_ATTR_15_ATTR_BAR4                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_15_ATTR_BAR4                           0xFFF0
 
     * ATTR_15
-    * (OFFSET, MASK, VALUE)      (0XFD48003C, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD48003C, 0x0000FFFFU ,0x0000FFF0U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_15_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_15_OFFSET, 0x0000FFFFU, 0x0000FFF0U);
 /*##################################################################### */
 
     /*
@@ -20192,12 +20221,12 @@ unsigned long psu_resetout_init_data(void)
     * or (set to 1) [1] = Reserved (set to 0) [31:2] = Mask for writable bits
     * of BAR; set uppermost 31:n bits to 1, where 2^n=i/o aperture size in byt
     * es.; EP=0xFFF0; RP=0xFFF0
-    *  PSU_PCIE_ATTRIB_ATTR_16_ATTR_BAR4                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_16_ATTR_BAR4                           0xFFF0
 
     * ATTR_16
-    * (OFFSET, MASK, VALUE)      (0XFD480040, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480040, 0x0000FFFFU ,0x0000FFF0U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_16_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_16_OFFSET, 0x0000FFFFU, 0x0000FFF0U);
 /*##################################################################### */
 
     /*
@@ -20219,12 +20248,12 @@ unsigned long psu_resetout_init_data(void)
     * [1] = Reserved (set to 0) [31:2] = Mask for writable bits of BAR; set up
     * permost 31:n bits to 1, where 2^n=i/o aperture size in bytes.; EP=0xFFFF
     * ; RP=0xFFF1
-    *  PSU_PCIE_ATTRIB_ATTR_17_ATTR_BAR5                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_17_ATTR_BAR5                           0xFFF1
 
     * ATTR_17
-    * (OFFSET, MASK, VALUE)      (0XFD480044, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480044, 0x0000FFFFU ,0x0000FFF1U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_17_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_17_OFFSET, 0x0000FFFFU, 0x0000FFF1U);
 /*##################################################################### */
 
     /*
@@ -20246,12 +20275,12 @@ unsigned long psu_resetout_init_data(void)
     * [1] = Reserved (set to 0) [31:2] = Mask for writable bits of BAR; set up
     * permost 31:n bits to 1, where 2^n=i/o aperture size in bytes.; EP=0xFFFF
     * ; RP=0xFFF1
-    *  PSU_PCIE_ATTRIB_ATTR_18_ATTR_BAR5                           0x0
+    *  PSU_PCIE_ATTRIB_ATTR_18_ATTR_BAR5                           0xFFF1
 
     * ATTR_18
-    * (OFFSET, MASK, VALUE)      (0XFD480048, 0x0000FFFFU ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480048, 0x0000FFFFU ,0x0000FFF1U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_18_OFFSET, 0x0000FFFFU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_18_OFFSET, 0x0000FFFFU, 0x0000FFF1U);
 /*##################################################################### */
 
     /*
@@ -20268,12 +20297,12 @@ unsigned long psu_resetout_init_data(void)
     * Valid settings are: 0h less than 1us, 1h 1 to 2us, 2h 2 to 4us, 3h 4 to
     * 8us, 4h 8 to 16us, 5h 16 to 32us, 6h 32 to 64us, 7h more than 64us. For
     * Endpoints only. Must be 0h for other devices.; EP=0x0007; RP=0x0000
-    *  PSU_PCIE_ATTRIB_ATTR_27_ATTR_DEV_CAP_ENDPOINT_L1_LATENCY    0x7
+    *  PSU_PCIE_ATTRIB_ATTR_27_ATTR_DEV_CAP_ENDPOINT_L1_LATENCY    0x0
 
     * ATTR_27
-    * (OFFSET, MASK, VALUE)      (0XFD48006C, 0x00000738U ,0x00000138U)
+    * (OFFSET, MASK, VALUE)      (0XFD48006C, 0x00000738U ,0x00000100U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_27_OFFSET, 0x00000738U, 0x00000138U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_27_OFFSET, 0x00000738U, 0x00000100U);
 /*##################################################################### */
 
     /*
@@ -20286,7 +20315,7 @@ unsigned long psu_resetout_init_data(void)
     *  Bridge, 1000b PCI/PCI-X to PCI Express Bridge. Transferred to PCI Expre
     * ss Capabilities register. Must be consistent with IS_SWITCH and UPSTREAM
     * _FACING settings.; EP=0x0000; RP=0x0004
-    *  PSU_PCIE_ATTRIB_ATTR_50_ATTR_PCIE_CAP_DEVICE_PORT_TYPE      0x0
+    *  PSU_PCIE_ATTRIB_ATTR_50_ATTR_PCIE_CAP_DEVICE_PORT_TYPE      4
 
     * PCIe Capability's Next Capability Offset pointer to the next item in the
     *  capabilities list, or 00h if this is the final capability.; EP=0x009C;
@@ -20294,9 +20323,9 @@ unsigned long psu_resetout_init_data(void)
     *  PSU_PCIE_ATTRIB_ATTR_50_ATTR_PCIE_CAP_NEXTPTR               0
 
     * ATTR_50
-    * (OFFSET, MASK, VALUE)      (0XFD4800C8, 0x0000FFF0U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD4800C8, 0x0000FFF0U ,0x00000040U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_50_OFFSET, 0x0000FFF0U, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_50_OFFSET, 0x0000FFF0U, 0x00000040U);
 /*##################################################################### */
 
     /*
@@ -20305,13 +20334,13 @@ unsigned long psu_resetout_init_data(void)
     * Number of credits that should be advertised for Completion data received
     *  on Virtual Channel 0. The bytes advertised must be less than or equal t
     * o the bram bytes available. See VC0_RX_RAM_LIMIT; EP=0x0172; RP=0x00CD
-    *  PSU_PCIE_ATTRIB_ATTR_105_ATTR_VC0_TOTAL_CREDITS_CD          0x172
+    *  PSU_PCIE_ATTRIB_ATTR_105_ATTR_VC0_TOTAL_CREDITS_CD          0xCD
 
     * ATTR_105
-    * (OFFSET, MASK, VALUE)      (0XFD4801A4, 0x000007FFU ,0x00000172U)
+    * (OFFSET, MASK, VALUE)      (0XFD4801A4, 0x000007FFU ,0x000000CDU)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_105_OFFSET,
-		0x000007FFU, 0x00000172U);
+		0x000007FFU, 0x000000CDU);
 /*##################################################################### */
 
     /*
@@ -20320,20 +20349,20 @@ unsigned long psu_resetout_init_data(void)
     * Number of credits that should be advertised for Completion headers recei
     * ved on Virtual Channel 0. The sum of the posted, non posted, and complet
     * ion header credits must be <= 80; EP=0x0048; RP=0x0024
-    *  PSU_PCIE_ATTRIB_ATTR_106_ATTR_VC0_TOTAL_CREDITS_CH          0x48
+    *  PSU_PCIE_ATTRIB_ATTR_106_ATTR_VC0_TOTAL_CREDITS_CH          0x24
 
     * Number of credits that should be advertised for Non-Posted headers recei
     * ved on Virtual Channel 0. The number of non posted data credits advertis
     * ed by the block is equal to the number of non posted header credits. The
     *  sum of the posted, non posted, and completion header credits must be <=
     *  80; EP=0x0004; RP=0x000C
-    *  PSU_PCIE_ATTRIB_ATTR_106_ATTR_VC0_TOTAL_CREDITS_NPH         0x4
+    *  PSU_PCIE_ATTRIB_ATTR_106_ATTR_VC0_TOTAL_CREDITS_NPH         0xC
 
     * ATTR_106
-    * (OFFSET, MASK, VALUE)      (0XFD4801A8, 0x00003FFFU ,0x00000248U)
+    * (OFFSET, MASK, VALUE)      (0XFD4801A8, 0x00003FFFU ,0x00000624U)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_106_OFFSET,
-		0x00003FFFU, 0x00000248U);
+		0x00003FFFU, 0x00000624U);
 /*##################################################################### */
 
     /*
@@ -20346,13 +20375,13 @@ unsigned long psu_resetout_init_data(void)
     * osted header credits if atomic operations are not supported. The bytes a
     * dvertised must be less than or equal to the bram bytes available. See VC
     * 0_RX_RAM_LIMIT; EP=0x0008; RP=0x0018
-    *  PSU_PCIE_ATTRIB_ATTR_107_ATTR_VC0_TOTAL_CREDITS_NPD         0x8
+    *  PSU_PCIE_ATTRIB_ATTR_107_ATTR_VC0_TOTAL_CREDITS_NPD         0x18
 
     * ATTR_107
-    * (OFFSET, MASK, VALUE)      (0XFD4801AC, 0x000007FFU ,0x00000008U)
+    * (OFFSET, MASK, VALUE)      (0XFD4801AC, 0x000007FFU ,0x00000018U)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_107_OFFSET,
-		0x000007FFU, 0x00000008U);
+		0x000007FFU, 0x00000018U);
 /*##################################################################### */
 
     /*
@@ -20361,13 +20390,13 @@ unsigned long psu_resetout_init_data(void)
     * Number of credits that should be advertised for Posted data received on
     * Virtual Channel 0. The bytes advertised must be less than or equal to th
     * e bram bytes available. See VC0_RX_RAM_LIMIT; EP=0x0020; RP=0x00B5
-    *  PSU_PCIE_ATTRIB_ATTR_108_ATTR_VC0_TOTAL_CREDITS_PD          0x20
+    *  PSU_PCIE_ATTRIB_ATTR_108_ATTR_VC0_TOTAL_CREDITS_PD          0xB5
 
     * ATTR_108
-    * (OFFSET, MASK, VALUE)      (0XFD4801B0, 0x000007FFU ,0x00000020U)
+    * (OFFSET, MASK, VALUE)      (0XFD4801B0, 0x000007FFU ,0x000000B5U)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_108_OFFSET,
-		0x000007FFU, 0x00000020U);
+		0x000007FFU, 0x000000B5U);
 /*##################################################################### */
 
     /*
@@ -20394,13 +20423,13 @@ unsigned long psu_resetout_init_data(void)
     * Number of credits that should be advertised for Posted headers received
     * on Virtual Channel 0. The sum of the posted, non posted, and completion
     * header credits must be <= 80; EP=0x0004; RP=0x0020
-    *  PSU_PCIE_ATTRIB_ATTR_109_ATTR_VC0_TOTAL_CREDITS_PH          0x4
+    *  PSU_PCIE_ATTRIB_ATTR_109_ATTR_VC0_TOTAL_CREDITS_PH          0x20
 
     * ATTR_109
-    * (OFFSET, MASK, VALUE)      (0XFD4801B4, 0x0000FFFFU ,0x00007E04U)
+    * (OFFSET, MASK, VALUE)      (0XFD4801B4, 0x0000FFFFU ,0x00007E20U)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_109_OFFSET,
-		0x0000FFFFU, 0x00007E04U);
+		0x0000FFFFU, 0x00007E20U);
 /*##################################################################### */
 
     /*
@@ -20410,17 +20439,12 @@ unsigned long psu_resetout_init_data(void)
     *  be set to '0' indicating single-function device. Bit 0 identifies heade
     * r as Type 0 or Type 1, with '0' indicating a Type 0 header.; EP=0x0000;
     * RP=0x0001
-    *  PSU_PCIE_ATTRIB_ATTR_34_ATTR_HEADER_TYPE                    0x0
-
-    * Indicates mapping for legacy interrupt messages. Valid values are 1 INTA
-    * , 2 INTB, 3 INTC, 4 INTD. Zero indicates no legacy interrupt messages us
-    * ed.; EP=0x0001; RP=0x0001
-    *  PSU_PCIE_ATTRIB_ATTR_34_ATTR_INTERRUPT_PIN                  1
+    *  PSU_PCIE_ATTRIB_ATTR_34_ATTR_HEADER_TYPE                    0x1
 
     * ATTR_34
-    * (OFFSET, MASK, VALUE)      (0XFD480088, 0x0000FFFFU ,0x00000100U)
+    * (OFFSET, MASK, VALUE)      (0XFD480088, 0x000000FFU ,0x00000001U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_34_OFFSET, 0x0000FFFFU, 0x00000100U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_34_OFFSET, 0x000000FFU, 0x00000001U);
 /*##################################################################### */
 
     /*
@@ -20453,7 +20477,7 @@ unsigned long psu_resetout_init_data(void)
     * MSI Capability's Next Capability Offset pointer to the next item in the
     * capabilities list, or 00h if this is the final capability.; EP=0x0060; R
     * P=0x0000
-    *  PSU_PCIE_ATTRIB_ATTR_41_ATTR_MSI_CAP_NEXTPTR                0x60
+    *  PSU_PCIE_ATTRIB_ATTR_41_ATTR_MSI_CAP_NEXTPTR                0x0
 
     * Indicates that the MSI structures exists. If this is FALSE, then the MSI
     *  structure cannot be accessed via either the link or the management port
@@ -20461,9 +20485,9 @@ unsigned long psu_resetout_init_data(void)
     *  PSU_PCIE_ATTRIB_ATTR_41_ATTR_MSI_CAP_ON                     0
 
     * ATTR_41
-    * (OFFSET, MASK, VALUE)      (0XFD4800A4, 0x000003FFU ,0x00000060U)
+    * (OFFSET, MASK, VALUE)      (0XFD4800A4, 0x000003FFU ,0x00000000U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_41_OFFSET, 0x000003FFU, 0x00000060U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_41_OFFSET, 0x000003FFU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -20488,13 +20512,13 @@ unsigned long psu_resetout_init_data(void)
 
     * TRUE specifies upstream-facing port. FALSE specifies downstream-facing p
     * ort.; EP=0x0001; RP=0x0000
-    *  PSU_PCIE_ATTRIB_ATTR_100_ATTR_UPSTREAM_FACING               0x1
+    *  PSU_PCIE_ATTRIB_ATTR_100_ATTR_UPSTREAM_FACING               0x0
 
     * ATTR_100
-    * (OFFSET, MASK, VALUE)      (0XFD480190, 0x00000040U ,0x00000040U)
+    * (OFFSET, MASK, VALUE)      (0XFD480190, 0x00000040U ,0x00000000U)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_100_OFFSET,
-		0x00000040U, 0x00000040U);
+		0x00000040U, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -20506,21 +20530,26 @@ unsigned long psu_resetout_init_data(void)
     *  - ERR NONFATAL, Bit 2 - ERR FATAL, Bit 3 - INTA Bit 4 - INTB, Bit 5 - I
     * NTC, Bit 6 - INTD, Bit 7 PM_PME, Bit 8 - PME_TO_ACK, Bit 9 - unlock, Bit
     *  10 PME_Turn_Off; EP=0x0000; RP=0x07FF
-    *  PSU_PCIE_ATTRIB_ATTR_101_ATTR_ENABLE_MSG_ROUTE              0x0
+    *  PSU_PCIE_ATTRIB_ATTR_101_ATTR_ENABLE_MSG_ROUTE              0x7F8
 
     * Disable BAR filtering. Does not change the behavior of the bar hit outpu
     * ts; EP=0x0000; RP=0x0001
-    *  PSU_PCIE_ATTRIB_ATTR_101_ATTR_DISABLE_BAR_FILTERING         0x0
+    *  PSU_PCIE_ATTRIB_ATTR_101_ATTR_DISABLE_BAR_FILTERING         0x1
 
     * ATTR_101
-    * (OFFSET, MASK, VALUE)      (0XFD480194, 0x0000FFE2U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480194, 0x0000FFE2U ,0x0000FF02U)
     */
 	PSU_Mask_Write(PCIE_ATTRIB_ATTR_101_OFFSET,
-		0x0000FFE2U, 0x00000000U);
+		0x0000FFE2U, 0x0000FF02U);
 /*##################################################################### */
 
     /*
     * Register : ATTR_37 @ 0XFD480094
+
+    * Link Bandwidth notification capability. Indicates support for the link b
+    * andwidth notification status and interrupt mechanism. Required for Root.
+    * ; EP=0x0000; RP=0x0001
+    *  PSU_PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_LINK_BANDWIDTH_NOTIFICATION_CAP 0x1
 
     * Maximum Link Speed. Valid settings are: 0001b [2.5 GT/s], 0010b [5.0 GT/
     * s and 2.5 GT/s].; EP=0x0002; RP=0x0002
@@ -20532,9 +20561,30 @@ unsigned long psu_resetout_init_data(void)
     *  PSU_PCIE_ATTRIB_ATTR_37_ATTR_LINK_CAP_ASPM_OPTIONALITY      0x1
 
     * ATTR_37
-    * (OFFSET, MASK, VALUE)      (0XFD480094, 0x00007C00U ,0x00004800U)
+    * (OFFSET, MASK, VALUE)      (0XFD480094, 0x00007E00U ,0x00004A00U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_37_OFFSET, 0x00007C00U, 0x00004800U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_37_OFFSET, 0x00007E00U, 0x00004A00U);
+/*##################################################################### */
+
+    /*
+    * Register : ATTR_93 @ 0XFD480174
+
+    * Enables the Replay Timer to use the user-defined LL_REPLAY_TIMEOUT value
+    *  (or combined with the built-in value, depending on LL_REPLAY_TIMEOUT_FU
+    * NC). If FALSE, the built-in value is used.; EP=0x0000; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT_EN           0x1
+
+    * Sets a user-defined timeout for the Replay Timer to force cause the retr
+    * ansmission of unacknowledged TLPs; refer to LL_REPLAY_TIMEOUT_EN and LL_
+    * REPLAY_TIMEOUT_FUNC to see how this value is used. The unit for this att
+    * ribute is in symbol times, which is 4ns at GEN1 speeds and 2ns at GEN2.;
+    *  EP=0x0000; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_93_ATTR_LL_REPLAY_TIMEOUT              0x1000
+
+    * ATTR_93
+    * (OFFSET, MASK, VALUE)      (0XFD480174, 0x0000FFFFU ,0x00009000U)
+    */
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_93_OFFSET, 0x0000FFFFU, 0x00009000U);
 /*##################################################################### */
 
     /*
@@ -20585,12 +20635,12 @@ unsigned long psu_resetout_init_data(void)
 
     * Code identifying basic function, subclass and applicable programming int
     * erface. Transferred to the Class Code register.; EP=0x8000; RP=0x8000
-    *  PSU_PCIE_ATTRIB_ATTR_24_ATTR_CLASS_CODE                     0x8000
+    *  PSU_PCIE_ATTRIB_ATTR_24_ATTR_CLASS_CODE                     0x400
 
     * ATTR_24
-    * (OFFSET, MASK, VALUE)      (0XFD480060, 0x0000FFFFU ,0x00008000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480060, 0x0000FFFFU ,0x00000400U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_24_OFFSET, 0x0000FFFFU, 0x00008000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_24_OFFSET, 0x0000FFFFU, 0x00000400U);
 /*##################################################################### */
 
     /*
@@ -20598,35 +20648,29 @@ unsigned long psu_resetout_init_data(void)
 
     * Code identifying basic function, subclass and applicable programming int
     * erface. Transferred to the Class Code register.; EP=0x0005; RP=0x0006
-    *  PSU_PCIE_ATTRIB_ATTR_25_ATTR_CLASS_CODE                     0x5
+    *  PSU_PCIE_ATTRIB_ATTR_25_ATTR_CLASS_CODE                     0x6
 
     * INTX Interrupt Generation Capable. If FALSE, this will cause Command[10]
     *  to be hardwired to 0.; EP=0x0001; RP=0x0001
     *  PSU_PCIE_ATTRIB_ATTR_25_ATTR_CMD_INTX_IMPLEMENTED           1
 
     * ATTR_25
-    * (OFFSET, MASK, VALUE)      (0XFD480064, 0x000001FFU ,0x00000105U)
+    * (OFFSET, MASK, VALUE)      (0XFD480064, 0x000001FFU ,0x00000106U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_25_OFFSET, 0x000001FFU, 0x00000105U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_25_OFFSET, 0x000001FFU, 0x00000106U);
 /*##################################################################### */
 
     /*
-    * Register : BRIDGE_CORE_CFG_PCIE_RX0 @ 0XFD0E0000
+    * Register : ATTR_2 @ 0XFD480008
 
-    * Determines which PCI Express Base Address Region (BAR) is used to access
-    *  DMA and Bridge Registers from PCI Express. If a received PCI Express re
-    * ad/write requests' BAR hit information is equal to cfg_dma_reg_bar, then
-    *  the transaction is terminated by the internal DMA/Bridge Register imple
-    * mentation, otherwise the transaction is forwarded to the AXI Master Inte
-    * rface. cfg_dma_reg_bar is only for received PCI Express read and write r
-    * equests and has no impact on received AXI Slave Interface requests.
-    *  PSU_AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_CFG_DMA_REG_BAR   0x0
+    * If TRUE, permits the AER Root Status and Error Source ID reg to be updat
+    * ed. If FALSE, these registers are forced to 0.; EP=0x0000; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_2_ATTR_AER_CAP_PERMIT_ROOTERR_UPDATE   1
 
-    * PCI Express Receive Access and BAR Configuration
-    * (OFFSET, MASK, VALUE)      (0XFD0E0000, 0x00000007U ,0x00000000U)
+    * ATTR_2
+    * (OFFSET, MASK, VALUE)      (0XFD480008, 0x00000001U ,0x00000001U)
     */
-	PSU_Mask_Write(AXIPCIE_MAIN_BRIDGE_CORE_CFG_PCIE_RX0_OFFSET,
-		0x00000007U, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_2_OFFSET, 0x00000001U, 0x00000001U);
 /*##################################################################### */
 
     /*
@@ -20637,32 +20681,32 @@ unsigned long psu_resetout_init_data(void)
     * , and AER will be considered to not be present for error management task
     * s (such as what types of error messages are sent if an error is detected
     * ).; EP=0x0001; RP=0x0001
-    *  PSU_PCIE_ATTRIB_ATTR_4_ATTR_AER_CAP_ON                      0
+    *  PSU_PCIE_ATTRIB_ATTR_4_ATTR_AER_CAP_ON                      1
 
     * Indicates that the AER structures exists. If this is FALSE, then the AER
     *  structure cannot be accessed via either the link or the management port
     * , and AER will be considered to not be present for error management task
     * s (such as what types of error messages are sent if an error is detected
     * ).; EP=0x0001; RP=0x0001
-    *  PSU_PCIE_ATTRIB_ATTR_4_ATTR_AER_CAP_ON                      0
+    *  PSU_PCIE_ATTRIB_ATTR_4_ATTR_AER_CAP_ON                      1
 
     * ATTR_4
-    * (OFFSET, MASK, VALUE)      (0XFD480010, 0x00001000U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD480010, 0x00001000U ,0x00001000U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_4_OFFSET, 0x00001000U, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_4_OFFSET, 0x00001000U, 0x00001000U);
 /*##################################################################### */
 
     /*
-    * Register : ATTR_89 @ 0XFD480164
+    * Register : ATTR_79 @ 0XFD48013C
 
-    * VSEC's Next Capability Offset pointer to the next item in the capabiliti
-    * es list, or 000h if this is the final capability.; EP=0x0140; RP=0x0140
-    *  PSU_PCIE_ATTRIB_ATTR_89_ATTR_VSEC_CAP_NEXTPTR               0
+    * CRS SW Visibility. Indicates RC can return CRS to SW. Transferred to the
+    *  Root Capabilities register.; EP=0x0000; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_79_ATTR_ROOT_CAP_CRS_SW_VISIBILITY     1
 
-    * ATTR_89
-    * (OFFSET, MASK, VALUE)      (0XFD480164, 0x00001FFEU ,0x00000000U)
+    * ATTR_79
+    * (OFFSET, MASK, VALUE)      (0XFD48013C, 0x00000020U ,0x00000020U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_89_OFFSET, 0x00001FFEU, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_79_OFFSET, 0x00000020U, 0x00000020U);
 /*##################################################################### */
 
     /*
@@ -20673,27 +20717,77 @@ unsigned long psu_resetout_init_data(void)
     * rt.; EP=0x0001; RP=0x0000
     *  PSU_PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_ON                    0
 
-    * MSI-X Pending Bit Array BIR. This value is transferred to the MSI-X PBA
-    * BIR field. Set to 0 if MSI-X is not enabled.; EP=0x0000; RP=0x0000
-    *  PSU_PCIE_ATTRIB_ATTR_43_ATTR_MSIX_CAP_PBA_BIR               0x0
-
     * ATTR_43
-    * (OFFSET, MASK, VALUE)      (0XFD4800AC, 0x00000F00U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD4800AC, 0x00000100U ,0x00000000U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_43_OFFSET, 0x00000F00U, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_43_OFFSET, 0x00000100U, 0x00000000U);
+/*##################################################################### */
+
+    /*
+    * Register : ATTR_48 @ 0XFD4800C0
+
+    * MSI-X Table Size. This value is transferred to the MSI-X Message Control
+    * [10:0] field. Set to 0 if MSI-X is not enabled. Note that the core does
+    * not implement the table; that must be implemented in user logic.; EP=0x0
+    * 003; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_48_ATTR_MSIX_CAP_TABLE_SIZE            0
+
+    * ATTR_48
+    * (OFFSET, MASK, VALUE)      (0XFD4800C0, 0x000007FFU ,0x00000000U)
+    */
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_48_OFFSET, 0x000007FFU, 0x00000000U);
+/*##################################################################### */
+
+    /*
+    * Register : ATTR_46 @ 0XFD4800B8
+
+    * MSI-X Table Offset. This value is transferred to the MSI-X Table Offset
+    * field. Set to 0 if MSI-X is not enabled.; EP=0x0001; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_46_ATTR_MSIX_CAP_TABLE_OFFSET          0
+
+    * ATTR_46
+    * (OFFSET, MASK, VALUE)      (0XFD4800B8, 0x0000FFFFU ,0x00000000U)
+    */
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_46_OFFSET, 0x0000FFFFU, 0x00000000U);
+/*##################################################################### */
+
+    /*
+    * Register : ATTR_47 @ 0XFD4800BC
+
+    * MSI-X Table Offset. This value is transferred to the MSI-X Table Offset
+    * field. Set to 0 if MSI-X is not enabled.; EP=0x0000; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_47_ATTR_MSIX_CAP_TABLE_OFFSET          0
+
+    * ATTR_47
+    * (OFFSET, MASK, VALUE)      (0XFD4800BC, 0x00001FFFU ,0x00000000U)
+    */
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_47_OFFSET, 0x00001FFFU, 0x00000000U);
+/*##################################################################### */
+
+    /*
+    * Register : ATTR_44 @ 0XFD4800B0
+
+    * MSI-X Pending Bit Array Offset This value is transferred to the MSI-X PB
+    * A Offset field. Set to 0 if MSI-X is not enabled.; EP=0x0001; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_44_ATTR_MSIX_CAP_PBA_OFFSET            0
+
+    * ATTR_44
+    * (OFFSET, MASK, VALUE)      (0XFD4800B0, 0x0000FFFFU ,0x00000000U)
+    */
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_44_OFFSET, 0x0000FFFFU, 0x00000000U);
 /*##################################################################### */
 
     /*
     * Register : ATTR_45 @ 0XFD4800B4
 
-    * MSI-X Table BIR. This value is transferred to the MSI-X Table BIR field.
-    *  Set to 0 if MSI-X is not enabled.; EP=0x0000; RP=0x0000
-    *  PSU_PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_TABLE_BIR             0x0
+    * MSI-X Pending Bit Array Offset This value is transferred to the MSI-X PB
+    * A Offset field. Set to 0 if MSI-X is not enabled.; EP=0x1000; RP=0x0000
+    *  PSU_PCIE_ATTRIB_ATTR_45_ATTR_MSIX_CAP_PBA_OFFSET            0
 
     * ATTR_45
-    * (OFFSET, MASK, VALUE)      (0XFD4800B4, 0x00000007U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFD4800B4, 0x0000FFF8U ,0x00000000U)
     */
-	PSU_Mask_Write(PCIE_ATTRIB_ATTR_45_OFFSET, 0x00000007U, 0x00000000U);
+	PSU_Mask_Write(PCIE_ATTRIB_ATTR_45_OFFSET, 0x0000FFF8U, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -20742,6 +20836,43 @@ unsigned long psu_resetout_init_data(void)
 	PSU_Mask_Write(CRF_APB_RST_FPD_TOP_OFFSET, 0x00020000U, 0x00000000U);
 /*##################################################################### */
 
+    /*
+    * PCIE GPIO RESET
+    */
+    /*
+    * MASK_DATA_0_LSW LOW BANK [15:0]
+    */
+    /*
+    * MASK_DATA_0_MSW LOW BANK [25:16]
+    */
+    /*
+    * MASK_DATA_1_LSW LOW BANK [41:26]
+    */
+    /*
+    * Register : MASK_DATA_1_LSW @ 0XFF0A0008
+
+    * Operation is the same as MASK_DATA_0_LSW[MASK_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_MASK_1_LSW                         0xffef
+
+    * Operation is the same as MASK_DATA_0_LSW[DATA_0_LSW]
+    *  PSU_GPIO_MASK_DATA_1_LSW_DATA_1_LSW                         0x10
+
+    * Maskable Output Data (GPIO Bank1, MIO, Lower 16bits)
+    * (OFFSET, MASK, VALUE)      (0XFF0A0008, 0xFFFFFFFFU ,0xFFEF0010U)
+    */
+	PSU_Mask_Write(GPIO_MASK_DATA_1_LSW_OFFSET,
+		0xFFFFFFFFU, 0xFFEF0010U);
+/*##################################################################### */
+
+    /*
+    * MASK_DATA_1_MSW HIGH BANK [51:42]
+    */
+    /*
+    * MASK_DATA_1_LSW HIGH BANK [67:52]
+    */
+    /*
+    * MASK_DATA_1_LSW HIGH BANK [77:68]
+    */
     /*
     * CHECK PLL LOCK FOR LANE0
     */

@@ -1,9 +1,9 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Apr  8 12:36:40 2024
--- Host        : DESKTOP-JS8NSUT running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+-- Date        : Thu Jul 18 11:02:39 2024
+-- Host        : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top main_smartconnect_0_2 -prefix
 --               main_smartconnect_0_2_ main_smartconnect_0_2_stub.vhdl
 -- Design      : main_smartconnect_0_2

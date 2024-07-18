@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.srcs/constrs_1/new/constraints.xdc rfile:../../../seeg.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.srcs/constrs_1/new/constraints.xdc rfile:../../../seeg.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G6 [get_ports RHD_MISO2_L_P]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
