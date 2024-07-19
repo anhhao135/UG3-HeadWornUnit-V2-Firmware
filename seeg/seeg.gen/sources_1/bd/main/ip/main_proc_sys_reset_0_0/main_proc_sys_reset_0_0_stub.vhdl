@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Thu Jul 18 09:46:42 2024
+-- Date        : Fri Jul 19 09:58:36 2024
 -- Host        : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_proc_sys_reset_0_0/main_proc_sys_reset_0_0_stub.vhdl

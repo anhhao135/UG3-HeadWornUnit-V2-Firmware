@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Thu Jul 18 11:02:39 2024
+-- Date        : Fri Jul 19 09:59:44 2024
 -- Host        : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top main_smartconnect_0_2 -prefix
 --               main_smartconnect_0_2_ main_smartconnect_0_2_stub.vhdl

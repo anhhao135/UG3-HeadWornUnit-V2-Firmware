@@ -34,65 +34,65 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1373831
+INFO: [Synth 8-7075] Helper process launched with PID 1957937
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2594.445 ; gain = 243.828 ; free physical = 9870 ; free virtual = 54430
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2595.258 ; gain = 244.828 ; free physical = 9691 ; free virtual = 54506
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_wrapper' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/hdl/main_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'main' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:13]
-INFO: [Synth 8-6157] synthesizing module 'main_axi_dma_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_axi_dma_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_axi_dma_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_axi_dma_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_axi_dma_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'main_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:666]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'main_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:666]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'main_axi_dma_0_0' has 73 connections declared, but only 71 given [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:666]
-INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_1_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_clk_wiz_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_1_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_clk_wiz_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'main_smartconnect_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_smartconnect_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_clk_wiz_1_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_clk_wiz_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_clk_wiz_1_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_clk_wiz_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_smartconnect_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_smartconnect_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_smartconnect_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'main_smartconnect_0_0' is unconnected for instance 'master_smartconnect_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:766]
 WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'main_smartconnect_0_0' is unconnected for instance 'master_smartconnect_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:766]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'main_smartconnect_0_0' is unconnected for instance 'master_smartconnect_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:766]
 WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'main_smartconnect_0_0' is unconnected for instance 'master_smartconnect_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:766]
 WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'main_smartconnect_0_0' is unconnected for instance 'master_smartconnect_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:766]
 WARNING: [Synth 8-7023] instance 'master_smartconnect_0' of module 'main_smartconnect_0_0' has 121 connections declared, but only 116 given [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:766]
-INFO: [Synth 8-6157] synthesizing module 'main_smartconnect_0_1' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_smartconnect_0_1' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_smartconnect_0_1' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_smartconnect_0_1' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'main_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_100M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:967]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'main_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_100M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:967]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'main_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_100M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:967]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'main_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_100M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:967]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_100M' of module 'main_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:967]
-INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_3' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_3' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_3' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_3' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_3_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'main_proc_sys_reset_0_3' is unconnected for instance 'proc_sys_reset_250M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:974]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'main_proc_sys_reset_0_3' is unconnected for instance 'proc_sys_reset_250M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:974]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'main_proc_sys_reset_0_3' is unconnected for instance 'proc_sys_reset_250M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:974]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'main_proc_sys_reset_0_3' is unconnected for instance 'proc_sys_reset_250M' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:974]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_250M' of module 'main_proc_sys_reset_0_3' has 10 connections declared, but only 6 given [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:974]
-INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_1' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_1' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_1' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_1' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'main_proc_sys_reset_0_1' is unconnected for instance 'proc_sys_reset_rhd' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:981]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'main_proc_sys_reset_0_1' is unconnected for instance 'proc_sys_reset_rhd' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:981]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'main_proc_sys_reset_0_1' is unconnected for instance 'proc_sys_reset_rhd' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:981]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'main_proc_sys_reset_0_1' is unconnected for instance 'proc_sys_reset_rhd' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:981]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_rhd' of module 'main_proc_sys_reset_0_1' has 10 connections declared, but only 6 given [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:981]
-INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_2' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_2' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_proc_sys_reset_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_proc_sys_reset_0_2' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_proc_sys_reset_0_2' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_proc_sys_reset_0_2_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'main_proc_sys_reset_0_2' is unconnected for instance 'proc_sys_reset_rhs' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:988]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'main_proc_sys_reset_0_2' is unconnected for instance 'proc_sys_reset_rhs' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:988]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'main_proc_sys_reset_0_2' is unconnected for instance 'proc_sys_reset_rhs' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:988]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'main_proc_sys_reset_0_2' is unconnected for instance 'proc_sys_reset_rhs' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:988]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_rhs' of module 'main_proc_sys_reset_0_2' has 10 connections declared, but only 6 given [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:988]
-INFO: [Synth 8-6157] synthesizing module 'main_seeg_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_seeg_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_seeg_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_seeg_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'main_smartconnect_0_2' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_smartconnect_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_smartconnect_0_2' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_smartconnect_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'main_zynq_ultra_ps_e_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'main_zynq_ultra_ps_e_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1373712-ug3linux/realtime/main_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_seeg_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_seeg_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_seeg_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_seeg_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_smartconnect_0_2' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_smartconnect_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_smartconnect_0_2' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_smartconnect_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'main_zynq_ultra_ps_e_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'main_zynq_ultra_ps_e_0_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/.Xil/Vivado-1957865-ug3linux/realtime/main_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'main_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:1232]
 WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'main_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:1232]
 WARNING: [Synth 8-7071] port 'emio_gpio_o' of module 'main_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:1232]
@@ -101,18 +101,18 @@ WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'main_zynq_ultra_
 INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/synth/main.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'main_wrapper' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/hdl/main_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2667.320 ; gain = 316.703 ; free physical = 9791 ; free virtual = 54343
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2668.133 ; gain = 317.703 ; free physical = 9596 ; free virtual = 54411
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2673.258 ; gain = 322.641 ; free physical = 9791 ; free virtual = 54343
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2674.070 ; gain = 323.641 ; free physical = 9596 ; free virtual = 54411
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2673.258 ; gain = 322.641 ; free physical = 9791 ; free virtual = 54343
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2674.070 ; gain = 323.641 ; free physical = 9596 ; free virtual = 54411
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2673.258 ; gain = 0.000 ; free physical = 9791 ; free virtual = 54343
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2674.070 ; gain = 0.000 ; free physical = 9596 ; free virtual = 54411
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -161,18 +161,18 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2720.910 ; gain = 0.000 ; free physical = 9773 ; free virtual = 54334
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2724.691 ; gain = 0.000 ; free physical = 9603 ; free virtual = 54411
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2720.910 ; gain = 0.000 ; free physical = 9773 ; free virtual = 54334
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2724.691 ; gain = 0.000 ; free physical = 9603 ; free virtual = 54411
 WARNING: [Timing 38-316] Clock period '142.859' specified during out-of-context synthesis of instance 'main_i/master_smartconnect_1' at clock pin 'aclk1' is different from the actual clock period '142.857', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '142.859' specified during out-of-context synthesis of instance 'main_i/proc_sys_reset_rhd' at clock pin 'slowest_sync_clk' is different from the actual clock period '142.857', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '142.859' specified during out-of-context synthesis of instance 'main_i/seeg_0' at clock pin 's00_axi_rhd_aclk' is different from the actual clock period '142.857', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2720.910 ; gain = 370.293 ; free physical = 9793 ; free virtual = 54345
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2724.691 ; gain = 374.262 ; free physical = 9587 ; free virtual = 54404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -180,7 +180,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2720.910 ; gain = 370.293 ; free physical = 9793 ; free virtual = 54345
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2724.691 ; gain = 374.262 ; free physical = 9587 ; free virtual = 54404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -327,10 +327,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for main_i/proc_sys_reset_250M. (cons
 Applied set_property KEEP_HIERARCHY = SOFT for main_i/clk_wiz_dma. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for main_i/seeg_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2720.910 ; gain = 370.293 ; free physical = 9793 ; free virtual = 54345
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2724.691 ; gain = 374.262 ; free physical = 9587 ; free virtual = 54404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2720.910 ; gain = 370.293 ; free physical = 9792 ; free virtual = 54345
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2724.691 ; gain = 374.262 ; free physical = 9585 ; free virtual = 54404
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -353,25 +353,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2720.910 ; gain = 370.293 ; free physical = 9790 ; free virtual = 54347
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2724.691 ; gain = 374.262 ; free physical = 9582 ; free virtual = 54405
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3205.441 ; gain = 854.824 ; free physical = 9361 ; free virtual = 53920
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3206.152 ; gain = 855.723 ; free physical = 9143 ; free virtual = 53965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3205.441 ; gain = 854.824 ; free physical = 9361 ; free virtual = 53919
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3206.152 ; gain = 855.723 ; free physical = 9143 ; free virtual = 53965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3216.457 ; gain = 865.840 ; free physical = 9340 ; free virtual = 53908
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3216.168 ; gain = 865.738 ; free physical = 9132 ; free virtual = 53955
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -389,37 +389,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -458,18 +458,18 @@ Report Cell Usage:
 |14    |OBUF                   |    13|
 +------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.332 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.043 ; gain = 880.613 ; free physical = 9130 ; free virtual = 53952
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3230.332 ; gain = 832.062 ; free physical = 9337 ; free virtual = 53905
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3230.340 ; gain = 879.715 ; free physical = 9337 ; free virtual = 53905
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3231.043 ; gain = 829.992 ; free physical = 9129 ; free virtual = 53950
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3231.051 ; gain = 880.613 ; free physical = 9129 ; free virtual = 53950
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3244.270 ; gain = 0.000 ; free physical = 9624 ; free virtual = 54182
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3244.980 ; gain = 0.000 ; free physical = 9400 ; free virtual = 54221
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.113 ; gain = 0.000 ; free physical = 9607 ; free virtual = 54165
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3258.855 ; gain = 0.000 ; free physical = 9384 ; free virtual = 54205
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 24 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 24 instances
@@ -478,9 +478,9 @@ Synth Design complete | Checksum: 42f373b9
 INFO: [Common 17-83] Releasing license: Synthesis
 54 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3261.113 ; gain = 1772.328 ; free physical = 9607 ; free virtual = 54165
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2662.474; main = 2662.474; forked = 417.014
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3667.547; main = 3261.117; forked = 978.648
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3258.855 ; gain = 1768.254 ; free physical = 9384 ; free virtual = 54205
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2666.606; main = 2666.606; forked = 416.627
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3671.332; main = 3258.859; forked = 978.652
 INFO: [Common 17-1381] The checkpoint '/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/synth_1/main_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_wrapper_utilization_synth.rpt -pb main_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 18 14:00:56 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 19 12:23:10 2024...

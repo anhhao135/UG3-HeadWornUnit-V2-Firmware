@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Jul 18 09:45:55 2024
-# Process ID: 843275
+# Start of session at: Fri Jul 19 09:57:48 2024
+# Process ID: 1743490
 # Current directory: /media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1
 # Command line: vivado -log main_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_clk_wiz_0_0.tcl
 # Log file: /media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/main_clk_wiz_0_0.vds
 # Journal file: /media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_clk_wiz_0_0_synth_1/vivado.jou
-# Running On: ug3linux, OS: Linux, CPU Frequency: 4390.828 MHz, CPU Physical cores: 6, Host memory: 33339 MB
+# Running On: ug3linux, OS: Linux, CPU Frequency: 4367.282 MHz, CPU Physical cores: 6, Host memory: 33339 MB
 #-----------------------------------------------------------
 source main_clk_wiz_0_0.tcl -notrace

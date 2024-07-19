@@ -668,7 +668,8 @@ rhs rhs
 	.rhs_fifo_pass_out(rhs_fifo_pass_out),
 	.use_manual_cable_delay(slv_reg0[6]),
 	.manual_cable_delay(slv_reg0[10:7]),
-	.differential_cable_delay(slv_reg0[10:7]),
+	.single_ended_cable_delay(slv_reg0[10:7]),
+	.differential_cable_delay(slv_reg0[15:11]),
 	.flag_channel16_stream_250M_out(flag_channel16_stream_250M_out),
 	.fifoDoneLatchOut_250M(fifoDoneLatchOut_250M),
     .fifoDoneLatchResetnIn_250M(fifoDoneLatchResetnIn_250M)

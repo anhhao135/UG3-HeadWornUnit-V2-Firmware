@@ -108,6 +108,7 @@ module rhs
 
     input wire [3:0]                         manual_cable_delay,
     input wire [3:0]                         differential_cable_delay,
+    input wire [3:0]                         single_ended_cable_delay,
 
     output wire                              flag_channel16_stream_250M_out,
 
