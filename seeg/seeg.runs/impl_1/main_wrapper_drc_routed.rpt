@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Jul 19 13:39:44 2024
+| Date         : Fri Jul 19 15:51:36 2024
 | Host         : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_drc -file main_wrapper_drc_routed.rpt -pb main_wrapper_drc_routed.pb -rpx main_wrapper_drc_routed.rpx
 | Design       : main_wrapper
@@ -35,8 +35,8 @@ Table of Contents
 -----------------
 RTSTAT-10#1 Warning
 No routable loads  
-41 net(s) have no routable loads. The problem bus(es) and/or net(s) are main_i/master_smartconnect_0/inst/m00_nodes/m00_ar_node/inst/mi_handler_m_sc_areset_pipe,
-main_i/master_smartconnect_0/inst/m00_nodes/m00_aw_node/inst/mi_handler_m_sc_areset_pipe,
+41 net(s) have no routable loads. The problem bus(es) and/or net(s) are main_i/master_smartconnect_0/inst/m00_nodes/m00_aw_node/inst/mi_handler_m_sc_areset_pipe,
+main_i/master_smartconnect_0/inst/m00_nodes/m00_b_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_0/inst/m00_nodes/m00_r_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_0/inst/m00_nodes/m00_w_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_0/inst/s00_nodes/s00_ar_node/inst/mi_handler_m_sc_areset_pipe,
@@ -44,10 +44,10 @@ main_i/master_smartconnect_0/inst/s00_nodes/s00_aw_node/inst/mi_handler_m_sc_are
 main_i/master_smartconnect_0/inst/s00_nodes/s00_b_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_0/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_0/inst/s00_nodes/s00_w_node/inst/mi_handler_m_sc_areset_pipe,
-main_i/master_smartconnect_1/inst/m00_nodes/m00_aw_node/inst/mi_handler_m_sc_areset_pipe,
-main_i/master_smartconnect_1/inst/m00_nodes/m00_w_node/inst/mi_handler_m_sc_areset_pipe,
+main_i/master_smartconnect_1/inst/m00_nodes/m00_ar_node/inst/mi_handler_m_sc_areset_pipe,
+main_i/master_smartconnect_1/inst/m00_nodes/m00_b_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_1/inst/s00_nodes/s00_ar_node/inst/mi_handler_m_sc_areset_pipe,
-main_i/master_smartconnect_1/inst/s00_nodes/s00_b_node/inst/mi_handler_m_sc_areset_pipe,
+main_i/master_smartconnect_1/inst/s00_nodes/s00_aw_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_1/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe,
 main_i/master_smartconnect_1/inst/s00_nodes/s00_w_node/inst/mi_handler_m_sc_areset_pipe
  (the first 15 of 41 listed nets/buses).

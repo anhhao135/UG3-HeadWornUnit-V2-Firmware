@@ -196,8 +196,8 @@ module rhs
     wire [10:0]     charge_recov_off_time; // time after D2 for recovery to stop
     reg             charge_recov_mode;
     
-    assign charge_recov_on_time = 4; //default 4 * 29.1 = 116.4us
-    assign charge_recov_off_time = 18; //default 18 * 29.1 = 523.8us
+    assign charge_recov_on_time = 8; //default 4 * 29.1 = 116.4us
+    assign charge_recov_off_time = 36; //default 18 * 29.1 = 523.8us
 
     // [registers related to stim] RHS2116 registers are 16 bit 
     reg [15:0] stim_on; //indicates which out of 16 channels on an RHS chip is activated
