@@ -106,7 +106,6 @@ module rhs
 
     input wire                               use_manual_cable_delay,
 
-    input wire [3:0]                         manual_cable_delay,
     input wire [3:0]                         differential_cable_delay,
     input wire [3:0]                         single_ended_cable_delay,
 
@@ -362,7 +361,7 @@ module rhs
     wire [3:0] phase_select_out;
 
     
-    assign phase_select_out = use_manual_cable_delay ? manual_cable_delay : phase_select;
+    assign phase_select_out = use_manual_cable_delay ? single_ended_cable_delay : phase_select;
 
     // MISO phase selectors (to compensate for headstage cable delays)
 

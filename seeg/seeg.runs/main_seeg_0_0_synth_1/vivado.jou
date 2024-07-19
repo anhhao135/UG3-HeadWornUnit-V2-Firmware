@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jul 19 13:11:22 2024
-# Process ID: 2211292
+# Start of session at: Fri Jul 19 13:34:57 2024
+# Process ID: 2304835
 # Current directory: /media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1
 # Command line: vivado -log main_seeg_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_seeg_0_0.tcl
 # Log file: /media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1/main_seeg_0_0.vds
