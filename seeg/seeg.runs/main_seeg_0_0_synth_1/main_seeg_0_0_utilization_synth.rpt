@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Jul 19 12:04:54 2024
+| Date         : Fri Jul 19 13:12:44 2024
 | Host         : ug3linux running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file main_seeg_0_0_utilization_synth.rpt -pb main_seeg_0_0_utilization_synth.pb
 | Design       : main_seeg_0_0
@@ -32,15 +32,15 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               | 9095 |     0 |          0 |    117120 |  7.77 |
-|   LUT as Logic          | 9095 |     0 |          0 |    117120 |  7.77 |
+| CLB LUTs*               | 9062 |     0 |          0 |    117120 |  7.74 |
+|   LUT as Logic          | 9062 |     0 |          0 |    117120 |  7.74 |
 |   LUT as Memory         |    0 |     0 |          0 |     57600 |  0.00 |
-| CLB Registers           | 7005 |     0 |          0 |    234240 |  2.99 |
-|   Register as Flip Flop | 7005 |     0 |          0 |    234240 |  2.99 |
+| CLB Registers           | 6997 |     0 |          0 |    234240 |  2.99 |
+|   Register as Flip Flop | 6997 |     0 |          0 |    234240 |  2.99 |
 |   Register as Latch     |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                  |   16 |     0 |          0 |     14640 |  0.11 |
-| F7 Muxes                |  188 |     0 |          0 |     58560 |  0.32 |
-| F8 Muxes                |   16 |     0 |          0 |     29280 |  0.05 |
+| F7 Muxes                |  206 |     0 |          0 |     58560 |  0.35 |
+| F8 Muxes                |   25 |     0 |          0 |     29280 |  0.09 |
 | F9 Muxes                |    0 |     0 |          0 |     14640 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -62,7 +62,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 134   |          Yes |         Set |            - |
-| 6871  |          Yes |       Reset |            - |
+| 6863  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -158,19 +158,19 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 6871 |            Register |
-| LUT6      | 6870 |                 CLB |
-| LUT5      | 1267 |                 CLB |
-| LUT4      | 1065 |                 CLB |
-| LUT3      |  416 |                 CLB |
-| LUT2      |  317 |                 CLB |
-| MUXF7     |  188 |                 CLB |
+| LUT6      | 7045 |                 CLB |
+| FDRE      | 6863 |            Register |
+| LUT4      | 1080 |                 CLB |
+| LUT5      | 1064 |                 CLB |
+| LUT2      |  365 |                 CLB |
+| LUT3      |  346 |                 CLB |
+| MUXF7     |  206 |                 CLB |
 | FDSE      |  134 |            Register |
 | LUT1      |   69 |                 CLB |
+| MUXF8     |   25 |                 CLB |
 | IBUFCTRL  |   24 |              Others |
 | DIFFINBUF |   24 |                 I/O |
 | OBUF      |   16 |                 I/O |
-| MUXF8     |   16 |                 CLB |
 | CARRY8    |   16 |                 CLB |
 | INV       |    8 |                 CLB |
 | FIFO36E2  |    4 |            BLOCKRAM |

@@ -21,7 +21,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1866272
+INFO: [Synth 8-7075] Helper process launched with PID 2211331
 INFO: [Synth 8-11241] undeclared symbol 'fifoDoneLatch', assumed default net type 'wire' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd.v:701]
 WARNING: [Synth 8-8895] 'fifoDoneLatch' is already implicitly declared on line 701 [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd.v:709]
 WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:257]
@@ -59,8 +59,9 @@ WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [/m
 WARNING: [Synth 8-6901] identifier 'slv_reg2' is used before its declaration [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_S00_AXI.v:293]
 INFO: [Synth 8-11241] undeclared symbol 'fifoDoneLatch', assumed default net type 'wire' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:714]
 WARNING: [Synth 8-8895] 'fifoDoneLatch' is already implicitly declared on line 714 [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:723]
-WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2799]
-CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'risingEdgeLatch' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2841]
+WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2800]
+WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2802]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'risingEdgeLatch' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2842]
 INFO: [Synth 8-9937] previous definition of design element 'risingEdgeLatch' is here [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd.v:3200]
 WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:203]
 WARNING: [Synth 8-6901] identifier 'slv_reg0' is used before its declaration [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:204]
@@ -103,7 +104,7 @@ WARNING: [Synth 8-6901] identifier 'bothSystemsDoneRisingEdge' is used before it
 WARNING: [Synth 8-6901] identifier 'rhdBatchSizeOut_250M' is used before its declaration [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:328]
 WARNING: [Synth 8-6901] identifier 'rhd_channel' is used before its declaration [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:416]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2507.961 ; gain = 259.832 ; free physical = 7518 ; free virtual = 54507
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2510.230 ; gain = 261.801 ; free physical = 9894 ; free virtual = 54361
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main_seeg_0_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.gen/sources_1/bd/main/ip/main_seeg_0_0/synth/main_seeg_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'seeg' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:1]
@@ -112,8 +113,8 @@ WARNING: [Synth 8-6090] variable 'batchCount' is written by both blocking and no
 WARNING: [Synth 8-6090] variable 'batchCount' is written by both blocking and non-blocking assignments, entire logic could be removed [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:333]
 WARNING: [Synth 8-6090] variable 'rhdDataPassCount' is written by both blocking and non-blocking assignments, entire logic could be removed [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:340]
 INFO: [Synth 8-155] case statement is not full and has no default [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/src/seeg.v:293]
-INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1/.Xil/Vivado-1866233-ug3linux/realtime/axis_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1/.Xil/Vivado-1866233-ug3linux/realtime/axis_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_0' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1/.Xil/Vivado-2211292-ug3linux/realtime/axis_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_0' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1/.Xil/Vivado-2211292-ug3linux/realtime/axis_data_fifo_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:902]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:902]
 INFO: [Synth 8-6157] synthesizing module 'rhd_diff_to_single' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhd/src/rhd_diff_to_single.v:1]
@@ -480,8 +481,8 @@ INFO: [Synth 8-6155] done synthesizing module 'rhs_headstage_slave_full' (0#1) [
 INFO: [Synth 8-226] default block is never used [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:387]
 INFO: [Synth 8-226] default block is never used [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:560]
 INFO: [Synth 8-6157] synthesizing module 'rhs' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:6]
-INFO: [Synth 8-6157] synthesizing module 'MISO_phase_selector' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2811]
-INFO: [Synth 8-6155] done synthesizing module 'MISO_phase_selector' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2811]
+INFO: [Synth 8-6157] synthesizing module 'MISO_phase_selector' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2812]
+INFO: [Synth 8-6155] done synthesizing module 'MISO_phase_selector' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2812]
 INFO: [Synth 8-6157] synthesizing module 'command_initialization' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2612]
 INFO: [Synth 8-6155] done synthesizing module 'command_initialization' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2612]
 INFO: [Synth 8-6157] synthesizing module 'command_amplitudeSetup' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2681]
@@ -499,6 +500,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [/media/ug3lin
 INFO: [Synth 8-155] case statement is not full and has no default [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2525]
 INFO: [Synth 8-155] case statement is not full and has no default [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:2499]
 INFO: [Synth 8-6155] done synthesizing module 'rhs' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:6]
+WARNING: [Synth 8-689] width (5) of port connection 'differential_cable_delay' does not match port width (4) of module 'rhs' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:672]
 INFO: [Synth 8-6155] done synthesizing module 'rhs_S00_AXI' (0#1) [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_S00_AXI.v:4]
 WARNING: [Synth 8-7071] port 'channel_out' of module 'rhs_S00_AXI' is unconnected for instance 'rhs_S00_AXI' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_axi.v:112]
 WARNING: [Synth 8-7071] port 'state_cable_delay_finder_out' of module 'rhs_S00_AXI' is unconnected for instance 'rhs_S00_AXI' [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs_axi.v:112]
@@ -650,18 +652,18 @@ WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[7] in module input_blk is either u
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[6] in module input_blk is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2849.438 ; gain = 601.309 ; free physical = 7143 ; free virtual = 54148
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2849.707 ; gain = 601.277 ; free physical = 9509 ; free virtual = 53998
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2849.438 ; gain = 601.309 ; free physical = 7142 ; free virtual = 54147
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2849.707 ; gain = 601.277 ; free physical = 9509 ; free virtual = 53998
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2849.438 ; gain = 601.309 ; free physical = 7142 ; free virtual = 54147
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2849.707 ; gain = 601.277 ; free physical = 9509 ; free virtual = 53998
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2849.438 ; gain = 0.000 ; free physical = 7141 ; free virtual = 54145
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2860.676 ; gain = 0.000 ; free physical = 9507 ; free virtual = 53995
 INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -691,16 +693,16 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/main_seeg_0_
 INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3275.344 ; gain = 0.000 ; free physical = 6895 ; free virtual = 53891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3275.691 ; gain = 0.000 ; free physical = 9248 ; free virtual = 53732
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 24 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 8 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3281.281 ; gain = 5.938 ; free physical = 6895 ; free virtual = 53891
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3281.629 ; gain = 5.938 ; free physical = 9247 ; free virtual = 53732
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3281.281 ; gain = 1033.152 ; free physical = 6888 ; free virtual = 53885
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3281.629 ; gain = 1033.199 ; free physical = 9246 ; free virtual = 53720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -708,7 +710,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3281.281 ; gain = 1033.152 ; free physical = 6888 ; free virtual = 53884
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3281.629 ; gain = 1033.199 ; free physical = 9246 ; free virtual = 53720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -758,7 +760,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for inst/stimulator/rhs_S00_AXI/rhs/x
 Applied set_property KEEP_HIERARCHY = SOFT for inst/stimulator/rhs_S00_AXI/rhs/xpm_cdc_5bit_inst_3/xpm_cdc_0/inst/xsingle. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/stimulator/rhs_S00_AXI/rhs/xpm_cdc_5bit_inst_rhs_record_trigger/xpm_cdc_0/inst/xsingle. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3281.281 ; gain = 1033.152 ; free physical = 6888 ; free virtual = 53884
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3281.629 ; gain = 1033.199 ; free physical = 9246 ; free virtual = 53720
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'main_state_reg' in module 'rhd'
 INFO: [Synth 8-802] inferred FSM for state register 'state_pulse_reg' in module 'rhs'
@@ -886,7 +888,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_pulse_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ZCheck_command_count_reg' using encoding 'sequential' in module 'rhs'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 4828.266 ; gain = 2580.137 ; free physical = 5218 ; free virtual = 52216
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 4826.613 ; gain = 2578.184 ; free physical = 7583 ; free virtual = 52069
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1140,6 +1142,7 @@ INFO: [Synth 8-5546] ROM "MOSI_1" won't be mapped to RAM because it is too spars
 INFO: [Synth 8-5546] ROM "ZCheck_cmd_2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "channel_select_p" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "channel_select_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MOSI_cmd_selected_cable_delay_finder_reg[29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ZCheck_cmd_2_reg[29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ZCheck_cmd_1_reg[29] )
@@ -1149,25 +1152,25 @@ CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin '
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/rhs/src/rhs.v:315]
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 4832.188 ; gain = 2584.059 ; free physical = 243 ; free virtual = 45384
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:58 . Memory (MB): peak = 4830.535 ; gain = 2582.105 ; free physical = 758 ; free virtual = 45248
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:59 . Memory (MB): peak = 4901.969 ; gain = 2653.840 ; free physical = 242 ; free virtual = 45384
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:59 . Memory (MB): peak = 4900.316 ; gain = 2651.887 ; free physical = 755 ; free virtual = 45245
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:01 . Memory (MB): peak = 4901.969 ; gain = 2653.840 ; free physical = 242 ; free virtual = 45383
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:00 . Memory (MB): peak = 4900.316 ; gain = 2651.887 ; free physical = 752 ; free virtual = 45244
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:08 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 274 ; free virtual = 44833
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:01:08 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 244 ; free virtual = 44676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1185,37 +1188,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:11 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 275 ; free virtual = 44834
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:10 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 239 ; free virtual = 44671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:11 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 275 ; free virtual = 44834
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:10 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 239 ; free virtual = 44671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:01:11 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 274 ; free virtual = 44833
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:11 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 239 ; free virtual = 44670
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:11 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 274 ; free virtual = 44833
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:11 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 239 ; free virtual = 44670
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 273 ; free virtual = 44832
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:12 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 238 ; free virtual = 44669
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 273 ; free virtual = 44832
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:12 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 238 ; free virtual = 44669
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1236,45 +1239,45 @@ Report Cell Usage:
 |2     |CARRY8         |    16|
 |3     |FIFO36E2       |     4|
 |4     |LUT1           |    69|
-|5     |LUT2           |   317|
-|6     |LUT3           |   416|
-|7     |LUT4           |  1065|
-|8     |LUT5           |  1267|
-|9     |LUT6           |  6870|
-|10    |MUXF7          |   188|
-|11    |MUXF8          |    16|
-|12    |FDRE           |  6871|
+|5     |LUT2           |   365|
+|6     |LUT3           |   346|
+|7     |LUT4           |  1080|
+|8     |LUT5           |  1064|
+|9     |LUT6           |  7045|
+|10    |MUXF7          |   206|
+|11    |MUXF8          |    25|
+|12    |FDRE           |  6863|
 |13    |FDSE           |   134|
 |14    |IBUFDS         |    24|
 |15    |OBUFDS         |     8|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 273 ; free virtual = 44832
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:12 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 238 ; free virtual = 44669
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 230 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 4913.895 ; gain = 2233.922 ; free physical = 7965 ; free virtual = 52524
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:13 . Memory (MB): peak = 4913.895 ; gain = 2665.766 ; free physical = 7972 ; free virtual = 52523
+Synthesis finished with 0 errors, 3 critical warnings and 314 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 4912.242 ; gain = 2231.891 ; free physical = 7926 ; free virtual = 52357
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:13 . Memory (MB): peak = 4912.242 ; gain = 2663.812 ; free physical = 7933 ; free virtual = 52356
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4913.895 ; gain = 0.000 ; free physical = 7973 ; free virtual = 52523
-INFO: [Netlist 29-17] Analyzing 252 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4912.242 ; gain = 0.000 ; free physical = 7934 ; free virtual = 52357
+INFO: [Netlist 29-17] Analyzing 279 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4957.996 ; gain = 0.000 ; free physical = 7972 ; free virtual = 52522
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4956.344 ; gain = 0.000 ; free physical = 7934 ; free virtual = 52357
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 24 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 8 instances
 
-Synth Design complete | Checksum: a86e4e77
+Synth Design complete | Checksum: 34e25d
 INFO: [Common 17-83] Releasing license: Synthesis
-364 Infos, 225 Warnings, 4 Critical Warnings and 0 Errors encountered.
+365 Infos, 227 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:17 . Memory (MB): peak = 4957.996 ; gain = 3618.586 ; free physical = 7972 ; free virtual = 52522
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 12066.116; main = 4322.854; forked = 8068.356
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 17108.430; main = 4958.000; forked = 12198.453
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:17 . Memory (MB): peak = 4956.344 ; gain = 3628.008 ; free physical = 7934 ; free virtual = 52357
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 12063.867; main = 4326.404; forked = 8068.121
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 17106.172; main = 4956.348; forked = 12197.848
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 210 cell refs.
 INFO: [Common 17-1381] The checkpoint '/media/ug3linux/UG3/firmware/UG3-HeadWornUnit-V2-Firmware/seeg/seeg.runs/main_seeg_0_0_synth_1/main_seeg_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_seeg_0_0_utilization_synth.rpt -pb main_seeg_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul 19 12:04:55 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 19 13:12:46 2024...
